@@ -25,7 +25,7 @@ export class QuestaoFactory {
                 valores,
                 dto.opcoes.adicionarOutrasOpcoes,
             );
-            return new QuestaoDeOpcoes(dto.id, dto.rotulo, dto.tipo, opcoes);
+            return new QuestaoDeOpcoes(dto.id, dto.titulo, dto.tipo, opcoes);
         } else {
             throw new Error('Tipo de Questão não reconhecida' + tipo);
         }

@@ -6,7 +6,7 @@ export const gabarito: GabaritoDTO = {
         {
             id: 'especie',
             tipo: 'opcao',
-            rotulo: 'Espécie',
+            titulo: 'Espécie',
             opcoes: {
                 tipo: 'uma resposta',
                 valores: [
@@ -63,7 +63,7 @@ export const gabarito: GabaritoDTO = {
         {
             id: 'tipoDeRecurso',
             tipo: 'opcao',
-            rotulo: 'Tipo do Recurso',
+            titulo: 'Tipo do Recurso',
             opcoes: {
                 tipo: 'uma resposta',
                 valores: [
@@ -93,7 +93,7 @@ export const gabarito: GabaritoDTO = {
         {
             id: 'admissibilidade',
             tipo: 'opcao',
-            rotulo: 'Admissibilidade',
+            titulo: 'Admissibilidade',
             opcoes: {
                 tipo: 'uma resposta',
                 valores: [
@@ -235,7 +235,7 @@ export const gabarito: GabaritoDTO = {
         {
             id: 'motivo',
             tipo: 'opcao',
-            rotulo: 'Motivo do Indeferimento',
+            titulo: 'Motivo do Indeferimento',
             opcoes: {
                 tipo: 'várias respostas',
                 adicionarOutrasOpcoes: true,
@@ -266,7 +266,7 @@ export const gabarito: GabaritoDTO = {
         },
         // {
         //     tipo: 'lista',
-        //     rotulo: 'Procuradores',
+        //     titulo: 'Procuradores',
         //     pergunta: 'Há procurador constituído?',
         //     opcional: true,
         //     itens: [
@@ -278,7 +278,7 @@ export const gabarito: GabaritoDTO = {
         //     },
         // },
         // {
-        //     rotulo: 'Pontos Controversos',
+        //     titulo: 'Pontos Controversos',
         //     tipo: 'opção',
         //     busca: true,
         // },

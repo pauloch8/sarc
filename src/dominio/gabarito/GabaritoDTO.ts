@@ -7,7 +7,7 @@ export interface GabaritoDTO {
 export interface QuestaoDTO {
     id: string;
     tipo: 'opcao';
-    rotulo: string;
+    titulo: string;
     opcoes?: OpcoesDescricaoDTO;
 }
 
