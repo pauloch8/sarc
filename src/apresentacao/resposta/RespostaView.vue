@@ -1,8 +1,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { gabarito } from './gabarito';
+import { gabarito } from '../assets/gabarito';
 import { FormularioFactory } from '../../dominio/formulario/FormularioFactory';
-import QuestaoOpcoes from './QuestaoOpcoesComponent.vue';
+import FormularioComponent from './FormularioComponent.vue';
 
 const formulario = FormularioFactory.criarDeGabarito(gabarito);
 
@@ -14,16 +14,11 @@ export default defineComponent({
         };
     },
     components: {
-        QuestaoOpcoes,
+        FormularioComponent,
     },
 });
 </script>
 
 <template>
-    <main>
-        <h1>{{ formulario.titulo }}</h1>
-        <template v-for="questao in formulario.questoes" :key="questao.rotulo">
-            <questao-opcoes :questao="questao" />
-        </template>
-    </main>
+    <formulario-component :formulario="formulario" />
 </template>

@@ -1,9 +1,15 @@
 <script lang="ts">
+import { OpcaoValor } from '@/dominio/formulario/OpcaoValor';
+import { QuestaoDeOpcoes } from '@/dominio/formulario/QuestaoDeOpcoes';
 import { defineComponent } from 'vue';
+
+type DadosdoComponente = {
+    resposta: string[];
+};
 
 export default defineComponent({
     name: 'QuestaoOpcoesComponent',
-    props: ['questao'],
+    props: { questao: { type: QuestaoDeOpcoes, required: true } },
     computed: {
         tipoDeInput() {
             switch (this.questao.opcoes.tipo) {
@@ -16,8 +22,8 @@ export default defineComponent({
             }
         },
         valorSelecionado() {
-            const valorSelecionado: any = this.questao.opcoes.valores.find(
-                (valor: any) => valor.id === this.resposta,
+            const valorSelecionado = this.questao.opcoes.valores.find(
+                (valor: OpcaoValor) => valor.id === this.resposta,
             );
             return valorSelecionado;
         },
@@ -26,18 +32,16 @@ export default defineComponent({
         },
     },
     data() {
-        return {
+        const dados: DadosdoComponente = {
             resposta: [],
         };
+        return dados;
     },
 });
 </script>
 
 <template>
     <article>
-        <header>
-            {{ JSON.stringify(questao) }}
-        </header>
         <fieldset>
             <template v-for="valor in questao.opcoes.valores" :key="valor.id">
                 <label :for="valor.id">
