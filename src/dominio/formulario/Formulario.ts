@@ -1,12 +1,9 @@
-import { Questao } from './Questao';
+import { Questao } from './questoes/Questao';
 
 export class Formulario {
     constructor(
-        private readonly _titulo: string,
-        public readonly questoes: Questao[],
+        readonly titulo: string,
+        readonly questoes: Questao[],
+        readonly subtitulo?: string,
     ) {}
-
-    get titulo() {
-        return this._titulo;
-    }
 }

@@ -1,9 +1,15 @@
 <script lang="ts">
+import { QuestaoDeOpcoes } from '@/dominio/formulario/questoes/opcoes/QuestaoDeOpcoes';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'QuestaoOpcoesComponent',
-    props: ['questao'],
+    props: {
+        questao: {
+            type: QuestaoDeOpcoes,
+            required: true,
+        },
+    },
     computed: {
         tipoDeInput() {
             switch (this.questao.opcoes.tipo) {
@@ -36,7 +42,8 @@ export default defineComponent({
 <template>
     <article>
         <header>
-            {{ JSON.stringify(questao) }}
+            <h2>{{ questao.titulo }}</h2>
+            <h3 v-if="questao.subtitulo">{{ questao.subtitulo }}</h3>
         </header>
         <fieldset>
             <template v-for="valor in questao.opcoes.valores" :key="valor.id">
@@ -53,7 +60,7 @@ export default defineComponent({
             </template>
         </fieldset>
         <footer v-if="valorSelecionado?.variaveis">
-            <hgroup>Preencha as variáveis para a resposta:</hgroup>
+            <strong>Preencha as variáveis para a resposta:</strong>
             <template
                 v-for="variavel in valorSelecionado?.variaveis"
                 :key="variavel.id"
@@ -71,3 +78,11 @@ export default defineComponent({
         </footer>
     </article>
 </template>
+
+<style scoped>
+header h1,
+header h2,
+header h3 {
+    margin-bottom: 25px;
+}
+</style>

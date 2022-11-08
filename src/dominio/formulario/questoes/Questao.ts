@@ -6,7 +6,12 @@ export abstract class Questao extends Observable {
     private questaoAnterior?: Questao | null = null;
     public readonly proximasquestoes: string[] = [];
 
-    constructor(public id: string) {
+    constructor(
+        readonly id: string,
+        readonly titulo: string,
+        readonly tipo: string,
+        readonly subtitulo?: string,
+    ) {
         super();
     }
 

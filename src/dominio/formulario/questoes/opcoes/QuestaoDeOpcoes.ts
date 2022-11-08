@@ -1,9 +1,15 @@
+import { Questao } from '../Questao';
 import { OpcaoDescricao } from './OpcaoDescricao';
-import { Questao } from './Questao';
 
 export class QuestaoDeOpcoes extends Questao {
-    constructor(id: string, public opcoes: OpcaoDescricao) {
-        super(id);
+    constructor(
+        id: string,
+        titulo: string,
+        tipo: string,
+        readonly opcoes: OpcaoDescricao,
+        subtitulo?: string,
+    ) {
+        super(id, titulo, tipo, subtitulo);
     }
 
     get semRamificacao(): boolean {

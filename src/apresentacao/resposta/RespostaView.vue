@@ -1,7 +1,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { gabarito } from './gabarito';
+
 import { FormularioFactory } from '../../dominio/formulario/FormularioFactory';
+import { gabarito } from '../assets/gabarito';
 import QuestaoOpcoes from './QuestaoOpcoesComponent.vue';
 
 const formulario = FormularioFactory.criarDeGabarito(gabarito);

@@ -1,14 +1,14 @@
 <script lang="ts">
+import { Formulario } from '@/dominio/formulario/Formulario';
 import { defineComponent } from 'vue';
 import QuestaoOpcoes from './QuestaoOpcoesComponent.vue';
-import { Formulario } from '@/dominio/formulario/Formulario';
 
 export default defineComponent({
     name: 'FormularioComponent',
     props: {
         formulario: {
             type: Formulario,
-            require: true,
+            required: true,
         },
     },
     components: {
@@ -18,7 +18,10 @@ export default defineComponent({
 </script>
 
 <template v-if="formulario">
-    <h1>{{ formulario.titulo }}</h1>
+    <hgroup>
+        <h1>{{ formulario.titulo }}</h1>
+        <h2 v-if="formulario.subtitulo">{{ formulario.subtitulo }}</h2>
+    </hgroup>
     <template v-for="questao in formulario.questoes" :key="questao.rotulo">
         <questao-opcoes :questao="questao" />
     </template>

@@ -1,5 +1,6 @@
 export interface GabaritoDTO {
     titulo: string;
+    subtitulo?: string;
     questoes: QuestaoDTO[];
 }
 
