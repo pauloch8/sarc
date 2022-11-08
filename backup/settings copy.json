@@ -1,0 +1,59 @@
+{
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.largeFileOptimizations": false,
+    "editor.minimap.enabled": false,
+    "git.suggestSmartCommit": false,
+    "gitlens.gitCommands.skipConfirmations": [
+      "fetch:command",
+      "stash-push:command",
+      "switch:command",
+      "branch-create:command"
+    ],
+    "editor.renderControlCharacters": true,
+    "editor.semanticTokenColorCustomizations": {
+      "[Default Dark+]": { "enabled": true }
+    },
+    "hediet.vscode-drawio.codeLinkActivated": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "gitlens.views.commits.files.layout": "tree",
+    "prettier.requireConfig": true,
+    "workbench.editorAssociations": {
+      "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+      "default": "right",
+      "jupyter-notebook": "left"
+    },
+    "remote.SSH.configFile": "C:\\Users\\pauloh\\.ssh\\config",
+    "remote.SSH.remotePlatform": {
+      "mcartney": "linux"
+    },
+    "hediet.vscode-drawio.theme": "min",
+    "latex-workshop.view.pdf.viewer": "browser",
+    "go.toolsManagement.autoUpdate": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "go.inlayHints.assignVariableTypes": true,
+    "go.inlayHints.compositeLiteralFields": true,
+    "go.inlayHints.compositeLiteralTypes": true,
+    "go.inlayHints.functionTypeParameters": true,
+    "go.inlayHints.parameterNames": true,
+    "go.inlayHints.rangeVariableTypes": true,
+    "editor.inlayHints.padding": true,
+    "window.commandCenter": false,
+    "svgPreview.style": {
+      "html": {"background": "#fff"}
+    
+    },
+    "audioCues.onDebugBreak": "on",
+    "audioCues.lineHasBreakpoint": "off",
+    "audioCues.lineHasError": "off",
+    "audioCues.lineHasFoldedArea": "off",
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+    "markdown-pdf.displayHeaderFooter": false,
+    "eslint.alwaysShowStatus": true,
+  }
