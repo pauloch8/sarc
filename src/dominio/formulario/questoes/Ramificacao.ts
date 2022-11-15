@@ -1,3 +1,3 @@
 export interface Ramificacao {
-    tipo: 'avançar' | string;
+    irPara: 'avançar' | 'fim do formulário' | string;
 }

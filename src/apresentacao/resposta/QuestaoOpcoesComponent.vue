@@ -11,30 +11,14 @@ export default defineComponent({
         },
     },
     computed: {
-        tipoDeInput() {
-            switch (this.questao.opcoes.tipo) {
-                case 'uma resposta':
-                    return 'radio';
-                case 'várias respostas':
-                    return 'checkbox';
-                default:
-                    return 'radio';
+        getTextos() {
+            try {
+                return this.questao.getTextos();
+            } catch (e) {
+                console.log(e);
+                return '';
             }
         },
-        valorSelecionado() {
-            const valorSelecionado: any = this.questao.opcoes.valores.find(
-                (valor: any) => valor.id === this.resposta,
-            );
-            return valorSelecionado;
-        },
-        valorSelecionadoTemVariaveis(): any {
-            return !!this.valorSelecionado?.variaveis;
-        },
-    },
-    data() {
-        return {
-            resposta: [],
-        };
     },
 });
 </script>
@@ -42,35 +26,39 @@ export default defineComponent({
 <template>
     <article>
         <header>
-            <h2>{{ questao.titulo }}</h2>
-            <h3 v-if="questao.subtitulo">{{ questao.subtitulo }}</h3>
+            <h2>{{ questao.getTitulo() }}</h2>
+            <h3 v-if="questao.getSubtitulo()">{{ JSON.stringify(questao) }}</h3>
+            {{ questao.opcaoSelecionada }}
+            <br />
+            <br />
+            {{ getTextos }}
         </header>
         <fieldset>
-            <template v-for="valor in questao.opcoes.valores" :key="valor.id">
-                <label :for="valor.id">
+            <template v-for="opcao in questao.opcoes" :key="opcao.id">
+                <label :for="opcao.getId()">
                     <input
-                        v-model="resposta"
-                        :type="tipoDeInput"
-                        :name="questao.id"
-                        :id="valor.id"
-                        :value="valor.id"
+                        type="radio"
+                        :name="questao.getId()"
+                        :id="opcao.getId()"
+                        :value="opcao.getId()"
+                        @click="questao.selecionarOpcao(opcao)"
                     />
-                    {{ valor.label }}
+                    {{ opcao.getLabel() }}
                 </label>
             </template>
         </fieldset>
-        <footer v-if="valorSelecionado?.variaveis">
+        <footer v-if="questao.opcaoSelecionada?.getVariaveis()">
             <strong>Preencha as variáveis para a resposta:</strong>
             <template
-                v-for="variavel in valorSelecionado?.variaveis"
+                v-for="variavel in questao.opcaoSelecionada?.getVariaveis()"
                 :key="variavel.id"
             >
-                <label :for="variavel.id">
-                    {{ variavel.label }}
+                <label :for="variavel.getId()">
+                    {{ variavel.getLabel() }}
                     <input
                         type="text"
-                        :id="variavel.id"
-                        :name="variavel.id"
+                        :id="variavel.getId()"
+                        :name="variavel.getId()"
                         required
                     />
                 </label>

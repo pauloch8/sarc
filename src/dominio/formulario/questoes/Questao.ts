@@ -1,42 +1,28 @@
-import { Observable } from './Observable';
-import { Observer } from './Observer';
+import { Observable } from './observer/Observable';
 
 export abstract class Questao extends Observable {
-    public abstract readonly semRamificacao: boolean;
-    private questaoAnterior?: Questao | null = null;
-    public readonly proximasquestoes: string[] = [];
+    abstract getTextos(): string[];
+    abstract readonly semRamificacao: boolean;
+    abstract readonly irPara: string | null;
 
     constructor(
-        readonly id: string,
-        readonly titulo: string,
-        readonly tipo: string,
-        readonly subtitulo?: string,
+        private id: string,
+        private titulo: string,
+        private tipo: string,
+        private subtitulo?: string,
     ) {
         super();
     }
 
-    get ehPrimeiraQuestao() {
-        if (!this.questaoAnterior) return true;
+    getTitulo() {
+        return this.titulo;
     }
 
-    get ativo(): boolean {
-        if (this.ehPrimeiraQuestao) {
-            return true;
-        }
-        if (this.questaoAnterior?.proximasquestoes.includes(this.id)) {
-            return true;
-        }
-        return false;
+    getId() {
+        return this.id;
     }
 
-    ativar(questaoAnterior: Questao) {
-        this.questaoAnterior = questaoAnterior;
-        questaoAnterior.register(
-            new Observer('respondido', (respostas: unknown) => {
-                if (!(respostas as string[]).includes(this.id)) {
-                    this.questaoAnterior = null;
-                }
-            }),
-        );
+    getSubtitulo() {
+        return this.subtitulo;
     }
 }

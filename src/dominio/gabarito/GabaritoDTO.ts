@@ -6,15 +6,9 @@ export interface GabaritoDTO {
 
 export interface QuestaoDTO {
     id: string;
-    tipo: 'opcao';
+    tipo: 'opcao' | 'selecao';
     titulo: string;
-    opcoes?: OpcoesDescricaoDTO;
-}
-
-interface OpcoesDescricaoDTO {
-    tipo: 'uma resposta' | 'várias respostas';
-    valores: OpcaoValorDTO[];
-    adicionarOutrasOpcoes?: boolean;
+    opcoes?: OpcaoValorDTO[];
 }
 
 interface OpcaoValorDTO {
@@ -37,5 +31,5 @@ interface TextoDTO {
 }
 
 interface RamificacaoDTO {
-    tipo: 'avançar' | string;
+    irPara: 'avançar' | 'fim do formulário' | string;
 }
