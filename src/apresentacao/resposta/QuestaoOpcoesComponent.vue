@@ -10,16 +10,6 @@ export default defineComponent({
             required: true,
         },
     },
-    computed: {
-        getTextos() {
-            try {
-                return this.questao.getTextos();
-            } catch (e) {
-                console.log(e);
-                return '';
-            }
-        },
-    },
 });
 </script>
 
@@ -28,10 +18,6 @@ export default defineComponent({
         <header>
             <h2>{{ questao.getTitulo() }}</h2>
             <h3 v-if="questao.getSubtitulo()">{{ JSON.stringify(questao) }}</h3>
-            {{ questao.opcaoSelecionada }}
-            <br />
-            <br />
-            {{ getTextos }}
         </header>
         <fieldset>
             <template v-for="opcao in questao.opcoes" :key="opcao.id">
@@ -48,7 +34,7 @@ export default defineComponent({
             </template>
         </fieldset>
         <footer v-if="questao.opcaoSelecionada?.getVariaveis()">
-            <strong>Preencha as variáveis para a resposta:</strong>
+            <h4>Preencha as variáveis para a resposta:</h4>
             <template
                 v-for="variavel in questao.opcaoSelecionada?.getVariaveis()"
                 :key="variavel.id"
@@ -59,6 +45,7 @@ export default defineComponent({
                         type="text"
                         :id="variavel.getId()"
                         :name="variavel.getId()"
+                        v-model="variavel.resposta"
                         required
                     />
                 </label>

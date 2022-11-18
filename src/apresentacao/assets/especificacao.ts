@@ -1,7 +1,8 @@
-import { GabaritoDTO } from '@/dominio/gabarito/GabaritoDTO';
+import { EspecificacaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
-export const gabarito: GabaritoDTO = {
+export const especificacao: EspecificacaoDTO = {
     titulo: 'Gerador de Acórdão',
+    id: 'gerador-de-acordao',
     questoes: [
         {
             id: 'especie',
@@ -270,4 +271,5 @@ export const gabarito: GabaritoDTO = {
         //     busca: true,
         // },
     ],
+    template: `teste`,
 };

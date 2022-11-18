@@ -1,4 +1,4 @@
-import { QuestaoDTO } from '../../gabarito/GabaritoDTO';
+import { QuestaoDTO } from '../../especificacao/EspecificacaoDTO';
 import { QuestaoDeOpcoesFactory } from './opcoes/QuestaoDeOpcoesFactory';
 import { Questao } from './Questao';
 

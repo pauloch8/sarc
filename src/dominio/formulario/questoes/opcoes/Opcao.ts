@@ -1,13 +1,12 @@
 import { Ramificacao } from '../Ramificacao';
-import { Texto } from '../Texto';
+import { RespostaDeOpcao } from '../../respostas/Respostas';
 import { Variavel } from '../Variavel';
 
-export class OpcaoValor {
+export class Opcao {
     constructor(
         private id: string,
         private label: string,
         private ramificacao: Ramificacao,
-        private textos?: Texto[],
         private variaveis?: Variavel[],
     ) {}
 
@@ -27,11 +26,17 @@ export class OpcaoValor {
         return this.variaveis;
     }
 
-    getTextos() {
-        if (!this.textos) {
-            throw new OpcaoSemTextos(this.getLabel());
+    getResposta() {
+        const resposta: RespostaDeOpcao = {
+            id: this.getId(),
+        };
+        if (this.variaveis) {
+            const variaveis = this.variaveis.map(variavel =>
+                variavel.getResposta(),
+            );
+            resposta.variaveis = variaveis;
         }
-        return this.textos.map(texto => texto.getTexto(this.variaveis));
+        return resposta;
     }
 }
 

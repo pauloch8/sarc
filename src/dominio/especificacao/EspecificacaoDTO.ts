@@ -1,7 +1,9 @@
-export interface GabaritoDTO {
+export interface EspecificacaoDTO {
+    id: string;
     titulo: string;
     subtitulo?: string;
     questoes: QuestaoDTO[];
+    template: string;
 }
 
 export interface QuestaoDTO {

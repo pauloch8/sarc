@@ -2,10 +2,10 @@
 import { defineComponent } from 'vue';
 
 import { FormularioFactory } from '../../dominio/formulario/FormularioFactory';
-import { gabarito } from '../assets/gabarito';
-import QuestaoOpcoes from './QuestaoOpcoesComponent.vue';
+import { especificacao } from '../assets/especificacao';
+import FormularioComponent from './FormularioComponent.vue';
 
-const formulario = FormularioFactory.criarDeGabarito(gabarito);
+const formulario = FormularioFactory.criarDaEspecificacao(especificacao);
 
 export default defineComponent({
     name: 'RespostaView',
@@ -15,16 +15,13 @@ export default defineComponent({
         };
     },
     components: {
-        QuestaoOpcoes,
+        FormularioComponent,
     },
 });
 </script>
 
 <template>
     <main>
-        <h1>{{ formulario.titulo }}</h1>
-        <template v-for="questao in formulario.questoes" :key="questao.rotulo">
-            <questao-opcoes :questao="questao" />
-        </template>
+        <formulario-component :formulario="formulario" />
     </main>
 </template>

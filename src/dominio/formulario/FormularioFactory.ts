@@ -1,4 +1,4 @@
-import { GabaritoDTO } from '../gabarito/GabaritoDTO';
+import { EspecificacaoDTO } from '../especificacao/EspecificacaoDTO';
 import { Formulario } from './Formulario';
 import { Questao } from './questoes/Questao';
 import {
@@ -7,8 +7,8 @@ import {
 } from './questoes/QuestaoFactory';
 
 export class FormularioFactory {
-    static criarDeGabarito(gabarito: GabaritoDTO) {
-        const questoes = gabarito.questoes
+    static criarDaEspecificacao(especificacao: EspecificacaoDTO) {
+        const questoes = especificacao.questoes
             .map(questao => {
                 try {
                     return QuestaoFactory.criarDeDto(questao);
@@ -22,9 +22,10 @@ export class FormularioFactory {
             .filter(element => !!element) as Questao[];
 
         const formulario = new Formulario(
-            gabarito.titulo,
+            especificacao.id,
+            especificacao.titulo,
             questoes,
-            gabarito.subtitulo,
+            especificacao.subtitulo,
         );
         return formulario;
     }

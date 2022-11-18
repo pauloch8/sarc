@@ -1,15 +1,15 @@
+import { RespostaDeQuestaoDeOpcoes } from '../../respostas/Respostas';
 import { Questao } from '../Questao';
-import { Texto } from '../Texto';
-import { OpcaoValor } from './OpcaoValor';
+import { Opcao } from './Opcao';
 
 export class QuestaoDeOpcoes extends Questao {
-    private valorSelecionado?: OpcaoValor;
+    private valorSelecionado?: Opcao;
 
     constructor(
         id: string,
         titulo: string,
         tipo: string,
-        readonly opcoes: OpcaoValor[],
+        readonly opcoes: Opcao[],
         subtitulo?: string,
     ) {
         super(id, titulo, tipo, subtitulo);
@@ -21,11 +21,11 @@ export class QuestaoDeOpcoes extends Questao {
         );
     }
 
-    selecionarOpcao(opcao: OpcaoValor) {
+    selecionarOpcao(opcao: Opcao) {
         this.valorSelecionado = opcao;
     }
 
-    get opcaoSelecionada(): OpcaoValor | undefined {
+    get opcaoSelecionada(): Opcao | undefined {
         return this.valorSelecionado;
     }
 
@@ -36,11 +36,15 @@ export class QuestaoDeOpcoes extends Questao {
         return this.opcaoSelecionada?.getRamificacoes().irPara || null;
     }
 
-    getTextos() {
+    getResposta(): RespostaDeQuestaoDeOpcoes {
         if (!this.valorSelecionado) {
             throw new QuestaoSemValorSelecionado(this.getTitulo());
         }
-        return this.valorSelecionado.getTextos();
+        const resposta = {
+            id: this.getId(),
+            resposta: this.valorSelecionado.getResposta(),
+        };
+        return resposta;
     }
 }
 

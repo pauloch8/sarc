@@ -1,7 +1,8 @@
+import { RespostaDeOpcao } from '../respostas/Respostas';
 import { Observable } from './observer/Observable';
 
 export abstract class Questao extends Observable {
-    abstract getTextos(): string[];
+    abstract getResposta(): RespostaDeOpcao;
     abstract readonly semRamificacao: boolean;
     abstract readonly irPara: string | null;
 
