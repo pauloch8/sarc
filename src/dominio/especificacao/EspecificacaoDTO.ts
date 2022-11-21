@@ -13,11 +13,11 @@ export interface QuestaoDTO {
     opcoes?: OpcaoValorDTO[];
 }
 
-interface OpcaoValorDTO {
+export interface OpcaoValorDTO {
     id: string;
     label: string;
     variaveis?: VariavelDTO[];
-    texto?: TextoDTO[];
+    texto: TextoDTO[];
     ramificacao: RamificacaoDTO;
 }
 
@@ -27,7 +27,7 @@ interface VariavelDTO {
     tipo: string;
 }
 
-interface TextoDTO {
+export interface TextoDTO {
     categoria: string;
     texto: string;
 }

@@ -1,8 +1,8 @@
-import { RespostaDeOpcao } from '../respostas/Respostas';
+import { RespostaDeQuestaoDeOpcoes } from '../respostas/Respostas';
 import { Observable } from './observer/Observable';
 
 export abstract class Questao extends Observable {
-    abstract getResposta(): RespostaDeOpcao;
+    abstract getResposta(): RespostaDeQuestaoDeOpcoes;
     abstract readonly semRamificacao: boolean;
     abstract readonly irPara: string | null;
 

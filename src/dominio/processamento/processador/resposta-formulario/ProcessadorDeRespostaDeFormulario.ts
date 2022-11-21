@@ -1,8 +1,8 @@
 import {
     RespostaDeFormulario,
     RespostaDeOpcao,
-} from '../formulario/respostas/Respostas';
-import { IProcessadorDeQuestaoDeOpcoes } from './ProcessadorDeQuestaoDeOpcoes';
+} from '../../../formulario/respostas/Respostas';
+import { IProcessadorDeQuestaoDeOpcoes } from '../questoes-opcao/questao/ProcessadorDeQuestaoDeOpcoes';
 
 export class ProcessadorDeRespostaDeFormulario {
     constructor(
@@ -15,7 +15,7 @@ export class ProcessadorDeRespostaDeFormulario {
         if (resposta.id !== this.id) {
             throw new ErroRespostaNaoPossuiIdDoProcessador();
         }
-        let textoProcessado;
+        let textoProcessado = this.template;
         for (const respostaQuestao of resposta.respostasQuestoes) {
             const processador = this.processadoresDeQuestoes.find(p =>
                 p.compararId(respostaQuestao.id),
@@ -27,7 +27,7 @@ export class ProcessadorDeRespostaDeFormulario {
             }
             textoProcessado = processador.processar(
                 respostaQuestao,
-                this.template,
+                textoProcessado,
             );
         }
         if (!textoProcessado) {

@@ -1,7 +1,7 @@
 import {
     RespostaDeFormulario,
     RespostaDeOpcao,
-} from '../../formulario/respostas/Respostas';
+} from '../../../../formulario/respostas/Respostas';
 import {
     ProcessadorDeRespostaDeFormulario,
     ErroRespostaNaoPossuiIdDoProcessador,

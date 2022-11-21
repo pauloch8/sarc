@@ -1,0 +1,16 @@
+import { EscapadorDeVariavel } from './EscapadorDeVariavel';
+import { NomeDeEscapador } from '../nome/NomeDeEscapador';
+
+export class EscapadorDeVariavelFactory {
+    criarEscapadoresDeTexto(texto: string): EscapadorDeVariavel[] {
+        const patternNome = NomeDeEscapador.pattern;
+
+        const regex = new RegExp('\\${(' + patternNome + '+)}', 'g');
+        const matchEscapadores = Array.from(texto.matchAll(regex));
+        const escapadores = matchEscapadores.map(match => {
+            const nomeVariavel = new NomeDeEscapador(match[1]);
+            return new EscapadorDeVariavel(nomeVariavel);
+        });
+        return escapadores;
+    }
+}

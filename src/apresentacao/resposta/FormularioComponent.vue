@@ -1,5 +1,6 @@
 <script lang="ts">
 import { Formulario } from '@/dominio/formulario/Formulario';
+import { ProcessadorDeRespostaDeFormulario } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 import { defineComponent } from 'vue';
 import QuestaoOpcoes from './QuestaoOpcoesComponent.vue';
 
@@ -25,4 +26,6 @@ export default defineComponent({
     <template v-for="questao in formulario.getQuestoes()" :key="questao.rotulo">
         <questao-opcoes :questao="questao" />
     </template>
+    {{ formulario.getRespostas() }}
+    {{}}
 </template>
