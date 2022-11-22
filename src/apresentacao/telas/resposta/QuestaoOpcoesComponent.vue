@@ -17,7 +17,9 @@ export default defineComponent({
     <article>
         <header>
             <h2>{{ questao.getTitulo() }}</h2>
-            <h3 v-if="questao.getSubtitulo()">{{ JSON.stringify(questao) }}</h3>
+            <span v-if="questao.getSubtitulo()">{{
+                questao.getSubtitulo()
+            }}</span>
         </header>
         <fieldset>
             <template v-for="opcao in questao.opcoes" :key="opcao.id">
@@ -55,9 +57,15 @@ export default defineComponent({
 </template>
 
 <style scoped>
+header {
+    margin-bottom: 20px;
+}
 header h1,
 header h2,
 header h3 {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+}
+footer {
+    margin-top: 20px;
 }
 </style>

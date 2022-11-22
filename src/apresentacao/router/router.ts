@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import RespostaView from '../resposta/RespostaView.vue';
+import TelaRespostaVue from '../telas/resposta/TelaResposta.vue';
 
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         name: 'resposta',
-        component: RespostaView,
+        component: TelaRespostaVue,
     },
 ];
 

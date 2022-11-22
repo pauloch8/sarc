@@ -4,13 +4,15 @@ import { ProcessadorDeRespostaDeFormulario } from '@/dominio/processamento/proce
 import { defineComponent } from 'vue';
 import QuestaoOpcoes from './QuestaoOpcoesComponent.vue';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { especificacao } from '@/apresentacao/assets/especificacao';
 
 export default defineComponent({
     name: 'FormularioComponent',
     data() {
+        const editorData = especificacao.template;
         return {
             editor: ClassicEditor,
-            editorData: '',
+            editorData,
             editorConfig: {
                 // The configuration of the editor.
             },
@@ -80,4 +82,5 @@ export default defineComponent({
         v-model="editorData"
         :config="editorConfig"
     ></ckeditor>
+    {{ editorData }}
 </template>

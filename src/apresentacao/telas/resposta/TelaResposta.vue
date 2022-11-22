@@ -1,4 +1,5 @@
 <script lang="ts">
+import { especificacao } from '@/apresentacao/assets/especificacao';
 import { FormularioFactory } from '@/dominio/formulario/FormularioFactory';
 import { EscapadorDeQuestaoFactory } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestaoFactory';
 import { ProcessadorDeOpcaoFactory } from '@/dominio/processamento/processador/questoes-opcao/opcao/ProcessadorDeOpcaoFactory';
@@ -6,7 +7,7 @@ import { ProcessadorDeQuestaoDeOpcoesFactory } from '@/dominio/processamento/pro
 import { ProcessadorDeRespostaDeFormularioFactory } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormularioFactory';
 import { TextoFactory } from '@/dominio/processamento/processador/texto/TextoFactory';
 import { defineComponent } from 'vue';
-import { especificacao } from '../assets/especificacao';
+
 import FormularioComponent from './FormularioComponent.vue';
 
 function criarProcessadorDeFormulario() {
@@ -36,7 +37,7 @@ export default defineComponent({
     data() {
         return { processadorFormulario, formulario };
     },
-    name: 'RespostaView',
+    name: 'TelaResposta',
     // inject: ['processadorFormulario', 'formulario'],
     components: {
         FormularioComponent,
