@@ -17,6 +17,8 @@
         "lint-staged": "node node_modules/lint-staged/bin/lint-staged.js"
     },
     "dependencies": {
+        "@ckeditor/ckeditor5-build-classic": "^35.3.1",
+        "@ckeditor/ckeditor5-vue": "^4.0.1",
         "@picocss/pico": "^1.5.6",
         "core-js": "^3.8.3",
         "git-commit-msg-linter": "^4.2.1",
@@ -24,6 +26,7 @@
         "vue-router": "^4.0.3"
     },
     "devDependencies": {
+        "@types/ckeditor__ckeditor5-build-classic": "^29.0.1",
         "@types/jest": "^27.5.2",
         "@typescript-eslint/eslint-plugin": "^5.4.0",
         "@typescript-eslint/parser": "^5.4.0",

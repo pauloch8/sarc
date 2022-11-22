@@ -3,17 +3,65 @@ import { Formulario } from '@/dominio/formulario/Formulario';
 import { ProcessadorDeRespostaDeFormulario } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 import { defineComponent } from 'vue';
 import QuestaoOpcoes from './QuestaoOpcoesComponent.vue';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 export default defineComponent({
     name: 'FormularioComponent',
+    data() {
+        return {
+            editor: ClassicEditor,
+            editorData: '',
+            editorConfig: {
+                // The configuration of the editor.
+            },
+        };
+    },
     props: {
         formulario: {
             type: Formulario,
             required: true,
         },
+        processadorFormulario: {
+            type: ProcessadorDeRespostaDeFormulario,
+            required: true,
+        },
     },
     components: {
         QuestaoOpcoes,
+    },
+    methods: {
+        gerar() {
+            try {
+                const texto = this.processadorFormulario.processar(
+                    this.formulario.getRespostas(),
+                );
+                console.log({ texto });
+                this.editorData = texto;
+            } catch (e) {
+                console.error((e as Error).message);
+                return '';
+            }
+        },
+    },
+    computed: {
+        resposta() {
+            try {
+                return this.formulario.getRespostas();
+            } catch (e) {
+                console.error((e as Error).message);
+                return '';
+            }
+        },
+        processado() {
+            try {
+                return this.processadorFormulario.processar(
+                    this.formulario.getRespostas(),
+                );
+            } catch (e) {
+                console.error((e as Error).message);
+                return '';
+            }
+        },
     },
 });
 </script>
@@ -26,6 +74,10 @@ export default defineComponent({
     <template v-for="questao in formulario.getQuestoes()" :key="questao.rotulo">
         <questao-opcoes :questao="questao" />
     </template>
-    {{ formulario.getRespostas() }}
-    {{}}
+    <button @click="gerar">Gerar</button>
+    <ckeditor
+        :editor="editor"
+        v-model="editorData"
+        :config="editorConfig"
+    ></ckeditor>
 </template>
