@@ -3,7 +3,7 @@ import { Questao } from '../Questao';
 import { Opcao } from './Opcao';
 
 export class QuestaoDeOpcoes extends Questao {
-    private valorSelecionado?: Opcao;
+    public valorSelecionado?: Opcao;
 
     constructor(
         id: string,
@@ -21,19 +21,11 @@ export class QuestaoDeOpcoes extends Questao {
         );
     }
 
-    selecionarOpcao(opcao: Opcao) {
-        this.valorSelecionado = opcao;
-    }
-
-    get opcaoSelecionada(): Opcao | undefined {
-        return this.valorSelecionado;
-    }
-
     get irPara(): string | null {
         if (this.semRamificacao) {
             return 'avançar';
         }
-        return this.opcaoSelecionada?.getRamificacoes().irPara || null;
+        return this.valorSelecionado?.getRamificacoes().irPara || null;
     }
 
     getResposta(): RespostaDeQuestaoDeOpcoes {

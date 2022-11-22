@@ -28,17 +28,17 @@ export default defineComponent({
                         type="radio"
                         :name="questao.getId()"
                         :id="opcao.getId()"
-                        :value="opcao.getId()"
-                        @click="questao.selecionarOpcao(opcao)"
+                        :value="opcao"
+                        v-model="questao.valorSelecionado"
                     />
                     {{ opcao.getLabel() }}
                 </label>
             </template>
         </fieldset>
-        <footer v-if="questao.opcaoSelecionada?.getVariaveis()">
+        <footer v-if="questao.valorSelecionado?.getVariaveis()">
             <h4>Preencha as variáveis para a resposta:</h4>
             <template
-                v-for="variavel in questao.opcaoSelecionada?.getVariaveis()"
+                v-for="variavel in questao.valorSelecionado?.getVariaveis()"
                 :key="variavel.id"
             >
                 <label :for="variavel.getId()">

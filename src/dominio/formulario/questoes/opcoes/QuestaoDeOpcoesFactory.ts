@@ -20,6 +20,22 @@ export class QuestaoDeOpcoesFactory {
                 variaveis,
             );
         });
-        return new QuestaoDeOpcoes(dto.id, dto.titulo, dto.tipo, opcoes);
+        const questao = new QuestaoDeOpcoes(
+            dto.id,
+            dto.titulo,
+            dto.tipo,
+            opcoes,
+            dto.subtitulo,
+        );
+        if (dto.valorPadrao) {
+            const opcaoSelecionada = opcoes.find(
+                opcao => opcao.getId() === dto.valorPadrao,
+            );
+            if (!opcaoSelecionada) {
+                throw new Error('Opção do valor da pergunta não encontrada');
+            }
+            questao.valorSelecionado = opcaoSelecionada;
+        }
+        return questao;
     }
 }
