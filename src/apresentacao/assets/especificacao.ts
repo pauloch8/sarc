@@ -62,6 +62,7 @@ export const especificacao: EspecificacaoDTO = {
             id: 'tipoDeRecurso',
             tipo: 'opcao',
             titulo: 'Tipo do Recurso',
+            valorPadrao: 'ro',
             opcoes: [
                 {
                     id: 'ro',
@@ -99,9 +100,57 @@ export const especificacao: EspecificacaoDTO = {
             ],
         },
         {
+            id: 'procurador',
+            tipo: 'opcao',
+            titulo: 'Procurador',
+            subtitulo: 'Existe procurador constituído?',
+            valorPadrao: 'nao',
+            opcoes: [
+                {
+                    id: 'sim',
+                    label: 'Sim',
+                    variaveis: [
+                        {
+                            id: 'nome',
+                            label: 'Nome do procurador',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'oab',
+                            label: 'OAB',
+                            tipo: 'texto',
+                        },
+                    ],
+                    texto: [
+                        {
+                            categoria: 'relatorio',
+                            texto: 'A parte recorrente está devidamente representada por ${nome} (OAB nº ${oab}).',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'nao',
+                    label: 'Não',
+                    texto: [
+                        {
+                            categoria: 'relatorio',
+                            texto: ' ',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
             id: 'admissibilidade',
             tipo: 'opcao',
             titulo: 'Admissibilidade',
+            valorPadrao: 'temp',
             opcoes: [
                 {
                     id: 'temp',
@@ -299,5 +348,22 @@ export const especificacao: EspecificacaoDTO = {
         // },
     ],
     template:
-        '<p><strong>RELATÓRIO</strong></p><p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p><strong>&lt;procurador&gt;</strong> A parte recorrente está devidamente representada por <strong>XXXXXXX</strong> (OAB nº <strong>YYYY/PR</strong>).</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária. [síntese do recurso]</p><p>Não há registro da ciência da decisão recorrida. <strong>${admissibilidade.relatorio}</strong></p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa. <strong>[diligências]</strong></p><p>OUU</p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela existência da incapacidade laborativa fixando a nova data da cessão (DCB) para &lt;dcb&gt;</p><p>É o sucinto Relatório. Apresento o feito em mesa. [fechamento]</p><p>&nbsp;</p><p><strong>VOTO</strong></p><p><strong>${admissibilidade.voto}</strong></p><p>Não assiste razão à parte recorrente.</p><p><br>&nbsp;</p><p>ADMISSIBILIDADE</p><p>O presente recurso é tempestivo em razão de inexistir registro o processo da ciência da parte recorrente, nos termos Art. 28 da Portaria MDSA nº 116/2017, que aprova o Regimento Interno do CRPS (RICRPS).</p><p><br>&nbsp;</p><p>MÉRITO</p><p>Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 7º do art. 53 da Portaria MDSA 116/2017.</p><p>Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:</p><p>“<i>Art. 71. O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar <strong>incapacitado para o seu trabalho</strong> ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.</i><strong>” </strong>(grifo nosso)</p><p><br>&nbsp;</p><p>No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.</p><p>Também, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.</p><p>Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.</p><p><br>&nbsp;</p><p>DECISÃO</p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p><p>Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p><p><br>&nbsp;</p><p><strong>EMENTA</strong></p><p><strong>${admissibilidade.ementa}</strong></p>',
+        '<p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p>Não há registro da ciência da decisão recorrida.<p>${admissibilidade.relatorio}</p><p>${procurador.relatorio}</p>${admissibilidade.voto}<p><strong>${admissibilidade.ementa}</strong></p>',
+    // templates: [
+    //     {
+    //         id: 'relatorio',
+    //         titulo: 'Relatório',
+    //         texto: '<p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p>Não há registro da ciência da decisão recorrida.<p>${admissibilidade.relatorio}</p><p>${procurador.relatorio}</p>',
+    //     },
+    //     {
+    //         id: 'voto',
+    //         titulo: 'Voto',
+    //         texto: '${admissibilidade.voto}',
+    //     },
+    //     {
+    //         id: 'ementa',
+    //         titulo: 'Ementa',
+    //         texto: '<p><strong>${admissibilidade.ementa}</strong></p>',
+    //     },
+    // ],
 };
