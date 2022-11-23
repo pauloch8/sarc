@@ -207,6 +207,94 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
             ],
         },
         {
+            id: 'naoComprovacaoDaDeficiencia',
+            tipo: 'opcao',
+            titulo: 'Não comprovação da deficiência',
+            subtitulo: 'Espécie: 87 - Tipo Processo: Recurso Ordinário',
+            opcoes: [
+                {
+                    id: 'nao',
+                    label: 'Não',
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                    texto: [
+                        {
+                            categoria: 'elementos',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'recurso',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'diligencias',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: ` `,
+                        },
+                        {
+                            categoria: 'casoConcreto',
+                            texto: ` `,
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: ` `,
+                        },
+                    ],
+                },
+                {
+                    id: 'sim',
+                    label: 'Sim',
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                    texto: [
+                        {
+                            categoria: 'elementos',
+                            texto: 'A parte recorrente submeteu-se o requerente à avaliação social e médica, às quais decidiram pela não comprovação da deficiência contida nos §§ 2º e 10 do art. 20 da Lei 8.742/93.',
+                        },
+                        {
+                            categoria: 'recurso',
+                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessado a esta Corte Administrativa pleiteando a concessão do benefício.',
+                        },
+                        {
+                            categoria: 'diligencias',
+                            texto: 'A perícia médica federal efetuou a reanálise da avaliação elaborada pelo INSS e decidiu manter a pontuação apurada pelas avaliações social e médica do INSS.',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: `A Constituição Federal instituiu o benefício assistencial ao deficiente e ao idoso nos seguintes termos: 
+“Art. 203. A assistência social será prestada a quem dela necessitar, independentemente da contribuição à seguridade social, e tem por objetivos: (...) 
+V - a garantia de um salário mínimo de benefício mensal à pessoa portadora de deficiência e ao idoso que comprovem não possuir meios de prover à própria manutenção ou de tê-la provida por sua família, conforme dispuser a lei.”
+
+A Lei nº 8.742, de 7 de dezembro de 1993 normatizou a matéria, fazendo constar do caput e parágrafos 1º a 3º do seu art. 20:  
+“Art. 20.  O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família. (Redação dada pela Lei nº 12.435, de 2011)
+(...)
+§ 2º  Para efeito de concessão do benefício de prestação continuada, considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas.  (Redação dada pela Lei nº 13.146, de 2015) 
+(…)
+§ 10.  Considera-se impedimento de longo prazo, para os fins do § 2o deste artigo, aquele que produza efeitos pelo prazo mínimo de 2 (dois) anos.      (Inclído pela Lei nº 12.470, de 2011)”
+
+O benefício assistencial previsto no artigo 203, V, da Constituição Federal atende situações de hipossuficiência envolvendo pessoa idosa e pessoa portadora de deficiência, incapazes de prover ao próprio sustento ou de tê-lo provido pela própria família. Pressupõe o preenchimento dos seguintes requisitos: a) condição de deficiente (incapacidade para o trabalho e para a vida independente) ou idoso (neste caso, considerando-se, desde 1º de janeiro de 2004, a idade de 65 anos); e b) situação de risco social (estado de miserabilidade, hipossuficiência econômica ou situação de desamparo) do recorrente e de sua família. Entende-se como incapaz de prover a sua manutenção, aquele cuja renda mensal "per capita" é inferior a ¼ (um quarto) do salário mínimo, como dispõe o § 3º, do art. 20, Lei nº 8.742/93. `,
+                        },
+                        {
+                            categoria: 'casoConcreto',
+                            texto: `No caso em tela, o INSS deferiu o requisito de situação de risco social, uma vez que a renda per capta do grupo familiar é menor que ¼ do salário mínimo vigente no requerimento do benefício.
+Todavia, a análise social e médica verificou que o grau de deficiência constatado não cumpre o requisito de deficiência insculpido nos §§ 2º e 10 do art. 20 da Lei 8.742/93.
+Ainda, as avaliações social e médica foram reanalisadas pela perícia médica desta Corte Administrativa, que por sua fez manteve a decisão autárquica.
+Deste modo, não restam comprovados os requisitos relativos à deficiência.`,
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: `BENEFÍCIO INDEFERIDO POR NÃO COMPROVAR A DEFICIÊNCIA, NÃO PREENCHENDO OS REQUISITOS DOS § §2º E 10 ARTIGO 20 DA LEI 8.742/93.`,
+                        },
+                    ],
+                },
+            ],
+        },
+        {
             id: 'incapacidadePmfContrario',
             tipo: 'opcao',
             titulo: 'Incapacidade - PMF contrário',
@@ -567,7 +655,7 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
         // },
     ],
     template:
-        '<p><strong>RELATÓRIO</strong></p><p><strong>1- Introdução, Contextualização</strong></p><p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p><strong>2- Elementos pertinentes à espécie</strong></p><p>${acaoJudicial.elementos}</p><p><strong>3- Pontos Controversos</strong></p><p><strong>4- Sintese do recurso</strong></p><p>${incapacidadePmfFavoravel.recurso}</p><p>${incapacidadePmfContrario.recurso}</p><p><strong>5-Diligencias</strong></p><p>${incapacidadePmfFavoravel.diligencias}</p><p>${incapacidadePmfContrario.diligencias}</p><p><strong>6- Fechamento</strong></p><p>${admissibilidade.relatorio}</p><p>${procurador.relatorio}</p><p><strong>VOTO</strong></p><p><strong>7- Introdução, Contextualizacao</strong></p><p>${admissibilidade.voto}</p><p><strong>ADMISSIBILIDADE</strong></p><p><strong>8- Admissibilidade</strong></p><p><strong>MÉRITO</strong></p><p><strong>9- Mérito - Requisitos para a prestação</strong></p><p>${acaoJudicial.merito}</p><p>${incapacidadePmfFavoravel.merito}</p><p>${incapacidadePmfContrario.merito}</p><p><strong>10- Pontos controversos</strong></p><p><strong>CASO CONCRETO</strong></p><p><strong>11- Caso Concreto</strong></p><p>${acaoJudicial.casoConcreto}</p><p>${incapacidadePmfFavoravel.casoConcreto}</p><p>${incapacidadePmfContrario.casoConcreto}</p><p><strong>DECISÃO</strong></p><p><strong>12-Conclusão</strong></p><p><strong>EMENTA</strong></p><p>${admissibilidade.ementa}</p><p>${acaoJudicial.ementa}</p><p>${incapacidadePmfFavoravel.ementa}</p><p>${incapacidadePmfContrario.ementa}</p>',
+        '<p><strong>RELATÓRIO</strong></p><p><strong>1- Introdução, Contextualização</strong></p><p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p><strong>2- Elementos pertinentes à espécie</strong></p><p>${acaoJudicial.elementos}</p><p>${naoComprovacaoDaDeficiencia.elementos}</p><p><strong>3- Pontos Controversos</strong></p><p><strong>4- Sintese do recurso</strong></p><p>${incapacidadePmfFavoravel.recurso}</p><p>${incapacidadePmfContrario.recurso}</p><p>${naoComprovacaoDaDeficiencia.recurso}</p><p><strong>5-Diligencias</strong></p><p>${incapacidadePmfFavoravel.diligencias}</p><p>${incapacidadePmfContrario.diligencias}</p><p>${naoComprovacaoDaDeficiencia.diligencias}</p><p><strong>6- Fechamento</strong></p><p>${admissibilidade.relatorio}</p><p>${procurador.relatorio}</p><p><strong>VOTO</strong></p><p><strong>7- Introdução, Contextualizacao</strong></p><p>${admissibilidade.voto}</p><p><strong>ADMISSIBILIDADE</strong></p><p><strong>8- Admissibilidade</strong></p><p><strong>MÉRITO</strong></p><p><strong>9- Mérito - Requisitos para a prestação</strong></p><p>${acaoJudicial.merito}</p><p>${incapacidadePmfFavoravel.merito}</p><p>${incapacidadePmfContrario.merito}</p><p>${naoComprovacaoDaDeficiencia.merito}</p><p><strong>10- Pontos controversos</strong></p><p><strong>CASO CONCRETO</strong></p><p><strong>11- Caso Concreto</strong></p><p>${acaoJudicial.casoConcreto}</p><p>${incapacidadePmfFavoravel.casoConcreto}</p><p>${incapacidadePmfContrario.casoConcreto}</p><p>${naoComprovacaoDaDeficiencia.casoConcreto}</p><p><strong>DECISÃO</strong></p><p><strong>12-Conclusão</strong></p><p><strong>EMENTA</strong></p><p>${admissibilidade.ementa}</p><p>${acaoJudicial.ementa}</p><p>${incapacidadePmfFavoravel.ementa}</p><p>${incapacidadePmfContrario.ementa}</p><p>${naoComprovacaoDaDeficiencia.ementa}</p>',
     // templates: [
     //     {
     //         id: 'relatorio',
