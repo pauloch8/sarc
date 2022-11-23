@@ -207,6 +207,77 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
             ],
         },
         {
+            id: 'incapacidadePmfContrario',
+            tipo: 'opcao',
+            titulo: 'Incapacidade - PMF contrário',
+            subtitulo: 'Espécie: 31/91 - Tipo Processo: Recurso Ordinário',
+            opcoes: [
+                {
+                    id: 'nao',
+                    label: 'Não',
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                    texto: [
+                        {
+                            categoria: 'recurso',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'diligencias',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: ` `,
+                        },
+                        {
+                            categoria: 'casoConcreto',
+                            texto: ` `,
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: ` `,
+                        },
+                    ],
+                },
+                {
+                    id: 'sim',
+                    label: 'Sim',
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                    texto: [
+                        {
+                            categoria: 'recurso',
+                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
+                        },
+                        {
+                            categoria: 'diligencias',
+                            texto: 'Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: `Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 7º do art. 53 da Portaria MDSA 116/2017.
+Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:
+“Art. 71.  O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.” (grifo nosso)`,
+                        },
+                        {
+                            categoria: 'casoConcreto',
+                            texto: `No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.
+Também, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.
+Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.
+Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.`,
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: `MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.`,
+                        },
+                    ],
+                },
+            ],
+        },
+        {
             id: 'tipoDeRecurso',
             tipo: 'opcao',
             titulo: 'Tipo do Recurso',
@@ -496,7 +567,7 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
         // },
     ],
     template:
-        '<p><strong>RELATÓRIO</strong></p><p><strong>1- Introdução, Contextualização</strong></p><p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p><strong>2- Elementos pertinentes à espécie</strong></p><p>${acaoJudicial.elementos}</p><p><strong>3- Pontos Controversos</strong></p><p><strong>4- Sintese do recurso</strong></p><p>${incapacidadePmfFavoravel.recurso}</p><p><strong>5-Diligencias</strong></p><p>${incapacidadePmfFavoravel.diligencias}</p><p>${incapacidadePmfFavoravel.casoConcreto}</p><p><strong>6- Fechamento</strong></p><p>Não há registro da ciência da decisão recorrida.</p><p>${admissibilidade.relatorio}</p><p>${procurador.relatorio}</p><p><strong>VOTO</strong></p><p><strong>7- Introdução, Contextualizacao</strong></p><p>${admissibilidade.voto}</p><p><strong>ADMISSIBILIDADE</strong></p><p><strong>8- Admissibilidade</strong></p><p><strong>MÉRITO</strong></p><p><strong>9- Mérito - Requisitos para a prestação</strong></p><p>${acaoJudicial.merito}</p><p>${incapacidadePmfFavoravel.merito}</p><p><strong>10- Pontos controversos</strong></p><p><strong>CASO CONCRETO</strong></p><p><strong>11- Caso Concreto</strong></p><p>${acaoJudicial.casoConcreto}</p><p>${incapacidadePmfFavoravel.casoConcreto}</p><p><strong>DECISÃO</strong></p><p><strong>12-Conclusão</strong></p><p><strong>EMENTA</strong></p><p>${admissibilidade.ementa}</p><p>${acaoJudicial.ementa}</p><p>${incapacidadePmfFavoravel.ementa}</p>',
+        '<p><strong>RELATÓRIO</strong></p><p><strong>1- Introdução, Contextualização</strong></p><p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p><strong>2- Elementos pertinentes à espécie</strong></p><p>${acaoJudicial.elementos}</p><p><strong>3- Pontos Controversos</strong></p><p><strong>4- Sintese do recurso</strong></p><p>${incapacidadePmfFavoravel.recurso}</p><p>${incapacidadePmfContrario.recurso}</p><p><strong>5-Diligencias</strong></p><p>${incapacidadePmfFavoravel.diligencias}</p><p>${incapacidadePmfContrario.diligencias}</p><p><strong>6- Fechamento</strong></p><p>${admissibilidade.relatorio}</p><p>${procurador.relatorio}</p><p><strong>VOTO</strong></p><p><strong>7- Introdução, Contextualizacao</strong></p><p>${admissibilidade.voto}</p><p><strong>ADMISSIBILIDADE</strong></p><p><strong>8- Admissibilidade</strong></p><p><strong>MÉRITO</strong></p><p><strong>9- Mérito - Requisitos para a prestação</strong></p><p>${acaoJudicial.merito}</p><p>${incapacidadePmfFavoravel.merito}</p><p>${incapacidadePmfContrario.merito}</p><p><strong>10- Pontos controversos</strong></p><p><strong>CASO CONCRETO</strong></p><p><strong>11- Caso Concreto</strong></p><p>${acaoJudicial.casoConcreto}</p><p>${incapacidadePmfFavoravel.casoConcreto}</p><p>${incapacidadePmfContrario.casoConcreto}</p><p><strong>DECISÃO</strong></p><p><strong>12-Conclusão</strong></p><p><strong>EMENTA</strong></p><p>${admissibilidade.ementa}</p><p>${acaoJudicial.ementa}</p><p>${incapacidadePmfFavoravel.ementa}</p><p>${incapacidadePmfContrario.ementa}</p>',
     // templates: [
     //     {
     //         id: 'relatorio',
