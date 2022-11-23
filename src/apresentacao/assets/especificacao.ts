@@ -63,6 +63,7 @@ export const especificacao: EspecificacaoDTO = {
             tipo: 'opcao',
             titulo: 'Ação judicial com mesmo objeto',
             subtitulo: 'No caso de Recurso Ordinário',
+            valorPadrao: 'nao',
             opcoes: [
                 {
                     id: 'nao',
@@ -133,6 +134,7 @@ No mesmo sentido, dispõe o Decreto 3.048/99:
             tipo: 'opcao',
             titulo: 'Incapacidade - PMF favorável',
             subtitulo: 'Espécie: 31/91 - Tipo Processo: Recurso Ordinário',
+            valorPadrao: 'nao',
             opcoes: [
                 {
                     id: 'nao',
@@ -211,6 +213,7 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
             tipo: 'opcao',
             titulo: 'Não comprovação da deficiência',
             subtitulo: 'Espécie: 87 - Tipo Processo: Recurso Ordinário',
+            valorPadrao: 'nao',
             opcoes: [
                 {
                     id: 'nao',
@@ -393,6 +396,7 @@ Deste modo, deve a espécie ser considerada previdenciária, e não acidentária
             tipo: 'opcao',
             titulo: 'Incapacidade - PMF contrário',
             subtitulo: 'Espécie: 31/91 - Tipo Processo: Recurso Ordinário',
+            valorPadrao: 'nao',
             opcoes: [
                 {
                     id: 'nao',
