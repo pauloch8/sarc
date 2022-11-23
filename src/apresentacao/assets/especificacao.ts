@@ -295,6 +295,100 @@ Deste modo, não restam comprovados os requisitos relativos à deficiência.`,
             ],
         },
         {
+            id: 'ntepPmfFavoravel',
+            tipo: 'opcao',
+            titulo: 'NTEP - PMF favorável',
+            subtitulo: 'Espécie: 91 - Tipo Processo: Recurso Ordinário',
+            valorPadrao: 'nao',
+            opcoes: [
+                {
+                    id: 'nao',
+                    label: 'Não',
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                    texto: [
+                        {
+                            categoria: 'elementos',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'recurso',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'diligencias',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: ` `,
+                        },
+                        {
+                            categoria: 'casoConcreto',
+                            texto: ` `,
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: ` `,
+                        },
+                    ],
+                },
+                {
+                    id: 'sim',
+                    label: 'Sim',
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                    texto: [
+                        {
+                            categoria: 'elementos',
+                            texto: 'A perícia médica federal reconheceu o nexo técnico.',
+                        },
+                        {
+                            categoria: 'recurso',
+                            texto: 'Irresignada com a decisão administrativa da Autarquia, recorre a empresa interessada a esta Corte Administrativa requerendo que a prestação <especie> seja reconhecida como não decorrente de acidente de trabalho.',
+                        },
+                        {
+                            categoria: 'diligencias',
+                            texto: 'Houve reanálise pela perícia médica federal, que por sua vez ratificou a existência do nexo técnico.',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: `Regulamenta o Decreto 3.048/99:
+“Art. 337.  O acidente do trabalho será caracterizado tecnicamente pela Perícia Médica Federal, por meio da identificação do nexo causal entre o trabalho e o agravo.
+§ 1º O setor de benefícios do Instituto Nacional do Seguro Social reconhecerá o direito do segurado à habilitação do benefício acidentário.
+§ 2º Será considerado agravamento do acidente aquele sofrido pelo acidentado quanto estiver sob a responsabilidade da reabilitação profissional.
+§ 3o  Considera-se estabelecido o nexo entre o trabalho e o agravo quando se verificar nexo técnico epidemiológico entre a atividade da empresa e a entidade mórbida motivadora da incapacidade, elencada na Classificação Internacional de Doenças - CID em conformidade com o disposto na Lista C do Anexo II deste Regulamento. (Redação dada pelo Decreto nº 6.957, de 2009)
+§ 4o  Para os fins deste artigo, considera-se agravo a lesão, doença, transtorno de saúde, distúrbio, disfunção ou síndrome de evolução aguda, subaguda ou crônica, de natureza clínica ou subclínica, inclusive morte, independentemente do tempo de latência. (Incluído pelo Decreto nº 6.042, de 2007).
+ § 5º  Reconhecidos pela Perícia Médica Federal a incapacidade para o trabalho e o nexo causal entre o trabalho e o agravo, na forma prevista no § 3º, serão devidas as prestações acidentárias a que o beneficiário tiver direito.    (Redação dada pelo Decreto nº 10.410, de 2020)
+§ 6º  A Perícia Médica Federal deixará de aplicar o disposto no § 3º quando demonstrada a inexistência de nexo causal entre o trabalho e o agravo, sem prejuízo do disposto nos § 7º e § 12.   (Redação dada pelo Decreto nº 10.410, de 2020)
+§ 7o  A empresa poderá requerer ao INSS a não aplicação do nexo técnico epidemiológico ao caso concreto mediante a demonstração de inexistência de correspondente nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)
+§ 8o  O requerimento de que trata o § 7o poderá ser apresentado no prazo de quinze dias da data para a entrega, na forma do inciso IV do art. 225, da GFIP que registre a movimentação do trabalhador, sob pena de não conhecimento da alegação em instância administrativa. (Incluído pelo Decreto nº 6.042, de 2007).
+§ 9º  Caracterizada a impossibilidade de atendimento ao disposto no § 8º, motivada pelo não conhecimento tempestivo do diagnóstico do agravo, o requerimento de que trata o § 7º poderá ser apresentado no prazo de quinze dias, contado da data em que a empresa tomar ciência da decisão a que se refere o § 5º.    (Redação dada pelo Decreto nº 10.410, de 2020)
+§ 10.  Juntamente com o requerimento de que tratam os §§ 8o e 9o, a empresa formulará as alegações que entender necessárias e apresentará as provas que possuir demonstrando a inexistência de nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)
+§ 11.  A documentação probatória poderá trazer, entre outros meios de prova, evidências  técnicas circunstanciadas e tempestivas à exposição do segurado, podendo ser produzidas no âmbito de programas de gestão de risco, a cargo da empresa, que possuam responsável técnico legalmente habilitado. (Incluído pelo Decreto nº 6.042, de 2007).
+§ 12.  O INSS informará ao segurado sobre a contestação da empresa para que este, querendo, possa impugná-la, obedecendo, quanto à produção de provas, ao disposto no § 10, sempre que a instrução do pedido evidenciar a possibilidade de reconhecimento de inexistência do nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)
+§ 13.  Da decisão do requerimento de que trata o § 7o cabe recurso, com efeito suspensivo, por parte da empresa ou, conforme o caso, do segurado ao Conselho de Recursos da Previdência Social, nos termos dos arts. 305 a 310. (Incluído pelo Decreto nº 6.042, de 2007).”
+
+O Diploma Previdenciário regulamenta que a Perícia Médica Federal – PMF -  tem competência para determinar se uma incapacidade decorre ou não do trabalho. Para isso, precisa relacionar o agravo (incapacidade laboral) com a Classificação Internacionais de Doenças dispostas no Anexo II, Lista “C”.
+Tal procedimento foi realizado pela PMF e, por haver o enquadramento legal, foi concedida a espécie acidentária.
+Não há a necessidade de vistoria técnica em razão do Decreto 3.048/99 ser taxativo quanto as doenças que têm origem no trabalho.`,
+                        },
+                        {
+                            categoria: 'casoConcreto',
+                            texto: `Na fase recursal, o órgão da PMF retificou o entendimento anterior, demonstrando que não há nexo entre a incapacidade e o trabalho exercido.
+Deste modo, deve a espécie ser considerada previdenciária, e não acidentária.`,
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: `A RELAÇÃO ENTRE A PATOLOGIA INCAPACITANTE E O LABOR É CARACTERIZADO PELA PERÍCIA MÉDICA, CONFORME ARTIGO 337 DO DECRETO 3.048/99. SENDO A PERÍCIA DESFAVORÁVEL QUANTO AO NEXO, NÃO HÁ COMPROVAÇÃO. DEVE A ESPÉCIE SER REVISTA DE ACIDENTÁRIA PARA PREVIDENCIÁRIA.`,
+                        },
+                    ],
+                },
+            ],
+        },
+        {
             id: 'incapacidadePmfContrario',
             tipo: 'opcao',
             titulo: 'Incapacidade - PMF contrário',
@@ -655,7 +749,7 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
         // },
     ],
     template:
-        '<p><strong>RELATÓRIO</strong></p><p><strong>1- Introdução, Contextualização</strong></p><p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p><strong>2- Elementos pertinentes à espécie</strong></p><p>${acaoJudicial.elementos}</p><p>${naoComprovacaoDaDeficiencia.elementos}</p><p><strong>3- Pontos Controversos</strong></p><p><strong>4- Sintese do recurso</strong></p><p>${incapacidadePmfFavoravel.recurso}</p><p>${incapacidadePmfContrario.recurso}</p><p>${naoComprovacaoDaDeficiencia.recurso}</p><p><strong>5-Diligencias</strong></p><p>${incapacidadePmfFavoravel.diligencias}</p><p>${incapacidadePmfContrario.diligencias}</p><p>${naoComprovacaoDaDeficiencia.diligencias}</p><p><strong>6- Fechamento</strong></p><p>${admissibilidade.relatorio}</p><p>${procurador.relatorio}</p><p><strong>VOTO</strong></p><p><strong>7- Introdução, Contextualizacao</strong></p><p>${admissibilidade.voto}</p><p><strong>ADMISSIBILIDADE</strong></p><p><strong>8- Admissibilidade</strong></p><p><strong>MÉRITO</strong></p><p><strong>9- Mérito - Requisitos para a prestação</strong></p><p>${acaoJudicial.merito}</p><p>${incapacidadePmfFavoravel.merito}</p><p>${incapacidadePmfContrario.merito}</p><p>${naoComprovacaoDaDeficiencia.merito}</p><p><strong>10- Pontos controversos</strong></p><p><strong>CASO CONCRETO</strong></p><p><strong>11- Caso Concreto</strong></p><p>${acaoJudicial.casoConcreto}</p><p>${incapacidadePmfFavoravel.casoConcreto}</p><p>${incapacidadePmfContrario.casoConcreto}</p><p>${naoComprovacaoDaDeficiencia.casoConcreto}</p><p><strong>DECISÃO</strong></p><p><strong>12-Conclusão</strong></p><p><strong>EMENTA</strong></p><p>${admissibilidade.ementa}</p><p>${acaoJudicial.ementa}</p><p>${incapacidadePmfFavoravel.ementa}</p><p>${incapacidadePmfContrario.ementa}</p><p>${naoComprovacaoDaDeficiencia.ementa}</p>',
+        '<p><strong>RELATÓRIO</strong></p><p><strong>1- Introdução, Contextualização</strong></p><p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p><strong>2- Elementos pertinentes à espécie</strong></p><p>${acaoJudicial.elementos}</p><p>${naoComprovacaoDaDeficiencia.elementos}</p><p>${ntepPmfFavoravel.elementos}</p><p><strong>3- Pontos Controversos</strong></p><p><strong>4- Sintese do recurso</strong></p><p>${incapacidadePmfFavoravel.recurso}</p><p>${incapacidadePmfContrario.recurso}</p><p>${naoComprovacaoDaDeficiencia.recurso}</p><p>${ntepPmfFavoravel.recurso}</p><p><strong>5-Diligencias</strong></p><p>${incapacidadePmfFavoravel.diligencias}</p><p>${incapacidadePmfContrario.diligencias}</p><p>${naoComprovacaoDaDeficiencia.diligencias}</p><p>${ntepPmfFavoravel.diligencias}</p><p><strong>6- Fechamento</strong></p><p>${admissibilidade.relatorio}</p><p>${procurador.relatorio}</p><p><strong>VOTO</strong></p><p><strong>7- Introdução, Contextualizacao</strong></p><p>${admissibilidade.voto}</p><p><strong>ADMISSIBILIDADE</strong></p><p><strong>8- Admissibilidade</strong></p><p><strong>MÉRITO</strong></p><p><strong>9- Mérito - Requisitos para a prestação</strong></p><p>${acaoJudicial.merito}</p><p>${incapacidadePmfFavoravel.merito}</p><p>${incapacidadePmfContrario.merito}</p><p>${naoComprovacaoDaDeficiencia.merito}</p><p>${ntepPmfFavoravel.merito}</p><p><strong>10- Pontos controversos</strong></p><p><strong>CASO CONCRETO</strong></p><p><strong>11- Caso Concreto</strong></p><p>${acaoJudicial.casoConcreto}</p><p>${incapacidadePmfFavoravel.casoConcreto}</p><p>${incapacidadePmfContrario.casoConcreto}</p><p>${naoComprovacaoDaDeficiencia.casoConcreto}</p><p>${ntepPmfFavoravel.casoConcreto}</p><p><strong>DECISÃO</strong></p><p><strong>12-Conclusão</strong></p><p><strong>EMENTA</strong></p><p>${admissibilidade.ementa}</p><p>${acaoJudicial.ementa}</p><p>${incapacidadePmfFavoravel.ementa}</p><p>${incapacidadePmfContrario.ementa}</p><p>${naoComprovacaoDaDeficiencia.ementa}</p><p>${ntepPmfFavoravel.ementa}</p>',
     // templates: [
     //     {
     //         id: 'relatorio',
