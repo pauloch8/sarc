@@ -10,7 +10,9 @@ export interface QuestaoDTO {
     id: string;
     tipo: 'opcao' | 'selecao';
     titulo: string;
+    subtitulo?: string;
     opcoes?: OpcaoValorDTO[];
+    valorPadrao?: string;
 }
 
 export interface OpcaoValorDTO {
