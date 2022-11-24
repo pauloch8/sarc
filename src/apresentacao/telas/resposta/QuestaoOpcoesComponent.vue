@@ -2,6 +2,7 @@
 import { QuestaoDeOpcoes } from '@/dominio/formulario/questoes/opcoes/QuestaoDeOpcoes';
 import { defineComponent } from 'vue';
 import OpcaoComponent from './OpcaoComponent.vue';
+import VariavelComponent from './VariavelComponent.vue';
 
 export default defineComponent({
     name: 'QuestaoOpcoesComponent',
@@ -13,6 +14,7 @@ export default defineComponent({
     },
     components: {
         OpcaoComponent,
+        VariavelComponent,
     },
 });
 </script>
@@ -35,23 +37,17 @@ export default defineComponent({
                 @opcao-selecionada="questao.setValorSelecionado($event)"
             ></opcao-component>
         </fieldset>
-        <footer v-if="questao.valorSelecionado?.getVariaveis()">
+        <footer v-if="questao.getValorSelecionado()?.getVariaveis()">
             <h4>Preencha as variáveis para a resposta:</h4>
-            <template
-                v-for="variavel in questao.valorSelecionado?.getVariaveis()"
-                :key="variavel.id"
-            >
-                <label :for="variavel.getId()">
-                    {{ variavel.getLabel() }}
-                    <input
-                        type="text"
-                        :id="variavel.getId()"
-                        :name="variavel.getId()"
-                        v-model="variavel.resposta"
-                        required
-                    />
-                </label>
-            </template>
+            <variavel-component
+                v-for="variavel in questao
+                    .getValorSelecionado()
+                    ?.getVariaveis()"
+                :key="variavel.getId()"
+                :variavel="variavel"
+                :valor="variavel.getValor()"
+                @update:valor="variavel.setValor($event)"
+            ></variavel-component>
         </footer>
     </article>
 </template>

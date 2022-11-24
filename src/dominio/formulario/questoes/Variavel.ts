@@ -1,6 +1,6 @@
 import { RespostaDeVariavel } from '../respostas/Respostas';
 export class Variavel {
-    public resposta?: string;
+    private valor = '';
 
     constructor(
         private id: string,
@@ -20,18 +20,20 @@ export class Variavel {
         return '${' + this.label + '}';
     }
 
-    setResposta(resposta: string) {
-        debugger;
-        this.resposta = resposta;
+    setValor(resposta: string) {
+        this.valor = resposta;
+    }
+    getValor() {
+        return this.valor;
     }
 
     getResposta(): RespostaDeVariavel {
-        if (!this.resposta) {
+        if (!this.valor) {
             throw new RespostaNaoFornecida(this.getLabel());
         }
         const resposta = {
             id: this.id,
-            resposta: this.resposta,
+            resposta: this.valor,
         };
         return resposta;
     }
