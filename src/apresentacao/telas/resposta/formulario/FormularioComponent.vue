@@ -2,7 +2,7 @@
 import { Formulario } from '@/dominio/formulario/Formulario';
 import { ProcessadorDeRespostaDeFormulario } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 import { defineComponent } from 'vue';
-import QuestaoOpcoes from './QuestaoOpcoesComponent.vue';
+import QuestaoOpcoes from './questao-opcoes/QuestaoOpcoesComponent.vue';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { especificacao } from '@/apresentacao/assets/especificacao';
 
@@ -12,7 +12,7 @@ export default defineComponent({
         const editorData = especificacao.template;
         return {
             editor: ClassicEditor,
-            editorData,
+            editorData: '',
             editorConfig: {
                 // The configuration of the editor.
             },
