@@ -17,6 +17,7 @@ export default defineComponent({
         <ul>
             <li>
                 <router-link to="/">Resposta</router-link>
+                <router-link to="/editor">Editor</router-link>
             </li>
         </ul>
     </nav>
