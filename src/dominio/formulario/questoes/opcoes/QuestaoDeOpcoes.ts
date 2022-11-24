@@ -3,7 +3,7 @@ import { Questao } from '../Questao';
 import { Opcao } from './Opcao';
 
 export class QuestaoDeOpcoes extends Questao {
-    public valorSelecionado?: Opcao;
+    private valorSelecionado?: Opcao;
 
     constructor(
         id: string,
@@ -13,6 +13,14 @@ export class QuestaoDeOpcoes extends Questao {
         subtitulo?: string,
     ) {
         super(id, titulo, tipo, subtitulo);
+    }
+
+    setValorSelecionado(opcao: Opcao) {
+        this.valorSelecionado = opcao;
+    }
+
+    getValorSelecionado() {
+        return this.valorSelecionado;
     }
 
     get semRamificacao(): boolean {

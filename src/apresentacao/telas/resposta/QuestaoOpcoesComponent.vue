@@ -1,6 +1,7 @@
 <script lang="ts">
 import { QuestaoDeOpcoes } from '@/dominio/formulario/questoes/opcoes/QuestaoDeOpcoes';
 import { defineComponent } from 'vue';
+import OpcaoComponent from './OpcaoComponent.vue';
 
 export default defineComponent({
     name: 'QuestaoOpcoesComponent',
@@ -9,6 +10,9 @@ export default defineComponent({
             type: QuestaoDeOpcoes,
             required: true,
         },
+    },
+    components: {
+        OpcaoComponent,
     },
 });
 </script>
@@ -22,18 +26,14 @@ export default defineComponent({
             }}</span>
         </header>
         <fieldset>
-            <template v-for="opcao in questao.opcoes" :key="opcao.id">
-                <label :for="opcao.getId()">
-                    <input
-                        type="radio"
-                        :name="questao.getId()"
-                        :id="opcao.getId()"
-                        :value="opcao"
-                        v-model="questao.valorSelecionado"
-                    />
-                    {{ opcao.getLabel() }}
-                </label>
-            </template>
+            <opcao-component
+                v-for="opcao in questao.opcoes"
+                :key="opcao.getId()"
+                :model-value="questao.getValorSelecionado()"
+                :opcao="opcao"
+                :questaoId="questao.getId()"
+                @opcao-selecionada="questao.setValorSelecionado($event)"
+            ></opcao-component>
         </fieldset>
         <footer v-if="questao.valorSelecionado?.getVariaveis()">
             <h4>Preencha as variáveis para a resposta:</h4>

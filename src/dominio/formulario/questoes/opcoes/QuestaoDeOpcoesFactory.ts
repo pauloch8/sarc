@@ -34,7 +34,7 @@ export class QuestaoDeOpcoesFactory {
             if (!opcaoSelecionada) {
                 throw new Error('Opção do valor da pergunta não encontrada');
             }
-            questao.valorSelecionado = opcaoSelecionada;
+            questao.setValorSelecionado(opcaoSelecionada);
         }
         return questao;
     }

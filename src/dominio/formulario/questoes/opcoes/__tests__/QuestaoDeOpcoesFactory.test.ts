@@ -10,7 +10,7 @@ describe('QuestaoDeOpcoesFactory', () => {
         test('se dto tem valor padrão cria Questao com valor selecionado', () => {
             const { dtoFake, opcaoDtoFake2 } = makeQuestoDtoFake();
             const questao = QuestaoDeOpcoesFactory.criarDeDto(dtoFake);
-            const opcaoSelecionada = questao.valorSelecionado;
+            const opcaoSelecionada = questao.getValorSelecionado();
             expect(opcaoSelecionada?.getId()).toBe(opcaoDtoFake2.id);
         });
     });
