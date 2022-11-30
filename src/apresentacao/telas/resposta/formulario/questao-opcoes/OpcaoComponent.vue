@@ -18,23 +18,31 @@ export default defineComponent({
             required: false,
         },
     },
-    emits: ['opcaoSelecionada'],
+    computed: {
+        idRadio() {
+            return this.questaoId + '-' + this.opcao.getId();
+        },
+        isChecked() {
+            return this.modelValue?.getId() === this.opcao.getId();
+        },
+    },
     methods: {
         emitirOpcaoSelecionada() {
             console.log('emitiu opção selecioanda', this.opcao);
             this.$emit('opcaoSelecionada', this.opcao);
         },
     },
+    emits: ['opcaoSelecionada'],
 });
 </script>
 
 <template>
-    <label :for="opcao.getId()">
+    <label :for="idRadio">
         <input
-            :checked="modelValue?.getId() === opcao.getId()"
+            :checked="isChecked"
             type="radio"
             :name="questaoId"
-            :id="questaoId + opcao.getId()"
+            :id="idRadio"
             @click="emitirOpcaoSelecionada()"
         />
         {{ opcao.getLabel() }}
