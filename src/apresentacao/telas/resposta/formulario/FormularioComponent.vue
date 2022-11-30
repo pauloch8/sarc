@@ -6,7 +6,7 @@ import QuestaoOpcoes from './questao-opcoes/QuestaoOpcoesComponent.vue';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { especificacao } from '@/apresentacao/assets/especificacao';
 import { QuestaoDeOpcoes } from '@/dominio/formulario/questoes/opcoes/QuestaoDeOpcoes';
-import { Opcao } from '@/dominio/formulario/questoes/opcoes/Opcao';
+import BotaoGerarRelatorio from './BotaoGerarRelatorio.vue';
 
 export default defineComponent({
     name: 'FormularioComponent',
@@ -24,6 +24,7 @@ export default defineComponent({
         const editorData = especificacao.template;
         return {
             esteFormulario: this.formulario,
+            erroGerarRespostas: '',
             editor: ClassicEditor,
             editorData: editorData,
             editorConfig: {
@@ -33,27 +34,7 @@ export default defineComponent({
     },
     components: {
         QuestaoOpcoes,
-    },
-    methods: {
-        gerar() {
-            try {
-                debugger;
-                const respostas = this.esteFormulario.getRespostas();
-                const texto = this.processadorFormulario.processar(respostas);
-                console.log({ texto });
-                this.editorData = texto;
-            } catch (e) {
-                console.error((e as Error).message);
-                return '';
-            }
-        },
-        receberOpcaoSelecionada(opcao: Opcao) {
-            console.log(
-                'FormularioComponent: Recebida opcao selecionada',
-                opcao,
-                this.esteFormulario,
-            );
-        },
+        BotaoGerarRelatorio,
     },
     computed: {
         resposta() {
@@ -77,6 +58,12 @@ export default defineComponent({
             return this.esteFormulario.getQuestoes();
         },
     },
+    methods: {
+        apresentarRelatorio(relatorio: string) {
+            debugger;
+            this.editorData = relatorio;
+        },
+    },
 });
 </script>
 
@@ -85,17 +72,20 @@ export default defineComponent({
     <h2 v-if="esteFormulario.getSubtitulo()">
         {{ esteFormulario.getSubtitulo() }}
     </h2>
+
     <template
         v-for="questao of esteFormulario.getQuestoes()"
         :key="questao.getId()"
     >
-        <QuestaoOpcoes
-            :questao="questao as QuestaoDeOpcoes"
-            @opcao-selecionada="receberOpcaoSelecionada"
-        >
-        </QuestaoOpcoes>
+        <QuestaoOpcoes :questao="questao as QuestaoDeOpcoes" />
     </template>
-    <button @click="gerar">Gerar</button>
+
+    <BotaoGerarRelatorio
+        :formulario="formulario"
+        :processadorFormulario="processadorFormulario"
+        @gerou-relatorio="apresentarRelatorio"
+    ></BotaoGerarRelatorio>
+
     <ckeditor
         :editor="editor"
         v-model="editorData"

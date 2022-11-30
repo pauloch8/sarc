@@ -227,6 +227,10 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
                             categoria: 'ementa',
                             texto: `MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. EXISTÊNCIA DE INCAPACIDADE LABORATIVA. PRESTAÇÃO PRORROGADA CONFORME PARECER MÉDICO FEDERAL. ARTIGO 71 DO DECRETO 3.048/99.`,
                         },
+                        {
+                            categoria: 'elementos',
+                            texto: ' ',
+                        },
                     ],
                 },
                 {
