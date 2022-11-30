@@ -65,7 +65,8 @@ export class Formulario {
     }
 
     getRespostas(): RespostaDeFormulario {
-        const respostasQuestoes = this.questoes.map(questao =>
+        const questoes = this.getQuestoes();
+        const respostasQuestoes = questoes.map(questao =>
             questao.getResposta(),
         );
         const respostaFormulario = {
