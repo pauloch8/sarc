@@ -25,7 +25,7 @@ export default defineComponent({
         return {
             esteFormulario: this.formulario,
             editor: ClassicEditor,
-            editorData: '',
+            editorData: editorData,
             editorConfig: {
                 // The configuration of the editor.
             },
@@ -101,5 +101,4 @@ export default defineComponent({
         v-model="editorData"
         :config="editorConfig"
     ></ckeditor>
-    {{ editorData }}
 </template>
