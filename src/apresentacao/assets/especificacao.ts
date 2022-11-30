@@ -5,7 +5,48 @@ export const especificacao: EspecificacaoDTO = {
     id: 'gerador-de-acordao',
     questoes: [
         {
-            id: 'especie',
+            id: 'tipoDeRecurso',
+            tipo: 'opcao',
+            titulo: 'Tipo do Recurso',
+            valorPadrao: 'ro',
+            opcoes: [
+                {
+                    id: 'ro',
+                    label: 'Recurso Ordinário',
+                    ramificacao: { irPara: 'especie-ro' },
+                    texto: [
+                        { categoria: 'padrao', texto: 'Recurso Ordinário' },
+                    ],
+                },
+                {
+                    id: 're',
+                    label: 'Recurso Especial',
+                    ramificacao: { irPara: 'especie-re' },
+                    texto: [{ categoria: 'padrao', texto: 'Recurso Especial' }],
+                },
+                {
+                    id: 'puj',
+                    label: 'PUJ em caso concreto',
+                    ramificacao: { irPara: 'avançar' },
+                    texto: [
+                        { categoria: 'padrao', texto: 'PUJ em caso concreto' },
+                    ],
+                },
+                {
+                    id: 'emb',
+                    label: 'Embargos de declaração',
+                    ramificacao: { irPara: 'avançar' },
+                    texto: [
+                        {
+                            categoria: 'padrao',
+                            texto: 'Embargos de declaração',
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: 'especie-ro',
             tipo: 'opcao',
             titulo: 'Espécie',
             opcoes: [
@@ -17,9 +58,17 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'descricao',
                             texto: 'Auxílio Doença',
                         },
+                        {
+                            categoria: 'voto',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: ' ',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'motivo-ro-b31',
                     },
                 },
                 {
@@ -30,9 +79,38 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'descricao',
                             texto: 'Auxílio Acidente',
                         },
+                        {
+                            categoria: 'voto',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: ' ',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'motivo-ro-b91',
+                    },
+                },
+                {
+                    id: 'b87',
+                    label: '87 - BPC à pessoa com deficiência',
+                    texto: [
+                        {
+                            categoria: 'descricao',
+                            texto: 'BPC à pessoa com deficiência',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: ' ',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'motivo-ro-b87',
                     },
                 },
                 {
@@ -53,45 +131,20 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'procurador',
                     },
                 },
             ],
         },
         {
-            id: 'acaoJudicial',
+            id: 'motivo-ro-b31',
             tipo: 'opcao',
-            titulo: 'Ação judicial com mesmo objeto',
-            subtitulo: 'No caso de Recurso Ordinário',
-            valorPadrao: 'nao',
+            titulo: 'Motivo do indeferimento',
             opcoes: [
                 {
-                    id: 'nao',
-                    label: 'Não',
-                    ramificacao: { irPara: 'avançar' },
-                    texto: [
-                        {
-                            categoria: 'elementos',
-                            texto: ' ',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: ` `,
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: ` `,
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: ``,
-                        },
-                    ],
-                },
-                {
-                    id: 'sim',
-                    label: 'Sim',
-                    ramificacao: { irPara: 'avançar' },
+                    id: 'acaoJudicial',
+                    label: 'Ação judicial com mesmo objeto',
+                    ramificacao: { irPara: 'procurador' },
                     variaveis: [
                         {
                             id: 'numAcaoJudicial',
@@ -125,51 +178,21 @@ III - recursos das decisões do INSS relacionados à comprovação de atividade 
                             categoria: 'ementa',
                             texto: `POSSUI AÇÃO JUDICIAL COM MESMO OBJETO DESTE RECURSO ADMINISTRATIVO. INCOMPETÊNCIA DESTA CORTE PARA CONHECER O MÉRITO, POR FORÇA DO § 3º DO ART. 126 DA LEI 8.213/91 E ARTIGO 307 DO DECRETO 3.048/99.`,
                         },
-                    ],
-                },
-            ],
-        },
-        {
-            id: 'incapacidadePmfFavoravel',
-            tipo: 'opcao',
-            titulo: 'Incapacidade - PMF favorável',
-            subtitulo: 'Espécie: 31/91 - Tipo Processo: Recurso Ordinário',
-            valorPadrao: 'nao',
-            opcoes: [
-                {
-                    id: 'nao',
-                    label: 'Não',
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                    texto: [
                         {
                             categoria: 'recurso',
-                            texto: ' ',
+                            texto: '',
                         },
                         {
                             categoria: 'diligencias',
-                            texto: ' ',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: ` `,
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: ` `,
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: ` `,
+                            texto: '',
                         },
                     ],
                 },
                 {
-                    id: 'sim',
-                    label: 'Sim',
+                    id: 'incapacidadePmfFavoravel',
+                    label: 'Incapacidade - PMF favorável',
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'procurador',
                     },
                     variaveis: [
                         {
@@ -206,53 +229,97 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
                         },
                     ],
                 },
-            ],
-        },
-        {
-            id: 'naoComprovacaoDaDeficiencia',
-            tipo: 'opcao',
-            titulo: 'Não comprovação da deficiência',
-            subtitulo: 'Espécie: 87 - Tipo Processo: Recurso Ordinário',
-            valorPadrao: 'nao',
-            opcoes: [
                 {
-                    id: 'nao',
-                    label: 'Não',
+                    id: 'incapacidadePmfContrario',
+                    label: 'Incapacidade - PMF contrário',
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'procurador',
                     },
                     texto: [
                         {
+                            categoria: 'recurso',
+                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
+                        },
+                        {
+                            categoria: 'diligencias',
+                            texto: 'Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: `
+Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 7º do art. 53 da Portaria MDSA 116/2017.<br/>
+Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:<br/>
+“Art. 71.  O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.” (grifo nosso)`,
+                        },
+                        {
+                            categoria: 'casoConcreto',
+                            texto: `
+No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.<br/>
+Também, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.<br/>
+Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.
+Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.`,
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: `MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.`,
+                        },
+                    ],
+                },
+            ],
+        },
+        {
+            id: 'motivo-ro-b87',
+            tipo: 'opcao',
+            titulo: 'Motivo do indeferimento',
+            opcoes: [
+                {
+                    id: 'acaoJudicial',
+                    label: 'Ação judicial com mesmo objeto',
+                    ramificacao: { irPara: 'procurador' },
+                    variaveis: [
+                        {
+                            id: 'numAcaoJudicial',
+                            label: 'Nº da ação judicial',
+                            tipo: 'texto',
+                        },
+                    ],
+                    texto: [
+                        {
                             categoria: 'elementos',
-                            texto: ' ',
+                            texto: 'Ingressou com ação judicial ${numAcaoJudicial} com mesmo objeto deste recurso administrativo.\nApós análise, é inequívoca a similaridade da causa petendi entre o processo administrativo e judicial.',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: `Normatiza a Lei 8.213/91:
+<p>“Art. 126.  Compete ao Conselho de Recursos da Previdência Social julgar: 
+I - recursos das decisões do INSS nos processos de interesse dos beneficiários; 
+II - contestações e recursos relativos à atribuição, pelo Ministério da Economia, do Fator Acidentário de Prevenção aos estabelecimentos das empresas;<br />
+III - recursos das decisões do INSS relacionados à comprovação de atividade rural de segurado especial de que tratam os arts. 38-A e 38-B, ou demais informações relacionadas ao CNIS de que trata o art. 29-A desta Lei.   (Incluído pela Lei nº 13.846, de 2019)</p>
+
+<p>§ 3º A propositura de ação que tenha por objeto idêntico pedido sobre o qual versa o processo administrativo importa renúncia ao direito de recorrer na esfera administrativa e desistência do recurso interposto.” (destaquei)</p>
+
+<p>No mesmo sentido, dispõe o Decreto 3.048/99:<br />
+“Art. 307.  A propositura pelo interessado de ação judicial que tenha por objeto idêntico pedido sobre o qual verse o processo administrativo importará renúncia ao direito de contestar e recorrer na esfera administrativa, com a consequente desistência da contestação ou do recurso interposto.  (Redação dada pelo Decreto nº 10.410, de 2020).</p>`,
+                        },
+                        {
+                            categoria: 'casoConcreto',
+                            texto: `Sendo a questão objeto de discussão na esfera judiciária, esta Corte Administrativa perde a sua competência para decidir a matéria. Incorreu o recorrente no disposto pelo Diploma Previdenciário, renunciando tacitamente ao recurso administrativo.`,
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: `POSSUI AÇÃO JUDICIAL COM MESMO OBJETO DESTE RECURSO ADMINISTRATIVO. INCOMPETÊNCIA DESTA CORTE PARA CONHECER O MÉRITO, POR FORÇA DO § 3º DO ART. 126 DA LEI 8.213/91 E ARTIGO 307 DO DECRETO 3.048/99.`,
                         },
                         {
                             categoria: 'recurso',
                             texto: ' ',
                         },
-                        {
-                            categoria: 'diligencias',
-                            texto: ' ',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: ` `,
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: ` `,
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: ` `,
-                        },
                     ],
                 },
                 {
-                    id: 'sim',
-                    label: 'Sim',
+                    id: 'naoComprovacaoDaDeficiencia',
+                    label: 'Não comprovação da deficiência',
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'procurador',
                     },
                     texto: [
                         {
@@ -300,50 +367,135 @@ Deste modo, não restam comprovados os requisitos relativos à deficiência.`,
             ],
         },
         {
-            id: 'ntepPmfFavoravel',
+            id: 'motivo-ro-b91',
             tipo: 'opcao',
-            titulo: 'NTEP - PMF favorável',
-            subtitulo: 'Espécie: 91 - Tipo Processo: Recurso Ordinário',
-            valorPadrao: 'nao',
+            titulo: 'Motivo do indeferimento',
             opcoes: [
                 {
-                    id: 'nao',
-                    label: 'Não',
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
+                    id: 'acaoJudicial',
+                    label: 'Ação judicial com mesmo objeto',
+                    ramificacao: { irPara: 'procurador' },
+                    variaveis: [
+                        {
+                            id: 'numAcaoJudicial',
+                            label: 'Nº da ação judicial',
+                            tipo: 'texto',
+                        },
+                    ],
                     texto: [
                         {
                             categoria: 'elementos',
-                            texto: ' ',
+                            texto: 'Ingressou com ação judicial ${numAcaoJudicial} com mesmo objeto deste recurso administrativo.\nApós análise, é inequívoca a similaridade da causa petendi entre o processo administrativo e judicial.',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: `Normatiza a Lei 8.213/91:
+<p>“Art. 126.  Compete ao Conselho de Recursos da Previdência Social julgar: 
+I - recursos das decisões do INSS nos processos de interesse dos beneficiários; 
+II - contestações e recursos relativos à atribuição, pelo Ministério da Economia, do Fator Acidentário de Prevenção aos estabelecimentos das empresas;<br />
+III - recursos das decisões do INSS relacionados à comprovação de atividade rural de segurado especial de que tratam os arts. 38-A e 38-B, ou demais informações relacionadas ao CNIS de que trata o art. 29-A desta Lei.   (Incluído pela Lei nº 13.846, de 2019)</p>
+
+<p>§ 3º A propositura de ação que tenha por objeto idêntico pedido sobre o qual versa o processo administrativo importa renúncia ao direito de recorrer na esfera administrativa e desistência do recurso interposto.” (destaquei)</p>
+
+<p>No mesmo sentido, dispõe o Decreto 3.048/99:<br />
+“Art. 307.  A propositura pelo interessado de ação judicial que tenha por objeto idêntico pedido sobre o qual verse o processo administrativo importará renúncia ao direito de contestar e recorrer na esfera administrativa, com a consequente desistência da contestação ou do recurso interposto.  (Redação dada pelo Decreto nº 10.410, de 2020).</p>`,
+                        },
+                        {
+                            categoria: 'casoConcreto',
+                            texto: `Sendo a questão objeto de discussão na esfera judiciária, esta Corte Administrativa perde a sua competência para decidir a matéria. Incorreu o recorrente no disposto pelo Diploma Previdenciário, renunciando tacitamente ao recurso administrativo.`,
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: `POSSUI AÇÃO JUDICIAL COM MESMO OBJETO DESTE RECURSO ADMINISTRATIVO. INCOMPETÊNCIA DESTA CORTE PARA CONHECER O MÉRITO, POR FORÇA DO § 3º DO ART. 126 DA LEI 8.213/91 E ARTIGO 307 DO DECRETO 3.048/99.`,
                         },
                         {
                             categoria: 'recurso',
                             texto: ' ',
                         },
+                    ],
+                },
+                {
+                    id: 'incapacidadePmfFavoravel',
+                    label: 'Incapacidade - PMF favorável',
+                    ramificacao: {
+                        irPara: 'procurador',
+                    },
+                    variaveis: [
+                        {
+                            id: 'dataNovaCessacao',
+                            label: 'Nova cessação',
+                            tipo: 'data',
+                        },
+                    ],
+                    texto: [
+                        {
+                            categoria: 'recurso',
+                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
+                        },
                         {
                             categoria: 'diligencias',
-                            texto: ' ',
+                            texto: 'Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela existência da incapacidade laborativa fixando a nova data da cessação ${dataNovaCessacao}.',
                         },
                         {
                             categoria: 'merito',
-                            texto: ` `,
+                            texto: `Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 7º do art. 53 da Portaria MDSA 116/2017.<br/>
+Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:<br/>
+“Art. 71.  O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.” (grifo nosso)`,
                         },
                         {
                             categoria: 'casoConcreto',
-                            texto: ` `,
+                            texto: `No caso dos autos, a pretensão do recorrente encontra alicerce no parecer da perícia médica oficial.
+Há o cumprimento do requisito da incapacidade, devendo a prestação ser prorrogada na data fixada pela PMF.<br/>
+Dessa forma, faz jus à percepção da prestação do auxílio incapacidade laborativa previsto no art. 71 do Decreto 3.048/99, sendo procedente o pedido.<br/>
+Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.`,
                         },
                         {
                             categoria: 'ementa',
-                            texto: ` `,
+                            texto: `MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. EXISTÊNCIA DE INCAPACIDADE LABORATIVA. PRESTAÇÃO PRORROGADA CONFORME PARECER MÉDICO FEDERAL. ARTIGO 71 DO DECRETO 3.048/99.`,
                         },
                     ],
                 },
                 {
-                    id: 'sim',
-                    label: 'Sim',
+                    id: 'incapacidadePmfContrario',
+                    label: 'Incapacidade - PMF contrário',
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'procurador',
+                    },
+                    texto: [
+                        {
+                            categoria: 'recurso',
+                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
+                        },
+                        {
+                            categoria: 'diligencias',
+                            texto: 'Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: `
+Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 7º do art. 53 da Portaria MDSA 116/2017.<br/>
+Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:<br/>
+“Art. 71.  O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.” (grifo nosso)`,
+                        },
+                        {
+                            categoria: 'casoConcreto',
+                            texto: `
+No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.<br/>
+Também, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.<br/>
+Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.
+Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.`,
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: `MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.`,
+                        },
+                    ],
+                },
+                {
+                    id: 'ntepPmfFavoravel',
+                    label: 'NTEP - PMF favorável',
+                    ramificacao: {
+                        irPara: 'procurador',
                     },
                     texto: [
                         {
@@ -392,120 +544,128 @@ Deste modo, deve a espécie ser considerada previdenciária, e não acidentária
                         },
                     ],
                 },
-            ],
-        },
-        {
-            id: 'incapacidadePmfContrario',
-            tipo: 'opcao',
-            titulo: 'Incapacidade - PMF contrário',
-            subtitulo: 'Espécie: 31/91 - Tipo Processo: Recurso Ordinário',
-            valorPadrao: 'nao',
-            opcoes: [
                 {
-                    id: 'nao',
-                    label: 'Não',
+                    id: 'ntepPmfContrario',
+                    label: 'NTEP - PMF contrário',
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'procurador',
                     },
                     texto: [
                         {
+                            categoria: 'elementos',
+                            texto: 'A perícia médica federal reconheceu o nexo técnico.',
+                        },
+                        {
                             categoria: 'recurso',
-                            texto: ' ',
+                            texto: 'Irresignada com a decisão administrativa da Autarquia, recorre a empresa interessada a esta Corte Administrativa requerendo que a prestação <especie> seja reconhecida como não decorrente de acidente de trabalho.',
                         },
                         {
                             categoria: 'diligencias',
-                            texto: ' ',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: ` `,
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: ` `,
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: ` `,
-                        },
-                    ],
-                },
-                {
-                    id: 'sim',
-                    label: 'Sim',
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                    texto: [
-                        {
-                            categoria: 'recurso',
-                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
-                        },
-                        {
-                            categoria: 'diligencias',
-                            texto: 'Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.',
+                            texto: 'Houve reanálise pela perícia médica federal, que por sua vez retificou a existência do nexo técnico, e fundamenta pela transformação da espécie em previdenciário (B31).',
                         },
                         {
                             categoria: 'merito',
                             texto: `
-Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 7º do art. 53 da Portaria MDSA 116/2017.<br/>
-Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:<br/>
-“Art. 71.  O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.” (grifo nosso)`,
+<p>Regulamenta o Decreto 3.048/99:<br/>
+“Art. 337.  O acidente do trabalho será caracterizado tecnicamente pela Perícia Médica Federal, por meio da identificação do nexo causal entre o trabalho e o agravo.<br/>
+§ 1º O setor de benefícios do Instituto Nacional do Seguro Social reconhecerá o direito do segurado à habilitação do benefício acidentário.<br/>
+§ 2º Será considerado agravamento do acidente aquele sofrido pelo acidentado quanto estiver sob a responsabilidade da reabilitação profissional.<br/>
+§ 3o  Considera-se estabelecido o nexo entre o trabalho e o agravo quando se verificar nexo técnico epidemiológico entre a atividade da empresa e a entidade mórbida motivadora da incapacidade, elencada na Classificação Internacional de Doenças - CID em conformidade com o disposto na Lista C do Anexo II deste Regulamento. (Redação dada pelo Decreto nº 6.957, de 2009)<br/>
+§ 4o  Para os fins deste artigo, considera-se agravo a lesão, doença, transtorno de saúde, distúrbio, disfunção ou síndrome de evolução aguda, subaguda ou crônica, de natureza clínica ou subclínica, inclusive morte, independentemente do tempo de latência. (Incluído pelo Decreto nº 6.042, de 2007).<br/>
+ § 5º  Reconhecidos pela Perícia Médica Federal a incapacidade para o trabalho e o nexo causal entre o trabalho e o agravo, na forma prevista no § 3º, serão devidas as prestações acidentárias a que o beneficiário tiver direito.    (Redação dada pelo Decreto nº 10.410, de 2020)<br/>
+§ 6º  A Perícia Médica Federal deixará de aplicar o disposto no § 3º quando demonstrada a inexistência de nexo causal entre o trabalho e o agravo, sem prejuízo do disposto nos § 7º e § 12.   (Redação dada pelo Decreto nº 10.410, de 2020)<br/>
+§ 7o  A empresa poderá requerer ao INSS a não aplicação do nexo técnico epidemiológico ao caso concreto mediante a demonstração de inexistência de correspondente nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)<br/>
+§ 8o  O requerimento de que trata o § 7o poderá ser apresentado no prazo de quinze dias da data para a entrega, na forma do inciso IV do art. 225, da GFIP que registre a movimentação do trabalhador, sob pena de não conhecimento da alegação em instância administrativa. (Incluído pelo Decreto nº 6.042, de 2007).<br/>
+§ 9º  Caracterizada a impossibilidade de atendimento ao disposto no § 8º, motivada pelo não conhecimento tempestivo do diagnóstico do agravo, o requerimento de que trata o § 7º poderá ser apresentado no prazo de quinze dias, contado da data em que a empresa tomar ciência da decisão a que se refere o § 5º.    (Redação dada pelo Decreto nº 10.410, de 2020)<br/>
+§ 10.  Juntamente com o requerimento de que tratam os §§ 8o e 9o, a empresa formulará as alegações que entender necessárias e apresentará as provas que possuir demonstrando a inexistência de nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)<br/>
+§ 11.  A documentação probatória poderá trazer, entre outros meios de prova, evidências  técnicas circunstanciadas e tempestivas à exposição do segurado, podendo ser produzidas no âmbito de programas de gestão de risco, a cargo da empresa, que possuam responsável técnico legalmente habilitado. (Incluído pelo Decreto nº 6.042, de 2007).<br/>
+§ 12.  O INSS informará ao segurado sobre a contestação da empresa para que este, querendo, possa impugná-la, obedecendo, quanto à produção de provas, ao disposto no § 10, sempre que a instrução do pedido evidenciar a possibilidade de reconhecimento de inexistência do nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)<br/>
+§ 13.  Da decisão do requerimento de que trata o § 7o cabe recurso, com efeito suspensivo, por parte da empresa ou, conforme o caso, do segurado ao Conselho de Recursos da Previdência Social, nos termos dos arts. 305 a 310. (Incluído pelo Decreto nº 6.042, de 2007).”</p>
+
+<p>O Diploma Previdenciário regulamenta que a Perícia Médica Federal – PMF -  tem competência para determinar se uma incapacidade decorre ou não do trabalho. Para isso, precisa relacionar o agravo (incapacidade laboral) com a Classificação Internacionais de Doenças dispostas no Anexo II, Lista “C”.<br/>
+Tal procedimento foi realizado pela PMF e, por haver o enquadramento legal, foi concedida a espécie acidentária.<br/>
+Não há a necessidade de vistoria técnica em razão do Decreto 3.048/99 ser taxativo quanto as doenças que têm origem no trabalho.</p>`,
                         },
                         {
                             categoria: 'casoConcreto',
-                            texto: `
-No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.<br/>
-Também, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.<br/>
-Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.
-Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.`,
+                            texto: `Na fase recursal, o órgão da PMF manteve o entendimento anterior ante a existência de nexo entre a incapacidade e o trabalho exercido.<br/>
+Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico, devendo a espécie continuar sendo acidentária.`,
                         },
                         {
                             categoria: 'ementa',
-                            texto: `MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.`,
+                            texto: `A RELAÇÃO ENTRE A PATOLOGIA INCAPACITANTE E O LABOR É CARACTERIZADO PELA PERÍCIA MÉDICA FEDERAL, CONFORME ARTIGO 337 DO DECRETO 3.048/99. SENDO A PERÍCIA FAVORÁVEL QUANTO AO NEXO, ESTÁ COMPROVADO.`,
                         },
                     ],
                 },
             ],
         },
         {
-            id: 'tipoDeRecurso',
+            id: 'especie-re',
             tipo: 'opcao',
-            titulo: 'Tipo do Recurso',
-            valorPadrao: 'ro',
+            titulo: 'Espécie',
             opcoes: [
                 {
-                    id: 'ro',
-                    label: 'Recurso Ordinário',
-                    ramificacao: { irPara: 'avançar' },
-                    texto: [
-                        { categoria: 'padrao', texto: 'Recurso Ordinário' },
-                    ],
-                },
-                {
-                    id: 're',
-                    label: 'Recurso Especial',
-                    ramificacao: { irPara: 'avançar' },
-                    texto: [{ categoria: 'padrao', texto: 'Recurso Especial' }],
-                },
-                {
-                    id: 'puj',
-                    label: 'PUJ em caso concreto',
-                    ramificacao: { irPara: 'avançar' },
-                    texto: [
-                        { categoria: 'padrao', texto: 'PUJ em caso concreto' },
-                    ],
-                },
-                {
-                    id: 'emb',
-                    label: 'Embargos de declaração',
-                    ramificacao: { irPara: 'avançar' },
+                    id: 'b31',
+                    label: '31 - Auxílio Doença',
                     texto: [
                         {
-                            categoria: 'padrao',
-                            texto: 'Embargos de declaração',
+                            categoria: 'descricao',
+                            texto: 'Auxílio Doença',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: ' ',
                         },
                     ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'b91',
+                    label: '91 - Auxílio Acidente',
+                    texto: [
+                        {
+                            categoria: 'descricao',
+                            texto: 'Auxílio Acidente',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: ' ',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: ' ',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'b25',
+                    label: '25 - Auxílio Reclusão',
+                    texto: [
+                        {
+                            categoria: 'descricao',
+                            texto: 'Auxílio Reclusão',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: 'O Auxílio-Reclusão é benefício devido aos dependentes do segurado de baixa renda que tenha sido submetido a reclusão em regime fechado.',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: 'AUXÍLIO-RECLUSÃO. PRETENDE A PARTE RECORRENTE A REFORMA DA DECISÃO QUE INDEFERIU O BENEFÍCIO DE QUE INDEFERIU O BENEFÍCIO DE AUXÍLIO-RECLUSÃO, O QUE NÃO ENTEN+A1:E3APRESENTOU CERTIDÃO JUDICIAL QUE ATESTE O RECOLHIMENTO EFETIVO À PRISÃO, E QUE ESPECIFIQUE DESDE QUANDO ESTÁ NESSE REGIME, O QUE NÃO ATENDE AO TEOR DO ART. 80, §1º DA LEI 8.213/91. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
                 },
             ],
         },
@@ -758,22 +918,22 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
         // },
     ],
     template:
-        '<p><strong>RELATÓRIO</strong></p><p><strong>1- Introdução, Contextualização</strong></p><p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p><strong>procurador.relatorio</strong></p><p>${procurador.relatorio}</p><p><strong>2- Elementos pertinentes à espécie</strong></p><p><strong>acaoJudicial.elementos</strong></p><p>${acaoJudicial.elementos}</p><p><strong>naoComprovacaoDaDeficiencia.elementos</strong></p><p>${naoComprovacaoDaDeficiencia.elementos}</p><p><strong>ntepPmfFavoravel.elementos</strong></p><p>${ntepPmfFavoravel.elementos}</p><p><strong>3- Pontos Controversos</strong></p><p><strong>4- Sintese do recurso</strong></p><p><strong>incapacidadePmfFavoravel.recurso</strong></p><p>${incapacidadePmfFavoravel.recurso}</p><p><strong>incapacidadePmfContrario.recurso</strong></p><p>${incapacidadePmfContrario.recurso}</p><p><strong>naoComprovacaoDaDeficiencia.recurso</strong></p><p>${naoComprovacaoDaDeficiencia.recurso}</p><p><strong>ntepPmfFavoravel.recurso</strong></p><p>${ntepPmfFavoravel.recurso}</p><p><strong>admissibilidade.relatorio</strong></p><p>${admissibilidade.relatorio}</p><p><strong>5-Diligencias</strong></p><p><strong>incapacidadePmfFavoravel.diligencias</strong></p><p>${incapacidadePmfFavoravel.diligencias}</p><p><strong>incapacidadePmfContrario.diligencias</strong></p><p>${incapacidadePmfContrario.diligencias}</p><p><strong>naoComprovacaoDaDeficiencia.diligencias</strong></p><p>${naoComprovacaoDaDeficiencia.diligencias}</p><p><strong>ntepPmfFavoravel.diligencias</strong></p><p>${ntepPmfFavoravel.diligencias}</p><p><strong>6- Fechamento</strong></p><p>É o sucinto Relatório. Apresento o feito em mesa.</p><p><strong>VOTO</strong></p><p><strong>7- Introdução, Contextualizacao</strong></p><p><strong>admissibilidade.voto</strong></p><p>${admissibilidade.voto}</p><p><strong>ADMISSIBILIDADE</strong></p><p><strong>8- Admissibilidade</strong></p><p><strong>MÉRITO</strong></p><p><strong>9- Mérito - Requisitos para a prestação</strong></p><p><strong>acaoJudicial.merito</strong></p><p>${acaoJudicial.merito}</p><p><strong>incapacidadePmfFavoravel.merito</strong></p><p>${incapacidadePmfFavoravel.merito}</p><p><strong>incapacidadePmfContrario.merito</strong></p><p>${incapacidadePmfContrario.merito}</p><p><strong>naoComprovacaoDaDeficiencia.merito</strong></p><p>${naoComprovacaoDaDeficiencia.merito}</p><p><strong>ntepPmfFavoravel.merito</strong></p><p>${ntepPmfFavoravel.merito}</p><p><strong>10- Pontos controversos</strong></p><p><strong>CASO CONCRETO</strong></p><p><strong>11- Caso Concreto</strong></p><p><strong>acaoJudicial.casoConcreto</strong></p><p>${acaoJudicial.casoConcreto}</p><p><strong>incapacidadePmfFavoravel.casoConcreto</strong></p><p>${incapacidadePmfFavoravel.casoConcreto}</p><p><strong>incapacidadePmfContrario.casoConcreto</strong></p><p>${incapacidadePmfContrario.casoConcreto}</p><p><strong>naoComprovacaoDaDeficiencia.casoConcreto</strong></p><p>${naoComprovacaoDaDeficiencia.casoConcreto}</p><p><strong>ntepPmfFavoravel.casoConcreto</strong></p><p>${ntepPmfFavoravel.casoConcreto}</p><p><strong>DECISÃO</strong></p><p><strong>12-Conclusão</strong></p><p><strong>EMENTA</strong></p><p><strong>admissibilidade.ementa</strong></p><p>${admissibilidade.ementa}</p><p><strong>acaoJudicial.ementa</strong></p><p>${acaoJudicial.ementa}</p><p><strong>incapacidadePmfFavoravel.ementa</strong></p><p>${incapacidadePmfFavoravel.ementa}</p><p><strong>incapacidadePmfContrario.ementa</strong></p><p>${incapacidadePmfContrario.ementa}</p><p><strong>naoComprovacaoDaDeficiencia.ementa</strong></p><p>${naoComprovacaoDaDeficiencia.ementa}</p><p><strong>ntepPmfFavoravel.ementa</strong></p><p>${ntepPmfFavoravel.ementa}</p>',
+        '<p><strong>RELATÓRIO</strong></p><p><strong>1- Introdução, Contextualização</strong></p><p>Trata-se de <strong>${tipoDeRecurso.padrao}</strong> interposto pela parte recorrente acima citada em face da decisão do <strong>${especie-ro.descricao}${especie-re.descricao}</strong> acima citado que a considerou apto às atividades laborativas.&nbsp;</p><p>${procurador.relatorio}</p><p>${admissibilidade.relatorio}</p><p><strong>2- Elementos pertinentes à espécie</strong></p><p>${motivo-ro-b31.elementos}${motivo-ro-b87.elementos}${motivo-ro-b91.elementos}</p><p><strong>3- Pontos Controversos</strong></p><p><strong>4- Sintese do recurso</strong></p><p>${motivo-ro-b31.recurso}${motivo-ro-b87.recurso}${motivo-ro-b91.recurso}</p><p><strong>5-Diligencias</strong></p><p>${motivo-ro-b31.diligencias}${motivo-ro-b87.diligencias}${motivo-ro-b91.diligencias}</p><p><strong>6- Fechamento</strong></p><p>É o sucinto Relatório. Apresento o feito em mesa.</p><p><strong>VOTO</strong></p><p><strong>7- Introdução, Contextualizacao</strong></p><p>${especie-ro.voto}${especie-re.voto}</p><p>${admissibilidade.voto}</p><p><strong>ADMISSIBILIDADE</strong></p><p><strong>8- Admissibilidade</strong></p><p><strong>MÉRITO</strong></p><p><strong>9- Mérito - Requisitos para a prestação</strong></p><p>${motivo-ro-b31.merito}${motivo-ro-b87.merito}${motivo-ro-b91.merito}</p><p><strong>10- Pontos controversos</strong></p><p><strong>CASO CONCRETO</strong></p><p><strong>11- Caso Concreto</strong></p><p>${motivo-ro-b31.casoConcreto}${motivo-ro-b87.casoConcreto}${motivo-ro-b91.casoConcreto}</p><p><strong>DECISÃO</strong></p><p><strong>12-Conclusão</strong></p><p><strong>EMENTA</strong></p><p>${especie-ro.ementa}${especie-re.ementa}</p><p>${admissibilidade.ementa}</p><p>${motivo-ro-b31.ementa}${motivo-ro-b87.ementa}${motivo-ro-b91.ementa}</p>',
     // templates: [
     //     {
     //         id: 'relatorio',
     //         titulo: 'Relatório',
-    //         texto: '',
+    //         texto: ' ',
     //     },
     //     {
     //         id: 'voto',
     //         titulo: 'Voto',
-    //         texto: '',
+    //         texto: ' ',
     //     },
     //     {
     //         id: 'ementa',
     //         titulo: 'Ementa',
-    //         texto: '',
+    //         texto: ' ',
     //     },
     // ],
 };
