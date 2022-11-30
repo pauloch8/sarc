@@ -13,7 +13,7 @@ export default defineComponent({
 
 <template>
     <main>
-        <formulario-component
+        <FormularioComponent
             :formulario="formulario"
             :processador-formulario="processadorFormulario"
         />

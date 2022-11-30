@@ -5,19 +5,11 @@ import { defineComponent } from 'vue';
 import QuestaoOpcoes from './questao-opcoes/QuestaoOpcoesComponent.vue';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { especificacao } from '@/apresentacao/assets/especificacao';
+import { QuestaoDeOpcoes } from '@/dominio/formulario/questoes/opcoes/QuestaoDeOpcoes';
+import { Opcao } from '@/dominio/formulario/questoes/opcoes/Opcao';
 
 export default defineComponent({
     name: 'FormularioComponent',
-    data() {
-        const editorData = especificacao.template;
-        return {
-            editor: ClassicEditor,
-            editorData: '',
-            editorConfig: {
-                // The configuration of the editor.
-            },
-        };
-    },
     props: {
         formulario: {
             type: Formulario,
@@ -28,15 +20,26 @@ export default defineComponent({
             required: true,
         },
     },
+    data() {
+        const editorData = especificacao.template;
+        return {
+            esteFormulario: this.formulario,
+            editor: ClassicEditor,
+            editorData: '',
+            editorConfig: {
+                // The configuration of the editor.
+            },
+        };
+    },
     components: {
         QuestaoOpcoes,
     },
     methods: {
         gerar() {
             try {
-                const texto = this.processadorFormulario.processar(
-                    this.formulario.getRespostas(),
-                );
+                debugger;
+                const respostas = this.esteFormulario.getRespostas();
+                const texto = this.processadorFormulario.processar(respostas);
                 console.log({ texto });
                 this.editorData = texto;
             } catch (e) {
@@ -44,11 +47,18 @@ export default defineComponent({
                 return '';
             }
         },
+        receberOpcaoSelecionada(opcao: Opcao) {
+            console.log(
+                'FormularioComponent: Recebida opcao selecionada',
+                opcao,
+                this.esteFormulario,
+            );
+        },
     },
     computed: {
         resposta() {
             try {
-                return this.formulario.getRespostas();
+                return this.esteFormulario.getRespostas();
             } catch (e) {
                 console.error((e as Error).message);
                 return '';
@@ -56,25 +66,34 @@ export default defineComponent({
         },
         processado() {
             try {
-                return this.processadorFormulario.processar(
-                    this.formulario.getRespostas(),
-                );
+                const respostas = this.esteFormulario.getRespostas();
+                return this.processadorFormulario.processar(respostas);
             } catch (e) {
                 console.error((e as Error).message);
                 return '';
             }
+        },
+        questoes() {
+            return this.esteFormulario.getQuestoes();
         },
     },
 });
 </script>
 
 <template v-if="formulario">
-    <h1>{{ formulario.getTitulo() }}</h1>
-    <h2 v-if="formulario.getSubtitulo()">
-        {{ formulario.getSubtitulo() }}
+    <h1>{{ esteFormulario.getTitulo() }}</h1>
+    <h2 v-if="esteFormulario.getSubtitulo()">
+        {{ esteFormulario.getSubtitulo() }}
     </h2>
-    <template v-for="questao in formulario.getQuestoes()" :key="questao.rotulo">
-        <questao-opcoes :questao="questao" />
+    <template
+        v-for="questao of esteFormulario.getQuestoes()"
+        :key="questao.getId()"
+    >
+        <QuestaoOpcoes
+            :questao="questao as QuestaoDeOpcoes"
+            @opcao-selecionada="receberOpcaoSelecionada"
+        >
+        </QuestaoOpcoes>
     </template>
     <button @click="gerar">Gerar</button>
     <ckeditor

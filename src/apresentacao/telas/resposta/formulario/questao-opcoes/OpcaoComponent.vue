@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Opcao } from '@/dominio/formulario/questoes/opcoes/Opcao';
+import { IOpcao, Opcao } from '@/dominio/formulario/questoes/opcoes/Opcao';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -19,6 +19,12 @@ export default defineComponent({
         },
     },
     emits: ['opcaoSelecionada'],
+    methods: {
+        emitirOpcaoSelecionada() {
+            console.log('emitiu opção selecioanda', this.opcao);
+            this.$emit('opcaoSelecionada', this.opcao);
+        },
+    },
 });
 </script>
 
@@ -28,8 +34,8 @@ export default defineComponent({
             :checked="modelValue?.getId() === opcao.getId()"
             type="radio"
             :name="questaoId"
-            :id="opcao.getId()"
-            @click="$emit('opcaoSelecionada', opcao)"
+            :id="questaoId + opcao.getId()"
+            @click="emitirOpcaoSelecionada()"
         />
         {{ opcao.getLabel() }}
     </label>
