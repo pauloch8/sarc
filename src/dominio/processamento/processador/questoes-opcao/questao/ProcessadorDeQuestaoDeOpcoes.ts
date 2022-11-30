@@ -1,3 +1,4 @@
+import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
 import { RespostaDeQuestaoDeOpcoes } from '../../../../formulario/respostas/Respostas';
 import { IEscapadorDeQuestaoFactory } from '../../../escapador/questao/EscapadorDeQuestaoFactory';
 import { IProcessadorDeOpcao } from '../opcao/ProcessadorDeOpcao';
@@ -52,7 +53,8 @@ export class ProcessadorDeQuestaoDeOpcoes
                 escapador.compararCategoria(t.categoria),
             );
             if (!texto) {
-                throw new ErroTextoDaCatedoriaNaoEncontrado(
+                throw new ErroDaRespostaNaoEncontrado(
+                    escapador,
                     resposta.resposta.id,
                 );
             }
@@ -79,9 +81,11 @@ export class ErroNaoEncontrouProcessadorDaOpcaoDaResposta extends Error {
     }
 }
 
-export class ErroTextoDaCatedoriaNaoEncontrado extends Error {
-    constructor(idCategoria: string) {
-        super(`Texto da Categoria ${idCategoria} não encontrado`);
+export class ErroDaRespostaNaoEncontrado extends Error {
+    constructor(escapador: IEscapadorDeQuestao, questaoId: string) {
+        super(
+            `Texto para o escapador ${escapador} da resposta ${questaoId} não encontrado`,
+        );
     }
 }
 

@@ -10,7 +10,7 @@ import {
     ErroNaoEncontrouEscapadorDaQuestao,
     ErroIdDaQuestaoDiferenteDoIdDoProcessador,
     ErroNaoEncontrouProcessadorDaOpcaoDaResposta,
-    ErroTextoDaCatedoriaNaoEncontrado,
+    ErroDaRespostaNaoEncontrado,
 } from '../ProcessadorDeQuestaoDeOpcoes';
 
 describe('ProcessadorDeQuestaoDeOpcoes', () => {
@@ -44,14 +44,14 @@ describe('ProcessadorDeQuestaoDeOpcoes', () => {
                 sut.processar(respostaFake, templateFake);
             }).toThrow(ErroNaoEncontrouProcessadorDaOpcaoDaResposta);
         });
-        test('lança erro se não encontrar texto com categoria do escapador', () => {
+        test('lança erro se não encontrar texto de resposta com categoria do escapador', () => {
             const { sut, escapadorDeQuestaoFake } = makeSut();
             escapadorDeQuestaoFake.compararCategoria = () => false;
             const respostaFake = makeRespostaFake();
             const templateFake = 'Template ${questao1.categoria2}';
             expect(() => {
                 sut.processar(respostaFake, templateFake);
-            }).toThrow(ErroTextoDaCatedoriaNaoEncontrado);
+            }).toThrow(ErroDaRespostaNaoEncontrado);
         });
         test('substitui o espaçador do template pelo texto da resposta', async () => {
             const { sut } = makeSut();
@@ -106,7 +106,7 @@ function makeRespostaFake() {
 
 function makeEscapadorDeQuestaoFake() {
     const nomeDeEscapadorFake = makeNomeDeEscapadorFake();
-    const escapadorDeQuestaoFake = {
+    const escapadorDeQuestaoFake: IEscapadorDeQuestao = {
         getQuestaoId() {
             return nomeDeEscapadorFake;
         },
