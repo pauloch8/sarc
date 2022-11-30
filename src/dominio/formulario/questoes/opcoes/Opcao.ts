@@ -2,7 +2,14 @@ import { Ramificacao } from '../Ramificacao';
 import { RespostaDeOpcao } from '../../respostas/Respostas';
 import { Variavel } from '../Variavel';
 
-export class Opcao {
+export interface IOpcao {
+    getId(): string;
+    getRamificacao(): Ramificacao;
+    getResposta(): RespostaDeOpcao;
+    getVariaveis(): Variavel[] | undefined;
+}
+
+export class Opcao implements IOpcao {
     constructor(
         private id: string,
         private label: string,
@@ -18,7 +25,7 @@ export class Opcao {
         return this.label;
     }
 
-    getRamificacoes() {
+    getRamificacao() {
         return this.ramificacao;
     }
 

@@ -1,4 +1,5 @@
 import { RespostaDeVariavel } from '../respostas/Respostas';
+
 export class Variavel {
     private valor = '';
 

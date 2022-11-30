@@ -1,21 +1,21 @@
 import { RespostaDeQuestaoDeOpcoes } from '../../respostas/Respostas';
 import { Questao } from '../Questao';
-import { Opcao } from './Opcao';
+import { IOpcao } from './Opcao';
 
 export class QuestaoDeOpcoes extends Questao {
-    private valorSelecionado?: Opcao;
+    private valorSelecionado?: IOpcao;
 
     constructor(
         id: string,
         titulo: string,
         tipo: string,
-        readonly opcoes: Opcao[],
+        readonly opcoes: IOpcao[],
         subtitulo?: string,
     ) {
         super(id, titulo, tipo, subtitulo);
     }
 
-    setValorSelecionado(opcao: Opcao) {
+    setValorSelecionado(opcao: IOpcao) {
         this.valorSelecionado = opcao;
     }
 
@@ -23,17 +23,21 @@ export class QuestaoDeOpcoes extends Questao {
         return this.valorSelecionado;
     }
 
-    get semRamificacao(): boolean {
+    private get semRamificacao(): boolean {
         return this.opcoes.every(
-            opcao => opcao.getRamificacoes().irPara === 'avançar',
+            opcao => opcao.getRamificacao().irPara === 'avançar',
         );
     }
 
-    get irPara(): string | null {
+    get irPara() {
         if (this.semRamificacao) {
             return 'avançar';
+        } else {
+            if (this.valorSelecionado) {
+                return this.valorSelecionado.getRamificacao().irPara;
+            }
+            return null;
         }
-        return this.valorSelecionado?.getRamificacoes().irPara || null;
     }
 
     getResposta(): RespostaDeQuestaoDeOpcoes {
