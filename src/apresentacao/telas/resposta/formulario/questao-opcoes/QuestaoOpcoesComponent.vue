@@ -71,19 +71,6 @@ export default defineComponent({
 </template>
 
 <style scoped>
-.v-enter-from {
-    transform: translateZ(-200x);
-    opacity: 0;
-}
-.v-enter-active {
-    transition: all 3s ease-out;
-}
-.v-enter-tp {
-    opacity: 1;
-}
-.v-leave-from {
-    opacity: 1;
-}
 header {
     margin-bottom: 20px;
 }

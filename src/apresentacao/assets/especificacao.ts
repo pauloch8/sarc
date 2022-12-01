@@ -420,6 +420,10 @@ III - recursos das decisões do INSS relacionados à comprovação de atividade 
                             categoria: 'recurso',
                             texto: ' ',
                         },
+                        {
+                            categoria: 'diligencias',
+                            texto: ' ',
+                        },
                     ],
                 },
                 {
@@ -496,6 +500,10 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
                         {
                             categoria: 'ementa',
                             texto: `MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.`,
+                        },
+                        {
+                            categoria: 'elementos',
+                            texto: ` `,
                         },
                     ],
                 },

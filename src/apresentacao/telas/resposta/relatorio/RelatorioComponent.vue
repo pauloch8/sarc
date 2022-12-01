@@ -16,9 +16,22 @@ export default defineComponent({
             editor: ClassicEditor,
         };
     },
+    methods: {
+        voltouParaFormulario() {
+            this.$emit('voltouParaFormulario');
+        },
+    },
+    emits: ['voltouParaFormulario'],
 });
 </script>
 
 <template>
-    <ckeditor :editor="editor" v-model="esteRelatorio" :config="{}"></ckeditor>
+    <div>
+        <ckeditor
+            :editor="editor"
+            v-model="esteRelatorio"
+            :config="{}"
+        ></ckeditor>
+        <button @click="voltouParaFormulario">Voltar para o Formulário</button>
+    </div>
 </template>

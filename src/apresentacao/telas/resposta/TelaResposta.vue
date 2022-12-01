@@ -3,8 +3,6 @@ import { especificacao } from '@/apresentacao/assets/especificacao';
 import { defineComponent } from 'vue';
 import FormularioComponent from './formulario/FormularioComponent.vue';
 import RelatorioComponent from './relatorio/RelatorioComponent.vue';
-import { Formulario } from '@/dominio/formulario/Formulario';
-import { ProcessadorDeRespostaDeFormulario } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 
 export default defineComponent({
     name: 'TelaResposta',
@@ -21,9 +19,12 @@ export default defineComponent({
         };
     },
     methods: {
-        apresentarRelatorio(relatorio: string) {
+        gerouRelatorio(relatorio: string) {
             this.textoRelatorio = relatorio;
             this.modoFormulario = false;
+        },
+        voltouParaFormulario() {
+            this.modoFormulario = true;
         },
     },
 });
@@ -31,16 +32,41 @@ export default defineComponent({
 
 <template>
     <main>
-        <FormularioComponent
-            v-if="modoFormulario"
-            :formulario="formulario"
-            :processadorFormulario="processadorFormulario"
-            @gerou-relatorio="apresentarRelatorio"
-        ></FormularioComponent>
+        <Transition>
+            <FormularioComponent
+                v-if="modoFormulario"
+                :formulario="formulario"
+                :processadorFormulario="processadorFormulario"
+                @gerou-relatorio="gerouRelatorio"
+            ></FormularioComponent>
+        </Transition>
 
-        <RelatorioComponent
-            v-if="!modoFormulario"
-            :relatorio="textoRelatorio"
-        ></RelatorioComponent>
+        <Transition>
+            <RelatorioComponent
+                v-if="!modoFormulario"
+                :relatorio="textoRelatorio"
+                @voltou-para-formulario="voltouParaFormulario"
+            ></RelatorioComponent>
+        </Transition>
     </main>
 </template>
+
+<style scoped>
+.v-enter-from {
+    transform: translateX(200px);
+    opacity: 0;
+}
+
+.v-enter-active {
+    transition: all 0.3s ease-out 0.3s;
+}
+
+.v-leave-active {
+    transition: all 0.3s ease-in;
+}
+
+.v-leave-to {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+</style>

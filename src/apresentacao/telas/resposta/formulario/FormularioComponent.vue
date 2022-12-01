@@ -28,7 +28,7 @@ export default defineComponent({
         BotaoGerarRelatorio,
     },
     methods: {
-        apresentarRelatorio(relatorio: string) {
+        gerouRelatorio(relatorio: string) {
             this.$emit('gerouRelatorio', relatorio);
         },
     },
@@ -37,20 +37,22 @@ export default defineComponent({
 </script>
 
 <template>
-    <h1>{{ esteFormulario.getTitulo() }}</h1>
-    <h2 v-if="esteFormulario.getSubtitulo()">
-        {{ esteFormulario.getSubtitulo() }}
-    </h2>
+    <div>
+        <h1>{{ esteFormulario.getTitulo() }}</h1>
+        <h2 v-if="esteFormulario.getSubtitulo()">
+            {{ esteFormulario.getSubtitulo() }}
+        </h2>
 
-    <QuestaoOpcoes
-        :questao="questao as QuestaoDeOpcoes"
-        v-for="questao of esteFormulario.getQuestoes()"
-        :key="questao.getId()"
-    ></QuestaoOpcoes>
+        <QuestaoOpcoes
+            :questao="questao as QuestaoDeOpcoes"
+            v-for="questao of esteFormulario.getQuestoes()"
+            :key="questao.getId()"
+        ></QuestaoOpcoes>
 
-    <BotaoGerarRelatorio
-        :formulario="formulario"
-        :processadorFormulario="processadorFormulario"
-        @gerou-relatorio="apresentarRelatorio"
-    ></BotaoGerarRelatorio>
+        <BotaoGerarRelatorio
+            :formulario="formulario"
+            :processadorFormulario="processadorFormulario"
+            @gerou-relatorio="gerouRelatorio"
+        ></BotaoGerarRelatorio>
+    </div>
 </template>
