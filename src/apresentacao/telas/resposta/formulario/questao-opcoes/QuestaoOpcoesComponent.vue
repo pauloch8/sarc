@@ -26,11 +26,6 @@ export default defineComponent({
     methods: {
         receberOpcaoSelecionada(opcao: Opcao) {
             this.minhaQuestao.setValorSelecionado(opcao);
-            console.log(
-                'QuestaoOpcoesComponent: Recebida opcao selecionada',
-                opcao,
-                this.minhaQuestao,
-            );
             this.$emit('opcaoSelecionada', opcao);
         },
         consoleLog(valor: any) {
@@ -41,39 +36,54 @@ export default defineComponent({
 </script>
 
 <template>
-    <article>
-        <header>
-            <h2>{{ minhaQuestao.getTitulo() }}</h2>
-            <span v-if="minhaQuestao.getSubtitulo()">{{
-                minhaQuestao.getSubtitulo()
-            }}</span>
-        </header>
-        <fieldset>
-            <OpcaoComponent
-                v-for="opcao in minhaQuestao.opcoes"
-                :key="opcao.getId()"
-                :model-value="minhaQuestao.getValorSelecionado() as Opcao"
-                :opcao="opcao as Opcao"
-                :questaoId="minhaQuestao.getId()"
-                @opcao-selecionada="receberOpcaoSelecionada"
-            ></OpcaoComponent>
-        </fieldset>
-        <footer v-if="minhaQuestao.getValorSelecionado()?.getVariaveis()">
-            <h4>Preencha as variáveis para a resposta:</h4>
-            <VariavelComponent
-                v-for="variavel in minhaQuestao
-                    .getValorSelecionado()
-                    ?.getVariaveis()"
-                :key="variavel.getId()"
-                :variavel="variavel"
-                :valor="variavel.getValor()"
-                @update:valor="variavel.setValor($event)"
-            ></VariavelComponent>
-        </footer>
-    </article>
+    <transition>
+        <article>
+            <header>
+                <h2>{{ minhaQuestao.getTitulo() }}</h2>
+                <span v-if="minhaQuestao.getSubtitulo()">{{
+                    minhaQuestao.getSubtitulo()
+                }}</span>
+            </header>
+            <fieldset>
+                <OpcaoComponent
+                    v-for="opcao in minhaQuestao.opcoes"
+                    :key="opcao.getId()"
+                    :model-value="minhaQuestao.getValorSelecionado() as Opcao"
+                    :opcao="opcao as Opcao"
+                    :questaoId="minhaQuestao.getId()"
+                    @opcao-selecionada="receberOpcaoSelecionada"
+                ></OpcaoComponent>
+            </fieldset>
+            <footer v-if="minhaQuestao.getValorSelecionado()?.getVariaveis()">
+                <h4>Preencha as variáveis para a resposta:</h4>
+                <VariavelComponent
+                    v-for="variavel in minhaQuestao
+                        .getValorSelecionado()
+                        ?.getVariaveis()"
+                    :key="variavel.getId()"
+                    :variavel="variavel"
+                    :valor="variavel.getValor()"
+                    @update:valor="variavel.setValor($event)"
+                ></VariavelComponent>
+            </footer>
+        </article>
+    </transition>
 </template>
 
 <style scoped>
+.v-enter-from {
+    transform: translateZ(-200x);
+    opacity: 0;
+}
+.v-enter-active {
+    transition: all 3s ease-out;
+}
+.v-enter-tp {
+    opacity: 1;
+}
+.v-leave-from {
+    opacity: 1;
+}
 header {
     margin-bottom: 20px;
 }

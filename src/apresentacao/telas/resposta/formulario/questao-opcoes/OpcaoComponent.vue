@@ -28,7 +28,6 @@ export default defineComponent({
     },
     methods: {
         emitirOpcaoSelecionada() {
-            console.log('emitiu opção selecioanda', this.opcao);
             this.$emit('opcaoSelecionada', this.opcao);
         },
     },
