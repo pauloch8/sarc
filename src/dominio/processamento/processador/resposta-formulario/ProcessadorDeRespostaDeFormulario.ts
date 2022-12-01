@@ -2,12 +2,14 @@ import {
     RespostaDeFormulario,
     RespostaDeOpcao,
 } from '../../../formulario/respostas/Respostas';
+import { IEscapadorDeQuestaoFactory } from '../../escapador/questao/EscapadorDeQuestaoFactory';
 import { IProcessadorDeQuestaoDeOpcoes } from '../questoes-opcao/questao/ProcessadorDeQuestaoDeOpcoes';
 
 export class ProcessadorDeRespostaDeFormulario {
     constructor(
         private id: string,
         private processadoresDeQuestoes: IProcessadorDeQuestaoDeOpcoes[],
+        private escapadorFactory: IEscapadorDeQuestaoFactory,
         private template: string,
     ) {}
 
@@ -30,18 +32,21 @@ export class ProcessadorDeRespostaDeFormulario {
                 textoProcessado,
             );
         }
-        if (!textoProcessado) {
-            throw new ErroProcessamentoNaoRetornouTexto();
-        }
-        this.verificarSeSobrouEspacador(textoProcessado);
+        // apaga os escapadores restantes
+        textoProcessado = this.apagarEscapadoresRestantes(textoProcessado);
         return textoProcessado;
     }
 
-    private verificarSeSobrouEspacador(textoProcessado: string): void {
-        const regexEscapador = /\$\{[a-z_]+[a-z_0-9]*\}/;
-        if (regexEscapador.test(textoProcessado)) {
-            throw new ErroSobrouEspacadorAposProcessamento();
+    private apagarEscapadoresRestantes(textoProcessado: string): string {
+        const escapadores =
+            this.escapadorFactory.criarEscapadoresDeTexto(textoProcessado);
+        for (const escapador of escapadores) {
+            textoProcessado = textoProcessado.replaceAll(
+                escapador.toString(),
+                '',
+            );
         }
+        return textoProcessado;
     }
 }
 
@@ -54,17 +59,5 @@ export class ErroRespostaNaoPossuiIdDoProcessador extends Error {
 export class ErroProcessadorDeQuestaoNaoEncontrado extends Error {
     constructor(resposta: RespostaDeOpcao) {
         super(`Processador não encontrado para a questão id ${resposta.id}`);
-    }
-}
-
-export class ErroProcessamentoNaoRetornouTexto extends Error {
-    constructor() {
-        super(`Processamento não retornou texto`);
-    }
-}
-
-export class ErroSobrouEspacadorAposProcessamento extends Error {
-    constructor() {
-        super(`Sobrou escapador após o processamnto`);
     }
 }

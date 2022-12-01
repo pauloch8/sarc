@@ -1,3 +1,4 @@
+import { criarEscapadorDeQuestaoFactoryFake } from '@/dominio/processamento/escapador/questao/__tests__/criarEscapadorDeQuestaoFactoryFake';
 import { ProcessadorDeRespostaDeFormulario } from '../ProcessadorDeRespostaDeFormulario';
 import { ProcessadorDeRespostaDeFormularioFactory } from '../ProcessadorDeRespostaDeFormularioFactory';
 
@@ -9,8 +10,11 @@ describe('ProcessadorDeRespostaDeFormularioFactory', () => {
                     return [];
                 },
             };
+            const escapadorDeQuestaoFactoryFake =
+                criarEscapadorDeQuestaoFactoryFake([1, 2, 3]);
             const sut = new ProcessadorDeRespostaDeFormularioFactory(
                 questaoFactoryFake,
+                escapadorDeQuestaoFactoryFake,
             );
             const especificacaoFake = {
                 id: 'teste',

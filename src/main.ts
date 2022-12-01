@@ -24,6 +24,7 @@ function criarProcessadorDeFormulario() {
     const processadorFormularioFactory =
         new ProcessadorDeRespostaDeFormularioFactory(
             processadorDeQuestaoDeOpcoesFactory,
+            escapadorDeQuestaoFactory,
         );
     const processadorFormulario =
         processadorFormularioFactory.criarDeEspecificacao(especificacao);

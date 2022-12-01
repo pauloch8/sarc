@@ -1,151 +1,67 @@
+import { ErroRespostaDaVariavelNaoEcontrada } from '../../questoes-opcao/opcao/ProcessadorDeOpcao';
 import {
-    RespostaDeFormulario,
-    RespostaDeOpcao,
-} from '../../../../formulario/respostas/Respostas';
-import {
-    ProcessadorDeRespostaDeFormulario,
     ErroRespostaNaoPossuiIdDoProcessador,
     ErroProcessadorDeQuestaoNaoEncontrado,
-    ErroProcessamentoNaoRetornouTexto,
-    ErroSobrouEspacadorAposProcessamento,
 } from '../ProcessadorDeRespostaDeFormulario';
+import { criarProcessadorDeRespostaDeFormularioSut } from './criarProcessadorDeRespostaDeFormularioSut';
 
-describe('ProcessadorDeRespostaDeFormulario', () => {
-    describe('processar', () => {
-        test('dá erro se a resposta fornecida não possuir o mesmo id', async () => {
-            const sut = new ProcessadorDeRespostaDeFormulario(
-                'teste',
-                [],
-                'template',
+describe('Classe ProcessadorDeRespostaDeFormulario', () => {
+    describe('método processar', () => {
+        test('chama o processamento de cada processadorDeOpcao encontrado', async () => {
+            const { sut, processadoresDeOpcaoFake, respostaFake } =
+                criarProcessadorDeRespostaDeFormularioSut();
+            const processarSpy1 = jest.spyOn(
+                processadoresDeOpcaoFake[0],
+                'processar',
             );
-            const respostaFake: RespostaDeFormulario = {
-                id: 'teste-diferente',
-                respostasQuestoes: [],
-            };
+            const processarSpy2 = jest.spyOn(
+                processadoresDeOpcaoFake[0],
+                'processar',
+            );
+            const processarSpy3 = jest.spyOn(
+                processadoresDeOpcaoFake[0],
+                'processar',
+            );
+            sut.processar(respostaFake);
+            expect(processarSpy1).toHaveBeenCalledTimes(1);
+            expect(processarSpy2).toHaveBeenCalledTimes(1);
+            expect(processarSpy3).toHaveBeenCalledTimes(1);
+        });
+        test('Apaga os escapadores de sobra que existirem', () => {
+            const numerosDasQuestoesParaProcessadores = [1, 2, 3];
+            const numerosDasQuestoesParaEscapadores = [1, 2, 3, 4]; // encontra os 4 escapadores do template
+            const numerosDasQuestoesParaRespostas = [1, 2, 3];
+            const template =
+                'template com escapadores: ${questao1.categoria1} ${questao2.categoria2} ${questao3.categoria3} ${questao4.categoria4}';
+            const { sut, respostaFake } =
+                criarProcessadorDeRespostaDeFormularioSut(
+                    numerosDasQuestoesParaProcessadores,
+                    numerosDasQuestoesParaEscapadores,
+                    numerosDasQuestoesParaRespostas,
+                    template,
+                );
+            const actual = sut.processar(respostaFake);
+            const expected =
+                'template com escapadores: resposta1 resposta2 resposta3 ';
+            expect(actual).toBe(expected);
+        });
+        test('dá erro se a resposta fornecida não possuir o mesmo id', async () => {
+            const { sut, respostaFake } =
+                criarProcessadorDeRespostaDeFormularioSut();
+            respostaFake.id = 'outro-id';
             expect(() => {
                 sut.processar(respostaFake);
             }).toThrow(ErroRespostaNaoPossuiIdDoProcessador);
         });
         test('dá erro se a resposta não possui algum processador', async () => {
-            const sut = new ProcessadorDeRespostaDeFormulario(
-                'teste',
-                [
-                    {
-                        compararId(id: string) {
-                            return false;
-                        },
-                        processar(resposta: RespostaDeOpcao) {
-                            throw 9;
-                        },
-                    },
-                ],
-                'template',
-            );
-            const respostaFake: RespostaDeFormulario = {
-                id: 'teste',
-                respostasQuestoes: [
-                    {
-                        id: 'questao1',
-                        resposta: {
-                            id: 'resposta1',
-                        },
-                    },
-                ],
-            };
+            const numerosDasQuestoesParaProcessadores = [1, 2]; // gera um processador a menos
+            const { sut, respostaFake } =
+                criarProcessadorDeRespostaDeFormularioSut(
+                    numerosDasQuestoesParaProcessadores,
+                );
             expect(() => {
                 sut.processar(respostaFake);
             }).toThrow(ErroProcessadorDeQuestaoNaoEncontrado);
-        });
-        test('dá erro se o processamento não retornar texto', async () => {
-            const sut = new ProcessadorDeRespostaDeFormulario(
-                'teste',
-                [
-                    {
-                        compararId(id: string) {
-                            return true;
-                        },
-                        processar(resposta: RespostaDeOpcao) {
-                            return '';
-                        },
-                    },
-                ],
-                'template',
-            );
-            const respostaFake: RespostaDeFormulario = {
-                id: 'teste',
-                respostasQuestoes: [
-                    {
-                        id: 'questao1',
-                        resposta: {
-                            id: 'resposta1',
-                        },
-                    },
-                ],
-            };
-            expect(() => {
-                sut.processar(respostaFake);
-            }).toThrow(ErroProcessamentoNaoRetornouTexto);
-        });
-        test('chama o processamento de cada processadorDeOpcao encontrado', async () => {
-            const processadorDeOpcaoFake = {
-                compararId(id: string) {
-                    return true;
-                },
-                processar(resposta: RespostaDeOpcao) {
-                    return 'a';
-                },
-            };
-            const processarSpy = jest.spyOn(
-                processadorDeOpcaoFake,
-                'processar',
-            );
-            const sut = new ProcessadorDeRespostaDeFormulario(
-                'teste',
-                [processadorDeOpcaoFake],
-                'template',
-            );
-            const respostaFake: RespostaDeFormulario = {
-                id: 'teste',
-                respostasQuestoes: [
-                    {
-                        id: 'questao1',
-                        resposta: {
-                            id: 'resposta1',
-                        },
-                    },
-                ],
-            };
-            sut.processar(respostaFake);
-            expect(processarSpy).toHaveBeenCalledTimes(1);
-        });
-        test('dá erro se após o processamento sobrou algum espaçador no texto', () => {
-            const processadorDeOpcaoFake = {
-                compararId(id: string) {
-                    return true;
-                },
-                processar(resposta: RespostaDeOpcao, template: string) {
-                    return template;
-                },
-            };
-            const sut = new ProcessadorDeRespostaDeFormulario(
-                'teste',
-                [processadorDeOpcaoFake],
-                'texto com ${espacador}',
-            );
-            const respostaFake: RespostaDeFormulario = {
-                id: 'teste',
-                respostasQuestoes: [
-                    {
-                        id: 'questao1',
-                        resposta: {
-                            id: 'resposta1',
-                        },
-                    },
-                ],
-            };
-            expect(() => {
-                sut.processar(respostaFake);
-            }).toThrow(ErroSobrouEspacadorAposProcessamento);
         });
     });
 });
