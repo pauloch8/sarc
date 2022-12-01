@@ -43,11 +43,13 @@ export default defineComponent({
             {{ esteFormulario.getSubtitulo() }}
         </h2>
 
-        <QuestaoOpcoes
-            :questao="questao as QuestaoDeOpcoes"
-            v-for="questao of esteFormulario.getQuestoes()"
-            :key="questao.getId()"
-        ></QuestaoOpcoes>
+        <TransitionGroup tag="QuestaoOpcoes">
+            <QuestaoOpcoes
+                :questao="questao as QuestaoDeOpcoes"
+                v-for="questao of esteFormulario.getQuestoes()"
+                :key="questao.getId()"
+            ></QuestaoOpcoes>
+        </TransitionGroup>
 
         <BotaoGerarRelatorio
             :formulario="formulario"
@@ -56,3 +58,19 @@ export default defineComponent({
         ></BotaoGerarRelatorio>
     </div>
 </template>
+
+<style scoped>
+.v-enter-active {
+    transition: all 0.3s ease-out 0.3s;
+}
+
+.v-leave-active {
+    transition: all 0.3s ease-in;
+}
+
+.v-leave-to,
+.v-enter-from {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+</style>

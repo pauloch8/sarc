@@ -36,7 +36,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <transition>
+    <div>
         <article>
             <header>
                 <h2>{{ minhaQuestao.getTitulo() }}</h2>
@@ -67,7 +67,7 @@ export default defineComponent({
                 ></VariavelComponent>
             </footer>
         </article>
-    </transition>
+    </div>
 </template>
 
 <style scoped>
