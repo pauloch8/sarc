@@ -3,7 +3,13 @@ export interface EspecificacaoDTO {
     titulo: string;
     subtitulo?: string;
     questoes: QuestaoDTO[];
-    template: string;
+    templates: Template[];
+}
+
+export interface Template {
+    id: string;
+    titulo: string;
+    texto: string;
 }
 
 export interface QuestaoDTO {

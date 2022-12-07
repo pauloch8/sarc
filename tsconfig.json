@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "dist",
+        "outDir": "docs",
         "target": "ES2015",
         "module": "esnext",
         "strict": true,

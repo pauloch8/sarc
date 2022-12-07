@@ -1,13 +1,25 @@
+import { Template } from '@/dominio/especificacao/EspecificacaoDTO';
 import { criarRespostaDeFormularioFake } from '@/dominio/formulario/respostas/__tests__/criarRespostaDeFormularioFake';
 import { criarEscapadorDeQuestaoFactoryFake } from '@/dominio/processamento/escapador/questao/__tests__/criarEscapadorDeQuestaoFactoryFake';
-import { criarProcessadoresDeQuestaoDeOpcoesFake } from '../../questoes-opcao/questao/__tests__/criarProcessadoresDeQuestaoDeOpcoesFake';
-import { ProcessadorDeRespostaDeFormulario } from '../ProcessadorDeRespostaDeFormulario';
+import { criarProcessadoresDeQuestaoDeOpcoesFake } from '../../../questoes-opcao/questao/__tests__/criarProcessadoresDeQuestaoDeOpcoesFake';
+import { ProcessadorDeRespostaDeFormulario } from '../../ProcessadorDeRespostaDeFormulario';
 
 export function criarProcessadorDeRespostaDeFormularioSut(
     numerosDasQuestoesParaProcessadores: number[] = [1, 2, 3],
     numerosDasQuestoesParaEscapadores: number[] = [1, 2, 3],
     numerosDasQuestoesParaRespostas: number[] = [1, 2, 3],
-    template = 'template com escapadores: ${questao1.categoria1} ${questao2.categoria2} ${questao3.categoria3}',
+    templates: Template[] = [
+        {
+            id: 'id-template1',
+            titulo: 'Template 1',
+            texto: 'template com escapadores: ${questao1.categoria1} ${questao2.categoria2} ${questao3.categoria3}',
+        },
+        {
+            id: 'id-template2',
+            titulo: 'Template 2',
+            texto: 'template com escapadores: ${questao1.categoria1} ${questao2.categoria2}',
+        },
+    ],
 ) {
     const processadoresDeOpcaoFake = criarProcessadoresDeQuestaoDeOpcoesFake(
         numerosDasQuestoesParaProcessadores,
@@ -19,7 +31,7 @@ export function criarProcessadorDeRespostaDeFormularioSut(
         'id-teste',
         processadoresDeOpcaoFake,
         escapadorFactory,
-        template,
+        templates,
     );
     const respostaFake = criarRespostaDeFormularioFake(
         numerosDasQuestoesParaRespostas,

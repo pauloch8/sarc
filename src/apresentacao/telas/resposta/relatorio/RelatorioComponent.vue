@@ -1,37 +1,32 @@
 <script lang="ts">
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { defineComponent } from 'vue';
+import { TextoProcessado } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 
 export default defineComponent({
     name: 'RelatorioComponent',
     props: {
         relatorio: {
-            type: String,
+            type: Object,
             required: true,
         },
     },
     data() {
         return {
-            esteRelatorio: this.relatorio,
+            esteRelatorio: this.relatorio as TextoProcessado,
             editor: ClassicEditor,
         };
     },
-    methods: {
-        voltouParaFormulario() {
-            this.$emit('voltouParaFormulario');
-        },
-    },
-    emits: ['voltouParaFormulario'],
 });
 </script>
 
 <template>
     <div>
+        <h2>{{ esteRelatorio.titulo }}</h2>
         <ckeditor
             :editor="editor"
-            v-model="esteRelatorio"
+            v-model="esteRelatorio.texto"
             :config="{}"
         ></ckeditor>
-        <button @click="voltouParaFormulario">Voltar para o Formulário</button>
     </div>
 </template>

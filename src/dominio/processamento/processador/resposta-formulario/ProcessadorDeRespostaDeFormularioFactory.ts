@@ -16,7 +16,7 @@ export class ProcessadorDeRespostaDeFormularioFactory {
             especificacao.id,
             processadoresDeQuestoes,
             this.escapadorFactory,
-            especificacao.template,
+            especificacao.templates,
         );
         return processador;
     }

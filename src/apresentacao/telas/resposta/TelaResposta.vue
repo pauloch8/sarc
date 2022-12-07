@@ -1,5 +1,6 @@
 <script lang="ts">
 import { especificacao } from '@/apresentacao/assets/especificacao';
+import { TextoProcessado } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 import { defineComponent } from 'vue';
 import FormularioComponent from './formulario/FormularioComponent.vue';
 import RelatorioComponent from './relatorio/RelatorioComponent.vue';
@@ -12,15 +13,15 @@ export default defineComponent({
         RelatorioComponent,
     },
     data() {
-        const textoRelatorio = especificacao.template;
-        return {
-            textoRelatorio: textoRelatorio,
+        const data = {
+            textosProcessados: [] as TextoProcessado[],
             modoFormulario: true,
         };
+        return data;
     },
     methods: {
-        gerouRelatorio(relatorio: string) {
-            this.textoRelatorio = relatorio;
+        gerouRelatorio(textosProcessados: TextoProcessado[]) {
+            this.textosProcessados = textosProcessados;
             this.modoFormulario = false;
         },
         voltouParaFormulario() {
@@ -42,11 +43,18 @@ export default defineComponent({
         </Transition>
 
         <Transition>
-            <RelatorioComponent
-                v-if="!modoFormulario"
-                :relatorio="textoRelatorio"
-                @voltou-para-formulario="voltouParaFormulario"
-            ></RelatorioComponent>
+            <div v-if="!modoFormulario">
+                <template v-for="textoRelatorio in textosProcessados">
+                    <RelatorioComponent
+                        v-if="!modoFormulario"
+                        :key="textoRelatorio.id"
+                        :relatorio="textoRelatorio"
+                    ></RelatorioComponent>
+                </template>
+                <button @click="voltouParaFormulario">
+                    Voltar para o Formulário
+                </button>
+            </div>
         </Transition>
     </main>
 </template>

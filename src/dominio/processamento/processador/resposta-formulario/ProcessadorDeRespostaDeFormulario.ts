@@ -1,3 +1,4 @@
+import { Template } from '@/dominio/especificacao/EspecificacaoDTO';
 import {
     RespostaDeFormulario,
     RespostaDeOpcao,
@@ -10,31 +11,38 @@ export class ProcessadorDeRespostaDeFormulario {
         private id: string,
         private processadoresDeQuestoes: IProcessadorDeQuestaoDeOpcoes[],
         private escapadorFactory: IEscapadorDeQuestaoFactory,
-        private template: string,
+        private templates: Template[],
     ) {}
 
-    processar(resposta: RespostaDeFormulario): string {
+    processar(resposta: RespostaDeFormulario): TextoProcessado[] {
         if (resposta.id !== this.id) {
             throw new ErroRespostaNaoPossuiIdDoProcessador();
         }
-        let textoProcessado = this.template;
-        for (const respostaQuestao of resposta.respostasQuestoes) {
-            const processador = this.processadoresDeQuestoes.find(p =>
-                p.compararId(respostaQuestao.id),
-            );
-            if (!processador) {
-                throw new ErroProcessadorDeQuestaoNaoEncontrado(
+        const textosProcessados: TextoProcessado[] = [];
+        for (const template of this.templates) {
+            let textoProcessado = template.texto;
+            for (const respostaQuestao of resposta.respostasQuestoes) {
+                const processador = this.processadoresDeQuestoes.find(p =>
+                    p.compararId(respostaQuestao.id),
+                );
+                if (!processador) {
+                    throw new ErroProcessadorDeQuestaoNaoEncontrado(
+                        respostaQuestao,
+                    );
+                }
+                textoProcessado = processador.processar(
                     respostaQuestao,
+                    textoProcessado,
                 );
             }
-            textoProcessado = processador.processar(
-                respostaQuestao,
-                textoProcessado,
-            );
+            textoProcessado = this.apagarEscapadoresRestantes(textoProcessado);
+            textosProcessados.push({
+                id: template.id,
+                titulo: template.titulo,
+                texto: textoProcessado,
+            });
         }
-        // apaga os escapadores restantes
-        textoProcessado = this.apagarEscapadoresRestantes(textoProcessado);
-        return textoProcessado;
+        return textosProcessados;
     }
 
     private apagarEscapadoresRestantes(textoProcessado: string): string {
@@ -61,3 +69,9 @@ export class ErroProcessadorDeQuestaoNaoEncontrado extends Error {
         super(`Processador não encontrado para a questão id ${resposta.id}`);
     }
 }
+
+export type TextoProcessado = {
+    id: string;
+    titulo: string;
+    texto: string;
+};

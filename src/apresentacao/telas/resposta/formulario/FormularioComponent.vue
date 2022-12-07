@@ -1,6 +1,9 @@
 <script lang="ts">
 import { Formulario } from '@/dominio/formulario/Formulario';
-import { ProcessadorDeRespostaDeFormulario } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
+import {
+    ProcessadorDeRespostaDeFormulario,
+    TextoProcessado,
+} from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 import { defineComponent } from 'vue';
 import QuestaoOpcoes from './questao-opcoes/QuestaoOpcoesComponent.vue';
 import { QuestaoDeOpcoes } from '@/dominio/formulario/questoes/opcoes/QuestaoDeOpcoes';
@@ -28,8 +31,8 @@ export default defineComponent({
         BotaoGerarRelatorio,
     },
     methods: {
-        gerouRelatorio(relatorio: string) {
-            this.$emit('gerouRelatorio', relatorio);
+        gerouRelatorio(textosProcessados: TextoProcessado[]) {
+            this.$emit('gerouRelatorio', textosProcessados);
         },
     },
     emits: ['gerouRelatorio'],

@@ -26,8 +26,9 @@ export default defineComponent({
             this.erroGerarRespostas = '';
             try {
                 const respostas = this.esteFormulario.getRespostas();
-                const texto = this.processadorFormulario.processar(respostas);
-                this.$emit('gerouRelatorio', texto);
+                const textosProcessados =
+                    this.processadorFormulario.processar(respostas);
+                this.$emit('gerouRelatorio', textosProcessados);
             } catch (e) {
                 this.erroGerarRespostas = (e as Error).message;
             }
