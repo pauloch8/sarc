@@ -1,11 +1,14 @@
 import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
 import { RespostaDeQuestaoDeOpcoes } from '../../../../formulario/respostas/Respostas';
-import { IEscapadorDeQuestaoFactory } from '../../../escapador/questao/EscapadorDeQuestaoFactory';
 import { IProcessadorDeOpcao } from '../opcao/ProcessadorDeOpcao';
 
 export interface IProcessadorDeQuestaoDeOpcoes {
     compararId(id: string): boolean;
-    processar(resposta: RespostaDeQuestaoDeOpcoes, template: string): string;
+    processar(
+        escapador: IEscapadorDeQuestao,
+        resposta: RespostaDeQuestaoDeOpcoes,
+        template: string,
+    ): string;
 }
 
 export class ProcessadorDeQuestaoDeOpcoes
@@ -14,55 +17,45 @@ export class ProcessadorDeQuestaoDeOpcoes
     constructor(
         private id: string,
         private processadoresDeOpcao: IProcessadorDeOpcao[],
-        private escapadorFactory: IEscapadorDeQuestaoFactory,
     ) {}
 
     compararId(id: string): boolean {
         return id === this.id;
     }
 
-    processar(resposta: RespostaDeQuestaoDeOpcoes, template: string): string {
+    processar(
+        escapador: IEscapadorDeQuestao,
+        resposta: RespostaDeQuestaoDeOpcoes,
+        template: string,
+    ): string {
         if (resposta.id !== this.id) {
             throw new ErroIdDaQuestaoDiferenteDoIdDoProcessador(
                 resposta.id,
                 this.id,
             );
         }
-        const escapadores =
-            this.escapadorFactory.criarEscapadoresDeTexto(template);
-        const escapadoresDaResposta = escapadores.filter(e =>
-            e.compararQuestao(resposta.id),
+        const processadorDeOpcao = this.processadoresDeOpcao.find(processador =>
+            processador.compararId(resposta.resposta.id),
         );
-        if (!escapadoresDaResposta.length) {
-            throw new ErroNaoEncontrouEscapadorDaQuestao(resposta.id);
-        }
-        let textoProcessado = template;
-        for (const escapador of escapadoresDaResposta) {
-            const processadorDeOpcao = this.processadoresDeOpcao.find(
-                processador => processador.compararId(resposta.resposta.id),
-            );
-            if (!processadorDeOpcao) {
-                throw new ErroNaoEncontrouProcessadorDaOpcaoDaResposta(
-                    resposta.resposta.id,
-                );
-            }
-            const textosDaOpcao = processadorDeOpcao.processar(
-                resposta.resposta,
-            );
-            const texto = textosDaOpcao.find(t =>
-                escapador.compararCategoria(t.categoria),
-            );
-            if (!texto) {
-                throw new ErroDaRespostaNaoEncontrado(
-                    escapador,
-                    resposta.resposta.id,
-                );
-            }
-            textoProcessado = textoProcessado.replaceAll(
-                escapador.toString(),
-                texto.texto,
+        if (!processadorDeOpcao) {
+            throw new ErroNaoEncontrouProcessadorDaOpcaoDaResposta(
+                resposta.resposta.id,
             );
         }
+        const textosDaOpcao = processadorDeOpcao.processar(resposta.resposta);
+        const texto = textosDaOpcao.find(t =>
+            escapador.compararCategoria(t.categoria),
+        );
+        if (!texto) {
+            throw new ErroDaRespostaNaoEncontrado(
+                escapador,
+                resposta.resposta.id,
+            );
+        }
+        const textoProcessado = template.replaceAll(
+            escapador.toString(),
+            texto.texto,
+        );
         return textoProcessado;
     }
 }

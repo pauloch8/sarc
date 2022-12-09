@@ -1,4 +1,5 @@
 import { RespostaDeOpcao } from '@/dominio/formulario/respostas/Respostas';
+import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
 import { IProcessadorDeQuestaoDeOpcoes } from '../ProcessadorDeQuestaoDeOpcoes';
 
 export function criarProcessadoresDeQuestaoDeOpcoesFake(numeros: number[]) {
@@ -7,10 +8,15 @@ export function criarProcessadoresDeQuestaoDeOpcoesFake(numeros: number[]) {
             compararId(id: string) {
                 return id === 'questao' + numero;
             },
-            processar(resposta: RespostaDeOpcao, template: string) {
-                const escapador =
-                    '${questao' + numero + '.categoria' + numero + '}';
-                return template.replaceAll(escapador, 'resposta' + numero);
+            processar(
+                escapador: IEscapadorDeQuestao,
+                resposta: RespostaDeOpcao,
+                template: string,
+            ) {
+                return template.replaceAll(
+                    escapador.toString(),
+                    'resposta' + numero,
+                );
             },
         };
         return processador;

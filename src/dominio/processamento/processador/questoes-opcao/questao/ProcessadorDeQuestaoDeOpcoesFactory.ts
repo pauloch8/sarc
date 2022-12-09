@@ -13,7 +13,6 @@ export class ProcessadorDeQuestaoDeOpcoesFactory
     implements IProcessadorDeQuestaoDeOpcoesFactory
 {
     constructor(
-        private escapadorFactory: IEscapadorDeQuestaoFactory,
         private processadorDeOpcaoFactory: IProcessadorDeOpcaoFactory,
     ) {}
 
@@ -30,7 +29,6 @@ export class ProcessadorDeQuestaoDeOpcoesFactory
             return new ProcessadorDeQuestaoDeOpcoes(
                 dto.id,
                 processadoresDeOpcoes,
-                this.escapadorFactory,
             );
         });
         return retorno;

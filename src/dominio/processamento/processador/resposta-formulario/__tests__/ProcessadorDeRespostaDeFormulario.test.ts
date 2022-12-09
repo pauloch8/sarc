@@ -7,25 +7,15 @@ import { criarProcessadorDeRespostaDeFormularioSut } from './factories/criarProc
 
 describe('Classe ProcessadorDeRespostaDeFormulario', () => {
     describe('método processar', () => {
-        test('chama o processamento de cada resposta para cada template', async () => {
-            const { sut, processadoresDeOpcaoFake, respostaFake } =
+        test('Retorna os relatórios com os escapadores substituídos pelas respostas', () => {
+            const { sut, respostaFake } =
                 criarProcessadorDeRespostaDeFormularioSut();
-            const processarSpy1 = jest.spyOn(
-                processadoresDeOpcaoFake[0],
-                'processar',
-            );
-            const processarSpy2 = jest.spyOn(
-                processadoresDeOpcaoFake[1],
-                'processar',
-            );
-            const processarSpy3 = jest.spyOn(
-                processadoresDeOpcaoFake[2],
-                'processar',
-            );
-            sut.processar(respostaFake);
-            expect(processarSpy1).toHaveBeenCalledTimes(2);
-            expect(processarSpy2).toHaveBeenCalledTimes(2);
-            expect(processarSpy3).toHaveBeenCalledTimes(2);
+            const textosProcessados = sut.processar(respostaFake);
+            const processado1 =
+                'template com escapadores: resposta1 resposta2 resposta3';
+            const processado2 = 'template com escapadores: resposta1 resposta2';
+            expect(textosProcessados[0].texto).toBe(processado1);
+            expect(textosProcessados[1].texto).toBe(processado2);
         });
         test('Apaga os escapadores de sobra que existirem', () => {
             const numerosDasQuestoesParaProcessadores = [1, 2, 3];

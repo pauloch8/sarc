@@ -21,19 +21,28 @@ export class ProcessadorDeRespostaDeFormulario {
         const textosProcessados: TextoProcessado[] = [];
         for (const template of this.templates) {
             let textoProcessado = template.texto;
-            for (const respostaQuestao of resposta.respostasQuestoes) {
-                const processador = this.processadoresDeQuestoes.find(p =>
-                    p.compararId(respostaQuestao.id),
+            const escapadores =
+                this.escapadorFactory.criarEscapadoresDeTexto(textoProcessado);
+            for (const escapador of escapadores) {
+                const respostaQuestao = resposta.respostasQuestoes.find(
+                    resposta =>
+                        escapador.getQuestaoId().toString() === resposta.id,
                 );
-                if (!processador) {
-                    throw new ErroProcessadorDeQuestaoNaoEncontrado(
+                if (respostaQuestao) {
+                    const processador = this.processadoresDeQuestoes.find(p =>
+                        p.compararId(respostaQuestao.id),
+                    );
+                    if (!processador) {
+                        throw new ErroProcessadorDeQuestaoNaoEncontrado(
+                            respostaQuestao,
+                        );
+                    }
+                    textoProcessado = processador.processar(
+                        escapador,
                         respostaQuestao,
+                        textoProcessado,
                     );
                 }
-                textoProcessado = processador.processar(
-                    respostaQuestao,
-                    textoProcessado,
-                );
             }
             textoProcessado = this.apagarEscapadoresRestantes(textoProcessado);
             textosProcessados.push({

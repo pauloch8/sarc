@@ -21,12 +21,12 @@ export default defineComponent({
 </script>
 
 <template>
-    <div>
+    <article>
         <h2>{{ esteRelatorio.titulo }}</h2>
         <ckeditor
             :editor="editor"
             v-model="esteRelatorio.texto"
             :config="{}"
         ></ckeditor>
-    </div>
+    </article>
 </template>

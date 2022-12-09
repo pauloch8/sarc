@@ -53,7 +53,6 @@ function makeSut() {
     const escapadorFactoryStub = makeEscapadorFactoryStub();
     const processadorDeOpcaoFactoryStub = makeProcessadorDeOpcaoFactoryStub();
     const sut = new ProcessadorDeQuestaoDeOpcoesFactory(
-        escapadorFactoryStub,
         processadorDeOpcaoFactoryStub,
     );
     return sut;

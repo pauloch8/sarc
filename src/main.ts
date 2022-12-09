@@ -17,10 +17,7 @@ function criarProcessadorDeFormulario() {
     );
     const escapadorDeQuestaoFactory = new EscapadorDeQuestaoFactory();
     const processadorDeQuestaoDeOpcoesFactory =
-        new ProcessadorDeQuestaoDeOpcoesFactory(
-            escapadorDeQuestaoFactory,
-            processadorDeOpcaoFactory,
-        );
+        new ProcessadorDeQuestaoDeOpcoesFactory(processadorDeOpcaoFactory);
     const processadorFormularioFactory =
         new ProcessadorDeRespostaDeFormularioFactory(
             processadorDeQuestaoDeOpcoesFactory,
