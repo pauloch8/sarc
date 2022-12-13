@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import EditorViewVue from '../telas/editor/EditorView.vue';
+import EditorViewVue from '../telas/editor/TelaEditor.vue';
 import TelaRespostaVue from '../telas/resposta/TelaResposta.vue';
 
 const routes: Array<RouteRecordRaw> = [

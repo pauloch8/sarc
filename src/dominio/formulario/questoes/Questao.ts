@@ -1,4 +1,4 @@
-import { RespostaDeQuestaoDeOpcoes } from '../respostas/Respostas';
+import { RespostaDeQuestao } from '../respostas/Respostas';
 import { Observable } from './observer/Observable';
 
 export interface IQuestao {
@@ -8,7 +8,7 @@ export interface IQuestao {
 }
 
 export abstract class Questao extends Observable implements IQuestao {
-    abstract getResposta(): RespostaDeQuestaoDeOpcoes;
+    abstract getResposta(): RespostaDeQuestao;
     abstract readonly irPara: string | null;
 
     constructor(
@@ -18,6 +18,10 @@ export abstract class Questao extends Observable implements IQuestao {
         private subtitulo?: string,
     ) {
         super();
+    }
+
+    getTipo() {
+        return this.tipo;
     }
 
     getTitulo() {

@@ -4,11 +4,11 @@ import {
     ErroPosicaoDoIdIrParaNaoEstaEmFrenteAoAtual,
 } from '../Formulario';
 import { Questao } from '../questoes/Questao';
-import { RespostaDeQuestaoDeOpcoes } from '../respostas/Respostas';
+import { RespostaDeQuestao } from '../respostas/Respostas';
 
 class QuestaoSemRamificacaoStub extends Questao {
     irPara = 'avançar';
-    getResposta(): RespostaDeQuestaoDeOpcoes {
+    getResposta(): RespostaDeQuestao {
         throw new Error('Method not implemented.');
     }
     semRamificacao = true;
@@ -16,7 +16,7 @@ class QuestaoSemRamificacaoStub extends Questao {
 
 class QuestaoComRamificacaoNaoRespondidaStub extends Questao {
     irPara = null;
-    getResposta(): RespostaDeQuestaoDeOpcoes {
+    getResposta(): RespostaDeQuestao {
         throw new Error('Method not implemented.');
     }
     semRamificacao = false;
@@ -34,14 +34,14 @@ class QuestaoComRamificacaoRespondidaStub extends Questao {
     get irPara() {
         return this._irPara;
     }
-    getResposta(): RespostaDeQuestaoDeOpcoes {
+    getResposta(): RespostaDeQuestao {
         throw new Error('Method not implemented.');
     }
     semRamificacao = false;
 }
 class QuestaoFimDoQuestionarioStub extends Questao {
     irPara = 'fim do formulário';
-    getResposta(): RespostaDeQuestaoDeOpcoes {
+    getResposta(): RespostaDeQuestao {
         throw new Error('Method not implemented.');
     }
     semRamificacao = false;

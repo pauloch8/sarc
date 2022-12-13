@@ -1,4 +1,4 @@
-import { RespostaDeQuestaoDeOpcoes } from '../../respostas/Respostas';
+import { RespostaDeQuestao } from '../../respostas/Respostas';
 import { Questao } from '../Questao';
 import { IOpcao } from './Opcao';
 
@@ -40,13 +40,13 @@ export class QuestaoDeOpcoes extends Questao {
         }
     }
 
-    getResposta(): RespostaDeQuestaoDeOpcoes {
+    getResposta() {
         if (!this.valorSelecionado) {
             throw new QuestaoSemValorSelecionado(this.getTitulo());
         }
         const resposta = {
             id: this.getId(),
-            resposta: this.valorSelecionado.getResposta(),
+            resposta: [this.valorSelecionado.getResposta()],
         };
         return resposta;
     }

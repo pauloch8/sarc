@@ -1,5 +1,5 @@
 <script lang="ts">
-import { IOpcao, Opcao } from '@/dominio/formulario/questoes/opcoes/Opcao';
+import { Opcao } from '@/dominio/formulario/questoes/opcoes/Opcao';
 import { defineComponent } from 'vue';
 
 export default defineComponent({

@@ -1,11 +1,11 @@
 export type RespostaDeFormulario = {
     id: string;
-    respostasQuestoes: RespostaDeQuestaoDeOpcoes[];
+    respostasQuestoes: RespostaDeQuestao[];
 };
 
-export type RespostaDeQuestaoDeOpcoes = {
+export type RespostaDeQuestao = {
     id: string;
-    resposta: RespostaDeOpcao;
+    resposta: RespostaDeOpcao[];
 };
 
 export type RespostaDeOpcao = {

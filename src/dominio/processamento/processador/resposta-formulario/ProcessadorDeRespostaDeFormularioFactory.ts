@@ -1,11 +1,11 @@
 import { EspecificacaoDTO } from '../../../especificacao/EspecificacaoDTO';
 import { IEscapadorDeQuestaoFactory } from '../../escapador/questao/EscapadorDeQuestaoFactory';
-import { IProcessadorDeQuestaoDeOpcoesFactory } from '../questoes-opcao/questao/ProcessadorDeQuestaoDeOpcoesFactory';
+import { IProcessadorDeQuestaoFactory } from '../questoes-opcao/questao/ProcessadorDeQuestaoFactory';
 import { ProcessadorDeRespostaDeFormulario } from './ProcessadorDeRespostaDeFormulario';
 
 export class ProcessadorDeRespostaDeFormularioFactory {
     constructor(
-        private questoesFactory: IProcessadorDeQuestaoDeOpcoesFactory,
+        private questoesFactory: IProcessadorDeQuestaoFactory,
         private escapadorFactory: IEscapadorDeQuestaoFactory,
     ) {}
 

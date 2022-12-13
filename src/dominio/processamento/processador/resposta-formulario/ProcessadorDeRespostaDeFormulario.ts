@@ -4,12 +4,12 @@ import {
     RespostaDeOpcao,
 } from '../../../formulario/respostas/Respostas';
 import { IEscapadorDeQuestaoFactory } from '../../escapador/questao/EscapadorDeQuestaoFactory';
-import { IProcessadorDeQuestaoDeOpcoes } from '../questoes-opcao/questao/ProcessadorDeQuestaoDeOpcoes';
+import { IProcessadorDeQuestao } from '../questoes-opcao/questao/IProcessadorDeQuestao';
 
 export class ProcessadorDeRespostaDeFormulario {
     constructor(
         private id: string,
-        private processadoresDeQuestoes: IProcessadorDeQuestaoDeOpcoes[],
+        private processadoresDeQuestoes: IProcessadorDeQuestao[],
         private escapadorFactory: IEscapadorDeQuestaoFactory,
         private templates: Template[],
     ) {}

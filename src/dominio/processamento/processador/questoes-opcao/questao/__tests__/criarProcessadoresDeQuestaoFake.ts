@@ -1,10 +1,10 @@
 import { RespostaDeOpcao } from '@/dominio/formulario/respostas/Respostas';
 import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
-import { IProcessadorDeQuestaoDeOpcoes } from '../ProcessadorDeQuestaoDeOpcoes';
+import { IProcessadorDeQuestao } from '../IProcessadorDeQuestao';
 
-export function criarProcessadoresDeQuestaoDeOpcoesFake(numeros: number[]) {
+export function criarProcessadoresDeQuestaoFake(numeros: number[]) {
     const processadoresDeOpcaoFake = numeros.map(numero => {
-        const processador: IProcessadorDeQuestaoDeOpcoes = {
+        const processador: IProcessadorDeQuestao = {
             compararId(id: string) {
                 return id === 'questao' + numero;
             },

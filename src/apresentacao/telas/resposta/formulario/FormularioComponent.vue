@@ -6,6 +6,7 @@ import {
 } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 import { defineComponent } from 'vue';
 import QuestaoOpcoes from './questao-opcoes/QuestaoOpcoesComponent.vue';
+import QuestaoSelecoes from './questao-selecoes/QuestaoSelecoesComponent.vue';
 import { QuestaoDeOpcoes } from '@/dominio/formulario/questoes/opcoes/QuestaoDeOpcoes';
 import BotaoGerarRelatorio from './BotaoGerarRelatorio.vue';
 
@@ -28,6 +29,7 @@ export default defineComponent({
     },
     components: {
         QuestaoOpcoes,
+        QuestaoSelecoes,
         BotaoGerarRelatorio,
     },
     methods: {
@@ -47,11 +49,19 @@ export default defineComponent({
         </h2>
 
         <TransitionGroup tag="QuestaoOpcoes">
-            <QuestaoOpcoes
-                :questao="questao as QuestaoDeOpcoes"
+            <div
                 v-for="questao of esteFormulario.getQuestoes()"
                 :key="questao.getId()"
-            ></QuestaoOpcoes>
+            >
+                <QuestaoOpcoes
+                    v-if="questao.getTipo() === 'opcao'"
+                    :questao="questao as QuestaoDeOpcoes"
+                ></QuestaoOpcoes>
+                <QuestaoSelecoes
+                    v-else-if="questao.getTipo() === 'selecao'"
+                    :questao="questao as QuestaoDeOpcoes"
+                ></QuestaoSelecoes>
+            </div>
         </TransitionGroup>
 
         <BotaoGerarRelatorio

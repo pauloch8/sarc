@@ -1,22 +1,12 @@
 import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
-import { RespostaDeQuestaoDeOpcoes } from '../../../../formulario/respostas/Respostas';
+import { RespostaDeQuestao } from '../../../../formulario/respostas/Respostas';
 import { IProcessadorDeOpcao } from '../opcao/ProcessadorDeOpcao';
+import { IProcessadorDeQuestao } from './IProcessadorDeQuestao';
 
-export interface IProcessadorDeQuestaoDeOpcoes {
-    compararId(id: string): boolean;
-    processar(
-        escapador: IEscapadorDeQuestao,
-        resposta: RespostaDeQuestaoDeOpcoes,
-        template: string,
-    ): string;
-}
-
-export class ProcessadorDeQuestaoDeOpcoes
-    implements IProcessadorDeQuestaoDeOpcoes
-{
+export class ProcessadorDeQuestaoDeOpcoes implements IProcessadorDeQuestao {
     constructor(
         private id: string,
-        private processadoresDeOpcao: IProcessadorDeOpcao[],
+        private processadores: IProcessadorDeOpcao[],
     ) {}
 
     compararId(id: string): boolean {
@@ -25,32 +15,28 @@ export class ProcessadorDeQuestaoDeOpcoes
 
     processar(
         escapador: IEscapadorDeQuestao,
-        resposta: RespostaDeQuestaoDeOpcoes,
+        respostaDto: RespostaDeQuestao,
         template: string,
     ): string {
-        if (resposta.id !== this.id) {
+        if (respostaDto.id !== this.id) {
             throw new ErroIdDaQuestaoDiferenteDoIdDoProcessador(
-                resposta.id,
+                respostaDto.id,
                 this.id,
             );
         }
-        const processadorDeOpcao = this.processadoresDeOpcao.find(processador =>
-            processador.compararId(resposta.resposta.id),
+        const resposta = respostaDto.resposta[0]; // questões de opção só tem uma resposta
+        const processador = this.processadores.find(processador =>
+            processador.compararId(resposta.id),
         );
-        if (!processadorDeOpcao) {
-            throw new ErroNaoEncontrouProcessadorDaOpcaoDaResposta(
-                resposta.resposta.id,
-            );
+        if (!processador) {
+            throw new ErroNaoEncontrouProcessadorDaOpcaoDaResposta(resposta.id);
         }
-        const textosDaOpcao = processadorDeOpcao.processar(resposta.resposta);
+        const textosDaOpcao = processador.processar(resposta);
         const texto = textosDaOpcao.find(t =>
             escapador.compararCategoria(t.categoria),
         );
         if (!texto) {
-            throw new ErroDaRespostaNaoEncontrado(
-                escapador,
-                resposta.resposta.id,
-            );
+            throw new ErroDaRespostaNaoEncontrado(escapador, resposta.id);
         }
         const textoProcessado = template.replaceAll(
             escapador.toString(),

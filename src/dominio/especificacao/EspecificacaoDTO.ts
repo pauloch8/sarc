@@ -18,10 +18,19 @@ export interface QuestaoDTO {
     titulo: string;
     subtitulo?: string;
     opcoes?: OpcaoValorDTO[];
+    selecoes?: SelecaoValorDTO[];
     valorPadrao?: string;
 }
 
 export interface OpcaoValorDTO {
+    id: string;
+    label: string;
+    variaveis?: VariavelDTO[];
+    texto: TextoDTO[];
+    ramificacao: RamificacaoDTO;
+}
+
+export interface SelecaoValorDTO {
     id: string;
     label: string;
     variaveis?: VariavelDTO[];

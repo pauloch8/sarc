@@ -5,14 +5,15 @@ import {
 } from '@/dominio/especificacao/EspecificacaoDTO';
 import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
 import { IEscapadorDeQuestaoFactory } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestaoFactory';
-import { ITexto } from '../../../texto/Texto';
 import { IProcessadorDeOpcaoFactory } from '../../opcao/ProcessadorDeOpcaoFactory';
+import { IProcessadorDeSelecaoFactory } from '../../selecao/ProcessadorDeSelecaoFactory';
 import { ProcessadorDeQuestaoDeOpcoes } from '../ProcessadorDeQuestaoDeOpcoes';
 import {
     ErroEsepcificacaoDaQuestaoDiferenteDeOpcao,
     ErroEspecificacaoDeQuestaoDeOpcoesNaoPossuiOpcoes,
+    ErroQuestaoOpcaoSemOpcoes,
     ProcessadorDeQuestaoDeOpcoesFactory,
-} from '../ProcessadorDeQuestaoDeOpcoesFactory';
+} from '../ProcessadorDeQuestaoFactory';
 
 describe('ProcessadorDeQuestaoDeOpcoesFactory', () => {
     describe('criarDeEspecificacao', () => {
@@ -24,36 +25,29 @@ describe('ProcessadorDeQuestaoDeOpcoesFactory', () => {
             expect(processador[0]).toBeInstanceOf(ProcessadorDeQuestaoDeOpcoes);
         });
 
-        test('lança erro se tipo da especificação for diferente de opcao', () => {
-            const sut = makeSut();
-            const questaoDtoFake = makeQuestaoDtoFake();
-            questaoDtoFake.tipo = 'selecao';
-            expect(() => {
-                sut.criarDeEspecificacao([questaoDtoFake]);
-            }).toThrow(ErroEsepcificacaoDaQuestaoDiferenteDeOpcao);
-        });
-
         test('lança erro se especificação não possuir opções', () => {
             const sut = makeSut();
             const questaoDtoFake = makeQuestaoDtoFake();
             questaoDtoFake.opcoes = [];
             expect(() => {
                 sut.criarDeEspecificacao([questaoDtoFake]);
-            }).toThrow(ErroEspecificacaoDeQuestaoDeOpcoesNaoPossuiOpcoes);
+            }).toThrow(ErroQuestaoOpcaoSemOpcoes);
 
             questaoDtoFake.opcoes = undefined;
             expect(() => {
                 sut.criarDeEspecificacao([questaoDtoFake]);
-            }).toThrow(ErroEspecificacaoDeQuestaoDeOpcoesNaoPossuiOpcoes);
+            }).toThrow(ErroQuestaoOpcaoSemOpcoes);
         });
     });
 });
 
 function makeSut() {
-    const escapadorFactoryStub = makeEscapadorFactoryStub();
     const processadorDeOpcaoFactoryStub = makeProcessadorDeOpcaoFactoryStub();
+    const processadorDeSelecaoFactoryStub =
+        makeProcessadorDeSelecaoFactoryStub();
     const sut = new ProcessadorDeQuestaoDeOpcoesFactory(
         processadorDeOpcaoFactoryStub,
+        processadorDeSelecaoFactoryStub,
     );
     return sut;
 }
@@ -91,6 +85,15 @@ function makeOpcaoValorDtoFake() {
 
 function makeProcessadorDeOpcaoFactoryStub() {
     const processadorDeOpcaoFactoryStub: IProcessadorDeOpcaoFactory = {
+        criarDeEspecificacao(opcaoValorDto: OpcaoValorDTO[]) {
+            return [];
+        },
+    };
+    return processadorDeOpcaoFactoryStub;
+}
+
+function makeProcessadorDeSelecaoFactoryStub() {
+    const processadorDeOpcaoFactoryStub: IProcessadorDeSelecaoFactory = {
         criarDeEspecificacao(opcaoValorDto: OpcaoValorDTO[]) {
             return [];
         },

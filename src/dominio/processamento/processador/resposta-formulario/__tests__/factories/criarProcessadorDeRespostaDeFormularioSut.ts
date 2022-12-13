@@ -1,7 +1,7 @@
 import { Template } from '@/dominio/especificacao/EspecificacaoDTO';
 import { criarRespostaDeFormularioFake } from '@/dominio/formulario/respostas/__tests__/criarRespostaDeFormularioFake';
 import { criarEscapadorDeQuestaoFactoryFake } from '@/dominio/processamento/escapador/questao/__tests__/criarEscapadorDeQuestaoFactoryFake';
-import { criarProcessadoresDeQuestaoDeOpcoesFake } from '../../../questoes-opcao/questao/__tests__/criarProcessadoresDeQuestaoDeOpcoesFake';
+import { criarProcessadoresDeQuestaoFake } from '../../../questoes-opcao/questao/__tests__/criarProcessadoresDeQuestaoFake';
 import { ProcessadorDeRespostaDeFormulario } from '../../ProcessadorDeRespostaDeFormulario';
 
 export function criarProcessadorDeRespostaDeFormularioSut(
@@ -21,7 +21,7 @@ export function criarProcessadorDeRespostaDeFormularioSut(
         },
     ],
 ) {
-    const processadoresDeOpcaoFake = criarProcessadoresDeQuestaoDeOpcoesFake(
+    const processadoresDeOpcaoFake = criarProcessadoresDeQuestaoFake(
         numerosDasQuestoesParaProcessadores,
     );
     const escapadorFactory = criarEscapadorDeQuestaoFactoryFake(

@@ -4,20 +4,27 @@ import App from './apresentacao/App.vue';
 import router from './apresentacao/router/router';
 import { EscapadorDeQuestaoFactory } from './dominio/processamento/escapador/questao/EscapadorDeQuestaoFactory';
 import { ProcessadorDeOpcaoFactory } from './dominio/processamento/processador/questoes-opcao/opcao/ProcessadorDeOpcaoFactory';
-import { ProcessadorDeQuestaoDeOpcoesFactory } from './dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoDeOpcoesFactory';
+import { ProcessadorDeQuestaoDeOpcoesFactory } from './dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoFactory';
 import { ProcessadorDeRespostaDeFormularioFactory } from './dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormularioFactory';
 import { TextoFactory } from './dominio/processamento/processador/texto/TextoFactory';
 import { especificacao } from './apresentacao/assets/especificacao';
 import { FormularioFactory } from './dominio/formulario/FormularioFactory';
+import { ProcessadorDeSelecaoFactory } from './dominio/processamento/processador/questoes-opcao/selecao/ProcessadorDeSelecaoFactory';
 
 function criarProcessadorDeFormulario() {
     const textoFactory = new TextoFactory();
     const processadorDeOpcaoFactory = new ProcessadorDeOpcaoFactory(
         textoFactory,
     );
+    const processadorDeSelecaoFactory = new ProcessadorDeSelecaoFactory(
+        textoFactory,
+    );
     const escapadorDeQuestaoFactory = new EscapadorDeQuestaoFactory();
     const processadorDeQuestaoDeOpcoesFactory =
-        new ProcessadorDeQuestaoDeOpcoesFactory(processadorDeOpcaoFactory);
+        new ProcessadorDeQuestaoDeOpcoesFactory(
+            processadorDeOpcaoFactory,
+            processadorDeSelecaoFactory,
+        );
     const processadorFormularioFactory =
         new ProcessadorDeRespostaDeFormularioFactory(
             processadorDeQuestaoDeOpcoesFactory,

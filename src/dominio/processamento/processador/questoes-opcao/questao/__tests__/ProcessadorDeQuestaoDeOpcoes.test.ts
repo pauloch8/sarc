@@ -1,6 +1,6 @@
 import {
     RespostaDeOpcao,
-    RespostaDeQuestaoDeOpcoes,
+    RespostaDeQuestao,
 } from '@/dominio/formulario/respostas/Respostas';
 import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
 import { IProcessadorDeOpcao } from '../../opcao/ProcessadorDeOpcao';
@@ -92,11 +92,13 @@ function makeProcessadorDeOpcaoStub() {
 }
 
 function makeRespostaFake() {
-    const respostaFake: RespostaDeQuestaoDeOpcoes = {
+    const respostaFake: RespostaDeQuestao = {
         id: 'questao1',
-        resposta: {
-            id: 'resposta1',
-        },
+        resposta: [
+            {
+                id: 'resposta1',
+            },
+        ],
     };
     return respostaFake;
 }

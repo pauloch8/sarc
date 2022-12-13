@@ -1,5 +1,5 @@
 import { Questao } from './questoes/Questao';
-import { RespostaDeFormulario } from './respostas/Respostas';
+import { RespostaDeFormulario, RespostaDeQuestao } from './respostas/Respostas';
 
 export class Formulario {
     constructor(

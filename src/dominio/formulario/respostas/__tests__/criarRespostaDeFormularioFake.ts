@@ -2,12 +2,15 @@ import { RespostaDeFormulario } from '../Respostas';
 
 export function criarRespostaDeFormularioFake(numeros: number[]) {
     const respostasQuestoes = numeros.map(numero => {
-        return {
+        const respostas = {
             id: 'questao' + numero,
-            resposta: {
-                id: 'resposta' + numero,
-            },
+            resposta: [
+                {
+                    id: 'resposta' + numero,
+                },
+            ],
         };
+        return respostas;
     });
     const respostaFake: RespostaDeFormulario = {
         id: 'id-teste',
