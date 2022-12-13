@@ -36,3 +36,9 @@ export default defineComponent({
         />
     </label>
 </template>
+
+<style scoped>
+input {
+    margin-bottom: 0px;
+}
+</style>

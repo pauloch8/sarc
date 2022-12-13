@@ -1,13 +1,14 @@
 <script lang="ts">
-import { Formulario } from '@/dominio/formulario/Formulario';
 import {
     ProcessadorDeRespostaDeFormulario,
     TextoProcessado,
 } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
+import { Formulario } from '@/dominio/formulario/Formulario';
+import { QuestaoDeOpcoes } from '@/dominio/formulario/questoes/opcoes/QuestaoDeOpcoes';
+import { QuestaoDeSelecao } from '@/dominio/formulario/questoes/selecao/QuestaoDeSelecao';
 import { defineComponent } from 'vue';
 import QuestaoOpcoes from './questao-opcoes/QuestaoOpcoesComponent.vue';
 import QuestaoSelecoes from './questao-selecoes/QuestaoSelecoesComponent.vue';
-import { QuestaoDeOpcoes } from '@/dominio/formulario/questoes/opcoes/QuestaoDeOpcoes';
 import BotaoGerarRelatorio from './BotaoGerarRelatorio.vue';
 
 export default defineComponent({
@@ -59,7 +60,7 @@ export default defineComponent({
                 ></QuestaoOpcoes>
                 <QuestaoSelecoes
                     v-else-if="questao.getTipo() === 'selecao'"
-                    :questao="questao as QuestaoDeOpcoes"
+                    :questao="questao as QuestaoDeSelecao"
                 ></QuestaoSelecoes>
             </div>
         </TransitionGroup>

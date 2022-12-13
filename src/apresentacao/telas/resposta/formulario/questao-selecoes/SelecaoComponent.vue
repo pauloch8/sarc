@@ -56,7 +56,7 @@ export default defineComponent({
         />
         {{ selecao.getLabel() }}
     </label>
-    <div v-if="selecionado && selecao.getVariaveis()">
+    <div class="variaveis" v-if="selecionado && selecao.getVariaveis()">
         <VariavelComponent
             v-for="variavel in selecao.getVariaveis()"
             :key="variavel.getId()"
@@ -66,3 +66,9 @@ export default defineComponent({
         ></VariavelComponent>
     </div>
 </template>
+
+<style scoped>
+.variaveis {
+    margin-bottom: 20px;
+}
+</style>

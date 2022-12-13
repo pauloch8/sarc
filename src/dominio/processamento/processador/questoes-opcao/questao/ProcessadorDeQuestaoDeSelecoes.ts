@@ -24,7 +24,7 @@ export class ProcessadorDeQuestaoDeSelecoes implements IProcessadorDeQuestao {
                 this.id,
             );
         }
-        const textosProcessados = resposta.resposta.map(resposta => {
+        const textos = resposta.resposta.map(resposta => {
             const processador = this.processadores.find(processador =>
                 processador.compararId(resposta.id),
             );
@@ -40,13 +40,13 @@ export class ProcessadorDeQuestaoDeSelecoes implements IProcessadorDeQuestao {
             if (!texto) {
                 throw new ErroDaRespostaNaoEncontrado(escapador, resposta.id);
             }
-            const textoProcessado = template.replaceAll(
-                escapador.toString(),
-                texto.texto,
-            );
-            return textoProcessado;
+            return texto.texto;
         });
-        return textosProcessados.join('<br/>');
+        const textoProcessado = template.replaceAll(
+            escapador.toString(),
+            textos.join('</br>'),
+        );
+        return textoProcessado;
     }
 }
 

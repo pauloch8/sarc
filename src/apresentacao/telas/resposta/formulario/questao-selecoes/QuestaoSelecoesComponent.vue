@@ -1,5 +1,4 @@
 <script lang="ts">
-import { Opcao } from '@/dominio/formulario/questoes/opcoes/Opcao';
 import { QuestaoDeSelecao } from '@/dominio/formulario/questoes/selecao/QuestaoDeSelecao';
 import { Selecao } from '@/dominio/formulario/questoes/selecao/Selecao';
 import { defineComponent } from 'vue';
@@ -23,7 +22,6 @@ export default defineComponent({
     components: {
         SelecaoComponent,
     },
-    emits: ['opcaoSelecionada'],
     computed: {
         selecaoesFiltradas() {
             return this.estaQuestao.selecoes.filter(selecao => {
@@ -104,5 +102,6 @@ footer {
 fieldset {
     max-height: 500px;
     overflow: auto;
+    padding: 10px;
 }
 </style>

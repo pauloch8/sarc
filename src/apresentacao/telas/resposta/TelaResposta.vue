@@ -1,5 +1,4 @@
 <script lang="ts">
-import { especificacao } from '@/apresentacao/assets/especificacao';
 import { TextoProcessado } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 import { defineComponent } from 'vue';
 import FormularioComponent from './formulario/FormularioComponent.vue';

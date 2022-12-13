@@ -15,6 +15,7 @@ export class ProcessadorDeRespostaDeFormulario {
     ) {}
 
     processar(resposta: RespostaDeFormulario): TextoProcessado[] {
+        debugger;
         if (resposta.id !== this.id) {
             throw new ErroRespostaNaoPossuiIdDoProcessador();
         }
