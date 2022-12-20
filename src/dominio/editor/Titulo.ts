@@ -1,13 +1,7 @@
 export class Titulo {
-    constructor(private titulo: string) {
-        if (!titulo) {
-            throw new ErroTituloEmBranco();
-        }
-    }
-}
+    constructor(private titulo: string) {}
 
-export class ErroTituloEmBranco extends Error {
-    constructor() {
-        super('Fornecido um título em branco');
+    toString() {
+        return this.titulo;
     }
 }

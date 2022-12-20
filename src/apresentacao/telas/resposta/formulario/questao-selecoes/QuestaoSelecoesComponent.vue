@@ -61,7 +61,7 @@ export default defineComponent({
             <label for="filtraSelecoes">
                 Filtrar seleções
                 <input
-                    type="text"
+                    type="search"
                     id="filtroSelecoes"
                     name="filtroSelecoes"
                     placeholder="Filtrar Seleções"

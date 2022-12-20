@@ -1,27 +1,23 @@
 <script lang="ts">
-import { Editor } from '@/dominio/editor/Editor';
 import { defineComponent } from 'vue';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { Editor } from '@/dominio/editor/Editor';
+import TituloInput from './TituloInput.vue';
+import { Titulo } from '@/dominio/editor/Titulo';
 
 export default defineComponent({
     name: 'TelaEditor',
-    props: {
-        editor: {
-            type: Editor,
-            required: true,
-        },
+    inject: ['editor'],
+    components: {
+        TituloInput,
     },
     data() {
         return {
-            inputTitulo: '',
-            classicEditor: ClassicEditor,
-            editorHtml: '',
+            esteEditor: this.editor as unknown as Editor,
         };
     },
     methods: {
-        setTitulo(e: Event) {
-            const titulo = (e.target as HTMLInputElement).value;
-            this.editor.setTitulo(titulo);
+        digitouTitulo(titulo?: Titulo) {
+            if (titulo) this.esteEditor.setTitulo(titulo);
         },
     },
 });
@@ -30,11 +26,10 @@ export default defineComponent({
 <template>
     <article>
         <header>Dados do formulário</header>
-        <ckeditor
-            :editor="classicEditor"
-            v-model="editorHtml"
-            :config="{}"
-        ></ckeditor>
-        {{ editorHtml }}
+        <TituloInput
+            :titulo="esteEditor.getTitulo()"
+            @digitouTitulo="digitouTitulo"
+        ></TituloInput>
+        {{ editor }}
     </article>
 </template>

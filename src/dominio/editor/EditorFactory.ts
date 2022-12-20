@@ -1,9 +1,11 @@
 import { EspecificacaoDTO } from '../especificacao/EspecificacaoDTO';
 import { Editor } from './Editor';
+import { Titulo } from './Titulo';
 
 export class EditorFactory {
     criarDaEspecificacao(especificacao: EspecificacaoDTO): Editor {
-        const editor = new Editor(especificacao.titulo);
+        const titulo = new Titulo(especificacao.titulo);
+        const editor = new Editor(titulo);
         return editor;
     }
 

@@ -10,8 +10,22 @@ import { TextoFactory } from './dominio/processamento/processador/texto/TextoFac
 import { especificacao } from './apresentacao/assets/especificacao';
 import { FormularioFactory } from './dominio/formulario/FormularioFactory';
 import { ProcessadorDeSelecaoFactory } from './dominio/processamento/processador/questoes-opcao/selecao/ProcessadorDeSelecaoFactory';
+import { EditorFactory } from './dominio/editor/EditorFactory';
+import { EspecificacaoDTO } from './dominio/especificacao/EspecificacaoDTO';
 
-function criarProcessadorDeFormulario() {
+const processadorFormulario = criarProcessadorDeFormulario(especificacao);
+const formulario = FormularioFactory.criarDaEspecificacao(especificacao);
+const editor = criarEditor(especificacao);
+
+createApp(App)
+    .use(router)
+    .use(CKEditor)
+    .provide('processadorFormulario', processadorFormulario)
+    .provide('formulario', formulario)
+    .provide('editor', editor)
+    .mount('#app');
+
+function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {
     const textoFactory = new TextoFactory();
     const processadorDeOpcaoFactory = new ProcessadorDeOpcaoFactory(
         textoFactory,
@@ -35,12 +49,8 @@ function criarProcessadorDeFormulario() {
     return processadorFormulario;
 }
 
-const processadorFormulario = criarProcessadorDeFormulario();
-const formulario = FormularioFactory.criarDaEspecificacao(especificacao);
-
-createApp(App)
-    .use(router)
-    .use(CKEditor)
-    .provide('processadorFormulario', processadorFormulario)
-    .provide('formulario', formulario)
-    .mount('#app');
+function criarEditor(especificacao: EspecificacaoDTO) {
+    const factory = new EditorFactory();
+    const editor = factory.criarDaEspecificacao(especificacao);
+    return editor;
+}

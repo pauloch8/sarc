@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import TelaCkEditorVue from '../telas/ckeditor/TelaCkEditor.vue';
 import EditorViewVue from '../telas/editor/TelaEditor.vue';
 import TelaRespostaVue from '../telas/resposta/TelaResposta.vue';
 
@@ -12,6 +13,11 @@ const routes: Array<RouteRecordRaw> = [
         path: '/editor',
         name: 'editor',
         component: EditorViewVue,
+    },
+    {
+        path: '/ckeditor',
+        name: 'ckeditor',
+        component: TelaCkEditorVue,
     },
 ];
 

@@ -1,10 +1,12 @@
+import { Titulo } from './Titulo';
+
 export class Editor {
-    constructor(private titulo?: string) {}
+    constructor(private titulo?: Titulo) {}
 
     getTitulo() {
         return this.titulo;
     }
-    setTitulo(titulo: string) {
+    setTitulo(titulo: Titulo) {
         if (!titulo) {
             throw new ErroTituloEhStringVazia();
         }

@@ -8,7 +8,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <nav class="container">
+    <nav>
         <ul>
             <li>
                 <strong>SARC</strong>
@@ -18,6 +18,7 @@ export default defineComponent({
             <li>
                 <router-link to="/">Resposta</router-link>
                 <router-link to="/editor">Editor</router-link>
+                <router-link to="/ckeditor">CkEditor</router-link>
             </li>
         </ul>
     </nav>

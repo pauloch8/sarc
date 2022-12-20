@@ -1,4 +1,52 @@
-<script lang="ts"></script>
+<script lang="ts">
+import { Titulo } from '@/dominio/editor/Titulo';
+import {
+    ErroDeCriacaoDeTitulo,
+    ITituloFactory,
+} from '@/dominio/editor/TituloFactory';
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+    name: 'TituloInput',
+    inject: ['tituloFactory'],
+    props: {
+        titulo: {
+            type: Titulo,
+            required: false,
+        },
+    },
+    data() {
+        return {
+            esteTitulo: this.titulo || '',
+            erro: '',
+        };
+    },
+    methods: {
+        criarTitulo(texto: string) {
+            this.erro = '';
+            try {
+                const tituloFactory = this
+                    .tituloFactory as unknown as ITituloFactory;
+                return tituloFactory.criar(texto);
+            } catch (e) {
+                if (e instanceof ErroDeCriacaoDeTitulo) {
+                    this.erro = e.message;
+                } else {
+                    this.erro =
+                        'Ocorreu um erro desconhecido ao criar o título';
+                }
+                return null;
+            }
+        },
+        digitouTitulo(evento: FocusEvent) {
+            const input = evento.target as HTMLInputElement;
+            const titulo = this.criarTitulo(input.value);
+            this.$emit('digitouTitulo', titulo);
+        },
+    },
+    emits: ['digitouTitulo'],
+});
+</script>
 
 <template>
     <label for="titulo">
@@ -8,10 +56,17 @@
             id="tituloFormulario"
             name="tituloFormulario"
             placeholder="Título do formulário"
-            :value="editor.getTitulo()"
-            @input="setTitulo"
-            @focusout="setTitulo"
+            v-model="esteTitulo"
+            @focusout="digitouTitulo"
             required
         />
+        <article class="erro" v-if="erro">{{ erro }}</article>
     </label>
 </template>
+
+<style scoped>
+.erro {
+    background-color: brown;
+    color: white;
+}
+</style>

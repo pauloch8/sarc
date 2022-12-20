@@ -6,7 +6,7 @@
 import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
-    roots: ['<rootDir>/src'],
+    roots: ['<rootDir>/tests'],
     collectCoverage: false,
     collectCoverageFrom: ['<rootDir>/src/**/*.ts', '!<rootDir>/src/main/**'],
     coverageDirectory: 'coverage',
@@ -15,6 +15,10 @@ const config: Config.InitialOptions = {
         '.+\\.ts$': 'ts-jest',
     },
     testMatch: ['**/*.{spec,test}.ts'],
+    moduleNameMapper: {
+        '@/tests/(.*)': '<rootDir>/tests/$1',
+        '@/(.*)': '<rootDir>/src/$1',
+    },
 };
 
 export default config;
