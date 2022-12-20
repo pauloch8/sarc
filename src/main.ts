@@ -12,10 +12,12 @@ import { FormularioFactory } from './dominio/formulario/FormularioFactory';
 import { ProcessadorDeSelecaoFactory } from './dominio/processamento/processador/questoes-opcao/selecao/ProcessadorDeSelecaoFactory';
 import { EditorFactory } from './dominio/editor/EditorFactory';
 import { EspecificacaoDTO } from './dominio/especificacao/EspecificacaoDTO';
+import { TituloFactory } from './dominio/editor/TituloFactory';
 
 const processadorFormulario = criarProcessadorDeFormulario(especificacao);
 const formulario = FormularioFactory.criarDaEspecificacao(especificacao);
 const editor = criarEditor(especificacao);
+const tituloFactory = new TituloFactory();
 
 createApp(App)
     .use(router)
@@ -23,6 +25,7 @@ createApp(App)
     .provide('processadorFormulario', processadorFormulario)
     .provide('formulario', formulario)
     .provide('editor', editor)
+    .provide('tituloFactory', tituloFactory)
     .mount('#app');
 
 function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {

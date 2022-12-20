@@ -4,11 +4,19 @@ import {
     ErroDeCriacaoDeTitulo,
     ITituloFactory,
 } from '@/dominio/editor/TituloFactory';
-import { defineComponent } from 'vue';
+import { defineComponent, inject } from 'vue';
 
 export default defineComponent({
     name: 'TituloInput',
-    inject: ['tituloFactory'],
+    setup() {
+        const tituloFactory = inject<ITituloFactory>('tituloFactory');
+        if (!tituloFactory) {
+            throw new Error('Não injetada a dependência tituloFactory');
+        }
+        return {
+            tituloFactory,
+        };
+    },
     props: {
         titulo: {
             type: Titulo,
@@ -25,9 +33,7 @@ export default defineComponent({
         criarTitulo(texto: string) {
             this.erro = '';
             try {
-                const tituloFactory = this
-                    .tituloFactory as unknown as ITituloFactory;
-                return tituloFactory.criar(texto);
+                return this.tituloFactory.criar(texto);
             } catch (e) {
                 if (e instanceof ErroDeCriacaoDeTitulo) {
                     this.erro = e.message;
