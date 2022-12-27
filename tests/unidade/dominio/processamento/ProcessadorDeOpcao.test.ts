@@ -1,6 +1,6 @@
 import { RespostaDeOpcao } from '@/dominio/formulario/respostas/Respostas';
-import { ITexto } from '../../../src/dominio/processamento/processador/texto/Texto';
-import { ProcessadorDeOpcao } from '../../../src/dominio/processamento/processador/questoes-opcao/opcao/ProcessadorDeOpcao';
+import { ITexto } from '@/dominio/processamento/processador/texto/Texto';
+import { ProcessadorDeOpcao } from '@/dominio/processamento/processador/questoes-opcao/opcao/ProcessadorDeOpcao';
 
 describe('ProcessadorDeOpcao', () => {
     describe('processar', () => {

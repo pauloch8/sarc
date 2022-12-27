@@ -4,7 +4,7 @@ import { criarProcessadorDeRespostaDeFormularioSut } from '@/tests/dubles/domini
 import {
     ErroRespostaNaoPossuiIdDoProcessador,
     ErroProcessadorDeQuestaoNaoEncontrado,
-} from '../../../src/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
+} from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 
 describe('Classe ProcessadorDeRespostaDeFormulario', () => {
     describe('método processar', () => {
