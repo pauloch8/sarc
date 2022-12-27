@@ -4,6 +4,12 @@ import {
     ErroDeCriacaoDeTitulo,
 } from '@/dominio/editor/TituloFactory';
 
+export class TituloFactoryDummy implements ITituloFactory {
+    criar(): Titulo {
+        throw new Error('Method not implemented.');
+    }
+}
+
 export class TituloFactorySucessoStub implements ITituloFactory {
     criar(titulo: string): Titulo {
         return new Titulo(titulo);

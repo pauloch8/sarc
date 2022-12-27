@@ -1,15 +1,27 @@
 import { EspecificacaoDTO } from '../especificacao/EspecificacaoDTO';
 import { Editor } from './Editor';
-import { Titulo } from './Titulo';
+import { IIdFormularioFactory } from './IdFormularioFactory';
+import { Subtitulo } from './Subtitulo';
+import { ISubtituloFactory } from './SubtituloFactory';
+import { ITituloFactory } from './TituloFactory';
 
 export class EditorFactory {
-    criarDaEspecificacao(especificacao: EspecificacaoDTO): Editor {
-        const titulo = new Titulo(especificacao.titulo);
-        const editor = new Editor(titulo);
-        return editor;
-    }
+    constructor(
+        private idFormularioFactory: IIdFormularioFactory,
+        private tituloFactory: ITituloFactory,
+        private subtituloFactory: ISubtituloFactory,
+    ) {}
 
-    criarNovoEditor(): Editor {
-        return new Editor();
+    criarDaEspecificacao(especificacao: EspecificacaoDTO): Editor {
+        const titulo = this.tituloFactory.criar(especificacao.titulo);
+        const idFormulario = this.idFormularioFactory.criarDeString(
+            especificacao.id,
+        );
+        let subtitulo: Subtitulo | undefined;
+        if (especificacao.subtitulo) {
+            subtitulo = this.subtituloFactory.criar(especificacao.subtitulo);
+        }
+        const editor = new Editor(idFormulario, titulo, subtitulo);
+        return editor;
     }
 }

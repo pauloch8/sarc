@@ -25,7 +25,7 @@ export default defineComponent({
     },
     data() {
         return {
-            esteTitulo: this.titulo || '',
+            tituloString: this.titulo?.toString() || '',
             erro: '',
         };
     },
@@ -44,13 +44,13 @@ export default defineComponent({
                 return null;
             }
         },
-        digitouTitulo(evento: FocusEvent) {
+        digitou(evento: FocusEvent) {
             const input = evento.target as HTMLInputElement;
             const titulo = this.criarTitulo(input.value);
-            this.$emit('digitouTitulo', titulo);
+            this.$emit('digitou', titulo);
         },
     },
-    emits: ['digitouTitulo'],
+    emits: ['digitou'],
 });
 </script>
 
@@ -61,9 +61,8 @@ export default defineComponent({
             type="text"
             id="tituloFormulario"
             name="tituloFormulario"
-            placeholder="Título do formulário"
-            v-model="esteTitulo"
-            @focusout="digitouTitulo"
+            v-model="tituloString"
+            @focusout="digitou"
             required
         />
         <article class="erro" v-if="erro">{{ erro }}</article>

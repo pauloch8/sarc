@@ -13,11 +13,15 @@ import { ProcessadorDeSelecaoFactory } from './dominio/processamento/processador
 import { EditorFactory } from './dominio/editor/EditorFactory';
 import { EspecificacaoDTO } from './dominio/especificacao/EspecificacaoDTO';
 import { TituloFactory } from './dominio/editor/TituloFactory';
+import { IdFormularioFactory } from './dominio/editor/IdFormularioFactory';
+import { SubtituloFactory } from './dominio/editor/SubtituloFactory';
 
 const processadorFormulario = criarProcessadorDeFormulario(especificacao);
 const formulario = FormularioFactory.criarDaEspecificacao(especificacao);
 const editor = criarEditor(especificacao);
 const tituloFactory = new TituloFactory();
+const subtituloFactory = new SubtituloFactory();
+const idFormularioFactory = new IdFormularioFactory();
 
 createApp(App)
     .use(router)
@@ -26,6 +30,8 @@ createApp(App)
     .provide('formulario', formulario)
     .provide('editor', editor)
     .provide('tituloFactory', tituloFactory)
+    .provide('subtituloFactory', subtituloFactory)
+    .provide('idFormularioFactory', idFormularioFactory)
     .mount('#app');
 
 function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {
@@ -53,7 +59,11 @@ function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {
 }
 
 function criarEditor(especificacao: EspecificacaoDTO) {
-    const factory = new EditorFactory();
+    const factory = new EditorFactory(
+        new IdFormularioFactory(),
+        new TituloFactory(),
+        new SubtituloFactory(),
+    );
     const editor = factory.criarDaEspecificacao(especificacao);
     return editor;
 }
