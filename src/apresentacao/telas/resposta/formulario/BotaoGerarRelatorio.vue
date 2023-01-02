@@ -47,7 +47,7 @@ export default defineComponent({
 
 <style scoped>
 .alerta {
-    background-color: brown;
+    background-color: #e32b2b;
     color: white;
 }
 </style>

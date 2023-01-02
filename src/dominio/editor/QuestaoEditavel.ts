@@ -1,18 +1,20 @@
 import { IdFormulario } from './IdFormulario';
+import { ItemEditavel } from './ItemEditavel';
+import { ListaEditavel } from './ListaEditavel';
 import { Opcao } from './Opcao';
 import { Subtitulo } from './Subtitulo';
 import { Titulo } from './Titulo';
 
-export class Questao {
-    private emEdicao = false;
-
+export class QuestaoEditavel extends ItemEditavel {
     constructor(
         private id: IdFormulario,
         private titulo: Titulo,
         private subtitulo: Subtitulo,
-        private indice: number,
-        private opcoes: Opcao[] = [],
-    ) {}
+        indice: number,
+        private opcoes: ListaEditavel<Opcao>,
+    ) {
+        super(indice);
+    }
 
     getId() {
         return this.id;
@@ -26,27 +28,11 @@ export class Questao {
         return this.subtitulo;
     }
 
-    getIndice() {
-        return this.indice;
-    }
-
-    setIndice(indice: number) {
-        this.indice = indice;
-    }
-
     getOpcoes() {
         return this.opcoes;
     }
 
-    getEmEdicao() {
-        return this.emEdicao;
-    }
-
-    editar() {
-        this.emEdicao = true;
-    }
-
     toString() {
-        return `Questão índice ${this.indice}`;
+        return `Questão id ${this.getId()}`;
     }
 }

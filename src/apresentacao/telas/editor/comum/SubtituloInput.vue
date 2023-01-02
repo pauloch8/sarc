@@ -58,22 +58,29 @@ export default defineComponent({
 </script>
 
 <template>
-    <label for="subtitulo">
-        Subtítulo do formulário
-        <textarea
-            id="subtituloFormulario"
-            name="subtituloFormulario"
-            v-model="subTituloString"
-            @focusout="digitou"
-            required
-        ></textarea>
-        <article class="erro" v-if="erro">{{ erro }}</article>
-    </label>
+    <div>
+        <label for="subtitulo">
+            Subtítulo do formulário
+            <textarea
+                id="subtituloFormulario"
+                name="subtituloFormulario"
+                v-model="subTituloString"
+                @focusout="digitou"
+                required
+            ></textarea>
+            <article class="erro" v-if="erro">{{ erro }}</article>
+        </label>
+    </div>
 </template>
 
 <style scoped>
+textarea {
+    background-color: white;
+    resize: vertical;
+}
+
 .erro {
-    background-color: brown;
+    background-color: #e32b2b;
     color: white;
 }
 </style>

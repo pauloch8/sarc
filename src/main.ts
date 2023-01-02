@@ -1,7 +1,18 @@
 import { createApp } from 'vue';
 import CKEditor from '@ckeditor/ckeditor5-vue';
+/* Font Awesome */
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import {
+    faArrowUp,
+    faArrowDown,
+    faTrash,
+    faEdit,
+} from '@fortawesome/free-solid-svg-icons';
+/* camada de apresentação */
 import App from './apresentacao/App.vue';
 import router from './apresentacao/router/router';
+/* camada de domínio */
 import { EscapadorDeQuestaoFactory } from './dominio/processamento/escapador/questao/EscapadorDeQuestaoFactory';
 import { ProcessadorDeOpcaoFactory } from './dominio/processamento/processador/questoes-opcao/opcao/ProcessadorDeOpcaoFactory';
 import { ProcessadorDeQuestaoDeOpcoesFactory } from './dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoFactory';
@@ -16,9 +27,12 @@ import { TituloFactory } from './dominio/editor/TituloFactory';
 import { IdFormularioFactory } from './dominio/editor/IdFormularioFactory';
 import { SubtituloFactory } from './dominio/editor/SubtituloFactory';
 
+/* Font Awesome */
+library.add(faArrowUp, faArrowDown, faTrash, faEdit);
+
 const processadorFormulario = criarProcessadorDeFormulario(especificacao);
 const formulario = FormularioFactory.criarDaEspecificacao(especificacao);
-const editor = criarEditor(especificacao);
+//const editor = criarEditor(especificacao);
 const tituloFactory = new TituloFactory();
 const subtituloFactory = new SubtituloFactory();
 const idFormularioFactory = new IdFormularioFactory();
@@ -26,9 +40,10 @@ const idFormularioFactory = new IdFormularioFactory();
 createApp(App)
     .use(router)
     .use(CKEditor)
+    .component('FontAwesomeIcon', FontAwesomeIcon)
     .provide('processadorFormulario', processadorFormulario)
     .provide('formulario', formulario)
-    .provide('editor', editor)
+    //.provide('editor', editor)
     .provide('tituloFactory', tituloFactory)
     .provide('subtituloFactory', subtituloFactory)
     .provide('idFormularioFactory', idFormularioFactory)

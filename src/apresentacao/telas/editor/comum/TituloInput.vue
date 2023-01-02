@@ -70,8 +70,12 @@ export default defineComponent({
 </template>
 
 <style scoped>
+input {
+    background-color: white;
+}
+
 .erro {
-    background-color: brown;
+    background-color: #e32b2b;
     color: white;
 }
 </style>

@@ -3,6 +3,10 @@ import { ItemEditavel } from './ItemEditavel';
 export class ListaEditavel<Item extends ItemEditavel> {
     constructor(private itens: Item[] = []) {}
 
+    getItens() {
+        return this.itens;
+    }
+
     editarItem(itemSolicitado: Item) {
         const itemParaEditar = this.obterItem(itemSolicitado);
         const outrosItens = this.itens.filter(item => item != itemParaEditar);
