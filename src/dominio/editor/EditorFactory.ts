@@ -13,6 +13,7 @@ export class EditorFactory {
     ) {}
 
     criarDaEspecificacao(especificacao: EspecificacaoDTO): Editor {
+        // TODO: reatribuir indices incorretos
         const titulo = this.tituloFactory.criar(especificacao.titulo);
         const idFormulario = this.idFormularioFactory.criarDeString(
             especificacao.id,

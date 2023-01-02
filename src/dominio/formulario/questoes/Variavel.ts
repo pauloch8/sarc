@@ -17,6 +17,10 @@ export class Variavel {
         return this.label;
     }
 
+    getTipo() {
+        return this.tipo;
+    }
+
     getEscapador() {
         return '${' + this.label + '}';
     }
