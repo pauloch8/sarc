@@ -4,13 +4,13 @@ import { QuestaoEditavel } from './QuestaoEditavel';
 import { Subtitulo } from './Subtitulo';
 import { Titulo } from './Titulo';
 
-export interface IEditor {
+export interface IFormularioEditor {
     getId(): IdFormulario;
     getTitulo(): Titulo;
     setTitulo(titulo: Titulo): void;
 }
 
-export class Editor implements IEditor {
+export class FormularioEditor implements IFormularioEditor {
     constructor(
         private id: IdFormulario,
         private titulo: Titulo,
@@ -20,11 +20,17 @@ export class Editor implements IEditor {
     getId(): IdFormulario {
         return this.id;
     }
+    setId(id: IdFormulario) {
+        this.id = id;
+    }
     getTitulo() {
         return this.titulo;
     }
     getSubtitulo() {
         return this.subtitulo;
+    }
+    setSubtitulo(subtitulo?: Subtitulo) {
+        this.subtitulo = subtitulo;
     }
     setTitulo(titulo: Titulo) {
         if (!titulo) {
@@ -33,7 +39,7 @@ export class Editor implements IEditor {
         this.titulo = titulo;
     }
     getQuestoes() {
-        return this.questoes.getItens();
+        return this.questoes;
     }
 }
 

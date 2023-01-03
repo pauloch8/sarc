@@ -2,13 +2,11 @@
 import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
 import { defineComponent } from 'vue';
 import QuestaoEdicao from './QuestaoEdicao.vue';
-import QuestaoVisualizacao from './QuestaoVisualizacao.vue';
 
 export default defineComponent({
-    name: 'QuestaoComponent',
+    name: 'AdicionarQuestao',
     components: {
         QuestaoEdicao,
-        QuestaoVisualizacao,
     },
     props: {
         questao: { type: QuestaoEditavel, required: false },
@@ -28,17 +26,18 @@ export default defineComponent({
 </script>
 
 <template>
-    <QuestaoVisualizacao
-        v-if="!emEdicao && questao"
-        :questao="questao"
-        @editou="emEdicao = true"
-    ></QuestaoVisualizacao>
-    <QuestaoEdicao
-        v-if="emEdicao"
-        :questao="(questao as QuestaoEditavel)"
-        @cancelou="emEdicao = false"
-        @salvou="emEdicao = false"
-    ></QuestaoEdicao>
+    <div v-if="!adicionarQuestao">
+        <a
+            href="#"
+            role="button"
+            class="outline adicionar"
+            @click.prevent="adicionarQuestao = true"
+            >+ Adicionar Questão</a
+        >{{ adicionarQuestao }}
+    </div>
+    <div v-if="adicionarQuestao">
+        <QuestaoEdicao @cancelou="adicionarQuestao = false"> </QuestaoEdicao>
+    </div>
 </template>
 
 <style>

@@ -8,6 +8,7 @@ import BotoesSalvarCancelar from '../comum/BotoesSalvarCancelar.vue';
 import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
 import { Titulo } from '@/dominio/editor/Titulo';
 import { Subtitulo } from '@/dominio/editor/Subtitulo';
+import { IdFormulario } from '@/dominio/editor/IdFormulario';
 
 export default defineComponent({
     name: 'QuestaoEdicao',
@@ -15,19 +16,48 @@ export default defineComponent({
         TituloInput,
         IdFormularioInput,
         SubtituloInput,
-        OpcaoComponent,
+        // OpcaoComponent,
         BotoesSalvarCancelar,
     },
     props: {
         questao: { type: QuestaoEditavel, required: false },
     },
     data() {
-        const titulo = this.questao?.getTitulo() || new Titulo('');
-        const subtitulo = this.questao?.getSubTitulo() || new Subtitulo('');
+        const titulo = this.questao?.getTitulo();
+        const subtitulo = this.questao?.getSubTitulo();
+        // const id: IdFormulario | undefined;
         return {
             titulo,
             subtitulo,
+            // id,
         };
+    },
+    methods: {
+        gerouId(id: IdFormulario) {
+            // this.id = id;
+        },
+        digitouTitulo(titulo: Titulo) {
+            this.titulo = titulo;
+        },
+        digitouSubtitulo(subtitulo: Subtitulo) {
+            this.subtitulo = subtitulo;
+        },
+        salvou() {
+            // if (!this.questao) {
+            //     if (!this.id) {
+            //         // gera questão sem indice e envia para a lista atribuir um indice
+            //     }
+            //     if (!this.titulo) {
+            //     }
+            //     const questao = new QuestaoEditavel(
+            //         this.id,
+            //         this.titulo,
+            //         this.subtitulo,
+            //         0,
+            //     );
+            //     this.$emit('salvou', questao);
+            // }
+        },
     },
     emits: ['cancelou', 'salvou'],
 });
@@ -36,19 +66,28 @@ export default defineComponent({
 <template>
     <article class="emEdicao">
         <header>Edição de Questão</header>
-        <IdFormularioInput :titulo="(titulo as Titulo)"></IdFormularioInput>
+        <IdFormularioInput
+            :titulo="(titulo as Titulo)"
+            @gerouId="gerouId"
+        ></IdFormularioInput>
 
-        <TituloInput :titulo="(titulo as Titulo)"></TituloInput>
+        <TituloInput
+            :titulo="(titulo as Titulo)"
+            @digitou="digitouTitulo"
+        ></TituloInput>
 
-        <SubtituloInput :subtitulo="(subtitulo as Subtitulo)"></SubtituloInput>
+        <SubtituloInput
+            :subtitulo="(subtitulo as Subtitulo)"
+            @digitou="digitouSubtitulo"
+        ></SubtituloInput>
 
-        <div class="opcoes">
+        <!-- <div class="opcoes">
             <OpcaoComponent
                 v-for="opcao in questao?.getOpcoes().getItens()"
                 :key="opcao.getId().toString()"
                 :opcao="opcao"
             ></OpcaoComponent>
-        </div>
+        </div> -->
 
         <a href="#" role="button" class="outline adicionar"
             >+ Adicionar Opção</a

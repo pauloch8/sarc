@@ -21,7 +21,7 @@ import { TextoFactory } from './dominio/processamento/processador/texto/TextoFac
 import { especificacao } from './apresentacao/assets/especificacao';
 import { FormularioFactory } from './dominio/formulario/FormularioFactory';
 import { ProcessadorDeSelecaoFactory } from './dominio/processamento/processador/questoes-opcao/selecao/ProcessadorDeSelecaoFactory';
-import { EditorFactory } from './dominio/editor/EditorFactory';
+import { FormularioEditorFactory } from './dominio/editor/FormularioEditorFactory';
 import { EspecificacaoDTO } from './dominio/especificacao/EspecificacaoDTO';
 import { TituloFactory } from './dominio/editor/TituloFactory';
 import { IdFormularioFactory } from './dominio/editor/IdFormularioFactory';
@@ -32,10 +32,10 @@ library.add(faArrowUp, faArrowDown, faTrash, faEdit);
 
 const processadorFormulario = criarProcessadorDeFormulario(especificacao);
 const formulario = FormularioFactory.criarDaEspecificacao(especificacao);
-//const editor = criarEditor(especificacao);
 const tituloFactory = new TituloFactory();
 const subtituloFactory = new SubtituloFactory();
 const idFormularioFactory = new IdFormularioFactory();
+const formularioEditorFactory = new FormularioEditorFactory();
 
 createApp(App)
     .use(router)
@@ -43,7 +43,7 @@ createApp(App)
     .component('FontAwesomeIcon', FontAwesomeIcon)
     .provide('processadorFormulario', processadorFormulario)
     .provide('formulario', formulario)
-    //.provide('editor', editor)
+    .provide('formularioEditorFactory', formularioEditorFactory)
     .provide('tituloFactory', tituloFactory)
     .provide('subtituloFactory', subtituloFactory)
     .provide('idFormularioFactory', idFormularioFactory)
@@ -71,14 +71,4 @@ function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {
     const processadorFormulario =
         processadorFormularioFactory.criarDeEspecificacao(especificacao);
     return processadorFormulario;
-}
-
-function criarEditor(especificacao: EspecificacaoDTO) {
-    const factory = new EditorFactory(
-        new IdFormularioFactory(),
-        new TituloFactory(),
-        new SubtituloFactory(),
-    );
-    const editor = factory.criarDaEspecificacao(especificacao);
-    return editor;
 }

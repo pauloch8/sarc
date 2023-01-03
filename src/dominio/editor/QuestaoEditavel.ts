@@ -9,9 +9,9 @@ export class QuestaoEditavel extends ItemEditavel {
     constructor(
         private id: IdFormulario,
         private titulo: Titulo,
-        private subtitulo: Subtitulo,
         indice: number,
-        private opcoes: ListaEditavel<Opcao>,
+        private subtitulo?: Subtitulo,
+        private opcoes?: ListaEditavel<Opcao>,
     ) {
         super(indice);
     }
