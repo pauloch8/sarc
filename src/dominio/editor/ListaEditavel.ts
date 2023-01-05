@@ -7,6 +7,10 @@ export class ListaEditavel<Item extends ItemEditavel> {
         return this.itens;
     }
 
+    getLength(): number {
+        return this.itens.length;
+    }
+
     editarItem(itemSolicitado: Item) {
         const itemParaEditar = this.obterItem(itemSolicitado);
         const outrosItens = this.itens.filter(item => item != itemParaEditar);
@@ -18,42 +22,40 @@ export class ListaEditavel<Item extends ItemEditavel> {
     }
 
     subirItem(itemSolicitada: Item) {
+        debugger;
         const itemParaSubir = this.obterItem(itemSolicitada);
-        const indiceDoItem = this.itens.indexOf(itemParaSubir);
+        const indiceDoItemSolicitado = itemParaSubir.getIndice();
         const ultimoIndice = this.itens.length - 1;
 
-        if (indiceDoItem === ultimoIndice) {
+        if (indiceDoItemSolicitado === ultimoIndice) {
             return;
         }
 
-        const indiceDoItemSolicitado = itemParaSubir.getIndice();
-        const novoIndiceDaItemSolicitada = indiceDoItemSolicitado + 1;
+        const novoIndiceDoItemSolicitado = indiceDoItemSolicitado + 1;
 
-        const proximoItem = this.itens[indiceDoItem + 1];
-        const indiceDoProximoItem = proximoItem.getIndice();
-        const novoIndiceDoProximoItem = indiceDoProximoItem - 1;
-
-        itemParaSubir.setIndice(novoIndiceDaItemSolicitada);
-        proximoItem.setIndice(novoIndiceDoProximoItem);
+        const itemSubstituido = this.obterItemPorIndice(
+            novoIndiceDoItemSolicitado,
+        );
+        itemParaSubir.setIndice(novoIndiceDoItemSolicitado);
+        itemSubstituido.setIndice(indiceDoItemSolicitado);
     }
 
     descerItem(itemSolicitada: Item) {
+        debugger;
         const itemParaDescer = this.obterItem(itemSolicitada);
-        const indiceDoItem = this.itens.indexOf(itemParaDescer);
+        const indiceDoItemSolicitado = itemParaDescer.getIndice();
 
-        if (indiceDoItem === 0) {
+        if (indiceDoItemSolicitado === 0) {
             return;
         }
 
-        const indiceDoItemSolicitado = itemParaDescer.getIndice();
         const novoIndiceDoItemSolicitado = indiceDoItemSolicitado - 1;
 
-        const itemAnterior = this.itens[indiceDoItem - 1];
-        const indiceDoItemAnterior = itemAnterior.getIndice();
-        const novoIndiceDaQuestaoAnterior = indiceDoItemAnterior + 1;
-
+        const itemSubstituido = this.obterItemPorIndice(
+            novoIndiceDoItemSolicitado,
+        );
         itemParaDescer.setIndice(novoIndiceDoItemSolicitado);
-        itemAnterior.setIndice(novoIndiceDaQuestaoAnterior);
+        itemSubstituido.setIndice(indiceDoItemSolicitado);
     }
 
     excluirItem(itemSolicitada: Item) {
@@ -68,6 +70,14 @@ export class ListaEditavel<Item extends ItemEditavel> {
             const item = this.itens[i];
             item.setIndice(indiceDoItem);
         }
+    }
+
+    obterItemPorIndice(indice: number) {
+        const retorno = this.itens.find(item => item.getIndice() === indice);
+        if (!retorno) {
+            throw new ErroItemComIndiceSolicitadoNaoEncontrado(indice);
+        }
+        return retorno;
     }
 
     private obterItem(itemSolicitada: Item) {
@@ -89,6 +99,14 @@ export class ErroItemSolicitadoNaoEncontrado extends Error {
     constructor(item: ItemEditavel) {
         super(
             `Questão solicitada não encontrada no formulário: ${item.toString()}`,
+        );
+    }
+}
+
+export class ErroItemComIndiceSolicitadoNaoEncontrado extends Error {
+    constructor(indice: number) {
+        super(
+            `Questão com índice número ${indice} não encontrado no formulário`,
         );
     }
 }

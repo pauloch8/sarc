@@ -1,4 +1,4 @@
-import SubtituloInput from '@/apresentacao/telas/editor/SubtituloInput.vue';
+import SubtituloInputVue from '@/apresentacao/telas/editor/comum/SubtituloInput.vue';
 import { Subtitulo } from '@/dominio/editor/Subtitulo';
 import {
     SubtituloFactoryDummy,
@@ -11,7 +11,7 @@ describe('SubtituloInput', () => {
     describe('tem subtitulo com parâmetro', () => {
         test('exibe o subtitulo em branco se o parâmetro não fornecido', async () => {
             const factoryDummy = new SubtituloFactoryDummy();
-            const sut = mount(SubtituloInput, {
+            const sut = mount(SubtituloInputVue, {
                 global: { provide: { subtituloFactory: factoryDummy } },
             });
             expect(sut.get('textarea').element.value).toBe('');
@@ -19,7 +19,7 @@ describe('SubtituloInput', () => {
         test('exibe o subtitulo se o parâmetro for fornecido', async () => {
             const factoryDummy = new SubtituloFactoryDummy();
             const subtituloFake = new Subtitulo('teste');
-            const sut = mount(SubtituloInput, {
+            const sut = mount(SubtituloInputVue, {
                 global: { provide: { subtituloFactory: factoryDummy } },
                 props: {
                     subtitulo: subtituloFake,
@@ -34,7 +34,7 @@ describe('SubtituloInput', () => {
             const subtituloFactoryStub = new SubtituloFactoryErroStub(
                 textoDoErro,
             );
-            const sut = mount(SubtituloInput, {
+            const sut = mount(SubtituloInputVue, {
                 global: { provide: { subtituloFactory: subtituloFactoryStub } },
             });
             expect(sut.find('.erro').exists()).toBeFalsy();
@@ -46,7 +46,7 @@ describe('SubtituloInput', () => {
         describe('emite o evento digitou', () => {
             test('com um objeto Subtítulo se digitado um texto', async () => {
                 const subtituloFactoryStub = new SubtituloFactorySucessoStub();
-                const sut = mount(SubtituloInput, {
+                const sut = mount(SubtituloInputVue, {
                     global: {
                         provide: { subtituloFactory: subtituloFactoryStub },
                     },
@@ -64,7 +64,7 @@ describe('SubtituloInput', () => {
             });
             test('com valor nulo se não digitado nenhum texto', async () => {
                 const subtituloFactoryDummy = new SubtituloFactoryDummy();
-                const sut = mount(SubtituloInput, {
+                const sut = mount(SubtituloInputVue, {
                     global: {
                         provide: { subtituloFactory: subtituloFactoryDummy },
                     },

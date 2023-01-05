@@ -1,7 +1,7 @@
 import { IdFormulario } from '@/dominio/editor/IdFormulario';
 import { IIdFormularioFactory } from '@/dominio/editor/IdFormularioFactory';
 
-export class IdFormularioFactorySucessoDummy implements IIdFormularioFactory {
+export class IdFormularioFactoryDummy implements IIdFormularioFactory {
     criarDeString(): IdFormulario {
         throw new Error('Method not implemented.');
     }

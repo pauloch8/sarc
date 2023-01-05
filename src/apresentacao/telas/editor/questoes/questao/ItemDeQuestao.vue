@@ -1,14 +1,14 @@
 <script lang="ts">
 import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
 import { defineComponent } from 'vue';
-import QuestaoEdicao from './QuestaoEdicao.vue';
 import QuestaoVisualizacao from './QuestaoVisualizacao.vue';
+import QuestaoEdicao from './QuestaoEdicao.vue';
 
 export default defineComponent({
-    name: 'QuestaoComponent',
+    name: 'ItemDeQuestao',
     components: {
-        QuestaoEdicao,
         QuestaoVisualizacao,
+        QuestaoEdicao,
     },
     props: {
         questao: { type: QuestaoEditavel, required: false },
@@ -20,21 +20,35 @@ export default defineComponent({
         };
     },
     methods: {
-        editar() {
-            this.emEdicao = true;
+        editarQuestao(questao: QuestaoEditavel) {
+            this.$emit('editar', questao);
+        },
+        excluirQuestao(questao: QuestaoEditavel) {
+            this.$emit('excluiu', questao);
+        },
+        descerQuestao(questao: QuestaoEditavel) {
+            this.$emit('desceu', questao);
+        },
+        subirQuestao(questao: QuestaoEditavel) {
+            this.$emit('subiu', questao);
         },
     },
+    emits: ['editar', 'excluiu', 'desceu', 'subiu'],
 });
 </script>
 
 <template>
     <QuestaoVisualizacao
-        v-if="!emEdicao && questao"
+        v-if="questao && !questao.getEmEdicao()"
         :questao="questao"
-        @editou="emEdicao = true"
+        @editou="editarQuestao"
+        @excluiu="excluirQuestao"
+        @desceu="descerQuestao"
+        @subiu="subirQuestao"
     ></QuestaoVisualizacao>
+
     <QuestaoEdicao
-        v-if="emEdicao"
+        v-if="questao?.getEmEdicao()"
         :questao="(questao as QuestaoEditavel)"
         @cancelou="emEdicao = false"
         @salvou="emEdicao = false"

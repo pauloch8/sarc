@@ -4,11 +4,15 @@ import IdFormularioInput from './comum/IdFormularioInput.vue';
 import TituloInput from './comum/TituloInput.vue';
 import SubtituloInput from './comum/SubtituloInput.vue';
 import BotoesSalvarCancelar from './questoes/comum/BotoesSalvarCancelar.vue';
+import ListaQuestoes from './questoes/questao/ListaQuestoes.vue';
 import { IdFormulario } from '@/dominio/editor/IdFormulario';
 import { Subtitulo } from '@/dominio/editor/Subtitulo';
 import { Titulo } from '@/dominio/editor/Titulo';
 import { FormularioEditor } from '@/dominio/editor/FormularioEditor';
 import { FormularioEditorFactory } from '@/dominio/editor/FormularioEditorFactory';
+import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
+import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
+import { ItemEditavel } from '@/dominio/editor/ItemEditavel';
 
 export default defineComponent({
     name: 'FormularioEditor',
@@ -29,6 +33,7 @@ export default defineComponent({
         IdFormularioInput,
         TituloInput,
         SubtituloInput,
+        ListaQuestoes,
         BotoesSalvarCancelar,
     },
     props: {
@@ -39,16 +44,18 @@ export default defineComponent({
     },
     data() {
         const esteEditor = this.editor;
-        const questoes = this.editor?.getQuestoes();
-        const id = this.editor?.getId();
-        const titulo = this.editor?.getTitulo();
-        const subtitulo = this.editor?.getSubtitulo();
+        const id = esteEditor?.getId();
+        const titulo = esteEditor?.getTitulo();
+        const subtitulo = esteEditor?.getSubtitulo();
+        const listaQuestoes =
+            esteEditor?.getListaQuestoes() ||
+            new ListaEditavel<QuestaoEditavel>();
         return {
             esteEditor,
-            questoes,
             id,
             titulo,
             subtitulo,
+            listaQuestoes,
         };
     },
     methods: {
@@ -92,7 +99,6 @@ export default defineComponent({
     <article>
         <header>
             <h2>Dados do formulário</h2>
-            {{ { id, titulo, subtitulo } }}
         </header>
 
         <IdFormularioInput
@@ -115,6 +121,10 @@ export default defineComponent({
             @digitou="alterouSubtitulo"
         ></SubtituloInput>
         <SubtituloInput v-else @digitou="alterouSubtitulo"></SubtituloInput>
+
+        <ListaQuestoes
+            :lista="(listaQuestoes as unknown as ListaEditavel<ItemEditavel>)"
+        ></ListaQuestoes>
 
         <footer>
             <BotoesSalvarCancelar

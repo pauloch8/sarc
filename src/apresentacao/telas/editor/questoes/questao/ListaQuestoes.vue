@@ -1,0 +1,80 @@
+<script lang="ts">
+import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
+import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
+import { defineComponent } from 'vue';
+import ItemDeQuestao from './ItemDeQuestao.vue';
+import AdicionarQuestao from './AdicionarQuestao.vue';
+
+export default defineComponent({
+    name: 'ListaQuestoes',
+    components: {
+        ItemDeQuestao,
+        AdicionarQuestao,
+    },
+    props: {
+        lista: {
+            type: ListaEditavel,
+            required: true,
+        },
+    },
+    data() {
+        return {
+            estaLista: this.lista as ListaEditavel<QuestaoEditavel>,
+        };
+    },
+    computed: {
+        questoesOrdenadas() {
+            const retorno = (this.lista as ListaEditavel<QuestaoEditavel>)
+                .getItens()
+                .sort((a, b) => {
+                    const indiceA = a.getIndice();
+                    const indiceB = b.getIndice();
+                    if (indiceA < indiceB) {
+                        return -1;
+                    }
+                    if (indiceA > indiceB) {
+                        return 1;
+                    }
+                    return 0;
+                });
+            return retorno;
+        },
+    },
+    methods: {
+        editarQuestao(questao: QuestaoEditavel) {
+            this.estaLista.editarItem(questao);
+        },
+        excluirQuestao(questao: QuestaoEditavel) {
+            this.estaLista.excluirItem(questao);
+        },
+        descerQuestao(questao: QuestaoEditavel) {
+            this.estaLista.descerItem(questao);
+        },
+        subirQuestao(questao: QuestaoEditavel) {
+            this.estaLista.subirItem(questao);
+        },
+    },
+});
+</script>
+
+<template>
+    <article>
+        <header>
+            <h2>Questões</h2>
+
+            <ItemDeQuestao
+                v-for="questao in questoesOrdenadas"
+                :key="questao.getId().toString()"
+                :questao="(questao as QuestaoEditavel)"
+                @editar="editarQuestao"
+                @excluiu="excluirQuestao"
+                @desceu="descerQuestao"
+                @subiu="subirQuestao"
+            ></ItemDeQuestao>
+
+            <AdicionarQuestao
+                :indice="questoesOrdenadas.length + 1"
+            ></AdicionarQuestao>
+        </header>
+    </article>
+</template>

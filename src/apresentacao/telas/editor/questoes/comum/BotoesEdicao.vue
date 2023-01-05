@@ -16,10 +16,10 @@ export default defineComponent({
             <FontAwesomeIcon icon="fa-solid fa-trash" />
         </span>
         <span @click.prevent="$emit('desceu')">
-            <FontAwesomeIcon icon="fa-solid fa-arrow-down" />
+            <FontAwesomeIcon icon="fa-solid fa-arrow-up" />
         </span>
         <span @click.prevent="$emit('subiu')">
-            <FontAwesomeIcon icon="fa-solid fa-arrow-up" />
+            <FontAwesomeIcon icon="fa-solid fa-arrow-down" />
         </span>
     </div>
 </template>

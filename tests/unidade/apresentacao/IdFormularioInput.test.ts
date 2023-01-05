@@ -1,9 +1,9 @@
+import IdFormularioInput from '@/apresentacao/telas/editor/comum/IdFormularioInput.vue';
 import { IdFormulario } from '@/dominio/editor/IdFormulario';
 import { Titulo } from '@/dominio/editor/Titulo';
 import { mount } from '@vue/test-utils';
-import IdFormularioInput from '@/apresentacao/telas/editor/IdFormularioInput.vue';
 import {
-    IdFormularioFactorySucessoDummy,
+    IdFormularioFactoryDummy,
     IdFormularioFactorySucessoStub,
 } from '@/tests/dubles/dominio/editor/IdFormularioFactoryDubles';
 
@@ -25,7 +25,7 @@ describe('IdFormularioInput', () => {
     });
     describe('se fornecido um valor nulo como props', () => {
         test('exibe uma string vazia', async () => {
-            const factoryStub = new IdFormularioFactorySucessoDummy();
+            const factoryStub = new IdFormularioFactoryDummy();
             const sut = mount(IdFormularioInput, {
                 global: { provide: { idFormularioFactory: factoryStub } },
             });

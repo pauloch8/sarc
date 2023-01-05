@@ -1,5 +1,4 @@
 <script lang="ts">
-import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
 import { defineComponent } from 'vue';
 import QuestaoEdicao from './QuestaoEdicao.vue';
 
@@ -9,15 +8,20 @@ export default defineComponent({
         QuestaoEdicao,
     },
     props: {
-        questao: { type: QuestaoEditavel, required: false },
+        indice: {
+            type: Number,
+            required: true,
+        },
     },
     data() {
         return {
             emEdicao: false,
-            adicionarQuestao: false,
         };
     },
     methods: {
+        salvou() {
+            this.emEdicao = false;
+        },
         editar() {
             this.emEdicao = true;
         },
@@ -26,17 +30,18 @@ export default defineComponent({
 </script>
 
 <template>
-    <div v-if="!adicionarQuestao">
+    <div v-if="!emEdicao">
         <a
             href="#"
             role="button"
             class="outline adicionar"
-            @click.prevent="adicionarQuestao = true"
-            >+ Adicionar Questão</a
-        >{{ adicionarQuestao }}
+            @click.prevent="editar"
+        >
+            + Adicionar Questão
+        </a>
     </div>
-    <div v-if="adicionarQuestao">
-        <QuestaoEdicao @cancelou="adicionarQuestao = false"> </QuestaoEdicao>
+    <div v-if="emEdicao">
+        <QuestaoEdicao :indice="indice" @salvou="salvou"> </QuestaoEdicao>
     </div>
 </template>
 

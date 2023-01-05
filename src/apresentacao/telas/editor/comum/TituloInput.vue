@@ -26,27 +26,26 @@ export default defineComponent({
     data() {
         return {
             tituloString: this.titulo?.toString() || '',
-            erro: '',
+            erroString: '',
         };
     },
     methods: {
-        criarTitulo(texto: string) {
-            this.erro = '';
-            try {
-                return this.tituloFactory.criar(texto);
-            } catch (e) {
-                if (e instanceof ErroDeCriacaoDeTitulo) {
-                    this.erro = e.message;
-                } else {
-                    this.erro =
-                        'Ocorreu um erro desconhecido ao criar o título';
-                }
-                return null;
-            }
-        },
         digitou(evento: FocusEvent) {
             const input = evento.target as HTMLInputElement;
-            const titulo = this.criarTitulo(input.value);
+            const texto = input.value;
+            let titulo;
+            this.erroString = '';
+            try {
+                titulo = this.tituloFactory.criar(texto);
+            } catch (e) {
+                if (e instanceof ErroDeCriacaoDeTitulo) {
+                    this.erroString = e.message;
+                } else {
+                    this.erroString =
+                        'Ocorreu um erro desconhecido ao criar o título';
+                }
+                titulo = null;
+            }
             this.$emit('digitou', titulo);
         },
     },
@@ -65,7 +64,7 @@ export default defineComponent({
             @focusout="digitou"
             required
         />
-        <article class="erro" v-if="erro">{{ erro }}</article>
+        <article class="erro" v-if="erroString">{{ erroString }}</article>
     </label>
 </template>
 

@@ -11,11 +11,17 @@ export default defineComponent({
     <a
         href="#"
         role="button"
-        class="secondary"
+        class="secondary botaoCancelar"
         @click.prevent="$emit('cancelou')"
         >Cancelar</a
     >
-    <a href="#" role="button" @click.prevent="$emit('salvou')">Salvar</a>
+    <a
+        href="#"
+        role="button"
+        class="botaoSalvar"
+        @click.prevent="$emit('salvou')"
+        >Salvar</a
+    >
 </template>
 
 <style lang="scss" scoped>

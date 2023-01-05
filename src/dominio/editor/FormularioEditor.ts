@@ -14,7 +14,7 @@ export class FormularioEditor implements IFormularioEditor {
     constructor(
         private id: IdFormulario,
         private titulo: Titulo,
-        private questoes: ListaEditavel<QuestaoEditavel>,
+        private listaQuestoes: ListaEditavel<QuestaoEditavel>,
         private subtitulo?: Subtitulo,
     ) {}
     getId(): IdFormulario {
@@ -38,8 +38,8 @@ export class FormularioEditor implements IFormularioEditor {
         }
         this.titulo = titulo;
     }
-    getQuestoes() {
-        return this.questoes;
+    getListaQuestoes() {
+        return this.listaQuestoes;
     }
 }
 

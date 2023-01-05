@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, inject } from 'vue';
 import TituloInput from '../../comum/TituloInput.vue';
 import IdFormularioInput from '../../comum/IdFormularioInput.vue';
 import SubtituloInput from '../../comum/SubtituloInput.vue';
@@ -9,32 +9,53 @@ import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
 import { Titulo } from '@/dominio/editor/Titulo';
 import { Subtitulo } from '@/dominio/editor/Subtitulo';
 import { IdFormulario } from '@/dominio/editor/IdFormulario';
+import { IQuestaoEditavelFactory } from '@/dominio/editor/QuestaoEditavelFactory';
+import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
+import { Opcao } from '@/dominio/editor/Opcao';
 
 export default defineComponent({
     name: 'QuestaoEdicao',
     components: {
-        TituloInput,
         IdFormularioInput,
+        TituloInput,
         SubtituloInput,
         // OpcaoComponent,
         BotoesSalvarCancelar,
     },
+    setup() {
+        const factory = inject<IQuestaoEditavelFactory>(
+            'questaoEditavelFactory',
+        );
+        if (!factory) {
+            throw new Error(
+                'Não injetada a dependência questaoEditavelFactory',
+            );
+        }
+        return {
+            factory,
+        };
+    },
     props: {
         questao: { type: QuestaoEditavel, required: false },
+        indice: { type: Number, required: false },
     },
     data() {
+        const idFormulario = this.questao?.getId();
         const titulo = this.questao?.getTitulo();
         const subtitulo = this.questao?.getSubTitulo();
-        // const id: IdFormulario | undefined;
+        const opcoes = this.questao?.getOpcoes();
+        const erro = '';
         return {
+            idFormulario,
             titulo,
             subtitulo,
-            // id,
+            opcoes,
+            erro,
         };
     },
     methods: {
         gerouId(id: IdFormulario) {
-            // this.id = id;
+            this.idFormulario = id;
         },
         digitouTitulo(titulo: Titulo) {
             this.titulo = titulo;
@@ -42,24 +63,37 @@ export default defineComponent({
         digitouSubtitulo(subtitulo: Subtitulo) {
             this.subtitulo = subtitulo;
         },
-        salvou() {
-            // if (!this.questao) {
-            //     if (!this.id) {
-            //         // gera questão sem indice e envia para a lista atribuir um indice
-            //     }
-            //     if (!this.titulo) {
-            //     }
-            //     const questao = new QuestaoEditavel(
-            //         this.id,
-            //         this.titulo,
-            //         this.subtitulo,
-            //         0,
-            //     );
-            //     this.$emit('salvou', questao);
-            // }
+        cancelar() {
+            alert('cancelar');
+        },
+        salvar() {
+            try {
+                if (!this.questao) {
+                    const questao = this.factory.criar(
+                        this.idFormulario as IdFormulario,
+                        this.titulo as Titulo,
+                        this.indice as number,
+                        this.subtitulo as Subtitulo,
+                    );
+                    this.$emit('criou', questao);
+                } else {
+                    this.questao.setId(this.idFormulario as IdFormulario);
+                    this.questao.setTitulo(this.titulo as Titulo);
+                    this.questao.setSubtitulo(this.subtitulo as Subtitulo);
+                    this.questao.setIndice(this.indice as number);
+                    this.questao.setOpcoes(this.opcoes as ListaEditavel<Opcao>);
+                    this.$emit('atualizou', this.questao);
+                }
+            } catch (e) {
+                if (e instanceof Error) {
+                    this.erro = e.message;
+                } else {
+                    this.erro = 'Ocorreu um erro desconhecido';
+                }
+            }
         },
     },
-    emits: ['cancelou', 'salvou'],
+    emits: ['cancelou', 'criou', 'atualizou'],
 });
 </script>
 
@@ -93,10 +127,12 @@ export default defineComponent({
             >+ Adicionar Opção</a
         >
 
+        <article class="erro" v-if="erro">{{ erro }}</article>
+
         <footer>
             <BotoesSalvarCancelar
-                @cancelou="$emit('cancelou')"
-                @salvou="$emit('salvou')"
+                @cancelou="cancelar"
+                @salvou="salvar"
             ></BotoesSalvarCancelar>
         </footer>
     </article>
@@ -121,5 +157,10 @@ input[type='radio'][disabled] {
 
 .opcoes {
     margin-bottom: 30px;
+}
+
+.erro {
+    background-color: #e32b2b;
+    color: white;
 }
 </style>

@@ -5,7 +5,7 @@ import {
     TituloFactorySucessoStub,
     TituloFactoryDummy,
 } from '@/tests/dubles/dominio/editor/TituloFactoryDubles';
-import TituloInputVue from '@/apresentacao/telas/editor/TituloInput.vue';
+import TituloInputVue from '@/apresentacao/telas/editor/comum/TituloInput.vue';
 
 describe('TituloInput', () => {
     describe('tem titulo como parâmetro', () => {

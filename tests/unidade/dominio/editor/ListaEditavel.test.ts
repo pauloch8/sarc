@@ -145,4 +145,20 @@ describe('ListaEditavel', () => {
             }).toThrow(ErroItemSolicitadoNaoEncontrado);
         });
     });
+    describe('.getLength', () => {
+        test('retorna o tamanho da array de itens', () => {
+            const item0 = new ItemEditavelDummy(0);
+            const item1 = new ItemEditavelDummy(1);
+            const item2 = new ItemEditavelDummy(2);
+            const item3 = new ItemEditavelDummy(3);
+            const sut = new ListaEditavel<ItemEditavelDummy>([
+                item0,
+                item1,
+                item2,
+                item3,
+            ]);
+
+            expect(sut.getLength()).toBe(4);
+        });
+    });
 });
