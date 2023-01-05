@@ -63,9 +63,11 @@ export default defineComponent({
             <h2>Questões</h2>
 
             <ItemDeQuestao
-                v-for="questao in questoesOrdenadas"
+                v-for="(questao, indice) in questoesOrdenadas"
                 :key="questao.getId().toString()"
                 :questao="(questao as QuestaoEditavel)"
+                :ehPrimeiro="indice === 0"
+                :ehUltimo="indice === questoesOrdenadas.length - 1"
                 @editar="editarQuestao"
                 @excluiu="excluirQuestao"
                 @desceu="descerQuestao"
@@ -73,7 +75,8 @@ export default defineComponent({
             ></ItemDeQuestao>
 
             <AdicionarQuestao
-                :indice="questoesOrdenadas.length + 1"
+                v-if="!questoesOrdenadas.length"
+                :indice="0"
             ></AdicionarQuestao>
         </header>
     </article>

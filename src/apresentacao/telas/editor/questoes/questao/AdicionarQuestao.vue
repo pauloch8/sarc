@@ -26,6 +26,7 @@ export default defineComponent({
             this.emEdicao = true;
         },
     },
+    emits: ['salvou'],
 });
 </script>
 

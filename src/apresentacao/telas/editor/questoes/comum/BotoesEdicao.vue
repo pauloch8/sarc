@@ -3,22 +3,66 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
     name: 'BotoesEdicao',
+    props: {
+        ehPrimeiro: {
+            type: Boolean,
+            required: true,
+        },
+        ehUltimo: {
+            type: Boolean,
+            required: true,
+        },
+    },
+    computed: {
+        classesSubir() {
+            return {
+                botao: true,
+                habilitado: !this.ehUltimo,
+                desabilitado: this.ehUltimo,
+            };
+        },
+        classesDescer() {
+            return {
+                botao: true,
+                habilitado: !this.ehPrimeiro,
+                desabilitado: this.ehPrimeiro,
+            };
+        },
+    },
+    methods: {
+        editar() {
+            this.$emit('editou');
+        },
+        excluir() {
+            this.$emit('excluiu');
+        },
+        descer() {
+            if (!this.ehPrimeiro) {
+                this.$emit('desceu');
+            }
+        },
+        subir() {
+            if (!this.ehUltimo) {
+                this.$emit('subiu');
+            }
+        },
+    },
     emits: ['excluiu', 'desceu', 'subiu', 'editou'],
 });
 </script>
 
 <template>
     <div>
-        <span @click.prevent="$emit('editou')">
+        <span class="botao habilitado" @click.prevent="editar">
             <FontAwesomeIcon icon="fa-solid fa-edit" />
         </span>
-        <span @click.prevent="$emit('excluiu')">
+        <span class="botao habilitado" @click.prevent="excluir">
             <FontAwesomeIcon icon="fa-solid fa-trash" />
         </span>
-        <span @click.prevent="$emit('desceu')">
+        <span :class="classesDescer" @click.prevent="descer">
             <FontAwesomeIcon icon="fa-solid fa-arrow-up" />
         </span>
-        <span @click.prevent="$emit('subiu')">
+        <span :class="classesSubir" @click.prevent="subir">
             <FontAwesomeIcon icon="fa-solid fa-arrow-down" />
         </span>
     </div>
@@ -38,9 +82,12 @@ span {
     padding: 20px 30px;
 }
 
-span:hover {
+.botao.habilitado:hover {
     border-radius: var(--border-radius);
     background: var(--card-background-color);
     box-shadow: var(--card-box-shadow);
+}
+.botao.desabilitado {
+    color: #ccc;
 }
 </style>

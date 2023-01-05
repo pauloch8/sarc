@@ -33,8 +33,8 @@ export default defineComponent({
         IdFormularioInput,
         TituloInput,
         SubtituloInput,
-        ListaQuestoes,
         BotoesSalvarCancelar,
+        ListaQuestoes,
     },
     props: {
         editor: {
@@ -136,6 +136,7 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
+// Não é 'scoped' pois esses estilos valem para todos os componentes filhos
 .erro {
     background-color: #e32b2b;
     color: white;

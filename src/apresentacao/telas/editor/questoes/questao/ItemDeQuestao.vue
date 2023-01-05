@@ -3,15 +3,19 @@ import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
 import { defineComponent } from 'vue';
 import QuestaoVisualizacao from './QuestaoVisualizacao.vue';
 import QuestaoEdicao from './QuestaoEdicao.vue';
+import AdicionarQuestao from './AdicionarQuestao.vue';
 
 export default defineComponent({
     name: 'ItemDeQuestao',
     components: {
         QuestaoVisualizacao,
         QuestaoEdicao,
+        AdicionarQuestao,
     },
     props: {
-        questao: { type: QuestaoEditavel, required: false },
+        questao: { type: QuestaoEditavel, required: true },
+        ehPrimeiro: { type: Boolean, required: true },
+        ehUltimo: { type: Boolean, required: true },
     },
     data() {
         return {
@@ -39,8 +43,10 @@ export default defineComponent({
 
 <template>
     <QuestaoVisualizacao
-        v-if="questao && !questao.getEmEdicao()"
+        v-if="!questao.getEmEdicao()"
         :questao="questao"
+        :ehPrimeiro="ehPrimeiro"
+        :ehUltimo="ehUltimo"
         @editou="editarQuestao"
         @excluiu="excluirQuestao"
         @desceu="descerQuestao"
@@ -48,11 +54,16 @@ export default defineComponent({
     ></QuestaoVisualizacao>
 
     <QuestaoEdicao
-        v-if="questao?.getEmEdicao()"
+        v-if="questao.getEmEdicao()"
         :questao="(questao as QuestaoEditavel)"
         @cancelou="emEdicao = false"
         @salvou="emEdicao = false"
     ></QuestaoEdicao>
+
+    <AdicionarQuestao
+        v-if="ehUltimo"
+        :indice="questao.getIndice() + 1"
+    ></AdicionarQuestao>
 </template>
 
 <style>

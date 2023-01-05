@@ -12,6 +12,8 @@ export default defineComponent({
     },
     props: {
         questao: { type: QuestaoEditavel, required: true },
+        ehPrimeiro: { type: Boolean, required: true },
+        ehUltimo: { type: Boolean, required: true },
     },
     methods: {
         editarQuestao() {
@@ -36,6 +38,8 @@ export default defineComponent({
         <header>
             {{ questao.getIndice() }} - {{ questao.getTitulo() }}
             <BotoesEdicao
+                :ehPrimeiro="ehPrimeiro"
+                :ehUltimo="ehUltimo"
                 @editou="editarQuestao"
                 @excluiu="excluirQuestao"
                 @desceu="descerQuestao"
