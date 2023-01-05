@@ -1,9 +1,6 @@
 <script lang="ts">
-import { Titulo } from '@/dominio/editor/Titulo';
-import {
-    ErroDeCriacaoDeTitulo,
-    ITituloFactory,
-} from '@/dominio/editor/TituloFactory';
+import { Titulo, ErroDeCriacaoDeTitulo } from '@/dominio/editor/Titulo';
+import { ITituloFactory } from '@/dominio/editor/TituloFactory';
 import { defineComponent, inject } from 'vue';
 
 export default defineComponent({

@@ -1,34 +1,38 @@
 import {
     ErroTituloComMenosDeTresCaracteres,
     ErroTituloEmBranco,
-    TituloFactory,
-} from '@/dominio/editor/TituloFactory';
+    Titulo,
+} from '@/dominio/editor/Titulo';
 
-describe('TituloFactory', () => {
-    describe('criar', () => {
+describe('Titulo', () => {
+    describe('instanciar', () => {
         describe('lança erro', () => {
             test('se for uma string vazia', async () => {
-                const tituloFactory = new TituloFactory();
                 expect(() => {
-                    tituloFactory.criar('');
+                    new Titulo('');
                 }).toThrow(ErroTituloEmBranco);
             });
             test('se for uma string com menos de três caracteres', async () => {
-                const tituloFactory = new TituloFactory();
                 expect(() => {
-                    tituloFactory.criar('12');
+                    new Titulo('12');
                 }).toThrow(ErroTituloComMenosDeTresCaracteres);
             });
             test('se tiver quebra de linha', async () => {
-                const tituloFactory = new TituloFactory();
                 expect(() => {
-                    tituloFactory.criar(`Título 
+                    new Titulo(`Título 
                     com
                     quebra
                     de
                     linha`);
                 }).toThrow();
             });
+        });
+        test('remove os espaços', async () => {
+            expect(() => {
+                new Titulo('         ');
+            }).toThrow(ErroTituloEmBranco);
+            const teste = new Titulo('       teste           ');
+            expect(teste.toString()).toBe('teste');
         });
     });
 });

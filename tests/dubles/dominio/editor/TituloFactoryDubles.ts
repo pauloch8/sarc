@@ -1,8 +1,6 @@
 import { Titulo } from '@/dominio/editor/Titulo';
-import {
-    ITituloFactory,
-    ErroDeCriacaoDeTitulo,
-} from '@/dominio/editor/TituloFactory';
+import { ITituloFactory } from '@/dominio/editor/TituloFactory';
+import { ErroDeCriacaoDeTituloFake } from './TituloDubles';
 
 export class TituloFactoryDummy implements ITituloFactory {
     criar(): Titulo {
@@ -25,11 +23,5 @@ export class TituloFactoryLancaErroStub implements ITituloFactory {
 
     criar(): Titulo {
         throw this.erro;
-    }
-}
-
-export class ErroDeCriacaoDeTituloFake extends ErroDeCriacaoDeTitulo {
-    constructor(textoDoErro: string) {
-        super(textoDoErro);
     }
 }
