@@ -26,26 +26,36 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         private opcoes?: ListaEditavel<Opcao>,
     ) {
         super(indice);
-        const valido = this.validar();
-        if (!valido) {
-            throw new Error('Questão inválida');
+        const validacao = this.validar();
+        if (!validacao.valido) {
+            throw new ErroQuestaoInvalida(validacao.inconsistencias);
         }
     }
 
     private validar() {
         const contemId = !!this.id;
         const contemTitulo = !!this.titulo;
-        const contemSubtitulo = !!this.titulo;
-        const contemOpcoes = !!this.titulo;
+        const contemOpcoes = !!this.opcoes;
         const opcoesContemItens = !!this.opcoes?.getLength();
 
         const valido =
-            contemId &&
-            contemTitulo &&
-            contemSubtitulo &&
-            contemOpcoes &&
-            opcoesContemItens;
-        return valido;
+            contemId && contemTitulo && contemOpcoes && opcoesContemItens;
+
+        const inconsistencias = [];
+        if (!contemId) {
+            inconsistencias.push('Não contêm ID');
+        }
+        if (!contemTitulo) {
+            inconsistencias.push('Não contêm Título');
+        }
+        if (!contemOpcoes) {
+            inconsistencias.push('Não contêm Lista de Opções');
+        }
+        if (!opcoesContemItens) {
+            inconsistencias.push('Não contêm opções');
+        }
+
+        return { valido, inconsistencias };
     }
 
     getId() {
@@ -54,7 +64,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
 
     setId(id: IdFormulario) {
         if (!id) {
-            throw new Error('Id vazio informado');
+            throw new ErroNaEdicao('Id vazio informado');
         }
         this.id = id;
     }
@@ -65,7 +75,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
 
     setTitulo(titulo: Titulo) {
         if (!titulo) {
-            throw new Error('Titulo vazio informado');
+            throw new ErroNaEdicao('Titulo vazio informado');
         }
         this.titulo = titulo;
     }
@@ -84,15 +94,31 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
 
     setOpcoes(opcoes: ListaEditavel<Opcao>) {
         if (!opcoes) {
-            throw new Error('Não foi informada lista de opções de questão');
+            throw new ErroNaEdicao(
+                'Não foi informada lista de opções de questão',
+            );
         }
         if (opcoes.getLength() === 0) {
-            throw new Error('Informada lista de opções de questão vazia');
+            throw new ErroNaEdicao(
+                'Informada lista de opções de questão vazia',
+            );
         }
         this.opcoes = opcoes;
     }
 
     toString() {
         return `Questão id ${this.getId()}`;
+    }
+}
+
+export class ErroQuestaoInvalida extends Error {
+    constructor(public readonly inconsistencias: string[]) {
+        super(`Questão inválida`);
+    }
+}
+
+export class ErroNaEdicao extends Error {
+    constructor(mensagem: string) {
+        super(mensagem);
     }
 }

@@ -1,4 +1,6 @@
 import {
+    ErroNaEdicao,
+    ErroQuestaoInvalida,
     IQuestaoEditavel,
     QuestaoEditavel,
 } from '@/dominio/editor/QuestaoEditavel';
@@ -23,6 +25,15 @@ export class QuestaoEditavelFactoryErroStub implements IQuestaoEditavelFactory {
     }
 }
 
+export class QuestaoEditavelFactoryErroQuestaoInvalidaStub
+    implements IQuestaoEditavelFactory
+{
+    inconsistencias = ['inconsistencia1', 'inconsistencia2', 'inconsistencia3'];
+    criar(): QuestaoEditavel {
+        throw new ErroQuestaoInvalida(this.inconsistencias);
+    }
+}
+
 export class QuestaoEditavelFactorySucessoStub
     implements IQuestaoEditavelFactory
 {
@@ -32,7 +43,12 @@ export class QuestaoEditavelFactorySucessoStub
 }
 
 export class QuestaoEditavelErroStub implements IQuestaoEditavel {
-    static mensagemDeErro = 'Erro ao atualizar o id';
+    erros = {
+        id: 'Erro ao atualizar o id',
+        titulo: 'Erro ao atualizar o titulo',
+        subtitulo: 'Erro ao atualizar o subtitulo',
+        opcoes: 'Erro ao atualizar as opções',
+    };
     private id = new IdFormulario('id');
     private titulo = new Titulo('titulo');
     private subtitulo = new Subtitulo('subtitulo');
@@ -47,26 +63,26 @@ export class QuestaoEditavelErroStub implements IQuestaoEditavel {
     getId(): IdFormulario {
         return this.id;
     }
-    setId(id: IdFormulario): void {
-        throw new Error(QuestaoEditavelErroStub.mensagemDeErro);
+    setId(): void {
+        throw new ErroNaEdicao(this.erros.id);
     }
     getTitulo(): Titulo {
         return this.titulo;
     }
-    setTitulo(titulo: Titulo): void {
-        'dummy';
+    setTitulo(): void {
+        throw new ErroNaEdicao(this.erros.titulo);
     }
     getSubTitulo(): Subtitulo | undefined {
         return this.subtitulo;
     }
-    setSubtitulo(subtitulo?: Subtitulo | undefined): void {
-        'dummy';
+    setSubtitulo(): void {
+        throw new ErroNaEdicao(this.erros.subtitulo);
     }
     getOpcoes(): ListaEditavel<Opcao> | undefined {
         return this.opcoes;
     }
-    setOpcoes(opcoes: ListaEditavel<Opcao>): void {
-        'dummy';
+    setOpcoes(): void {
+        throw new ErroNaEdicao(this.erros.opcoes);
     }
     toString(): string {
         return 'dummy';

@@ -26,6 +26,7 @@ import { EspecificacaoDTO } from './dominio/especificacao/EspecificacaoDTO';
 import { TituloFactory } from './dominio/editor/TituloFactory';
 import { IdFormularioFactory } from './dominio/editor/IdFormularioFactory';
 import { SubtituloFactory } from './dominio/editor/SubtituloFactory';
+import { QuestaoEditavelFactory } from './dominio/editor/QuestaoEditavelFactory';
 
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
@@ -36,6 +37,7 @@ const tituloFactory = new TituloFactory();
 const subtituloFactory = new SubtituloFactory();
 const idFormularioFactory = new IdFormularioFactory();
 const formularioEditorFactory = new FormularioEditorFactory();
+const questaoEditavelFactory = new QuestaoEditavelFactory();
 
 createApp(App)
     .use(router)
@@ -44,6 +46,7 @@ createApp(App)
     .provide('processadorFormulario', processadorFormulario)
     .provide('formulario', formulario)
     .provide('formularioEditorFactory', formularioEditorFactory)
+    .provide('questaoEditavelFactory', questaoEditavelFactory)
     .provide('tituloFactory', tituloFactory)
     .provide('subtituloFactory', subtituloFactory)
     .provide('idFormularioFactory', idFormularioFactory)
