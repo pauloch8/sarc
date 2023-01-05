@@ -78,9 +78,4 @@ textarea {
     background-color: white;
     resize: vertical;
 }
-
-.erro {
-    background-color: #e32b2b;
-    color: white;
-}
 </style>

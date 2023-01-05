@@ -134,3 +134,14 @@ export default defineComponent({
         </footer>
     </article>
 </template>
+
+<style lang="scss">
+.erro {
+    background-color: #e32b2b;
+    color: white;
+
+    * {
+        color: white;
+    }
+}
+</style>

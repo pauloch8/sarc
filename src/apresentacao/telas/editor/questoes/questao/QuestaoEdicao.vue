@@ -236,9 +236,4 @@ input[type='radio'][disabled] {
 .opcoes {
     margin-bottom: 30px;
 }
-
-.erro {
-    background-color: #e32b2b;
-    color: white;
-}
 </style>
