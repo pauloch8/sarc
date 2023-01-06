@@ -41,16 +41,16 @@ export default defineComponent({
         },
     },
     methods: {
-        editarOpcao(opcao: OpcaoEditavel) {
+        editar(opcao: OpcaoEditavel) {
             this.estaLista.editarItem(opcao);
         },
-        excluirOpcao(opcao: OpcaoEditavel) {
+        excluir(opcao: OpcaoEditavel) {
             this.estaLista.excluirItem(opcao);
         },
-        descerOpcao(opcao: OpcaoEditavel) {
+        descer(opcao: OpcaoEditavel) {
             this.estaLista.descerItem(opcao);
         },
-        subirOpcao(opcao: OpcaoEditavel) {
+        subir(opcao: OpcaoEditavel) {
             this.estaLista.subirItem(opcao);
         },
     },
@@ -68,10 +68,10 @@ export default defineComponent({
                 :opcao="(opcao as OpcaoEditavel)"
                 :ehPrimeiro="indice === 0"
                 :ehUltimo="indice === opcoesOrdenadas.length - 1"
-                @editar="editarOpcao"
-                @excluiu="excluirOpcao"
-                @desceu="descerOpcao"
-                @subiu="subirOpcao"
+                @editar="editar"
+                @excluir="excluir"
+                @descer="descer"
+                @subir="subir"
             ></ItemDeOpcao>
         </TransitionGroup>
     </div>

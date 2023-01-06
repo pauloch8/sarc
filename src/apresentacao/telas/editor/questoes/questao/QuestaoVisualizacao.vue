@@ -19,16 +19,16 @@ export default defineComponent({
         selecionar() {
             this.$emit('selecionar', this.questao);
         },
-        editarQuestao() {
+        editar() {
             this.$emit('editar', this.questao);
         },
-        excluirQuestao() {
+        excluir() {
             this.$emit('excluir', this.questao);
         },
-        descerQuestao() {
+        descer() {
             this.$emit('descer', this.questao);
         },
-        subirQuestao() {
+        subir() {
             this.$emit('subir', this.questao);
         },
     },
@@ -43,10 +43,10 @@ export default defineComponent({
             <BotoesEdicao
                 :ehPrimeiro="ehPrimeiro"
                 :ehUltimo="ehUltimo"
-                @editou="editarQuestao"
-                @excluiu="excluirQuestao"
-                @desceu="descerQuestao"
-                @subiu="subirQuestao"
+                @editar="editar"
+                @excluir="excluir"
+                @descer="descer"
+                @subir="subir"
             ></BotoesEdicao>
         </header>
         <fieldset>

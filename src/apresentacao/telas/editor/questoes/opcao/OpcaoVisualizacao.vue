@@ -12,20 +12,20 @@ export default defineComponent({
         ehUltimo: { type: Boolean, required: true },
     },
     methods: {
-        editarOpcao() {
-            this.$emit('editou', this.opcao);
+        editar() {
+            this.$emit('editar', this.opcao);
         },
-        excluirOpcao() {
-            this.$emit('excluiu', this.opcao);
+        excluir() {
+            this.$emit('excluir', this.opcao);
         },
-        descerOpcao() {
-            this.$emit('desceu', this.opcao);
+        descer() {
+            this.$emit('descer', this.opcao);
         },
-        subirOpcao() {
-            this.$emit('subiu', this.opcao);
+        subir() {
+            this.$emit('subir', this.opcao);
         },
     },
-    emits: ['excluiu', 'desceu', 'subiu', 'editou'],
+    emits: ['excluir', 'descer', 'subir', 'editar'],
 });
 </script>
 
@@ -36,10 +36,10 @@ export default defineComponent({
         <BotoesEdicao
             :ehPrimeiro="ehPrimeiro"
             :ehUltimo="ehUltimo"
-            @editou="editarOpcao"
-            @excluiu="excluirOpcao"
-            @desceu="descerOpcao"
-            @subiu="subirOpcao"
+            @editar="editar"
+            @excluir="excluir"
+            @descer="descer"
+            @subir="subir"
         ></BotoesEdicao>
     </label>
 </template>

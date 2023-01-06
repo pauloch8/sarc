@@ -31,23 +31,23 @@ export default defineComponent({
     },
     methods: {
         editar() {
-            this.$emit('editou');
+            this.$emit('editar');
         },
         excluir() {
-            this.$emit('excluiu');
+            this.$emit('excluir');
         },
         descer() {
             if (!this.ehPrimeiro) {
-                this.$emit('desceu');
+                this.$emit('descer');
             }
         },
         subir() {
             if (!this.ehUltimo) {
-                this.$emit('subiu');
+                this.$emit('subir');
             }
         },
     },
-    emits: ['excluiu', 'desceu', 'subiu', 'editou'],
+    emits: ['excluir', 'descer', 'subir', 'editar'],
 });
 </script>
 

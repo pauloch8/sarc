@@ -16,20 +16,20 @@ export default defineComponent({
         ehUltimo: { type: Boolean, required: true },
     },
     methods: {
-        editarOpcao(opcao: OpcaoEditavel) {
+        editar(opcao: OpcaoEditavel) {
             this.$emit('editar', opcao);
         },
-        excluirOpcao(opcao: OpcaoEditavel) {
-            this.$emit('excluiu', opcao);
+        excluir(opcao: OpcaoEditavel) {
+            this.$emit('excluir', opcao);
         },
-        descerOpcao(opcao: OpcaoEditavel) {
-            this.$emit('desceu', opcao);
+        descer(opcao: OpcaoEditavel) {
+            this.$emit('descer', opcao);
         },
-        subirOpcao(opcao: OpcaoEditavel) {
-            this.$emit('subiu', opcao);
+        subir(opcao: OpcaoEditavel) {
+            this.$emit('subir', opcao);
         },
     },
-    emits: ['editar', 'excluiu', 'desceu', 'subiu'],
+    emits: ['editar', 'excluir', 'descer', 'subir'],
 });
 </script>
 
@@ -40,10 +40,10 @@ export default defineComponent({
             :opcao="opcao"
             :ehPrimeiro="ehPrimeiro"
             :ehUltimo="ehUltimo"
-            @editou="editarOpcao"
-            @excluiu="excluirOpcao"
-            @desceu="descerOpcao"
-            @subiu="subirOpcao"
+            @editar="editar"
+            @excluir="excluir"
+            @descer="descer"
+            @subir="subir"
         ></OpcaoVisualizacao>
 
         <OpcaoEdicao v-if="opcao.getEmEdicao()" :opcao="opcao"></OpcaoEdicao>

@@ -19,7 +19,7 @@ export default defineComponent({
             editorHtml: '',
         };
     },
-    emits: ['excluiu', 'desceu', 'subiu', 'editou'],
+    emits: ['excluir', 'descer', 'subir', 'editar'],
 });
 </script>
 
@@ -27,10 +27,10 @@ export default defineComponent({
     <li>
         {{ texto.categoria }}: {{ texto.texto }}
         <BotoesEdicao
-            @editou="$emit('editou')"
-            @excluiu="$emit('excluiu')"
-            @desceu="$emit('desceu')"
-            @subiu="$emit('subiu')"
+            @editou="$emit('editar')"
+            @excluiu="$emit('excluir')"
+            @desceu="$emit('descer')"
+            @subiu="$emit('subir')"
         ></BotoesEdicao>
     </li>
 </template>
