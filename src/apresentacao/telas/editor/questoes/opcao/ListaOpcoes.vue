@@ -23,7 +23,7 @@ export default defineComponent({
         };
     },
     computed: {
-        opcoesOrdenadas() {
+        itensOrdenados() {
             const retorno = (this.lista as ListaEditavel<OpcaoEditavel>)
                 .getItens()
                 .sort((a, b) => {
@@ -63,11 +63,11 @@ export default defineComponent({
     <div class="lista-opcoes">
         <TransitionGroup name="opcoes">
             <ItemDeOpcao
-                v-for="(opcao, indice) in opcoesOrdenadas"
+                v-for="(opcao, indice) in itensOrdenados"
                 :key="opcao.getId().toString()"
                 :opcao="(opcao as OpcaoEditavel)"
                 :ehPrimeiro="indice === 0"
-                :ehUltimo="indice === opcoesOrdenadas.length - 1"
+                :ehUltimo="indice === itensOrdenados.length - 1"
                 @editar="editar"
                 @excluir="excluir"
                 @descer="descer"
@@ -76,7 +76,7 @@ export default defineComponent({
         </TransitionGroup>
     </div>
 
-    <AdicionarOpcao :indice="opcoesOrdenadas.length"></AdicionarOpcao>
+    <AdicionarOpcao :indice="itensOrdenados.length"></AdicionarOpcao>
 </template>
 
 <style scoped>

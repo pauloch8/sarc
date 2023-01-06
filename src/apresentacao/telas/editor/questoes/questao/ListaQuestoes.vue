@@ -23,7 +23,7 @@ export default defineComponent({
         };
     },
     computed: {
-        questoesOrdenadas() {
+        itensOrdenados() {
             const retorno = (this.lista as ListaEditavel<QuestaoEditavel>)
                 .getItens()
                 .sort((a, b) => {
@@ -62,11 +62,11 @@ export default defineComponent({
 
     <TransitionGroup name="questoes">
         <ItemDeQuestao
-            v-for="(questao, indice) in questoesOrdenadas"
+            v-for="(questao, indice) in itensOrdenados"
             :key="questao.getId().toString()"
             :questao="(questao as QuestaoEditavel)"
             :ehPrimeiro="indice === 0"
-            :ehUltimo="indice === questoesOrdenadas.length - 1"
+            :ehUltimo="indice === itensOrdenados.length - 1"
             @editar="editarQuestao"
             @excluir="excluirQuestao"
             @descer="descerQuestao"
@@ -74,7 +74,7 @@ export default defineComponent({
         ></ItemDeQuestao>
     </TransitionGroup>
 
-    <AdicionarQuestao :indice="questoesOrdenadas.length"></AdicionarQuestao>
+    <AdicionarQuestao :indice="itensOrdenados.length"></AdicionarQuestao>
 </template>
 
 <style scoped>

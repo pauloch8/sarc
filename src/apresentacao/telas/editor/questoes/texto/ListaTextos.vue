@@ -3,13 +3,13 @@ import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
 import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
 import { defineComponent } from 'vue';
 import ItemDeTexto from './ItemDeTexto.vue';
-import AdicionarTextos from './AdicionarTextos.vue';
+import AdicionarTexto from './AdicionarTexto.vue';
 
 export default defineComponent({
     name: 'ListaTextos',
     components: {
         ItemDeTexto,
-        AdicionarTextos,
+        AdicionarTexto,
     },
     props: {
         lista: {
@@ -23,7 +23,7 @@ export default defineComponent({
         };
     },
     computed: {
-        listaOrdenada() {
+        itensOrdenados() {
             const retorno = (this.lista as ListaEditavel<TextoEditavel>)
                 .getItens()
                 .sort((a, b) => {
@@ -41,40 +41,40 @@ export default defineComponent({
         },
     },
     methods: {
-        editar(item: TextoEditavel) {
-            this.estaLista.editarItem(item);
+        editarTexto(texto: TextoEditavel) {
+            this.estaLista.editarItem(texto);
         },
-        excluir(item: TextoEditavel) {
-            this.estaLista.excluirItem(item);
+        excluirTexto(texto: TextoEditavel) {
+            this.estaLista.excluirItem(texto);
         },
-        descer(item: TextoEditavel) {
-            this.estaLista.descerItem(item);
+        descerTexto(texto: TextoEditavel) {
+            this.estaLista.descerItem(texto);
         },
-        subir(item: TextoEditavel) {
-            this.estaLista.subirItem(item);
+        subirTexto(texto: TextoEditavel) {
+            this.estaLista.subirItem(texto);
         },
     },
 });
 </script>
 
 <template>
-    <h2>Questões</h2>
+    <h2>Textos</h2>
 
     <TransitionGroup name="questoes">
         <ItemDeTexto
-            v-for="(texto, indice) in listaOrdenada"
+            v-for="(texto, indice) in itensOrdenados"
             :key="indice"
             :texto="(texto as TextoEditavel)"
             :ehPrimeiro="indice === 0"
-            :ehUltimo="indice === listaOrdenada.length - 1"
-            @editar="editar"
-            @excluiu="excluir"
-            @desceu="descer"
-            @subiu="subir"
+            :ehUltimo="indice === itensOrdenados.length - 1"
+            @editar="editarTexto"
+            @excluir="excluirTexto"
+            @descer="descerTexto"
+            @subir="subirTexto"
         ></ItemDeTexto>
     </TransitionGroup>
 
-    <AdicionarTextos v-if="!listaOrdenada.length" :indice="0"></AdicionarTextos>
+    <AdicionarTexto :indice="itensOrdenados.length"></AdicionarTexto>
 </template>
 
 <style scoped>

@@ -2,7 +2,7 @@
 import { defineComponent, inject } from 'vue';
 import TituloInput from '../../comum/TituloInput.vue';
 import IdFormularioInput from '../../comum/IdFormularioInput.vue';
-import TextoComponent from '../texto/TextoComponent.vue';
+import ListaTextos from '../texto/ListaTextos.vue';
 import BotoesSalvarCancelar from '../comum/BotoesSalvarCancelar.vue';
 import VariavelComponent from '../variavel/VariavelComponent.vue';
 import {
@@ -21,6 +21,7 @@ export default defineComponent({
     components: {
         IdFormularioInput,
         TituloInput,
+        ListaTextos,
         //TextoComponent,
         //VariavelComponent,
         BotoesSalvarCancelar,
@@ -43,10 +44,8 @@ export default defineComponent({
         const titulo = this.opcao?.getTitulo();
         //const ramificacao = this.opcao?.getRamificacao();
         //const valorPadrao = this.opcao?.getValorPadrao();
-        //const textos = this.opcao?.getTextos();
-        const textos = new ListaEditavel<TextoEditavel>([
-            new TextoEditavel('categoria', 'texto', 0),
-        ]);
+        const textos =
+            this.opcao?.getTextos() || new ListaEditavel<TextoEditavel>();
         //const variaveis = this.opcao?.getVariaveis();
         const erro = '';
         const inconsistencias: string[] = [];
@@ -165,19 +164,13 @@ export default defineComponent({
                 ></VariavelComponent>
             </ul>
             <a href="#" role="button" class="outline">+ Adicionar Variável</a>
-        </div>
+        </div> -->
 
         <div class="textos">
-            <h5>Textos</h5>
-            <ul>
-                <TextoComponent
-                    v-for="(texto, indice) in opcao.getTextos()"
-                    :key="indice"
-                    :texto="texto"
-                ></TextoComponent>
-            </ul>
-            <a href="#" role="button" class="outline">+ Adicionar Texto</a>
-        </div> -->
+            <ListaTextos
+                :lista="(textos as ListaEditavel<TextoEditavel>)"
+            ></ListaTextos>
+        </div>
 
         <article class="erro" v-if="erro">
             {{ erro }}

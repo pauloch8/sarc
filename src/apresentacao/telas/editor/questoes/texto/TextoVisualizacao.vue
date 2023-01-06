@@ -1,48 +1,72 @@
 <script lang="ts">
+import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
 import { defineComponent } from 'vue';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import BotoesEdicao from '../comum/BotoesEdicao.vue';
-import { Texto } from '@/dominio/processamento/processador/texto/Texto';
 
 export default defineComponent({
     name: 'TextoVisualizacao',
     components: { BotoesEdicao },
     props: {
-        texto: {
-            type: Texto,
-            required: true,
+        texto: { type: TextoEditavel, required: true },
+        ehPrimeiro: { type: Boolean, required: true },
+        ehUltimo: { type: Boolean, required: true },
+    },
+    computed: {
+        titulo() {
+            let titulo = this.texto.toString();
+            if (titulo.length > 13) {
+                titulo = titulo.substring(0, 10) + '...';
+            }
+            return titulo;
         },
     },
-    data() {
-        return {
-            classicEditor: ClassicEditor,
-            editorHtml: '',
-        };
+    methods: {
+        editar() {
+            this.$emit('editar', this.texto);
+        },
+        excluir() {
+            this.$emit('excluir', this.texto);
+        },
+        descer() {
+            this.$emit('descer', this.texto);
+        },
+        subir() {
+            this.$emit('subir', this.texto);
+        },
     },
     emits: ['excluir', 'descer', 'subir', 'editar'],
 });
 </script>
 
 <template>
-    <li>
-        {{ texto.categoria }}: {{ texto.texto }}
+    <label>
+        <input type="radio" disabled />
+        {{ titulo }}
         <BotoesEdicao
-            @editou="$emit('editar')"
-            @excluiu="$emit('excluir')"
-            @desceu="$emit('descer')"
-            @subiu="$emit('subir')"
+            :ehPrimeiro="ehPrimeiro"
+            :ehUltimo="ehUltimo"
+            @editar="editar"
+            @excluir="excluir"
+            @descer="descer"
+            @subir="subir"
         ></BotoesEdicao>
-    </li>
+    </label>
 </template>
 
-<style scoped>
-li {
+<style lang="scss" scoped>
+label {
     padding: 20px 40px;
 }
 
-li:hover {
+label:hover {
     border-radius: var(--border-radius);
     background: var(--card-background-color);
     box-shadow: var(--card-box-shadow);
+}
+
+input[type='radio'][disabled] {
+    cursor: not-allowed;
+    border-color: #000;
+    background-color: #fff;
 }
 </style>

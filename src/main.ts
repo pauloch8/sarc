@@ -28,6 +28,7 @@ import { IdFormularioFactory } from './dominio/editor/IdFormularioFactory';
 import { SubtituloFactory } from './dominio/editor/SubtituloFactory';
 import { QuestaoEditavelFactory } from './dominio/editor/QuestaoEditavelFactory';
 import { OpcaoEditavelFactory } from './dominio/editor/OpcaoEditavelFactory';
+import { TextoEditavelFactory } from './dominio/editor/TextoEditavelFactory';
 
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
@@ -40,6 +41,7 @@ const idFormularioFactory = new IdFormularioFactory();
 const formularioEditorFactory = new FormularioEditorFactory();
 const questaoEditavelFactory = new QuestaoEditavelFactory();
 const opcaoEditavelFactory = new OpcaoEditavelFactory();
+const textoEditavelFactory = new TextoEditavelFactory();
 
 createApp(App)
     .use(router)
@@ -50,6 +52,7 @@ createApp(App)
     .provide('formularioEditorFactory', formularioEditorFactory)
     .provide('questaoEditavelFactory', questaoEditavelFactory)
     .provide('opcaoEditavelFactory', opcaoEditavelFactory)
+    .provide('textoEditavelFactory', textoEditavelFactory)
     .provide('tituloFactory', tituloFactory)
     .provide('subtituloFactory', subtituloFactory)
     .provide('idFormularioFactory', idFormularioFactory)

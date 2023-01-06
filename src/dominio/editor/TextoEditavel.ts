@@ -1,20 +1,25 @@
-import { ItemEditavel } from './ItemEditavel';
+import { ItemEditavel, IItemEditavel } from './ItemEditavel';
 
-export class TextoEditavel extends ItemEditavel {
+export interface ITextoEditavel extends IItemEditavel {
+    getTexto(): string;
+    getCategoria(): string;
+}
+
+export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
     constructor(
-        private _categoria: string,
-        private _texto: string,
+        private categoria: string,
+        private texto: string,
         indice: number,
     ) {
         super(indice);
     }
 
-    get texto() {
-        return this._texto;
+    getTexto() {
+        return this.texto;
     }
 
-    get categoria() {
-        return this._categoria;
+    getCategoria() {
+        return this.categoria;
     }
 
     toString(): string {

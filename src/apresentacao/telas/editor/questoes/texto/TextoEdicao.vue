@@ -1,27 +1,46 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { defineComponent, inject } from 'vue';
 import BotoesSalvarCancelar from '../comum/BotoesSalvarCancelar.vue';
-import { Texto } from '@/dominio/processamento/processador/texto/Texto';
+import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
+import { ITextoEditavelFactory } from '@/dominio/editor/TextoEditavelFactory';
 
 export default defineComponent({
     name: 'TextoEdicao',
-    components: {
-        BotoesSalvarCancelar,
-    },
-    props: {
-        texto: {
-            type: Texto,
-            required: true,
-        },
-    },
-    data() {
+    setup() {
+        const factory = inject<ITextoEditavelFactory>('textoEditavelFactory');
+        if (!factory) {
+            throw new Error('Não injetada a dependência textoEditavelFactory');
+        }
         return {
-            classicEditor: ClassicEditor,
-            editorHtml: '',
+            factory,
         };
     },
-    emits: ['cancelou', 'salvou'],
+    props: {
+        texto: { type: TextoEditavel, required: false },
+        indice: { type: Number, required: false },
+    },
+    data() {
+        const categoria = this.texto?.getCategoria();
+        const textoString = this.texto?.getTexto();
+        const erro = '';
+        const inconsistencias: string[] = [];
+        return {
+            categoria,
+            textoString,
+            erro,
+            inconsistencias,
+        };
+    },
+    methods: {
+        cancelar() {
+            this.texto?.encerrarEdicao();
+            this.$emit('cancelou');
+        },
+        salvar() {
+            'salvar';
+        },
+    },
+    emits: ['cancelou', 'criou', 'atualizou'],
 });
 </script>
 
@@ -29,31 +48,45 @@ export default defineComponent({
     <article class="emEdicao">
         <header>Edição de Texto</header>
 
-        <label for="categoria">
-            Categoria
-            <input type="text" id="categoria" name="categoria" value="padrao" />
-        </label>
-        <label for="texto">
-            Texto
-            <ckeditor
-                :editor="classicEditor"
-                v-model="editorHtml"
-                :config="{}"
-            ></ckeditor>
-        </label>
+        <article class="erro" v-if="erro">
+            {{ erro }}
+            <div v-if="inconsistencias.length">
+                Inconsistências:
+                <ul>
+                    <li v-for="(item, index) in inconsistencias" :key="index">
+                        {{ item }}
+                    </li>
+                </ul>
+            </div>
+        </article>
 
         <footer>
             <BotoesSalvarCancelar
-                @cancelou="$emit('cancelou')"
-                @salvou="$emit('salvou')"
+                @cancelou="cancelar"
+                @salvou="salvar"
             ></BotoesSalvarCancelar>
         </footer>
     </article>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+input,
+textarea {
+    background-color: white;
+}
+
 label input[type='text'] {
     display: inline;
     width: 95%;
+}
+
+input[type='radio'][disabled] {
+    cursor: not-allowed;
+    border-color: #000;
+    background-color: #fff;
+}
+
+.opcoes {
+    margin-bottom: 30px;
 }
 </style>
