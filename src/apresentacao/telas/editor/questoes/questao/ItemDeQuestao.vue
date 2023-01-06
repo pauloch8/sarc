@@ -3,35 +3,39 @@ import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
 import { defineComponent } from 'vue';
 import QuestaoVisualizacao from './QuestaoVisualizacao.vue';
 import QuestaoEdicao from './QuestaoEdicao.vue';
-import AdicionarQuestao from './AdicionarQuestao.vue';
 
 export default defineComponent({
     name: 'ItemDeQuestao',
     components: {
         QuestaoVisualizacao,
         QuestaoEdicao,
-        AdicionarQuestao,
     },
     props: {
         questao: { type: QuestaoEditavel, required: true },
         ehPrimeiro: { type: Boolean, required: true },
         ehUltimo: { type: Boolean, required: true },
     },
+    data() {
+        return { selecionado: false };
+    },
     methods: {
-        editarQuestao(questao: QuestaoEditavel) {
+        editar(questao: QuestaoEditavel) {
             this.$emit('editar', questao);
         },
-        excluirQuestao(questao: QuestaoEditavel) {
-            this.$emit('excluiu', questao);
+        excluir(questao: QuestaoEditavel) {
+            this.$emit('excluir', questao);
         },
-        descerQuestao(questao: QuestaoEditavel) {
-            this.$emit('desceu', questao);
+        descer(questao: QuestaoEditavel) {
+            this.$emit('descer', questao);
         },
-        subirQuestao(questao: QuestaoEditavel) {
-            this.$emit('subiu', questao);
+        subir(questao: QuestaoEditavel) {
+            this.$emit('subir', questao);
+        },
+        selecionar(questao: QuestaoEditavel) {
+            this.$emit('selecionar', questao);
         },
     },
-    emits: ['editar', 'excluiu', 'desceu', 'subiu'],
+    emits: ['editar', 'excluir', 'descer', 'subir', 'selecionar'],
 });
 </script>
 
@@ -42,21 +46,17 @@ export default defineComponent({
             :questao="questao"
             :ehPrimeiro="ehPrimeiro"
             :ehUltimo="ehUltimo"
-            @editou="editarQuestao"
-            @excluiu="excluirQuestao"
-            @desceu="descerQuestao"
-            @subiu="subirQuestao"
+            @editar="editar"
+            @excluir="excluir"
+            @descer="descer"
+            @subir="subir"
+            @selecionar="selecionar"
         ></QuestaoVisualizacao>
 
         <QuestaoEdicao
             v-if="questao.getEmEdicao()"
             :questao="(questao as QuestaoEditavel)"
         ></QuestaoEdicao>
-
-        <AdicionarQuestao
-            v-if="ehUltimo"
-            :indice="questao.getIndice() + 1"
-        ></AdicionarQuestao>
     </div>
 </template>
 

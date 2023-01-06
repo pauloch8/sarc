@@ -19,7 +19,6 @@ export default defineComponent({
             this.$emit('excluiu', this.opcao);
         },
         descerOpcao() {
-            debugger;
             this.$emit('desceu', this.opcao);
         },
         subirOpcao() {

@@ -3,14 +3,12 @@ import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
 import { defineComponent } from 'vue';
 import OpcaoVisualizacao from './OpcaoVisualizacao.vue';
 import OpcaoEdicao from './OpcaoEdicao.vue';
-import AdicionarOpcao from './AdicionarOpcao.vue';
 
 export default defineComponent({
     name: 'ItemDeOpcao',
     components: {
         OpcaoVisualizacao,
         OpcaoEdicao,
-        AdicionarOpcao,
     },
     props: {
         opcao: { type: OpcaoEditavel, required: true },
@@ -49,11 +47,6 @@ export default defineComponent({
         ></OpcaoVisualizacao>
 
         <OpcaoEdicao v-if="opcao.getEmEdicao()" :opcao="opcao"></OpcaoEdicao>
-
-        <AdicionarOpcao
-            v-if="ehUltimo"
-            :indice="opcao.getIndice() + 1"
-        ></AdicionarOpcao>
     </div>
 </template>
 

@@ -98,9 +98,8 @@ export default defineComponent({
 <template>
     <article>
         <header>
-            <h2>Dados do formulário</h2>
+            <h2>Edição de formulário</h2>
         </header>
-
         <IdFormularioInput
             v-if="titulo"
             :titulo="(titulo as Titulo)"

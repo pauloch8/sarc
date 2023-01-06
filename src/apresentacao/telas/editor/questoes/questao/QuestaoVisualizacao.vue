@@ -16,25 +16,28 @@ export default defineComponent({
         ehUltimo: { type: Boolean, required: true },
     },
     methods: {
+        selecionar() {
+            this.$emit('selecionar', this.questao);
+        },
         editarQuestao() {
-            this.$emit('editou', this.questao);
+            this.$emit('editar', this.questao);
         },
         excluirQuestao() {
-            this.$emit('excluiu', this.questao);
+            this.$emit('excluir', this.questao);
         },
         descerQuestao() {
-            this.$emit('desceu', this.questao);
+            this.$emit('descer', this.questao);
         },
         subirQuestao() {
-            this.$emit('subiu', this.questao);
+            this.$emit('subir', this.questao);
         },
     },
-    emits: ['excluiu', 'desceu', 'subiu', 'editou'],
+    emits: ['selecionar', 'excluir', 'descer', 'subir', 'editar'],
 });
 </script>
 
 <template>
-    <article>
+    <article @click="selecionar">
         <header>
             {{ questao.getIndice() }} - {{ questao.getTitulo() }}
             <BotoesEdicao

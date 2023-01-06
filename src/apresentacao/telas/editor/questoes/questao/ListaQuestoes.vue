@@ -68,16 +68,13 @@ export default defineComponent({
             :ehPrimeiro="indice === 0"
             :ehUltimo="indice === questoesOrdenadas.length - 1"
             @editar="editarQuestao"
-            @excluiu="excluirQuestao"
-            @desceu="descerQuestao"
-            @subiu="subirQuestao"
+            @excluir="excluirQuestao"
+            @descer="descerQuestao"
+            @subir="subirQuestao"
         ></ItemDeQuestao>
     </TransitionGroup>
 
-    <AdicionarQuestao
-        v-if="!questoesOrdenadas.length"
-        :indice="0"
-    ></AdicionarQuestao>
+    <AdicionarQuestao :indice="questoesOrdenadas.length"></AdicionarQuestao>
 </template>
 
 <style scoped>
