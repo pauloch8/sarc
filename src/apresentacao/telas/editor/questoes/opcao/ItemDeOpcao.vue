@@ -36,23 +36,25 @@ export default defineComponent({
 </script>
 
 <template>
-    <OpcaoVisualizacao
-        v-if="!opcao.getEmEdicao()"
-        :opcao="opcao"
-        :ehPrimeiro="ehPrimeiro"
-        :ehUltimo="ehUltimo"
-        @editou="editarOpcao"
-        @excluiu="excluirOpcao"
-        @desceu="descerOpcao"
-        @subiu="subirOpcao"
-    ></OpcaoVisualizacao>
+    <div>
+        <OpcaoVisualizacao
+            v-if="!opcao.getEmEdicao()"
+            :opcao="opcao"
+            :ehPrimeiro="ehPrimeiro"
+            :ehUltimo="ehUltimo"
+            @editou="editarOpcao"
+            @excluiu="excluirOpcao"
+            @desceu="descerOpcao"
+            @subiu="subirOpcao"
+        ></OpcaoVisualizacao>
 
-    <OpcaoEdicao v-if="opcao.getEmEdicao()" :opcao="opcao"></OpcaoEdicao>
+        <OpcaoEdicao v-if="opcao.getEmEdicao()" :opcao="opcao"></OpcaoEdicao>
 
-    <AdicionarOpcao
-        v-if="ehUltimo"
-        :indice="opcao.getIndice() + 1"
-    ></AdicionarOpcao>
+        <AdicionarOpcao
+            v-if="ehUltimo"
+            :indice="opcao.getIndice() + 1"
+        ></AdicionarOpcao>
+    </div>
 </template>
 
 <style>

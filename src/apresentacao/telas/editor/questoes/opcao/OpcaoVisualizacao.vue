@@ -11,6 +11,21 @@ export default defineComponent({
         ehPrimeiro: { type: Boolean, required: true },
         ehUltimo: { type: Boolean, required: true },
     },
+    methods: {
+        editarOpcao() {
+            this.$emit('editou', this.opcao);
+        },
+        excluirOpcao() {
+            this.$emit('excluiu', this.opcao);
+        },
+        descerOpcao() {
+            debugger;
+            this.$emit('desceu', this.opcao);
+        },
+        subirOpcao() {
+            this.$emit('subiu', this.opcao);
+        },
+    },
     emits: ['excluiu', 'desceu', 'subiu', 'editou'],
 });
 </script>
@@ -22,10 +37,10 @@ export default defineComponent({
         <BotoesEdicao
             :ehPrimeiro="ehPrimeiro"
             :ehUltimo="ehUltimo"
-            @editou="$emit('editou')"
-            @excluiu="$emit('excluiu')"
-            @desceu="$emit('desceu')"
-            @subiu="$emit('subiu')"
+            @editou="editarOpcao"
+            @excluiu="excluirOpcao"
+            @desceu="descerOpcao"
+            @subiu="subirOpcao"
         ></BotoesEdicao>
     </label>
 </template>

@@ -67,7 +67,7 @@ export default defineComponent({
         },
         cancelar() {
             this.opcao?.encerrarEdicao();
-            ('cancelar');
+            this.$emit('cancelou');
         },
         salvar() {
             this.erro = '';

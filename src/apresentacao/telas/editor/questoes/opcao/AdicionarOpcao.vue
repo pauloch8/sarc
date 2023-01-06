@@ -19,11 +19,14 @@ export default defineComponent({
         };
     },
     methods: {
+        editar() {
+            this.emEdicao = true;
+        },
         salvou() {
             this.emEdicao = false;
         },
-        editar() {
-            this.emEdicao = true;
+        cancelou() {
+            this.emEdicao = false;
         },
     },
     emits: ['salvou'],
@@ -38,11 +41,12 @@ export default defineComponent({
             class="outline adicionar"
             @click.prevent="editar"
         >
-            + Adicionar Questão
+            + Adicionar Opção
         </a>
     </div>
     <div v-if="emEdicao">
-        <OpcaoEdicao :indice="indice" @salvou="salvou"> </OpcaoEdicao>
+        <OpcaoEdicao :indice="indice" @salvou="salvou" @cancelou="cancelou">
+        </OpcaoEdicao>
     </div>
 </template>
 

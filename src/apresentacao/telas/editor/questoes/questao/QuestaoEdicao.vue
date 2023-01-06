@@ -48,7 +48,8 @@ export default defineComponent({
         const idFormulario = this.questao?.getId();
         const titulo = this.questao?.getTitulo();
         const subtitulo = this.questao?.getSubTitulo();
-        const opcoes = this.questao?.getOpcoes();
+        const opcoes =
+            this.questao?.getOpcoes() || new ListaEditavel<OpcaoEditavel>();
         const erro = '';
         const inconsistencias: string[] = [];
         return {
@@ -72,7 +73,7 @@ export default defineComponent({
         },
         cancelar() {
             this.questao?.encerrarEdicao();
-            ('cancelar');
+            this.$emit('cancelou');
         },
         salvar() {
             this.erro = '';

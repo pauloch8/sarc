@@ -60,17 +60,25 @@ export default defineComponent({
 <template>
     <h2>Opções</h2>
 
-    <ItemDeOpcao
-        v-for="(opcao, indice) in opcoesOrdenadas"
-        :key="opcao.getId().toString()"
-        :opcao="(opcao as OpcaoEditavel)"
-        :ehPrimeiro="indice === 0"
-        :ehUltimo="indice === opcoesOrdenadas.length - 1"
-        @editar="editarOpcao"
-        @excluiu="excluirOpcao"
-        @desceu="descerOpcao"
-        @subiu="subirOpcao"
-    ></ItemDeOpcao>
+    <TransitionGroup name="opcoes">
+        <ItemDeOpcao
+            v-for="(opcao, indice) in opcoesOrdenadas"
+            :key="opcao.getId().toString()"
+            :opcao="(opcao as OpcaoEditavel)"
+            :ehPrimeiro="indice === 0"
+            :ehUltimo="indice === opcoesOrdenadas.length - 1"
+            @editar="editarOpcao"
+            @excluiu="excluirOpcao"
+            @desceu="descerOpcao"
+            @subiu="subirOpcao"
+        ></ItemDeOpcao>
+    </TransitionGroup>
 
     <AdicionarOpcao v-if="!opcoesOrdenadas.length" :indice="0"></AdicionarOpcao>
 </template>
+
+<style scoped>
+.opcoes-move {
+    transition: all 0.5s ease-in-out;
+}
+</style>

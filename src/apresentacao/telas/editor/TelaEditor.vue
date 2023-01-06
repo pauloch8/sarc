@@ -27,9 +27,25 @@ export default defineComponent({
                     0,
                     new ListaEditavel<OpcaoEditavel>([
                         new OpcaoEditavel(
-                            new IdFormulario('questao1'),
-                            new Titulo('questao1'),
+                            new IdFormulario('opcao1'),
+                            new Titulo('opcao1'),
                             0,
+                            new ListaEditavel<TextoEditavel>([
+                                new TextoEditavel('categoria', 'texto', 0),
+                            ]),
+                        ),
+                        new OpcaoEditavel(
+                            new IdFormulario('opcao2'),
+                            new Titulo('opcao2'),
+                            1,
+                            new ListaEditavel<TextoEditavel>([
+                                new TextoEditavel('categoria', 'texto', 0),
+                            ]),
+                        ),
+                        new OpcaoEditavel(
+                            new IdFormulario('opcao3'),
+                            new Titulo('opcao3'),
+                            2,
                             new ListaEditavel<TextoEditavel>([
                                 new TextoEditavel('categoria', 'texto', 0),
                             ]),
@@ -43,8 +59,8 @@ export default defineComponent({
                     1,
                     new ListaEditavel<OpcaoEditavel>([
                         new OpcaoEditavel(
-                            new IdFormulario('questao2'),
-                            new Titulo('questao2'),
+                            new IdFormulario('opcao1'),
+                            new Titulo('opcao1'),
                             0,
                             new ListaEditavel<TextoEditavel>([
                                 new TextoEditavel('categoria', 'questao2', 0),

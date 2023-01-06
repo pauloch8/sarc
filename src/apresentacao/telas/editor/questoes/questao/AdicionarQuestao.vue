@@ -19,11 +19,14 @@ export default defineComponent({
         };
     },
     methods: {
+        editar() {
+            this.emEdicao = true;
+        },
         salvou() {
             this.emEdicao = false;
         },
-        editar() {
-            this.emEdicao = true;
+        cancelou() {
+            this.emEdicao = false;
         },
     },
     emits: ['salvou'],
@@ -42,7 +45,8 @@ export default defineComponent({
         </a>
     </div>
     <div v-if="emEdicao">
-        <QuestaoEdicao :indice="indice" @salvou="salvou"> </QuestaoEdicao>
+        <QuestaoEdicao :indice="indice" @salvou="salvou" @cancelou="cancelou">
+        </QuestaoEdicao>
     </div>
 </template>
 
