@@ -73,10 +73,6 @@ div {
     float: right;
 }
 
-div:hover {
-    cursor: pointer;
-}
-
 span {
     font-size: larger;
     padding: 20px 30px;
@@ -86,6 +82,7 @@ span {
     border-radius: var(--border-radius);
     background: var(--card-background-color);
     box-shadow: var(--card-box-shadow);
+    cursor: pointer;
 }
 .botao.desabilitado {
     color: #ccc;

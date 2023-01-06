@@ -38,6 +38,5 @@ describe('Processamento', () => {
             '{"id":"gerador-de-acordao","respostasQuestoes":[{"id":"tipoDeRecurso","resposta":{"id":"ro"}},{"id":"especie-ro","resposta":{"id":"b31"}},{"id":"motivo-ro-b31","resposta":{"id":"acaoJudicial","variaveis":[{"id":"numAcaoJudicial","resposta":"asdf"}]}},{"id":"procurador","resposta":{"id":"nao"}},{"id":"admissibilidade","resposta":{"id":"temp"}}]}',
         );
         const retorno = processadorFormulario.processar(resposta);
-        debugger;
     });
 });

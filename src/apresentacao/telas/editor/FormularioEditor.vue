@@ -88,7 +88,7 @@ export default defineComponent({
         },
         cancelar() {
             // TODO: CANCELAR
-            alert('cancelou');
+            'cancelou';
         },
     },
     emits: ['editou', 'criou'],

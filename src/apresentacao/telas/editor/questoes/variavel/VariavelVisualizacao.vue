@@ -19,7 +19,7 @@ export default defineComponent({
             editorHtml: '',
         };
     },
-    emits: ['excluiu', 'desceu', 'subiu', 'editou'],
+    emits: ['excluiuOpcao', 'desceuOpcao', 'subiuOpcao', 'editouOpcao'],
 });
 </script>
 
@@ -27,10 +27,10 @@ export default defineComponent({
     <li>
         {{ variavel.getTipo() }}: {{ variavel.getLabel() }}
         <BotoesEdicao
-            @editou="$emit('editou')"
-            @excluiu="$emit('excluiu')"
-            @desceu="$emit('desceu')"
-            @subiu="$emit('subiu')"
+            @editou="$emit('editouOpcao')"
+            @excluiu="$emit('excluiuOpcao')"
+            @desceu="$emit('desceuOpcao')"
+            @subiu="$emit('subiuOpcao')"
         ></BotoesEdicao>
     </li>
 </template>

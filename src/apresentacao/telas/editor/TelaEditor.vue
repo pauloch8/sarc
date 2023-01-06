@@ -4,11 +4,12 @@ import FormularioEditor from './FormularioEditor.vue';
 import { FormularioEditor as FormularioEditorModel } from '@/dominio/editor/FormularioEditor';
 import { IdFormulario } from '@/dominio/editor/IdFormulario';
 import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { Opcao } from '@/dominio/editor/Opcao';
+import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
 import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
 import { Subtitulo } from '@/dominio/editor/Subtitulo';
 import { Titulo } from '@/dominio/editor/Titulo';
 import { Texto } from '@/dominio/processamento/processador/texto/Texto';
+import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
 
 export default defineComponent({
     name: 'TelaEditor',
@@ -24,29 +25,33 @@ export default defineComponent({
                     new IdFormulario('questao1'),
                     new Titulo('questao1'),
                     0,
-                    new Subtitulo('questao1'),
-                    new ListaEditavel<Opcao>([
-                        new Opcao(
-                            new Titulo('questao1'),
+                    new ListaEditavel<OpcaoEditavel>([
+                        new OpcaoEditavel(
                             new IdFormulario('questao1'),
-                            [new Texto('questao1', 'questao1')],
+                            new Titulo('questao1'),
                             0,
+                            new ListaEditavel<TextoEditavel>([
+                                new TextoEditavel('categoria', 'texto', 0),
+                            ]),
                         ),
                     ]),
+                    new Subtitulo('questao1'),
                 ),
                 new QuestaoEditavel(
                     new IdFormulario('questao2'),
                     new Titulo('questao2'),
                     1,
-                    new Subtitulo('questao2'),
-                    new ListaEditavel<Opcao>([
-                        new Opcao(
-                            new Titulo('questao2'),
+                    new ListaEditavel<OpcaoEditavel>([
+                        new OpcaoEditavel(
                             new IdFormulario('questao2'),
-                            [new Texto('questao2', 'questao2')],
+                            new Titulo('questao2'),
                             0,
+                            new ListaEditavel<TextoEditavel>([
+                                new TextoEditavel('categoria', 'questao2', 0),
+                            ]),
                         ),
                     ]),
+                    new Subtitulo('questao2'),
                 ),
             ]),
         );

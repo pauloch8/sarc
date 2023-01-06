@@ -1,7 +1,7 @@
 import { IdFormulario } from './IdFormulario';
 import { IItemEditavel, ItemEditavel } from './ItemEditavel';
 import { ListaEditavel } from './ListaEditavel';
-import { Opcao } from './Opcao';
+import { OpcaoEditavel } from './OpcaoEditavel';
 import { Subtitulo } from './Subtitulo';
 import { Titulo } from './Titulo';
 
@@ -12,9 +12,8 @@ export interface IQuestaoEditavel extends IItemEditavel {
     setTitulo(titulo: Titulo): void;
     getSubTitulo(): Subtitulo | undefined;
     setSubtitulo(subtitulo?: Subtitulo | undefined): void;
-    getOpcoes(): ListaEditavel<Opcao> | undefined;
-    setOpcoes(opcoes: ListaEditavel<Opcao>): void;
-    toString(): string;
+    getOpcoes(): ListaEditavel<OpcaoEditavel> | undefined;
+    setOpcoes(opcoes: ListaEditavel<OpcaoEditavel>): void;
 }
 
 export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
@@ -22,8 +21,8 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         private id: IdFormulario,
         private titulo: Titulo,
         indice: number,
+        private opcoes: ListaEditavel<OpcaoEditavel>,
         private subtitulo?: Subtitulo,
-        private opcoes?: ListaEditavel<Opcao>,
     ) {
         super(indice);
         const validacao = this.validar();
@@ -36,10 +35,15 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         const contemId = !!this.id;
         const contemTitulo = !!this.titulo;
         const contemOpcoes = !!this.opcoes;
-        const opcoesContemItens = !!this.opcoes?.getLength();
+        const opcoesContemItens = !!this.opcoes.getLength();
+        const contemIndice = typeof this.getIndice() === 'number';
 
         const valido =
-            contemId && contemTitulo && contemOpcoes && opcoesContemItens;
+            contemId &&
+            contemTitulo &&
+            contemOpcoes &&
+            opcoesContemItens &&
+            contemIndice;
 
         const inconsistencias = [];
         if (!contemId) {
@@ -54,6 +58,9 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         if (!opcoesContemItens) {
             inconsistencias.push('Não contêm opções');
         }
+        if (!contemIndice) {
+            inconsistencias.push('Não contêm índice');
+        }
 
         return { valido, inconsistencias };
     }
@@ -64,7 +71,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
 
     setId(id: IdFormulario) {
         if (!id) {
-            throw new ErroNaEdicao('Id vazio informado');
+            throw new ErroNaEdicaoDaQuestao('Id vazio informado');
         }
         this.id = id;
     }
@@ -75,7 +82,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
 
     setTitulo(titulo: Titulo) {
         if (!titulo) {
-            throw new ErroNaEdicao('Titulo vazio informado');
+            throw new ErroNaEdicaoDaQuestao('Titulo vazio informado');
         }
         this.titulo = titulo;
     }
@@ -92,14 +99,14 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         return this.opcoes;
     }
 
-    setOpcoes(opcoes: ListaEditavel<Opcao>) {
+    setOpcoes(opcoes: ListaEditavel<OpcaoEditavel>) {
         if (!opcoes) {
-            throw new ErroNaEdicao(
+            throw new ErroNaEdicaoDaQuestao(
                 'Não foi informada lista de opções de questão',
             );
         }
         if (opcoes.getLength() === 0) {
-            throw new ErroNaEdicao(
+            throw new ErroNaEdicaoDaQuestao(
                 'Informada lista de opções de questão vazia',
             );
         }
@@ -117,7 +124,7 @@ export class ErroQuestaoInvalida extends Error {
     }
 }
 
-export class ErroNaEdicao extends Error {
+export class ErroNaEdicaoDaQuestao extends Error {
     constructor(mensagem: string) {
         super(mensagem);
     }

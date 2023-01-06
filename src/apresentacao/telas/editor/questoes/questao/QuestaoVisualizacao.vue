@@ -1,6 +1,6 @@
 <script lang="ts">
 import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { Opcao } from '@/dominio/editor/Opcao';
+import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
 import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
 import { defineComponent } from 'vue';
 import BotoesEdicao from '../comum/BotoesEdicao.vue';
@@ -48,7 +48,7 @@ export default defineComponent({
         </header>
         <fieldset>
             <label
-                v-for="opcao in (questao.getOpcoes() as ListaEditavel<Opcao>).getItens()"
+                v-for="opcao in (questao.getOpcoes() as ListaEditavel<OpcaoEditavel>).getItens()"
                 :key="opcao.getId().toString()"
             >
                 <input type="radio" disabled />

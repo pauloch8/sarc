@@ -17,12 +17,6 @@ export default defineComponent({
         ehPrimeiro: { type: Boolean, required: true },
         ehUltimo: { type: Boolean, required: true },
     },
-    data() {
-        return {
-            emEdicao: false,
-            adicionarQuestao: false,
-        };
-    },
     methods: {
         editarQuestao(questao: QuestaoEditavel) {
             this.$emit('editar', questao);
@@ -42,28 +36,28 @@ export default defineComponent({
 </script>
 
 <template>
-    <QuestaoVisualizacao
-        v-if="!questao.getEmEdicao()"
-        :questao="questao"
-        :ehPrimeiro="ehPrimeiro"
-        :ehUltimo="ehUltimo"
-        @editou="editarQuestao"
-        @excluiu="excluirQuestao"
-        @desceu="descerQuestao"
-        @subiu="subirQuestao"
-    ></QuestaoVisualizacao>
+    <div>
+        <QuestaoVisualizacao
+            v-if="!questao.getEmEdicao()"
+            :questao="questao"
+            :ehPrimeiro="ehPrimeiro"
+            :ehUltimo="ehUltimo"
+            @editou="editarQuestao"
+            @excluiu="excluirQuestao"
+            @desceu="descerQuestao"
+            @subiu="subirQuestao"
+        ></QuestaoVisualizacao>
 
-    <QuestaoEdicao
-        v-if="questao.getEmEdicao()"
-        :questao="(questao as QuestaoEditavel)"
-        @cancelou="emEdicao = false"
-        @salvou="emEdicao = false"
-    ></QuestaoEdicao>
+        <QuestaoEdicao
+            v-if="questao.getEmEdicao()"
+            :questao="(questao as QuestaoEditavel)"
+        ></QuestaoEdicao>
 
-    <AdicionarQuestao
-        v-if="ehUltimo"
-        :indice="questao.getIndice() + 1"
-    ></AdicionarQuestao>
+        <AdicionarQuestao
+            v-if="ehUltimo"
+            :indice="questao.getIndice() + 1"
+        ></AdicionarQuestao>
+    </div>
 </template>
 
 <style>

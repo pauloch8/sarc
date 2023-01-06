@@ -58,26 +58,30 @@ export default defineComponent({
 </script>
 
 <template>
-    <article>
-        <header>
-            <h2>Questões</h2>
+    <h2>Questões</h2>
 
-            <ItemDeQuestao
-                v-for="(questao, indice) in questoesOrdenadas"
-                :key="questao.getId().toString()"
-                :questao="(questao as QuestaoEditavel)"
-                :ehPrimeiro="indice === 0"
-                :ehUltimo="indice === questoesOrdenadas.length - 1"
-                @editar="editarQuestao"
-                @excluiu="excluirQuestao"
-                @desceu="descerQuestao"
-                @subiu="subirQuestao"
-            ></ItemDeQuestao>
+    <TransitionGroup name="questoes">
+        <ItemDeQuestao
+            v-for="(questao, indice) in questoesOrdenadas"
+            :key="questao.getId().toString()"
+            :questao="(questao as QuestaoEditavel)"
+            :ehPrimeiro="indice === 0"
+            :ehUltimo="indice === questoesOrdenadas.length - 1"
+            @editar="editarQuestao"
+            @excluiu="excluirQuestao"
+            @desceu="descerQuestao"
+            @subiu="subirQuestao"
+        ></ItemDeQuestao>
+    </TransitionGroup>
 
-            <AdicionarQuestao
-                v-if="!questoesOrdenadas.length"
-                :indice="0"
-            ></AdicionarQuestao>
-        </header>
-    </article>
+    <AdicionarQuestao
+        v-if="!questoesOrdenadas.length"
+        :indice="0"
+    ></AdicionarQuestao>
 </template>
+
+<style scoped>
+.questoes-move {
+    transition: all 0.5s ease-in-out;
+}
+</style>

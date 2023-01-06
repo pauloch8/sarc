@@ -1,6 +1,7 @@
 export interface IItemEditavel {
     getEmEdicao(): boolean;
     editar(): void;
+    encerrarEdicao(): void;
     getIndice(): number;
     setIndice(indice: number): void;
     toString(): string;
@@ -17,6 +18,10 @@ export abstract class ItemEditavel implements IItemEditavel {
 
     editar() {
         this.emEdicao = true;
+    }
+
+    encerrarEdicao() {
+        this.emEdicao = false;
     }
 
     getIndice() {

@@ -1,5 +1,5 @@
 <script lang="ts">
-import { Opcao } from '@/dominio/editor/Opcao';
+import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
 import { defineComponent } from 'vue';
 import BotoesEdicao from '../comum/BotoesEdicao.vue';
 
@@ -7,10 +7,9 @@ export default defineComponent({
     name: 'OpcaoVisualizacao',
     components: { BotoesEdicao },
     props: {
-        opcao: {
-            type: Opcao,
-            required: true,
-        },
+        opcao: { type: OpcaoEditavel, required: true },
+        ehPrimeiro: { type: Boolean, required: true },
+        ehUltimo: { type: Boolean, required: true },
     },
     emits: ['excluiu', 'desceu', 'subiu', 'editou'],
 });
@@ -21,6 +20,8 @@ export default defineComponent({
         <input type="radio" disabled />
         {{ opcao.getTitulo() }}
         <BotoesEdicao
+            :ehPrimeiro="ehPrimeiro"
+            :ehUltimo="ehUltimo"
             @editou="$emit('editou')"
             @excluiu="$emit('excluiu')"
             @desceu="$emit('desceu')"

@@ -1,46 +1,13 @@
 import {
-    ErroNaEdicao,
-    ErroQuestaoInvalida,
+    ErroNaEdicaoDaQuestao,
     IQuestaoEditavel,
-    QuestaoEditavel,
 } from '@/dominio/editor/QuestaoEditavel';
-import { IQuestaoEditavelFactory } from '@/dominio/editor/QuestaoEditavelFactory';
 import { IdFormulario } from '@/dominio/editor/IdFormulario';
 import { Subtitulo } from '@/dominio/editor/Subtitulo';
 import { Titulo } from '@/dominio/editor/Titulo';
 import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { Opcao } from '@/dominio/editor/Opcao';
-import { Texto } from '@/dominio/processamento/processador/texto/Texto';
-
-export class QuestaoEditavelFactoryDummy implements IQuestaoEditavelFactory {
-    criar(): IQuestaoEditavel {
-        throw new Error('Dummy QuestaoEditavelFactory.criar()');
-    }
-}
-
-export class QuestaoEditavelFactoryErroStub implements IQuestaoEditavelFactory {
-    mensagemDeErro = 'Mensagem de erro';
-    criar(): QuestaoEditavel {
-        throw new Error(this.mensagemDeErro);
-    }
-}
-
-export class QuestaoEditavelFactoryErroQuestaoInvalidaStub
-    implements IQuestaoEditavelFactory
-{
-    inconsistencias = ['inconsistencia1', 'inconsistencia2', 'inconsistencia3'];
-    criar(): QuestaoEditavel {
-        throw new ErroQuestaoInvalida(this.inconsistencias);
-    }
-}
-
-export class QuestaoEditavelFactorySucessoStub
-    implements IQuestaoEditavelFactory
-{
-    criar() {
-        return new QuestaoEditavelDummy();
-    }
-}
+import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
+import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
 
 export class QuestaoEditavelErroStub implements IQuestaoEditavel {
     erros = {
@@ -52,37 +19,39 @@ export class QuestaoEditavelErroStub implements IQuestaoEditavel {
     private id = new IdFormulario('id');
     private titulo = new Titulo('titulo');
     private subtitulo = new Subtitulo('subtitulo');
-    private opcoes = new ListaEditavel<Opcao>([
-        new Opcao(
-            new Titulo('titulo'),
+    private opcoes = new ListaEditavel<OpcaoEditavel>([
+        new OpcaoEditavel(
             new IdFormulario('titulo'),
-            [new Texto('categoria', 'texto')],
+            new Titulo('titulo'),
             0,
+            new ListaEditavel<TextoEditavel>([
+                new TextoEditavel('categoria', 'texto', 0),
+            ]),
         ),
     ]);
     getId(): IdFormulario {
         return this.id;
     }
     setId(): void {
-        throw new ErroNaEdicao(this.erros.id);
+        throw new ErroNaEdicaoDaQuestao(this.erros.id);
     }
     getTitulo(): Titulo {
         return this.titulo;
     }
     setTitulo(): void {
-        throw new ErroNaEdicao(this.erros.titulo);
+        throw new ErroNaEdicaoDaQuestao(this.erros.titulo);
     }
     getSubTitulo(): Subtitulo | undefined {
         return this.subtitulo;
     }
     setSubtitulo(): void {
-        throw new ErroNaEdicao(this.erros.subtitulo);
+        throw new ErroNaEdicaoDaQuestao(this.erros.subtitulo);
     }
-    getOpcoes(): ListaEditavel<Opcao> | undefined {
+    getOpcoes(): ListaEditavel<OpcaoEditavel> | undefined {
         return this.opcoes;
     }
     setOpcoes(): void {
-        throw new ErroNaEdicao(this.erros.opcoes);
+        throw new ErroNaEdicaoDaQuestao(this.erros.opcoes);
     }
     toString(): string {
         return 'dummy';
@@ -93,10 +62,13 @@ export class QuestaoEditavelErroStub implements IQuestaoEditavel {
     editar(): void {
         'dummy';
     }
+    encerrarEdicao(): void {
+        'dummy';
+    }
     getIndice(): number {
         return 0;
     }
-    setIndice(indice: number): void {
+    setIndice(): void {
         'dummy';
     }
 }
@@ -104,12 +76,14 @@ export class QuestaoEditavelDummy implements IQuestaoEditavel {
     private id = new IdFormulario('id');
     private titulo = new Titulo('titulo');
     private subtitulo = new Subtitulo('subtitulo');
-    private opcoes = new ListaEditavel<Opcao>([
-        new Opcao(
-            new Titulo('titulo'),
+    private opcoes = new ListaEditavel<OpcaoEditavel>([
+        new OpcaoEditavel(
             new IdFormulario('titulo'),
-            [new Texto('categoria', 'texto')],
+            new Titulo('titulo'),
             0,
+            new ListaEditavel<TextoEditavel>([
+                new TextoEditavel('categoria', 'texto', 0),
+            ]),
         ),
     ]);
     getId(): IdFormulario {
@@ -130,10 +104,10 @@ export class QuestaoEditavelDummy implements IQuestaoEditavel {
     setSubtitulo(subtitulo?: Subtitulo | undefined): void {
         'dummy';
     }
-    getOpcoes(): ListaEditavel<Opcao> | undefined {
+    getOpcoes(): ListaEditavel<OpcaoEditavel> | undefined {
         return this.opcoes;
     }
-    setOpcoes(opcoes: ListaEditavel<Opcao>): void {
+    setOpcoes(opcoes: ListaEditavel<OpcaoEditavel>): void {
         'dummy';
     }
     toString(): string {
@@ -143,6 +117,9 @@ export class QuestaoEditavelDummy implements IQuestaoEditavel {
         return true;
     }
     editar(): void {
+        'dummy';
+    }
+    encerrarEdicao(): void {
         'dummy';
     }
     getIndice(): number {

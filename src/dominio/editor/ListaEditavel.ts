@@ -22,7 +22,6 @@ export class ListaEditavel<Item extends ItemEditavel> {
     }
 
     subirItem(itemSolicitada: Item) {
-        debugger;
         const itemParaSubir = this.obterItem(itemSolicitada);
         const indiceDoItemSolicitado = itemParaSubir.getIndice();
         const ultimoIndice = this.itens.length - 1;
@@ -41,7 +40,6 @@ export class ListaEditavel<Item extends ItemEditavel> {
     }
 
     descerItem(itemSolicitada: Item) {
-        debugger;
         const itemParaDescer = this.obterItem(itemSolicitada);
         const indiceDoItemSolicitado = itemParaDescer.getIndice();
 

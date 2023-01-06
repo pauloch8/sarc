@@ -1,39 +1,38 @@
-import QuestaoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao/QuestaoEdicao.vue';
+import OpcaoEdicaoVue from '@/apresentacao/telas/editor/questoes/opcao/OpcaoEdicao.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/questoes/comum/BotoesSalvarCancelar.vue';
-import { IdFormulario } from '@/dominio/editor/IdFormulario';
-import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
-import { Subtitulo } from '@/dominio/editor/Subtitulo';
-import { Titulo } from '@/dominio/editor/Titulo';
+import {
+    OpcaoEditavelFactoryErroOpcaoInvalidaStub,
+    OpcaoEditavelFactoryErroDesconhecidoStub,
+    OpcaoEditavelFactorySucessoStub,
+    OpcaoEditavelFactoryDummy,
+} from '@/tests/dubles/dominio/editor/OpcaoEditavelFactoryDubles';
 import { mount } from '@vue/test-utils';
+import { IdFormulario } from '@/dominio/editor/IdFormulario';
+import { Titulo } from '@/dominio/editor/Titulo';
 import {
-    QuestaoEditavelDummy,
-    QuestaoEditavelErroStub,
-} from '@/tests/dubles/dominio/editor/QuestaoEditavelDubles';
-import {
-    QuestaoEditavelFactoryDummy,
-    QuestaoEditavelFactorySucessoStub,
-    QuestaoEditavelFactoryErroDesconhecidoStub,
-    QuestaoEditavelFactoryErroQuestaoInvalidaStub,
-} from '@/tests/dubles/dominio/editor/QuestaoEditavelFactoryDubles';
+    OpcaoEditavelDummy,
+    OpcaoEditavelErroStub,
+} from '@/tests/dubles/dominio/editor/OpcaoEditavelDubles';
+import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
 
-describe('QuestaoEdicao', () => {
+describe('OpcaoEdicao', () => {
     describe('Salvar', () => {
         describe('se não fornecido uma questão por props', () => {
             describe('cria um novo objeto de Questão', () => {
                 test('exibe erro e lista de inconsistências se for lançado erro de Quetão Inválida na criação', async () => {
-                    const questaoEditavelFactory =
-                        new QuestaoEditavelFactoryErroQuestaoInvalidaStub();
-                    const sut = mount(QuestaoEdicaoVue, {
+                    const opcaoEditavelFactory =
+                        new OpcaoEditavelFactoryErroOpcaoInvalidaStub();
+                    const sut = mount(OpcaoEdicaoVue, {
                         global: {
                             provide: {
-                                questaoEditavelFactory,
+                                opcaoEditavelFactory,
                             },
                         },
                         components: {
                             IdFormularioInput: {},
                             TituloInput: {},
-                            SubtituloInput: {},
-                            ListaOpcoes: {},
+                            TextoComponent: {},
+                            VariavelComponent: {},
                             BotoesSalvarCancelar,
                         },
                         props: {
@@ -42,12 +41,10 @@ describe('QuestaoEdicao', () => {
                         data() {
                             const idFormulario = undefined;
                             const titulo = undefined;
-                            const subtitulo = undefined;
                             const erro = '';
                             return {
                                 idFormulario,
                                 titulo,
-                                subtitulo,
                                 erro,
                             };
                         },
@@ -55,29 +52,29 @@ describe('QuestaoEdicao', () => {
                     await sut.find('.botaoSalvar').trigger('click');
                     expect(sut.find('.erro').exists()).toBeTruthy();
                     expect(sut.find('.erro').text()).toContain(
-                        questaoEditavelFactory.inconsistencias[0],
+                        opcaoEditavelFactory.inconsistencias[0],
                     );
                     expect(sut.find('.erro').text()).toContain(
-                        questaoEditavelFactory.inconsistencias[1],
+                        opcaoEditavelFactory.inconsistencias[1],
                     );
                     expect(sut.find('.erro').text()).toContain(
-                        questaoEditavelFactory.inconsistencias[2],
+                        opcaoEditavelFactory.inconsistencias[2],
                     );
                 });
                 test('exibe mensagem de erro desconhecido se ocorrer outro tipo de erro na criação', async () => {
-                    const factory =
-                        new QuestaoEditavelFactoryErroDesconhecidoStub();
-                    const sut = mount(QuestaoEdicaoVue, {
+                    const opcaoEditavelFactory =
+                        new OpcaoEditavelFactoryErroDesconhecidoStub();
+                    const sut = mount(OpcaoEdicaoVue, {
                         global: {
                             provide: {
-                                questaoEditavelFactory: factory,
+                                opcaoEditavelFactory,
                             },
                         },
                         components: {
                             IdFormularioInput: {},
                             TituloInput: {},
-                            SubtituloInput: {},
-                            ListaOpcoes: {},
+                            TextoComponent: {},
+                            VariavelComponent: {},
                             BotoesSalvarCancelar,
                         },
                         props: {
@@ -86,12 +83,10 @@ describe('QuestaoEdicao', () => {
                         data() {
                             const idFormulario = undefined;
                             const titulo = undefined;
-                            const subtitulo = undefined;
                             const erro = '';
                             return {
                                 idFormulario,
                                 titulo,
-                                subtitulo,
                                 erro,
                             };
                         },
@@ -102,19 +97,20 @@ describe('QuestaoEdicao', () => {
                         'Ocorreu um erro desconhecido',
                     );
                 });
-                test('emite um evento "criou" com um objeto de QuestaoEditavel', async () => {
-                    const factory = new QuestaoEditavelFactorySucessoStub();
-                    const sut = mount(QuestaoEdicaoVue, {
+                test('emite um evento "criou" com um objeto de OpcaoEditavel', async () => {
+                    const opcaoEditavelFactory =
+                        new OpcaoEditavelFactorySucessoStub();
+                    const sut = mount(OpcaoEdicaoVue, {
                         global: {
                             provide: {
-                                questaoEditavelFactory: factory,
+                                opcaoEditavelFactory,
                             },
                         },
                         components: {
                             IdFormularioInput: {},
                             TituloInput: {},
-                            SubtituloInput: {},
-                            ListaOpcoes: {},
+                            TextoComponent: {},
+                            VariavelComponent: {},
                             BotoesSalvarCancelar,
                         },
                         props: {
@@ -123,12 +119,10 @@ describe('QuestaoEdicao', () => {
                         data() {
                             const idFormulario = new IdFormulario('titulo');
                             const titulo = new Titulo('teste');
-                            const subtitulo = new Subtitulo('teste');
                             const erro = '';
                             return {
                                 idFormulario,
                                 titulo,
-                                subtitulo,
                                 erro,
                             };
                         },
@@ -142,88 +136,82 @@ describe('QuestaoEdicao', () => {
                         throw new Error('array de eventos não contém objeto');
                     }
                     const argumento = evento[0] as any;
-                    expect(argumento[0]).toBeInstanceOf(QuestaoEditavelDummy);
+                    expect(argumento[0]).toBeInstanceOf(OpcaoEditavelDummy);
                 });
             });
         });
         describe('se fornecida uma questão por props', () => {
             test('exibe lista de erros se ocorrer um erro na edição do objeto', async () => {
-                const factory = new QuestaoEditavelFactoryDummy();
-                const questaoStub = new QuestaoEditavelErroStub();
-                const questao = questaoStub as unknown as QuestaoEditavel;
-                const sut = mount(QuestaoEdicaoVue, {
+                const opcaoEditavelFactory = new OpcaoEditavelFactoryDummy();
+                const opcaoStub = new OpcaoEditavelErroStub();
+                const opcao = opcaoStub as unknown as OpcaoEditavel;
+                const sut = mount(OpcaoEdicaoVue, {
                     global: {
                         provide: {
-                            questaoEditavelFactory: factory,
+                            opcaoEditavelFactory,
                         },
                     },
                     components: {
                         IdFormularioInput: {},
                         TituloInput: {},
-                        SubtituloInput: {},
-                        ListaOpcoes: {},
+                        TextoComponent: {},
+                        VariavelComponent: {},
                         BotoesSalvarCancelar,
                     },
                     props: {
-                        questao,
+                        opcao,
                     },
                     data() {
                         const idFormulario = undefined;
                         const titulo = undefined;
-                        const subtitulo = undefined;
                         const erro = '';
                         return {
                             idFormulario,
                             titulo,
-                            subtitulo,
                             erro,
                         };
                     },
                 });
                 await sut.find('.botaoSalvar').trigger('click');
                 expect(sut.find('.erro').exists()).toBeTruthy();
+                expect(sut.find('.erro').text()).toContain(opcaoStub.erros.id);
                 expect(sut.find('.erro').text()).toContain(
-                    questaoStub.erros.id,
+                    opcaoStub.erros.titulo,
                 );
-                expect(sut.find('.erro').text()).toContain(
-                    questaoStub.erros.titulo,
-                );
-                expect(sut.find('.erro').text()).toContain(
-                    questaoStub.erros.subtitulo,
-                );
-                expect(sut.find('.erro').text()).toContain(
-                    questaoStub.erros.opcoes,
-                );
+                // expect(sut.find('.erro').text()).toContain(
+                //     opcaoStub.erros.textos,
+                // );
+                // expect(sut.find('.erro').text()).toContain(
+                //     opcaoStub.erros.variaveis,
+                // );
             });
-            test('emite um evento "atualizou" com um objeto de QuestaoEditavel', async () => {
-                const factory = new QuestaoEditavelFactoryDummy();
-                const questao =
-                    new QuestaoEditavelDummy() as unknown as QuestaoEditavel;
-                const sut = mount(QuestaoEdicaoVue, {
+            test('emite um evento "atualizou" com um objeto de OpcaoEditavel', async () => {
+                const opcaoEditavelFactory = new OpcaoEditavelFactoryDummy();
+                const opcao =
+                    new OpcaoEditavelDummy() as unknown as OpcaoEditavel;
+                const sut = mount(OpcaoEdicaoVue, {
                     global: {
                         provide: {
-                            questaoEditavelFactory: factory,
+                            opcaoEditavelFactory,
                         },
                     },
                     components: {
                         IdFormularioInput: {},
                         TituloInput: {},
-                        SubtituloInput: {},
-                        ListaOpcoes: {},
+                        TextoComponent: {},
+                        VariavelComponent: {},
                         BotoesSalvarCancelar,
                     },
                     props: {
-                        questao,
+                        opcao,
                     },
                     data() {
                         const idFormulario = new IdFormulario('id-editado');
                         const titulo = new Titulo('titulo-editado');
-                        const subtitulo = new Subtitulo('subtitulo-editado');
                         const erro = '';
                         return {
                             idFormulario,
                             titulo,
-                            subtitulo,
                             erro,
                         };
                     },
@@ -237,8 +225,8 @@ describe('QuestaoEdicao', () => {
                     throw new Error('array de eventos não contém objeto');
                 }
                 const argumento = evento[0] as any;
-                const retorno = argumento[0] as QuestaoEditavel;
-                expect(retorno).toBeInstanceOf(QuestaoEditavelDummy);
+                const retorno = argumento[0] as OpcaoEditavel;
+                expect(retorno).toBeInstanceOf(OpcaoEditavelDummy);
             });
         });
     });

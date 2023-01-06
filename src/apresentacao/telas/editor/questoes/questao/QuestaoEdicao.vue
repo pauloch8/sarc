@@ -3,19 +3,20 @@ import { defineComponent, inject } from 'vue';
 import TituloInput from '../../comum/TituloInput.vue';
 import IdFormularioInput from '../../comum/IdFormularioInput.vue';
 import SubtituloInput from '../../comum/SubtituloInput.vue';
-import OpcaoComponent from '../opcao/OpcaoComponent.vue';
+import ListaOpcoes from '../opcao/ListaOpcoes.vue';
 import BotoesSalvarCancelar from '../comum/BotoesSalvarCancelar.vue';
 import {
     QuestaoEditavel,
     ErroQuestaoInvalida,
-    ErroNaEdicao,
+    ErroNaEdicaoDaQuestao,
 } from '@/dominio/editor/QuestaoEditavel';
 import { Titulo } from '@/dominio/editor/Titulo';
 import { Subtitulo } from '@/dominio/editor/Subtitulo';
 import { IdFormulario } from '@/dominio/editor/IdFormulario';
 import { IQuestaoEditavelFactory } from '@/dominio/editor/QuestaoEditavelFactory';
 import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { Opcao } from '@/dominio/editor/Opcao';
+import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
+import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
 
 export default defineComponent({
     name: 'QuestaoEdicao',
@@ -23,7 +24,7 @@ export default defineComponent({
         IdFormularioInput,
         TituloInput,
         SubtituloInput,
-        // OpcaoComponent,
+        ListaOpcoes,
         BotoesSalvarCancelar,
     },
     setup() {
@@ -70,7 +71,8 @@ export default defineComponent({
             this.subtitulo = subtitulo;
         },
         cancelar() {
-            alert('cancelar');
+            this.questao?.encerrarEdicao();
+            ('cancelar');
         },
         salvar() {
             this.erro = '';
@@ -81,6 +83,7 @@ export default defineComponent({
                         this.idFormulario as IdFormulario,
                         this.titulo as Titulo,
                         this.indice as number,
+                        this.opcoes as ListaEditavel<OpcaoEditavel>,
                         this.subtitulo as Subtitulo,
                     );
                     this.$emit('criou', questao);
@@ -97,7 +100,7 @@ export default defineComponent({
                 try {
                     this.questao.setId(this.idFormulario as IdFormulario);
                 } catch (e) {
-                    if (e instanceof ErroNaEdicao) {
+                    if (e instanceof ErroNaEdicaoDaQuestao) {
                         this.inconsistencias.push(e.message);
                     } else {
                         this.inconsistencias.push(
@@ -109,7 +112,7 @@ export default defineComponent({
                 try {
                     this.questao.setTitulo(this.titulo as Titulo);
                 } catch (e) {
-                    if (e instanceof ErroNaEdicao) {
+                    if (e instanceof ErroNaEdicaoDaQuestao) {
                         this.inconsistencias.push(e.message);
                     } else {
                         this.inconsistencias.push(
@@ -121,7 +124,7 @@ export default defineComponent({
                 try {
                     this.questao.setSubtitulo(this.subtitulo as Subtitulo);
                 } catch (e) {
-                    if (e instanceof ErroNaEdicao) {
+                    if (e instanceof ErroNaEdicaoDaQuestao) {
                         this.inconsistencias.push(e.message);
                     } else {
                         this.inconsistencias.push(
@@ -129,23 +132,13 @@ export default defineComponent({
                         );
                     }
                 }
-                //indice
-                try {
-                    this.questao.setIndice(this.indice as number);
-                } catch (e) {
-                    if (e instanceof ErroNaEdicao) {
-                        this.inconsistencias.push(e.message);
-                    } else {
-                        this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização do indice',
-                        );
-                    }
-                }
                 //opcoes
                 try {
-                    this.questao.setOpcoes(this.opcoes as ListaEditavel<Opcao>);
+                    this.questao.setOpcoes(
+                        this.opcoes as ListaEditavel<OpcaoEditavel>,
+                    );
                 } catch (e) {
-                    if (e instanceof ErroNaEdicao) {
+                    if (e instanceof ErroNaEdicaoDaQuestao) {
                         this.inconsistencias.push(e.message);
                     } else {
                         this.inconsistencias.push(
@@ -156,6 +149,7 @@ export default defineComponent({
                 if (this.inconsistencias.length) {
                     this.erro = 'Ocorreram erros na atualização da Questão';
                 } else {
+                    this.questao.encerrarEdicao();
                     this.$emit('atualizou', this.questao);
                 }
             }
@@ -168,6 +162,7 @@ export default defineComponent({
 <template>
     <article class="emEdicao">
         <header>Edição de Questão</header>
+
         <IdFormularioInput
             :titulo="(titulo as Titulo)"
             @gerouId="gerouId"
@@ -183,17 +178,11 @@ export default defineComponent({
             @digitou="digitouSubtitulo"
         ></SubtituloInput>
 
-        <!-- <div class="opcoes">
-            <OpcaoComponent
-                v-for="opcao in questao?.getOpcoes().getItens()"
-                :key="opcao.getId().toString()"
-                :opcao="opcao"
-            ></OpcaoComponent>
-        </div> -->
-
-        <a href="#" role="button" class="outline adicionar"
-            >+ Adicionar Opção</a
-        >
+        <div class="opcoes">
+            <ListaOpcoes
+                :lista="(opcoes as ListaEditavel<OpcaoEditavel>)"
+            ></ListaOpcoes>
+        </div>
 
         <article class="erro" v-if="erro">
             {{ erro }}
