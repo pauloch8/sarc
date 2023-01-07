@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
 import TituloInput from '../../comum/TituloInput.vue';
-import IdFormularioInput from '../../comum/IdFormularioInput.vue';
+import IdFormularioFactory from '../../comum/IdFormularioFactory.vue';
 import SubtituloInput from '../../comum/SubtituloInput.vue';
 import ListaOpcoes from './opcao/ListaOpcoes.vue';
 import BotoesSalvarCancelar from '../../comum/BotoesSalvarCancelar.vue';
@@ -21,7 +21,7 @@ import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/tex
 export default defineComponent({
     name: 'QuestaoEdicao',
     components: {
-        IdFormularioInput,
+        IdFormularioFactory,
         TituloInput,
         SubtituloInput,
         ListaOpcoes,
@@ -164,10 +164,10 @@ export default defineComponent({
     <article class="emEdicao">
         <header>Edição de Questão</header>
 
-        <IdFormularioInput
+        <IdFormularioFactory
             :titulo="(titulo as Titulo)"
             @gerouId="gerouId"
-        ></IdFormularioInput>
+        ></IdFormularioFactory>
 
         <TituloInput
             :titulo="(titulo as Titulo)"

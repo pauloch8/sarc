@@ -4,7 +4,7 @@ import { Titulo } from '@/dominio/editor/comum/Titulo';
 import { defineComponent, inject } from 'vue';
 
 export default defineComponent({
-    name: 'IdFormularioInput',
+    name: 'IdFormularioFactory',
     setup() {
         const factory = inject<IIdFormularioFactory>('idFormularioFactory');
         if (!factory) {

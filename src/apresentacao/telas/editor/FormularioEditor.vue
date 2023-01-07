@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
-import IdFormularioInput from './comum/IdFormularioInput.vue';
+import IdFormularioFactory from './comum/IdFormularioFactory.vue';
 import TituloInput from './comum/TituloInput.vue';
 import SubtituloInput from './comum/SubtituloInput.vue';
 import BotoesSalvarCancelar from './comum/BotoesSalvarCancelar.vue';
@@ -30,7 +30,7 @@ export default defineComponent({
         };
     },
     components: {
-        IdFormularioInput,
+        IdFormularioFactory,
         TituloInput,
         SubtituloInput,
         BotoesSalvarCancelar,
@@ -100,12 +100,12 @@ export default defineComponent({
         <header>
             <h2>Edição de formulário</h2>
         </header>
-        <IdFormularioInput
+        <IdFormularioFactory
             v-if="titulo"
             :titulo="(titulo as Titulo)"
             @gerouId="alterouId"
-        ></IdFormularioInput>
-        <IdFormularioInput v-else @gerouId="alterouId"></IdFormularioInput>
+        ></IdFormularioFactory>
+        <IdFormularioFactory v-else @gerouId="alterouId"></IdFormularioFactory>
 
         <TituloInput
             v-if="titulo"

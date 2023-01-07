@@ -1,4 +1,4 @@
-import IdFormularioInput from '@/apresentacao/telas/editor/comum/IdFormularioInput.vue';
+import IdFormularioInput from '@/apresentacao/telas/editor/comum/IdFormularioFactory.vue';
 import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
 import { Titulo } from '@/dominio/editor/comum/Titulo';
 import { mount } from '@vue/test-utils';
@@ -7,7 +7,7 @@ import {
     IdFormularioFactorySucessoStub,
 } from '@/tests/dubles/dominio/editor/IdFormularioFactoryDubles';
 
-describe('IdFormularioInput', () => {
+describe('IdFormularioFactory', () => {
     describe('se fornecido um titulo como props', () => {
         test('exibe o id criado do título', async () => {
             const tituloString = 'teste';
