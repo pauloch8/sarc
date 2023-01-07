@@ -3,7 +3,7 @@ import { defineComponent, inject } from 'vue';
 import TituloInput from '../../comum/TituloInput.vue';
 import IdFormularioInput from '../../comum/IdFormularioInput.vue';
 import SubtituloInput from '../../comum/SubtituloInput.vue';
-import ListaOpcoes from '../opcao/ListaOpcoes.vue';
+import ListaOpcoes from './opcao/ListaOpcoes.vue';
 import BotoesSalvarCancelar from '../comum/BotoesSalvarCancelar.vue';
 import {
     QuestaoEditavel,

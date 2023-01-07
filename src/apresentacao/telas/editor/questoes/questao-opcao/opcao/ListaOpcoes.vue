@@ -58,7 +58,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <h2>Opções</h2>
+    <h3>Opções</h3>
 
     <div class="lista-opcoes">
         <TransitionGroup name="opcoes">

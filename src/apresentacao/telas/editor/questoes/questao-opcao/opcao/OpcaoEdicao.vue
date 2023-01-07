@@ -1,10 +1,10 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
-import TituloInput from '../../comum/TituloInput.vue';
-import IdFormularioInput from '../../comum/IdFormularioInput.vue';
-import ListaTextos from '../texto/ListaTextos.vue';
-import BotoesSalvarCancelar from '../comum/BotoesSalvarCancelar.vue';
-import VariavelComponent from '../variavel/VariavelComponent.vue';
+import TituloInput from '../../../comum/TituloInput.vue';
+import IdFormularioInput from '../../../comum/IdFormularioInput.vue';
+import ListaTextos from './texto/ListaTextos.vue';
+import BotoesSalvarCancelar from '../../comum/BotoesSalvarCancelar.vue';
+import VariavelComponent from './variavel/VariavelComponent.vue';
 import {
     ErroNaEdicaoDaOpcao,
     ErroOpcaoInvalida,

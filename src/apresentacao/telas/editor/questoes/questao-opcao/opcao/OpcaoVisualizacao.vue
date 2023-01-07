@@ -1,37 +1,28 @@
 <script lang="ts">
-import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
+import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
 import { defineComponent } from 'vue';
-import BotoesEdicao from '../comum/BotoesEdicao.vue';
+import BotoesEdicao from '../../comum/BotoesEdicao.vue';
 
 export default defineComponent({
-    name: 'TextoVisualizacao',
+    name: 'OpcaoVisualizacao',
     components: { BotoesEdicao },
     props: {
-        texto: { type: TextoEditavel, required: true },
+        opcao: { type: OpcaoEditavel, required: true },
         ehPrimeiro: { type: Boolean, required: true },
         ehUltimo: { type: Boolean, required: true },
     },
-    computed: {
-        titulo() {
-            let titulo = this.texto.toString();
-            if (titulo.length > 13) {
-                titulo = titulo.substring(0, 10) + '...';
-            }
-            return titulo;
-        },
-    },
     methods: {
         editar() {
-            this.$emit('editar', this.texto);
+            this.$emit('editar', this.opcao);
         },
         excluir() {
-            this.$emit('excluir', this.texto);
+            this.$emit('excluir', this.opcao);
         },
         descer() {
-            this.$emit('descer', this.texto);
+            this.$emit('descer', this.opcao);
         },
         subir() {
-            this.$emit('subir', this.texto);
+            this.$emit('subir', this.opcao);
         },
     },
     emits: ['excluir', 'descer', 'subir', 'editar'],
@@ -41,7 +32,7 @@ export default defineComponent({
 <template>
     <label>
         <input type="radio" disabled />
-        {{ titulo }}
+        {{ opcao.getTitulo() }}
         <BotoesEdicao
             :ehPrimeiro="ehPrimeiro"
             :ehUltimo="ehUltimo"

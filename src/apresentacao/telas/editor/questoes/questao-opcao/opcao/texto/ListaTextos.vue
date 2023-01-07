@@ -58,7 +58,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <h2>Textos</h2>
+    <h3>Textos</h3>
 
     <TransitionGroup name="questoes">
         <ItemDeTexto
