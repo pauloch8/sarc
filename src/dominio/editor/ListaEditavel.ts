@@ -13,11 +13,11 @@ export class ListaEditavel<Item extends ItemEditavel> {
 
     editarItem(itemSolicitado: Item) {
         const itemParaEditar = this.obterItem(itemSolicitado);
-        const outrosItens = this.itens.filter(item => item != itemParaEditar);
-        const itemEmEdicao = outrosItens.find(item => item.getEmEdicao());
-        if (itemEmEdicao) {
-            throw new ErroExisteItemEmEdicao(itemEmEdicao);
-        }
+        // const outrosItens = this.itens.filter(item => item != itemParaEditar);
+        // const itemEmEdicao = outrosItens.find(item => item.getEmEdicao());
+        // if (itemEmEdicao) {
+        //     throw new ErroExisteItemEmEdicao(itemEmEdicao);
+        // }
         itemParaEditar.editar();
     }
 
