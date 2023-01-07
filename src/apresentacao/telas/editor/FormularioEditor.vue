@@ -3,7 +3,7 @@ import { defineComponent, inject } from 'vue';
 import IdFormularioInput from './comum/IdFormularioInput.vue';
 import TituloInput from './comum/TituloInput.vue';
 import SubtituloInput from './comum/SubtituloInput.vue';
-import BotoesSalvarCancelar from './questoes/comum/BotoesSalvarCancelar.vue';
+import BotoesSalvarCancelar from './comum/BotoesSalvarCancelar.vue';
 import ListaQuestoes from './questoes/questao-opcao/ListaQuestoes.vue';
 import { IdFormulario } from '@/dominio/editor/IdFormulario';
 import { Subtitulo } from '@/dominio/editor/Subtitulo';

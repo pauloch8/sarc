@@ -41,16 +41,16 @@ export default defineComponent({
         },
     },
     methods: {
-        editarTexto(texto: TextoEditavel) {
+        editar(texto: TextoEditavel) {
             this.estaLista.editarItem(texto);
         },
-        excluirTexto(texto: TextoEditavel) {
+        excluir(texto: TextoEditavel) {
             this.estaLista.excluirItem(texto);
         },
-        descerTexto(texto: TextoEditavel) {
+        descer(texto: TextoEditavel) {
             this.estaLista.descerItem(texto);
         },
-        subirTexto(texto: TextoEditavel) {
+        subir(texto: TextoEditavel) {
             this.estaLista.subirItem(texto);
         },
     },
@@ -60,17 +60,17 @@ export default defineComponent({
 <template>
     <h3>Textos</h3>
 
-    <TransitionGroup name="questoes">
+    <TransitionGroup name="textos">
         <ItemDeTexto
             v-for="(texto, indice) in itensOrdenados"
             :key="indice"
             :texto="(texto as TextoEditavel)"
             :ehPrimeiro="indice === 0"
             :ehUltimo="indice === itensOrdenados.length - 1"
-            @editar="editarTexto"
-            @excluir="excluirTexto"
-            @descer="descerTexto"
-            @subir="subirTexto"
+            @editar="editar"
+            @excluir="excluir"
+            @descer="descer"
+            @subir="subir"
         ></ItemDeTexto>
     </TransitionGroup>
 
@@ -78,7 +78,7 @@ export default defineComponent({
 </template>
 
 <style scoped>
-.questoes-move {
+.textos-move {
     transition: all 0.5s ease-in-out;
 }
 </style>

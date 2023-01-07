@@ -3,7 +3,7 @@ import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
 import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
 import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
 import { defineComponent } from 'vue';
-import BotoesEdicao from '../comum/BotoesEdicao.vue';
+import BotoesEdicao from '../../comum/BotoesEdicao.vue';
 
 export default defineComponent({
     name: 'QuestaoVisualizacao',

@@ -1,11 +1,14 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
-import BotoesSalvarCancelar from '../comum/BotoesSalvarCancelar.vue';
+import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
 import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
 import { ITextoEditavelFactory } from '@/dominio/editor/TextoEditavelFactory';
 
 export default defineComponent({
     name: 'TextoEdicao',
+    components: {
+        BotoesSalvarCancelar,
+    },
     setup() {
         const factory = inject<ITextoEditavelFactory>('textoEditavelFactory');
         if (!factory) {

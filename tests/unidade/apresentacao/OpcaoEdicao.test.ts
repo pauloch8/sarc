@@ -1,5 +1,5 @@
-import OpcaoEdicaoVue from '@/apresentacao/telas/editor/questoes/opcao/OpcaoEdicao.vue';
-import BotoesSalvarCancelar from '@/apresentacao/telas/editor/questoes/comum/BotoesSalvarCancelar.vue';
+import OpcaoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/opcao/OpcaoEdicao.vue';
+import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
 import {
     OpcaoEditavelFactoryErroOpcaoInvalidaStub,
     OpcaoEditavelFactoryErroDesconhecidoStub,

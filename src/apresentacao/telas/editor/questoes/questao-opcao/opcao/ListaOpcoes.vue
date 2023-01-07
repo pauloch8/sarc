@@ -23,7 +23,7 @@ export default defineComponent({
         };
     },
     computed: {
-        itensOrdenados() {
+        itensOrdenados(): OpcaoEditavel[] {
             const retorno = (this.lista as ListaEditavel<OpcaoEditavel>)
                 .getItens()
                 .sort((a, b) => {
