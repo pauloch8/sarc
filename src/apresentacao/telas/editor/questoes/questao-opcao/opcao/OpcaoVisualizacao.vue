@@ -1,5 +1,5 @@
 <script lang="ts">
-import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
+import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import { defineComponent } from 'vue';
 import BotoesEdicao from '../../../comum/BotoesEdicao.vue';
 

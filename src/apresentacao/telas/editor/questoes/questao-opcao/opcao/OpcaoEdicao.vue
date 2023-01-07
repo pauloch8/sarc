@@ -9,12 +9,12 @@ import {
     ErroNaEdicaoDaOpcao,
     ErroOpcaoInvalida,
     OpcaoEditavel,
-} from '@/dominio/editor/OpcaoEditavel';
-import { IOpcaoEditavelFactory } from '@/dominio/editor/OpcaoEditavelFactory';
-import { Titulo } from '@/dominio/editor/Titulo';
-import { IdFormulario } from '@/dominio/editor/IdFormulario';
-import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
+} from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
+import { IOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
+import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 
 export default defineComponent({
     name: 'OpcaoEdicao',

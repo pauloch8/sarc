@@ -1,9 +1,9 @@
 <script lang="ts">
-import { Subtitulo } from '@/dominio/editor/Subtitulo';
+import { Subtitulo } from '@/dominio/editor/comum/Subtitulo';
 import {
     ISubtituloFactory,
     ErroDeCriacaoDeSubtitulo,
-} from '@/dominio/editor/SubtituloFactory';
+} from '@/dominio/editor/comum/SubtituloFactory';
 import { defineComponent, inject } from 'vue';
 
 export default defineComponent({

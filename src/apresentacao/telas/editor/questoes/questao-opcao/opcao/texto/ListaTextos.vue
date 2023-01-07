@@ -1,6 +1,6 @@
 <script lang="ts">
-import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
+import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { defineComponent } from 'vue';
 import ItemDeTexto from './ItemDeTexto.vue';
 import AdicionarTexto from './AdicionarTexto.vue';

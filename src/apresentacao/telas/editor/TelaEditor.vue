@@ -2,14 +2,14 @@
 import { defineComponent } from 'vue';
 import FormularioEditor from './FormularioEditor.vue';
 import { FormularioEditor as FormularioEditorModel } from '@/dominio/editor/FormularioEditor';
-import { IdFormulario } from '@/dominio/editor/IdFormulario';
+import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
 import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
-import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
-import { Subtitulo } from '@/dominio/editor/Subtitulo';
-import { Titulo } from '@/dominio/editor/Titulo';
+import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
+import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { Subtitulo } from '@/dominio/editor/comum/Subtitulo';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
 import { Texto } from '@/dominio/processamento/processador/texto/Texto';
-import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 
 export default defineComponent({
     name: 'TelaEditor',

@@ -1,5 +1,5 @@
 import SubtituloInputVue from '@/apresentacao/telas/editor/comum/SubtituloInput.vue';
-import { Subtitulo } from '@/dominio/editor/Subtitulo';
+import { Subtitulo } from '@/dominio/editor/comum/Subtitulo';
 import {
     SubtituloFactoryDummy,
     SubtituloFactoryErroStub,

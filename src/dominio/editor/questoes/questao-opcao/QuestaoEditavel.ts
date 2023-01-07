@@ -1,9 +1,9 @@
-import { IdFormulario } from './IdFormulario';
-import { IItemEditavel, ItemEditavel } from './ItemEditavel';
-import { ListaEditavel } from './ListaEditavel';
-import { OpcaoEditavel } from './OpcaoEditavel';
-import { Subtitulo } from './Subtitulo';
-import { Titulo } from './Titulo';
+import { IdFormulario } from '../../comum/IdFormulario';
+import { IItemEditavel, ItemEditavel } from '../ItemEditavel';
+import { ListaEditavel } from '../ListaEditavel';
+import { OpcaoEditavel } from './opcao/OpcaoEditavel';
+import { Subtitulo } from '../../comum/Subtitulo';
+import { Titulo } from '../../comum/Titulo';
 
 export interface IQuestaoEditavel extends IItemEditavel {
     getId(): IdFormulario;

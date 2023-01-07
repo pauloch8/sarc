@@ -1,7 +1,7 @@
 <script lang="ts">
-import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
-import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
+import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
+import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
 import { defineComponent } from 'vue';
 import BotoesEdicao from '../../comum/BotoesEdicao.vue';
 

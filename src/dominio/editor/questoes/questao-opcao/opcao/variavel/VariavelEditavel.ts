@@ -1,6 +1,6 @@
-import { IdFormulario } from './IdFormulario';
-import { ItemEditavel } from './ItemEditavel';
-import { Titulo } from './Titulo';
+import { IdFormulario } from '../../../../comum/IdFormulario';
+import { ItemEditavel } from '../../../ItemEditavel';
+import { Titulo } from '../../../../comum/Titulo';
 
 export class VariavelEditavel extends ItemEditavel {
     constructor(

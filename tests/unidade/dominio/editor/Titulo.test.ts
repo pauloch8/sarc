@@ -2,7 +2,7 @@ import {
     ErroTituloComMenosDeTresCaracteres,
     ErroTituloEmBranco,
     Titulo,
-} from '@/dominio/editor/Titulo';
+} from '@/dominio/editor/comum/Titulo';
 
 describe('Titulo', () => {
     describe('instanciar', () => {

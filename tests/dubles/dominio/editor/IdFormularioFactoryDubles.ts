@@ -1,5 +1,5 @@
-import { IdFormulario } from '@/dominio/editor/IdFormulario';
-import { IIdFormularioFactory } from '@/dominio/editor/IdFormularioFactory';
+import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { IIdFormularioFactory } from '@/dominio/editor/comum/IdFormularioFactory';
 
 export class IdFormularioFactoryDummy implements IIdFormularioFactory {
     criarDeString(): IdFormulario {

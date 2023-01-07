@@ -1,8 +1,8 @@
-import { IdFormulario } from './IdFormulario';
+import { IdFormulario } from './comum/IdFormulario';
 import { ListaEditavel } from './ListaEditavel';
-import { QuestaoEditavel } from './QuestaoEditavel';
-import { Subtitulo } from './Subtitulo';
-import { Titulo } from './Titulo';
+import { QuestaoEditavel } from './questoes/questao-opcao/QuestaoEditavel';
+import { Subtitulo } from './comum/Subtitulo';
+import { Titulo } from './comum/Titulo';
 
 export interface IFormularioEditor {
     getId(): IdFormulario;

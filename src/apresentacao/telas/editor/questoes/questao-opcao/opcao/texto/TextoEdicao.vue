@@ -1,8 +1,8 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
 import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
-import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
-import { ITextoEditavelFactory } from '@/dominio/editor/TextoEditavelFactory';
+import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { ITextoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
 
 export default defineComponent({
     name: 'TextoEdicao',

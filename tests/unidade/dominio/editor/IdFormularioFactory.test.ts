@@ -1,9 +1,9 @@
 import {
     ErroIdStringInvalida,
     IdFormulario,
-} from '@/dominio/editor/IdFormulario';
-import { IdFormularioFactory } from '@/dominio/editor/IdFormularioFactory';
-import { Titulo } from '@/dominio/editor/Titulo';
+} from '@/dominio/editor/comum/IdFormulario';
+import { IdFormularioFactory } from '@/dominio/editor/comum/IdFormularioFactory';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
 
 describe('IdFormularioFactory', () => {
     describe('criar de Titulo', () => {

@@ -9,14 +9,14 @@ import {
     QuestaoEditavel,
     ErroQuestaoInvalida,
     ErroNaEdicaoDaQuestao,
-} from '@/dominio/editor/QuestaoEditavel';
-import { Titulo } from '@/dominio/editor/Titulo';
-import { Subtitulo } from '@/dominio/editor/Subtitulo';
-import { IdFormulario } from '@/dominio/editor/IdFormulario';
-import { IQuestaoEditavelFactory } from '@/dominio/editor/QuestaoEditavelFactory';
-import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
-import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
+} from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
+import { Subtitulo } from '@/dominio/editor/comum/Subtitulo';
+import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { IQuestaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavelFactory';
+import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 
 export default defineComponent({
     name: 'QuestaoEdicao',

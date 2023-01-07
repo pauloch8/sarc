@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import { Titulo } from '@/dominio/editor/Titulo';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
 import {
     TituloFactoryLancaErroStub,
     TituloFactorySucessoStub,

@@ -2,7 +2,7 @@
 import { defineComponent } from 'vue';
 import TextoVisualizacao from './TextoVisualizacao.vue';
 import TextoEdicao from './TextoEdicao.vue';
-import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 
 export default defineComponent({
     name: 'ItemDeTexto',

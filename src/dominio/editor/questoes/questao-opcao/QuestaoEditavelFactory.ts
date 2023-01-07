@@ -1,9 +1,9 @@
-import { IdFormulario } from './IdFormulario';
+import { IdFormulario } from './comum/IdFormulario';
 import { ListaEditavel } from './ListaEditavel';
 import { OpcaoEditavel } from './OpcaoEditavel';
 import { IQuestaoEditavel, QuestaoEditavel } from './QuestaoEditavel';
-import { Subtitulo } from './Subtitulo';
-import { Titulo } from './Titulo';
+import { Subtitulo } from './comum/Subtitulo';
+import { Titulo } from './comum/Titulo';
 
 export interface IQuestaoEditavelFactory {
     criar(

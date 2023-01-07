@@ -1,9 +1,9 @@
-import { IdFormulario } from './IdFormulario';
-import { IItemEditavel, ItemEditavel } from './ItemEditavel';
-import { ListaEditavel } from './ListaEditavel';
-import { TextoEditavel } from './TextoEditavel';
-import { Titulo } from './Titulo';
-import { VariavelEditavel } from './VariavelEditavel';
+import { IdFormulario } from '../../../comum/IdFormulario';
+import { IItemEditavel, ItemEditavel } from '../../ItemEditavel';
+import { ListaEditavel } from '../../ListaEditavel';
+import { TextoEditavel } from './texto/TextoEditavel';
+import { Titulo } from '../../../comum/Titulo';
+import { VariavelEditavel } from './variavel/VariavelEditavel';
 
 export interface IOpcaoEditavel extends IItemEditavel {
     getTitulo(): Titulo;

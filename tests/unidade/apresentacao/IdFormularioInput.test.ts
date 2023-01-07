@@ -1,6 +1,6 @@
 import IdFormularioInput from '@/apresentacao/telas/editor/comum/IdFormularioInput.vue';
-import { IdFormulario } from '@/dominio/editor/IdFormulario';
-import { Titulo } from '@/dominio/editor/Titulo';
+import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
 import { mount } from '@vue/test-utils';
 import {
     IdFormularioFactoryDummy,

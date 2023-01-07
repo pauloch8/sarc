@@ -7,13 +7,13 @@ import {
     OpcaoEditavelFactoryDummy,
 } from '@/tests/dubles/dominio/editor/OpcaoEditavelFactoryDubles';
 import { mount } from '@vue/test-utils';
-import { IdFormulario } from '@/dominio/editor/IdFormulario';
-import { Titulo } from '@/dominio/editor/Titulo';
+import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
 import {
     OpcaoEditavelDummy,
     OpcaoEditavelErroStub,
 } from '@/tests/dubles/dominio/editor/OpcaoEditavelDubles';
-import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
+import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 
 describe('OpcaoEdicao', () => {
     describe('Salvar', () => {

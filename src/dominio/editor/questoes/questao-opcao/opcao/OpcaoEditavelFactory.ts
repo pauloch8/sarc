@@ -1,8 +1,8 @@
-import { IdFormulario } from './IdFormulario';
+import { IdFormulario } from './comum/IdFormulario';
 import { ListaEditavel } from './ListaEditavel';
 import { IOpcaoEditavel, OpcaoEditavel } from './OpcaoEditavel';
 import { TextoEditavel } from './TextoEditavel';
-import { Titulo } from './Titulo';
+import { Titulo } from './comum/Titulo';
 import { VariavelEditavel } from './VariavelEditavel';
 
 export interface IOpcaoEditavelFactory {

@@ -5,14 +5,14 @@ import TituloInput from './comum/TituloInput.vue';
 import SubtituloInput from './comum/SubtituloInput.vue';
 import BotoesSalvarCancelar from './comum/BotoesSalvarCancelar.vue';
 import ListaQuestoes from './questoes/questao-opcao/ListaQuestoes.vue';
-import { IdFormulario } from '@/dominio/editor/IdFormulario';
-import { Subtitulo } from '@/dominio/editor/Subtitulo';
-import { Titulo } from '@/dominio/editor/Titulo';
+import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { Subtitulo } from '@/dominio/editor/comum/Subtitulo';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
 import { FormularioEditor } from '@/dominio/editor/FormularioEditor';
 import { FormularioEditorFactory } from '@/dominio/editor/FormularioEditorFactory';
-import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
-import { ItemEditavel } from '@/dominio/editor/ItemEditavel';
+import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { ItemEditavel } from '@/dominio/editor/questoes/ItemEditavel';
 
 export default defineComponent({
     name: 'FormularioEditor',

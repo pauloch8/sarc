@@ -1,4 +1,4 @@
-import { ItemEditavel, IItemEditavel } from './ItemEditavel';
+import { ItemEditavel, IItemEditavel } from '../../../ItemEditavel';
 
 export interface ITextoEditavel extends IItemEditavel {
     getTexto(): string;

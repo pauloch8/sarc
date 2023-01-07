@@ -1,6 +1,6 @@
 <script lang="ts">
 import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { QuestaoEditavel } from '@/dominio/editor/QuestaoEditavel';
+import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
 import { defineComponent } from 'vue';
 import ItemDeQuestao from './ItemDeQuestao.vue';
 import AdicionarQuestao from './AdicionarQuestao.vue';

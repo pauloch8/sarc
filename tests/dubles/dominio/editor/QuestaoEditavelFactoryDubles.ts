@@ -2,8 +2,8 @@ import {
     ErroQuestaoInvalida,
     IQuestaoEditavel,
     QuestaoEditavel,
-} from '@/dominio/editor/QuestaoEditavel';
-import { IQuestaoEditavelFactory } from '@/dominio/editor/QuestaoEditavelFactory';
+} from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { IQuestaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavelFactory';
 import { QuestaoEditavelDummy } from './QuestaoEditavelDubles';
 
 export class QuestaoEditavelFactoryDummy implements IQuestaoEditavelFactory {

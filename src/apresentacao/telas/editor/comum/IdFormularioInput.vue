@@ -1,6 +1,6 @@
 <script lang="ts">
-import { IIdFormularioFactory } from '@/dominio/editor/IdFormularioFactory';
-import { Titulo } from '@/dominio/editor/Titulo';
+import { IIdFormularioFactory } from '@/dominio/editor/comum/IdFormularioFactory';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
 import { defineComponent, inject } from 'vue';
 
 export default defineComponent({

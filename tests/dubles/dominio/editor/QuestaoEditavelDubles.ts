@@ -1,13 +1,13 @@
 import {
     ErroNaEdicaoDaQuestao,
     IQuestaoEditavel,
-} from '@/dominio/editor/QuestaoEditavel';
-import { IdFormulario } from '@/dominio/editor/IdFormulario';
-import { Subtitulo } from '@/dominio/editor/Subtitulo';
-import { Titulo } from '@/dominio/editor/Titulo';
-import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
-import { OpcaoEditavel } from '@/dominio/editor/OpcaoEditavel';
-import { TextoEditavel } from '@/dominio/editor/TextoEditavel';
+} from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { Subtitulo } from '@/dominio/editor/comum/Subtitulo';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
+import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 
 export class QuestaoEditavelErroStub implements IQuestaoEditavel {
     erros = {

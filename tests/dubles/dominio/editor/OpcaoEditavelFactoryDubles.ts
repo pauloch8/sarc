@@ -1,8 +1,8 @@
 import {
     ErroOpcaoInvalida,
     OpcaoEditavel,
-} from '@/dominio/editor/OpcaoEditavel';
-import { IOpcaoEditavelFactory } from '@/dominio/editor/OpcaoEditavelFactory';
+} from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
+import { IOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
 import { OpcaoEditavelDummy } from '@/tests/dubles/dominio/editor/OpcaoEditavelDubles';
 
 export class OpcaoEditavelFactoryDummy implements IOpcaoEditavelFactory {
