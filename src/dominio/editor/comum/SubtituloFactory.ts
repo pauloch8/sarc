@@ -1,7 +1,7 @@
-import { Subtitulo } from './Subtitulo';
+import { ISubtitulo, Subtitulo } from './Subtitulo';
 
 export interface ISubtituloFactory {
-    criar(subtitulo: string): Subtitulo;
+    criar(subtitulo: string): ISubtitulo;
 }
 
 export class SubtituloFactory implements ISubtituloFactory {

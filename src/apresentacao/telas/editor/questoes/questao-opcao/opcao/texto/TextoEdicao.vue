@@ -1,12 +1,25 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
+import IdFormularioFactory from '../../../../comum/IdFormularioFactory.vue';
+import TituloInput from '../../../../comum/TituloInput.vue';
 import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { Titulo } from '@/dominio/editor/comum/Titulo';
+import TextoModeloInput from '@/apresentacao/telas/editor/comum/TextoModeloInput.vue';
+import { TextoModelo } from '@/dominio/editor/comum/TextoModelo';
+import { InconsistenciasNaValidacaoDoTexto } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { ITextoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
+import {
+    ErroNaEdicaoDoTexto,
+    TextoEditavel,
+} from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 
 export default defineComponent({
     name: 'TextoEdicao',
     components: {
+        IdFormularioFactory,
+        TituloInput,
+        TextoModeloInput,
         BotoesSalvarCancelar,
     },
     setup() {
@@ -20,27 +33,122 @@ export default defineComponent({
     },
     props: {
         texto: { type: TextoEditavel, required: false },
-        indice: { type: Number, required: false },
+        indice: { type: Number, required: true },
     },
     data() {
-        const categoria = this.texto?.getCategoria();
-        const textoString = this.texto?.getTexto();
+        const id = this.texto?.getId();
+        const titulo = this.texto?.getTitulo();
+        const textoModelo = this.texto?.getTextoModelo();
         const erro = '';
         const inconsistencias: string[] = [];
         return {
-            categoria,
-            textoString,
+            id,
+            titulo,
+            textoModelo,
             erro,
             inconsistencias,
         };
     },
     methods: {
+        gerouId(id: IdFormulario) {
+            this.id = id;
+        },
+        digitouTitulo(titulo: Titulo) {
+            this.titulo = titulo;
+        },
+        digitouTextoModelo(textoModelo: TextoModelo) {
+            this.textoModelo = textoModelo;
+        },
         cancelar() {
             this.texto?.encerrarEdicao();
             this.$emit('cancelou');
         },
         salvar() {
-            'salvar';
+            this.erro = '';
+            this.inconsistencias = [];
+            if (!this.texto) {
+                this.criar();
+            } else {
+                this.editar(this.texto);
+            }
+        },
+        criar() {
+            try {
+                const texto = this.factory.criar(
+                    this.id as IdFormulario,
+                    this.titulo as Titulo,
+                    this.textoModelo as TextoModelo,
+                    this.indice as number,
+                );
+                this.$emit('criou', texto);
+            } catch (e) {
+                if (e instanceof InconsistenciasNaValidacaoDoTexto) {
+                    this.erro = e.message;
+                    this.inconsistencias = e.inconsistencias;
+                } else {
+                    this.erro = 'Ocorreu um erro desconhecido';
+                }
+            }
+        },
+        editar(texto: TextoEditavel) {
+            try {
+                texto.setId(this.id as IdFormulario);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDoTexto) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização do id',
+                    );
+                }
+            }
+            //titulo
+            try {
+                texto.setTitulo(this.titulo as Titulo);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDoTexto) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização do titulo',
+                    );
+                }
+            }
+            //textos
+            try {
+                texto.setTextoModelo(this.textoModelo as TextoModelo);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDoTexto) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização do Texto Modelo',
+                    );
+                }
+            }
+            if (this.inconsistencias.length) {
+                this.erro = 'Ocorreram erros na atualização do Texto';
+            } else {
+                texto.encerrarEdicao();
+                this.$emit('atualizou', this.texto);
+            }
+            try {
+                texto.setIndice(this.indice);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDoTexto) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização do índice',
+                    );
+                }
+            }
+            if (this.inconsistencias.length) {
+                this.erro = 'Ocorreram erros na atualização do Texto';
+            } else {
+                texto.encerrarEdicao();
+                this.$emit('atualizou', this.texto);
+            }
         },
     },
     emits: ['cancelou', 'criou', 'atualizou'],
@@ -50,6 +158,21 @@ export default defineComponent({
 <template>
     <article class="emEdicao">
         <header>Edição de Texto</header>
+
+        <IdFormularioFactory
+            :titulo="(titulo as Titulo)"
+            @gerouId="gerouId"
+        ></IdFormularioFactory>
+
+        <TituloInput
+            :titulo="(titulo as Titulo)"
+            @digitou="digitouTitulo"
+        ></TituloInput>
+
+        <TextoModeloInput
+            :textoModelo="(textoModelo as TextoModelo)"
+            @digitou="digitouTextoModelo"
+        ></TextoModeloInput>
 
         <article class="erro" v-if="erro">
             {{ erro }}
@@ -62,7 +185,6 @@ export default defineComponent({
                 </ul>
             </div>
         </article>
-
         <footer>
             <BotoesSalvarCancelar
                 @cancelou="cancelar"

@@ -1,11 +1,23 @@
-import { IdFormulario } from '../../../../comum/IdFormulario';
-import { ItemEditavel } from '../../../ItemEditavel';
-import { Titulo } from '../../../../comum/Titulo';
+import { IItemEditavel, ItemEditavel } from '../../../ItemEditavel';
+import { IIdFormulario } from '../../../../comum/IdFormulario';
+import { ITitulo } from '../../../../comum/Titulo';
 
-export class VariavelEditavel extends ItemEditavel {
+export interface IVariavelEditavel extends IItemEditavel {
+    getId(): IIdFormulario;
+    setId(id: IIdFormulario): void;
+    getTitulo(): ITitulo;
+    setTitulo(titulo: ITitulo): void;
+    getTipo(): ITitulo;
+    setTipo(tipo: string): void;
+}
+
+export class VariavelEditavel
+    extends ItemEditavel
+    implements IVariavelEditavel
+{
     constructor(
-        private id: IdFormulario,
-        private titulo: Titulo,
+        private id: IIdFormulario,
+        private titulo: ITitulo,
         private tipo: string,
         indice: number,
     ) {
@@ -16,7 +28,7 @@ export class VariavelEditavel extends ItemEditavel {
         return this.id;
     }
 
-    setId(id: IdFormulario) {
+    setId(id: IIdFormulario) {
         if (!id) {
             throw new ErroNaEdicaoDaVariavel('Id vazio informado');
         }
@@ -27,7 +39,7 @@ export class VariavelEditavel extends ItemEditavel {
         return this.titulo;
     }
 
-    setTitulo(titulo: Titulo) {
+    setTitulo(titulo: ITitulo) {
         if (!titulo) {
             throw new ErroNaEdicaoDaVariavel('Titulo vazio informado');
         }

@@ -1,28 +1,28 @@
-import { IdFormulario } from '../../../comum/IdFormulario';
+import { IIdFormulario } from '../../../comum/IdFormulario';
 import { IItemEditavel, ItemEditavel } from '../../ItemEditavel';
-import { ListaEditavel } from '../../ListaEditavel';
-import { TextoEditavel } from './texto/TextoEditavel';
-import { Titulo } from '../../../comum/Titulo';
-import { VariavelEditavel } from './variavel/VariavelEditavel';
+import { IListaEditavel } from '../../ListaEditavel';
+import { ITextoEditavel } from './texto/TextoEditavel';
+import { ITitulo } from '../../../comum/Titulo';
+import { IVariavelEditavel } from './variavel/VariavelEditavel';
 
 export interface IOpcaoEditavel extends IItemEditavel {
-    getTitulo(): Titulo;
-    setTitulo(titulo: Titulo): void;
-    getId(): IdFormulario;
-    setId(id: IdFormulario): void;
-    getTextos(): ListaEditavel<TextoEditavel>;
-    setTextos(textos: ListaEditavel<TextoEditavel>): void;
-    getVariaveis(): ListaEditavel<VariavelEditavel> | undefined;
-    setVariaveis(variaveis: ListaEditavel<VariavelEditavel>): void;
+    getTitulo(): ITitulo;
+    setTitulo(titulo: ITitulo): void;
+    getId(): IIdFormulario;
+    setId(id: IIdFormulario): void;
+    getTextos(): IListaEditavel<ITextoEditavel>;
+    setTextos(textos: IListaEditavel<ITextoEditavel>): void;
+    getVariaveis(): IListaEditavel<IVariavelEditavel> | undefined;
+    setVariaveis(variaveis: IListaEditavel<IVariavelEditavel>): void;
 }
 
 export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
     constructor(
-        private id: IdFormulario,
-        private titulo: Titulo,
+        private id: IIdFormulario,
+        private titulo: ITitulo,
         indice: number,
-        private textos: ListaEditavel<TextoEditavel>,
-        private variaveis?: ListaEditavel<VariavelEditavel>,
+        private textos: IListaEditavel<ITextoEditavel>,
+        private variaveis?: IListaEditavel<IVariavelEditavel>,
     ) {
         super(indice);
         const validacao = this.validar();
@@ -69,7 +69,7 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
         return this.titulo;
     }
 
-    setTitulo(titulo: Titulo) {
+    setTitulo(titulo: ITitulo) {
         if (!titulo) {
             throw new ErroNaEdicaoDaOpcao('Titulo vazio informado');
         }
@@ -80,7 +80,7 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
         return this.id;
     }
 
-    setId(id: IdFormulario) {
+    setId(id: IIdFormulario) {
         if (!id) {
             throw new ErroNaEdicaoDaOpcao('Id vazio informado');
         }
@@ -91,7 +91,7 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
         return this.textos;
     }
 
-    setTextos(textos: ListaEditavel<TextoEditavel>) {
+    setTextos(textos: IListaEditavel<ITextoEditavel>) {
         if (!textos) {
             throw new ErroNaEdicaoDaOpcao(
                 'Não foi informada lista de textos da opção',
@@ -109,7 +109,7 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
         return this.variaveis;
     }
 
-    setVariaveis(variaveis: ListaEditavel<VariavelEditavel>): void {
+    setVariaveis(variaveis: IListaEditavel<IVariavelEditavel>): void {
         throw new Error('Method not implemented.');
     }
 

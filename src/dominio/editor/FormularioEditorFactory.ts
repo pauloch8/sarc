@@ -1,10 +1,10 @@
 import { EspecificacaoDTO } from '../especificacao/EspecificacaoDTO';
 import { FormularioEditor } from './FormularioEditor';
-import { IdFormulario } from './comum/IdFormulario';
-import { ListaEditavel } from './ListaEditavel';
+import { IIdFormulario } from './comum/IdFormulario';
+import { ListaEditavel } from './questoes/ListaEditavel';
 import { QuestaoEditavel } from './questoes/questao-opcao/QuestaoEditavel';
-import { Subtitulo } from './comum/Subtitulo';
-import { Titulo } from './comum/Titulo';
+import { ISubtitulo } from './comum/Subtitulo';
+import { ITitulo } from './comum/Titulo';
 
 export class FormularioEditorFactory {
     criarDaEspecificacao(especificacao: EspecificacaoDTO): FormularioEditor {
@@ -12,7 +12,7 @@ export class FormularioEditorFactory {
         throw 9;
     }
 
-    criarNovo(id: IdFormulario, titulo: Titulo, subtitulo?: Subtitulo) {
+    criarNovo(id: IIdFormulario, titulo: ITitulo, subtitulo?: ISubtitulo) {
         const questoes = new ListaEditavel<QuestaoEditavel>();
         const formulario = new FormularioEditor(
             id,

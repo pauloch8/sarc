@@ -1,27 +1,27 @@
-import { IdFormulario } from './comum/IdFormulario';
-import { ListaEditavel } from './ListaEditavel';
-import { OpcaoEditavel } from './OpcaoEditavel';
 import { IQuestaoEditavel, QuestaoEditavel } from './QuestaoEditavel';
-import { Subtitulo } from './comum/Subtitulo';
-import { Titulo } from './comum/Titulo';
+import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
+import { IListaEditavel } from '../ListaEditavel';
+import { ITitulo } from '../../comum/Titulo';
+import { ISubtitulo } from '../../comum/Subtitulo';
+import { IIdFormulario } from '../../comum/IdFormulario';
 
 export interface IQuestaoEditavelFactory {
     criar(
-        id: IdFormulario,
-        titulo: Titulo,
+        id: IIdFormulario,
+        titulo: ITitulo,
         indice: number,
-        opcoes: ListaEditavel<OpcaoEditavel>,
-        subtitulo: Subtitulo,
+        opcoes: IListaEditavel<IOpcaoEditavel>,
+        subtitulo: ISubtitulo,
     ): IQuestaoEditavel;
 }
 
 export class QuestaoEditavelFactory implements IQuestaoEditavelFactory {
     criar(
-        id: IdFormulario,
-        titulo: Titulo,
+        id: IIdFormulario,
+        titulo: ITitulo,
         indice: number,
-        opcoes: ListaEditavel<OpcaoEditavel>,
-        subtitulo?: Subtitulo,
+        opcoes: IListaEditavel<IOpcaoEditavel>,
+        subtitulo?: ISubtitulo,
     ) {
         return new QuestaoEditavel(id, titulo, indice, opcoes, subtitulo);
     }

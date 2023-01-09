@@ -1,4 +1,8 @@
-export class Titulo {
+export interface ITitulo {
+    toString(): string;
+}
+
+export class Titulo implements ITitulo {
     private titulo: string;
 
     constructor(tituloString: string) {

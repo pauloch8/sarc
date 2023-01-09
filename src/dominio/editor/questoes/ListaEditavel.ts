@@ -1,6 +1,17 @@
-import { ItemEditavel } from './ItemEditavel';
+import { IItemEditavel } from './ItemEditavel';
 
-export class ListaEditavel<Item extends ItemEditavel> {
+export interface IListaEditavel<IItemEditavel> {
+    getItens(): IItemEditavel[];
+    getLength(): number;
+    editarItem(itemSolicitado: IItemEditavel): void;
+    subirItem(itemSolicitada: IItemEditavel): void;
+    descerItem(itemSolicitada: IItemEditavel): void;
+    excluirItem(itemSolicitada: IItemEditavel): void;
+    adicionarItem(item: IItemEditavel): void;
+    obterItemPorIndice(indice: number): IItemEditavel;
+}
+
+export class ListaEditavel<Item extends IItemEditavel> {
     constructor(private itens: Item[] = []) {}
 
     getItens() {
@@ -70,6 +81,10 @@ export class ListaEditavel<Item extends ItemEditavel> {
         }
     }
 
+    adicionarItem(item: Item) {
+        this.itens.push(item);
+    }
+
     obterItemPorIndice(indice: number) {
         const retorno = this.itens.find(item => item.getIndice() === indice);
         if (!retorno) {
@@ -88,13 +103,13 @@ export class ListaEditavel<Item extends ItemEditavel> {
 }
 
 export class ErroExisteItemEmEdicao extends Error {
-    constructor(item: ItemEditavel) {
+    constructor(item: IItemEditavel) {
         super(`Existe um item em edição, indice: ${item.toString()}`);
     }
 }
 
 export class ErroItemSolicitadoNaoEncontrado extends Error {
-    constructor(item: ItemEditavel) {
+    constructor(item: IItemEditavel) {
         super(
             `Questão solicitada não encontrada no formulário: ${item.toString()}`,
         );

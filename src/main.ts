@@ -23,12 +23,13 @@ import { FormularioFactory } from './dominio/formulario/FormularioFactory';
 import { ProcessadorDeSelecaoFactory } from './dominio/processamento/processador/questoes-opcao/selecao/ProcessadorDeSelecaoFactory';
 import { FormularioEditorFactory } from './dominio/editor/FormularioEditorFactory';
 import { EspecificacaoDTO } from './dominio/especificacao/EspecificacaoDTO';
-import { TituloFactory } from './dominio/editor/TituloFactory';
-import { IdFormularioFactory } from './dominio/editor/IdFormularioFactory';
-import { SubtituloFactory } from './dominio/editor/SubtituloFactory';
-import { QuestaoEditavelFactory } from './dominio/editor/QuestaoEditavelFactory';
-import { OpcaoEditavelFactory } from './dominio/editor/OpcaoEditavelFactory';
-import { TextoEditavelFactory } from './dominio/editor/TextoEditavelFactory';
+import { TituloFactory } from './dominio/editor/comum/TituloFactory';
+import { IdFormularioFactory } from './dominio/editor/comum/IdFormularioFactory';
+import { SubtituloFactory } from './dominio/editor/comum/SubtituloFactory';
+import { QuestaoEditavelFactory } from './dominio/editor/questoes/questao-opcao/QuestaoEditavelFactory';
+import { OpcaoEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
+import { TextoEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
+import { TextoModeloFactory } from './dominio/editor/comum/TextoModeloFactory';
 
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
@@ -42,6 +43,7 @@ const formularioEditorFactory = new FormularioEditorFactory();
 const questaoEditavelFactory = new QuestaoEditavelFactory();
 const opcaoEditavelFactory = new OpcaoEditavelFactory();
 const textoEditavelFactory = new TextoEditavelFactory();
+const textoModeloFactory = new TextoModeloFactory();
 
 createApp(App)
     .use(router)
@@ -53,6 +55,7 @@ createApp(App)
     .provide('questaoEditavelFactory', questaoEditavelFactory)
     .provide('opcaoEditavelFactory', opcaoEditavelFactory)
     .provide('textoEditavelFactory', textoEditavelFactory)
+    .provide('textoModeloFactory', textoModeloFactory)
     .provide('tituloFactory', tituloFactory)
     .provide('subtituloFactory', subtituloFactory)
     .provide('idFormularioFactory', idFormularioFactory)

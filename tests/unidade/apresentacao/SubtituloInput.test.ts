@@ -4,7 +4,7 @@ import {
     SubtituloFactoryDummy,
     SubtituloFactoryErroStub,
     SubtituloFactorySucessoStub,
-} from '@/tests/dubles/dominio/editor/SubtituloDubles';
+} from '@/tests/dubles/dominio/editor/comum/SubtituloFactoryDubles';
 import { mount } from '@vue/test-utils';
 
 describe('SubtituloInput', () => {

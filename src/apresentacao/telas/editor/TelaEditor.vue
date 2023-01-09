@@ -3,13 +3,14 @@ import { defineComponent } from 'vue';
 import FormularioEditor from './FormularioEditor.vue';
 import { FormularioEditor as FormularioEditorModel } from '@/dominio/editor/FormularioEditor';
 import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
-import { ListaEditavel } from '@/dominio/editor/ListaEditavel';
+import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
 import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
 import { Subtitulo } from '@/dominio/editor/comum/Subtitulo';
 import { Titulo } from '@/dominio/editor/comum/Titulo';
 import { Texto } from '@/dominio/processamento/processador/texto/Texto';
 import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { TextoModelo } from '@/dominio/editor/comum/TextoModelo';
 
 export default defineComponent({
     name: 'TelaEditor',
@@ -31,7 +32,12 @@ export default defineComponent({
                             new Titulo('opcao1'),
                             0,
                             new ListaEditavel<TextoEditavel>([
-                                new TextoEditavel('categoria', 'texto', 0),
+                                new TextoEditavel(
+                                    new IdFormulario('categoria'),
+                                    new Titulo('título'),
+                                    new TextoModelo('texto'),
+                                    0,
+                                ),
                             ]),
                         ),
                         new OpcaoEditavel(
@@ -39,7 +45,12 @@ export default defineComponent({
                             new Titulo('opcao2'),
                             1,
                             new ListaEditavel<TextoEditavel>([
-                                new TextoEditavel('categoria', 'texto', 0),
+                                new TextoEditavel(
+                                    new IdFormulario('categoria'),
+                                    new Titulo('título'),
+                                    new TextoModelo('texto'),
+                                    0,
+                                ),
                             ]),
                         ),
                         new OpcaoEditavel(
@@ -47,7 +58,12 @@ export default defineComponent({
                             new Titulo('opcao3'),
                             2,
                             new ListaEditavel<TextoEditavel>([
-                                new TextoEditavel('categoria', 'texto', 0),
+                                new TextoEditavel(
+                                    new IdFormulario('categoria'),
+                                    new Titulo('título'),
+                                    new TextoModelo('texto'),
+                                    0,
+                                ),
                             ]),
                         ),
                     ]),
@@ -63,7 +79,12 @@ export default defineComponent({
                             new Titulo('opcao1'),
                             0,
                             new ListaEditavel<TextoEditavel>([
-                                new TextoEditavel('categoria', 'questao2', 0),
+                                new TextoEditavel(
+                                    new IdFormulario('categoria'),
+                                    new Titulo('título'),
+                                    new TextoModelo('texto'),
+                                    0,
+                                ),
                             ]),
                         ),
                     ]),

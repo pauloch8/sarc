@@ -1,7 +1,7 @@
-import { Titulo } from './Titulo';
+import { ITitulo, Titulo } from './Titulo';
 
 export interface ITituloFactory {
-    criar(titulo: string): Titulo;
+    criar(titulo: string): ITitulo;
 }
 
 export class TituloFactory implements ITituloFactory {

@@ -1,4 +1,5 @@
 <script lang="ts">
+import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { defineComponent } from 'vue';
 import TextoEdicao from './TextoEdicao.vue';
 
@@ -22,14 +23,15 @@ export default defineComponent({
         editar() {
             this.emEdicao = true;
         },
-        salvou() {
+        adicionarItem(texto: TextoEditavel) {
             this.emEdicao = false;
+            this.$emit('adicionarItem', texto);
         },
         cancelou() {
             this.emEdicao = false;
         },
     },
-    emits: ['salvou'],
+    emits: ['adicionarItem'],
 });
 </script>
 
@@ -45,7 +47,11 @@ export default defineComponent({
         </a>
     </div>
     <div v-if="emEdicao">
-        <TextoEdicao :indice="indice" @salvou="salvou" @cancelou="cancelou">
+        <TextoEdicao
+            :indice="indice"
+            @adicionarItem="adicionarItem"
+            @cancelou="cancelou"
+        >
         </TextoEdicao>
     </div>
 </template>

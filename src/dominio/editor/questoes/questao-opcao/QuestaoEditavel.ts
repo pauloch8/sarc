@@ -1,28 +1,28 @@
-import { IdFormulario } from '../../comum/IdFormulario';
+import { IIdFormulario } from '../../comum/IdFormulario';
 import { IItemEditavel, ItemEditavel } from '../ItemEditavel';
-import { ListaEditavel } from '../ListaEditavel';
-import { OpcaoEditavel } from './opcao/OpcaoEditavel';
-import { Subtitulo } from '../../comum/Subtitulo';
-import { Titulo } from '../../comum/Titulo';
+import { IListaEditavel } from '../ListaEditavel';
+import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
+import { ISubtitulo } from '../../comum/Subtitulo';
+import { ITitulo } from '../../comum/Titulo';
 
 export interface IQuestaoEditavel extends IItemEditavel {
-    getId(): IdFormulario;
-    setId(id: IdFormulario): void;
-    getTitulo(): Titulo;
-    setTitulo(titulo: Titulo): void;
-    getSubTitulo(): Subtitulo | undefined;
-    setSubtitulo(subtitulo?: Subtitulo | undefined): void;
-    getOpcoes(): ListaEditavel<OpcaoEditavel> | undefined;
-    setOpcoes(opcoes: ListaEditavel<OpcaoEditavel>): void;
+    getId(): IIdFormulario;
+    setId(id: IIdFormulario): void;
+    getTitulo(): ITitulo;
+    setTitulo(titulo: ITitulo): void;
+    getSubTitulo(): ISubtitulo | undefined;
+    setSubtitulo(subtitulo?: ISubtitulo | undefined): void;
+    getOpcoes(): IListaEditavel<IOpcaoEditavel> | undefined;
+    setOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>): void;
 }
 
 export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
     constructor(
-        private id: IdFormulario,
-        private titulo: Titulo,
+        private id: IIdFormulario,
+        private titulo: ITitulo,
         indice: number,
-        private opcoes: ListaEditavel<OpcaoEditavel>,
-        private subtitulo?: Subtitulo,
+        private opcoes: IListaEditavel<IOpcaoEditavel>,
+        private subtitulo?: ISubtitulo,
     ) {
         super(indice);
         const validacao = this.validar();
@@ -69,7 +69,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         return this.id;
     }
 
-    setId(id: IdFormulario) {
+    setId(id: IIdFormulario) {
         if (!id) {
             throw new ErroNaEdicaoDaQuestao('Id vazio informado');
         }
@@ -80,7 +80,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         return this.titulo;
     }
 
-    setTitulo(titulo: Titulo) {
+    setTitulo(titulo: ITitulo) {
         if (!titulo) {
             throw new ErroNaEdicaoDaQuestao('Titulo vazio informado');
         }
@@ -91,7 +91,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         return this.subtitulo;
     }
 
-    setSubtitulo(subtitulo?: Subtitulo) {
+    setSubtitulo(subtitulo?: ISubtitulo) {
         this.subtitulo = subtitulo;
     }
 
@@ -99,7 +99,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         return this.opcoes;
     }
 
-    setOpcoes(opcoes: ListaEditavel<OpcaoEditavel>) {
+    setOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>) {
         if (!opcoes) {
             throw new ErroNaEdicaoDaQuestao(
                 'Não foi informada lista de opções de questão',

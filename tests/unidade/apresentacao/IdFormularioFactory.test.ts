@@ -5,7 +5,7 @@ import { mount } from '@vue/test-utils';
 import {
     IdFormularioFactoryDummy,
     IdFormularioFactorySucessoStub,
-} from '@/tests/dubles/dominio/editor/IdFormularioFactoryDubles';
+} from '@/tests/dubles/dominio/editor/comum/IdFormularioFactoryDubles';
 
 describe('IdFormularioFactory', () => {
     describe('se fornecido um titulo como props', () => {

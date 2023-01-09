@@ -4,7 +4,7 @@ import {
     TituloFactoryLancaErroStub,
     TituloFactorySucessoStub,
     TituloFactoryDummy,
-} from '@/tests/dubles/dominio/editor/TituloFactoryDubles';
+} from '@/tests/dubles/dominio/editor/comum/TituloFactoryDubles';
 import TituloInputVue from '@/apresentacao/telas/editor/comum/TituloInput.vue';
 
 describe('TituloInput', () => {

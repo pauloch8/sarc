@@ -1,27 +1,27 @@
-import { IdFormulario } from './comum/IdFormulario';
-import { ListaEditavel } from './ListaEditavel';
 import { IOpcaoEditavel, OpcaoEditavel } from './OpcaoEditavel';
-import { TextoEditavel } from './TextoEditavel';
-import { Titulo } from './comum/Titulo';
-import { VariavelEditavel } from './VariavelEditavel';
+import { IListaEditavel } from '../../ListaEditavel';
+import { ITitulo } from '../../../comum/Titulo';
+import { IIdFormulario } from '../../../comum/IdFormulario';
+import { ITextoEditavel } from './texto/TextoEditavel';
+import { IVariavelEditavel } from './variavel/VariavelEditavel';
 
 export interface IOpcaoEditavelFactory {
     criar(
-        id: IdFormulario,
-        titulo: Titulo,
+        id: IIdFormulario,
+        titulo: ITitulo,
         indice: number,
-        textos: ListaEditavel<TextoEditavel>,
-        variaveis?: ListaEditavel<VariavelEditavel>,
+        textos: IListaEditavel<ITextoEditavel>,
+        variaveis?: IListaEditavel<IVariavelEditavel>,
     ): IOpcaoEditavel;
 }
 
 export class OpcaoEditavelFactory implements IOpcaoEditavelFactory {
     criar(
-        id: IdFormulario,
-        titulo: Titulo,
+        id: IIdFormulario,
+        titulo: ITitulo,
         indice: number,
-        textos: ListaEditavel<TextoEditavel>,
-        variaveis?: ListaEditavel<VariavelEditavel>,
+        textos: IListaEditavel<ITextoEditavel>,
+        variaveis?: IListaEditavel<IVariavelEditavel>,
     ) {
         return new OpcaoEditavel(id, titulo, indice, textos, variaveis);
     }

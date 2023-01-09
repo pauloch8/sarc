@@ -8,13 +8,13 @@ import { mount } from '@vue/test-utils';
 import {
     QuestaoEditavelDummy,
     QuestaoEditavelErroStub,
-} from '@/tests/dubles/dominio/editor/QuestaoEditavelDubles';
+} from '@/tests/dubles/dominio/editor/questoes/QuestaoEditavelDubles';
 import {
     QuestaoEditavelFactoryDummy,
     QuestaoEditavelFactorySucessoStub,
     QuestaoEditavelFactoryErroDesconhecidoStub,
     QuestaoEditavelFactoryErroQuestaoInvalidaStub,
-} from '@/tests/dubles/dominio/editor/QuestaoEditavelFactoryDubles';
+} from '@/tests/dubles/dominio/editor/questoes/QuestaoEditavelFactoryDubles';
 
 describe('QuestaoEdicao', () => {
     describe('Salvar', () => {

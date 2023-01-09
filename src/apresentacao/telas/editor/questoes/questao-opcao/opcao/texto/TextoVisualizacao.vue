@@ -14,8 +14,8 @@ export default defineComponent({
     computed: {
         titulo() {
             let titulo = this.texto.toString();
-            if (titulo.length > 13) {
-                titulo = titulo.substring(0, 10) + '...';
+            if (titulo.length > 28) {
+                titulo = titulo.substring(0, 25) + '...';
             }
             return titulo;
         },

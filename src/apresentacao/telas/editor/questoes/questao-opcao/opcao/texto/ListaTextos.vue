@@ -44,6 +44,10 @@ export default defineComponent({
         editar(texto: TextoEditavel) {
             this.estaLista.editarItem(texto);
         },
+        adicionarItem(texto: TextoEditavel) {
+            alert(texto);
+            this.estaLista.adicionarItem(texto);
+        },
         excluir(texto: TextoEditavel) {
             this.estaLista.excluirItem(texto);
         },
@@ -74,7 +78,10 @@ export default defineComponent({
         ></ItemDeTexto>
     </TransitionGroup>
 
-    <AdicionarTexto :indice="itensOrdenados.length"></AdicionarTexto>
+    <AdicionarTexto
+        :indice="itensOrdenados.length"
+        @adicionarItem="adicionarItem"
+    ></AdicionarTexto>
 </template>
 
 <style scoped>

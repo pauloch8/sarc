@@ -9,6 +9,7 @@ export class IdFormularioFactoryDummy implements IIdFormularioFactory {
         throw new Error('Method not implemented.');
     }
 }
+
 export class IdFormularioFactorySucessoStub implements IIdFormularioFactory {
     constructor(private retorno: IdFormulario) {}
     criarDeString(): IdFormulario {

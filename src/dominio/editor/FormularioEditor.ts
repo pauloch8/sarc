@@ -1,26 +1,26 @@
-import { IdFormulario } from './comum/IdFormulario';
-import { ListaEditavel } from './ListaEditavel';
-import { QuestaoEditavel } from './questoes/questao-opcao/QuestaoEditavel';
-import { Subtitulo } from './comum/Subtitulo';
-import { Titulo } from './comum/Titulo';
+import { IIdFormulario } from './comum/IdFormulario';
+import { ITitulo } from './comum/Titulo';
+import { ISubtitulo } from './comum/Subtitulo';
+import { IListaEditavel } from './questoes/ListaEditavel';
+import { IQuestaoEditavel } from './questoes/questao-opcao/QuestaoEditavel';
 
 export interface IFormularioEditor {
-    getId(): IdFormulario;
-    getTitulo(): Titulo;
-    setTitulo(titulo: Titulo): void;
+    getId(): IIdFormulario;
+    getTitulo(): ITitulo;
+    setTitulo(titulo: ITitulo): void;
 }
 
 export class FormularioEditor implements IFormularioEditor {
     constructor(
-        private id: IdFormulario,
-        private titulo: Titulo,
-        private listaQuestoes: ListaEditavel<QuestaoEditavel>,
-        private subtitulo?: Subtitulo,
+        private id: IIdFormulario,
+        private titulo: ITitulo,
+        private listaQuestoes: IListaEditavel<IQuestaoEditavel>,
+        private subtitulo?: ISubtitulo,
     ) {}
-    getId(): IdFormulario {
+    getId() {
         return this.id;
     }
-    setId(id: IdFormulario) {
+    setId(id: IIdFormulario) {
         this.id = id;
     }
     getTitulo() {
@@ -29,10 +29,10 @@ export class FormularioEditor implements IFormularioEditor {
     getSubtitulo() {
         return this.subtitulo;
     }
-    setSubtitulo(subtitulo?: Subtitulo) {
+    setSubtitulo(subtitulo?: ISubtitulo) {
         this.subtitulo = subtitulo;
     }
-    setTitulo(titulo: Titulo) {
+    setTitulo(titulo: ITitulo) {
         if (!titulo) {
             throw new ErroTituloEhStringVazia();
         }

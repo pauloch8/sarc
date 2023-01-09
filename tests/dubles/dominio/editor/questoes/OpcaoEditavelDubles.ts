@@ -1,5 +1,8 @@
 import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
-import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import {
+    IListaEditavel,
+    ListaEditavel,
+} from '@/dominio/editor/questoes/ListaEditavel';
 import {
     ErroNaEdicaoDaOpcao,
     IOpcaoEditavel,
@@ -7,6 +10,9 @@ import {
 import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { Titulo } from '@/dominio/editor/comum/Titulo';
 import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { IdFormularioDummy } from '../comum/IdFormularioDubles';
+import { TituloDummy } from '../comum/TituloDubles';
+import { TextoModeloDummy } from '../comum/TextoModeloDubles';
 
 export class OpcaoEditavelErroStub implements IOpcaoEditavel {
     erros = {
@@ -18,7 +24,12 @@ export class OpcaoEditavelErroStub implements IOpcaoEditavel {
     private id = new IdFormulario('id');
     private titulo = new Titulo('titulo');
     private textos = new ListaEditavel<TextoEditavel>([
-        new TextoEditavel('categoria', 'texto', 0),
+        new TextoEditavel(
+            new IdFormularioDummy(),
+            new TituloDummy(),
+            new TextoModeloDummy(),
+            0,
+        ),
     ]);
     getId(): IdFormulario {
         return this.id;
@@ -71,7 +82,12 @@ export class OpcaoEditavelDummy implements IOpcaoEditavel {
     private id = new IdFormulario('id');
     private titulo = new Titulo('titulo');
     private textos = new ListaEditavel<TextoEditavel>([
-        new TextoEditavel('categoria', 'texto', 0),
+        new TextoEditavel(
+            new IdFormularioDummy(),
+            new TituloDummy(),
+            new TextoModeloDummy(),
+            0,
+        ),
     ]);
     getId(): IdFormulario {
         return this.id;
@@ -111,5 +127,34 @@ export class OpcaoEditavelDummy implements IOpcaoEditavel {
     }
     setIndice(): void {
         'dummy';
+    }
+}
+
+export class ListaDeOpcoesEditavelDummy
+    implements IListaEditavel<IOpcaoEditavel>
+{
+    getItens(): IOpcaoEditavel[] {
+        throw new Error('Method not implemented.');
+    }
+    getLength(): number {
+        throw new Error('Method not implemented.');
+    }
+    editarItem(itemSolicitado: IOpcaoEditavel): void {
+        throw new Error('Method not implemented.');
+    }
+    subirItem(itemSolicitada: IOpcaoEditavel): void {
+        throw new Error('Method not implemented.');
+    }
+    descerItem(itemSolicitada: IOpcaoEditavel): void {
+        throw new Error('Method not implemented.');
+    }
+    excluirItem(itemSolicitada: IOpcaoEditavel): void {
+        throw new Error('Method not implemented.');
+    }
+    adicionarItem(item: IOpcaoEditavel): void {
+        throw new Error('Method not implemented.');
+    }
+    obterItemPorIndice(indice: number): IOpcaoEditavel {
+        throw new Error('Method not implemented.');
     }
 }
