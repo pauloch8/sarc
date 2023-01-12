@@ -76,9 +76,6 @@ export class OpcaoEditavelErroStub implements IOpcaoEditavel {
 }
 
 export class OpcaoEditavelDummy implements IOpcaoEditavel {
-    setVariaveis(variaveis: ListaEditavel<VariavelEditavel>): void {
-        throw new Error('Method not implemented.');
-    }
     private id = new IdFormulario('id');
     private titulo = new Titulo('titulo');
     private textos = new ListaEditavel<TextoEditavel>([
@@ -109,6 +106,9 @@ export class OpcaoEditavelDummy implements IOpcaoEditavel {
     }
     getVariaveis(): undefined {
         return undefined;
+    }
+    setVariaveis(): void {
+        'dummy';
     }
     toString(): string {
         return 'dummy';

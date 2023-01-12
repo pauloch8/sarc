@@ -115,7 +115,12 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
     }
 
     setVariaveis(variaveis: IListaEditavel<IVariavelEditavel>): void {
-        throw new Error('Method not implemented.');
+        if (!variaveis) {
+            throw new ErroNaEdicaoDaOpcao(
+                'Não foi informada lista de variáveis da opção',
+            );
+        }
+        this.variaveis = variaveis;
     }
 
     toString(): string {

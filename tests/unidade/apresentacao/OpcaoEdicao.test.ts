@@ -10,10 +10,20 @@ import { mount } from '@vue/test-utils';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { Titulo } from '@/dominio/comum/Titulo';
 import {
+    ListaDeOpcoesEditavelDummy,
     OpcaoEditavelDummy,
     OpcaoEditavelErroStub,
 } from '@/tests/dubles/dominio/editor/questoes/OpcaoEditavelDubles';
 import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
+import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { TituloDummy } from '@/tests/dubles/dominio/comum/TituloDubles';
+import { IdFormularioDummy } from '@/tests/dubles/dominio/comum/IdFormularioDubles';
+import { ListaDeVariaveisEditavelDummy } from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelDubles';
+import {
+    ListaDeTextosEditavelDummy,
+    ListaDeTextosEditavelGetLengthMaiorQueZeroStub,
+} from '@/tests/dubles/dominio/editor/questoes/TextoEditavelDubles';
 
 describe('OpcaoEdicao', () => {
     describe('ao criar uma nova Questão', () => {
@@ -66,7 +76,7 @@ describe('OpcaoEdicao', () => {
                 });
                 await sut.find('.botaoSalvar').trigger('click');
                 expect(sut.find('.erro').exists()).toBeTruthy();
-                expect(sut.find('.erro').text()).toBe(
+                expect(sut.find('.erro').text()).toContain(
                     'Ocorreu um erro desconhecido',
                 );
             });
@@ -161,12 +171,17 @@ describe('OpcaoEdicao', () => {
                     opcao,
                 },
                 data() {
-                    const idFormulario = new IdFormulario('id-editado');
-                    const titulo = new Titulo('titulo-editado');
+                    const idFormulario = new IdFormularioDummy();
+                    const titulo = new TituloDummy();
+                    const textos =
+                        new ListaDeTextosEditavelGetLengthMaiorQueZeroStub();
+                    const variaveis = new ListaDeVariaveisEditavelDummy();
                     const erro = '';
                     return {
                         idFormulario,
                         titulo,
+                        textos,
+                        variaveis,
                         erro,
                     };
                 },

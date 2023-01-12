@@ -86,7 +86,7 @@ export default defineComponent({
                     this.erro = e.message;
                     this.inconsistencias = e.inconsistencias;
                 } else {
-                    this.erro = 'Ocorreu um erro desconhecido';
+                    this.erro = 'Ocorreu um erro desconhecido: ' + e;
                 }
             }
         },
@@ -98,7 +98,8 @@ export default defineComponent({
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
-                        'Ocorreu um erro desconhecido na atualização do id',
+                        'Ocorreu um erro desconhecido na atualização do id: ' +
+                            e,
                     );
                 }
             }
@@ -110,7 +111,8 @@ export default defineComponent({
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
-                        'Ocorreu um erro desconhecido na atualização do titulo',
+                        'Ocorreu um erro desconhecido na atualização do titulo: ' +
+                            e,
                     );
                 }
             }
@@ -122,7 +124,8 @@ export default defineComponent({
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
-                        'Ocorreu um erro desconhecido na atualização do Texto Modelo',
+                        'Ocorreu um erro desconhecido na atualização do Texto Modelo: ' +
+                            e,
                     );
                 }
             }
@@ -133,7 +136,8 @@ export default defineComponent({
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
-                        'Ocorreu um erro desconhecido na atualização do índice',
+                        'Ocorreu um erro desconhecido na atualização do índice: ' +
+                            e,
                     );
                 }
             }

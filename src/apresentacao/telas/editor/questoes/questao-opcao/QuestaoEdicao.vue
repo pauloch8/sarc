@@ -16,7 +16,6 @@ import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { IQuestaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavelFactory';
 import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
 import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 
 export default defineComponent({
     name: 'QuestaoEdicao',
@@ -93,7 +92,7 @@ export default defineComponent({
                         this.erro = e.message;
                         this.inconsistencias = e.inconsistencias;
                     } else {
-                        this.erro = 'Ocorreu um erro desconhecido';
+                        this.erro = 'Ocorreu um erro desconhecido: ' + e;
                     }
                 }
             } else {
@@ -105,7 +104,8 @@ export default defineComponent({
                         this.inconsistencias.push(e.message);
                     } else {
                         this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização do id',
+                            'Ocorreu um erro desconhecido na atualização do id: ' +
+                                e,
                         );
                     }
                 }
@@ -117,7 +117,8 @@ export default defineComponent({
                         this.inconsistencias.push(e.message);
                     } else {
                         this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização do titulo',
+                            'Ocorreu um erro desconhecido na atualização do titulo: ' +
+                                e,
                         );
                     }
                 }
@@ -129,7 +130,8 @@ export default defineComponent({
                         this.inconsistencias.push(e.message);
                     } else {
                         this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização do subtitulo',
+                            'Ocorreu um erro desconhecido na atualização do subtitulo: ' +
+                                e,
                         );
                     }
                 }
@@ -143,7 +145,8 @@ export default defineComponent({
                         this.inconsistencias.push(e.message);
                     } else {
                         this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização das opcoes',
+                            'Ocorreu um erro desconhecido na atualização das opcoes: ' +
+                                e,
                         );
                     }
                 }

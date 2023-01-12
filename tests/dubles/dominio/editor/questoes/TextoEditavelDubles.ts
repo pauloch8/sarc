@@ -1,6 +1,7 @@
 import { IdFormulario, IIdFormulario } from '@/dominio/comum/IdFormulario';
 import { ITextoModelo } from '@/dominio/comum/TextoModelo';
 import { ITitulo } from '@/dominio/comum/Titulo';
+import { IListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
 import {
     ErroNaEdicaoDoTexto,
     ITextoEditavel,
@@ -126,10 +127,67 @@ export class TextoEditavelDummy implements ITextoEditavel {
     getIndice(): number {
         throw new Error('Method not implemented.');
     }
-    setIndice(indice: number): void {
+    setIndice(): void {
         throw new Error('Method not implemented.');
     }
     toString(): string {
+        throw new Error('Method not implemented.');
+    }
+}
+
+export class ListaDeTextosEditavelDummy
+    implements IListaEditavel<ITextoEditavel>
+{
+    getItens(): ITextoEditavel[] {
+        throw new Error('Method not implemented.');
+    }
+    getLength(): number {
+        throw new Error('Method not implemented.');
+    }
+    editarItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    subirItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    descerItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    excluirItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    adicionarItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    obterItemPorIndice(): ITextoEditavel {
+        throw new Error('Method not implemented.');
+    }
+}
+export class ListaDeTextosEditavelGetLengthMaiorQueZeroStub
+    implements IListaEditavel<ITextoEditavel>
+{
+    getItens(): ITextoEditavel[] {
+        throw new Error('Method not implemented.');
+    }
+    getLength(): number {
+        return 1;
+    }
+    editarItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    subirItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    descerItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    excluirItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    adicionarItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    obterItemPorIndice(): ITextoEditavel {
         throw new Error('Method not implemented.');
     }
 }

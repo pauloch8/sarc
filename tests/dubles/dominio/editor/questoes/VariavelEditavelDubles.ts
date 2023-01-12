@@ -6,6 +6,7 @@ import { TituloDummy } from '../../comum/TituloDubles';
 import { ErroNaEdicao } from '@/dominio/editor/questoes/ItemEditavel';
 import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
 import { TipoVariavelIDDummy } from './TipoVariavelDubles';
+import { IListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
 
 export class VariavelEditavelEditaComSucessoMock implements IVariavelEditavel {
     private id = new IdFormularioDummy();
@@ -128,6 +129,35 @@ export class VariavelEditavelDummy implements IVariavelEditavel {
         throw new Error('Method not implemented.');
     }
     toString(): string {
+        throw new Error('Method not implemented.');
+    }
+}
+
+export class ListaDeVariaveisEditavelDummy
+    implements IListaEditavel<IVariavelEditavel>
+{
+    getItens(): IVariavelEditavel[] {
+        throw new Error('Method not implemented.');
+    }
+    getLength(): number {
+        throw new Error('Method not implemented.');
+    }
+    editarItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    subirItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    descerItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    excluirItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    adicionarItem(): void {
+        throw new Error('Method not implemented.');
+    }
+    obterItemPorIndice(): IVariavelEditavel {
         throw new Error('Method not implemented.');
     }
 }

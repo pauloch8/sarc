@@ -5,7 +5,7 @@ import IdFormularioFactory from '../../../comum/IdFormularioFactory.vue';
 import ListaTextos from './texto/ListaTextos.vue';
 import ListaVariavel from './variavel/ListaVariaveis.vue';
 import BotoesSalvarCancelar from '../../../comum/BotoesSalvarCancelar.vue';
-import VariavelComponent from './variavel/VariavelComponent.vue';
+
 import {
     ErroNaEdicaoDaOpcao,
     ErroOpcaoInvalida,
@@ -75,67 +75,88 @@ export default defineComponent({
             this.erro = '';
             this.inconsistencias = [];
             if (!this.opcao) {
-                try {
-                    const opcao = this.factory.criar(
-                        this.idFormulario as IdFormulario,
-                        this.titulo as Titulo,
-                        this.indice as number,
-                        this.textos as ListaEditavel<TextoEditavel>,
-                    );
-                    this.$emit('criou', opcao);
-                } catch (e) {
-                    if (e instanceof ErroOpcaoInvalida) {
-                        this.erro = e.message;
-                        this.inconsistencias = e.inconsistencias;
-                    } else {
-                        this.erro = 'Ocorreu um erro desconhecido';
-                    }
-                }
+                this.criar();
             } else {
-                //id
-                try {
-                    this.opcao.setId(this.idFormulario as IdFormulario);
-                } catch (e) {
-                    if (e instanceof ErroNaEdicaoDaOpcao) {
-                        this.inconsistencias.push(e.message);
-                    } else {
-                        this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização do id',
-                        );
-                    }
-                }
-                //titulo
-                try {
-                    this.opcao.setTitulo(this.titulo as Titulo);
-                } catch (e) {
-                    if (e instanceof ErroNaEdicaoDaOpcao) {
-                        this.inconsistencias.push(e.message);
-                    } else {
-                        this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização do titulo',
-                        );
-                    }
-                }
-                //textos
-                try {
-                    this.opcao.setTextos(
-                        this.textos as ListaEditavel<TextoEditavel>,
-                    );
-                } catch (e) {
-                    if (e instanceof ErroNaEdicaoDaOpcao) {
-                        this.inconsistencias.push(e.message);
-                    } else {
-                        this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização dos Textos',
-                        );
-                    }
-                }
-                if (this.inconsistencias.length) {
-                    this.erro = 'Ocorreram erros na atualização da Questão';
+                this.atualizar();
+            }
+        },
+        criar() {
+            try {
+                const opcao = this.factory.criar(
+                    this.idFormulario as IdFormulario,
+                    this.titulo as Titulo,
+                    this.indice as number,
+                    this.textos as ListaEditavel<TextoEditavel>,
+                );
+                this.$emit('criou', opcao);
+            } catch (e) {
+                if (e instanceof ErroOpcaoInvalida) {
+                    this.erro = e.message;
+                    this.inconsistencias = e.inconsistencias;
                 } else {
-                    this.opcao.encerrarEdicao();
-                    this.$emit('atualizou', this.opcao);
+                    this.erro = 'Ocorreu um erro desconhecido: ' + e;
                 }
+            }
+        },
+        atualizar() {
+            const opcao = this.opcao as OpcaoEditavel;
+            //id
+            try {
+                opcao.setId(this.idFormulario as IdFormulario);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDaOpcao) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização do id: ' +
+                            e,
+                    );
+                }
+            }
+            //titulo
+            try {
+                opcao.setTitulo(this.titulo as Titulo);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDaOpcao) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização do titulo: ' +
+                            e,
+                    );
+                }
+            }
+            //variaveis
+            try {
+                opcao.setVariaveis(this.variaveis);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDaOpcao) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização das variáveis: ' +
+                            e,
+                    );
+                }
+            }
+            //textos
+            try {
+                opcao.setTextos(this.textos);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDaOpcao) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização dos Textos: ' +
+                            e,
+                    );
+                }
+            }
+            if (this.inconsistencias.length) {
+                this.erro = 'Ocorreram erros na atualização da Questão';
+            } else {
+                opcao.encerrarEdicao();
+                this.$emit('atualizou', this.opcao);
             }
         },
     },

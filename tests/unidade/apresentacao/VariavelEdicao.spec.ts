@@ -65,7 +65,7 @@ describe('VariavelEdicao', () => {
             });
             await sut.find('.botaoSalvar').trigger('click');
             expect(sut.find('.erro').exists()).toBeTruthy();
-            expect(sut.find('.erro').text()).toBe(
+            expect(sut.find('.erro').text()).toContain(
                 'Ocorreu um erro desconhecido',
             );
         });
