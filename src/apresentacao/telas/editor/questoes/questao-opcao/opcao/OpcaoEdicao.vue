@@ -3,6 +3,7 @@ import { defineComponent, inject } from 'vue';
 import TituloInput from '../../../comum/TituloInput.vue';
 import IdFormularioFactory from '../../../comum/IdFormularioFactory.vue';
 import ListaTextos from './texto/ListaTextos.vue';
+import ListaVariavel from './variavel/ListaVariaveis.vue';
 import BotoesSalvarCancelar from '../../../comum/BotoesSalvarCancelar.vue';
 import VariavelComponent from './variavel/VariavelComponent.vue';
 import {
@@ -15,6 +16,7 @@ import { Titulo } from '@/dominio/editor/comum/Titulo';
 import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
 import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
 import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 
 export default defineComponent({
     name: 'OpcaoEdicao',
@@ -22,8 +24,7 @@ export default defineComponent({
         IdFormularioFactory,
         TituloInput,
         ListaTextos,
-        //TextoComponent,
-        //VariavelComponent,
+        ListaVariavel,
         BotoesSalvarCancelar,
     },
     setup() {
@@ -46,13 +47,15 @@ export default defineComponent({
         //const valorPadrao = this.opcao?.getValorPadrao();
         const textos =
             this.opcao?.getTextos() || new ListaEditavel<TextoEditavel>();
-        //const variaveis = this.opcao?.getVariaveis();
+        const variaveis =
+            this.opcao?.getVariaveis() || new ListaEditavel<VariavelEditavel>();
         const erro = '';
         const inconsistencias: string[] = [];
         return {
             idFormulario,
             titulo,
             textos,
+            variaveis,
             erro,
             inconsistencias,
         };
@@ -166,11 +169,13 @@ export default defineComponent({
             <a href="#" role="button" class="outline">+ Adicionar Variável</a>
         </div> -->
 
-        <div class="textos">
-            <ListaTextos
-                :lista="(textos as ListaEditavel<TextoEditavel>)"
-            ></ListaTextos>
-        </div>
+        <ListaVariavel
+            :lista="(variaveis as ListaEditavel<VariavelEditavel>)"
+        ></ListaVariavel>
+
+        <ListaTextos
+            :lista="(textos as ListaEditavel<TextoEditavel>)"
+        ></ListaTextos>
 
         <article class="erro" v-if="erro">
             {{ erro }}
@@ -197,9 +202,5 @@ export default defineComponent({
 label input[type='text'] {
     display: inline;
     width: 95%;
-}
-
-.textos {
-    margin-top: 50px;
 }
 </style>

@@ -11,6 +11,7 @@ import { Titulo } from '@/dominio/editor/comum/Titulo';
 import { Texto } from '@/dominio/processamento/processador/texto/Texto';
 import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { TextoModelo } from '@/dominio/editor/comum/TextoModelo';
+import { RemoveHtmlStringStrip } from '@/infrastrutura/portas/remove-html/RemoveHtmlStringStrip';
 
 export default defineComponent({
     name: 'TelaEditor',
@@ -18,6 +19,7 @@ export default defineComponent({
         FormularioEditor,
     },
     data() {
+        const removeHtml = new RemoveHtmlStringStrip();
         const editor = new FormularioEditorModel(
             new IdFormulario('id'),
             new Titulo('titulo'),
@@ -35,7 +37,7 @@ export default defineComponent({
                                 new TextoEditavel(
                                     new IdFormulario('categoria'),
                                     new Titulo('título'),
-                                    new TextoModelo('texto'),
+                                    new TextoModelo('texto', removeHtml),
                                     0,
                                 ),
                             ]),
@@ -48,7 +50,7 @@ export default defineComponent({
                                 new TextoEditavel(
                                     new IdFormulario('categoria'),
                                     new Titulo('título'),
-                                    new TextoModelo('texto'),
+                                    new TextoModelo('texto', removeHtml),
                                     0,
                                 ),
                             ]),
@@ -61,7 +63,7 @@ export default defineComponent({
                                 new TextoEditavel(
                                     new IdFormulario('categoria'),
                                     new Titulo('título'),
-                                    new TextoModelo('texto'),
+                                    new TextoModelo('texto', removeHtml),
                                     0,
                                 ),
                             ]),
@@ -82,7 +84,7 @@ export default defineComponent({
                                 new TextoEditavel(
                                     new IdFormulario('categoria'),
                                     new Titulo('título'),
-                                    new TextoModelo('texto'),
+                                    new TextoModelo('texto', removeHtml),
                                     0,
                                 ),
                             ]),

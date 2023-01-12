@@ -30,6 +30,10 @@ import { QuestaoEditavelFactory } from './dominio/editor/questoes/questao-opcao/
 import { OpcaoEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
 import { TextoEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
 import { TextoModeloFactory } from './dominio/editor/comum/TextoModeloFactory';
+import { RemoveHtmlStringStrip } from './infrastrutura/portas/remove-html/RemoveHtmlStringStrip';
+import { VariavelEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavelFactory';
+import { TipoVariavelRepositoryEmMemoria } from './infrastrutura/portas/memoria/TipoVariavelRepositoryEmMemoria';
+import { TipoVariavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelFactory';
 
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
@@ -43,7 +47,13 @@ const formularioEditorFactory = new FormularioEditorFactory();
 const questaoEditavelFactory = new QuestaoEditavelFactory();
 const opcaoEditavelFactory = new OpcaoEditavelFactory();
 const textoEditavelFactory = new TextoEditavelFactory();
-const textoModeloFactory = new TextoModeloFactory();
+const removeHtml = new RemoveHtmlStringStrip();
+const textoModeloFactory = new TextoModeloFactory(removeHtml);
+const variavelEditavelFactory = new VariavelEditavelFactory();
+const tipoVariavelFactory = new TipoVariavelFactory();
+const tipoVariavelRepository = new TipoVariavelRepositoryEmMemoria(
+    tipoVariavelFactory,
+);
 
 createApp(App)
     .use(router)
@@ -56,9 +66,11 @@ createApp(App)
     .provide('opcaoEditavelFactory', opcaoEditavelFactory)
     .provide('textoEditavelFactory', textoEditavelFactory)
     .provide('textoModeloFactory', textoModeloFactory)
+    .provide('variavelEditavelFactory', variavelEditavelFactory)
     .provide('tituloFactory', tituloFactory)
     .provide('subtituloFactory', subtituloFactory)
     .provide('idFormularioFactory', idFormularioFactory)
+    .provide('tipoVariavelRepository', tipoVariavelRepository)
     .mount('#app');
 
 function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {

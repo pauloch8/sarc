@@ -126,12 +126,6 @@ export default defineComponent({
                     );
                 }
             }
-            if (this.inconsistencias.length) {
-                this.erro = 'Ocorreram erros na atualização do Texto';
-            } else {
-                texto.encerrarEdicao();
-                this.$emit('atualizou', this.texto);
-            }
             try {
                 texto.setIndice(this.indice);
             } catch (e) {

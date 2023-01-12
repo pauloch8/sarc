@@ -4,7 +4,12 @@ import {
 } from '@/dominio/editor/comum/IdFormulario';
 import { ITitulo } from '@/dominio/editor/comum/Titulo';
 import { ITextoModelo } from '@/dominio/editor/comum/TextoModelo';
-import { ItemEditavel, IItemEditavel } from '../../../ItemEditavel';
+import {
+    ItemEditavel,
+    IItemEditavel,
+    ErroNaEdicao,
+    ErroInconsistenciasNaValidacao,
+} from '../../../ItemEditavel';
 
 export interface ITextoEditavel extends IItemEditavel {
     getId(): IIdFormulario;
@@ -12,7 +17,7 @@ export interface ITextoEditavel extends IItemEditavel {
     getTitulo(): ITitulo;
     setTitulo(titulo?: ITitulo | undefined): void;
     getTextoModelo(): ITextoModelo;
-    setTextoModelo(textoTemplate?: ITextoModelo | undefined): void;
+    setTextoModelo(textoModelo?: ITextoModelo | undefined): void;
 }
 
 export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
@@ -65,6 +70,7 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
         if (!id) {
             throw new ErroNaEdicaoDoTexto('ID vazio informado');
         }
+        this.id = id;
     }
 
     getTitulo() {
@@ -82,11 +88,11 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
         return this.textoModelo;
     }
 
-    setTextoModelo(textoTemplate?: ITextoModelo) {
-        if (!textoTemplate) {
-            throw new ErroNaEdicaoDoTexto('TextoTemplate vazio informado');
+    setTextoModelo(textoModelo?: ITextoModelo) {
+        if (!textoModelo) {
+            throw new ErroNaEdicaoDoTexto('TextoModelo vazio informado');
         }
-        this.textoModelo = textoTemplate;
+        this.textoModelo = textoModelo;
     }
 
     toString(): string {
@@ -94,13 +100,13 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
     }
 }
 
-export class InconsistenciasNaValidacaoDoTexto extends Error {
+export class InconsistenciasNaValidacaoDoTexto extends ErroInconsistenciasNaValidacao {
     constructor(public readonly inconsistencias: string[]) {
-        super(`Texto inválido`);
+        super(inconsistencias);
     }
 }
 
-export class ErroNaEdicaoDoTexto extends Error {
+export class ErroNaEdicaoDoTexto extends ErroNaEdicao {
     constructor(mensagem: string) {
         super(mensagem);
     }

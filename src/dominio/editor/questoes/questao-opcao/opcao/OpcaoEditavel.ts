@@ -1,5 +1,10 @@
 import { IIdFormulario } from '../../../comum/IdFormulario';
-import { IItemEditavel, ItemEditavel } from '../../ItemEditavel';
+import {
+    IItemEditavel,
+    ItemEditavel,
+    ErroNaEdicao,
+    ErroInconsistenciasNaValidacao,
+} from '../../ItemEditavel';
 import { IListaEditavel } from '../../ListaEditavel';
 import { ITextoEditavel } from './texto/TextoEditavel';
 import { ITitulo } from '../../../comum/Titulo';
@@ -118,13 +123,13 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
     }
 }
 
-export class ErroOpcaoInvalida extends Error {
+export class ErroOpcaoInvalida extends ErroInconsistenciasNaValidacao {
     constructor(public readonly inconsistencias: string[]) {
-        super(`Opção inválida`);
+        super(inconsistencias);
     }
 }
 
-export class ErroNaEdicaoDaOpcao extends Error {
+export class ErroNaEdicaoDaOpcao extends ErroNaEdicao {
     constructor(mensagem: string) {
         super(mensagem);
     }

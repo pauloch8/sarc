@@ -2,38 +2,36 @@ import {
     IdFormulario,
     IIdFormulario,
 } from '@/dominio/editor/comum/IdFormulario';
-import { ITextoModelo } from '@/dominio/editor/comum/TextoModelo';
 import { ITitulo } from '@/dominio/editor/comum/Titulo';
-import {
-    ErroNaEdicaoDoTexto,
-    ITextoEditavel,
-} from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { IVariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 import { IdFormularioDummy } from '../comum/IdFormularioDubles';
-import { TextoModeloDummy } from '../comum/TextoModeloDubles';
 import { TituloDummy } from '../comum/TituloDubles';
+import { ErroNaEdicao } from '@/dominio/editor/questoes/ItemEditavel';
+import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
+import { TipoVariavelIDDummy } from './TipoVariavelDubles';
 
-export class TextoEditavelEditaComSucessoMock implements ITextoEditavel {
+export class VariavelEditavelEditaComSucessoMock implements IVariavelEditavel {
     private id = new IdFormularioDummy();
     private titulo = new TituloDummy();
-    private textoModelo = new TextoModeloDummy();
+    private tipo = new TipoVariavelIDDummy();
     private indice = 0;
     getId() {
         return this.id;
     }
-    setId(id?: IdFormulario | undefined): void {
-        this.id = id as IdFormulario;
+    setId(id: IdFormulario): void {
+        this.id = id;
     }
     getTitulo() {
         return this.titulo;
     }
-    setTitulo(titulo?: ITitulo | undefined): void {
-        this.titulo = titulo as ITitulo;
+    setTitulo(titulo: ITitulo): void {
+        this.titulo = titulo;
     }
-    getTextoModelo() {
-        return this.textoModelo;
+    getTipo(): ITitulo {
+        return this.tipo;
     }
-    setTextoModelo(textoModelo?: ITextoModelo | undefined): void {
-        this.textoModelo = textoModelo as ITextoModelo;
+    setTipo(tipo: ITipoVariavelID): void {
+        this.tipo = tipo;
     }
     getEmEdicao() {
         return true;
@@ -55,28 +53,28 @@ export class TextoEditavelEditaComSucessoMock implements ITextoEditavel {
     }
 }
 
-export class TextoEditavelErroStub implements ITextoEditavel {
+export class VariavelEditavelErroStub implements IVariavelEditavel {
     id = new IdFormularioDummy();
     titulo = new TituloDummy();
-    textoModelo = new TextoModeloDummy();
+    tipo = 'dummy';
     indice = 0;
     getId() {
         return this.id;
     }
     setId() {
-        throw new ErroNaEdicaoDoTexto('id');
+        throw new ErroNaEdicao('id');
     }
     getTitulo() {
         return this.titulo;
     }
     setTitulo() {
-        throw new ErroNaEdicaoDoTexto('titulo');
+        throw new ErroNaEdicao('titulo');
     }
-    getTextoModelo() {
-        return this.textoModelo;
+    getTipo(): ITitulo {
+        return this.tipo;
     }
-    setTextoModelo() {
-        throw new ErroNaEdicaoDoTexto('texto-modelo');
+    setTipo(): void {
+        throw new ErroNaEdicao('tipo');
     }
     getEmEdicao() {
         return true;
@@ -91,14 +89,14 @@ export class TextoEditavelErroStub implements ITextoEditavel {
         return this.indice;
     }
     setIndice() {
-        throw new ErroNaEdicaoDoTexto('indice');
+        throw new ErroNaEdicao('indice');
     }
     toString() {
         return 'dummy';
     }
 }
 
-export class TextoEditavelDummy implements ITextoEditavel {
+export class VariavelEditavelDummy implements IVariavelEditavel {
     getId(): IIdFormulario {
         throw new Error('Method not implemented.');
     }
@@ -111,10 +109,10 @@ export class TextoEditavelDummy implements ITextoEditavel {
     setTitulo(): void {
         throw new Error('Method not implemented.');
     }
-    getTextoModelo(): ITextoModelo {
+    getTipo(): ITitulo {
         throw new Error('Method not implemented.');
     }
-    setTextoModelo(): void {
+    setTipo(): void {
         throw new Error('Method not implemented.');
     }
     getEmEdicao(): boolean {
@@ -129,7 +127,7 @@ export class TextoEditavelDummy implements ITextoEditavel {
     getIndice(): number {
         throw new Error('Method not implemented.');
     }
-    setIndice(indice: number): void {
+    setIndice(): void {
         throw new Error('Method not implemented.');
     }
     toString(): string {

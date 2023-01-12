@@ -1,12 +1,12 @@
 <script lang="ts">
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 import { defineComponent } from 'vue';
-import TextoEdicao from './TextoEdicao.vue';
+import VariavelEdicao from './VariavelEdicao.vue';
 
 export default defineComponent({
-    name: 'AdicionarTexto',
+    name: 'AdicionarVariavel',
     components: {
-        TextoEdicao,
+        VariavelEdicao,
     },
     props: {
         indice: {
@@ -23,9 +23,9 @@ export default defineComponent({
         editar() {
             this.emEdicao = true;
         },
-        adicionarItem(texto: TextoEditavel) {
+        adicionarItem(variavel: VariavelEditavel) {
             this.emEdicao = false;
-            this.$emit('adicionarItem', texto);
+            this.$emit('adicionarItem', variavel);
         },
         cancelou() {
             this.emEdicao = false;
@@ -43,16 +43,16 @@ export default defineComponent({
             class="outline adicionar"
             @click.prevent="editar"
         >
-            + Adicionar Texto
+            + Adicionar Variavel
         </a>
     </div>
     <div v-if="emEdicao">
-        <TextoEdicao
+        <VariavelEdicao
             :indice="indice"
             @criou="adicionarItem"
             @cancelou="cancelou"
         >
-        </TextoEdicao>
+        </VariavelEdicao>
     </div>
 </template>
 

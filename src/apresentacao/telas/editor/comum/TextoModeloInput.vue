@@ -27,7 +27,7 @@ export default defineComponent({
     },
     data() {
         return {
-            textoModeloString: this.textoModelo?.getTexto() || '',
+            textoModeloString: this.textoModelo?.getTextoHtml() || '',
             ClassicEditor,
             erroString: '',
         };

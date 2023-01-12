@@ -10,8 +10,9 @@
         "test:verbose": "jest --no-cache --passWithNoTests --runInBand",
         "test:unit": "npm test -- --watch -c jest-unit-config.ts",
         "test:coverage": "npm test -- -c jest-coverage-config.ts",
+        "test:coverage-view": "npx lite-server ./coverage/lcov-report/index.html",
         "test:staged": "npm test -- --findRelatedTests",
-        "test:clear-cache": "jest --clearCache --passWithNoTests --silent --noStackTrace --runInBand",
+        "test:clear": "jest --clearCache --passWithNoTests --silent --noStackTrace --runInBand",
         "test-vue:unit": "vue-cli-service test:unit",
         "prepare": "husky install",
         "lint-staged": "node node_modules/lint-staged/bin/lint-staged.js"
@@ -27,6 +28,8 @@
         "core-js": "^3.8.3",
         "git-commit-msg-linter": "^4.2.1",
         "remove-accents": "^0.4.4",
+        "string-strip-html": "^8.3.0",
+        "striptags": "^3.2.0",
         "vue": "^3.2.13",
         "vue-router": "^4.0.3"
     },

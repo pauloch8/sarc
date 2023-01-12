@@ -1,38 +1,37 @@
-import TextoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/opcao/texto/TextoEdicao.vue';
+import VariavelEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/opcao/variavel/VariavelEdicao.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 import { mount } from '@vue/test-utils';
 import {
-    TextoEditavelFactoryDummy,
-    TextoEditavelFactoryErroDesconhecidoStub,
-    TextoEditavelFactoryErroInconsistenciasNaValidacaoStub,
-    TextoEditavelFactorySucessoStub,
-} from '@/tests/dubles/dominio/editor/questoes/TextoEditavelFactoryDubles';
+    VariavelEditavelFactoryDummy,
+    VariavelEditavelFactoryErroDesconhecidoStub,
+    VariavelEditavelFactoryErroInconsistenciasNaValidacaoStub,
+    VariavelEditavelFactorySucessoStub,
+} from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelFactoryDubles';
 import {
-    TextoEditavelDummy,
-    TextoEditavelEditaComSucessoMock,
-    TextoEditavelErroStub,
-} from '@/tests/dubles/dominio/editor/questoes/TextoEditavelDubles';
+    VariavelEditavelDummy,
+    VariavelEditavelEditaComSucessoMock,
+    VariavelEditavelErroStub,
+} from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelDubles';
 import { IdFormularioDummy } from '@/tests/dubles/dominio/editor/comum/IdFormularioDubles';
 import { TituloDummy } from '@/tests/dubles/dominio/editor/comum/TituloDubles';
-import { TextoModeloDummy } from '@/tests/dubles/dominio/editor/comum/TextoModeloDubles';
 import { SubtituloDummy } from '@/tests/dubles/dominio/editor/comum/SubtituloDubles';
 
-describe('TextoEdicao', () => {
-    describe('ao criar um novo TextoEdicao', () => {
+describe('VariavelEdicao', () => {
+    describe('ao criar um novo VariavelEdicao', () => {
         test('exibe erro e lista de inconsistências se for lançado erro de validação', async () => {
-            const textoEditavelFactory =
-                new TextoEditavelFactoryErroInconsistenciasNaValidacaoStub();
-            const sut = mount(TextoEdicaoVue, {
+            const variavelEditavelFactory =
+                new VariavelEditavelFactoryErroInconsistenciasNaValidacaoStub();
+            const sut = mount(VariavelEdicaoVue, {
                 global: {
                     provide: {
-                        textoEditavelFactory,
+                        variavelEditavelFactory,
                     },
                 },
                 components: {
                     IdFormularioFactory: {},
                     TituloInput: {},
-                    TextoModeloInput: {},
+                    VariavelModeloInput: {},
                     BotoesSalvarCancelar,
                 },
                 props: {
@@ -42,22 +41,22 @@ describe('TextoEdicao', () => {
             await sut.find('.botaoSalvar').trigger('click');
             expect(sut.find('.erro').exists()).toBeTruthy();
             expect(sut.find('.erro').text()).toContain(
-                textoEditavelFactory.inconsistencias[0],
+                variavelEditavelFactory.inconsistencias[0],
             );
         });
         test('exibe mensagem de erro desconhecido se ocorrer outro tipo de erro na criação', async () => {
-            const textoEditavelFactory =
-                new TextoEditavelFactoryErroDesconhecidoStub();
-            const sut = mount(TextoEdicaoVue, {
+            const variavelEditavelFactory =
+                new VariavelEditavelFactoryErroDesconhecidoStub();
+            const sut = mount(VariavelEdicaoVue, {
                 global: {
                     provide: {
-                        textoEditavelFactory,
+                        variavelEditavelFactory,
                     },
                 },
                 components: {
                     IdFormularioFactory: {},
                     TituloInput: {},
-                    TextoModeloInput: {},
+                    VariavelModeloInput: {},
                     BotoesSalvarCancelar,
                 },
                 props: {
@@ -71,17 +70,18 @@ describe('TextoEdicao', () => {
             );
         });
         test('emite um evento "criou" com um objeto', async () => {
-            const textoEditavelFactory = new TextoEditavelFactorySucessoStub();
-            const sut = mount(TextoEdicaoVue, {
+            const variavelEditavelFactory =
+                new VariavelEditavelFactorySucessoStub();
+            const sut = mount(VariavelEdicaoVue, {
                 global: {
                     provide: {
-                        textoEditavelFactory,
+                        variavelEditavelFactory,
                     },
                 },
                 components: {
                     IdFormularioFactory: {},
                     TituloInput: {},
-                    TextoModeloInput: {},
+                    VariavelModeloInput: {},
                     BotoesSalvarCancelar,
                 },
                 props: {
@@ -90,11 +90,11 @@ describe('TextoEdicao', () => {
                 data() {
                     const id = new IdFormularioDummy();
                     const titulo = new TituloDummy();
-                    const textoModelo = new TextoModeloDummy();
+                    const tipo = 'dummy';
                     return {
                         id,
                         titulo,
-                        textoModelo,
+                        tipo,
                     };
                 },
             });
@@ -104,28 +104,28 @@ describe('TextoEdicao', () => {
             expect(sut.emitted('criou')).toHaveLength(1);
             const evento = sut.emitted('criou') as unknown[][];
             const argumento = evento[0] as any;
-            expect(argumento[0]).toBeInstanceOf(TextoEditavelDummy);
+            expect(argumento[0]).toBeInstanceOf(VariavelEditavelDummy);
         });
     });
-    describe('ao editar um Texto existente', () => {
+    describe('ao editar um Variavel existente', () => {
         test('exibe lista de erros se ocorrer um erro', async () => {
-            const textoEditavelFactory = new TextoEditavelFactoryDummy();
-            const texto =
-                new TextoEditavelErroStub() as unknown as TextoEditavel;
-            const sut = mount(TextoEdicaoVue, {
+            const variavelEditavelFactory = new VariavelEditavelFactoryDummy();
+            const variavel =
+                new VariavelEditavelErroStub() as unknown as VariavelEditavel;
+            const sut = mount(VariavelEdicaoVue, {
                 global: {
                     provide: {
-                        textoEditavelFactory,
+                        variavelEditavelFactory,
                     },
                 },
                 components: {
                     IdFormularioFactory: {},
                     TituloInput: {},
-                    TextoModeloInput: {},
+                    VariavelModeloInput: {},
                     BotoesSalvarCancelar,
                 },
                 props: {
-                    texto,
+                    variavel,
                     indice: 0,
                 },
             });
@@ -133,26 +133,26 @@ describe('TextoEdicao', () => {
             expect(sut.find('.erro').exists()).toBeTruthy();
             expect(sut.find('.erro').text()).toContain('id');
             expect(sut.find('.erro').text()).toContain('titulo');
-            expect(sut.find('.erro').text()).toContain('texto-modelo');
+            expect(sut.find('.erro').text()).toContain('tipo');
         });
         test('emite um evento "atualizou" com um objeto', async () => {
-            const textoEditavelFactory = new TextoEditavelFactoryDummy();
-            const texto =
-                new TextoEditavelEditaComSucessoMock() as unknown as TextoEditavel;
-            const sut = mount(TextoEdicaoVue, {
+            const variavelEditavelFactory = new VariavelEditavelFactoryDummy();
+            const variavel =
+                new VariavelEditavelEditaComSucessoMock() as unknown as VariavelEditavel;
+            const sut = mount(VariavelEdicaoVue, {
                 global: {
                     provide: {
-                        textoEditavelFactory,
+                        variavelEditavelFactory,
                     },
                 },
                 components: {
                     IdFormularioFactory: {},
                     TituloInput: {},
-                    TextoModeloInput: {},
+                    VariavelModeloInput: {},
                     BotoesSalvarCancelar,
                 },
                 props: {
-                    texto,
+                    variavel,
                     indice: 0,
                 },
                 data() {
@@ -173,8 +173,8 @@ describe('TextoEdicao', () => {
                 throw new Error('array de eventos não contém objeto');
             }
             const argumento = evento[0] as any;
-            const retorno = argumento[0] as TextoEditavel;
-            expect(retorno).toBeInstanceOf(TextoEditavelEditaComSucessoMock);
+            const retorno = argumento[0] as VariavelEditavel;
+            expect(retorno).toBeInstanceOf(VariavelEditavelEditaComSucessoMock);
         });
     });
 });

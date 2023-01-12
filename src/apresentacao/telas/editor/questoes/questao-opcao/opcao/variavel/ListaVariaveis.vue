@@ -1,15 +1,15 @@
 <script lang="ts">
 import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 import { defineComponent } from 'vue';
-import ItemDeTexto from './ItemDeTexto.vue';
-import AdicionarTexto from './AdicionarTexto.vue';
+import ItemDeVariavel from './ItemDeVariavel.vue';
+import AdicionarVariavel from './AdicionarVariavel.vue';
 
 export default defineComponent({
-    name: 'ListaTextos',
+    name: 'ListaVariaveis',
     components: {
-        ItemDeTexto,
-        AdicionarTexto,
+        ItemDeVariavel,
+        AdicionarVariavel,
     },
     props: {
         lista: {
@@ -19,12 +19,12 @@ export default defineComponent({
     },
     data() {
         return {
-            estaLista: this.lista as ListaEditavel<TextoEditavel>,
+            estaLista: this.lista as ListaEditavel<VariavelEditavel>,
         };
     },
     computed: {
         itensOrdenados() {
-            const retorno = (this.lista as ListaEditavel<TextoEditavel>)
+            const retorno = (this.lista as ListaEditavel<VariavelEditavel>)
                 .getItens()
                 .sort((a, b) => {
                     const indiceA = a.getIndice();
@@ -41,19 +41,19 @@ export default defineComponent({
         },
     },
     methods: {
-        editar(item: TextoEditavel) {
+        editar(item: VariavelEditavel) {
             this.estaLista.editarItem(item);
         },
-        adicionarItem(item: TextoEditavel) {
+        adicionarItem(item: VariavelEditavel) {
             this.estaLista.adicionarItem(item);
         },
-        excluir(item: TextoEditavel) {
+        excluir(item: VariavelEditavel) {
             this.estaLista.excluirItem(item);
         },
-        descer(item: TextoEditavel) {
+        descer(item: VariavelEditavel) {
             this.estaLista.descerItem(item);
         },
-        subir(item: TextoEditavel) {
+        subir(item: VariavelEditavel) {
             this.estaLista.subirItem(item);
         },
     },
@@ -61,30 +61,30 @@ export default defineComponent({
 </script>
 
 <template>
-    <h3>Textos</h3>
+    <h3>Variaveis</h3>
 
-    <TransitionGroup name="textos">
-        <ItemDeTexto
-            v-for="(texto, indice) in itensOrdenados"
+    <TransitionGroup name="variavels">
+        <ItemDeVariavel
+            v-for="(variavel, indice) in itensOrdenados"
             :key="indice"
-            :texto="(texto as TextoEditavel)"
+            :variavel="(variavel as VariavelEditavel)"
             :ehPrimeiro="indice === 0"
             :ehUltimo="indice === itensOrdenados.length - 1"
             @editar="editar"
             @excluir="excluir"
             @descer="descer"
             @subir="subir"
-        ></ItemDeTexto>
+        ></ItemDeVariavel>
     </TransitionGroup>
 
-    <AdicionarTexto
+    <AdicionarVariavel
         :indice="itensOrdenados.length"
         @adicionarItem="adicionarItem"
-    ></AdicionarTexto>
+    ></AdicionarVariavel>
 </template>
 
 <style scoped>
-.textos-move {
+.variavels-move {
     transition: all 0.5s ease-in-out;
 }
 </style>

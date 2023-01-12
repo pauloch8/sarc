@@ -34,3 +34,15 @@ export abstract class ItemEditavel implements IItemEditavel {
 
     abstract toString(): string;
 }
+
+export class ErroInconsistenciasNaValidacao extends Error {
+    constructor(public readonly inconsistencias: string[]) {
+        super(`Texto inválido`);
+    }
+}
+
+export class ErroNaEdicao extends Error {
+    constructor(mensagem: string) {
+        super(mensagem);
+    }
+}

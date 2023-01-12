@@ -1,14 +1,21 @@
-import { IItemEditavel, ItemEditavel } from '../../../ItemEditavel';
+import {
+    IItemEditavel,
+    ItemEditavel,
+    ErroInconsistenciasNaValidacao,
+    ErroNaEdicao,
+} from '../../../ItemEditavel';
 import { IIdFormulario } from '../../../../comum/IdFormulario';
 import { ITitulo } from '../../../../comum/Titulo';
+import { ITipoVariavel } from './tipo-variavel/TipoVariavel';
+import { ITipoVariavelID } from './tipo-variavel/TipoVariavelID';
 
 export interface IVariavelEditavel extends IItemEditavel {
     getId(): IIdFormulario;
     setId(id: IIdFormulario): void;
     getTitulo(): ITitulo;
     setTitulo(titulo: ITitulo): void;
-    getTipo(): ITitulo;
-    setTipo(tipo: string): void;
+    getTipo(): ITipoVariavelID;
+    setTipo(tipo: ITipoVariavel): void;
 }
 
 export class VariavelEditavel
@@ -18,19 +25,49 @@ export class VariavelEditavel
     constructor(
         private id: IIdFormulario,
         private titulo: ITitulo,
-        private tipo: string,
+        private tipo: ITipoVariavelID,
         indice: number,
     ) {
         super(indice);
+        const validacao = this.validar();
+        if (!validacao.valido) {
+            throw new ErroInconsistenciasNaValidacao(validacao.inconsistencias);
+        }
+    }
+
+    private validar() {
+        const contemId = !!this.id;
+        const contemTitulo = !!this.titulo;
+        const contemTextoModelo = !!this.tipo;
+        const contemIndice = typeof this.getIndice() === 'number';
+
+        const valido =
+            contemId && contemTitulo && contemTextoModelo && contemIndice;
+
+        const inconsistencias = [];
+        if (!contemId) {
+            inconsistencias.push('Não contêm ID');
+        }
+        if (!contemTitulo) {
+            inconsistencias.push('Não contêm Título');
+        }
+        if (!contemTextoModelo) {
+            inconsistencias.push('Não contêm Tipo');
+        }
+        if (!contemIndice) {
+            inconsistencias.push('Não contêm índice');
+        }
+
+        return { valido, inconsistencias };
     }
 
     getId() {
         return this.id;
     }
 
-    setId(id: IIdFormulario) {
+    setId(id?: IIdFormulario) {
         if (!id) {
-            throw new ErroNaEdicaoDaVariavel('Id vazio informado');
+            throw new ErroNaEdicao('Id vazio informado');
         }
         this.id = id;
     }
@@ -39,37 +76,25 @@ export class VariavelEditavel
         return this.titulo;
     }
 
-    setTitulo(titulo: ITitulo) {
+    setTitulo(titulo?: ITitulo) {
         if (!titulo) {
-            throw new ErroNaEdicaoDaVariavel('Titulo vazio informado');
+            throw new ErroNaEdicao('Titulo vazio informado');
         }
         this.titulo = titulo;
     }
 
     getTipo() {
-        return this.titulo;
+        return this.tipo;
     }
 
-    setTipo(tipo: string) {
+    setTipo(tipo?: ITipoVariavelID) {
         if (!tipo) {
-            throw new ErroNaEdicaoDaVariavel('Tipo vazio informado');
+            throw new ErroNaEdicao('Tipo vazio informado');
         }
         this.tipo = tipo;
     }
 
     toString(): string {
-        return `${this.tipo}: ${this.titulo}`;
-    }
-}
-
-export class ErroVariavelInvalida extends Error {
-    constructor(public readonly inconsistencias: string[]) {
-        super(`Variável inválida`);
-    }
-}
-
-export class ErroNaEdicaoDaVariavel extends Error {
-    constructor(mensagem: string) {
-        super(mensagem);
+        return `${this.id}: ${this.titulo}`;
     }
 }

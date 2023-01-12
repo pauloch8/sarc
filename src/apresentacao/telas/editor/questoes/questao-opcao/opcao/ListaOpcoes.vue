@@ -41,17 +41,17 @@ export default defineComponent({
         },
     },
     methods: {
-        editar(opcao: OpcaoEditavel) {
-            this.estaLista.editarItem(opcao);
+        editar(item: OpcaoEditavel) {
+            this.estaLista.editarItem(item);
         },
-        excluir(opcao: OpcaoEditavel) {
-            this.estaLista.excluirItem(opcao);
+        excluir(item: OpcaoEditavel) {
+            this.estaLista.excluirItem(item);
         },
-        descer(opcao: OpcaoEditavel) {
-            this.estaLista.descerItem(opcao);
+        descer(item: OpcaoEditavel) {
+            this.estaLista.descerItem(item);
         },
-        subir(opcao: OpcaoEditavel) {
-            this.estaLista.subirItem(opcao);
+        subir(item: OpcaoEditavel) {
+            this.estaLista.subirItem(item);
         },
     },
 });

@@ -1,48 +1,72 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import BotoesEdicao from '../comum/BotoesEdicao.vue';
-import { Variavel } from '@/dominio/formulario/questoes/Variavel';
+import BotoesEdicao from '../../../../comum/BotoesEdicao.vue';
+import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 
 export default defineComponent({
     name: 'VariavelVisualizacao',
     components: { BotoesEdicao },
     props: {
-        variavel: {
-            type: Variavel,
-            required: true,
+        variavel: { type: VariavelEditavel, required: true },
+        ehPrimeiro: { type: Boolean, required: true },
+        ehUltimo: { type: Boolean, required: true },
+    },
+    computed: {
+        titulo() {
+            let titulo = this.variavel.toString();
+            if (titulo.length > 28) {
+                titulo = titulo.substring(0, 25) + '...';
+            }
+            return titulo;
         },
     },
-    data() {
-        return {
-            classicEditor: ClassicEditor,
-            editorHtml: '',
-        };
+    methods: {
+        editar() {
+            this.$emit('editar', this.variavel);
+        },
+        excluir() {
+            this.$emit('excluir', this.variavel);
+        },
+        descer() {
+            this.$emit('descer', this.variavel);
+        },
+        subir() {
+            this.$emit('subir', this.variavel);
+        },
     },
-    emits: ['excluiuOpcao', 'desceuOpcao', 'subiuOpcao', 'editouOpcao'],
+    emits: ['excluir', 'descer', 'subir', 'editar'],
 });
 </script>
 
 <template>
-    <li>
-        {{ variavel.getTipo() }}: {{ variavel.getLabel() }}
+    <label>
+        <input type="radio" disabled />
+        {{ titulo }}
         <BotoesEdicao
-            @editou="$emit('editouOpcao')"
-            @excluiu="$emit('excluiuOpcao')"
-            @desceu="$emit('desceuOpcao')"
-            @subiu="$emit('subiuOpcao')"
+            :ehPrimeiro="ehPrimeiro"
+            :ehUltimo="ehUltimo"
+            @editar="editar"
+            @excluir="excluir"
+            @descer="descer"
+            @subir="subir"
         ></BotoesEdicao>
-    </li>
+    </label>
 </template>
 
-<style scoped>
-li {
+<style lang="scss" scoped>
+label {
     padding: 20px 40px;
 }
 
-li:hover {
+label:hover {
     border-radius: var(--border-radius);
     background: var(--card-background-color);
     box-shadow: var(--card-box-shadow);
+}
+
+input[type='radio'][disabled] {
+    cursor: not-allowed;
+    border-color: #000;
+    background-color: #fff;
 }
 </style>
