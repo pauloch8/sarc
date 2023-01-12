@@ -1,7 +1,7 @@
 import { IOpcaoEditavel, OpcaoEditavel } from './OpcaoEditavel';
 import { IListaEditavel } from '../../ListaEditavel';
-import { ITitulo } from '../../../comum/Titulo';
-import { IIdFormulario } from '../../../comum/IdFormulario';
+import { ITitulo } from '../../../../comum/Titulo';
+import { IIdFormulario } from '../../../../comum/IdFormulario';
 import { ITextoEditavel } from './texto/TextoEditavel';
 import { IVariavelEditavel } from './variavel/VariavelEditavel';
 

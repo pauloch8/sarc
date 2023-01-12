@@ -1,6 +1,6 @@
-import { IIdFormulario } from '@/dominio/editor/comum/IdFormulario';
-import { ITextoModelo } from '@/dominio/editor/comum/TextoModelo';
-import { ITitulo } from '@/dominio/editor/comum/Titulo';
+import { IIdFormulario } from '@/dominio/comum/IdFormulario';
+import { ITextoModelo } from '@/dominio/comum/TextoModelo';
+import { ITitulo } from '@/dominio/comum/Titulo';
 import { ITextoEditavel, TextoEditavel } from './TextoEditavel';
 
 export interface ITextoEditavelFactory {

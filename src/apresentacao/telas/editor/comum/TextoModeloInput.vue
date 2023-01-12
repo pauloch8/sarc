@@ -2,8 +2,8 @@
 import {
     TextoModelo,
     ErroDeCriacaoDeTextoModelo,
-} from '@/dominio/editor/comum/TextoModelo';
-import { ITextoModeloFactory } from '@/dominio/editor/comum/TextoModeloFactory';
+} from '@/dominio/comum/TextoModelo';
+import { ITextoModeloFactory } from '@/dominio/comum/TextoModeloFactory';
 import { defineComponent, inject } from 'vue';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 

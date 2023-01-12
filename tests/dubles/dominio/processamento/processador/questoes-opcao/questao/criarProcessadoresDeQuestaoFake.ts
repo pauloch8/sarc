@@ -1,5 +1,5 @@
 import { RespostaDeOpcao } from '@/dominio/formulario/respostas/Respostas';
-import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
+import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 import { IProcessadorDeQuestao } from '@/dominio/processamento/processador/questoes-opcao/questao/IProcessadorDeQuestao';
 
 export function criarProcessadoresDeQuestaoFake(numeros: number[]) {

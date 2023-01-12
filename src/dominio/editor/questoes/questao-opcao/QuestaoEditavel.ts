@@ -1,4 +1,4 @@
-import { IIdFormulario } from '../../comum/IdFormulario';
+import { IIdFormulario } from '../../../comum/IdFormulario';
 import {
     IItemEditavel,
     ItemEditavel,
@@ -7,8 +7,8 @@ import {
 } from '../ItemEditavel';
 import { IListaEditavel } from '../ListaEditavel';
 import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
-import { ISubtitulo } from '../../comum/Subtitulo';
-import { ITitulo } from '../../comum/Titulo';
+import { ISubtitulo } from '../../../comum/Subtitulo';
+import { ITitulo } from '../../../comum/Titulo';
 
 export interface IQuestaoEditavel extends IItemEditavel {
     getId(): IIdFormulario;

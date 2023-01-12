@@ -3,18 +3,18 @@ import {
     ErroNaEdicaoDoTexto,
     InconsistenciasNaValidacaoDoTexto,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
-import { IIdFormulario } from '@/dominio/editor/comum/IdFormulario';
-import { ITextoModelo } from '@/dominio/editor/comum/TextoModelo';
-import { ITitulo } from '@/dominio/editor/comum/Titulo';
+import { IIdFormulario } from '@/dominio/comum/IdFormulario';
+import { ITextoModelo } from '@/dominio/comum/TextoModelo';
+import { ITitulo } from '@/dominio/comum/Titulo';
 import {
     TextoModeloDummy,
     TextoModeloRetornaTextosStub,
-} from '@/tests/dubles/dominio/editor/comum/TextoModeloDubles';
-import { TituloDummy } from '@/tests/dubles/dominio/editor/comum/TituloDubles';
+} from '@/tests/dubles/dominio/comum/TextoModeloDubles';
+import { TituloDummy } from '@/tests/dubles/dominio/comum/TituloDubles';
 import {
     IdFormularioDummy,
     IdFormularioToStringStub,
-} from '@/tests/dubles/dominio/editor/comum/IdFormularioDubles';
+} from '@/tests/dubles/dominio/comum/IdFormularioDubles';
 
 describe('TextoEditavel', () => {
     describe('valida o texto na sua criação', () => {

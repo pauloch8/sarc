@@ -1,4 +1,4 @@
-import { IIdFormulario } from '../../../comum/IdFormulario';
+import { IIdFormulario } from '../../../../comum/IdFormulario';
 import {
     IItemEditavel,
     ItemEditavel,
@@ -7,7 +7,7 @@ import {
 } from '../../ItemEditavel';
 import { IListaEditavel } from '../../ListaEditavel';
 import { ITextoEditavel } from './texto/TextoEditavel';
-import { ITitulo } from '../../../comum/Titulo';
+import { ITitulo } from '../../../../comum/Titulo';
 import { IVariavelEditavel } from './variavel/VariavelEditavel';
 
 export interface IOpcaoEditavel extends IItemEditavel {

@@ -1,4 +1,4 @@
-import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
+import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 import { RespostaDeQuestao } from '../../../../formulario/respostas/Respostas';
 import { IProcessadorDeOpcao } from '../opcao/ProcessadorDeOpcao';
 import { IProcessadorDeQuestao } from './IProcessadorDeQuestao';

@@ -1,4 +1,4 @@
-import { EscapadorDeQuestao } from '../../../escapador/questao/EscapadorDeQuestao';
+import { EscapadorDeQuestao } from '../../../../comum/escapador/questao/EscapadorDeQuestao';
 
 export interface IProcessadorDeVariavel {
     processar(variavel: EscapadorDeQuestao, texto: string): string;

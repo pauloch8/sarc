@@ -1,5 +1,5 @@
-import { TextoModeloFactory } from '@/dominio/editor/comum/TextoModeloFactory';
-import { TextoModelo } from '@/dominio/editor/comum/TextoModelo';
+import { TextoModeloFactory } from '@/dominio/comum/TextoModeloFactory';
+import { TextoModelo } from '@/dominio/comum/TextoModelo';
 import { RemoveHtml } from '@/dominio/util/RemoveHtml';
 
 class RemovHtmlRetornaSemAlterarStub implements RemoveHtml {

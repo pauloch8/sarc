@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils';
-import { Titulo } from '@/dominio/editor/comum/Titulo';
+import { Titulo } from '@/dominio/comum/Titulo';
 import {
     TituloFactoryLancaErroStub,
     TituloFactorySucessoStub,
     TituloFactoryDummy,
-} from '@/tests/dubles/dominio/editor/comum/TituloFactoryDubles';
+} from '@/tests/dubles/dominio/comum/TituloFactoryDubles';
 import TituloInputVue from '@/apresentacao/telas/editor/comum/TituloInput.vue';
 
 describe('TituloInput', () => {

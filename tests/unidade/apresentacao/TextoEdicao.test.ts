@@ -13,10 +13,10 @@ import {
     TextoEditavelEditaComSucessoMock,
     TextoEditavelErroStub,
 } from '@/tests/dubles/dominio/editor/questoes/TextoEditavelDubles';
-import { IdFormularioDummy } from '@/tests/dubles/dominio/editor/comum/IdFormularioDubles';
-import { TituloDummy } from '@/tests/dubles/dominio/editor/comum/TituloDubles';
-import { TextoModeloDummy } from '@/tests/dubles/dominio/editor/comum/TextoModeloDubles';
-import { SubtituloDummy } from '@/tests/dubles/dominio/editor/comum/SubtituloDubles';
+import { IdFormularioDummy } from '@/tests/dubles/dominio/comum/IdFormularioDubles';
+import { TituloDummy } from '@/tests/dubles/dominio/comum/TituloDubles';
+import { TextoModeloDummy } from '@/tests/dubles/dominio/comum/TextoModeloDubles';
+import { SubtituloDummy } from '@/tests/dubles/dominio/comum/SubtituloDubles';
 
 describe('TextoEdicao', () => {
     describe('ao criar um novo TextoEdicao', () => {

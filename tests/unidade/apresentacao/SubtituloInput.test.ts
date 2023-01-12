@@ -1,10 +1,10 @@
 import SubtituloInputVue from '@/apresentacao/telas/editor/comum/SubtituloInput.vue';
-import { Subtitulo } from '@/dominio/editor/comum/Subtitulo';
+import { Subtitulo } from '@/dominio/comum/Subtitulo';
 import {
     SubtituloFactoryDummy,
     SubtituloFactoryErroStub,
     SubtituloFactorySucessoStub,
-} from '@/tests/dubles/dominio/editor/comum/SubtituloFactoryDubles';
+} from '@/tests/dubles/dominio/comum/SubtituloFactoryDubles';
 import { mount } from '@vue/test-utils';
 
 describe('SubtituloInput', () => {

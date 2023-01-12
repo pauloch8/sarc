@@ -1,6 +1,6 @@
 import { ITipoVariavel, TipoVariavel } from './TipoVariavel';
 import { ITipoVariavelID } from './TipoVariavelID';
-import { ITitulo } from '@/dominio/editor/comum/Titulo';
+import { ITitulo } from '@/dominio/comum/Titulo';
 
 export interface ITipoVariavelFactory {
     criar(id: ITipoVariavelID, titulo: ITitulo): ITipoVariavel;

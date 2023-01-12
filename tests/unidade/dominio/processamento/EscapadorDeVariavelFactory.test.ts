@@ -1,5 +1,5 @@
-import { EscapadorDeVariavel } from '@/dominio/processamento/escapador/variavel/EscapadorDeVariavel';
-import { EscapadorDeVariavelFactory } from '@/dominio/processamento/escapador/variavel/EscapadorDeVariavelFactory';
+import { EscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
+import { EscapadorDeVariavelFactory } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
 
 describe('EscapadorDeVariavelFactory', () => {
     describe('criarEscapadoresDeTexto', () => {

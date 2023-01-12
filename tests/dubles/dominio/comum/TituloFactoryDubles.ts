@@ -1,5 +1,5 @@
-import { Titulo } from '@/dominio/editor/comum/Titulo';
-import { ITituloFactory } from '@/dominio/editor/comum/TituloFactory';
+import { Titulo } from '@/dominio/comum/Titulo';
+import { ITituloFactory } from '@/dominio/comum/TituloFactory';
 import { ErroDeCriacaoDeTituloFake } from './TituloDubles';
 
 export class TituloFactoryDummy implements ITituloFactory {

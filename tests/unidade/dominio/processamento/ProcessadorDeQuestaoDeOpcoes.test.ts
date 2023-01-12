@@ -5,7 +5,7 @@ import {
     ErroDaRespostaNaoEncontrado,
 } from '@/dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoDeOpcoes';
 import { makeRespostaDeQuestaoFake } from '@/tests/dubles/dominio/formulario/respostas/makeRespostaDeQuestaoFake';
-import { makeEscapadorDeQuestaoFake } from '@/tests/dubles/dominio/processamento/escapador/questao/makeEscapadorDeQuestaoFake';
+import { makeEscapadorDeQuestaoFake } from '@/tests/dubles/dominio/comum/escapador/questao/makeEscapadorDeQuestaoFake';
 import { makeProcessadorDeOpcaoStub } from '@/tests/dubles/dominio/processamento/processador/questoes-opcao/opcao/makeProcessadorDeOpcaoStub';
 
 describe('ProcessadorDeQuestaoDeOpcoes', () => {

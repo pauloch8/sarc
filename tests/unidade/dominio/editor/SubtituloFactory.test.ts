@@ -2,7 +2,7 @@ import {
     ErroSubtituloComMenosDeTresCaracteres,
     ErroSubtituloEmBranco,
     SubtituloFactory,
-} from '@/dominio/editor/comum/SubtituloFactory';
+} from '@/dominio/comum/SubtituloFactory';
 
 describe('SubtituloFactory', () => {
     describe('criar', () => {

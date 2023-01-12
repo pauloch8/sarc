@@ -4,8 +4,8 @@ import {
     ErroInconsistenciasNaValidacao,
     ErroNaEdicao,
 } from '../../../ItemEditavel';
-import { IIdFormulario } from '../../../../comum/IdFormulario';
-import { ITitulo } from '../../../../comum/Titulo';
+import { IIdFormulario } from '../../../../../comum/IdFormulario';
+import { ITitulo } from '../../../../../comum/Titulo';
 import { ITipoVariavel } from './tipo-variavel/TipoVariavel';
 import { ITipoVariavelID } from './tipo-variavel/TipoVariavelID';
 

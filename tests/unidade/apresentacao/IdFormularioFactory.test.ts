@@ -1,11 +1,11 @@
 import IdFormularioInput from '@/apresentacao/telas/editor/comum/IdFormularioFactory.vue';
-import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
-import { Titulo } from '@/dominio/editor/comum/Titulo';
+import { IdFormulario } from '@/dominio/comum/IdFormulario';
+import { Titulo } from '@/dominio/comum/Titulo';
 import { mount } from '@vue/test-utils';
 import {
     IdFormularioFactoryDummy,
     IdFormularioFactorySucessoStub,
-} from '@/tests/dubles/dominio/editor/comum/IdFormularioFactoryDubles';
+} from '@/tests/dubles/dominio/comum/IdFormularioFactoryDubles';
 
 describe('IdFormularioFactory', () => {
     describe('se fornecido um titulo como props', () => {

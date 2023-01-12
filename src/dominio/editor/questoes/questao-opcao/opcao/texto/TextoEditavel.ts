@@ -1,9 +1,6 @@
-import {
-    IdFormulario,
-    IIdFormulario,
-} from '@/dominio/editor/comum/IdFormulario';
-import { ITitulo } from '@/dominio/editor/comum/Titulo';
-import { ITextoModelo } from '@/dominio/editor/comum/TextoModelo';
+import { IdFormulario, IIdFormulario } from '@/dominio/comum/IdFormulario';
+import { ITitulo } from '@/dominio/comum/Titulo';
+import { ITextoModelo } from '@/dominio/comum/TextoModelo';
 import {
     ItemEditavel,
     IItemEditavel,

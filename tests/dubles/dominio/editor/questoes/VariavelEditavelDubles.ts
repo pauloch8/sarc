@@ -1,11 +1,8 @@
-import {
-    IdFormulario,
-    IIdFormulario,
-} from '@/dominio/editor/comum/IdFormulario';
-import { ITitulo } from '@/dominio/editor/comum/Titulo';
+import { IdFormulario, IIdFormulario } from '@/dominio/comum/IdFormulario';
+import { ITitulo } from '@/dominio/comum/Titulo';
 import { IVariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
-import { IdFormularioDummy } from '../comum/IdFormularioDubles';
-import { TituloDummy } from '../comum/TituloDubles';
+import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
+import { TituloDummy } from '../../comum/TituloDubles';
 import { ErroNaEdicao } from '@/dominio/editor/questoes/ItemEditavel';
 import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
 import { TipoVariavelIDDummy } from './TipoVariavelDubles';

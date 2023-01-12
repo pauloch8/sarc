@@ -1,4 +1,4 @@
-import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import {
     IListaEditavel,
     ListaEditavel,
@@ -8,11 +8,11 @@ import {
     IOpcaoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
-import { Titulo } from '@/dominio/editor/comum/Titulo';
+import { Titulo } from '@/dominio/comum/Titulo';
 import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
-import { IdFormularioDummy } from '../comum/IdFormularioDubles';
-import { TituloDummy } from '../comum/TituloDubles';
-import { TextoModeloDummy } from '../comum/TextoModeloDubles';
+import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
+import { TituloDummy } from '../../comum/TituloDubles';
+import { TextoModeloDummy } from '../../comum/TextoModeloDubles';
 
 export class OpcaoEditavelErroStub implements IOpcaoEditavel {
     erros = {

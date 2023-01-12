@@ -1,4 +1,4 @@
-import { ITitulo } from '@/dominio/editor/comum/Titulo';
+import { ITitulo } from '@/dominio/comum/Titulo';
 import { ITipoVariavelID } from './TipoVariavelID';
 
 export interface ITipoVariavel {

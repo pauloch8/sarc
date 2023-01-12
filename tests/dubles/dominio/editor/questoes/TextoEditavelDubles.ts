@@ -1,16 +1,13 @@
-import {
-    IdFormulario,
-    IIdFormulario,
-} from '@/dominio/editor/comum/IdFormulario';
-import { ITextoModelo } from '@/dominio/editor/comum/TextoModelo';
-import { ITitulo } from '@/dominio/editor/comum/Titulo';
+import { IdFormulario, IIdFormulario } from '@/dominio/comum/IdFormulario';
+import { ITextoModelo } from '@/dominio/comum/TextoModelo';
+import { ITitulo } from '@/dominio/comum/Titulo';
 import {
     ErroNaEdicaoDoTexto,
     ITextoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
-import { IdFormularioDummy } from '../comum/IdFormularioDubles';
-import { TextoModeloDummy } from '../comum/TextoModeloDubles';
-import { TituloDummy } from '../comum/TituloDubles';
+import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
+import { TextoModeloDummy } from '../../comum/TextoModeloDubles';
+import { TituloDummy } from '../../comum/TituloDubles';
 
 export class TextoEditavelEditaComSucessoMock implements ITextoEditavel {
     private id = new IdFormularioDummy();

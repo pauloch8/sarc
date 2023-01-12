@@ -1,4 +1,4 @@
-import { IIdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { IIdFormulario } from '@/dominio/comum/IdFormulario';
 
 export class IdFormularioDummy implements IIdFormulario {
     toString(): string {

@@ -7,8 +7,8 @@ import {
     OpcaoEditavelFactoryDummy,
 } from '@/tests/dubles/dominio/editor/questoes/OpcaoEditavelFactoryDubles';
 import { mount } from '@vue/test-utils';
-import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
-import { Titulo } from '@/dominio/editor/comum/Titulo';
+import { IdFormulario } from '@/dominio/comum/IdFormulario';
+import { Titulo } from '@/dominio/comum/Titulo';
 import {
     OpcaoEditavelDummy,
     OpcaoEditavelErroStub,

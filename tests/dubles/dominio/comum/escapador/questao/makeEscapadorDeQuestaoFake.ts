@@ -1,4 +1,4 @@
-import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
+import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 import { makeNomeDeEscapadorFake } from '../nome/makeNomeDeEscapadorFake';
 
 export function makeEscapadorDeQuestaoFake() {

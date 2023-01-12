@@ -3,7 +3,7 @@ import {
     ErroTextoModeloVazio,
     ErroTextoModeloComMenosDeTresCaracteres,
     ErroDeCriacaoDeTextoModelo,
-} from '@/dominio/editor/comum/TextoModelo';
+} from '@/dominio/comum/TextoModelo';
 import {
     RemoveHtmlDummy,
     RemoveHtmlRetornaTextoPlanoStub,

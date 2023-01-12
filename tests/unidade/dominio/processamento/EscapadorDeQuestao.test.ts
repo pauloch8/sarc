@@ -1,5 +1,5 @@
-import { NomeDeEscapador } from '@/dominio/processamento/escapador/nome/NomeDeEscapador';
-import { EscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
+import { NomeDeEscapador } from '@/dominio/comum/escapador/nome/NomeDeEscapador';
+import { EscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 
 describe('EscapadorDeQuestao', () => {
     describe('compararQuestao', () => {

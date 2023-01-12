@@ -13,9 +13,9 @@ import {
     VariavelEditavelEditaComSucessoMock,
     VariavelEditavelErroStub,
 } from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelDubles';
-import { IdFormularioDummy } from '@/tests/dubles/dominio/editor/comum/IdFormularioDubles';
-import { TituloDummy } from '@/tests/dubles/dominio/editor/comum/TituloDubles';
-import { SubtituloDummy } from '@/tests/dubles/dominio/editor/comum/SubtituloDubles';
+import { IdFormularioDummy } from '@/tests/dubles/dominio/comum/IdFormularioDubles';
+import { TituloDummy } from '@/tests/dubles/dominio/comum/TituloDubles';
+import { SubtituloDummy } from '@/tests/dubles/dominio/comum/SubtituloDubles';
 
 describe('VariavelEdicao', () => {
     describe('ao criar um novo VariavelEdicao', () => {

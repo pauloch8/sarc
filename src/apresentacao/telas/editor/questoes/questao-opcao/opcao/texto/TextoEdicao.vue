@@ -3,10 +3,10 @@ import { defineComponent, inject } from 'vue';
 import IdFormularioFactory from '../../../../comum/IdFormularioFactory.vue';
 import TituloInput from '../../../../comum/TituloInput.vue';
 import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
-import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
-import { Titulo } from '@/dominio/editor/comum/Titulo';
+import { IdFormulario } from '@/dominio/comum/IdFormulario';
+import { Titulo } from '@/dominio/comum/Titulo';
 import TextoModeloInput from '@/apresentacao/telas/editor/comum/TextoModeloInput.vue';
-import { TextoModelo } from '@/dominio/editor/comum/TextoModelo';
+import { TextoModelo } from '@/dominio/comum/TextoModelo';
 import { InconsistenciasNaValidacaoDoTexto } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { ITextoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
 import {

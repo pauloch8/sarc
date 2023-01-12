@@ -2,15 +2,15 @@
 import { defineComponent } from 'vue';
 import FormularioEditor from './FormularioEditor.vue';
 import { FormularioEditor as FormularioEditorModel } from '@/dominio/editor/FormularioEditor';
-import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
 import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
-import { Subtitulo } from '@/dominio/editor/comum/Subtitulo';
-import { Titulo } from '@/dominio/editor/comum/Titulo';
+import { Subtitulo } from '@/dominio/comum/Subtitulo';
+import { Titulo } from '@/dominio/comum/Titulo';
 import { Texto } from '@/dominio/processamento/processador/texto/Texto';
 import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
-import { TextoModelo } from '@/dominio/editor/comum/TextoModelo';
+import { TextoModelo } from '@/dominio/comum/TextoModelo';
 import { RemoveHtmlStringStrip } from '@/infrastrutura/portas/remove-html/RemoveHtmlStringStrip';
 
 export default defineComponent({

@@ -1,6 +1,6 @@
-import { INomeDeEscapador } from '@/dominio/processamento/escapador/nome/NomeDeEscapador';
-import { IEscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
-import { IEscapadorDeQuestaoFactory } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestaoFactory';
+import { INomeDeEscapador } from '@/dominio/comum/escapador/nome/NomeDeEscapador';
+import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
+import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
 
 export function criarEscapadorDeQuestaoFactoryFake(numeros: number[]) {
     const escapadorFactory: IEscapadorDeQuestaoFactory = {

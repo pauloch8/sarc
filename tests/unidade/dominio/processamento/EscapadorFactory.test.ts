@@ -1,5 +1,5 @@
-import { EscapadorDeQuestao } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestao';
-import { EscapadorDeQuestaoFactory } from '@/dominio/processamento/escapador/questao/EscapadorDeQuestaoFactory';
+import { EscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
+import { EscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
 
 describe('EscapadorFactory', () => {
     describe('criarEscapadoresDeTexto', () => {

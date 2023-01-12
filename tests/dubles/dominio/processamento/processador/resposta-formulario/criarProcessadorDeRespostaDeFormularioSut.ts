@@ -1,6 +1,6 @@
 import { Template } from '@/dominio/especificacao/EspecificacaoDTO';
 import { criarRespostaDeFormularioFake } from '@/tests/dubles/dominio/formulario/respostas/criarRespostaDeFormularioFake';
-import { criarEscapadorDeQuestaoFactoryFake } from '@/tests/dubles/dominio/processamento/escapador/questao/criarEscapadorDeQuestaoFactoryFake';
+import { criarEscapadorDeQuestaoFactoryFake } from '@/tests/dubles/dominio/comum/escapador/questao/criarEscapadorDeQuestaoFactoryFake';
 import { ProcessadorDeRespostaDeFormulario } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
 import { criarProcessadoresDeQuestaoFake } from '../questoes-opcao/questao/criarProcessadoresDeQuestaoFake';
 

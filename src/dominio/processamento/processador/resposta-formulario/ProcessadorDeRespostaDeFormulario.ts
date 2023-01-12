@@ -3,7 +3,7 @@ import {
     RespostaDeFormulario,
     RespostaDeOpcao,
 } from '../../../formulario/respostas/Respostas';
-import { IEscapadorDeQuestaoFactory } from '../../escapador/questao/EscapadorDeQuestaoFactory';
+import { IEscapadorDeQuestaoFactory } from '../../../comum/escapador/questao/EscapadorDeQuestaoFactory';
 import { IProcessadorDeQuestao } from '../questoes-opcao/questao/IProcessadorDeQuestao';
 
 export class ProcessadorDeRespostaDeFormulario {

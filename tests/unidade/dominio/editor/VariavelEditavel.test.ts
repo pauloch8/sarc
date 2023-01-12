@@ -1,14 +1,14 @@
 import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
-import { IIdFormulario } from '@/dominio/editor/comum/IdFormulario';
-import { ITitulo } from '@/dominio/editor/comum/Titulo';
+import { IIdFormulario } from '@/dominio/comum/IdFormulario';
+import { ITitulo } from '@/dominio/comum/Titulo';
 import {
     TituloDummy,
     TituloToStringStub,
-} from '@/tests/dubles/dominio/editor/comum/TituloDubles';
+} from '@/tests/dubles/dominio/comum/TituloDubles';
 import {
     IdFormularioDummy,
     IdFormularioToStringStub,
-} from '@/tests/dubles/dominio/editor/comum/IdFormularioDubles';
+} from '@/tests/dubles/dominio/comum/IdFormularioDubles';
 import {
     ErroInconsistenciasNaValidacao,
     ErroNaEdicao,

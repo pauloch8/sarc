@@ -1,9 +1,9 @@
 import QuestaoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/QuestaoEdicao.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
-import { IdFormulario } from '@/dominio/editor/comum/IdFormulario';
+import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
-import { Subtitulo } from '@/dominio/editor/comum/Subtitulo';
-import { Titulo } from '@/dominio/editor/comum/Titulo';
+import { Subtitulo } from '@/dominio/comum/Subtitulo';
+import { Titulo } from '@/dominio/comum/Titulo';
 import { mount } from '@vue/test-utils';
 import {
     QuestaoEditavelDummy,

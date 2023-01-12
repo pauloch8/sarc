@@ -1,4 +1,4 @@
-import { criarEscapadorDeQuestaoFactoryFake } from '@/tests/dubles/dominio/processamento/escapador/questao/criarEscapadorDeQuestaoFactoryFake';
+import { criarEscapadorDeQuestaoFactoryFake } from '@/tests/dubles/dominio/comum/escapador/questao/criarEscapadorDeQuestaoFactoryFake';
 import { ProcessadorDeRespostaDeFormularioFactory } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormularioFactory';
 
 export function criarProcessadorDeRespostaDeFormularioFactorySut() {

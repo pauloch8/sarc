@@ -1,7 +1,7 @@
 import {
     NomeDeEscapador,
     ErroFornecidoNomeDeVariavelIncorreto,
-} from '@/dominio/processamento/escapador/nome/NomeDeEscapador';
+} from '@/dominio/comum/escapador/nome/NomeDeEscapador';
 
 describe('NomeDeEscapador', () => {
     describe('instanciar', () => {

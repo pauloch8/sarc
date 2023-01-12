@@ -1,4 +1,4 @@
-import { ErroDeCriacaoDeTitulo, ITitulo } from '@/dominio/editor/comum/Titulo';
+import { ErroDeCriacaoDeTitulo, ITitulo } from '@/dominio/comum/Titulo';
 
 export class TituloDummy implements ITitulo {}
 

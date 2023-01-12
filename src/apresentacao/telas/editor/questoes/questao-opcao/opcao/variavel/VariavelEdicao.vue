@@ -4,18 +4,14 @@ import IdFormularioFactory from '../../../../comum/IdFormularioFactory.vue';
 import TituloInput from '../../../../comum/TituloInput.vue';
 import TipoVariavelSelecao from './TipoVariavelSelecao.vue';
 import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
-import {
-    IdFormulario,
-    IIdFormulario,
-} from '@/dominio/editor/comum/IdFormulario';
-import { ITitulo, Titulo } from '@/dominio/editor/comum/Titulo';
+import { IdFormulario, IIdFormulario } from '@/dominio/comum/IdFormulario';
+import { ITitulo, Titulo } from '@/dominio/comum/Titulo';
 import { IVariavelEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavelFactory';
 import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 import {
     ErroInconsistenciasNaValidacao,
     ErroNaEdicao,
 } from '@/dominio/editor/questoes/ItemEditavel';
-import { ITipoVariavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavel';
 import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
 
 export default defineComponent({

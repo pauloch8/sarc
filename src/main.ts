@@ -13,7 +13,7 @@ import {
 import App from './apresentacao/App.vue';
 import router from './apresentacao/router/router';
 /* camada de domínio */
-import { EscapadorDeQuestaoFactory } from './dominio/processamento/escapador/questao/EscapadorDeQuestaoFactory';
+import { EscapadorDeQuestaoFactory } from './dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
 import { ProcessadorDeOpcaoFactory } from './dominio/processamento/processador/questoes-opcao/opcao/ProcessadorDeOpcaoFactory';
 import { ProcessadorDeQuestaoDeOpcoesFactory } from './dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoFactory';
 import { ProcessadorDeRespostaDeFormularioFactory } from './dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormularioFactory';
@@ -23,13 +23,13 @@ import { FormularioFactory } from './dominio/formulario/FormularioFactory';
 import { ProcessadorDeSelecaoFactory } from './dominio/processamento/processador/questoes-opcao/selecao/ProcessadorDeSelecaoFactory';
 import { FormularioEditorFactory } from './dominio/editor/FormularioEditorFactory';
 import { EspecificacaoDTO } from './dominio/especificacao/EspecificacaoDTO';
-import { TituloFactory } from './dominio/editor/comum/TituloFactory';
-import { IdFormularioFactory } from './dominio/editor/comum/IdFormularioFactory';
-import { SubtituloFactory } from './dominio/editor/comum/SubtituloFactory';
+import { TituloFactory } from './dominio/comum/TituloFactory';
+import { IdFormularioFactory } from './dominio/comum/IdFormularioFactory';
+import { SubtituloFactory } from './dominio/comum/SubtituloFactory';
 import { QuestaoEditavelFactory } from './dominio/editor/questoes/questao-opcao/QuestaoEditavelFactory';
 import { OpcaoEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
 import { TextoEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
-import { TextoModeloFactory } from './dominio/editor/comum/TextoModeloFactory';
+import { TextoModeloFactory } from './dominio/comum/TextoModeloFactory';
 import { RemoveHtmlStringStrip } from './infrastrutura/portas/remove-html/RemoveHtmlStringStrip';
 import { VariavelEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavelFactory';
 import { TipoVariavelRepositoryEmMemoria } from './infrastrutura/portas/memoria/TipoVariavelRepositoryEmMemoria';

@@ -2,9 +2,9 @@ import {
     ErroNaEdicaoDaQuestao,
     IQuestaoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
-import { IdFormularioDummy } from '../comum/IdFormularioDubles';
-import { TituloDummy } from '../comum/TituloDubles';
-import { SubtituloDummy } from '../comum/SubtituloDubles';
+import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
+import { TituloDummy } from '../../comum/TituloDubles';
+import { SubtituloDummy } from '../../comum/SubtituloDubles';
 import { ListaDeOpcoesEditavelDummy } from './OpcaoEditavelDubles';
 
 export class QuestaoEditavelErroStub implements IQuestaoEditavel {

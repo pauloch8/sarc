@@ -1,4 +1,4 @@
-import { ITextoModelo } from '@/dominio/editor/comum/TextoModelo';
+import { ITextoModelo } from '@/dominio/comum/TextoModelo';
 
 export class TextoModeloDummy implements ITextoModelo {
     getTextoHtml(): string {

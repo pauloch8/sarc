@@ -1,6 +1,6 @@
 import { RespostaDeOpcao } from '../../../../formulario/respostas/Respostas';
-import { NomeDeEscapador } from '../../../escapador/nome/NomeDeEscapador';
-import { EscapadorDeVariavelFactory } from '../../../escapador/variavel/EscapadorDeVariavelFactory';
+import { NomeDeEscapador } from '../../../../comum/escapador/nome/NomeDeEscapador';
+import { EscapadorDeVariavelFactory } from '../../../../comum/escapador/variavel/EscapadorDeVariavelFactory';
 import { ITexto } from '../../texto/Texto';
 
 export interface IProcessadorDeSelecao {

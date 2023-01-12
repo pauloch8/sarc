@@ -1,6 +1,6 @@
-import { IIdFormulario } from './comum/IdFormulario';
-import { ITitulo } from './comum/Titulo';
-import { ISubtitulo } from './comum/Subtitulo';
+import { IIdFormulario } from '../comum/IdFormulario';
+import { ITitulo } from '../comum/Titulo';
+import { ISubtitulo } from '../comum/Subtitulo';
 import { IListaEditavel } from './questoes/ListaEditavel';
 import { IQuestaoEditavel } from './questoes/questao-opcao/QuestaoEditavel';
 

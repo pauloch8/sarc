@@ -1,10 +1,10 @@
 import { EspecificacaoDTO } from '../especificacao/EspecificacaoDTO';
 import { FormularioEditor } from './FormularioEditor';
-import { IIdFormulario } from './comum/IdFormulario';
+import { IIdFormulario } from '../comum/IdFormulario';
 import { ListaEditavel } from './questoes/ListaEditavel';
 import { QuestaoEditavel } from './questoes/questao-opcao/QuestaoEditavel';
-import { ISubtitulo } from './comum/Subtitulo';
-import { ITitulo } from './comum/Titulo';
+import { ISubtitulo } from '../comum/Subtitulo';
+import { ITitulo } from '../comum/Titulo';
 
 export class FormularioEditorFactory {
     criarDaEspecificacao(especificacao: EspecificacaoDTO): FormularioEditor {

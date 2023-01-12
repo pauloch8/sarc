@@ -1,5 +1,5 @@
 import { EspecificacaoDTO } from '../../../especificacao/EspecificacaoDTO';
-import { IEscapadorDeQuestaoFactory } from '../../escapador/questao/EscapadorDeQuestaoFactory';
+import { IEscapadorDeQuestaoFactory } from '../../../comum/escapador/questao/EscapadorDeQuestaoFactory';
 import { IProcessadorDeQuestaoFactory } from '../questoes-opcao/questao/ProcessadorDeQuestaoFactory';
 import { ProcessadorDeRespostaDeFormulario } from './ProcessadorDeRespostaDeFormulario';
 

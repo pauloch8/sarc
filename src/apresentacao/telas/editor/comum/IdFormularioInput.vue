@@ -2,8 +2,8 @@
 import {
     IdFormulario,
     ErroDeCriacaoDeIdFormulario,
-} from '@/dominio/editor/comum/IdFormulario';
-import { IIdFormularioFactory } from '@/dominio/editor/comum/IdFormularioFactory';
+} from '@/dominio/comum/IdFormulario';
+import { IIdFormularioFactory } from '@/dominio/comum/IdFormularioFactory';
 import { defineComponent, inject } from 'vue';
 
 export default defineComponent({
