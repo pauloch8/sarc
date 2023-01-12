@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
+import ListaDeEscapadores from './ListaDeEscapadores.vue';
 import IdFormularioFactory from '../../../../comum/IdFormularioFactory.vue';
 import TituloInput from '../../../../comum/TituloInput.vue';
 import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
@@ -13,10 +14,12 @@ import {
     ErroNaEdicaoDoTexto,
     TextoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
 
 export default defineComponent({
     name: 'TextoEdicao',
     components: {
+        ListaDeEscapadores,
         IdFormularioFactory,
         TituloInput,
         TextoModeloInput,
@@ -27,13 +30,17 @@ export default defineComponent({
         if (!factory) {
             throw new Error('Não injetada a dependência textoEditavelFactory');
         }
+        const escapadoresVariaveis = inject<IEscapadorDeVariavel[]>(
+            'escapadoresVariaveis',
+        );
         return {
             factory,
+            escapadoresVariaveis,
         };
     },
     props: {
         texto: { type: TextoEditavel, required: false },
-        indice: { type: Number, required: true },
+        indice: { type: Number, required: false },
     },
     data() {
         const id = this.texto?.getId();
@@ -129,18 +136,18 @@ export default defineComponent({
                     );
                 }
             }
-            try {
-                texto.setIndice(this.indice);
-            } catch (e) {
-                if (e instanceof ErroNaEdicaoDoTexto) {
-                    this.inconsistencias.push(e.message);
-                } else {
-                    this.inconsistencias.push(
-                        'Ocorreu um erro desconhecido na atualização do índice: ' +
-                            e,
-                    );
-                }
-            }
+            // try {
+            //     texto.setIndice(this.indice);
+            // } catch (e) {
+            //     if (e instanceof ErroNaEdicaoDoTexto) {
+            //         this.inconsistencias.push(e.message);
+            //     } else {
+            //         this.inconsistencias.push(
+            //             'Ocorreu um erro desconhecido na atualização do índice: ' +
+            //                 e,
+            //         );
+            //     }
+            // }
             if (this.inconsistencias.length) {
                 this.erro = 'Ocorreram erros na atualização do Texto';
             } else {
@@ -166,6 +173,11 @@ export default defineComponent({
             :titulo="(titulo as Titulo)"
             @digitou="digitouTitulo"
         ></TituloInput>
+
+        <ListaDeEscapadores
+            v-if="escapadoresVariaveis"
+            :escapadoresVariaveis="escapadoresVariaveis"
+        ></ListaDeEscapadores>
 
         <TextoModeloInput
             :textoModelo="(textoModelo as TextoModelo)"

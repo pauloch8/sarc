@@ -34,6 +34,7 @@ import { RemoveHtmlStringStrip } from './infrastrutura/portas/remove-html/Remove
 import { VariavelEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavelFactory';
 import { TipoVariavelRepositoryEmMemoria } from './infrastrutura/portas/memoria/TipoVariavelRepositoryEmMemoria';
 import { TipoVariavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelFactory';
+import { EscapadorDeVariavelFactory } from './dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
 
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
@@ -49,7 +50,10 @@ const opcaoEditavelFactory = new OpcaoEditavelFactory();
 const textoEditavelFactory = new TextoEditavelFactory();
 const removeHtml = new RemoveHtmlStringStrip();
 const textoModeloFactory = new TextoModeloFactory(removeHtml);
-const variavelEditavelFactory = new VariavelEditavelFactory();
+const escapadorDeVariavelFactory = new EscapadorDeVariavelFactory();
+const variavelEditavelFactory = new VariavelEditavelFactory(
+    escapadorDeVariavelFactory,
+);
 const tipoVariavelFactory = new TipoVariavelFactory();
 const tipoVariavelRepository = new TipoVariavelRepositoryEmMemoria(
     tipoVariavelFactory,

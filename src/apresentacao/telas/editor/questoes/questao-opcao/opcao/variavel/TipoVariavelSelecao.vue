@@ -58,7 +58,6 @@ export default defineComponent({
 </script>
 
 <template>
-    {{ { selecionado, erro } }}
     <label for="tipoVariavel">Tipo de variável</label>
     <select id="tipoVariavel" v-model="selecionado" required>
         <option value="" selected>Selecione o tipo…</option>

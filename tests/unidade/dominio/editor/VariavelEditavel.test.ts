@@ -15,17 +15,24 @@ import {
 } from '@/dominio/editor/questoes/ItemEditavel';
 import { TipoVariavelIDDummy } from '@/tests/dubles/dominio/editor/questoes/TipoVariavelDubles';
 import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
+import {
+    EscapadorDeVariavelFactoryCriarDeIdFormularioRetornaToStringStub,
+    EscapadorDeVariavelFactoryDummy,
+} from '@/tests/dubles/dominio/comum/escapador/EscapadorDeVariavelFactoryDubles';
+import { EscapadorDeVariavelToStringStub } from '@/tests/dubles/dominio/comum/escapador/EscapadorDeVariavelDubles';
 
 describe('VariavelEditavel', () => {
     describe('valida o variavel na sua criação', () => {
         test('lança erro de inconsistencias', () => {
             let erro: ErroInconsistenciasNaValidacao | undefined = undefined;
+            const escapcadorFactory = new EscapadorDeVariavelFactoryDummy();
             try {
                 new VariavelEditavel(
                     null as unknown as IIdFormulario,
                     null as unknown as ITitulo,
                     null as unknown as ITipoVariavelID,
                     null as unknown as number,
+                    escapcadorFactory,
                 );
             } catch (e) {
                 erro = e as ErroInconsistenciasNaValidacao;
@@ -44,6 +51,7 @@ describe('VariavelEditavel', () => {
                 new TituloDummy(),
                 new TipoVariavelIDDummy(),
                 0,
+                new EscapadorDeVariavelFactoryDummy(),
             );
             expect(() => {
                 sut.setId(undefined);
@@ -55,6 +63,7 @@ describe('VariavelEditavel', () => {
                 new TituloDummy(),
                 new TipoVariavelIDDummy(),
                 0,
+                new EscapadorDeVariavelFactoryDummy(),
             );
             expect(() => {
                 sut.setTitulo(undefined);
@@ -66,6 +75,7 @@ describe('VariavelEditavel', () => {
                 new TituloDummy(),
                 new TipoVariavelIDDummy(),
                 0,
+                new EscapadorDeVariavelFactoryDummy(),
             );
             expect(() => {
                 sut.setTipo(undefined);
@@ -77,8 +87,28 @@ describe('VariavelEditavel', () => {
             const id = new IdFormularioToStringStub();
             const titulo = new TituloToStringStub();
             const tipo = new TipoVariavelIDDummy();
-            const sut = new VariavelEditavel(id, titulo, tipo, 0);
+            const escapadorFactory = new EscapadorDeVariavelFactoryDummy();
+            const sut = new VariavelEditavel(
+                id,
+                titulo,
+                tipo,
+                0,
+                escapadorFactory,
+            );
             expect(sut.toString()).toBe(id.valor + ': ' + titulo.valor);
         });
+    });
+    describe('gera escapador da variável', () => {
+        const id = new IdFormularioToStringStub();
+        const titulo = new TituloDummy();
+        const tipo = new TipoVariavelIDDummy();
+        const escapadorFactory =
+            new EscapadorDeVariavelFactoryCriarDeIdFormularioRetornaToStringStub();
+        const sut = new VariavelEditavel(id, titulo, tipo, 0, escapadorFactory);
+        const escapador = sut.getEscapador();
+        expect(escapador).toBeInstanceOf(EscapadorDeVariavelToStringStub);
+        expect(escapador.toString()).toBe(
+            EscapadorDeVariavelToStringStub.string,
+        );
     });
 });

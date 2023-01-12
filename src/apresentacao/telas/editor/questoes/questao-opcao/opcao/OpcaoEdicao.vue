@@ -1,15 +1,15 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
+import { computed } from '@vue/reactivity';
 import TituloInput from '../../../comum/TituloInput.vue';
 import IdFormularioFactory from '../../../comum/IdFormularioFactory.vue';
 import ListaTextos from './texto/ListaTextos.vue';
 import ListaVariavel from './variavel/ListaVariaveis.vue';
 import BotoesSalvarCancelar from '../../../comum/BotoesSalvarCancelar.vue';
-
 import {
+    OpcaoEditavel,
     ErroNaEdicaoDaOpcao,
     ErroOpcaoInvalida,
-    OpcaoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import { IOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
 import { Titulo } from '@/dominio/comum/Titulo';
@@ -45,19 +45,31 @@ export default defineComponent({
         const titulo = this.opcao?.getTitulo();
         //const ramificacao = this.opcao?.getRamificacao();
         //const valorPadrao = this.opcao?.getValorPadrao();
-        const textos =
+        const listaTextos =
             this.opcao?.getTextos() || new ListaEditavel<TextoEditavel>();
-        const variaveis =
+        const listaVariaveis =
             this.opcao?.getVariaveis() || new ListaEditavel<VariavelEditavel>();
         const erro = '';
         const inconsistencias: string[] = [];
         return {
             idFormulario,
             titulo,
-            textos,
-            variaveis,
+            listaTextos,
+            listaVariaveis,
             erro,
             inconsistencias,
+        };
+    },
+    provide() {
+        return {
+            escapadoresVariaveis: computed(() => {
+                const escapadores = this.listaVariaveis
+                    .getItens()
+                    .map(item => item.getEscapador());
+                if (escapadores.length) {
+                    return escapadores;
+                }
+            }),
         };
     },
     methods: {
@@ -86,7 +98,7 @@ export default defineComponent({
                     this.idFormulario as IdFormulario,
                     this.titulo as Titulo,
                     this.indice as number,
-                    this.textos as ListaEditavel<TextoEditavel>,
+                    this.listaTextos as ListaEditavel<TextoEditavel>,
                 );
                 this.$emit('criou', opcao);
             } catch (e) {
@@ -128,7 +140,7 @@ export default defineComponent({
             }
             //variaveis
             try {
-                opcao.setVariaveis(this.variaveis);
+                opcao.setVariaveis(this.listaVariaveis);
             } catch (e) {
                 if (e instanceof ErroNaEdicaoDaOpcao) {
                     this.inconsistencias.push(e.message);
@@ -141,7 +153,7 @@ export default defineComponent({
             }
             //textos
             try {
-                opcao.setTextos(this.textos);
+                opcao.setTextos(this.listaTextos);
             } catch (e) {
                 if (e instanceof ErroNaEdicaoDaOpcao) {
                     this.inconsistencias.push(e.message);
@@ -178,24 +190,12 @@ export default defineComponent({
             @digitou="digitouTitulo"
         ></TituloInput>
 
-        <!-- <div>
-            <h5>Variáveis</h5>
-            <ul>
-                <VariavelComponent
-                    v-for="(variavel, indice) in opcao.getVariaveis()"
-                    :key="indice"
-                    :variavel="variavel"
-                ></VariavelComponent>
-            </ul>
-            <a href="#" role="button" class="outline">+ Adicionar Variável</a>
-        </div> -->
-
         <ListaVariavel
-            :lista="(variaveis as ListaEditavel<VariavelEditavel>)"
+            :lista="(listaVariaveis as ListaEditavel<VariavelEditavel>)"
         ></ListaVariavel>
 
         <ListaTextos
-            :lista="(textos as ListaEditavel<TextoEditavel>)"
+            :lista="(listaTextos as ListaEditavel<TextoEditavel>)"
         ></ListaTextos>
 
         <article class="erro" v-if="erro">

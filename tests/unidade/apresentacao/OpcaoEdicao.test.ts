@@ -180,8 +180,8 @@ describe('OpcaoEdicao', () => {
                     return {
                         idFormulario,
                         titulo,
-                        textos,
-                        variaveis,
+                        listaTextos: textos,
+                        listaVariaveis: variaveis,
                         erro,
                     };
                 },

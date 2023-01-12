@@ -17,6 +17,9 @@ import { IdFormularioDummy } from '@/tests/dubles/dominio/comum/IdFormularioDubl
 import { TituloDummy } from '@/tests/dubles/dominio/comum/TituloDubles';
 import { TextoModeloDummy } from '@/tests/dubles/dominio/comum/TextoModeloDubles';
 import { SubtituloDummy } from '@/tests/dubles/dominio/comum/SubtituloDubles';
+import { ListaDeVariaveisEditavelDummy } from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelDubles';
+import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 
 describe('TextoEdicao', () => {
     describe('ao criar um novo TextoEdicao', () => {
@@ -48,6 +51,7 @@ describe('TextoEdicao', () => {
         test('exibe mensagem de erro desconhecido se ocorrer outro tipo de erro na criação', async () => {
             const textoEditavelFactory =
                 new TextoEditavelFactoryErroDesconhecidoStub();
+            const listaVariaveis = new ListaDeVariaveisEditavelDummy();
             const sut = mount(TextoEdicaoVue, {
                 global: {
                     provide: {
@@ -62,6 +66,7 @@ describe('TextoEdicao', () => {
                 },
                 props: {
                     indice: 0,
+                    listaVariaveis,
                 },
             });
             await sut.find('.botaoSalvar').trigger('click');

@@ -1,14 +1,23 @@
 import { Escapador } from '../Escapador';
 import { NomeDeEscapador } from '../nome/NomeDeEscapador';
 
-export class EscapadorDeVariavel extends Escapador {
+export interface IEscapadorDeVariavel {
+    getNome(): NomeDeEscapador;
+    compararNome(id: string | NomeDeEscapador): boolean;
+    toString(): string;
+}
+
+export class EscapadorDeVariavel
+    extends Escapador
+    implements IEscapadorDeVariavel
+{
     constructor(private nomeDaVariavel: NomeDeEscapador) {
         super();
     }
-    getNome(): NomeDeEscapador {
+    getNome() {
         return this.nomeDaVariavel;
     }
-    compararNome(id: string | NomeDeEscapador): unknown {
+    compararNome(id: string | NomeDeEscapador) {
         return this.nomeDaVariavel.toString() === id.toString();
     }
     toString() {
