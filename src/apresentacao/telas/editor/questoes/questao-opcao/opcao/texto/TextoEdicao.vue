@@ -3,10 +3,10 @@ import { defineComponent, inject } from 'vue';
 import ListaDeEscapadores from './ListaDeEscapadores.vue';
 import IdFormularioFactory from '../../../../comum/IdFormularioFactory.vue';
 import TituloInput from '../../../../comum/TituloInput.vue';
+import TextoModeloInput from '@/apresentacao/telas/editor/comum/TextoModeloInput.vue';
 import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { Titulo } from '@/dominio/comum/Titulo';
-import TextoModeloInput from '@/apresentacao/telas/editor/comum/TextoModeloInput.vue';
 import { TextoModelo } from '@/dominio/comum/TextoModelo';
 import { InconsistenciasNaValidacaoDoTexto } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { ITextoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
@@ -15,6 +15,7 @@ import {
     TextoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
+import { IEscapadorDeVariavelFactory } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
 
 export default defineComponent({
     name: 'TextoEdicao',
@@ -26,15 +27,26 @@ export default defineComponent({
         BotoesSalvarCancelar,
     },
     setup() {
-        const factory = inject<ITextoEditavelFactory>('textoEditavelFactory');
-        if (!factory) {
+        const textoEditavelFactory = inject<ITextoEditavelFactory>(
+            'textoEditavelFactory',
+        );
+        if (!textoEditavelFactory) {
             throw new Error('Não injetada a dependência textoEditavelFactory');
+        }
+        const escapadorDeVariavelFactory = inject<IEscapadorDeVariavelFactory>(
+            'escapadorDeVariavelFactory',
+        );
+        if (!escapadorDeVariavelFactory) {
+            throw new Error(
+                'Não injetada a dependência escapadorDeVariavelFactory',
+            );
         }
         const escapadoresVariaveis = inject<IEscapadorDeVariavel[]>(
             'escapadoresVariaveis',
         );
         return {
-            factory,
+            textoEditavelFactory,
+            escapadorDeVariavelFactory,
             escapadoresVariaveis,
         };
     },
@@ -48,12 +60,14 @@ export default defineComponent({
         const textoModelo = this.texto?.getTextoModelo();
         const erro = '';
         const inconsistencias: string[] = [];
+        const escapadoresInexistentes: IEscapadorDeVariavel[] = [];
         return {
             id,
             titulo,
             textoModelo,
             erro,
             inconsistencias,
+            escapadoresInexistentes,
         };
     },
     methods: {
@@ -64,6 +78,13 @@ export default defineComponent({
             this.titulo = titulo;
         },
         digitouTextoModelo(textoModelo: TextoModelo) {
+            const escapadoresEscritos =
+                this.escapadorDeVariavelFactory.criarEscapadoresDeTexto(
+                    textoModelo.getTextoPlano(),
+                );
+            this.escapadoresInexistentes = escapadoresEscritos.filter(
+                escrito => !this.escapadoresVariaveis?.includes(escrito),
+            );
             this.textoModelo = textoModelo;
         },
         cancelar() {
@@ -81,7 +102,7 @@ export default defineComponent({
         },
         criar() {
             try {
-                const texto = this.factory.criar(
+                const texto = this.textoEditavelFactory.criar(
                     this.id as IdFormulario,
                     this.titulo as Titulo,
                     this.textoModelo as TextoModelo,
@@ -179,6 +200,18 @@ export default defineComponent({
             :escapadoresVariaveis="escapadoresVariaveis"
         ></ListaDeEscapadores>
 
+        <article class="erro" v-if="escapadoresInexistentes.length">
+            Foram escritos escapadores inexistentes:
+            <ul>
+                <li
+                    v-for="(escapador, index) in escapadoresInexistentes"
+                    :key="index"
+                >
+                    {{ escapador.toString() }}
+                </li>
+            </ul>
+        </article>
+
         <TextoModeloInput
             :textoModelo="(textoModelo as TextoModelo)"
             @digitou="digitouTextoModelo"
@@ -195,6 +228,7 @@ export default defineComponent({
                 </ul>
             </div>
         </article>
+
         <footer>
             <BotoesSalvarCancelar
                 @cancelou="cancelar"

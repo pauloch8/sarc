@@ -1,7 +1,8 @@
+import { mount } from '@vue/test-utils';
 import TextoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/opcao/texto/TextoEdicao.vue';
+import ListaDeEscapadores from '@/apresentacao/telas/editor/questoes/questao-opcao/opcao/texto/ListaDeEscapadores.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
 import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
-import { mount } from '@vue/test-utils';
 import {
     TextoEditavelFactoryDummy,
     TextoEditavelFactoryErroDesconhecidoStub,
@@ -18,18 +19,111 @@ import { TituloDummy } from '@/tests/dubles/dominio/comum/TituloDubles';
 import { TextoModeloDummy } from '@/tests/dubles/dominio/comum/TextoModeloDubles';
 import { SubtituloDummy } from '@/tests/dubles/dominio/comum/SubtituloDubles';
 import { ListaDeVariaveisEditavelDummy } from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelDubles';
-import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
-import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { EscapadorDeVariavelFactoryDummy } from '@/tests/dubles/dominio/comum/escapador/EscapadorDeVariavelFactoryDubles';
+import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
+import { NomeDeEscapador } from '@/dominio/comum/escapador/nome/NomeDeEscapador';
+
+class EscapadorDeVariavelFake implements IEscapadorDeVariavel {
+    constructor(public valor: string) {}
+
+    getNome(): NomeDeEscapador {
+        throw new Error('Method not implemented.');
+    }
+    compararNome(id: string | NomeDeEscapador): boolean {
+        throw new Error('Method not implemented.');
+    }
+    toString(): string {
+        return this.valor;
+    }
+}
 
 describe('TextoEdicao', () => {
+    test('exibe uma lista dos escapadores de variáveis disponíveis', async () => {
+        const textoEditavelFactory = new TextoEditavelFactoryDummy();
+        const escapadorDeVariavelFactory =
+            new EscapadorDeVariavelFactoryDummy();
+        const escapadoresVariaveis = [
+            new EscapadorDeVariavelFake('${escapador1}'),
+            new EscapadorDeVariavelFake('${escapador2}'),
+        ];
+        const sut = mount(TextoEdicaoVue, {
+            global: {
+                provide: {
+                    textoEditavelFactory,
+                    escapadorDeVariavelFactory,
+                    escapadoresVariaveis,
+                },
+            },
+            components: {
+                ListaDeEscapadores,
+                IdFormularioFactory: {},
+                TituloInput: {},
+                TextoModeloInput: {},
+                BotoesSalvarCancelar,
+            },
+        });
+        expect(sut.find('.escapadoresDisponiveis').text()).toContain(
+            '${escapador1}',
+        );
+        expect(sut.find('.escapadoresDisponiveis').text()).toContain(
+            '${escapador2}',
+        );
+    });
+    test('exibe uma lista dos escapadores inexistentes escritos no texto', async () => {
+        const textoEditavelFactory = new TextoEditavelFactoryDummy();
+        const escapadorDeVariavelFactory =
+            new EscapadorDeVariavelFactoryDummy();
+        const texto =
+            new TextoEditavelEditaComSucessoMock() as unknown as TextoEditavel;
+        const sut = mount(TextoEdicaoVue, {
+            global: {
+                provide: {
+                    textoEditavelFactory,
+                    escapadorDeVariavelFactory,
+                },
+            },
+            components: {
+                IdFormularioFactory: {},
+                TituloInput: {},
+                TextoModeloInput: {},
+                BotoesSalvarCancelar,
+            },
+            props: {
+                texto,
+                indice: 0,
+            },
+            data() {
+                return {
+                    idFormulario: new IdFormularioDummy(),
+                    titulo: new TituloDummy(),
+                    subtitulo: new SubtituloDummy(),
+                    erro: '',
+                };
+            },
+        });
+        await sut.find('.botaoSalvar').trigger('click');
+        expect(sut.find('.erro').exists()).toBeFalsy();
+        expect(sut.emitted()).toHaveProperty('atualizou');
+        expect(sut.emitted('atualizou')).toHaveLength(1);
+        const evento = sut.emitted('atualizou');
+        if (!evento) {
+            throw new Error('array de eventos não contém objeto');
+        }
+        const argumento = evento[0] as any;
+        const retorno = argumento[0] as TextoEditavel;
+        expect(retorno).toBeInstanceOf(TextoEditavelEditaComSucessoMock);
+    });
     describe('ao criar um novo TextoEdicao', () => {
         test('exibe erro e lista de inconsistências se for lançado erro de validação', async () => {
             const textoEditavelFactory =
                 new TextoEditavelFactoryErroInconsistenciasNaValidacaoStub();
+            const escapadorDeVariavelFactory =
+                new EscapadorDeVariavelFactoryDummy();
             const sut = mount(TextoEdicaoVue, {
                 global: {
                     provide: {
                         textoEditavelFactory,
+                        escapadorDeVariavelFactory,
                     },
                 },
                 components: {
@@ -51,11 +145,14 @@ describe('TextoEdicao', () => {
         test('exibe mensagem de erro desconhecido se ocorrer outro tipo de erro na criação', async () => {
             const textoEditavelFactory =
                 new TextoEditavelFactoryErroDesconhecidoStub();
+            const escapadorDeVariavelFactory =
+                new EscapadorDeVariavelFactoryDummy();
             const listaVariaveis = new ListaDeVariaveisEditavelDummy();
             const sut = mount(TextoEdicaoVue, {
                 global: {
                     provide: {
                         textoEditavelFactory,
+                        escapadorDeVariavelFactory,
                     },
                 },
                 components: {
@@ -77,10 +174,13 @@ describe('TextoEdicao', () => {
         });
         test('emite um evento "criou" com um objeto', async () => {
             const textoEditavelFactory = new TextoEditavelFactorySucessoStub();
+            const escapadorDeVariavelFactory =
+                new EscapadorDeVariavelFactoryDummy();
             const sut = mount(TextoEdicaoVue, {
                 global: {
                     provide: {
                         textoEditavelFactory,
+                        escapadorDeVariavelFactory,
                     },
                 },
                 components: {
@@ -115,12 +215,15 @@ describe('TextoEdicao', () => {
     describe('ao editar um Texto existente', () => {
         test('exibe lista de erros se ocorrer um erro', async () => {
             const textoEditavelFactory = new TextoEditavelFactoryDummy();
+            const escapadorDeVariavelFactory =
+                new EscapadorDeVariavelFactoryDummy();
             const texto =
                 new TextoEditavelErroStub() as unknown as TextoEditavel;
             const sut = mount(TextoEdicaoVue, {
                 global: {
                     provide: {
                         textoEditavelFactory,
+                        escapadorDeVariavelFactory,
                     },
                 },
                 components: {
@@ -142,12 +245,15 @@ describe('TextoEdicao', () => {
         });
         test('emite um evento "atualizou" com um objeto', async () => {
             const textoEditavelFactory = new TextoEditavelFactoryDummy();
+            const escapadorDeVariavelFactory =
+                new EscapadorDeVariavelFactoryDummy();
             const texto =
                 new TextoEditavelEditaComSucessoMock() as unknown as TextoEditavel;
             const sut = mount(TextoEdicaoVue, {
                 global: {
                     provide: {
                         textoEditavelFactory,
+                        escapadorDeVariavelFactory,
                     },
                 },
                 components: {

@@ -38,7 +38,6 @@ export default defineComponent({
                 console.log('!novaSelecao');
                 return this.$emit('selecionou', null);
             } else {
-                debugger;
                 const tipoVariavel = this.tiposVariaveis.find(tipo => {
                     return tipo.getId().toString() === novaSelecao;
                 });

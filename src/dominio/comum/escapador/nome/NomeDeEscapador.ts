@@ -1,7 +1,10 @@
+import { objetoDeValor } from '../../ObjetoDeValor';
+
 export interface INomeDeEscapador {
     toString(): string;
 }
 
+@objetoDeValor
 export class NomeDeEscapador {
     static pattern = '[a-zA-Z0-9._-]';
     constructor(private nome: string) {

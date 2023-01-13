@@ -14,7 +14,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <article>
+    <article class="escapadoresDisponiveis">
         Escapadores de variáveis disponíveis:
         <ul>
             <li
@@ -27,7 +27,11 @@ export default defineComponent({
     </article>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+article * {
+    color: #d8ebff;
+    background-color: #004589;
+}
 ul {
     margin: 0;
 }

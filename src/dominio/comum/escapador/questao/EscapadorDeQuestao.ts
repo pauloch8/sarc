@@ -1,3 +1,4 @@
+import { objetoDeValor } from '../../ObjetoDeValor';
 import { Escapador } from '../Escapador';
 import { INomeDeEscapador } from '../nome/NomeDeEscapador';
 
@@ -8,6 +9,7 @@ export interface IEscapadorDeQuestao {
     toString(): string;
 }
 
+@objetoDeValor
 export class EscapadorDeQuestao
     extends Escapador
     implements IEscapadorDeQuestao
