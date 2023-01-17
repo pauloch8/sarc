@@ -8,30 +8,28 @@ import {
 import TituloInputVue from '@/apresentacao/telas/editor/comum/TituloInput.vue';
 
 describe('TituloInput', () => {
-    describe('tem titulo como parâmetro', () => {
-        test('exibe o titulo se o parâmetro for fornecido', () => {
-            const tituloFactoryDummy = new TituloFactoryDummy();
-            const sut = mount(TituloInputVue, {
-                global: {
-                    provide: {
-                        tituloFactory: tituloFactoryDummy,
-                    },
+    test('inicia com o texto em branco se não for iniciado com um título existente', () => {
+        const tituloFactoryDummy = new TituloFactoryDummy();
+        const sut = mount(TituloInputVue, {
+            global: {
+                provide: {
+                    tituloFactory: tituloFactoryDummy,
                 },
-                props: { titulo: new Titulo('teste') },
-            });
-            expect(sut.get('input').element.value).toBe('teste');
+            },
         });
-        test('exibe o titulo em branco se o parâmetro não fornecido', () => {
-            const tituloFactoryDummy = new TituloFactoryDummy();
-            const sut = mount(TituloInputVue, {
-                global: {
-                    provide: {
-                        tituloFactory: tituloFactoryDummy,
-                    },
+        expect(sut.get('input').element.value).toBe('');
+    });
+    test('inicia com o texto do título se for iniciado com um título existente', () => {
+        const tituloFactoryDummy = new TituloFactoryDummy();
+        const sut = mount(TituloInputVue, {
+            global: {
+                provide: {
+                    tituloFactory: tituloFactoryDummy,
                 },
-            });
-            expect(sut.get('input').element.value).toBe('');
+            },
+            props: { titulo: new Titulo('teste') },
         });
+        expect(sut.get('input').element.value).toBe('teste');
     });
 
     describe('ao digitar um título', () => {

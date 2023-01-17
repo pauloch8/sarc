@@ -5,7 +5,7 @@ import {
 } from '@/dominio/comum/Titulo';
 
 describe('Titulo', () => {
-    describe('instanciar', () => {
+    describe('valida na instanciação', () => {
         describe('lança erro', () => {
             test('se for uma string vazia', async () => {
                 expect(() => {
@@ -27,12 +27,13 @@ describe('Titulo', () => {
                 }).toThrow();
             });
         });
-        test('remove os espaços', async () => {
-            expect(() => {
-                new Titulo('         ');
-            }).toThrow(ErroTituloEmBranco);
-            const teste = new Titulo('       teste           ');
-            expect(teste.toString()).toBe('teste');
-        });
+    });
+
+    test('remove os espaços', async () => {
+        expect(() => {
+            new Titulo('         ');
+        }).toThrow(ErroTituloEmBranco);
+        const teste = new Titulo('       teste           ');
+        expect(teste.toString()).toBe('teste');
     });
 });

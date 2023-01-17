@@ -20,22 +20,7 @@ import { TextoModeloDummy } from '@/tests/dubles/dominio/comum/TextoModeloDubles
 import { SubtituloDummy } from '@/tests/dubles/dominio/comum/SubtituloDubles';
 import { ListaDeVariaveisEditavelDummy } from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelDubles';
 import { EscapadorDeVariavelFactoryDummy } from '@/tests/dubles/dominio/comum/escapador/EscapadorDeVariavelFactoryDubles';
-import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
-import { NomeDeEscapador } from '@/dominio/comum/escapador/nome/NomeDeEscapador';
-
-class EscapadorDeVariavelFake implements IEscapadorDeVariavel {
-    constructor(public valor: string) {}
-
-    getNome(): NomeDeEscapador {
-        throw new Error('Method not implemented.');
-    }
-    compararNome(id: string | NomeDeEscapador): boolean {
-        throw new Error('Method not implemented.');
-    }
-    toString(): string {
-        return this.valor;
-    }
-}
+import { EscapadorDeVariavelFake } from '@/tests/dubles/dominio/comum/escapador/EscapadorDeVariavelDubles';
 
 describe('TextoEdicao', () => {
     test('exibe uma lista dos escapadores de variáveis disponíveis', async () => {

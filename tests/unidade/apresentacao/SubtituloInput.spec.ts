@@ -8,25 +8,23 @@ import {
 import { mount } from '@vue/test-utils';
 
 describe('SubtituloInput', () => {
-    describe('tem subtitulo com parâmetro', () => {
-        test('exibe o subtitulo em branco se o parâmetro não fornecido', async () => {
-            const factoryDummy = new SubtituloFactoryDummy();
-            const sut = mount(SubtituloInputVue, {
-                global: { provide: { subtituloFactory: factoryDummy } },
-            });
-            expect(sut.get('textarea').element.value).toBe('');
+    test('inicia com o texto em branco se não for iniciado com um subtítulo existente', async () => {
+        const factoryDummy = new SubtituloFactoryDummy();
+        const sut = mount(SubtituloInputVue, {
+            global: { provide: { subtituloFactory: factoryDummy } },
         });
-        test('exibe o subtitulo se o parâmetro for fornecido', async () => {
-            const factoryDummy = new SubtituloFactoryDummy();
-            const subtituloFake = new Subtitulo('teste');
-            const sut = mount(SubtituloInputVue, {
-                global: { provide: { subtituloFactory: factoryDummy } },
-                props: {
-                    subtitulo: subtituloFake,
-                },
-            });
-            expect(sut.get('textarea').element.value).toBe('teste');
+        expect(sut.get('textarea').element.value).toBe('');
+    });
+    test('inicia com o texto do subtitulo se for iniciado com um subtítulo existente', async () => {
+        const factoryDummy = new SubtituloFactoryDummy();
+        const subtituloFake = new Subtitulo('teste');
+        const sut = mount(SubtituloInputVue, {
+            global: { provide: { subtituloFactory: factoryDummy } },
+            props: {
+                subtitulo: subtituloFake,
+            },
         });
+        expect(sut.get('textarea').element.value).toBe('teste');
     });
     describe('ao digitar um subtítulo', () => {
         test('exibe mensagem se ocorrer um erro', async () => {

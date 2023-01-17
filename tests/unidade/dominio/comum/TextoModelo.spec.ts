@@ -10,7 +10,7 @@ import {
 } from '@/tests/dubles/dominio/util/RemoveHtmlDubles';
 
 describe('TextoModelo', () => {
-    describe('lança erro de criação', () => {
+    describe('lança erro na instanciação', () => {
         test('se for informado um texto vazio', () => {
             const removeHtml = new RemoveHtmlDummy();
             const instanciacao = expect(() => {
@@ -28,17 +28,18 @@ describe('TextoModelo', () => {
             instanciacao.toThrow(ErroDeCriacaoDeTextoModelo);
         });
     });
-    test('texto html é o próprio texto usado na instanciação', () => {
+    test('permite obter o texto HTML', () => {
         const removeHtml = new RemoveHtmlDummy();
         const sut = new TextoModelo('texto modelo', removeHtml);
-        expect(sut.getTextoHtml()).toBe('texto modelo');
+        const textoHtml = sut.getTextoHtml();
+        expect(textoHtml).toBe('texto modelo');
     });
-    test('texto plano é o texto removido html', () => {
+    test('permite obter o texto plano (removido o html)', () => {
         const removeHtml = new RemoveHtmlRetornaTextoPlanoStub();
         const sut = new TextoModelo('texto modelo', removeHtml);
         expect(sut.getTextoPlano()).toBe(removeHtml.textoPlano);
     });
-    test('representação em string do objeto é o texto removido html', () => {
+    test('a sua representação em string é o texto plano', () => {
         const removeHtml = new RemoveHtmlRetornaTextoPlanoStub();
         const sut = new TextoModelo('texto modelo', removeHtml);
         expect(sut.toString()).toBe(removeHtml.textoPlano);

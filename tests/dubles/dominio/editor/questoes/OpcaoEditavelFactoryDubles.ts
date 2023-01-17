@@ -1,5 +1,5 @@
 import {
-    ErroOpcaoInvalida,
+    ErroInconsistenciasNaValidacaoDaOpcao,
     OpcaoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import { IOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
@@ -15,7 +15,7 @@ export class OpcaoEditavelFactoryErroOpcaoInvalidaStub
 {
     inconsistencias = ['inconsistencia1', 'inconsistencia2', 'inconsistencia3'];
     criar(): OpcaoEditavel {
-        throw new ErroOpcaoInvalida(this.inconsistencias);
+        throw new ErroInconsistenciasNaValidacaoDaOpcao(this.inconsistencias);
     }
 }
 

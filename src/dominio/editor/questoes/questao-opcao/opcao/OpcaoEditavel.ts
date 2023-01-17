@@ -32,7 +32,9 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
         super(indice);
         const validacao = this.validar();
         if (!validacao.valido) {
-            throw new ErroOpcaoInvalida(validacao.inconsistencias);
+            throw new ErroInconsistenciasNaValidacaoDaOpcao(
+                validacao.inconsistencias,
+            );
         }
     }
 
@@ -128,7 +130,7 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
     }
 }
 
-export class ErroOpcaoInvalida extends ErroInconsistenciasNaValidacao {
+export class ErroInconsistenciasNaValidacaoDaOpcao extends ErroInconsistenciasNaValidacao {
     constructor(public readonly inconsistencias: string[]) {
         super(inconsistencias);
     }

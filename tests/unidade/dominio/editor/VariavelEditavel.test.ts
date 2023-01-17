@@ -22,27 +22,25 @@ import {
 import { EscapadorDeVariavelToStringStub } from '@/tests/dubles/dominio/comum/escapador/EscapadorDeVariavelDubles';
 
 describe('VariavelEditavel', () => {
-    describe('valida o variavel na sua criação', () => {
-        test('lança erro de inconsistencias', () => {
-            let erro: ErroInconsistenciasNaValidacao | undefined = undefined;
-            const escapcadorFactory = new EscapadorDeVariavelFactoryDummy();
-            try {
-                new VariavelEditavel(
-                    null as unknown as IIdFormulario,
-                    null as unknown as ITitulo,
-                    null as unknown as ITipoVariavelID,
-                    null as unknown as number,
-                    escapcadorFactory,
-                );
-            } catch (e) {
-                erro = e as ErroInconsistenciasNaValidacao;
-            }
-            expect(erro).toBeInstanceOf(ErroInconsistenciasNaValidacao);
-            expect(erro?.inconsistencias).toContain('Não contêm ID');
-            expect(erro?.inconsistencias).toContain('Não contêm Título');
-            expect(erro?.inconsistencias).toContain('Não contêm Tipo');
-            expect(erro?.inconsistencias).toContain('Não contêm índice');
-        });
+    test('valida o variavel na sua criação lança erro se houver inconsistencias', () => {
+        let erro: ErroInconsistenciasNaValidacao | undefined = undefined;
+        const escapcadorFactory = new EscapadorDeVariavelFactoryDummy();
+        try {
+            new VariavelEditavel(
+                null as unknown as IIdFormulario,
+                null as unknown as ITitulo,
+                null as unknown as ITipoVariavelID,
+                null as unknown as number,
+                escapcadorFactory,
+            );
+        } catch (e) {
+            erro = e as ErroInconsistenciasNaValidacao;
+        }
+        expect(erro).toBeInstanceOf(ErroInconsistenciasNaValidacao);
+        expect(erro?.inconsistencias).toContain('Não contêm ID');
+        expect(erro?.inconsistencias).toContain('Não contêm Título');
+        expect(erro?.inconsistencias).toContain('Não contêm Tipo');
+        expect(erro?.inconsistencias).toContain('Não contêm índice');
     });
     describe('lança erro na edição', () => {
         test('ao informar um id vazio', () => {
@@ -82,23 +80,15 @@ describe('VariavelEditavel', () => {
             }).toThrow(ErroNaEdicao);
         });
     });
-    describe('cria uma representação em string do objeto', () => {
-        test('com o id e o variavel plano', () => {
-            const id = new IdFormularioToStringStub();
-            const titulo = new TituloToStringStub();
-            const tipo = new TipoVariavelIDDummy();
-            const escapadorFactory = new EscapadorDeVariavelFactoryDummy();
-            const sut = new VariavelEditavel(
-                id,
-                titulo,
-                tipo,
-                0,
-                escapadorFactory,
-            );
-            expect(sut.toString()).toBe(id.valor + ': ' + titulo.valor);
-        });
+    test('tem a representação em string com o id e o variavel plano', () => {
+        const id = new IdFormularioToStringStub();
+        const titulo = new TituloToStringStub();
+        const tipo = new TipoVariavelIDDummy();
+        const escapadorFactory = new EscapadorDeVariavelFactoryDummy();
+        const sut = new VariavelEditavel(id, titulo, tipo, 0, escapadorFactory);
+        expect(sut.toString()).toBe(id.valor + ': ' + titulo.valor);
     });
-    describe('gera escapador da variável', () => {
+    test('gera escapador da variável', () => {
         const id = new IdFormularioToStringStub();
         const titulo = new TituloDummy();
         const tipo = new TipoVariavelIDDummy();

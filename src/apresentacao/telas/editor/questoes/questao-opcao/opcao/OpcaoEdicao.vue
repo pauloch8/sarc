@@ -9,7 +9,7 @@ import BotoesSalvarCancelar from '../../../comum/BotoesSalvarCancelar.vue';
 import {
     OpcaoEditavel,
     ErroNaEdicaoDaOpcao,
-    ErroOpcaoInvalida,
+    ErroInconsistenciasNaValidacaoDaOpcao,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import { IOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
 import { Titulo } from '@/dominio/comum/Titulo';
@@ -102,7 +102,7 @@ export default defineComponent({
                 );
                 this.$emit('criou', opcao);
             } catch (e) {
-                if (e instanceof ErroOpcaoInvalida) {
+                if (e instanceof ErroInconsistenciasNaValidacaoDaOpcao) {
                     this.erro = e.message;
                     this.inconsistencias = e.inconsistencias;
                 } else {

@@ -12,7 +12,7 @@ class ItemEditavelDummy extends ItemEditavel {
 }
 
 describe('ListaEditavel', () => {
-    describe('editarItem', () => {
+    describe('ao editar um item', () => {
         test('faz com que o item entre em edição', () => {
             const item0 = new ItemEditavelDummy(0);
             const sut = new ListaEditavel<ItemEditavelDummy>([item0]);
@@ -20,7 +20,7 @@ describe('ListaEditavel', () => {
             sut.editarItem(item0);
             expect(item0.getEmEdicao()).toBeTruthy();
         });
-        test.skip('lança erro se um item já está em edição', () => {
+        test.skip('lança erro se um item já estiver em edição', () => {
             const item0 = new ItemEditavelDummy(0);
             const item1 = new ItemEditavelDummy(1);
             const sut = new ListaEditavel<ItemEditavelDummy>([item0, item1]);
@@ -38,7 +38,7 @@ describe('ListaEditavel', () => {
             }).toThrow(ErroItemSolicitadoNaoEncontrado);
         });
     });
-    describe('subirItem', () => {
+    describe('ao subir um item', () => {
         test('altera o índice dos itens', () => {
             const item0 = new ItemEditavelDummy(0);
             const item1 = new ItemEditavelDummy(1);
@@ -75,7 +75,7 @@ describe('ListaEditavel', () => {
             }).toThrow(ErroItemSolicitadoNaoEncontrado);
         });
     });
-    describe('descerItem', () => {
+    describe('ao descer um item', () => {
         test('altera o indice dos itens', () => {
             const item0 = new ItemEditavelDummy(0);
             const item1 = new ItemEditavelDummy(1);
@@ -105,7 +105,7 @@ describe('ListaEditavel', () => {
             }).toThrow(ErroItemSolicitadoNaoEncontrado);
         });
     });
-    describe('excluirItem', () => {
+    describe('ao excluir um item', () => {
         test('exclui da lista o item solicitada', () => {
             const item0 = new ItemEditavelDummy(0);
             const item1 = new ItemEditavelDummy(1);
@@ -145,20 +145,18 @@ describe('ListaEditavel', () => {
             }).toThrow(ErroItemSolicitadoNaoEncontrado);
         });
     });
-    describe('.getLength', () => {
-        test('retorna o tamanho da array de itens', () => {
-            const item0 = new ItemEditavelDummy(0);
-            const item1 = new ItemEditavelDummy(1);
-            const item2 = new ItemEditavelDummy(2);
-            const item3 = new ItemEditavelDummy(3);
-            const sut = new ListaEditavel<ItemEditavelDummy>([
-                item0,
-                item1,
-                item2,
-                item3,
-            ]);
+    test('permite obter o tamanho da lista de itens', () => {
+        const item0 = new ItemEditavelDummy(0);
+        const item1 = new ItemEditavelDummy(1);
+        const item2 = new ItemEditavelDummy(2);
+        const item3 = new ItemEditavelDummy(3);
+        const sut = new ListaEditavel<ItemEditavelDummy>([
+            item0,
+            item1,
+            item2,
+            item3,
+        ]);
 
-            expect(sut.getLength()).toBe(4);
-        });
+        expect(sut.getLength()).toBe(4);
     });
 });

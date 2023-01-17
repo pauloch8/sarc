@@ -12,3 +12,9 @@ export class RemoveHtmlRetornaTextoPlanoStub implements RemoveHtml {
         return this.textoPlano;
     }
 }
+
+export class RemovHtmlRetornaSemAlterarStub implements RemoveHtml {
+    remover(htmlString: string): string {
+        return htmlString;
+    }
+}

@@ -24,3 +24,17 @@ export class EscapadorDeVariavelDummy implements IEscapadorDeVariavel {
         throw new Error('Method toString not implemented.');
     }
 }
+
+export class EscapadorDeVariavelFake implements IEscapadorDeVariavel {
+    constructor(public valor: string) {}
+
+    getNome(): NomeDeEscapador {
+        throw new Error('Method not implemented.');
+    }
+    compararNome(id: string | NomeDeEscapador): boolean {
+        throw new Error('Method not implemented.');
+    }
+    toString(): string {
+        return this.valor;
+    }
+}
