@@ -21,10 +21,10 @@ export class TextoEditavelEditaComSucessoMock implements ITextoEditavel {
     setId(id?: IdFormulario | undefined): void {
         this.id = id as IdFormulario;
     }
-    getTitulo() {
+    getCategoria() {
         return this.titulo;
     }
-    setTitulo(titulo?: ITitulo | undefined): void {
+    setCategoria(titulo?: ITitulo | undefined): void {
         this.titulo = titulo as ITitulo;
     }
     getTextoModelo() {
@@ -64,10 +64,10 @@ export class TextoEditavelErroStub implements ITextoEditavel {
     setId() {
         throw new ErroNaEdicaoDoTexto('id');
     }
-    getTitulo() {
+    getCategoria() {
         return this.titulo;
     }
-    setTitulo() {
+    setCategoria() {
         throw new ErroNaEdicaoDoTexto('titulo');
     }
     getTextoModelo() {
@@ -103,10 +103,10 @@ export class TextoEditavelDummy implements ITextoEditavel {
     setId(): void {
         throw new Error('Method not implemented.');
     }
-    getTitulo(): ITitulo {
+    getCategoria(): ITitulo {
         throw new Error('Method not implemented.');
     }
-    setTitulo(): void {
+    setCategoria(): void {
         throw new Error('Method not implemented.');
     }
     getTextoModelo(): ITextoModelo {

@@ -11,8 +11,8 @@ import {
 export interface ITextoEditavel extends IItemEditavel {
     getId(): IIdFormulario;
     setId(id?: IdFormulario | undefined): void;
-    getTitulo(): ITitulo;
-    setTitulo(titulo?: ITitulo | undefined): void;
+    getCategoria(): ITitulo;
+    setCategoria(titulo?: ITitulo | undefined): void;
     getTextoModelo(): ITextoModelo;
     setTextoModelo(textoModelo?: ITextoModelo | undefined): void;
 }
@@ -20,7 +20,7 @@ export interface ITextoEditavel extends IItemEditavel {
 export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
     constructor(
         private id: IIdFormulario,
-        private titulo: ITitulo,
+        private categoria: ITitulo,
         private textoModelo: ITextoModelo,
         indice: number,
     ) {
@@ -35,25 +35,25 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
 
     private validar() {
         const contemId = !!this.id;
-        const contemTitulo = !!this.titulo;
+        const contemCategoria = !!this.categoria;
         const contemTextoModelo = !!this.textoModelo;
         const contemIndice = typeof this.getIndice() === 'number';
 
         const valido =
-            contemId && contemTitulo && contemTextoModelo && contemIndice;
+            contemId && contemCategoria && contemTextoModelo && contemIndice;
 
         const inconsistencias = [];
         if (!contemId) {
-            inconsistencias.push('Não contêm ID');
+            inconsistencias.push('Não contém ID');
         }
-        if (!contemTitulo) {
-            inconsistencias.push('Não contêm Título');
+        if (!contemCategoria) {
+            inconsistencias.push('Não contém Categoria');
         }
         if (!contemTextoModelo) {
-            inconsistencias.push('Não contêm Texto Modelo');
+            inconsistencias.push('Não contém Texto Modelo');
         }
         if (!contemIndice) {
-            inconsistencias.push('Não contêm índice');
+            inconsistencias.push('Não contém índice');
         }
 
         return { valido, inconsistencias };
@@ -70,15 +70,15 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
         this.id = id;
     }
 
-    getTitulo() {
-        return this.titulo;
+    getCategoria() {
+        return this.categoria;
     }
 
-    setTitulo(titulo?: ITitulo) {
-        if (!titulo) {
-            throw new ErroNaEdicaoDoTexto('Titulo vazio informado');
+    setCategoria(categoria?: ITitulo) {
+        if (!categoria) {
+            throw new ErroNaEdicaoDoTexto('Categoria vazia informada');
         }
-        this.titulo = titulo;
+        this.categoria = categoria;
     }
 
     getTextoModelo() {
@@ -93,7 +93,7 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
     }
 
     toString(): string {
-        return `${this.id}: ${this.textoModelo.getTextoPlano()}`;
+        return `${this.categoria}: ${this.textoModelo.getTextoPlano()}`;
     }
 }
 

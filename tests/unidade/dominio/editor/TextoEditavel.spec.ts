@@ -10,11 +10,11 @@ import {
     TextoModeloDummy,
     TextoModeloRetornaTextosStub,
 } from '@/tests/dubles/dominio/comum/TextoModeloDubles';
-import { TituloDummy } from '@/tests/dubles/dominio/comum/TituloDubles';
 import {
-    IdFormularioDummy,
-    IdFormularioToStringStub,
-} from '@/tests/dubles/dominio/comum/IdFormularioDubles';
+    TituloDummy,
+    TituloToStringStub,
+} from '@/tests/dubles/dominio/comum/TituloDubles';
+import { IdFormularioDummy } from '@/tests/dubles/dominio/comum/IdFormularioDubles';
 
 describe('TextoEditavel', () => {
     test('lança erro de inconsistencias na instanciação se não passar na valicação', () => {
@@ -30,10 +30,10 @@ describe('TextoEditavel', () => {
             erro = e as InconsistenciasNaValidacaoDoTexto;
         }
         expect(erro).toBeInstanceOf(InconsistenciasNaValidacaoDoTexto);
-        expect(erro?.inconsistencias).toContain('Não contêm ID');
-        expect(erro?.inconsistencias).toContain('Não contêm Título');
-        expect(erro?.inconsistencias).toContain('Não contêm Texto Modelo');
-        expect(erro?.inconsistencias).toContain('Não contêm índice');
+        expect(erro?.inconsistencias).toContain('Não contém ID');
+        expect(erro?.inconsistencias).toContain('Não contém Categoria');
+        expect(erro?.inconsistencias).toContain('Não contém Texto Modelo');
+        expect(erro?.inconsistencias).toContain('Não contém índice');
     });
     describe('lança erro na edição', () => {
         test('ao informar um id vazio', () => {
@@ -47,7 +47,7 @@ describe('TextoEditavel', () => {
                 sut.setId(undefined);
             }).toThrow(ErroNaEdicaoDoTexto);
         });
-        test('ao informar um título vazio', () => {
+        test('ao informar uma categoria vazia', () => {
             const sut = new TextoEditavel(
                 new IdFormularioDummy(),
                 new TituloDummy(),
@@ -55,7 +55,7 @@ describe('TextoEditavel', () => {
                 0,
             );
             expect(() => {
-                sut.setTitulo(undefined);
+                sut.setCategoria(undefined);
             }).toThrow(ErroNaEdicaoDoTexto);
         });
         test('ao informar um textoTemplate vazio', () => {
@@ -70,11 +70,11 @@ describe('TextoEditavel', () => {
             }).toThrow(ErroNaEdicaoDoTexto);
         });
     });
-    test('cria uma representação em string com o id e o texto plano', () => {
-        const id = new IdFormularioToStringStub();
-        const titulo = new TituloDummy();
+    test('cria uma representação em string com a categoria e o texto plano', () => {
+        const id = new IdFormularioDummy();
+        const categoria = new TituloToStringStub();
         const texto = new TextoModeloRetornaTextosStub();
-        const sut = new TextoEditavel(id, titulo, texto, 0);
-        expect(sut.toString()).toBe(id.valor + ': ' + texto.textoPlano);
+        const sut = new TextoEditavel(id, categoria, texto, 0);
+        expect(sut.toString()).toBe(categoria.valor + ': ' + texto.textoPlano);
     });
 });

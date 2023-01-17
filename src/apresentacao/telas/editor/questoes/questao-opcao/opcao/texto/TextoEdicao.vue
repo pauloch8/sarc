@@ -62,7 +62,7 @@ export default defineComponent({
     },
     data() {
         const id = this.texto?.getId();
-        const titulo = this.texto?.getTitulo();
+        const titulo = this.texto?.getCategoria();
         const textoModelo = this.texto?.getTextoModelo();
         const erro = '';
         const inconsistencias: string[] = [];
@@ -139,7 +139,7 @@ export default defineComponent({
             }
             //titulo
             try {
-                texto.setTitulo(this.titulo as Titulo);
+                texto.setCategoria(this.titulo as Titulo);
             } catch (e) {
                 if (e instanceof ErroNaEdicaoDoTexto) {
                     this.inconsistencias.push(e.message);
