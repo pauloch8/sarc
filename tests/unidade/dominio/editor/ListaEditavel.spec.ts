@@ -1,9 +1,9 @@
-import { ItemEditavel } from '@/dominio/editor/questoes/ItemEditavel';
+import { ItemEditavel } from '@/dominio/editor/comum/ItemEditavel';
 import {
     ErroExisteItemEmEdicao,
     ErroItemSolicitadoNaoEncontrado,
     ListaEditavel,
-} from '@/dominio/editor/questoes/ListaEditavel';
+} from '@/dominio/editor/comum/ListaEditavel';
 
 class ItemEditavelDummy extends ItemEditavel {
     toString(): string {

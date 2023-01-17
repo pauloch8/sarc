@@ -3,10 +3,10 @@ import { ITitulo } from '@/dominio/comum/Titulo';
 import { IVariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
 import { TituloDummy } from '../../comum/TituloDubles';
-import { ErroNaEdicao } from '@/dominio/editor/questoes/ItemEditavel';
+import { ErroNaEdicao } from '@/dominio/editor/comum/ItemEditavel';
 import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
 import { TipoVariavelIDDummy } from './TipoVariavelDubles';
-import { IListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { IListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
 
 export class VariavelEditavelEditaComSucessoMock implements IVariavelEditavel {

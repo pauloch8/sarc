@@ -11,7 +11,7 @@ import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/
 import {
     ErroInconsistenciasNaValidacao,
     ErroNaEdicao,
-} from '@/dominio/editor/questoes/ItemEditavel';
+} from '@/dominio/editor/comum/ItemEditavel';
 import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
 
 export default defineComponent({

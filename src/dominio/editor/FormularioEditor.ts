@@ -1,8 +1,9 @@
 import { IIdFormulario } from '../comum/IdFormulario';
 import { ITitulo } from '../comum/Titulo';
 import { ISubtitulo } from '../comum/Subtitulo';
-import { IListaEditavel } from './questoes/ListaEditavel';
+import { IListaEditavel } from './comum/ListaEditavel';
 import { IQuestaoEditavel } from './questoes/questao-opcao/QuestaoEditavel';
+import { IModeloEditavel } from './modelo/ModeloEditavel';
 
 export interface IFormularioEditor {
     getId(): IIdFormulario;
@@ -15,6 +16,7 @@ export class FormularioEditor implements IFormularioEditor {
         private id: IIdFormulario,
         private titulo: ITitulo,
         private listaQuestoes: IListaEditavel<IQuestaoEditavel>,
+        private listaModelos: IListaEditavel<IModeloEditavel>,
         private subtitulo?: ISubtitulo,
     ) {}
     getId() {

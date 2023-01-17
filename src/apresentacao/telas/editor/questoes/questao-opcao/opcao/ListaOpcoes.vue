@@ -3,7 +3,7 @@ import { defineComponent } from 'vue';
 import ItemDeOpcao from './ItemDeOpcao.vue';
 import AdicionarOpcao from './AdicionarOpcao.vue';
 import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
-import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 
 export default defineComponent({
     name: 'ListaOpcoes',

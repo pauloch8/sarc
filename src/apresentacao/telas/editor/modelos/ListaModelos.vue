@@ -1,15 +1,15 @@
 <script lang="ts">
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { ModeloEditavel } from '@/dominio/editor/modelo/ModeloEditavel';
 import { defineComponent } from 'vue';
-import ItemDeTexto from './ItemDeTexto.vue';
-import AdicionarTexto from './AdicionarTexto.vue';
+import ItemDeModelo from './ItemDeModelo.vue';
+import AdicionarModelo from './AdicionarModelo.vue';
 
 export default defineComponent({
-    name: 'ListaTextos',
+    name: 'ListaModelos',
     components: {
-        ItemDeTexto,
-        AdicionarTexto,
+        ItemDeModelo,
+        AdicionarModelo,
     },
     props: {
         lista: {
@@ -19,12 +19,12 @@ export default defineComponent({
     },
     data() {
         return {
-            estaLista: this.lista as ListaEditavel<TextoEditavel>,
+            estaLista: this.lista as ListaEditavel<ModeloEditavel>,
         };
     },
     computed: {
         itensOrdenados() {
-            const retorno = (this.lista as ListaEditavel<TextoEditavel>)
+            const retorno = (this.lista as ListaEditavel<ModeloEditavel>)
                 .getItens()
                 .sort((a, b) => {
                     const indiceA = a.getIndice();
@@ -41,19 +41,19 @@ export default defineComponent({
         },
     },
     methods: {
-        editar(item: TextoEditavel) {
+        editar(item: ModeloEditavel) {
             this.estaLista.editarItem(item);
         },
-        adicionarItem(item: TextoEditavel) {
+        adicionarItem(item: ModeloEditavel) {
             this.estaLista.adicionarItem(item);
         },
-        excluir(item: TextoEditavel) {
+        excluir(item: ModeloEditavel) {
             this.estaLista.excluirItem(item);
         },
-        descer(item: TextoEditavel) {
+        descer(item: ModeloEditavel) {
             this.estaLista.descerItem(item);
         },
-        subir(item: TextoEditavel) {
+        subir(item: ModeloEditavel) {
             this.estaLista.subirItem(item);
         },
     },
@@ -61,30 +61,30 @@ export default defineComponent({
 </script>
 
 <template>
-    <h3>Textos</h3>
+    <h3>Modelos</h3>
 
-    <TransitionGroup name="textos">
-        <ItemDeTexto
-            v-for="(texto, indice) in itensOrdenados"
+    <TransitionGroup name="modelos">
+        <ItemDeModelo
+            v-for="(modelo, indice) in itensOrdenados"
             :key="indice"
-            :texto="(texto as TextoEditavel)"
+            :modelo="(modelo as ModeloEditavel)"
             :ehPrimeiro="indice === 0"
             :ehUltimo="indice === itensOrdenados.length - 1"
             @editar="editar"
             @excluir="excluir"
             @descer="descer"
             @subir="subir"
-        ></ItemDeTexto>
+        ></ItemDeModelo>
     </TransitionGroup>
 
-    <AdicionarTexto
+    <AdicionarModelo
         :indice="itensOrdenados.length"
         @adicionarItem="adicionarItem"
-    ></AdicionarTexto>
+    ></AdicionarModelo>
 </template>
 
 <style scoped>
-.textos-move {
+.modelos-move {
     transition: all 0.5s ease-in-out;
 }
 </style>

@@ -2,7 +2,7 @@ import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import {
     IListaEditavel,
     ListaEditavel,
-} from '@/dominio/editor/questoes/ListaEditavel';
+} from '@/dominio/editor/comum/ListaEditavel';
 import {
     ErroNaEdicaoDaOpcao,
     IOpcaoEditavel,

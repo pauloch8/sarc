@@ -3,7 +3,7 @@ import {
     ItemEditavel,
     ErroInconsistenciasNaValidacao,
     ErroNaEdicao,
-} from '../../../ItemEditavel';
+} from '../../../../comum/ItemEditavel';
 import { IIdFormulario } from '../../../../../comum/IdFormulario';
 import { ITitulo } from '../../../../../comum/Titulo';
 import { ITipoVariavel } from './tipo-variavel/TipoVariavel';

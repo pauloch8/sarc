@@ -12,7 +12,7 @@ import {
 import {
     ErroInconsistenciasNaValidacao,
     ErroNaEdicao,
-} from '@/dominio/editor/questoes/ItemEditavel';
+} from '@/dominio/editor/comum/ItemEditavel';
 import { TipoVariavelIDDummy } from '@/tests/dubles/dominio/editor/questoes/TipoVariavelDubles';
 import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
 import {

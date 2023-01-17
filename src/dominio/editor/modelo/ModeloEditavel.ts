@@ -6,18 +6,18 @@ import {
     IItemEditavel,
     ErroNaEdicao,
     ErroInconsistenciasNaValidacao,
-} from '../../../../comum/ItemEditavel';
+} from '../comum/ItemEditavel';
 
-export interface ITextoEditavel extends IItemEditavel {
+export interface IModeloEditavel extends IItemEditavel {
     getId(): IIdFormulario;
     setId(id?: IdFormulario | undefined): void;
     getTitulo(): ITitulo;
     setTitulo(titulo?: ITitulo | undefined): void;
     getTextoModelo(): ITextoModelo;
-    setTextoModelo(textoModelo?: ITextoModelo | undefined): void;
+    setTextoModelo(modeloModelo?: ITextoModelo | undefined): void;
 }
 
-export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
+export class ModeloEditavel extends ItemEditavel implements IModeloEditavel {
     constructor(
         private id: IIdFormulario,
         private titulo: ITitulo,
@@ -27,7 +27,7 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
         super(indice);
         const validacao = this.validar();
         if (!validacao.valido) {
-            throw new InconsistenciasNaValidacaoDoTexto(
+            throw new InconsistenciasNaValidacaoDoModelo(
                 validacao.inconsistencias,
             );
         }
@@ -50,7 +50,7 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
             inconsistencias.push('Não contêm Título');
         }
         if (!contemTextoModelo) {
-            inconsistencias.push('Não contêm Texto Modelo');
+            inconsistencias.push('Não contêm Modelo Modelo');
         }
         if (!contemIndice) {
             inconsistencias.push('Não contêm índice');
@@ -65,7 +65,7 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
 
     setId(id?: IdFormulario) {
         if (!id) {
-            throw new ErroNaEdicaoDoTexto('ID vazio informado');
+            throw new ErroNaEdicaoDoModelo('ID vazio informado');
         }
         this.id = id;
     }
@@ -76,7 +76,7 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
 
     setTitulo(titulo?: ITitulo) {
         if (!titulo) {
-            throw new ErroNaEdicaoDoTexto('Titulo vazio informado');
+            throw new ErroNaEdicaoDoModelo('Titulo vazio informado');
         }
         this.titulo = titulo;
     }
@@ -85,11 +85,11 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
         return this.textoModelo;
     }
 
-    setTextoModelo(textoModelo?: ITextoModelo) {
-        if (!textoModelo) {
-            throw new ErroNaEdicaoDoTexto('TextoModelo vazio informado');
+    setTextoModelo(modeloModelo?: ITextoModelo) {
+        if (!modeloModelo) {
+            throw new ErroNaEdicaoDoModelo('TextoModelo vazio informado');
         }
-        this.textoModelo = textoModelo;
+        this.textoModelo = modeloModelo;
     }
 
     toString(): string {
@@ -97,13 +97,13 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
     }
 }
 
-export class InconsistenciasNaValidacaoDoTexto extends ErroInconsistenciasNaValidacao {
+export class InconsistenciasNaValidacaoDoModelo extends ErroInconsistenciasNaValidacao {
     constructor(public readonly inconsistencias: string[]) {
         super(inconsistencias);
     }
 }
 
-export class ErroNaEdicaoDoTexto extends ErroNaEdicao {
+export class ErroNaEdicaoDoModelo extends ErroNaEdicao {
     constructor(mensagem: string) {
         super(mensagem);
     }

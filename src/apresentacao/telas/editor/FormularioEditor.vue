@@ -10,9 +10,9 @@ import { Subtitulo } from '@/dominio/comum/Subtitulo';
 import { Titulo } from '@/dominio/comum/Titulo';
 import { FormularioEditor } from '@/dominio/editor/FormularioEditor';
 import { FormularioEditorFactory } from '@/dominio/editor/FormularioEditorFactory';
-import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
-import { ItemEditavel } from '@/dominio/editor/questoes/ItemEditavel';
+import { ItemEditavel } from '@/dominio/editor/comum/ItemEditavel';
 
 export default defineComponent({
     name: 'FormularioEditor',

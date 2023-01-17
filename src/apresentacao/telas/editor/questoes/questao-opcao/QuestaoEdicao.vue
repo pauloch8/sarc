@@ -14,7 +14,7 @@ import { Titulo } from '@/dominio/comum/Titulo';
 import { Subtitulo } from '@/dominio/comum/Subtitulo';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { IQuestaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavelFactory';
-import { ListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 
 export default defineComponent({

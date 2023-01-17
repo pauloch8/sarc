@@ -4,8 +4,8 @@ import {
     ItemEditavel,
     ErroNaEdicao,
     ErroInconsistenciasNaValidacao,
-} from '../ItemEditavel';
-import { IListaEditavel } from '../ListaEditavel';
+} from '../../comum/ItemEditavel';
+import { IListaEditavel } from '../../comum/ListaEditavel';
 import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
 import { ISubtitulo } from '../../../comum/Subtitulo';
 import { ITitulo } from '../../../comum/Titulo';

@@ -1,7 +1,7 @@
 import { IdFormulario, IIdFormulario } from '@/dominio/comum/IdFormulario';
 import { ITextoModelo } from '@/dominio/comum/TextoModelo';
 import { ITitulo } from '@/dominio/comum/Titulo';
-import { IListaEditavel } from '@/dominio/editor/questoes/ListaEditavel';
+import { IListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import {
     ErroNaEdicaoDoTexto,
     ITextoEditavel,

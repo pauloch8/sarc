@@ -1,4 +1,4 @@
-import { ErroInconsistenciasNaValidacao } from '@/dominio/editor/questoes/ItemEditavel';
+import { ErroInconsistenciasNaValidacao } from '@/dominio/editor/comum/ItemEditavel';
 import { IVariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 import { IVariavelEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavelFactory';
 import { VariavelEditavelDummy } from './VariavelEditavelDubles';
