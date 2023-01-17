@@ -1,4 +1,5 @@
 import OpcaoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/opcao/OpcaoEdicao.vue';
+import ListaTextosExibeEscapadoresVariaveisStub from '@/tests/dubles/apresentacao/ListaTextosExibeEscapadoresVariaveisStub.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
 import {
     OpcaoEditavelFactoryErroOpcaoInvalidaStub,
@@ -16,9 +17,11 @@ import {
 import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import { TituloDummy } from '@/tests/dubles/dominio/comum/TituloDubles';
 import { IdFormularioDummy } from '@/tests/dubles/dominio/comum/IdFormularioDubles';
-import { ListaDeVariaveisEditavelDummy } from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelDubles';
+import {
+    ListaDeVariaveisEditavelDummy,
+    ListaDeVariaveisEditavelRetornaItensComEscapadorStub,
+} from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelDubles';
 import { ListaDeTextosEditavelGetLengthMaiorQueZeroStub } from '@/tests/dubles/dominio/editor/questoes/TextoEditavelDubles';
-
 describe('OpcaoEdicao', () => {
     describe('ao criar uma nova Opção', () => {
         test('exibe a lista de inconsistências se for lançado erro de Inconsistência na validação', async () => {
@@ -31,10 +34,6 @@ describe('OpcaoEdicao', () => {
                     },
                 },
                 components: {
-                    IdFormularioInput: {},
-                    TituloInput: {},
-                    TextoComponent: {},
-                    VariavelComponent: {},
                     BotoesSalvarCancelar,
                 },
             });
@@ -60,10 +59,6 @@ describe('OpcaoEdicao', () => {
                     },
                 },
                 components: {
-                    IdFormularioInput: {},
-                    TituloInput: {},
-                    TextoComponent: {},
-                    VariavelComponent: {},
                     BotoesSalvarCancelar,
                 },
             });
@@ -82,10 +77,6 @@ describe('OpcaoEdicao', () => {
                     },
                 },
                 components: {
-                    IdFormularioInput: {},
-                    TituloInput: {},
-                    TextoComponent: {},
-                    VariavelComponent: {},
                     BotoesSalvarCancelar,
                 },
                 props: {
@@ -121,10 +112,6 @@ describe('OpcaoEdicao', () => {
                     },
                 },
                 components: {
-                    IdFormularioInput: {},
-                    TituloInput: {},
-                    TextoComponent: {},
-                    VariavelComponent: {},
                     BotoesSalvarCancelar,
                 },
                 props: {
@@ -152,10 +139,6 @@ describe('OpcaoEdicao', () => {
                     },
                 },
                 components: {
-                    IdFormularioInput: {},
-                    TituloInput: {},
-                    TextoComponent: {},
-                    VariavelComponent: {},
                     BotoesSalvarCancelar,
                 },
                 props: {
@@ -181,13 +164,45 @@ describe('OpcaoEdicao', () => {
             expect(sut.find('.erro').exists()).toBeFalsy();
             expect(sut.emitted()).toHaveProperty('atualizou');
             expect(sut.emitted('atualizou')).toHaveLength(1);
-            const evento = sut.emitted('atualizou');
-            if (!evento) {
-                throw new Error('array de eventos não contém objeto');
-            }
+            const evento = sut.emitted('atualizou') as unknown[][];
             const argumento = evento[0] as any;
             const retorno = argumento[0] as OpcaoEditavel;
             expect(retorno).toBeInstanceOf(OpcaoEditavelDummy);
+        });
+        test('Quando a lista de variáveis é alterada, provê seus escapadores para outros componentes', () => {
+            const opcaoEditavelFactory = new OpcaoEditavelFactoryDummy();
+            const opcao = new OpcaoEditavelDummy() as unknown as OpcaoEditavel;
+            const idFormulario = new IdFormularioDummy();
+            const titulo = new TituloDummy();
+            const textos = new ListaDeTextosEditavelGetLengthMaiorQueZeroStub();
+            const variaveis =
+                new ListaDeVariaveisEditavelRetornaItensComEscapadorStub();
+
+            const sut = mount(OpcaoEdicaoVue, {
+                global: {
+                    provide: {
+                        opcaoEditavelFactory,
+                    },
+                },
+                components: {
+                    ListaTextos: ListaTextosExibeEscapadoresVariaveisStub,
+                    BotoesSalvarCancelar,
+                },
+                props: {
+                    opcao,
+                },
+                data() {
+                    const erro = '';
+                    return {
+                        idFormulario,
+                        titulo,
+                        listaTextos: textos,
+                        listaVariaveis: variaveis,
+                        erro,
+                    };
+                },
+            });
+            expect(sut.text()).toContain(variaveis.itens[0].variavel.string);
         });
     });
 });

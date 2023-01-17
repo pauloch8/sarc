@@ -8,6 +8,8 @@ import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/v
 import { TipoVariavelIDDummy } from './TipoVariavelDubles';
 import { IListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
+import { ITipoVariavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavel';
+import { EscapadorDeVariavelToStringStub } from '../../comum/escapador/EscapadorDeVariavelDubles';
 
 export class VariavelEditavelEditaComSucessoMock implements IVariavelEditavel {
     private id = new IdFormularioDummy();
@@ -148,6 +150,84 @@ export class ListaDeVariaveisEditavelDummy
 {
     getItens(): IVariavelEditavel[] {
         throw new Error('Method getItens not implemented.');
+    }
+    getLength(): number {
+        throw new Error('Method getLength not implemented.');
+    }
+    editarItem(): void {
+        throw new Error('Method editarItem not implemented.');
+    }
+    subirItem(): void {
+        throw new Error('Method subirItem not implemented.');
+    }
+    descerItem(): void {
+        throw new Error('Method descerItem not implemented.');
+    }
+    excluirItem(): void {
+        throw new Error('Method excluirItem not implemented.');
+    }
+    adicionarItem(): void {
+        throw new Error('Method adicionarItem not implemented.');
+    }
+    obterItemPorIndice(): IVariavelEditavel {
+        throw new Error('Method obterItemPorIndice not implemented.');
+    }
+    getEscapador(): IEscapadorDeVariavel {
+        throw new Error('Method getEscapador not implemented.');
+    }
+}
+
+class VariavelEditavelRetornaEscapadorStub implements IVariavelEditavel {
+    variavel = new EscapadorDeVariavelToStringStub();
+
+    getId(): IIdFormulario {
+        throw new Error('Method not implemented.');
+    }
+    setId(id: IIdFormulario): void {
+        throw new Error('Method not implemented.');
+    }
+    getTitulo(): ITitulo {
+        throw new Error('Method not implemented.');
+    }
+    setTitulo(titulo: ITitulo): void {
+        throw new Error('Method not implemented.');
+    }
+    getTipo(): ITipoVariavelID {
+        throw new Error('Method not implemented.');
+    }
+    setTipo(tipo: ITipoVariavel): void {
+        throw new Error('Method not implemented.');
+    }
+    getEscapador(): EscapadorDeVariavelToStringStub {
+        return this.variavel;
+    }
+    getEmEdicao(): boolean {
+        throw new Error('Method not implemented.');
+    }
+    editar(): void {
+        throw new Error('Method not implemented.');
+    }
+    encerrarEdicao(): void {
+        throw new Error('Method not implemented.');
+    }
+    getIndice(): number {
+        throw new Error('Method not implemented.');
+    }
+    setIndice(indice: number): void {
+        throw new Error('Method not implemented.');
+    }
+    toString(): string {
+        throw new Error('Method not implemented.');
+    }
+}
+
+export class ListaDeVariaveisEditavelRetornaItensComEscapadorStub
+    implements IListaEditavel<IVariavelEditavel>
+{
+    itens = [new VariavelEditavelRetornaEscapadorStub()];
+
+    getItens(): VariavelEditavelRetornaEscapadorStub[] {
+        return this.itens;
     }
     getLength(): number {
         throw new Error('Method getLength not implemented.');
