@@ -2,7 +2,7 @@ import { NomeDeEscapador } from '@/dominio/comum/escapador/nome/NomeDeEscapador'
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
 
 export class EscapadorDeVariavelToStringStub implements IEscapadorDeVariavel {
-    static string = 'stub';
+    string = 'stub';
     getNome(): NomeDeEscapador {
         throw new Error('Method getNome not implemented.');
     }
@@ -10,7 +10,7 @@ export class EscapadorDeVariavelToStringStub implements IEscapadorDeVariavel {
         throw new Error('Method compararNome not implemented.');
     }
     toString(): string {
-        return EscapadorDeVariavelToStringStub.string;
+        return this.string;
     }
 }
 export class EscapadorDeVariavelDummy implements IEscapadorDeVariavel {

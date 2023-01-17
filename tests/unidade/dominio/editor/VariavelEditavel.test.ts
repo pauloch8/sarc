@@ -95,10 +95,8 @@ describe('VariavelEditavel', () => {
         const escapadorFactory =
             new EscapadorDeVariavelFactoryCriarDeIdFormularioRetornaToStringStub();
         const sut = new VariavelEditavel(id, titulo, tipo, 0, escapadorFactory);
-        const escapador = sut.getEscapador();
+        const escapador = sut.getEscapador() as EscapadorDeVariavelToStringStub;
         expect(escapador).toBeInstanceOf(EscapadorDeVariavelToStringStub);
-        expect(escapador.toString()).toBe(
-            EscapadorDeVariavelToStringStub.string,
-        );
+        expect(escapador.toString()).toBe(escapador.string);
     });
 });
