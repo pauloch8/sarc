@@ -8,11 +8,11 @@ import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { Titulo } from '@/dominio/comum/Titulo';
 import { TextoModelo } from '@/dominio/comum/TextoModelo';
-import { InconsistenciasNaValidacaoDoTexto } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { ITextoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
 import {
-    ErroNaEdicaoDoTexto,
     TextoEditavel,
+    ErroNaEdicaoDoTexto,
+    InconsistenciasNaValidacaoDoTexto,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
 import { IEscapadorDeVariavelFactory } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
@@ -27,27 +27,33 @@ export default defineComponent({
         BotoesSalvarCancelar,
     },
     setup() {
+        // injeção textoEditavelFactory
         const textoEditavelFactory = inject<ITextoEditavelFactory>(
             'textoEditavelFactory',
         );
         if (!textoEditavelFactory) {
             throw new Error('Não injetada a dependência textoEditavelFactory');
         }
-        const escapadorDeVariavelFactory = inject<IEscapadorDeVariavelFactory>(
+
+        // injeção escapadorDeVariavelFactory
+        const escapadorFactory = inject<IEscapadorDeVariavelFactory>(
             'escapadorDeVariavelFactory',
         );
-        if (!escapadorDeVariavelFactory) {
+        if (!escapadorFactory) {
             throw new Error(
                 'Não injetada a dependência escapadorDeVariavelFactory',
             );
         }
-        const escapadoresVariaveis = inject<IEscapadorDeVariavel[]>(
+
+        // injeção escapadoresVariaveis
+        const escapadores = inject<IEscapadorDeVariavel[]>(
             'escapadoresVariaveis',
         );
+
         return {
             textoEditavelFactory,
-            escapadorDeVariavelFactory,
-            escapadoresVariaveis,
+            escapadorFactory,
+            escapadores,
         };
     },
     props: {
@@ -79,11 +85,11 @@ export default defineComponent({
         },
         digitouTextoModelo(textoModelo: TextoModelo) {
             const escapadoresEscritos =
-                this.escapadorDeVariavelFactory.criarEscapadoresDeTexto(
+                this.escapadorFactory.criarEscapadoresDeTexto(
                     textoModelo.getTextoPlano(),
                 );
             this.escapadoresInexistentes = escapadoresEscritos.filter(
-                escrito => !this.escapadoresVariaveis?.includes(escrito),
+                escrito => !this.escapadores?.includes(escrito),
             );
             this.textoModelo = textoModelo;
         },
@@ -196,8 +202,8 @@ export default defineComponent({
         ></TituloInput>
 
         <ListaDeEscapadores
-            v-if="escapadoresVariaveis"
-            :escapadoresVariaveis="escapadoresVariaveis"
+            v-if="escapadores"
+            :escapadoresVariaveis="escapadores"
         ></ListaDeEscapadores>
 
         <article class="erro" v-if="escapadoresInexistentes.length">
