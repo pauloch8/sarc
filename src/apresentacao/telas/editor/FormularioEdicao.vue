@@ -15,7 +15,7 @@ import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/Questao
 import { ItemEditavel } from '@/dominio/editor/comum/ItemEditavel';
 
 export default defineComponent({
-    name: 'FormularioEditor',
+    name: 'FormularioEdicao',
     setup() {
         const factory = inject<FormularioEditorFactory>(
             'formularioEditorFactory',
