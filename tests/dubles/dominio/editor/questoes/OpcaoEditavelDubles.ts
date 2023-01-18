@@ -8,13 +8,15 @@ import {
     IOpcaoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
-import { Titulo } from '@/dominio/comum/Titulo';
-import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { ITitulo, Titulo } from '@/dominio/comum/Titulo';
 import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
 import { TituloDummy } from '../../comum/TituloDubles';
 import { TextoModeloDummy } from '../../comum/TextoModeloDubles';
 
 export class OpcaoEditavelErroStub implements IOpcaoEditavel {
+    getCategorias(): ITitulo[] {
+        throw new Error('Method not implemented.');
+    }
     erros = {
         id: 'Erro ao atualizar o id',
         titulo: 'Erro ao atualizar o titulo',
@@ -128,6 +130,9 @@ export class OpcaoEditavelDummy implements IOpcaoEditavel {
     setIndice(): void {
         'dummy';
     }
+    getCategorias(): ITitulo[] {
+        throw new Error('Method not implemented.');
+    }
 }
 
 export class ListaDeOpcoesEditavelDummy
@@ -139,22 +144,22 @@ export class ListaDeOpcoesEditavelDummy
     getLength(): number {
         throw new Error('Method not implemented.');
     }
-    editarItem(itemSolicitado: IOpcaoEditavel): void {
+    editarItem(): void {
         throw new Error('Method not implemented.');
     }
-    subirItem(itemSolicitada: IOpcaoEditavel): void {
+    subirItem(): void {
         throw new Error('Method not implemented.');
     }
-    descerItem(itemSolicitada: IOpcaoEditavel): void {
+    descerItem(): void {
         throw new Error('Method not implemented.');
     }
-    excluirItem(itemSolicitada: IOpcaoEditavel): void {
+    excluirItem(): void {
         throw new Error('Method not implemented.');
     }
-    adicionarItem(item: IOpcaoEditavel): void {
+    adicionarItem(): void {
         throw new Error('Method not implemented.');
     }
-    obterItemPorIndice(indice: number): IOpcaoEditavel {
+    obterItemPorIndice(): IOpcaoEditavel {
         throw new Error('Method not implemented.');
     }
 }
