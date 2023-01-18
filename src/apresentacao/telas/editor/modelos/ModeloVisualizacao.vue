@@ -1,7 +1,7 @@
-<!-- <script lang="ts">
+<script lang="ts">
 import { defineComponent } from 'vue';
-import BotoesEdicao from '../../../../comum/BotoesEdicao.vue';
-import { ModeloEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/modelo/ModeloEditavel';
+import BotoesEdicao from '../comum/BotoesEdicao.vue';
+import { ModeloEditavel } from '@/dominio/editor/modelo/ModeloEditavel';
 
 export default defineComponent({
     name: 'ModeloVisualizacao',
@@ -69,4 +69,4 @@ input[type='radio'][disabled] {
     border-color: #000;
     background-color: #fff;
 }
-</style> -->
+</style>

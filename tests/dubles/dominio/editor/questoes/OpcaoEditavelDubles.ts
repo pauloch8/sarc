@@ -1,4 +1,4 @@
-import { IdFormulario } from '@/dominio/comum/IdFormulario';
+import { IdFormulario, IIdFormulario } from '@/dominio/comum/IdFormulario';
 import {
     IListaEditavel,
     ListaEditavel,
@@ -7,16 +7,17 @@ import {
     ErroNaEdicaoDaOpcao,
     IOpcaoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import {
+    ITextoEditavel,
+    TextoEditavel,
+} from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { ITitulo, Titulo } from '@/dominio/comum/Titulo';
 import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
 import { TituloDummy } from '../../comum/TituloDubles';
 import { TextoModeloDummy } from '../../comum/TextoModeloDubles';
+import { IVariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
 
 export class OpcaoEditavelErroStub implements IOpcaoEditavel {
-    getCategorias(): ITitulo[] {
-        throw new Error('Method not implemented.');
-    }
     erros = {
         id: 'Erro ao atualizar o id',
         titulo: 'Erro ao atualizar o titulo',
@@ -75,6 +76,11 @@ export class OpcaoEditavelErroStub implements IOpcaoEditavel {
     setIndice(): void {
         'dummy';
     }
+    getCategorias(): ITitulo[] {
+        throw new Error(
+            'Method OpcaoEditavelErroStub.getCategorias not implemented.',
+        );
+    }
 }
 
 export class OpcaoEditavelDummy implements IOpcaoEditavel {
@@ -131,35 +137,170 @@ export class OpcaoEditavelDummy implements IOpcaoEditavel {
         'dummy';
     }
     getCategorias(): ITitulo[] {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method OpcaoEditavelDummy.getCategorias not implemented.',
+        );
+    }
+}
+
+export class OpcaoEditavelGetCategoriaStub implements IOpcaoEditavel {
+    getCategorias(): ITitulo[] {
+        return [new TituloDummy()];
+    }
+    getTitulo(): ITitulo {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.getTitulo not implemented.',
+        );
+    }
+    setTitulo(titulo: ITitulo): void {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.setTitulo not implemented.',
+        );
+    }
+    getId(): IIdFormulario {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.getId not implemented.',
+        );
+    }
+    setId(id: IIdFormulario): void {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.setId not implemented.',
+        );
+    }
+    getTextos(): IListaEditavel<ITextoEditavel> {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.getTextos not implemented.',
+        );
+    }
+    setTextos(textos: IListaEditavel<ITextoEditavel>): void {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.setTextos not implemented.',
+        );
+    }
+    getVariaveis(): IListaEditavel<IVariavelEditavel> | undefined {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.getVariaveis not implemented.',
+        );
+    }
+    setVariaveis(variaveis: IListaEditavel<IVariavelEditavel>): void {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.setVariaveis not implemented.',
+        );
+    }
+
+    getEmEdicao(): boolean {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.getEmEdicao not implemented.',
+        );
+    }
+    editar(): void {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.editar not implemented.',
+        );
+    }
+    encerrarEdicao(): void {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.encerrarEdicao not implemented.',
+        );
+    }
+    getIndice(): number {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.getIndice not implemented.',
+        );
+    }
+    setIndice(indice: number): void {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.setIndice not implemented.',
+        );
+    }
+    toString(): string {
+        throw new Error(
+            'Method OpcaoEditavelGetCategoriaStub.toString not implemented.',
+        );
     }
 }
 
 export class ListaDeOpcoesEditavelDummy
     implements IListaEditavel<IOpcaoEditavel>
 {
+    itens = [new OpcaoEditavelGetCategoriaStub()];
     getItens(): IOpcaoEditavel[] {
-        throw new Error('Method not implemented.');
+        return this.itens;
     }
     getLength(): number {
-        throw new Error('Method not implemented.');
+        return this.itens.length;
     }
     editarItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.editarItem not implemented.',
+        );
     }
     subirItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.subirItem not implemented.',
+        );
     }
     descerItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.descerItem not implemented.',
+        );
     }
     excluirItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.excluirItem not implemented.',
+        );
     }
     adicionarItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.adicionarItem not implemented.',
+        );
     }
     obterItemPorIndice(): IOpcaoEditavel {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.obterItemPorIndice not implemented.',
+        );
+    }
+}
+
+export class ListaDeOpcoesEditavelGetCategoriaStub
+    implements IListaEditavel<IOpcaoEditavel>
+{
+    itens = [new OpcaoEditavelDummy()];
+
+    getItens(): IOpcaoEditavel[] {
+        return this.itens;
+    }
+    getLength(): number {
+        return this.itens.length;
+    }
+    editarItem(): void {
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.editarItem not implemented.',
+        );
+    }
+    subirItem(): void {
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.subirItem not implemented.',
+        );
+    }
+    descerItem(): void {
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.descerItem not implemented.',
+        );
+    }
+    excluirItem(): void {
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.excluirItem not implemented.',
+        );
+    }
+    adicionarItem(): void {
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.adicionarItem not implemented.',
+        );
+    }
+    obterItemPorIndice(): IOpcaoEditavel {
+        throw new Error(
+            'Method ListaDeOpcoesEditavelDummy.obterItemPorIndice not implemented.',
+        );
     }
 }

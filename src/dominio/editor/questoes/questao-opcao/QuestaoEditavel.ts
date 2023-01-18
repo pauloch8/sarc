@@ -9,6 +9,8 @@ import { IListaEditavel } from '../../comum/ListaEditavel';
 import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
 import { ISubtitulo } from '../../../comum/Subtitulo';
 import { ITitulo } from '../../../comum/Titulo';
+import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
+import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
 
 export interface IQuestaoEditavel extends IItemEditavel {
     getId(): IIdFormulario;
@@ -17,8 +19,9 @@ export interface IQuestaoEditavel extends IItemEditavel {
     setTitulo(titulo: ITitulo): void;
     getSubTitulo(): ISubtitulo | undefined;
     setSubtitulo(subtitulo?: ISubtitulo | undefined): void;
-    getOpcoes(): IListaEditavel<IOpcaoEditavel> | undefined;
-    setOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>): void;
+    getListaOpcoes(): IListaEditavel<IOpcaoEditavel> | undefined;
+    setListaOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>): void;
+    getEscapadores(): IEscapadorDeQuestao[];
 }
 
 export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
@@ -26,7 +29,8 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         private id: IIdFormulario,
         private titulo: ITitulo,
         indice: number,
-        private opcoes: IListaEditavel<IOpcaoEditavel>,
+        private listaOpcoes: IListaEditavel<IOpcaoEditavel>,
+        private escapadorFactory: IEscapadorDeQuestaoFactory,
         private subtitulo?: ISubtitulo,
     ) {
         super(indice);
@@ -39,8 +43,8 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
     private validar() {
         const contemId = !!this.id;
         const contemTitulo = !!this.titulo;
-        const contemOpcoes = !!this.opcoes;
-        const opcoesContemItens = !!this.opcoes.getLength();
+        const contemOpcoes = !!this.listaOpcoes;
+        const opcoesContemItens = !!this.listaOpcoes.getLength();
         const contemIndice = typeof this.getIndice() === 'number';
 
         const valido =
@@ -100,11 +104,11 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         this.subtitulo = subtitulo;
     }
 
-    getOpcoes() {
-        return this.opcoes;
+    getListaOpcoes() {
+        return this.listaOpcoes;
     }
 
-    setOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>) {
+    setListaOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>) {
         if (!opcoes) {
             throw new ErroNaEdicaoDaQuestao(
                 'Não foi informada lista de opções de questão',
@@ -115,7 +119,20 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
                 'Informada lista de opções de questão vazia',
             );
         }
-        this.opcoes = opcoes;
+        this.listaOpcoes = opcoes;
+    }
+
+    getEscapadores(): IEscapadorDeQuestao[] {
+        const categorias = this.listaOpcoes
+            .getItens()
+            .map(opcao => opcao.getCategorias());
+        const escapadores = categorias.map(categoria =>
+            this.escapadorFactory.criarDeTituloCategoria(
+                this.titulo,
+                categoria,
+            ),
+        );
+        return escapadores;
     }
 
     toString() {

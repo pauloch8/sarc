@@ -1,11 +1,25 @@
 import { EscapadorDeQuestao, IEscapadorDeQuestao } from './EscapadorDeQuestao';
 import { NomeDeEscapador } from '../nome/NomeDeEscapador';
+import { ITitulo } from '../../Titulo';
 
 export interface IEscapadorDeQuestaoFactory {
+    criarDeTituloCategoria(
+        titulo: ITitulo,
+        categoria: ITitulo,
+    ): IEscapadorDeQuestao;
     criarEscapadoresDeTexto(texto: string): IEscapadorDeQuestao[];
 }
 
 export class EscapadorDeQuestaoFactory implements IEscapadorDeQuestaoFactory {
+    criarDeTituloCategoria(
+        titulo: ITitulo,
+        categoria: ITitulo,
+    ): IEscapadorDeQuestao {
+        const nomeTitulo = new NomeDeEscapador(titulo.toString());
+        const nomeCategoria = new NomeDeEscapador(categoria.toString());
+        return new EscapadorDeQuestao(nomeTitulo, nomeCategoria);
+    }
+
     criarEscapadoresDeTexto(texto: string) {
         const patternNome = NomeDeEscapador.pattern;
 

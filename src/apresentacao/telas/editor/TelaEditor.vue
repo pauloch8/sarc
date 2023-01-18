@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import FormularioEditor from './FormularioEditor.vue';
+import FormularioEditor from './FormularioEdicao.vue';
 import { FormularioEditor as FormularioEditorModel } from '@/dominio/editor/FormularioEditor';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
@@ -11,6 +11,8 @@ import { Titulo } from '@/dominio/comum/Titulo';
 import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { TextoModelo } from '@/dominio/comum/TextoModelo';
 import { RemoveHtmlStringStrip } from '@/infrastrutura/portas/remove-html/RemoveHtmlStringStrip';
+import { ModeloEditavel } from '@/dominio/editor/modelo/ModeloEditavel';
+import { EscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
 
 export default defineComponent({
     name: 'TelaEditor',
@@ -68,6 +70,7 @@ export default defineComponent({
                             ]),
                         ),
                     ]),
+                    new EscapadorDeQuestaoFactory(),
                     new Subtitulo('questao1'),
                 ),
                 new QuestaoEditavel(
@@ -89,9 +92,11 @@ export default defineComponent({
                             ]),
                         ),
                     ]),
+                    new EscapadorDeQuestaoFactory(),
                     new Subtitulo('questao2'),
                 ),
             ]),
+            new ListaEditavel<ModeloEditavel>([]),
         );
         return {
             editor,

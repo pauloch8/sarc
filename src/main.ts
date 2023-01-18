@@ -35,6 +35,7 @@ import { VariavelEditavelFactory } from './dominio/editor/questoes/questao-opcao
 import { TipoVariavelRepositoryEmMemoria } from './infrastrutura/portas/memoria/TipoVariavelRepositoryEmMemoria';
 import { TipoVariavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelFactory';
 import { EscapadorDeVariavelFactory } from './dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
+import { ModeloEditavelFactory } from './dominio/editor/modelo/ModeloEditavelFactory';
 
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
@@ -45,7 +46,10 @@ const tituloFactory = new TituloFactory();
 const subtituloFactory = new SubtituloFactory();
 const idFormularioFactory = new IdFormularioFactory();
 const formularioEditorFactory = new FormularioEditorFactory();
-const questaoEditavelFactory = new QuestaoEditavelFactory();
+const escapadorDeQuestaoFactory = new EscapadorDeQuestaoFactory();
+const questaoEditavelFactory = new QuestaoEditavelFactory(
+    escapadorDeQuestaoFactory,
+);
 const opcaoEditavelFactory = new OpcaoEditavelFactory();
 const textoEditavelFactory = new TextoEditavelFactory();
 const removeHtml = new RemoveHtmlStringStrip();
@@ -58,6 +62,7 @@ const tipoVariavelFactory = new TipoVariavelFactory();
 const tipoVariavelRepository = new TipoVariavelRepositoryEmMemoria(
     tipoVariavelFactory,
 );
+const modeloEditavelFactory = new ModeloEditavelFactory();
 
 createApp(App)
     .use(router)
@@ -76,6 +81,8 @@ createApp(App)
     .provide('subtituloFactory', subtituloFactory)
     .provide('idFormularioFactory', idFormularioFactory)
     .provide('tipoVariavelRepository', tipoVariavelRepository)
+    .provide('modeloEditavelFactory', modeloEditavelFactory)
+    .provide('escapadorDeQuestaoFactory', escapadorDeQuestaoFactory)
     .mount('#app');
 
 function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {

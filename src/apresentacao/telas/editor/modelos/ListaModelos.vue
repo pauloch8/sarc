@@ -6,7 +6,7 @@ import ItemDeModelo from './ItemDeModelo.vue';
 import AdicionarModelo from './AdicionarModelo.vue';
 
 export default defineComponent({
-    name: 'ListaModelos',
+    name: 'ListaModelo',
     components: {
         ItemDeModelo,
         AdicionarModelo,
@@ -61,7 +61,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <h3>Modelos</h3>
+    <h3>Modelo</h3>
 
     <TransitionGroup name="modelos">
         <ItemDeModelo

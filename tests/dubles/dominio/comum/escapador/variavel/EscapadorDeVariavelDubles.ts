@@ -3,14 +3,16 @@ import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/Escapad
 
 export class EscapadorDeVariavelToStringStub implements IEscapadorDeVariavel {
     string = 'stub';
+
+    toString(): string {
+        return this.string;
+    }
+
     getNome(): NomeDeEscapador {
         throw new Error('Method getNome not implemented.');
     }
     compararNome(): boolean {
         throw new Error('Method compararNome not implemented.');
-    }
-    toString(): string {
-        return this.string;
     }
 }
 export class EscapadorDeVariavelDummy implements IEscapadorDeVariavel {

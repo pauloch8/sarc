@@ -171,11 +171,7 @@ describe('OpcaoEdicao', () => {
         });
         test('Quando a lista de variáveis é alterada, provê seus escapadores para outros componentes', () => {
             const opcaoEditavelFactory = new OpcaoEditavelFactoryDummy();
-            const opcao = new OpcaoEditavelDummy() as unknown as OpcaoEditavel;
-            const idFormulario = new IdFormularioDummy();
-            const titulo = new TituloDummy();
-            const textos = new ListaDeTextosEditavelGetLengthMaiorQueZeroStub();
-            const variaveis =
+            const listaVariaveis =
                 new ListaDeVariaveisEditavelRetornaItensComEscapadorStub();
 
             const sut = mount(OpcaoEdicaoVue, {
@@ -188,21 +184,15 @@ describe('OpcaoEdicao', () => {
                     ListaTextos: ListaTextosExibeEscapadoresVariaveisStub,
                     BotoesSalvarCancelar,
                 },
-                props: {
-                    opcao,
-                },
                 data() {
-                    const erro = '';
                     return {
-                        idFormulario,
-                        titulo,
-                        listaTextos: textos,
-                        listaVariaveis: variaveis,
-                        erro,
+                        listaVariaveis,
                     };
                 },
             });
-            expect(sut.text()).toContain(variaveis.itens[0].variavel.string);
+            expect(sut.text()).toContain(
+                listaVariaveis.itens[0].escapador.string,
+            );
         });
     });
 });

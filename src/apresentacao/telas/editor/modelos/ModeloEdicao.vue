@@ -1,21 +1,21 @@
-<!-- <script lang="ts">
+<script lang="ts">
 import { defineComponent, inject } from 'vue';
 import ListaDeEscapadores from './ListaDeEscapadores.vue';
-import IdFormularioFactory from '../../../../comum/IdFormularioFactory.vue';
-import TituloInput from '../../../../comum/TituloInput.vue';
-import ModeloModeloInput from '@/apresentacao/telas/editor/comum/ModeloModeloInput.vue';
-import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
+import IdFormularioFactory from '../comum/IdFormularioFactory.vue';
+import TituloInput from '../comum/TituloInput.vue';
+import BotoesSalvarCancelar from '../comum/BotoesSalvarCancelar.vue';
+import TextoModeloInput from '@/apresentacao/telas/editor/comum/TextoModeloInput.vue';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { Titulo } from '@/dominio/comum/Titulo';
-import { ModeloModelo } from '@/dominio/comum/ModeloModelo';
-import { InconsistenciasNaValidacaoDoModelo } from '@/dominio/editor/questoes/questao-opcao/opcao/modelo/ModeloEditavel';
-import { IModeloEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/modelo/ModeloEditavelFactory';
+import { TextoModelo } from '@/dominio/comum/TextoModelo';
+import { IModeloEditavelFactory } from '@/dominio/editor/modelo/ModeloEditavelFactory';
 import {
-    ErroNaEdicaoDoModelo,
     ModeloEditavel,
-} from '@/dominio/editor/questoes/questao-opcao/opcao/modelo/ModeloEditavel';
+    ErroNaEdicaoDoModelo,
+    InconsistenciasNaValidacaoDoModelo,
+} from '@/dominio/editor/modelo/ModeloEditavel';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
-import { IEscapadorDeVariavelFactory } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
+import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
 
 export default defineComponent({
     name: 'ModeloEdicao',
@@ -23,31 +23,37 @@ export default defineComponent({
         ListaDeEscapadores,
         IdFormularioFactory,
         TituloInput,
-        ModeloModeloInput,
+        TextoModeloInput,
         BotoesSalvarCancelar,
     },
     setup() {
+        // injeção modeloEditavelFactory
         const modeloEditavelFactory = inject<IModeloEditavelFactory>(
             'modeloEditavelFactory',
         );
         if (!modeloEditavelFactory) {
             throw new Error('Não injetada a dependência modeloEditavelFactory');
         }
-        const escapadorDeVariavelFactory = inject<IEscapadorDeVariavelFactory>(
-            'escapadorDeVariavelFactory',
+
+        // injeção escapadorDeVariavelFactory
+        const escapadorFactory = inject<IEscapadorDeQuestaoFactory>(
+            'escapadorDeQuestaoFactory',
         );
-        if (!escapadorDeVariavelFactory) {
+        if (!escapadorFactory) {
             throw new Error(
-                'Não injetada a dependência escapadorDeVariavelFactory',
+                'Não injetada a dependência escapadorDeQuestaoFactory',
             );
         }
-        const escapadoresVariaveis = inject<IEscapadorDeVariavel[]>(
+
+        // injeção escapadoresVariaveis
+        const escapadores = inject<IEscapadorDeVariavel[]>(
             'escapadoresVariaveis',
         );
+
         return {
             modeloEditavelFactory,
-            escapadorDeVariavelFactory,
-            escapadoresVariaveis,
+            escapadorFactory,
+            escapadores,
         };
     },
     props: {
@@ -57,14 +63,14 @@ export default defineComponent({
     data() {
         const id = this.modelo?.getId();
         const titulo = this.modelo?.getTitulo();
-        const modeloModelo = this.modelo?.getModeloModelo();
+        const textoModelo = this.modelo?.getTextoModelo();
         const erro = '';
         const inconsistencias: string[] = [];
         const escapadoresInexistentes: IEscapadorDeVariavel[] = [];
         return {
             id,
             titulo,
-            modeloModelo,
+            textoModelo,
             erro,
             inconsistencias,
             escapadoresInexistentes,
@@ -77,15 +83,15 @@ export default defineComponent({
         digitouTitulo(titulo: Titulo) {
             this.titulo = titulo;
         },
-        digitouModeloModelo(modeloModelo: ModeloModelo) {
-            const escapadoresEscritos =
-                this.escapadorDeVariavelFactory.criarEscapadoresDeModelo(
-                    modeloModelo.getModeloPlano(),
-                );
-            this.escapadoresInexistentes = escapadoresEscritos.filter(
-                escrito => !this.escapadoresVariaveis?.includes(escrito),
-            );
-            this.modeloModelo = modeloModelo;
+        digitouTextoModelo(textoModelo: TextoModelo) {
+            // const escapadoresEscritos =
+            //     this.escapadorFactory.criarEscapadoresDeModelo(
+            //         textoModelo.getTextoPlano(),
+            //     );
+            // this.escapadoresInexistentes = escapadoresEscritos.filter(
+            //     escrito => !this.escapadores?.includes(escrito),
+            // );
+            // this.textoModelo = textoModelo;
         },
         cancelar() {
             this.modelo?.encerrarEdicao();
@@ -105,7 +111,7 @@ export default defineComponent({
                 const modelo = this.modeloEditavelFactory.criar(
                     this.id as IdFormulario,
                     this.titulo as Titulo,
-                    this.modeloModelo as ModeloModelo,
+                    this.textoModelo as TextoModelo,
                     this.indice as number,
                 );
                 this.$emit('criou', modelo);
@@ -146,7 +152,7 @@ export default defineComponent({
             }
             //modelos
             try {
-                modelo.setModeloModelo(this.modeloModelo as ModeloModelo);
+                modelo.setTextoModelo(this.textoModelo as TextoModelo);
             } catch (e) {
                 if (e instanceof ErroNaEdicaoDoModelo) {
                     this.inconsistencias.push(e.message);
@@ -196,9 +202,10 @@ export default defineComponent({
         ></TituloInput>
 
         <ListaDeEscapadores
-            v-if="escapadoresVariaveis"
-            :escapadoresVariaveis="escapadoresVariaveis"
-        ></ListaDeEscapadores>
+            v-if="escapadores"
+            :escapadoresVariaveis="escapadores"
+        >
+        </ListaDeEscapadores>
 
         <article class="erro" v-if="escapadoresInexistentes.length">
             Foram escritos escapadores inexistentes:
@@ -212,10 +219,10 @@ export default defineComponent({
             </ul>
         </article>
 
-        <ModeloModeloInput
-            :modeloModelo="(modeloModelo as ModeloModelo)"
-            @digitou="digitouModeloModelo"
-        ></ModeloModeloInput>
+        <TextoModeloInput
+            :modeloModelo="(textoModelo as TextoModelo)"
+            @digitou="digitouTextoModelo"
+        ></TextoModeloInput>
 
         <article class="erro" v-if="erro">
             {{ erro }}
@@ -258,4 +265,4 @@ input[type='radio'][disabled] {
 .opcoes {
     margin-bottom: 30px;
 }
-</style> -->
+</style>

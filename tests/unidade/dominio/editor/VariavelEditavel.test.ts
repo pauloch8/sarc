@@ -18,8 +18,8 @@ import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/v
 import {
     EscapadorDeVariavelFactoryCriarDeIdFormularioRetornaToStringStub,
     EscapadorDeVariavelFactoryDummy,
-} from '@/tests/dubles/dominio/comum/escapador/EscapadorDeVariavelFactoryDubles';
-import { EscapadorDeVariavelToStringStub } from '@/tests/dubles/dominio/comum/escapador/EscapadorDeVariavelDubles';
+} from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelFactoryDubles';
+import { EscapadorDeVariavelToStringStub } from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelDubles';
 
 describe('VariavelEditavel', () => {
     test('valida o variavel na sua criação lança erro se houver inconsistencias', () => {

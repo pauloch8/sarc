@@ -19,8 +19,8 @@ import { TituloDummy } from '@/tests/dubles/dominio/comum/TituloDubles';
 import { TextoModeloDummy } from '@/tests/dubles/dominio/comum/TextoModeloDubles';
 import { SubtituloDummy } from '@/tests/dubles/dominio/comum/SubtituloDubles';
 import { ListaDeVariaveisEditavelDummy } from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelDubles';
-import { EscapadorDeVariavelFactoryDummy } from '@/tests/dubles/dominio/comum/escapador/EscapadorDeVariavelFactoryDubles';
-import { EscapadorDeVariavelFake } from '@/tests/dubles/dominio/comum/escapador/EscapadorDeVariavelDubles';
+import { EscapadorDeVariavelFactoryDummy } from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelFactoryDubles';
+import { EscapadorDeVariavelFake } from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelDubles';
 
 describe('TextoEdicao', () => {
     test('exibe uma lista dos escapadores de variáveis disponíveis', async () => {

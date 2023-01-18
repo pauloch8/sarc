@@ -1,10 +1,12 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
+import { computed } from '@vue/reactivity';
 import IdFormularioFactory from './comum/IdFormularioFactory.vue';
 import TituloInput from './comum/TituloInput.vue';
 import SubtituloInput from './comum/SubtituloInput.vue';
 import BotoesSalvarCancelar from './comum/BotoesSalvarCancelar.vue';
 import ListaQuestoes from './questoes/questao-opcao/ListaQuestoes.vue';
+import ListaModelos from './modelos/ListaModelos.vue';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { Subtitulo } from '@/dominio/comum/Subtitulo';
 import { Titulo } from '@/dominio/comum/Titulo';
@@ -13,6 +15,7 @@ import { FormularioEditorFactory } from '@/dominio/editor/FormularioEditorFactor
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
 import { ItemEditavel } from '@/dominio/editor/comum/ItemEditavel';
+import { ModeloEditavel } from '@/dominio/editor/modelo/ModeloEditavel';
 
 export default defineComponent({
     name: 'FormularioEdicao',
@@ -35,6 +38,7 @@ export default defineComponent({
         SubtituloInput,
         BotoesSalvarCancelar,
         ListaQuestoes,
+        ListaModelos,
     },
     props: {
         editor: {
@@ -50,12 +54,29 @@ export default defineComponent({
         const listaQuestoes =
             esteEditor?.getListaQuestoes() ||
             new ListaEditavel<QuestaoEditavel>();
+        const listaModelos =
+            esteEditor?.getListaModelos() ||
+            new ListaEditavel<ModeloEditavel>();
         return {
             esteEditor,
             id,
             titulo,
             subtitulo,
             listaQuestoes,
+            listaModelos,
+        };
+    },
+    provide() {
+        return {
+            escapadoresQuestoes: computed(() => {
+                const escapadores = this.listaQuestoes
+                    .getItens()
+                    .map(item => item.getEscapadores());
+                console.log({ escapadores });
+                if (escapadores.length) {
+                    return escapadores;
+                }
+            }),
         };
     },
     methods: {
@@ -124,6 +145,10 @@ export default defineComponent({
         <ListaQuestoes
             :lista="(listaQuestoes as unknown as ListaEditavel<ItemEditavel>)"
         ></ListaQuestoes>
+
+        <ListaModelos
+            :lista="(listaModelos as unknown as ListaEditavel<ModeloEditavel>)"
+        ></ListaModelos>
 
         <footer>
             <BotoesSalvarCancelar

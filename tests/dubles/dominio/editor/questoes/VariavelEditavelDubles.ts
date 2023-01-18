@@ -9,7 +9,7 @@ import { TipoVariavelIDDummy } from './TipoVariavelDubles';
 import { IListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
 import { ITipoVariavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavel';
-import { EscapadorDeVariavelToStringStub } from '../../comum/escapador/EscapadorDeVariavelDubles';
+import { EscapadorDeVariavelToStringStub } from '../../comum/escapador/variavel/EscapadorDeVariavelDubles';
 
 export class VariavelEditavelEditaComSucessoMock implements IVariavelEditavel {
     private id = new IdFormularioDummy();
@@ -178,28 +178,29 @@ export class ListaDeVariaveisEditavelDummy
 }
 
 class VariavelEditavelRetornaEscapadorStub implements IVariavelEditavel {
-    variavel = new EscapadorDeVariavelToStringStub();
+    escapador = new EscapadorDeVariavelToStringStub();
+
+    getEscapador(): EscapadorDeVariavelToStringStub {
+        return this.escapador;
+    }
 
     getId(): IIdFormulario {
         throw new Error('Method not implemented.');
     }
-    setId(id: IIdFormulario): void {
+    setId(): void {
         throw new Error('Method not implemented.');
     }
     getTitulo(): ITitulo {
         throw new Error('Method not implemented.');
     }
-    setTitulo(titulo: ITitulo): void {
+    setTitulo(): void {
         throw new Error('Method not implemented.');
     }
     getTipo(): ITipoVariavelID {
         throw new Error('Method not implemented.');
     }
-    setTipo(tipo: ITipoVariavel): void {
+    setTipo(): void {
         throw new Error('Method not implemented.');
-    }
-    getEscapador(): EscapadorDeVariavelToStringStub {
-        return this.variavel;
     }
     getEmEdicao(): boolean {
         throw new Error('Method not implemented.');
@@ -213,7 +214,7 @@ class VariavelEditavelRetornaEscapadorStub implements IVariavelEditavel {
     getIndice(): number {
         throw new Error('Method not implemented.');
     }
-    setIndice(indice: number): void {
+    setIndice(): void {
         throw new Error('Method not implemented.');
     }
     toString(): string {

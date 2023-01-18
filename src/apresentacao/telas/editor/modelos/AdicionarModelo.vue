@@ -1,5 +1,5 @@
-<!-- <script lang="ts">
-import { ModeloEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/modelo/ModeloEditavel';
+<script lang="ts">
+import { ModeloEditavel } from '@/dominio/editor/modelo/ModeloEditavel';
 import { defineComponent } from 'vue';
 import ModeloEdicao from './ModeloEdicao.vue';
 
@@ -57,4 +57,4 @@ export default defineComponent({
 footer {
     text-align: right;
 }
-</style> -->
+</style>

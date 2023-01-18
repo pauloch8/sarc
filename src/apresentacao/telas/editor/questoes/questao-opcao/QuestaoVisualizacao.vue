@@ -51,7 +51,7 @@ export default defineComponent({
         </header>
         <fieldset>
             <label
-                v-for="opcao in (questao.getOpcoes() as ListaEditavel<OpcaoEditavel>).getItens()"
+                v-for="opcao in (questao.getListaOpcoes() as ListaEditavel<OpcaoEditavel>).getItens()"
                 :key="opcao.getId().toString()"
             >
                 <input type="radio" disabled />

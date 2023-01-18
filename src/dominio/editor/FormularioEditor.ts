@@ -43,6 +43,9 @@ export class FormularioEditor implements IFormularioEditor {
     getListaQuestoes() {
         return this.listaQuestoes;
     }
+    getListaModelos() {
+        return this.listaModelos;
+    }
 }
 
 export class ErroTituloEhStringVazia extends Error {

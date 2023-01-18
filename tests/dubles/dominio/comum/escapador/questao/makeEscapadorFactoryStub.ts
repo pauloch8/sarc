@@ -6,6 +6,9 @@ export function makeEscapadorFactoryStub() {
         criarEscapadoresDeTexto(): IEscapadorDeQuestao[] {
             return [];
         },
+        criarDeTituloCategoria: function (): IEscapadorDeQuestao {
+            throw new Error('Function not implemented.');
+        },
     };
     return escapadorFactoryStub;
 }

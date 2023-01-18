@@ -1,5 +1,5 @@
 import { IOpcaoEditavel, OpcaoEditavel } from './OpcaoEditavel';
-import { IListaEditavel } from '../../ListaEditavel';
+import { IListaEditavel } from '../../../comum/ListaEditavel';
 import { ITitulo } from '../../../../comum/Titulo';
 import { IIdFormulario } from '../../../../comum/IdFormulario';
 import { ITextoEditavel } from './texto/TextoEditavel';

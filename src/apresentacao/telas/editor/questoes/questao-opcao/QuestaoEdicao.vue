@@ -48,7 +48,8 @@ export default defineComponent({
         const titulo = this.questao?.getTitulo();
         const subtitulo = this.questao?.getSubTitulo();
         const opcoes =
-            this.questao?.getOpcoes() || new ListaEditavel<OpcaoEditavel>();
+            this.questao?.getListaOpcoes() ||
+            new ListaEditavel<OpcaoEditavel>();
         const erro = '';
         const inconsistencias: string[] = [];
         return {
@@ -137,7 +138,7 @@ export default defineComponent({
                 }
                 //opcoes
                 try {
-                    this.questao.setOpcoes(
+                    this.questao.setListaOpcoes(
                         this.opcoes as ListaEditavel<OpcaoEditavel>,
                     );
                 } catch (e) {

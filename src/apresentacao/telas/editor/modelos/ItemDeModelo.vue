@@ -1,8 +1,8 @@
-<!-- <script lang="ts">
+<script lang="ts">
 import { defineComponent } from 'vue';
 import ModeloVisualizacao from './ModeloVisualizacao.vue';
 import ModeloEdicao from './ModeloEdicao.vue';
-import { ModeloEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/modelo/ModeloEditavel';
+import { ModeloEditavel } from '@/dominio/editor/modelo/ModeloEditavel';
 
 export default defineComponent({
     name: 'ItemDeModelo',
@@ -48,7 +48,8 @@ export default defineComponent({
             @descer="descer"
             @subir="subir"
             @selecionar="selecionar"
-        ></ModeloVisualizacao>
+        >
+        </ModeloVisualizacao>
 
         <ModeloEdicao
             v-if="modelo.getEmEdicao()"
@@ -61,4 +62,4 @@ export default defineComponent({
 footer {
     text-align: right;
 }
-</style> -->
+</style>
