@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
-import ListaDeEscapadores from './ListaDeEscapadores.vue';
+import ListaDeEscapadores from '../../../../comum/EscapadoresDisponiveis.vue';
 import IdFormularioFactory from '../../../../comum/IdFormularioFactory.vue';
 import TituloInput from '../../../../comum/TituloInput.vue';
 import TextoModeloInput from '@/apresentacao/telas/editor/comum/TextoModeloInput.vue';
@@ -203,7 +203,7 @@ export default defineComponent({
 
         <ListaDeEscapadores
             v-if="escapadores"
-            :escapadoresVariaveis="escapadores"
+            :escapadores="escapadores"
         ></ListaDeEscapadores>
 
         <article class="erro" v-if="escapadoresInexistentes.length">

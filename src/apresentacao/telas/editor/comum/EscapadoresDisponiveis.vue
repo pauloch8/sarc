@@ -1,13 +1,17 @@
 <script lang="ts">
-import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
+import { IEscapador } from '@/dominio/comum/escapador/Escapador';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    name: 'ListaDeEscapadores',
+    name: 'EscapadoresDisponiveis',
     props: {
-        escapadoresVariaveis: {
+        escapadores: {
             type: Array,
             required: true,
+        },
+        escapadoresUsados: {
+            type: Array,
+            required: false,
         },
     },
 });
@@ -15,10 +19,12 @@ export default defineComponent({
 
 <template>
     <article class="escapadoresDisponiveis">
-        Escapadores de variáveis disponíveis:
+        Escapadores disponíveis:
         <ul>
             <li
-                v-for="(escapador, indice) in escapadoresVariaveis as IEscapadorDeVariavel[]"
+                :class="{ usado: escapadoresUsados?.includes(escapador) }"
+                :aria-label="escapador.toString()"
+                v-for="(escapador, indice) in escapadores as IEscapador[]"
                 :key="indice"
             >
                 {{ escapador.toString() }}
