@@ -97,98 +97,118 @@ export class TextoEditavelErroStub implements ITextoEditavel {
 }
 
 export class TextoEditavelDummy implements ITextoEditavel {
+    private id = new IdFormularioDummy();
+    private categoria = new TituloDummy();
+    private textoModelo = new TextoModeloDummy();
     getId(): IIdFormulario {
-        throw new Error('Method not implemented.');
+        return this.id;
     }
     setId(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     getCategoria(): ITitulo {
-        throw new Error('Method not implemented.');
+        return this.categoria;
     }
     setCategoria(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     getTextoModelo(): ITextoModelo {
-        throw new Error('Method not implemented.');
+        return this.textoModelo;
     }
     setTextoModelo(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     getEmEdicao(): boolean {
-        throw new Error('Method not implemented.');
+        return true;
     }
     editar(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     encerrarEdicao(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     getIndice(): number {
-        throw new Error('Method not implemented.');
+        return 1;
     }
     setIndice(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     toString(): string {
-        throw new Error('Method not implemented.');
+        return 'dummy';
     }
 }
 
 export class ListaDeTextosEditavelDummy
     implements IListaEditavel<ITextoEditavel>
 {
+    private textoEditavel = new TextoEditavelDummy();
+    private itens = [this.textoEditavel];
+
     getItens(): ITextoEditavel[] {
-        throw new Error('Method not implemented.');
+        return this.itens;
     }
     getLength(): number {
-        throw new Error('Method not implemented.');
+        return this.itens.length;
     }
     editarItem(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     subirItem(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     descerItem(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     excluirItem(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     adicionarItem(): void {
-        throw new Error('Method not implemented.');
+        return;
     }
     obterItemPorIndice(): ITextoEditavel {
-        throw new Error('Method not implemented.');
+        return this.textoEditavel;
     }
 }
 export class ListaDeTextosEditavelGetLengthMaiorQueZeroStub
     implements IListaEditavel<ITextoEditavel>
 {
-    getItens(): ITextoEditavel[] {
-        throw new Error('Method not implemented.');
-    }
     getLength(): number {
         return 1;
     }
+    getItens(): ITextoEditavel[] {
+        throw new Error(
+            'Method ListaDeTextosEditavelGetLengthMaiorQueZeroStub.getItens not implemented.',
+        );
+    }
     editarItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetLengthMaiorQueZeroStub.editarItem not implemented.',
+        );
     }
     subirItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetLengthMaiorQueZeroStub.subirItem not implemented.',
+        );
     }
     descerItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetLengthMaiorQueZeroStub.descerItem not implemented.',
+        );
     }
     excluirItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetLengthMaiorQueZeroStub.excluirItem not implemented.',
+        );
     }
     adicionarItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetLengthMaiorQueZeroStub.adicionarItem not implemented.',
+        );
     }
     obterItemPorIndice(): ITextoEditavel {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetLengthMaiorQueZeroStub.obterItemPorIndice not implemented.',
+        );
     }
 }
 
@@ -200,37 +220,47 @@ export class TextoEditavelFake implements ITextoEditavel {
     }
 
     getId(): IIdFormulario {
-        throw new Error('Method not implemented.');
+        throw new Error('Method TextoEditavelFake.getId not implemented.');
     }
     setId(id?: IdFormulario | undefined): void {
-        throw new Error('Method not implemented.');
+        throw new Error('Method TextoEditavelFake.setId not implemented.');
     }
     getCategoria(): ITitulo {
         return this.categoriaFake;
     }
     setCategoria(titulo?: ITitulo | undefined): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method TextoEditavelFake.setCategoria not implemented.',
+        );
     }
     getTextoModelo(): ITextoModelo {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method TextoEditavelFake.getTextoModelo not implemented.',
+        );
     }
     setTextoModelo(textoModelo?: ITextoModelo | undefined): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method TextoEditavelFake.setTextoModelo not implemented.',
+        );
     }
     getEmEdicao(): boolean {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method TextoEditavelFake.getEmEdicao not implemented.',
+        );
     }
     editar(): void {
-        throw new Error('Method not implemented.');
+        throw new Error('Method TextoEditavelFake.editar not implemented.');
     }
     encerrarEdicao(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method TextoEditavelFake.encerrarEdicao not implemented.',
+        );
     }
     getIndice(): number {
-        throw new Error('Method not implemented.');
+        throw new Error('Method TextoEditavelFake.getIndice not implemented.');
     }
     setIndice(indice: number): void {
-        throw new Error('Method not implemented.');
+        throw new Error('Method TextoEditavelFake.setIndice not implemented.');
     }
     toString(): string {
         return this.valorFalso;
@@ -253,21 +283,33 @@ export class ListaDeTextosEditavelGetItensStub
         return this.textosFake.length;
     }
     editarItem(): void {
-        throw new Error('Method editarItem not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetItensStub.editarItem not implemented.',
+        );
     }
     subirItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetItensStub.subirItem not implemented.',
+        );
     }
     descerItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetItensStub.descerItem not implemented.',
+        );
     }
     excluirItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetItensStub.excluirItem not implemented.',
+        );
     }
     adicionarItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetItensStub.adicionarItem not implemented.',
+        );
     }
     obterItemPorIndice(): ITextoEditavel {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeTextosEditavelGetItensStub.obterItemPorIndice not implemented.',
+        );
     }
 }

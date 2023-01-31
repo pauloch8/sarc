@@ -6,10 +6,11 @@ import { IOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/o
 import { OpcaoEditavelDummy } from '@/tests/dubles/dominio/editor/questoes/OpcaoEditavelDubles';
 
 export class OpcaoEditavelFactoryDummy implements IOpcaoEditavelFactory {
-    criar(): OpcaoEditavel {
-        throw new Error('Dummy Error');
+    criar() {
+        return new OpcaoEditavelDummy();
     }
 }
+
 export class OpcaoEditavelFactoryErroOpcaoInvalidaStub
     implements IOpcaoEditavelFactory
 {

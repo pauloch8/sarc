@@ -1,12 +1,16 @@
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
 import { IEscapadorDeVariavelFactory } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
-import { EscapadorDeVariavelToStringStub } from './EscapadorDeVariavelDubles';
+import { IIdFormulario } from '@/dominio/comum/IdFormulario';
+import {
+    EscapadorDeVariavelDummy,
+    EscapadorDeVariavelToStringStub,
+} from './EscapadorDeVariavelDubles';
 
-export class EscapadorDeVariavelFactoryCriarDeIdFormularioRetornaToStringStub
+export class EscapadorDeVariavelFactoryRetornaToStringStub
     implements IEscapadorDeVariavelFactory
 {
     criarEscapadoresDeTexto(): IEscapadorDeVariavel[] {
-        throw new Error('Method criarEscapadoresDeTexto not implemented.');
+        return [new EscapadorDeVariavelToStringStub()];
     }
     criarDeIdFormulario(): EscapadorDeVariavelToStringStub {
         return new EscapadorDeVariavelToStringStub();
@@ -17,9 +21,27 @@ export class EscapadorDeVariavelFactoryDummy
     implements IEscapadorDeVariavelFactory
 {
     criarDeIdFormulario(): IEscapadorDeVariavel {
-        throw new Error('Method criarDeIdFormulario not implemented.');
+        return new EscapadorDeVariavelDummy();
     }
     criarEscapadoresDeTexto(): IEscapadorDeVariavel[] {
-        throw new Error('Method criarEscapadoresDeTexto not implemented.');
+        return [new EscapadorDeVariavelDummy()];
+    }
+}
+
+/**
+ * Stub que faz retornar os escapadores fake recebidos no seu construtor
+ */
+export class EscapadorDeVariavelFactoryCriarDeTextoRetornaFakeStub
+    implements IEscapadorDeVariavelFactory
+{
+    constructor(private escapadores: IEscapadorDeVariavel[]) {}
+
+    criarDeIdFormulario(id: IIdFormulario): IEscapadorDeVariavel {
+        throw new Error(
+            'Method EscapadorDeVariavelFactoryRetornaEscapadoresDeTextoFakeStub.criarDeIdFormulario not implemented.',
+        );
+    }
+    criarEscapadoresDeTexto(texto: string): IEscapadorDeVariavel[] {
+        return this.escapadores;
     }
 }

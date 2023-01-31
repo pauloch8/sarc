@@ -7,7 +7,7 @@ import { TextoEditavelDummy } from './TextoEditavelDubles';
 
 export class TextoEditavelFactoryDummy implements ITextoEditavelFactory {
     criar(): ITextoEditavel {
-        throw new Error('Method not implemented.');
+        return new TextoEditavelDummy();
     }
 }
 

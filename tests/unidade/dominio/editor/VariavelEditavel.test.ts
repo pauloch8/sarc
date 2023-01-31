@@ -16,7 +16,7 @@ import {
 import { TipoVariavelIDDummy } from '@/tests/dubles/dominio/editor/questoes/TipoVariavelDubles';
 import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
 import {
-    EscapadorDeVariavelFactoryCriarDeIdFormularioRetornaToStringStub,
+    EscapadorDeVariavelFactoryRetornaToStringStub,
     EscapadorDeVariavelFactoryDummy,
 } from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelFactoryDubles';
 import { EscapadorDeVariavelToStringStub } from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelDubles';
@@ -93,7 +93,7 @@ describe('VariavelEditavel', () => {
         const titulo = new TituloDummy();
         const tipo = new TipoVariavelIDDummy();
         const escapadorFactory =
-            new EscapadorDeVariavelFactoryCriarDeIdFormularioRetornaToStringStub();
+            new EscapadorDeVariavelFactoryRetornaToStringStub();
         const sut = new VariavelEditavel(id, titulo, tipo, 0, escapadorFactory);
         const escapador = sut.getEscapador() as EscapadorDeVariavelToStringStub;
         expect(escapador).toBeInstanceOf(EscapadorDeVariavelToStringStub);

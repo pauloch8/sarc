@@ -1,5 +1,23 @@
 import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 import { INomeDeEscapador } from '@/dominio/comum/escapador/nome/NomeDeEscapador';
+import { NomeDeEscapadorDummy } from './NomeDeEscapadorDubles';
+
+export class EscapadorDeQuestaoDummy implements IEscapadorDeQuestao {
+    private nome = new NomeDeEscapadorDummy();
+
+    getQuestaoId(): INomeDeEscapador {
+        return new NomeDeEscapadorDummy();
+    }
+    compararQuestao(questaoId: string | INomeDeEscapador): boolean {
+        return true;
+    }
+    compararCategoria(categoriaId: string | INomeDeEscapador): boolean {
+        return true;
+    }
+    toString(): string {
+        return 'dummy';
+    }
+}
 
 export class EscapadorDeQuestaoToStringStub implements IEscapadorDeQuestao {
     string = 'stub';
@@ -9,13 +27,19 @@ export class EscapadorDeQuestaoToStringStub implements IEscapadorDeQuestao {
     }
 
     getQuestaoId(): INomeDeEscapador {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method EscapadorDeQuestaoToStringStub.getQuestaoId not implemented.',
+        );
     }
     compararQuestao(): boolean {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method EscapadorDeQuestaoToStringStub.compararQuestao not implemented.',
+        );
     }
     compararCategoria(): boolean {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method EscapadorDeQuestaoToStringStub.compararCategoria not implemented.',
+        );
     }
 }
 

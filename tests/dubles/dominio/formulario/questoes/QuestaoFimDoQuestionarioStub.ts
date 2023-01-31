@@ -4,7 +4,9 @@ import { RespostaDeQuestao } from '@/dominio/formulario/respostas/Respostas';
 export class QuestaoFimDoQuestionarioStub extends Questao {
     irPara = 'fim do formulário';
     getResposta(): RespostaDeQuestao {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoFimDoQuestionarioStub.getResposta not implemented.',
+        );
     }
     semRamificacao = false;
 }

@@ -14,7 +14,9 @@ export class QuestaoComRamificacaoRespondidaStub extends Questao {
         return this._irPara;
     }
     getResposta(): RespostaDeQuestao {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoComRamificacaoRespondidaStub.getResposta not implemented.',
+        );
     }
     semRamificacao = false;
 }

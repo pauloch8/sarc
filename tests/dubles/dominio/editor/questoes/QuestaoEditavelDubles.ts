@@ -11,7 +11,10 @@ import { IIdFormulario } from '@/dominio/comum/IdFormulario';
 import { ISubtitulo } from '@/dominio/comum/Subtitulo';
 import { ITitulo } from '@/dominio/comum/Titulo';
 import { IOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
-import { EscapadorDeQuestaoToStringStub } from '../../comum/escapador/questao/EscapadorDeQuestaoDubles';
+import {
+    EscapadorDeQuestaoDummy,
+    EscapadorDeQuestaoToStringStub,
+} from '../../comum/escapador/questao/EscapadorDeQuestaoDubles';
 import { IListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 
 export class QuestaoEditavelErroStub implements IQuestaoEditavel {
@@ -37,7 +40,7 @@ export class QuestaoEditavelErroStub implements IQuestaoEditavel {
     setTitulo(): void {
         throw new ErroNaEdicaoDaQuestao(this.erros.titulo);
     }
-    getSubTitulo() {
+    getSubtitulo() {
         return this.subtitulo;
     }
     setSubtitulo(): void {
@@ -68,37 +71,41 @@ export class QuestaoEditavelErroStub implements IQuestaoEditavel {
         'dummy';
     }
     getEscapadores(): IEscapadorDeQuestao[] {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelErroStub.getEscapador not implemented.',
+        );
     }
 }
+
 export class QuestaoEditavelDummy implements IQuestaoEditavel {
     private id = new IdFormularioDummy();
     private titulo = new TituloDummy();
     private subtitulo = new SubtituloDummy();
     private opcoes = new ListaDeOpcoesEditavelDummy();
+    private escapadores = [new EscapadorDeQuestaoDummy()];
     getId() {
         return this.id;
     }
     setId(): void {
-        'dummy';
+        return;
     }
     getTitulo() {
         return this.titulo;
     }
     setTitulo(): void {
-        'dummy';
+        return;
     }
-    getSubTitulo() {
+    getSubtitulo() {
         return this.subtitulo;
     }
     setSubtitulo(): void {
-        'dummy';
+        return;
     }
     getListaOpcoes() {
         return this.opcoes;
     }
     setListaOpcoes(): void {
-        'dummy';
+        return;
     }
     toString(): string {
         return 'dummy';
@@ -107,19 +114,19 @@ export class QuestaoEditavelDummy implements IQuestaoEditavel {
         return true;
     }
     editar(): void {
-        'dummy';
+        return;
     }
     encerrarEdicao(): void {
-        'dummy';
+        return;
     }
     getIndice(): number {
         return 0;
     }
     setIndice(): void {
-        'dummy';
+        return;
     }
     getEscapadores(): IEscapadorDeQuestao[] {
-        throw new Error('Method not implemented.');
+        return this.escapadores;
     }
 }
 
@@ -131,46 +138,74 @@ export class QuestaoEditavelRetornaEscapadorStub implements IQuestaoEditavel {
     }
 
     getId(): IIdFormulario {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.getId not implemented.',
+        );
     }
     setId(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.setId not implemented.',
+        );
     }
     getTitulo(): ITitulo {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.getTitulo not implemented.',
+        );
     }
     setTitulo(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.setTitulo not implemented.',
+        );
     }
-    getSubTitulo(): ISubtitulo | undefined {
-        throw new Error('Method not implemented.');
+    getSubtitulo(): ISubtitulo | undefined {
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.getSubtitulo not implemented.',
+        );
     }
     setSubtitulo(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.setSubtitulo not implemented.',
+        );
     }
     getListaOpcoes(): IListaEditavel<IOpcaoEditavel> | undefined {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.getListaOpcoes not implemented.',
+        );
     }
     setListaOpcoes(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.setListaOpcoes not implemented.',
+        );
     }
     getEmEdicao(): boolean {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.getEmEdicao not implemented.',
+        );
     }
     editar(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.editar not implemented.',
+        );
     }
     encerrarEdicao(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.encerrarEdicao not implemented.',
+        );
     }
     getIndice(): number {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.getIndice not implemented.',
+        );
     }
     setIndice(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.setIndice not implemented.',
+        );
     }
     toString(): string {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method QuestaoEditavelRetornaEscapadorStub.toString not implemented.',
+        );
     }
 }
 
@@ -183,69 +218,70 @@ export class ListaDeQuestoesRetornaItensComEscapadorStub
         return this.itens;
     }
     getLength(): number {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeQuestoesRetornaItensComEscapadorStub.getLength not implemented.',
+        );
     }
     editarItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeQuestoesRetornaItensComEscapadorStub.editarItem not implemented.',
+        );
     }
     subirItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeQuestoesRetornaItensComEscapadorStub.subirItem not implemented.',
+        );
     }
     descerItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeQuestoesRetornaItensComEscapadorStub.descerItem not implemented.',
+        );
     }
     excluirItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeQuestoesRetornaItensComEscapadorStub.excluiritem not implemented.',
+        );
     }
     adicionarItem(): void {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeQuestoesRetornaItensComEscapadorStub.adicionarItem not implemented.',
+        );
     }
     obterItemPorIndice(): IQuestaoEditavel {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method ListaDeQuestoesRetornaItensComEscapadorStub.obterItemPorIndice not implemented.',
+        );
     }
 }
 
 export class ListaDeQuestoesEditavelDummy
     implements IListaEditavel<IQuestaoEditavel>
 {
+    private item = new QuestaoEditavelDummy();
+    private itens = [this.item];
+
     getItens(): IQuestaoEditavel[] {
-        throw new Error(
-            'Method ListaDeQuestoesEditavelDummy.getItens not implemented.',
-        );
+        return this.itens;
     }
     getLength(): number {
-        throw new Error(
-            'Method ListaDeQuestoesEditavelDummy.getLength not implemented.',
-        );
+        return this.itens.length;
     }
     editarItem(): void {
-        throw new Error(
-            'Method ListaDeQuestoesEditavelDummy.editarItem not implemented.',
-        );
+        return;
     }
     subirItem(): void {
-        throw new Error(
-            'Method ListaDeQuestoesEditavelDummy.subirItem not implemented.',
-        );
+        return;
     }
     descerItem(): void {
-        throw new Error(
-            'Method ListaDeQuestoesEditavelDummy.descerItem not implemented.',
-        );
+        return;
     }
     excluirItem(): void {
-        throw new Error(
-            'Method ListaDeQuestoesEditavelDummy.excluirItem not implemented.',
-        );
+        return;
     }
     adicionarItem(): void {
-        throw new Error(
-            'Method ListaDeQuestoesEditavelDummy.adicionarItem not implemented.',
-        );
+        return;
     }
     obterItemPorIndice(): IQuestaoEditavel {
-        throw new Error(
-            'Method ListaDeQuestoesEditavelDummy.obterItemPorIndice not implemented.',
-        );
+        return this.item;
     }
 }

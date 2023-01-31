@@ -223,7 +223,8 @@ export class OpcaoEditavelGetCategoriaStub implements IOpcaoEditavel {
 export class ListaDeOpcoesEditavelDummy
     implements IListaEditavel<IOpcaoEditavel>
 {
-    itens = [new OpcaoEditavelGetCategoriaStub()];
+    item = new OpcaoEditavelGetCategoriaStub();
+    itens = [this.item];
     getItens(): IOpcaoEditavel[] {
         return this.itens;
     }
@@ -231,34 +232,22 @@ export class ListaDeOpcoesEditavelDummy
         return this.itens.length;
     }
     editarItem(): void {
-        throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.editarItem not implemented.',
-        );
+        return;
     }
     subirItem(): void {
-        throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.subirItem not implemented.',
-        );
+        return;
     }
     descerItem(): void {
-        throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.descerItem not implemented.',
-        );
+        return;
     }
     excluirItem(): void {
-        throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.excluirItem not implemented.',
-        );
+        return;
     }
     adicionarItem(): void {
-        throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.adicionarItem not implemented.',
-        );
+        return;
     }
     obterItemPorIndice(): IOpcaoEditavel {
-        throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.obterItemPorIndice not implemented.',
-        );
+        return this.item;
     }
 }
 
@@ -275,32 +264,32 @@ export class ListaDeOpcoesEditavelGetCategoriaStub
     }
     editarItem(): void {
         throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.editarItem not implemented.',
+            'Method ListaDeOpcoesEditavelGetCategoriaStub.editarItem not implemented.',
         );
     }
     subirItem(): void {
         throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.subirItem not implemented.',
+            'Method ListaDeOpcoesEditavelGetCategoriaStub.subirItem not implemented.',
         );
     }
     descerItem(): void {
         throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.descerItem not implemented.',
+            'Method ListaDeOpcoesEditavelGetCategoriaStub.descerItem not implemented.',
         );
     }
     excluirItem(): void {
         throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.excluirItem not implemented.',
+            'Method ListaDeOpcoesEditavelGetCategoriaStub.excluirItem not implemented.',
         );
     }
     adicionarItem(): void {
         throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.adicionarItem not implemented.',
+            'Method ListaDeOpcoesEditavelGetCategoriaStub.adicionarItem not implemented.',
         );
     }
     obterItemPorIndice(): IOpcaoEditavel {
         throw new Error(
-            'Method ListaDeOpcoesEditavelDummy.obterItemPorIndice not implemented.',
+            'Method ListaDeOpcoesEditavelGetCategoriaStub.obterItemPorIndice not implemented.',
         );
     }
 }

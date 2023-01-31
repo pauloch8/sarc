@@ -5,7 +5,7 @@ import { VariavelEditavelDummy } from './VariavelEditavelDubles';
 
 export class VariavelEditavelFactoryDummy implements IVariavelEditavelFactory {
     criar(): IVariavelEditavel {
-        throw new Error('Method not implemented.');
+        return new VariavelEditavelDummy();
     }
 }
 

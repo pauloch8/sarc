@@ -1,5 +1,7 @@
 import { NomeDeEscapador } from '@/dominio/comum/escapador/nome/NomeDeEscapador';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
+import { objetoDeValor } from '@/dominio/comum/ObjetoDeValor';
+import { NomeDeEscapadorDummy } from '../questao/NomeDeEscapadorDubles';
 
 export class EscapadorDeVariavelToStringStub implements IEscapadorDeVariavel {
     string = 'stub';
@@ -16,14 +18,14 @@ export class EscapadorDeVariavelToStringStub implements IEscapadorDeVariavel {
     }
 }
 export class EscapadorDeVariavelDummy implements IEscapadorDeVariavel {
-    getNome(): NomeDeEscapador {
-        throw new Error('Method getNome not implemented.');
+    getNome() {
+        return new NomeDeEscapadorDummy();
     }
     compararNome(): boolean {
-        throw new Error('Method compararNome not implemented.');
+        return true;
     }
     toString(): string {
-        throw new Error('Method toString not implemented.');
+        return 'dummy';
     }
 }
 
@@ -39,4 +41,14 @@ export class EscapadorDeVariavelFake implements IEscapadorDeVariavel {
     toString(): string {
         return this.valor;
     }
+}
+
+/**
+ * Factory function que retorna Escapadores de Variáveis Fake
+ */
+export function criarEscapadoresDeVariavelFake(escapadoresStr: string[]) {
+    const escapadores = escapadoresStr.map(
+        escapador => new EscapadorDeVariavelFake(escapador),
+    );
+    return escapadores;
 }

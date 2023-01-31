@@ -1,10 +1,10 @@
 import { Titulo } from '@/dominio/comum/Titulo';
 import { ITituloFactory } from '@/dominio/comum/TituloFactory';
-import { ErroDeCriacaoDeTituloFake } from './TituloDubles';
+import { ErroDeCriacaoDeTituloFake, TituloDummy } from './TituloDubles';
 
 export class TituloFactoryDummy implements ITituloFactory {
-    criar(): Titulo {
-        throw new Error('Method not implemented.');
+    criar() {
+        return new TituloDummy();
     }
 }
 

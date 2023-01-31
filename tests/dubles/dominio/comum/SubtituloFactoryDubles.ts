@@ -3,10 +3,11 @@ import {
     ErroDeCriacaoDeSubtitulo,
     ISubtituloFactory,
 } from '@/dominio/comum/SubtituloFactory';
+import { SubtituloDummy } from './SubtituloDubles';
 
 export class SubtituloFactoryDummy implements ISubtituloFactory {
-    criar(): Subtitulo {
-        throw new Error('Method not implemented.');
+    criar() {
+        return new SubtituloDummy();
     }
 }
 

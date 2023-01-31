@@ -1,12 +1,13 @@
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { IIdFormularioFactory } from '@/dominio/comum/IdFormularioFactory';
+import { IdFormularioDummy } from './IdFormularioDubles';
 
 export class IdFormularioFactoryDummy implements IIdFormularioFactory {
-    criarDeString(): IdFormulario {
-        throw new Error('Method not implemented.');
+    criarDeString() {
+        return new IdFormularioDummy();
     }
-    criarDeTitulo(): IdFormulario {
-        throw new Error('Method not implemented.');
+    criarDeTitulo() {
+        return new IdFormularioDummy();
     }
 }
 

@@ -1,6 +1,5 @@
-import { mount } from '@vue/test-utils';
+import { mount, shallowMount } from '@vue/test-utils';
 import TextoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/opcao/texto/TextoEdicao.vue';
-import ListaDeEscapadores from '@/apresentacao/telas/editor/comum/EscapadoresDisponiveis.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
 import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import {
@@ -19,11 +18,17 @@ import { TituloDummy } from '@/tests/dubles/dominio/comum/TituloDubles';
 import { TextoModeloDummy } from '@/tests/dubles/dominio/comum/TextoModeloDubles';
 import { SubtituloDummy } from '@/tests/dubles/dominio/comum/SubtituloDubles';
 import { ListaDeVariaveisEditavelDummy } from '@/tests/dubles/dominio/editor/questoes/VariavelEditavelDubles';
-import { EscapadorDeVariavelFactoryDummy } from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelFactoryDubles';
-import { EscapadorDeVariavelFake } from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelDubles';
+import {
+    EscapadorDeVariavelFactoryDummy,
+    EscapadorDeVariavelFactoryCriarDeTextoRetornaFakeStub,
+} from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelFactoryDubles';
+import {
+    criarEscapadoresDeVariavelFake,
+    EscapadorDeVariavelFake,
+} from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelDubles';
 
 describe('TextoEdicao', () => {
-    test('exibe uma lista dos escapadores de variáveis disponíveis', async () => {
+    test('exibe uma lista dos escapadores de variáveis se existir', () => {
         const textoEditavelFactory = new TextoEditavelFactoryDummy();
         const escapadorDeVariavelFactory =
             new EscapadorDeVariavelFactoryDummy();
@@ -31,6 +36,7 @@ describe('TextoEdicao', () => {
             new EscapadorDeVariavelFake('${escapador1}'),
             new EscapadorDeVariavelFake('${escapador2}'),
         ];
+        const ListaDeEscapadores = {};
         const sut = mount(TextoEdicaoVue, {
             global: {
                 provide: {
@@ -41,25 +47,16 @@ describe('TextoEdicao', () => {
             },
             components: {
                 ListaDeEscapadores,
-                IdFormularioFactory: {},
-                TituloInput: {},
-                TextoModeloInput: {},
-                BotoesSalvarCancelar,
             },
         });
-        expect(sut.find('.escapadoresDisponiveis').text()).toContain(
-            '${escapador1}',
-        );
-        expect(sut.find('.escapadoresDisponiveis').text()).toContain(
-            '${escapador2}',
-        );
+        expect(sut.findComponent(ListaDeEscapadores).exists()).toBeTruthy();
     });
-    test('exibe uma lista dos escapadores inexistentes escritos no texto', async () => {
+    test('não exibe uma lista dos escapadores de variáveis se não existir', () => {
         const textoEditavelFactory = new TextoEditavelFactoryDummy();
         const escapadorDeVariavelFactory =
             new EscapadorDeVariavelFactoryDummy();
-        const texto =
-            new TextoEditavelEditaComSucessoMock() as unknown as TextoEditavel;
+        const ListaDeEscapadores = {};
+
         const sut = mount(TextoEdicaoVue, {
             global: {
                 provide: {
@@ -68,13 +65,26 @@ describe('TextoEdicao', () => {
                 },
             },
             components: {
-                IdFormularioFactory: {},
-                TituloInput: {},
-                TextoModeloInput: {},
+                ListaDeEscapadores,
+            },
+        });
+        expect(sut.findComponent(ListaDeEscapadores).exists()).toBeFalsy();
+    });
+    test('se não possui texto modelo retorna uma array vazia', () => {
+        const textoEditavelFactory = new TextoEditavelFactoryDummy();
+        const escapadorDeVariavelFactory =
+            new EscapadorDeVariavelFactoryDummy();
+        const sut = shallowMount(TextoEdicaoVue, {
+            global: {
+                provide: {
+                    textoEditavelFactory,
+                    escapadorDeVariavelFactory,
+                },
+            },
+            components: {
                 BotoesSalvarCancelar,
             },
             props: {
-                texto,
                 indice: 0,
             },
             data() {
@@ -82,21 +92,64 @@ describe('TextoEdicao', () => {
                     idFormulario: new IdFormularioDummy(),
                     titulo: new TituloDummy(),
                     subtitulo: new SubtituloDummy(),
+                    textoModelo: undefined,
                     erro: '',
                 };
             },
         });
-        await sut.find('.botaoSalvar').trigger('click');
-        expect(sut.find('.erro').exists()).toBeFalsy();
-        expect(sut.emitted()).toHaveProperty('atualizou');
-        expect(sut.emitted('atualizou')).toHaveLength(1);
-        const evento = sut.emitted('atualizou');
-        if (!evento) {
-            throw new Error('array de eventos não contém objeto');
-        }
-        const argumento = evento[0] as any;
-        const retorno = argumento[0] as TextoEditavel;
-        expect(retorno).toBeInstanceOf(TextoEditavelEditaComSucessoMock);
+        expect(sut.vm.escapadoresUsados).toHaveLength(0);
+    });
+    test('calcula os escapadores inexistentes escritos', () => {
+        const textoEditavelFactory = new TextoEditavelFactoryDummy();
+        const escapadoresExistentes = criarEscapadoresDeVariavelFake([
+            'escapador1',
+            'escapador2',
+        ]);
+        const escapadoresInexistentes = criarEscapadoresDeVariavelFake([
+            'escapador3',
+            'escapador4',
+        ]);
+        const escapadorDeVariavelFactory =
+            new EscapadorDeVariavelFactoryCriarDeTextoRetornaFakeStub([
+                ...escapadoresExistentes,
+                ...escapadoresInexistentes,
+            ]);
+        const sut = shallowMount(TextoEdicaoVue, {
+            global: {
+                provide: {
+                    textoEditavelFactory,
+                    escapadorDeVariavelFactory,
+                    escapadoresVariaveis: escapadoresExistentes,
+                },
+            },
+            components: {
+                BotoesSalvarCancelar,
+            },
+            props: {
+                indice: 0,
+            },
+            data() {
+                return {
+                    idFormulario: new IdFormularioDummy(),
+                    titulo: new TituloDummy(),
+                    subtitulo: new SubtituloDummy(),
+                    textoModelo: new TextoModeloDummy(),
+                    erro: '',
+                };
+            },
+        });
+        expect(sut.vm.escapadoresInexistentes).not.toContain(
+            escapadoresExistentes[0],
+        );
+        expect(sut.vm.escapadoresInexistentes).not.toContain(
+            escapadoresExistentes[1],
+        );
+        expect(sut.vm.escapadoresInexistentes).toContain(
+            escapadoresInexistentes[0],
+        );
+        expect(sut.vm.escapadoresInexistentes).toContain(
+            escapadoresInexistentes[1],
+        );
     });
     describe('ao criar um novo TextoEdicao', () => {
         test('exibe erro e lista de inconsistências se for lançado erro de validação', async () => {
@@ -189,7 +242,6 @@ describe('TextoEdicao', () => {
                 },
             });
             await sut.find('.botaoSalvar').trigger('click');
-            expect(sut.find('.erro').exists()).toBeFalsy();
             expect(sut.emitted()).toHaveProperty('criou');
             expect(sut.emitted('criou')).toHaveLength(1);
             const evento = sut.emitted('criou') as unknown[][];
@@ -223,10 +275,14 @@ describe('TextoEdicao', () => {
                 },
             });
             await sut.find('.botaoSalvar').trigger('click');
-            expect(sut.find('.erro').exists()).toBeTruthy();
-            expect(sut.find('.erro').text()).toContain('id');
-            expect(sut.find('.erro').text()).toContain('titulo');
-            expect(sut.find('.erro').text()).toContain('texto-modelo');
+            expect(sut.find('.erro.inconsistencias').exists()).toBeTruthy();
+            expect(sut.find('.erro.inconsistencias').text()).toContain('id');
+            expect(sut.find('.erro.inconsistencias').text()).toContain(
+                'titulo',
+            );
+            expect(sut.find('.erro.inconsistencias').text()).toContain(
+                'texto-modelo',
+            );
         });
         test('emite um evento "atualizou" com um objeto', async () => {
             const textoEditavelFactory = new TextoEditavelFactoryDummy();
@@ -261,13 +317,9 @@ describe('TextoEdicao', () => {
                 },
             });
             await sut.find('.botaoSalvar').trigger('click');
-            expect(sut.find('.erro').exists()).toBeFalsy();
             expect(sut.emitted()).toHaveProperty('atualizou');
             expect(sut.emitted('atualizou')).toHaveLength(1);
-            const evento = sut.emitted('atualizou');
-            if (!evento) {
-                throw new Error('array de eventos não contém objeto');
-            }
+            const evento = sut.emitted('atualizou') as unknown[][];
             const argumento = evento[0] as any;
             const retorno = argumento[0] as TextoEditavel;
             expect(retorno).toBeInstanceOf(TextoEditavelEditaComSucessoMock);

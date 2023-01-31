@@ -3,7 +3,7 @@ import { ErroDeCriacaoDeTitulo, ITitulo } from '@/dominio/comum/Titulo';
 export class TituloDummy implements ITitulo {}
 
 export class TituloToStringStub implements ITitulo {
-    valor = 'titulo';
+    valor = 'dummy';
     toString() {
         return this.valor;
     }

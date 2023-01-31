@@ -8,7 +8,7 @@ import { QuestaoEditavelDummy } from './QuestaoEditavelDubles';
 
 export class QuestaoEditavelFactoryDummy implements IQuestaoEditavelFactory {
     criar(): IQuestaoEditavel {
-        throw new Error('Dummy Error');
+        return new QuestaoEditavelDummy();
     }
 }
 

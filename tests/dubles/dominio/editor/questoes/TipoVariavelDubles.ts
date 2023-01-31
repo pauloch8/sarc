@@ -2,7 +2,7 @@ import { ITitulo } from '@/dominio/comum/Titulo';
 import { ITipoVariavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavel';
 import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
 import { TipoVariavelRepository } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelRepository';
-import { TituloFake } from '../../comum/TituloDubles';
+import { TituloDummy, TituloFake } from '../../comum/TituloDubles';
 
 export class TipoVariavelIDDummy implements ITipoVariavelID {}
 
@@ -14,11 +14,14 @@ export class TipoVariavelIDFake implements ITipoVariavelID {
 }
 
 export class TipoVariavelDummy implements ITipoVariavel {
+    private id = new TipoVariavelIDDummy();
+    private titulo = new TituloDummy();
+
     getId(): ITipoVariavelID {
-        throw new Error('Method not implemented.');
+        return this.id;
     }
     getTitulo(): ITitulo {
-        throw new Error('Method not implemented.');
+        return this.titulo;
     }
 }
 
