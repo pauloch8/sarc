@@ -1,8 +1,5 @@
-import { Subtitulo } from '@/dominio/comum/Subtitulo';
-import {
-    ErroDeCriacaoDeSubtitulo,
-    ISubtituloFactory,
-} from '@/dominio/comum/SubtituloFactory';
+import { Subtitulo, ErroDeCriacaoDeSubtitulo } from '@/dominio/comum/Subtitulo';
+import { ISubtituloFactory } from '@/dominio/comum/SubtituloFactory';
 import { SubtituloDummy } from './SubtituloDubles';
 
 export class SubtituloFactoryDummy implements ISubtituloFactory {
