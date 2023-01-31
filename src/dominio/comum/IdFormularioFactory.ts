@@ -1,17 +1,17 @@
-import { IdFormulario } from './IdFormulario';
+import { IdFormulario, IIdFormulario } from './IdFormulario';
 import { Titulo } from './Titulo';
 import accents from 'remove-accents';
 
 export interface IIdFormularioFactory {
-    criarDeString(texto: string): IdFormulario;
-    criarDeTitulo(titulo: Titulo): IdFormulario;
+    criarDeString(texto: string): IIdFormulario;
+    criarDeTitulo(titulo: Titulo): IIdFormulario;
 }
 
 export class IdFormularioFactory implements IIdFormularioFactory {
-    criarDeString(idString: string): IdFormulario {
+    criarDeString(idString: string) {
         return new IdFormulario(idString);
     }
-    criarDeTitulo(titulo: Titulo): IdFormulario {
+    criarDeTitulo(titulo: Titulo) {
         const tituloStr = titulo.toString();
         const id = accents
             .remove(tituloStr.toLowerCase().replaceAll(' ', '_'))
