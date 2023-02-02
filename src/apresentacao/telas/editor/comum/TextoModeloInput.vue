@@ -62,7 +62,7 @@ export default defineComponent({
             :editor="ClassicEditor"
             :config="{}"
             v-model="textoModeloString"
-            @blur="digitou"
+            @input="digitou"
         ></ckeditor>
         <article class="erro" v-if="erroString">{{ erroString }}</article>
     </label>
