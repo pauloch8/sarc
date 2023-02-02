@@ -35,10 +35,13 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 article * {
-    color: #d8ebff;
-    background-color: #004589;
+    background-color: #89c4ff;
 }
 ul {
     margin: 0;
+}
+.usado {
+    color: #004589;
+    font-weight: bolder;
 }
 </style>
