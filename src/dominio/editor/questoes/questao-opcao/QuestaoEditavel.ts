@@ -17,7 +17,7 @@ export interface IQuestaoEditavel extends IItemEditavel {
     setId(id: IIdFormulario): void;
     getTitulo(): ITitulo;
     setTitulo(titulo: ITitulo): void;
-    getSubTitulo(): ISubtitulo | undefined;
+    getSubtitulo(): ISubtitulo | undefined;
     setSubtitulo(subtitulo?: ISubtitulo | undefined): void;
     getListaOpcoes(): IListaEditavel<IOpcaoEditavel> | undefined;
     setListaOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>): void;
@@ -96,7 +96,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         this.titulo = titulo;
     }
 
-    getSubTitulo() {
+    getSubtitulo() {
         return this.subtitulo;
     }
 

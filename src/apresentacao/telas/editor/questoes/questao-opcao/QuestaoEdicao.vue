@@ -46,7 +46,7 @@ export default defineComponent({
     data() {
         const idFormulario = this.questao?.getId();
         const titulo = this.questao?.getTitulo();
-        const subtitulo = this.questao?.getSubTitulo();
+        const subtitulo = this.questao?.getSubtitulo();
         const opcoes =
             this.questao?.getListaOpcoes() ||
             new ListaEditavel<OpcaoEditavel>();

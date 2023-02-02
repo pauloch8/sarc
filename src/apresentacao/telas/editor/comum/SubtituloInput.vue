@@ -1,9 +1,6 @@
 <script lang="ts">
-import { Subtitulo } from '@/dominio/comum/Subtitulo';
-import {
-    ISubtituloFactory,
-    ErroDeCriacaoDeSubtitulo,
-} from '@/dominio/comum/SubtituloFactory';
+import { Subtitulo, ErroDeCriacaoDeSubtitulo } from '@/dominio/comum/Subtitulo';
+import { ISubtituloFactory } from '@/dominio/comum/SubtituloFactory';
 import { defineComponent, inject } from 'vue';
 
 export default defineComponent({

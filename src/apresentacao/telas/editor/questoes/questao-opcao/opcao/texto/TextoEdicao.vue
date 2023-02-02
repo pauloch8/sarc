@@ -15,7 +15,6 @@ import {
     InconsistenciasNaValidacaoDoTexto,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
-import { IEscapadorDeVariavelFactory } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
 
 export default defineComponent({
     name: 'TextoEdicao',
@@ -35,16 +34,6 @@ export default defineComponent({
             throw new Error('Não injetada a dependência textoEditavelFactory');
         }
 
-        // injeção escapadorDeVariavelFactory
-        const escapadorFactory = inject<IEscapadorDeVariavelFactory>(
-            'escapadorDeVariavelFactory',
-        );
-        if (!escapadorFactory) {
-            throw new Error(
-                'Não injetada a dependência escapadorDeVariavelFactory',
-            );
-        }
-
         // injeção escapadoresVariaveis
         const escapadores = inject<IEscapadorDeVariavel[]>(
             'escapadoresVariaveis',
@@ -52,7 +41,6 @@ export default defineComponent({
 
         return {
             textoEditavelFactory,
-            escapadorFactory,
             escapadores,
         };
     },
@@ -66,15 +54,28 @@ export default defineComponent({
         const textoModelo = this.texto?.getTextoModelo();
         const erro = '';
         const inconsistencias: string[] = [];
-        const escapadoresInexistentes: IEscapadorDeVariavel[] = [];
         return {
             id,
             titulo,
             textoModelo,
             erro,
             inconsistencias,
-            escapadoresInexistentes,
         };
+    },
+    computed: {
+        escapadoresUsados() {
+            return this.textoModelo?.getEscapadores();
+        },
+        escapadoresInexistentes() {
+            const escapadoresInexistentes = this.textoModelo
+                ?.getEscapadores()
+                ?.filter(escrito =>
+                    this.escapadores?.every(
+                        escapador => !escapador.ehIgual(escrito),
+                    ),
+                );
+            return escapadoresInexistentes;
+        },
     },
     methods: {
         gerouId(id: IdFormulario) {
@@ -84,13 +85,6 @@ export default defineComponent({
             this.titulo = titulo;
         },
         digitouTextoModelo(textoModelo: TextoModelo) {
-            const escapadoresEscritos =
-                this.escapadorFactory.criarEscapadoresDeTexto(
-                    textoModelo.getTextoPlano(),
-                );
-            this.escapadoresInexistentes = escapadoresEscritos.filter(
-                escrito => !this.escapadores?.includes(escrito),
-            );
             this.textoModelo = textoModelo;
         },
         cancelar() {
@@ -204,9 +198,18 @@ export default defineComponent({
         <ListaDeEscapadores
             v-if="escapadores"
             :escapadores="escapadores"
+            :escapadoresUsados="escapadoresUsados"
         ></ListaDeEscapadores>
 
-        <article class="erro" v-if="escapadoresInexistentes.length">
+        <TextoModeloInput
+            :textoModelo="(textoModelo as TextoModelo)"
+            @digitou="digitouTextoModelo"
+        ></TextoModeloInput>
+
+        <article
+            class="erro escapadoresInexistentes"
+            v-if="escapadoresInexistentes"
+        >
             Foram escritos escapadores inexistentes:
             <ul>
                 <li
@@ -218,12 +221,7 @@ export default defineComponent({
             </ul>
         </article>
 
-        <TextoModeloInput
-            :textoModelo="(textoModelo as TextoModelo)"
-            @digitou="digitouTextoModelo"
-        ></TextoModeloInput>
-
-        <article class="erro" v-if="erro">
+        <article class="erro inconsistencias" v-if="erro">
             {{ erro }}
             <div v-if="inconsistencias.length">
                 Inconsistências:
