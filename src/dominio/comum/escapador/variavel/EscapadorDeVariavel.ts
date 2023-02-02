@@ -1,10 +1,11 @@
 import { objetoDeValor } from '../../ObjetoDeValor';
 import { Escapador } from '../Escapador';
-import { NomeDeEscapador } from '../nome/NomeDeEscapador';
+import { INomeDeEscapador } from '../nome/NomeDeEscapador';
 
 export interface IEscapadorDeVariavel {
-    getNome(): NomeDeEscapador;
-    compararNome(id: string | NomeDeEscapador): boolean;
+    getNome(): INomeDeEscapador;
+    compararNome(id: string | INomeDeEscapador): boolean;
+    ehIgual(objeto: IEscapadorDeVariavel): boolean;
     toString(): string;
 }
 
@@ -13,13 +14,16 @@ export class EscapadorDeVariavel
     extends Escapador
     implements IEscapadorDeVariavel
 {
-    constructor(private nomeDaVariavel: NomeDeEscapador) {
+    constructor(private nomeDaVariavel: INomeDeEscapador) {
         super();
+    }
+    ehIgual(objeto: IEscapadorDeVariavel) {
+        return this.toString() === objeto.toString();
     }
     getNome() {
         return this.nomeDaVariavel;
     }
-    compararNome(id: string | NomeDeEscapador) {
+    compararNome(id: string | INomeDeEscapador) {
         return this.nomeDaVariavel.toString() === id.toString();
     }
     toString() {

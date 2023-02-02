@@ -20,11 +20,13 @@ export class EscapadorDeVariavelFactoryRetornaToStringStub
 export class EscapadorDeVariavelFactoryDummy
     implements IEscapadorDeVariavelFactory
 {
+    retornoDoMetodoCriarEscapadoresDeTexto = [new EscapadorDeVariavelDummy()];
+
     criarDeIdFormulario(): IEscapadorDeVariavel {
         return new EscapadorDeVariavelDummy();
     }
     criarEscapadoresDeTexto(): IEscapadorDeVariavel[] {
-        return [new EscapadorDeVariavelDummy()];
+        return this.retornoDoMetodoCriarEscapadoresDeTexto;
     }
 }
 

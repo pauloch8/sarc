@@ -1,6 +1,5 @@
 import { NomeDeEscapador } from '@/dominio/comum/escapador/nome/NomeDeEscapador';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
-import { objetoDeValor } from '@/dominio/comum/ObjetoDeValor';
 import { NomeDeEscapadorDummy } from '../questao/NomeDeEscapadorDubles';
 
 export class EscapadorDeVariavelToStringStub implements IEscapadorDeVariavel {
@@ -9,15 +8,26 @@ export class EscapadorDeVariavelToStringStub implements IEscapadorDeVariavel {
     toString(): string {
         return this.string;
     }
-
     getNome(): NomeDeEscapador {
-        throw new Error('Method getNome not implemented.');
+        throw new Error(
+            'Method EscapadorDeVariavelToStringStub.getNome not implemented.',
+        );
     }
     compararNome(): boolean {
-        throw new Error('Method compararNome not implemented.');
+        throw new Error(
+            'Method EscapadorDeVariavelToStringStub.compararNome not implemented.',
+        );
+    }
+    ehIgual(objeto: IEscapadorDeVariavel): boolean {
+        throw new Error(
+            'Method EscapadorDeVariavelToStringStub.ehIgual not implemented.',
+        );
     }
 }
 export class EscapadorDeVariavelDummy implements IEscapadorDeVariavel {
+    ehIgual(objeto: IEscapadorDeVariavel): boolean {
+        return true;
+    }
     getNome() {
         return new NomeDeEscapadorDummy();
     }
@@ -31,12 +41,19 @@ export class EscapadorDeVariavelDummy implements IEscapadorDeVariavel {
 
 export class EscapadorDeVariavelFake implements IEscapadorDeVariavel {
     constructor(public valor: string) {}
+    ehIgual(objeto: EscapadorDeVariavelFake): boolean {
+        return this.valor === objeto.valor;
+    }
 
     getNome(): NomeDeEscapador {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method EscapadorDeVariavelFake.getNome not implemented.',
+        );
     }
     compararNome(id: string | NomeDeEscapador): boolean {
-        throw new Error('Method not implemented.');
+        throw new Error(
+            'Method EscapadorDeVariavelFake.compararNome not implemented.',
+        );
     }
     toString(): string {
         return this.valor;

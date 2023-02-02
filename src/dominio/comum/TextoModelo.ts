@@ -1,13 +1,20 @@
 import { RemoveHtml } from '@/dominio/util/RemoveHtml';
+import { IEscapadorDeVariavel } from './escapador/variavel/EscapadorDeVariavel';
+import { IEscapadorDeVariavelFactory } from './escapador/variavel/EscapadorDeVariavelFactory';
 
 export interface ITextoModelo {
     getTextoHtml(): string;
     getTextoPlano(): string;
+    getEscapadores(): IEscapadorDeVariavel[];
     toString(): string;
 }
 
 export class TextoModelo implements ITextoModelo {
-    constructor(private texto: string, private removeHtml: RemoveHtml) {
+    constructor(
+        private texto: string,
+        private removeHtml: RemoveHtml,
+        private escapadorDeVariavelFactory: IEscapadorDeVariavelFactory,
+    ) {
         this.validar();
     }
     private validar() {
@@ -23,6 +30,11 @@ export class TextoModelo implements ITextoModelo {
     }
     getTextoPlano() {
         return this.removeHtml.remover(this.texto);
+    }
+    getEscapadores() {
+        return this.escapadorDeVariavelFactory.criarEscapadoresDeTexto(
+            this.texto,
+        );
     }
     toString() {
         return this.getTextoPlano();

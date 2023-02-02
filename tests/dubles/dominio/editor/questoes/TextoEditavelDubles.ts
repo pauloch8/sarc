@@ -13,7 +13,7 @@ import { TituloDummy, TituloFake } from '../../comum/TituloDubles';
 export class TextoEditavelEditaComSucessoMock implements ITextoEditavel {
     private id = new IdFormularioDummy();
     private titulo = new TituloDummy();
-    private textoModelo = new TextoModeloDummy();
+    private textoModelo: ITextoModelo = new TextoModeloDummy();
     private indice = 0;
     getId() {
         return this.id;
@@ -30,8 +30,8 @@ export class TextoEditavelEditaComSucessoMock implements ITextoEditavel {
     getTextoModelo() {
         return this.textoModelo;
     }
-    setTextoModelo(textoModelo?: ITextoModelo | undefined): void {
-        this.textoModelo = textoModelo as ITextoModelo;
+    setTextoModelo(textoModelo: ITextoModelo): void {
+        this.textoModelo = textoModelo;
     }
     getEmEdicao() {
         return true;

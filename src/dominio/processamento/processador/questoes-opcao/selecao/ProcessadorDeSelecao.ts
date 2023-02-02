@@ -1,5 +1,5 @@
 import { RespostaDeOpcao } from '../../../../formulario/respostas/Respostas';
-import { NomeDeEscapador } from '../../../../comum/escapador/nome/NomeDeEscapador';
+import { INomeDeEscapador } from '../../../../comum/escapador/nome/NomeDeEscapador';
 import { EscapadorDeVariavelFactory } from '../../../../comum/escapador/variavel/EscapadorDeVariavelFactory';
 import { ITexto } from '../../texto/Texto';
 
@@ -48,7 +48,7 @@ export class ProcessadorDeSelecao implements IProcessadorDeSelecao {
 }
 
 export class ErroRespostaDaVariavelNaoEcontrada extends Error {
-    constructor(nomeDeEscapador: NomeDeEscapador) {
+    constructor(nomeDeEscapador: INomeDeEscapador) {
         super(`Resposta da variável ${nomeDeEscapador} não encontrada`);
     }
 }

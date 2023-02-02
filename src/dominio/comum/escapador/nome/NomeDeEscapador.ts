@@ -5,7 +5,7 @@ export interface INomeDeEscapador {
 }
 
 @objetoDeValor
-export class NomeDeEscapador {
+export class NomeDeEscapador implements INomeDeEscapador {
     static pattern = '[a-zA-Z0-9._-]';
     constructor(private nome: string) {
         this.validar(nome);

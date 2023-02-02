@@ -1,11 +1,41 @@
+import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
 import { ITextoModelo } from '@/dominio/comum/TextoModelo';
+import { EscapadorDeVariavelDummy } from './escapador/variavel/EscapadorDeVariavelDubles';
 
 export class TextoModeloDummy implements ITextoModelo {
+    escapadores = [new EscapadorDeVariavelDummy()];
+
+    getEscapadores(): IEscapadorDeVariavel[] {
+        return this.escapadores;
+    }
     getTextoHtml(): string {
         return 'dummy';
     }
     getTextoPlano(): string {
         return 'dummy';
+    }
+    toString(): string {
+        return 'dummy';
+    }
+}
+
+export class TextoModeloRetornaEscapadoresInjetadosStub
+    implements ITextoModelo
+{
+    constructor(private escapadores: IEscapadorDeVariavel[]) {}
+
+    getEscapadores(): IEscapadorDeVariavel[] {
+        return this.escapadores;
+    }
+    getTextoHtml(): string {
+        throw new Error(
+            'Method TextoModeloRetornaEscapadoresInjetadosStub.getTextoHtml not implemented.',
+        );
+    }
+    getTextoPlano(): string {
+        throw new Error(
+            'Method TextoModeloRetornaEscapadoresInjetadosStub.getTextoPlano not implemented.',
+        );
     }
     toString(): string {
         return 'dummy';
@@ -24,6 +54,11 @@ export class TextoModeloRetornaTextosStub implements ITextoModelo {
     toString(): string {
         return this.textoPlano;
     }
+    getEscapadores(): IEscapadorDeVariavel[] {
+        throw new Error(
+            'Method TextoModeloRetornaTextosStub.getEscapadores not implemented.',
+        );
+    }
 }
 
 export class TextoModeloFake implements ITextoModelo {
@@ -36,5 +71,10 @@ export class TextoModeloFake implements ITextoModelo {
     }
     toString(): string {
         return this.textoPlano;
+    }
+    getEscapadores(): IEscapadorDeVariavel[] {
+        throw new Error(
+            'Method TextoModeloFake.getEscapadores not implemented.',
+        );
     }
 }
