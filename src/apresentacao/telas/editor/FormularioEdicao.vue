@@ -72,7 +72,6 @@ export default defineComponent({
                 const escapadores = this.listaQuestoes
                     .getItens()
                     .map(item => item.getEscapadores());
-                console.log({ escapadores });
                 if (escapadores.length) {
                     return escapadores;
                 }

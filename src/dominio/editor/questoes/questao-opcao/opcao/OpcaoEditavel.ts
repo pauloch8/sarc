@@ -19,7 +19,7 @@ export interface IOpcaoEditavel extends IItemEditavel {
     setTextos(textos: IListaEditavel<ITextoEditavel>): void;
     getVariaveis(): IListaEditavel<IVariavelEditavel> | undefined;
     setVariaveis(variaveis: IListaEditavel<IVariavelEditavel>): void;
-    getCategorias(): ITitulo[];
+    getIdCategorias(): IIdFormulario[];
 }
 
 export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
@@ -126,11 +126,10 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
         this.variaveis = variaveis;
     }
 
-    getCategorias() {
-        console.log('get categoria');
+    getIdCategorias() {
         return this.textos
             .getItens()
-            .map(textoEditavel => textoEditavel.getCategoria());
+            .map(textoEditavel => textoEditavel.getId());
     }
 
     toString(): string {

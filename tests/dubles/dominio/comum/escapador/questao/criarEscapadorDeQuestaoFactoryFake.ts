@@ -1,7 +1,7 @@
 import { INomeDeEscapador } from '@/dominio/comum/escapador/nome/NomeDeEscapador';
 import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
-import { ITitulo } from '@/dominio/comum/Titulo';
+import { IIdFormulario } from '@/dominio/comum/IdFormulario';
 
 export function criarEscapadorDeQuestaoFactoryFake(numeros: number[]) {
     const escapadorFactory: IEscapadorDeQuestaoFactory = {
@@ -33,11 +33,13 @@ export function criarEscapadorDeQuestaoFactoryFake(numeros: number[]) {
             });
             return escapadores;
         },
-        criarDeTituloCategoria: function (
-            titulo: ITitulo,
-            categoria: ITitulo,
+        criarDeIdQuestaoIdCategoria: function (
+            idQuestao: IIdFormulario,
+            idCategoria: IIdFormulario,
         ): IEscapadorDeQuestao {
-            throw new Error('Function not implemented.');
+            throw new Error(
+                'Function criarEscapadorDeQuestaoFactoryFake.criarDeIdQuestaoIdCategoria not implemented.',
+            );
         },
     };
     return escapadorFactory;

@@ -1,7 +1,10 @@
+import { objetoDeValor } from './ObjetoDeValor';
+
 export interface IIdFormulario {
     toString(): string;
 }
 
+@objetoDeValor
 export class IdFormulario implements IIdFormulario {
     constructor(private idString: string) {
         const valido = IdFormulario.validar(idString);
@@ -10,6 +13,9 @@ export class IdFormulario implements IIdFormulario {
         }
     }
     toString() {
+        return this.idString;
+    }
+    valueOf() {
         return this.idString;
     }
     static validar(idString: string) {

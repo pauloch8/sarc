@@ -76,7 +76,7 @@ export class OpcaoEditavelErroStub implements IOpcaoEditavel {
     setIndice(): void {
         'dummy';
     }
-    getCategorias(): ITitulo[] {
+    getIdCategorias(): ITitulo[] {
         throw new Error(
             'Method OpcaoEditavelErroStub.getCategorias not implemented.',
         );
@@ -136,7 +136,7 @@ export class OpcaoEditavelDummy implements IOpcaoEditavel {
     setIndice(): void {
         'dummy';
     }
-    getCategorias(): ITitulo[] {
+    getIdCategorias(): ITitulo[] {
         throw new Error(
             'Method OpcaoEditavelDummy.getCategorias not implemented.',
         );
@@ -144,7 +144,7 @@ export class OpcaoEditavelDummy implements IOpcaoEditavel {
 }
 
 export class OpcaoEditavelGetCategoriaStub implements IOpcaoEditavel {
-    getCategorias(): ITitulo[] {
+    getIdCategorias(): ITitulo[] {
         return [new TituloDummy()];
     }
     getTitulo(): ITitulo {

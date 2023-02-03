@@ -32,4 +32,7 @@ export class EscapadorDeQuestao
     toString() {
         return '${' + this.questaoId + '.' + this.categoriaId + '}';
     }
+    valueOf() {
+        return this.toString();
+    }
 }

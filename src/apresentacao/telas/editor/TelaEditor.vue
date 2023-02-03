@@ -13,6 +13,7 @@ import { TextoModelo } from '@/dominio/comum/TextoModelo';
 import { RemoveHtmlStringStrip } from '@/infrastrutura/portas/remove-html/RemoveHtmlStringStrip';
 import { ModeloEditavel } from '@/dominio/editor/modelo/ModeloEditavel';
 import { EscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
+import { EscapadorDeVariavelFactory } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
 
 export default defineComponent({
     name: 'TelaEditor',
@@ -21,6 +22,7 @@ export default defineComponent({
     },
     data() {
         const removeHtml = new RemoveHtmlStringStrip();
+        const escapadorDeVariavelFactory = new EscapadorDeVariavelFactory();
         const editor = new FormularioEditorModel(
             new IdFormulario('id'),
             new Titulo('titulo'),
@@ -38,7 +40,11 @@ export default defineComponent({
                                 new TextoEditavel(
                                     new IdFormulario('categoria'),
                                     new Titulo('título'),
-                                    new TextoModelo('texto', removeHtml),
+                                    new TextoModelo(
+                                        'texto',
+                                        removeHtml,
+                                        escapadorDeVariavelFactory,
+                                    ),
                                     0,
                                 ),
                             ]),
@@ -51,7 +57,11 @@ export default defineComponent({
                                 new TextoEditavel(
                                     new IdFormulario('categoria'),
                                     new Titulo('título'),
-                                    new TextoModelo('texto', removeHtml),
+                                    new TextoModelo(
+                                        'texto',
+                                        removeHtml,
+                                        escapadorDeVariavelFactory,
+                                    ),
                                     0,
                                 ),
                             ]),
@@ -64,7 +74,11 @@ export default defineComponent({
                                 new TextoEditavel(
                                     new IdFormulario('categoria'),
                                     new Titulo('título'),
-                                    new TextoModelo('texto', removeHtml),
+                                    new TextoModelo(
+                                        'texto',
+                                        removeHtml,
+                                        escapadorDeVariavelFactory,
+                                    ),
                                     0,
                                 ),
                             ]),
@@ -86,7 +100,11 @@ export default defineComponent({
                                 new TextoEditavel(
                                     new IdFormulario('categoria'),
                                     new Titulo('título'),
-                                    new TextoModelo('texto', removeHtml),
+                                    new TextoModelo(
+                                        'texto',
+                                        removeHtml,
+                                        escapadorDeVariavelFactory,
+                                    ),
                                     0,
                                 ),
                             ]),

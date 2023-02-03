@@ -53,8 +53,11 @@ const questaoEditavelFactory = new QuestaoEditavelFactory(
 const opcaoEditavelFactory = new OpcaoEditavelFactory();
 const textoEditavelFactory = new TextoEditavelFactory();
 const removeHtml = new RemoveHtmlStringStrip();
-const textoModeloFactory = new TextoModeloFactory(removeHtml);
 const escapadorDeVariavelFactory = new EscapadorDeVariavelFactory();
+const textoModeloFactory = new TextoModeloFactory(
+    removeHtml,
+    escapadorDeVariavelFactory,
+);
 const variavelEditavelFactory = new VariavelEditavelFactory(
     escapadorDeVariavelFactory,
 );

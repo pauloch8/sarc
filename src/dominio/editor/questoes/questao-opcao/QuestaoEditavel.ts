@@ -123,16 +123,24 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
     }
 
     getEscapadores(): IEscapadorDeQuestao[] {
-        const categorias = this.listaOpcoes
-            .getItens()
-            .map(opcao => opcao.getCategorias());
-        const escapadores = categorias.map(categoria =>
-            this.escapadorFactory.criarDeTituloCategoria(
-                this.titulo,
-                categoria,
+        const categorias = Array.from(
+            new Set(
+                this.listaOpcoes
+                    .getItens()
+                    .map(opcao => opcao.getIdCategorias())
+                    .flat(1),
             ),
         );
-        return escapadores;
+        debugger;
+        const escapadores = categorias.map(categoria => {
+            debugger;
+            return this.escapadorFactory.criarDeIdQuestaoIdCategoria(
+                this.id,
+                categoria,
+            );
+        });
+        const escapadoresUnicos = Array.from(new Set(escapadores));
+        return escapadoresUnicos;
     }
 
     toString() {

@@ -14,8 +14,8 @@ import {
     ErroNaEdicaoDoModelo,
     InconsistenciasNaValidacaoDoModelo,
 } from '@/dominio/editor/modelo/ModeloEditavel';
-import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
 import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
+import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 
 export default defineComponent({
     name: 'ModeloEdicao',
@@ -45,9 +45,9 @@ export default defineComponent({
             );
         }
 
-        // injeção escapadoresVariaveis
-        const escapadores = inject<IEscapadorDeVariavel[]>(
-            'escapadoresVariaveis',
+        // injeção escapadoresQuestoes
+        const escapadores = inject<IEscapadorDeQuestao[]>(
+            'escapadoresQuestoes',
         );
 
         return {
@@ -66,15 +66,31 @@ export default defineComponent({
         const textoModelo = this.modelo?.getTextoModelo();
         const erro = '';
         const inconsistencias: string[] = [];
-        const escapadoresInexistentes: IEscapadorDeVariavel[] = [];
         return {
             id,
             titulo,
             textoModelo,
             erro,
             inconsistencias,
-            escapadoresInexistentes,
         };
+    },
+    computed: {
+        escapadoresUsados(): IEscapadorDeQuestao[] {
+            if (!this.textoModelo) {
+                return [];
+            }
+            const escapadoresUsados =
+                this.escapadorFactory.criarEscapadoresDeTexto(
+                    this.textoModelo.getTextoPlano(),
+                );
+            return escapadoresUsados;
+        },
+        escapadoresInexistentes(): IEscapadorDeQuestao[] {
+            const escapadoresInexistentes = this.escapadoresUsados.filter(
+                escrito => !this.escapadores?.includes(escrito),
+            );
+            return escapadoresInexistentes;
+        },
     },
     methods: {
         gerouId(id: IdFormulario) {
@@ -84,14 +100,7 @@ export default defineComponent({
             this.titulo = titulo;
         },
         digitouTextoModelo(textoModelo: TextoModelo) {
-            // const escapadoresEscritos =
-            //     this.escapadorFactory.criarEscapadoresDeModelo(
-            //         textoModelo.getTextoPlano(),
-            //     );
-            // this.escapadoresInexistentes = escapadoresEscritos.filter(
-            //     escrito => !this.escapadores?.includes(escrito),
-            // );
-            // this.textoModelo = textoModelo;
+            this.textoModelo = textoModelo;
         },
         cancelar() {
             this.modelo?.encerrarEdicao();
@@ -203,9 +212,14 @@ export default defineComponent({
 
         <ListaDeEscapadores
             v-if="escapadores"
-            :escapadoresVariaveis="escapadores"
+            :escapadoresQuestoes="escapadores"
         >
         </ListaDeEscapadores>
+
+        <TextoModeloInput
+            :textoModelo="(textoModelo as TextoModelo)"
+            @digitou="digitouTextoModelo"
+        ></TextoModeloInput>
 
         <article class="erro" v-if="escapadoresInexistentes.length">
             Foram escritos escapadores inexistentes:
@@ -218,11 +232,6 @@ export default defineComponent({
                 </li>
             </ul>
         </article>
-
-        <TextoModeloInput
-            :modeloModelo="(textoModelo as TextoModelo)"
-            @digitou="digitouTextoModelo"
-        ></TextoModeloInput>
 
         <article class="erro" v-if="erro">
             {{ erro }}

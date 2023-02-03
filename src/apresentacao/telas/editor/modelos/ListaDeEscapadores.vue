@@ -5,7 +5,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'ListaDeEscapadores',
     props: {
-        escapadoresVariaveis: {
+        escapadoresQuestoes: {
             type: Array,
             required: true,
         },
@@ -15,10 +15,10 @@ export default defineComponent({
 
 <template>
     <article class="escapadoresDisponiveis">
-        Escapadores de variáveis disponíveis:
+        Escapadores de questões disponíveis:
         <ul>
             <li
-                v-for="(escapador, indice) in escapadoresVariaveis as IEscapadorDeQuestao[]"
+                v-for="(escapador, indice) in escapadoresQuestoes as IEscapadorDeQuestao[]"
                 :key="indice"
             >
                 {{ escapador.toString() }}
