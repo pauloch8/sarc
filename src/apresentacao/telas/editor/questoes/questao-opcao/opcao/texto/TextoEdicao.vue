@@ -191,6 +191,7 @@ export default defineComponent({
         ></IdFormularioFactory>
 
         <TituloInput
+            rotulo="Categoria"
             :titulo="(titulo as Titulo)"
             @digitou="digitouTitulo"
         ></TituloInput>

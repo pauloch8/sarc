@@ -19,9 +19,14 @@ export default defineComponent({
             type: Titulo,
             required: false,
         },
+        rotulo: {
+            type: String,
+            required: false,
+        },
     },
     data() {
         return {
+            esteRotulo: this.rotulo || 'Título',
             tituloString: this.titulo?.toString() || '',
             erroString: '',
         };
@@ -52,7 +57,7 @@ export default defineComponent({
 
 <template>
     <label for="titulo">
-        Título
+        {{ esteRotulo }}
         <input
             type="text"
             id="tituloFormulario"
