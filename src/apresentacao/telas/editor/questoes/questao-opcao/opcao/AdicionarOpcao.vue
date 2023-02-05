@@ -1,4 +1,5 @@
 <script lang="ts">
+import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import { defineComponent } from 'vue';
 import OpcaoEdicao from './OpcaoEdicao.vue';
 
@@ -22,14 +23,15 @@ export default defineComponent({
         editar() {
             this.emEdicao = true;
         },
-        salvou() {
+        adicionarItem(item: OpcaoEditavel) {
             this.emEdicao = false;
+            this.$emit('adicionarItem', item);
         },
         cancelou() {
             this.emEdicao = false;
         },
     },
-    emits: ['salvou'],
+    emits: ['adicionarItem'],
 });
 </script>
 
@@ -45,7 +47,11 @@ export default defineComponent({
         </a>
     </div>
     <div v-if="emEdicao">
-        <OpcaoEdicao :indice="indice" @salvou="salvou" @cancelou="cancelou">
+        <OpcaoEdicao
+            :indice="indice"
+            @criou="adicionarItem"
+            @cancelou="cancelou"
+        >
         </OpcaoEdicao>
     </div>
 </template>

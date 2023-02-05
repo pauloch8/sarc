@@ -41,17 +41,20 @@ export default defineComponent({
         },
     },
     methods: {
-        editarQuestao(questao: QuestaoEditavel) {
-            this.estaLista.editarItem(questao);
+        editar(item: QuestaoEditavel) {
+            this.estaLista.editarItem(item);
         },
-        excluirQuestao(questao: QuestaoEditavel) {
-            this.estaLista.excluirItem(questao);
+        adicionarItem(item: QuestaoEditavel) {
+            this.estaLista.adicionarItem(item);
         },
-        descerQuestao(questao: QuestaoEditavel) {
-            this.estaLista.descerItem(questao);
+        excluir(item: QuestaoEditavel) {
+            this.estaLista.excluirItem(item);
         },
-        subirQuestao(questao: QuestaoEditavel) {
-            this.estaLista.subirItem(questao);
+        descer(item: QuestaoEditavel) {
+            this.estaLista.descerItem(item);
+        },
+        subir(item: QuestaoEditavel) {
+            this.estaLista.subirItem(item);
         },
     },
 });
@@ -67,14 +70,17 @@ export default defineComponent({
             :questao="(questao as QuestaoEditavel)"
             :ehPrimeiro="indice === 0"
             :ehUltimo="indice === itensOrdenados.length - 1"
-            @editar="editarQuestao"
-            @excluir="excluirQuestao"
-            @descer="descerQuestao"
-            @subir="subirQuestao"
+            @editar="editar"
+            @excluir="excluir"
+            @descer="descer"
+            @subir="subir"
         ></ItemDeQuestao>
     </TransitionGroup>
 
-    <AdicionarQuestao :indice="itensOrdenados.length"></AdicionarQuestao>
+    <AdicionarQuestao
+        :indice="itensOrdenados.length"
+        @adicionarItem="adicionarItem"
+    ></AdicionarQuestao>
 </template>
 
 <style scoped>

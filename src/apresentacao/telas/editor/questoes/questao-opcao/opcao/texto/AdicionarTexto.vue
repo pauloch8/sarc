@@ -20,9 +20,9 @@ export default defineComponent({
         editar() {
             this.emEdicao = true;
         },
-        adicionarItem(texto: TextoEditavel) {
+        adicionarItem(item: TextoEditavel) {
             this.emEdicao = false;
-            this.$emit('adicionarItem', texto);
+            this.$emit('adicionarItem', item);
         },
         cancelou() {
             this.emEdicao = false;

@@ -79,84 +79,90 @@ export default defineComponent({
             this.erro = '';
             this.inconsistencias = [];
             if (!this.questao) {
-                try {
-                    const questao = this.factory.criar(
-                        this.idFormulario as IdFormulario,
-                        this.titulo as Titulo,
-                        this.indice as number,
-                        this.opcoes as ListaEditavel<OpcaoEditavel>,
-                        this.subtitulo as Subtitulo,
-                    );
-                    this.$emit('criou', questao);
-                } catch (e) {
-                    if (e instanceof ErroQuestaoInvalida) {
-                        this.erro = e.message;
-                        this.inconsistencias = e.inconsistencias;
-                    } else {
-                        this.erro = 'Ocorreu um erro desconhecido: ' + e;
-                    }
-                }
+                this.criar();
             } else {
-                //id
-                try {
-                    this.questao.setId(this.idFormulario as IdFormulario);
-                } catch (e) {
-                    if (e instanceof ErroNaEdicaoDaQuestao) {
-                        this.inconsistencias.push(e.message);
-                    } else {
-                        this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização do id: ' +
-                                e,
-                        );
-                    }
-                }
-                //titulo
-                try {
-                    this.questao.setTitulo(this.titulo as Titulo);
-                } catch (e) {
-                    if (e instanceof ErroNaEdicaoDaQuestao) {
-                        this.inconsistencias.push(e.message);
-                    } else {
-                        this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização do titulo: ' +
-                                e,
-                        );
-                    }
-                }
-                //subtitulo
-                try {
-                    this.questao.setSubtitulo(this.subtitulo as Subtitulo);
-                } catch (e) {
-                    if (e instanceof ErroNaEdicaoDaQuestao) {
-                        this.inconsistencias.push(e.message);
-                    } else {
-                        this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização do subtitulo: ' +
-                                e,
-                        );
-                    }
-                }
-                //opcoes
-                try {
-                    this.questao.setListaOpcoes(
-                        this.opcoes as ListaEditavel<OpcaoEditavel>,
-                    );
-                } catch (e) {
-                    if (e instanceof ErroNaEdicaoDaQuestao) {
-                        this.inconsistencias.push(e.message);
-                    } else {
-                        this.inconsistencias.push(
-                            'Ocorreu um erro desconhecido na atualização das opcoes: ' +
-                                e,
-                        );
-                    }
-                }
-                if (this.inconsistencias.length) {
-                    this.erro = 'Ocorreram erros na atualização da Questão';
+                this.editar(this.questao);
+            }
+        },
+        criar() {
+            try {
+                const questao = this.factory.criar(
+                    this.idFormulario as IdFormulario,
+                    this.titulo as Titulo,
+                    this.indice as number,
+                    this.opcoes as ListaEditavel<OpcaoEditavel>,
+                    this.subtitulo as Subtitulo,
+                );
+                this.$emit('criou', questao);
+            } catch (e) {
+                if (e instanceof ErroQuestaoInvalida) {
+                    this.erro = e.message;
+                    this.inconsistencias = e.inconsistencias;
                 } else {
-                    this.questao.encerrarEdicao();
-                    this.$emit('atualizou', this.questao);
+                    this.erro = 'Ocorreu um erro desconhecido: ' + e;
                 }
+            }
+        },
+        editar(questao: QuestaoEditavel) {
+            //id
+            try {
+                questao.setId(this.idFormulario as IdFormulario);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDaQuestao) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização do id: ' +
+                            e,
+                    );
+                }
+            }
+            //titulo
+            try {
+                questao.setTitulo(this.titulo as Titulo);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDaQuestao) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização do titulo: ' +
+                            e,
+                    );
+                }
+            }
+            //subtitulo
+            try {
+                questao.setSubtitulo(this.subtitulo as Subtitulo);
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDaQuestao) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização do subtitulo: ' +
+                            e,
+                    );
+                }
+            }
+            //opcoes
+            try {
+                questao.setListaOpcoes(
+                    this.opcoes as ListaEditavel<OpcaoEditavel>,
+                );
+            } catch (e) {
+                if (e instanceof ErroNaEdicaoDaQuestao) {
+                    this.inconsistencias.push(e.message);
+                } else {
+                    this.inconsistencias.push(
+                        'Ocorreu um erro desconhecido na atualização das opcoes: ' +
+                            e,
+                    );
+                }
+            }
+            if (this.inconsistencias.length) {
+                this.erro = 'Ocorreram erros na atualização da Questão';
+            } else {
+                questao.encerrarEdicao();
+                this.$emit('atualizou', questao);
             }
         },
     },

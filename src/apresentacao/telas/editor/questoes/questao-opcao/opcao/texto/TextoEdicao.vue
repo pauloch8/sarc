@@ -209,7 +209,7 @@ export default defineComponent({
 
         <article
             class="erro escapadoresInexistentes"
-            v-if="escapadoresInexistentes"
+            v-if="escapadoresInexistentes?.length"
         >
             Foram escritos escapadores inexistentes:
             <ul>
