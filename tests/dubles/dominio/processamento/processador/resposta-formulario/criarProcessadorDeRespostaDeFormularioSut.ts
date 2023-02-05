@@ -1,4 +1,4 @@
-import { Template } from '@/dominio/especificacao/EspecificacaoDTO';
+import { ModeloDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { criarRespostaDeFormularioFake } from '@/tests/dubles/dominio/formulario/respostas/criarRespostaDeFormularioFake';
 import { criarEscapadorDeQuestaoFactoryFake } from '@/tests/dubles/dominio/comum/escapador/questao/criarEscapadorDeQuestaoFactoryFake';
 import { ProcessadorDeRespostaDeFormulario } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
@@ -8,7 +8,7 @@ export function criarProcessadorDeRespostaDeFormularioSut(
     numerosDasQuestoesParaProcessadores: number[] = [1, 2, 3],
     numerosDasQuestoesParaEscapadores: number[] = [1, 2, 3],
     numerosDasQuestoesParaRespostas: number[] = [1, 2, 3],
-    templates: Template[] = [
+    templates: ModeloDTO[] = [
         {
             id: 'id-template1',
             titulo: 'Template 1',

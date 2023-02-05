@@ -11,7 +11,9 @@ export interface IListaEditavel<IItemEditavel> {
     obterItemPorIndice(indice: number): IItemEditavel;
 }
 
-export class ListaEditavel<Item extends IItemEditavel> {
+export class ListaEditavel<Item extends IItemEditavel>
+    implements IListaEditavel<IItemEditavel>
+{
     constructor(private itens: Item[] = []) {}
 
     getItens() {

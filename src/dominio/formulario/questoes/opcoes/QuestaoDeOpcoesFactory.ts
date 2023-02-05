@@ -1,21 +1,21 @@
-import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
+import { QuestaoOpcaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { Variavel } from '../Variavel';
 import { Opcao } from './Opcao';
 import { QuestaoDeOpcoes } from './QuestaoDeOpcoes';
 
 export class QuestaoDeOpcoesFactory {
-    static criarDeDto(dto: QuestaoDTO): QuestaoDeOpcoes {
+    static criarDeDto(dto: QuestaoOpcaoDTO): QuestaoDeOpcoes {
         if (!dto.opcoes) {
             throw new Error('Questão do tipo opções sem opção');
         }
         const opcoes = dto.opcoes.map(valor => {
-            const variaveis = valor.variaveis?.map(
+            const variaveis = valor.listaVariaveis?.map(
                 variavel =>
-                    new Variavel(variavel.id, variavel.label, variavel.tipo),
+                    new Variavel(variavel.id, variavel.titulo, variavel.tipo),
             );
             return new Opcao(
                 valor.id,
-                valor.label,
+                valor.titulo,
                 valor.ramificacao,
                 variaveis,
             );

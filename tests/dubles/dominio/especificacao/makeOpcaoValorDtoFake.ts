@@ -5,9 +5,9 @@ export const makeOpcaoValorDtoFake = () => {
     const texto = makeTextoDtoFake();
     const opcaoFake: OpcaoValorDTO = {
         id: 'id-opcao',
-        label: 'Label',
+        titulo: 'Label',
         ramificacao: { irPara: 'próximo' },
-        texto: [texto],
+        listaTextos: [texto],
     };
     return opcaoFake;
 };

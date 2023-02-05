@@ -1,4 +1,4 @@
-import { Template } from '@/dominio/especificacao/EspecificacaoDTO';
+import { ModeloDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import {
     RespostaDeFormulario,
     RespostaDeOpcao,
@@ -11,7 +11,7 @@ export class ProcessadorDeRespostaDeFormulario {
         private id: string,
         private processadoresDeQuestoes: IProcessadorDeQuestao[],
         private escapadorFactory: IEscapadorDeQuestaoFactory,
-        private templates: Template[],
+        private templates: ModeloDTO[],
     ) {}
 
     processar(resposta: RespostaDeFormulario): TextoProcessado[] {

@@ -47,23 +47,25 @@ export default defineComponent({
         },
     },
     data() {
-        const esteEditor = this.editor;
-        const id = esteEditor?.getId();
-        const titulo = esteEditor?.getTitulo();
-        const subtitulo = esteEditor?.getSubtitulo();
+        const id = this.editor?.getId();
+        const titulo = this.editor?.getTitulo();
+        const subtitulo = this.editor?.getSubtitulo();
         const listaQuestoes =
-            esteEditor?.getListaQuestoes() ||
+            this.editor?.getListaQuestoes() ||
             new ListaEditavel<QuestaoEditavel>();
         const listaModelos =
-            esteEditor?.getListaModelos() ||
+            this.editor?.getListaModelos() ||
             new ListaEditavel<ModeloEditavel>();
+        const erro = '';
+        const inconsistencias: string[] = [];
         return {
-            esteEditor,
             id,
             titulo,
             subtitulo,
             listaQuestoes,
             listaModelos,
+            erro,
+            inconsistencias,
         };
     },
     provide() {
@@ -89,29 +91,43 @@ export default defineComponent({
             this.subtitulo = subtitulo;
         },
         salvar() {
+            this.erro = '';
+            this.inconsistencias = [];
+
             if (!this.id) throw new Error('Id não informado');
             if (!this.titulo) throw new Error('Título não informado');
-            if (this.editor) {
-                this.editor.setId(this.id as IdFormulario);
-                this.editor.setTitulo(this.titulo as Titulo);
-                this.editor.setSubtitulo(this.subtitulo as Subtitulo);
-                this.$emit('editou', this.editor);
+
+            if (!this.editor) {
+                this.criar();
             } else {
-                const formulario = this.factory.criarNovo(
-                    this.id as IdFormulario,
-                    this.titulo as Titulo,
-                    this.subtitulo as Subtitulo,
-                );
-                this.$emit('criou', formulario);
-                console.log(formulario);
+                this.editar(this.editor);
             }
+        },
+        criar() {
+            const formulario = this.factory.criarNovo(
+                this.id as IdFormulario,
+                this.titulo as Titulo,
+                this.subtitulo as Subtitulo,
+            );
+            const especificacao = formulario.gerarEspecificacao();
+            console.log({ especificacao });
+            this.$emit('criou', formulario);
+            console.log(formulario);
+        },
+        editar(editor: FormularioEditor) {
+            editor.setId(this.id as IdFormulario);
+            editor.setTitulo(this.titulo as Titulo);
+            editor.setSubtitulo(this.subtitulo as Subtitulo);
+            const especificacao = editor.gerarEspecificacao();
+            console.log({ especificacao });
+            this.$emit('atualizou', editor);
         },
         cancelar() {
             // TODO: CANCELAR
             'cancelou';
         },
     },
-    emits: ['editou', 'criou'],
+    emits: ['cancelou', 'criou', 'atualizou'],
 });
 </script>
 

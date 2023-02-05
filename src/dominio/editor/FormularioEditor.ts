@@ -4,11 +4,18 @@ import { ISubtitulo } from '../comum/Subtitulo';
 import { IListaEditavel } from './comum/ListaEditavel';
 import { IQuestaoEditavel } from './questoes/questao-opcao/QuestaoEditavel';
 import { IModeloEditavel } from './modelo/ModeloEditavel';
+import { EspecificacaoDTO } from '../especificacao/EspecificacaoDTO';
 
 export interface IFormularioEditor {
     getId(): IIdFormulario;
+    setId(id: IIdFormulario): void;
     getTitulo(): ITitulo;
+    getSubtitulo(): ISubtitulo | undefined;
+    setSubtitulo(subtitulo?: ISubtitulo | undefined): void;
     setTitulo(titulo: ITitulo): void;
+    getListaQuestoes(): IListaEditavel<IQuestaoEditavel>;
+    getListaModelos(): IListaEditavel<IModeloEditavel>;
+    gerarEspecificacao(): EspecificacaoDTO;
 }
 
 export class FormularioEditor implements IFormularioEditor {
@@ -45,6 +52,22 @@ export class FormularioEditor implements IFormularioEditor {
     }
     getListaModelos() {
         return this.listaModelos;
+    }
+    gerarEspecificacao() {
+        const listaQuestoes = this.listaQuestoes
+            .getItens()
+            .map(item => item.gerarEspecificacao());
+        const listaModelos = this.listaModelos
+            .getItens()
+            .map(item => item.gerarEspecificacao());
+        const especificacao: EspecificacaoDTO = {
+            id: this.id.toString(),
+            titulo: this.titulo.toString(),
+            subtitulo: this.subtitulo?.toString(),
+            listaQuestoes,
+            listaModelos,
+        };
+        return especificacao;
     }
 }
 

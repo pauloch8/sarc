@@ -1,4 +1,8 @@
-import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
+import {
+    QuestaoDTO,
+    QuestaoOpcaoDTO,
+    QuestaoSelecaoDTO,
+} from '@/dominio/especificacao/EspecificacaoDTO';
 import { IProcessadorDeOpcaoFactory } from '../opcao/ProcessadorDeOpcaoFactory';
 import { IProcessadorDeSelecaoFactory } from '../selecao/ProcessadorDeSelecaoFactory';
 import { IProcessadorDeQuestao } from './IProcessadorDeQuestao';
@@ -20,24 +24,29 @@ export class ProcessadorDeQuestaoDeOpcoesFactory
     criarDeEspecificacao(questoesDto: QuestaoDTO[]) {
         const retorno = questoesDto.map(dto => {
             if (dto.tipo === 'opcao') {
-                if (!dto.opcoes?.length) {
+                const opcaoDto = dto as QuestaoOpcaoDTO;
+                if (!opcaoDto.opcoes?.length) {
                     throw new ErroQuestaoOpcaoSemOpcoes();
                 }
                 const processadores =
                     this.processadorDeOpcaoFactory.criarDeEspecificacao(
-                        dto.opcoes,
+                        opcaoDto.opcoes,
                     );
-                return new ProcessadorDeQuestaoDeOpcoes(dto.id, processadores);
+                return new ProcessadorDeQuestaoDeOpcoes(
+                    opcaoDto.id,
+                    processadores,
+                );
             } else if (dto.tipo === 'selecao') {
-                if (!dto.selecoes) {
+                const selecaoDto = dto as QuestaoSelecaoDTO;
+                if (!selecaoDto.selecoes) {
                     throw new ErroQuestaoSelecaoSemSelecoes();
                 }
                 const processadores =
                     this.processadorDeSelecaoFactory.criarDeEspecificacao(
-                        dto.selecoes,
+                        selecaoDto.selecoes,
                     );
                 return new ProcessadorDeQuestaoDeSelecoes(
-                    dto.id,
+                    selecaoDto.id,
                     processadores,
                 );
             } else {

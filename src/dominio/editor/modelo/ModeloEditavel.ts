@@ -7,6 +7,7 @@ import {
     ErroNaEdicao,
     ErroInconsistenciasNaValidacao,
 } from '../comum/ItemEditavel';
+import { ModeloDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface IModeloEditavel extends IItemEditavel {
     getId(): IIdFormulario;
@@ -15,6 +16,7 @@ export interface IModeloEditavel extends IItemEditavel {
     setTitulo(titulo?: ITitulo | undefined): void;
     getTextoModelo(): ITextoModelo;
     setTextoModelo(modeloModelo?: ITextoModelo | undefined): void;
+    gerarEspecificacao(): ModeloDTO;
 }
 
 export class ModeloEditavel extends ItemEditavel implements IModeloEditavel {
@@ -94,6 +96,15 @@ export class ModeloEditavel extends ItemEditavel implements IModeloEditavel {
 
     toString(): string {
         return `${this.id}: ${this.textoModelo.getTextoPlano()}`;
+    }
+
+    gerarEspecificacao() {
+        const retorno: ModeloDTO = {
+            id: this.id.toString(),
+            titulo: this.titulo.toString(),
+            texto: this.textoModelo.getTextoHtml(),
+        };
+        return retorno;
     }
 }
 

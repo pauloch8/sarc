@@ -6,11 +6,15 @@ import {
     ErroNaEdicaoDoTexto,
     ITextoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { TextoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
 import { TextoModeloDummy } from '../../comum/TextoModeloDubles';
 import { TituloDummy, TituloFake } from '../../comum/TituloDubles';
 
 export class TextoEditavelEditaComSucessoMock implements ITextoEditavel {
+    gerarEspecificacao(): TextoDTO {
+        throw new Error('Method not implemented.');
+    }
     private id = new IdFormularioDummy();
     private titulo = new TituloDummy();
     private textoModelo: ITextoModelo = new TextoModeloDummy();
@@ -54,6 +58,9 @@ export class TextoEditavelEditaComSucessoMock implements ITextoEditavel {
 }
 
 export class TextoEditavelErroStub implements ITextoEditavel {
+    gerarEspecificacao(): TextoDTO {
+        throw new Error('Method not implemented.');
+    }
     id = new IdFormularioDummy();
     titulo = new TituloDummy();
     textoModelo = new TextoModeloDummy();
@@ -97,6 +104,9 @@ export class TextoEditavelErroStub implements ITextoEditavel {
 }
 
 export class TextoEditavelDummy implements ITextoEditavel {
+    gerarEspecificacao(): TextoDTO {
+        throw new Error('Method not implemented.');
+    }
     private id = new IdFormularioDummy();
     private categoria = new TituloDummy();
     private textoModelo = new TextoModeloDummy();
@@ -264,6 +274,11 @@ export class TextoEditavelFake implements ITextoEditavel {
     }
     toString(): string {
         return this.valorFalso;
+    }
+    gerarEspecificacao(): TextoDTO {
+        throw new Error(
+            'Method TextoEditavelFake.gerarEspecificacao not implemented.',
+        );
     }
 }
 

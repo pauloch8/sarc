@@ -7,6 +7,7 @@ import {
     ErroNaEdicao,
     ErroInconsistenciasNaValidacao,
 } from '../../../../comum/ItemEditavel';
+import { TextoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface ITextoEditavel extends IItemEditavel {
     getId(): IIdFormulario;
@@ -15,6 +16,7 @@ export interface ITextoEditavel extends IItemEditavel {
     setCategoria(titulo?: ITitulo | undefined): void;
     getTextoModelo(): ITextoModelo;
     setTextoModelo(textoModelo?: ITextoModelo | undefined): void;
+    gerarEspecificacao(): TextoDTO;
 }
 
 export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
@@ -90,6 +92,14 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
             throw new ErroNaEdicaoDoTexto('TextoModelo vazio informado');
         }
         this.textoModelo = textoModelo;
+    }
+
+    gerarEspecificacao() {
+        const retorno: TextoDTO = {
+            categoria: this.categoria.toString(),
+            texto: this.textoModelo.getTextoHtml(),
+        };
+        return retorno;
     }
 
     toString(): string {

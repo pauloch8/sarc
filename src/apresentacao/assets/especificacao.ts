@@ -3,7 +3,7 @@ import { EspecificacaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 export const especificacao: EspecificacaoDTO = {
     titulo: 'Gerador de Acórdão',
     id: 'gerador-de-acordao',
-    questoes: [
+    listaQuestoes: [
         {
             id: 'tipoDeRecurso',
             tipo: 'opcao',
@@ -12,31 +12,36 @@ export const especificacao: EspecificacaoDTO = {
             opcoes: [
                 {
                     id: 'ro',
-                    label: 'Recurso Ordinário',
+                    titulo: 'Recurso Ordinário',
                     ramificacao: { irPara: 'especie-ro' },
-                    texto: [
-                        { categoria: 'padrao', texto: 'Recurso Ordinário' },
+                    listaTextos: [
+                        {
+                            categoria: 'padrao',
+                            texto: 'Recurso Ordinário',
+                        },
                     ],
                 },
                 {
                     id: 're',
-                    label: 'Recurso Especial',
+                    titulo: 'Recurso Especial',
                     ramificacao: { irPara: 'especie-re' },
-                    texto: [{ categoria: 'padrao', texto: 'Recurso Especial' }],
+                    listaTextos: [
+                        { categoria: 'padrao', texto: 'Recurso Especial' },
+                    ],
                 },
                 {
                     id: 'puj',
-                    label: 'PUJ em caso concreto',
+                    titulo: 'PUJ em caso concreto',
                     ramificacao: { irPara: 'avançar' },
-                    texto: [
+                    listaTextos: [
                         { categoria: 'padrao', texto: 'PUJ em caso concreto' },
                     ],
                 },
                 {
                     id: 'emb',
-                    label: 'Embargos de declaração',
+                    titulo: 'Embargos de declaração',
                     ramificacao: { irPara: 'avançar' },
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'padrao',
                             texto: 'Embargos de declaração',
@@ -52,8 +57,8 @@ export const especificacao: EspecificacaoDTO = {
             opcoes: [
                 {
                     id: 'b31',
-                    label: '31 - Auxílio Doença',
-                    texto: [
+                    titulo: '31 - Auxílio Doença',
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'Auxílio Doença',
@@ -73,8 +78,8 @@ export const especificacao: EspecificacaoDTO = {
                 },
                 {
                     id: 'b91',
-                    label: '91 - Auxílio Acidente',
-                    texto: [
+                    titulo: '91 - Auxílio Acidente',
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'Auxílio Acidente',
@@ -94,8 +99,8 @@ export const especificacao: EspecificacaoDTO = {
                 },
                 {
                     id: 'b87',
-                    label: '87 - BPC à pessoa com deficiência',
-                    texto: [
+                    titulo: '87 - BPC à pessoa com deficiência',
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'BPC à pessoa com deficiência',
@@ -115,8 +120,8 @@ export const especificacao: EspecificacaoDTO = {
                 },
                 {
                     id: 'b25',
-                    label: '25 - Auxílio Reclusão',
-                    texto: [
+                    titulo: '25 - Auxílio Reclusão',
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'Auxílio Reclusão',
@@ -143,16 +148,16 @@ export const especificacao: EspecificacaoDTO = {
             opcoes: [
                 {
                     id: 'acaoJudicial',
-                    label: 'Ação judicial com mesmo objeto',
+                    titulo: 'Ação judicial com mesmo objeto',
                     ramificacao: { irPara: 'procurador' },
-                    variaveis: [
+                    listaVariaveis: [
                         {
                             id: 'numAcaoJudicial',
-                            label: 'Nº da ação judicial',
+                            titulo: 'Nº da ação judicial',
                             tipo: 'texto',
                         },
                     ],
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: 'Ingressou com ação judicial ${numAcaoJudicial} com mesmo objeto deste recurso administrativo.\nApós análise, é inequívoca a similaridade da causa petendi entre o processo administrativo e judicial.',
@@ -190,18 +195,18 @@ III - recursos das decisões do INSS relacionados à comprovação de atividade 
                 },
                 {
                     id: 'incapacidadePmfFavoravel',
-                    label: 'Incapacidade - PMF favorável',
+                    titulo: 'Incapacidade - PMF favorável',
                     ramificacao: {
                         irPara: 'procurador',
                     },
-                    variaveis: [
+                    listaVariaveis: [
                         {
                             id: 'dataNovaCessacao',
-                            label: 'Nova cessação',
+                            titulo: 'Nova cessação',
                             tipo: 'data',
                         },
                     ],
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'recurso',
                             texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
@@ -235,11 +240,11 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
                 },
                 {
                     id: 'incapacidadePmfContrario',
-                    label: 'Incapacidade - PMF contrário',
+                    titulo: 'Incapacidade - PMF contrário',
                     ramificacao: {
                         irPara: 'procurador',
                     },
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'recurso',
                             texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
@@ -282,16 +287,16 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
             opcoes: [
                 {
                     id: 'acaoJudicial',
-                    label: 'Ação judicial com mesmo objeto',
+                    titulo: 'Ação judicial com mesmo objeto',
                     ramificacao: { irPara: 'procurador' },
-                    variaveis: [
+                    listaVariaveis: [
                         {
                             id: 'numAcaoJudicial',
-                            label: 'Nº da ação judicial',
+                            titulo: 'Nº da ação judicial',
                             tipo: 'texto',
                         },
                     ],
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: 'Ingressou com ação judicial ${numAcaoJudicial} com mesmo objeto deste recurso administrativo.\nApós análise, é inequívoca a similaridade da causa petendi entre o processo administrativo e judicial.',
@@ -325,11 +330,11 @@ III - recursos das decisões do INSS relacionados à comprovação de atividade 
                 },
                 {
                     id: 'naoComprovacaoDaDeficiencia',
-                    label: 'Não comprovação da deficiência',
+                    titulo: 'Não comprovação da deficiência',
                     ramificacao: {
                         irPara: 'procurador',
                     },
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: 'A parte recorrente submeteu-se o requerente à avaliação social e médica, às quais decidiram pela não comprovação da deficiência contida nos §§ 2º e 10 do art. 20 da Lei 8.742/93.',
@@ -381,16 +386,16 @@ Deste modo, não restam comprovados os requisitos relativos à deficiência.`,
             opcoes: [
                 {
                     id: 'acaoJudicial',
-                    label: 'Ação judicial com mesmo objeto',
+                    titulo: 'Ação judicial com mesmo objeto',
                     ramificacao: { irPara: 'procurador' },
-                    variaveis: [
+                    listaVariaveis: [
                         {
                             id: 'numAcaoJudicial',
-                            label: 'Nº da ação judicial',
+                            titulo: 'Nº da ação judicial',
                             tipo: 'texto',
                         },
                     ],
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: 'Ingressou com ação judicial ${numAcaoJudicial} com mesmo objeto deste recurso administrativo.\nApós análise, é inequívoca a similaridade da causa petendi entre o processo administrativo e judicial.',
@@ -428,18 +433,18 @@ III - recursos das decisões do INSS relacionados à comprovação de atividade 
                 },
                 {
                     id: 'incapacidadePmfFavoravel',
-                    label: 'Incapacidade - PMF favorável',
+                    titulo: 'Incapacidade - PMF favorável',
                     ramificacao: {
                         irPara: 'procurador',
                     },
-                    variaveis: [
+                    listaVariaveis: [
                         {
                             id: 'dataNovaCessacao',
-                            label: 'Nova cessação',
+                            titulo: 'Nova cessação',
                             tipo: 'data',
                         },
                     ],
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'recurso',
                             texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
@@ -469,11 +474,11 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
                 },
                 {
                     id: 'incapacidadePmfContrario',
-                    label: 'Incapacidade - PMF contrário',
+                    titulo: 'Incapacidade - PMF contrário',
                     ramificacao: {
                         irPara: 'procurador',
                     },
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'recurso',
                             texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
@@ -509,11 +514,11 @@ Por ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria
                 },
                 {
                     id: 'ntepPmfFavoravel',
-                    label: 'NTEP - PMF favorável',
+                    titulo: 'NTEP - PMF favorável',
                     ramificacao: {
                         irPara: 'procurador',
                     },
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: 'A perícia médica federal reconheceu o nexo técnico.',
@@ -562,11 +567,11 @@ Deste modo, deve a espécie ser considerada previdenciária, e não acidentária
                 },
                 {
                     id: 'ntepPmfContrario',
-                    label: 'NTEP - PMF contrário',
+                    titulo: 'NTEP - PMF contrário',
                     ramificacao: {
                         irPara: 'procurador',
                     },
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: 'A perícia médica federal reconheceu o nexo técnico.',
@@ -622,8 +627,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
             opcoes: [
                 {
                     id: 'b31',
-                    label: '31 - Auxílio Doença',
-                    texto: [
+                    titulo: '31 - Auxílio Doença',
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'Auxílio Doença',
@@ -643,8 +648,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'b91',
-                    label: '91 - Auxílio Acidente',
-                    texto: [
+                    titulo: '91 - Auxílio Acidente',
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'Auxílio Acidente',
@@ -664,8 +669,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'b25',
-                    label: '25 - Auxílio Reclusão',
-                    texto: [
+                    titulo: '25 - Auxílio Reclusão',
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'Auxílio Reclusão',
@@ -694,8 +699,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
             opcoes: [
                 {
                     id: 'nao',
-                    label: 'Não',
-                    texto: [
+                    titulo: 'Não',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: ' ',
@@ -707,20 +712,20 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'sim',
-                    label: 'Sim',
-                    variaveis: [
+                    titulo: 'Sim',
+                    listaVariaveis: [
                         {
                             id: 'nome',
-                            label: 'Nome do procurador',
+                            titulo: 'Nome do procurador',
                             tipo: 'texto',
                         },
                         {
                             id: 'oab',
-                            label: 'OAB',
+                            titulo: 'OAB',
                             tipo: 'texto',
                         },
                     ],
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: 'A parte recorrente está devidamente representada por ${nome} (OAB nº ${oab}).',
@@ -740,8 +745,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
             opcoes: [
                 {
                     id: 'temp',
-                    label: 'Recurso Tempestivo sem registro da ciência',
-                    texto: [
+                    titulo: 'Recurso Tempestivo sem registro da ciência',
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'tempestivamente interposto',
@@ -763,20 +768,20 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'temp-cien',
-                    label: 'Recurso Tempestivo com registro da ciência',
-                    variaveis: [
+                    titulo: 'Recurso Tempestivo com registro da ciência',
+                    listaVariaveis: [
                         {
                             id: 'dataRegistroDecisao',
-                            label: 'Data de registro da decisão',
+                            titulo: 'Data de registro da decisão',
                             tipo: 'data',
                         },
                         {
                             id: 'dataInterposicaoRecurso',
-                            label: 'Data da interposição do recurso',
+                            titulo: 'Data da interposição do recurso',
                             tipo: 'data',
                         },
                     ],
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'Tempestivo com registro da ciência',
@@ -798,20 +803,20 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'intemp',
-                    label: 'Recurso Intempestivo',
-                    variaveis: [
+                    titulo: 'Recurso Intempestivo',
+                    listaVariaveis: [
                         {
                             id: 'dataRegistroDecisao',
-                            label: 'Data de registro da decisão',
+                            titulo: 'Data de registro da decisão',
                             tipo: 'data',
                         },
                         {
                             id: 'dataInterposicaoRecurso',
-                            label: 'Data da interposição do recurso',
+                            titulo: 'Data da interposição do recurso',
                             tipo: 'data',
                         },
                     ],
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'Intempestivo',
@@ -833,20 +838,20 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'intemp-relev',
-                    label: 'Recurso Intempestivo - relevada',
-                    variaveis: [
+                    titulo: 'Recurso Intempestivo - relevada',
+                    listaVariaveis: [
                         {
                             id: 'dataRegistroDecisao',
-                            label: 'Data de registro da decisão',
+                            titulo: 'Data de registro da decisão',
                             tipo: 'data',
                         },
                         {
                             id: 'dataInterposicaoRecurso',
-                            label: 'Data da interposição do recurso',
+                            titulo: 'Data da interposição do recurso',
                             tipo: 'data',
                         },
                     ],
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'descricao',
                             texto: 'Intempestivo - relevada',
@@ -875,8 +880,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
             selecoes: [
                 {
                     id: 'carencia',
-                    label: 'Carência',
-                    texto: [
+                    titulo: 'Carência',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -898,25 +903,25 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'carencia-doencao-nao-isenta',
-                    label: 'Carência – Doença não isenta carência',
-                    variaveis: [
+                    titulo: 'Carência – Doença não isenta carência',
+                    listaVariaveis: [
                         {
                             id: 'tipo-segurado',
-                            label: 'Tipo de Segurado',
+                            titulo: 'Tipo de Segurado',
                             tipo: 'texto',
                         },
                         {
                             id: 'inicio-qualidade-segurado',
-                            label: 'Data início da qualidade de Segurado',
+                            titulo: 'Data início da qualidade de Segurado',
                             tipo: 'texto',
                         },
                         {
                             id: 'fim-qualidade-segurado',
-                            label: 'Data fim da qualidade de Segurado',
+                            titulo: 'Data fim da qualidade de Segurado',
                             tipo: 'texto',
                         },
                     ],
-                    texto: [
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Consta no Cadastro Nacional do Seguro Social – CNIS – o início das contribuições na qualidade de segurado ${tipo-segurado} a partir de ${inicio-qualidade-segurado} até o ${fim-qualidade-segurado} [ou evento gerador], num total de NN contribuições apuradas pelo INSS.</p>',
@@ -938,8 +943,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'auxilio-reclusao-certidao',
-                    label: 'Auxílio-Reclusão - certidão carcerária',
-                    texto: [
+                    titulo: 'Auxílio-Reclusão - certidão carcerária',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Houve apresentação pela parte recorrente da comprovação da reclusão em regime fechado a partir de XX/XX/XXXX.</p><p>Foi emitida exigência para apresentar Certidão Judicial, referente ao regime de reclusão e a data da prisão, mas esta não foi devidamente atendida pela parte recorrente.</p>',
@@ -961,8 +966,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado',
-                    label: 'Perda da qualidade de segurado',
-                    texto: [
+                    titulo: 'Perda da qualidade de segurado',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Consta no Cadastro Nacional do Seguro Social – CNIS – a última contribuição em XX/XX/XXXX na condição de [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo/ beneficiário de auxílio incapacidade temporária/ segregado compulsório/ segurado recluso/ licenciado das Forças Armadas].</p><p>Não há comprovação nos autos de mais de 120 contribuições mensais, anteriores a perda desta qualidade, ou a comprovação de desemprego por órgão do Ministério do Trabalho e Previdência.</p><p>Há a comprovação de mais de 120 contribuições mensais sem a perda da qualidade de segurado, antes de XX/XX/XXXX.<br>Nos termos do evento X, há a comprovação da condição de desemprego por meio do [recebimento de seguro desemprego/inscrição cadastral no Sistema Nacional de Emprego - SINE].</p>',
@@ -984,8 +989,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-18-06-2019-hoje',
-                    label: 'Perda da qualidade de segurado - com reingresso - 18/06/2019 - hoje',
-                    texto: [
+                    titulo: 'Perda da qualidade de segurado - com reingresso - 18/06/2019 - hoje',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Consta no Cadastro Nacional do Seguro Social – CNIS – a última contribuição em XX/XX/XXXX na condição de [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo/ beneficiário de auxílio incapacidade temporária/ segregado compulsório/ segurado recluso/ licenciado das Forças Armadas].<br>Tempos depois, em WW/WW/WWWW, filiou-se como [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo] e recolheu até [DII/dt óbito/dt reclusão/dt maternidade], perfazendo N contribuições a partir da nova filiação.</p>',
@@ -1007,8 +1012,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-até-01-07-2016-e-05-11-2016-05-01-2017',
-                    label: 'Perda da qualidade de segurado - com reingresso - até 01/07/2016 e 05/11/2016 - 05/01/2017',
-                    texto: [
+                    titulo: 'Perda da qualidade de segurado - com reingresso - até 01/07/2016 e 05/11/2016 - 05/01/2017',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Consta no Cadastro Nacional do Seguro Social – CNIS – a última contribuição em XX/XX/XXXX na condição de [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo/ beneficiário de auxílio incapacidade temporária/ segregado compulsório/ segurado recluso/ licenciado das Forças Armadas].<br>Tempos depois, em WW/WW/WWWW, filiou-se como [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo] e recolheu até [DII/dt óbito/dt reclusão/dt maternidade], perfazendo N contribuições a partir da nova filiação.</p>',
@@ -1030,8 +1035,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-08-07-2016-04-11-2016',
-                    label: 'Perda da qualidade de segurado - com reingresso - 08/07/2016 - 04/11/2016',
-                    texto: [
+                    titulo: 'Perda da qualidade de segurado - com reingresso - 08/07/2016 - 04/11/2016',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Consta no Cadastro Nacional do Seguro Social – CNIS – a última contribuição em XX/XX/XXXX na condição de [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo/ beneficiário de auxílio incapacidade temporária/ segregado compulsório/ segurado recluso/ licenciado das Forças Armadas].<br>Tempos depois, em WW/WW/WWWW, filiou-se como [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo] e recolheu até [DII/dt óbito/dt reclusão/dt maternidade], perfazendo N contribuições a partir da nova filiação.</p>',
@@ -1053,8 +1058,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-06-01-2017-26-06-2017',
-                    label: 'Perda da qualidade de segurado - com reingresso - 06/01/2017 – 26/06/2017',
-                    texto: [
+                    titulo: 'Perda da qualidade de segurado - com reingresso - 06/01/2017 – 26/06/2017',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Consta no Cadastro Nacional do Seguro Social – CNIS – a última contribuição em XX/XX/XXXX na condição de [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo/ beneficiário de auxílio incapacidade temporária/ segregado compulsório/ segurado recluso/ licenciado das Forças Armadas].<br>Tempos depois, em WW/WW/WWWW, filiou-se como [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo] e recolheu até [DII/dt óbito/dt reclusão/dt maternidade], perfazendo N contribuições a partir da nova filiação.</p>',
@@ -1076,8 +1081,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-27-06-2017-17-01-2019',
-                    label: 'Perda da qualidade de segurado - com reingresso - 27/06/2017 - 17/01/2019',
-                    texto: [
+                    titulo: 'Perda da qualidade de segurado - com reingresso - 27/06/2017 - 17/01/2019',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Consta no Cadastro Nacional do Seguro Social – CNIS – a última contribuição em XX/XX/XXXX na condição de [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo/ beneficiário de auxílio incapacidade temporária/ segregado compulsório/ segurado recluso/ licenciado das Forças Armadas].<br>Tempos depois, em WW/WW/WWWW, filiou-se como [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo] e recolheu até [DII/dt óbito/dt reclusão/dt maternidade], perfazendo N contribuições a partir da nova filiação.</p>',
@@ -1099,8 +1104,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-18-01-2019-17-06-2019',
-                    label: 'Perda da qualidade de segurado - com reingresso - 18/01/2019 – 17/06/2019',
-                    texto: [
+                    titulo: 'Perda da qualidade de segurado - com reingresso - 18/01/2019 – 17/06/2019',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Consta no Cadastro Nacional do Seguro Social – CNIS – a última contribuição em XX/XX/XXXX na condição de [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo/ beneficiário de auxílio incapacidade temporária/ segregado compulsório/ segurado recluso/ licenciado das Forças Armadas].<br>Tempos depois, em WW/WW/WWWW, filiou-se como [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo] e recolheu até [DII/dt óbito/dt reclusão/dt maternidade], perfazendo N contribuições a partir da nova filiação.</p>',
@@ -1122,8 +1127,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'ctps',
-                    label: 'CTPS',
-                    texto: [
+                    titulo: 'CTPS',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Deixou o INSS de considerar os seguintes vínculos da CTPS nº XXXX, série xxxx, expedida em xx/xx/xxxx, fls XX/XX:<br>- XX/XX/XXXX, fl. XX, empresa XXXXXXXX [, com contribuição sindical fls. XX, alteração de salário fls XX];<br>- XX/XX/XXXX, fl. XX, empresa XXXXXXXX [, com contribuição sindical fls. XX, alteração de salário fls XX];</p><p>[Pergunta: Há defeito formal que lhe comprometa a fidedignidade? Qual {não está em ordem cronológica/ há rasura/ não é contemporaneo}<br>Não há registro no processo de defeito formal na referida CTPS, já que os registros existentes estão em ordem cronológica, contemporâneos e sem rasuras.<br>Consta no processo que há [rasura/extemporaneidade/falta de cronologicidade] na referida CTPS.</p>',
@@ -1145,8 +1150,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'auxilio-reclusao-regime-fechado',
-                    label: 'Auxílio-Reclusão - regime fechado',
-                    texto: [
+                    titulo: 'Auxílio-Reclusão - regime fechado',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Houve apresentação pela parte recorrente da comprovação da reclusão em regime fechado a partir de XX/XX/XXXX.</p><p>Consta nos autos que o segurado foi submetido à reclusão em regime [aberto/semiaberto].</p>',
@@ -1168,8 +1173,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'loas-renda-per-capita-indeferimento',
-                    label: 'LOAS - RENDA PER CAPITA - INDEFERIMENTO',
-                    texto: [
+                    titulo: 'LOAS - RENDA PER CAPITA - INDEFERIMENTO',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>O INSS indeferiu o benefício em razão da renda per capita ser igual/superior a um quarto do salário mínimo.</p><p>[EXISÊNCIA DE PARECER TÉCNICO DO ASSISTENTE SOCIAL COMPROVANDO A MISERABILIDADE SUBJETIVA]<br>Em sede de diligência preliminar, foi solicitado um Parecer do Assistente Social do INSS, ev. XX, para aferir o grau de miserabilidade do grupo familiar. O parecer técnico traz a informação de que a recorrente [não] se encontra em vulnerabilidade ou risco social[ por comprometimento da renda].</p>',
@@ -1191,8 +1196,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'tempo-especial-profissional-da-saude',
-                    label: 'TEMPO ESPECIAL - PROFISSIONAL DA SAÚDE',
-                    texto: [
+                    titulo: 'TEMPO ESPECIAL - PROFISSIONAL DA SAÚDE',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>- XX/XX/XXX à XX/XX/XXX – formulário [PPP/SB40/DIRBEN8030] da empresa XXXXXXX, fls. XX/XX, com exposição a agentes biológicos “XXXXXXX”, cuja descrição da atividade é “XXXXXX”.</p>',
@@ -1214,8 +1219,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'loas-renda-per-capita-suspensao-pelo-mob',
-                    label: 'LOAS - RENDA PER CAPITA - SUSPENSÃO PELO MOB',
-                    texto: [
+                    titulo: 'LOAS - RENDA PER CAPITA - SUSPENSÃO PELO MOB',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Em síntese, o INSS decidiu pela suspensão do benefício em razão do [recebimento de benefício/comprovação de remuneração] pelo [próprio recorrente/integrante do membro familiar - nome do membro], razão pela qual se superou o critério objetivo de renda per capita para R$ XXXX.</p><p>Em síntese, o INSS decidiu pela suspensão do benefício em razão da falta de inscrição no Cadastro Único do Governo Federal - CadÚnico.</p>',
@@ -1237,8 +1242,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'beneficio-com-indicios-de-irregularidade-com-devolução-valores-e-sem-parcelamento',
-                    label: 'Benefício com Indícios de irregularidade – com devolução valores e SEM parcelamento',
-                    texto: [
+                    titulo: 'Benefício com Indícios de irregularidade – com devolução valores e SEM parcelamento',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por _________ , haja vista não concordar com a decisão do INSS que determinou a suspensão &nbsp;do Benefício de Prestação Continuada da Assistência Social ao idoso (NB 88/_________ ), de que está em gozo desde _________ , por indícios de superação da renda per capita familiar.</p>',
@@ -1260,8 +1265,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'beneficio-de-prestacao-continuada-cadunico-atualizado',
-                    label: 'Benefício de prestação continuada - Cadúnico atualizado',
-                    texto: [
+                    titulo: 'Benefício de prestação continuada - Cadúnico atualizado',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por _______ , haja vista não concordar com a decisão do INSS que determinou a suspensão do Benefício de Prestação Continuada da Assistência Social (NB _______ ), de que está em gozo desde _______ &nbsp;a _______ , por não atendimento a convocação do posto (p. _______ ). Em consulta as bases governamentais, a ultima atualização do cadastro único se deu em _______ .</p>',
@@ -1283,8 +1288,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'beneficio-de-prestacao-continuada-irregularidade-idoso-com-loas-devolução-atividade-contribuinte-individual-filho-solteiro',
-                    label: 'Benefício de prestação continuada - Irregularidade - idoso com loas - devolução - atividade contribuinte individual filho solteiro',
-                    texto: [
+                    titulo: 'Benefício de prestação continuada - Irregularidade - idoso com loas - devolução - atividade contribuinte individual filho solteiro',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por &nbsp;_________ , por suas procuradoras (p. ___ ), haja vista não concordar com a decisão do INSS que determinou a cessação do benefício de Benefício de Prestação Continuada da Assistência Social &nbsp;(NB: &nbsp;_________ ), de que esteve em gozo de _________ a _________, por superação da renda familiar, em decorrência da renda de _________ .</p>',
@@ -1306,8 +1311,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'beneficio-de-prestacao-continuada-deficiencia-nao-atende',
-                    label: 'Benefício de prestação continuada - Deficiência NÃO ATENDE',
-                    texto: [
+                    titulo: 'Benefício de prestação continuada - Deficiência NÃO ATENDE',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: 'Recurso interposto por ______ , haja vista não concordar com a decisão do INSS que indeferiu o Benefício de Prestação Continuada da Assistência Social à pessoa com deficiência (NB: 87/______ ), requerido em ______ , por não atendimento ao critério de deficiência (p. ______ ). Feito o relato, foi concluído pela necessidade de reavaliação médica do estado de saúde da recorrente na data do requerimento, em 09/03/2018, pela Perícia Médica Federal, nos moldes do art. 40-B da Lei 8.742/93 c/c PROVIMENTO Nº 3, DE 5 DE MAIO DE 2020 do CRPS (p. ______ ). Em grau de recurso, segundo a perícia médica federal, não há novos elementos para modificar o entendimento, mantendo-se o não preenchimento de requisitos que definem a pessoa com deficiência para fins de acesso ao BPC (p. ______ ).',
@@ -1329,8 +1334,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'benefício-de-prestacao-continuada-renda-nao-atende',
-                    label: 'Benefício de prestação continuada - Renda NÃO ATENDE',
-                    texto: [
+                    titulo: 'Benefício de prestação continuada - Renda NÃO ATENDE',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por &nbsp;________ , haja vista não concordar com a decisão do INSS que indeferiu o Benefício de Prestação Continuada da Assistência Social (NB: ________ ), requerido em ________ &nbsp;(data de entrada do requerimento- DER), por renda per capita superior ao limite legal (p. ________ ).</p>',
@@ -1352,8 +1357,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'carência-–-cômputo-de-benefício-por-incapacidade',
-                    label: 'Carência – Cômputo de benefício por incapacidade',
-                    texto: [
+                    titulo: 'Carência – Cômputo de benefício por incapacidade',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Em suas razões recursais, insurgiu-se contra o indeferimento, alegando ter direito ao benefício mediante o computo da integralidade dos períodos contributivos, bem como daqueles de que esteve em gozo de auxílio-doença (p. &nbsp;);</p>',
@@ -1375,8 +1380,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'cnis-complementacao-recolhimento-plano-simplificado',
-                    label: 'CNIS - complementação recolhimento plano simplificado',
-                    texto: [
+                    titulo: 'CNIS - complementação recolhimento plano simplificado',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por _________ , haja vista não concordar com a decisão do INSS que indeferiu o Benefício de Aposentadoria por tempo de contribuição (NB: _________), requerido em _________, por terem sido apurados __ anos, __ meses e __ dias até o requerimento (p. _________ ). Conforme despacho indeferitório, os recolhimentos efetuados sob alíquota de _ % foram desconsiderados para efeito de tempo de contribuição (p. _________ ).</p>',
@@ -1398,8 +1403,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'cnis-salario-de-contribuicao-inferior-ao-mínimo',
-                    label: 'CNIS - salário de contribuição inferior ao mínimo',
-                    texto: [
+                    titulo: 'CNIS - salário de contribuição inferior ao mínimo',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por _________ , haja vista não concordar com a decisão do INSS que indeferiu o Benefício de Aposentadoria por tempo de contribuição (NB: _________), requerido em _________, por terem sido apurados __ anos, __ meses e __ dias até o requerimento (p. _________ ). Conforme despacho indeferitório, os recolhimentos efetuados sobre salário de contribuição inferior ao mínimo foram desconsiderados para efeito de tempo de contribuição (p. _________ ).</p>',
@@ -1421,8 +1426,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'cnis-com-indicios-de-irregularidade-recolhimento-como-facultativo-baixa-renda-pendente-de-analise',
-                    label: 'CNIS com indícios de irregularidade - recolhimento como facultativo baixa renda pendente de análise',
-                    texto: [
+                    titulo: 'CNIS com indícios de irregularidade - recolhimento como facultativo baixa renda pendente de análise',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Em consulta ao CNIS - Cadastro Nacional de Informações Sociais – há registro de recolhimentos com marca de irregularidade de _________ a _________ , em _________ e de _________ a _________ , por “RECOLHIMENTO FACULTATIVO BAIXA RENDA NÃO VALIDADE/HOMOLOGADO” sigla PREC-FBR.</p>',
@@ -1444,8 +1449,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'cnis-com-indicios-de-irregularidade-recolhimento-extemporaneo-lei-e-regimento-intenro-oportunidade-de-producao-de-prova',
-                    label: 'CNIS com indícios de irregularidade - recolhimento extemporâneo - lei e regimento intenro - oportunidade de produção de prova',
-                    texto: [
+                    titulo: 'CNIS com indícios de irregularidade - recolhimento extemporâneo - lei e regimento intenro - oportunidade de produção de prova',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Em consulta ao CNIS - Cadastro Nacional de Informações Sociais- há registro de extemporaneidade nas contribuições de ___ a _______ , _______ , _______ &nbsp;a_______ . Emitida exigência para regularização (p. Exigência para regularização (p. ___ ).</p>',
@@ -1467,8 +1472,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'contagem-reciproca-tempo-especial',
-                    label: 'Contagem recíproca – Tempo especial',
-                    texto: [
+                    titulo: 'Contagem recíproca – Tempo especial',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>O(A) requerente pleiteia o reconhecimento de tempo especial para o intervalo de (XX/XX/XXXX). O período foi averbado pelo INSS para fins de contagem recíproca, em vista da apresentação da CTC (Certidão de Tempo de Contribuição) expedida por __________________. Foi apresentado Perfil Profissiográfico Previdenciário – PPP para o intervalo averbado, no cargo de ________, indicada a exposição a(os) agente(s) nocivo(s) ______________.</p>',
@@ -1490,8 +1495,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'contribuinte-individual-e-facultativo-primeiro-recolhimento-em-dia-apos-perda-qualidade-segurado-carencia-ci-e-facultativo',
-                    label: 'Contribuinte individual e facultativo – primeiro recolhimento em dia;após perda qualidade segurado - carencia - ci e facultativo',
-                    texto: [
+                    titulo: 'Contribuinte individual e facultativo – primeiro recolhimento em dia;após perda qualidade segurado - carencia - ci e facultativo',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -1513,8 +1518,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'doméstico-filiacao',
-                    label: 'Doméstico – Filiação',
-                    texto: [
+                    titulo: 'Doméstico – Filiação',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>O(A) requerente pleiteia o cômputo do intervalo de (XX/XX/XXXX), laborado como empregado(a) doméstico(a), na residência de ___________. O vínculo está anotado na CTPS (Carteira de Trabalho e da Previdência Social) n.º_____, emitida em _______ (fls.).</p><p><br>O período de (XX/XX/XXXX) não foi considerado sob o fundamento da ausência do recolhimento previdenciário e da não comprovação da vinculação de empregado(a) doméstico(a) até a DER (Data de Entrada do Requerimento).</p><p>Em recurso, o(a) requerente busca a concessão / revisão do benefício para o cômputo do intervalo de (XX/XX/XXXX), laborado como empregado(a) doméstico(a), na residência de ___________.<br>&nbsp;</p>',
@@ -1536,8 +1541,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'empregado-aluno-aprendiz',
-                    label: 'Empregado – Aluno-aprendiz',
-                    texto: [
+                    titulo: 'Empregado – Aluno-aprendiz',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>O(A) requerente pleiteia o cômputo do intervalo de (XX/XX/XXXX), na condição de aluno-aprendiz.</p><p><br>Foi apresentado Certidão emitida pelo ________________, para o intervalo de (XX/XX/XXXX), no curso de ________________, indicado o fornecimento de ____________, por conta do orçamento ___________.<br>&nbsp;</p>',
@@ -1559,8 +1564,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'enquadramento-eletricista',
-                    label: 'Enquadramento - eletricista',
-                    texto: [
+                    titulo: 'Enquadramento - eletricista',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -1582,8 +1587,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'enquadramento-categoria-maritimo-marinheiro',
-                    label: 'Enquadramento categoria - marítimo/marinheiro',
-                    texto: [
+                    titulo: 'Enquadramento categoria - marítimo/marinheiro',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Em suas razões de recurso, alegou, em síntese, ter direito ao benefício mediante enquadramento, por categoria profissional, no código 2.4.2 do Decreto 53.831/64Para embasar seu pedido, apresentou caderneta de inscrição e registro junto ao Ministério da Marinha, em que consta a categoria de “contramestre fluvial”, e carteira de trabalho, onde consta cargo de “tarifeiro fluvial”, ”marinheiro”, “marinheiro fluvial”, “marinheiro fluvial de convés” (p. ______ ); ...</p>',
@@ -1605,8 +1610,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'especial-categoria-profissional',
-                    label: 'Especial – categoria profissional',
-                    texto: [
+                    titulo: 'Especial – categoria profissional',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Trata-se de ________, requerido por __________, nascido(a) em ________, com DER (Data de Entrada do Requerimento) em ______.</p><p>Foi requerido o reconhecimento de tempo especial com a apresentação de formulário PPP (Perfil Profissiográfico Previdenciário), emitido pela empresa _________, para o intervalo de (XX/XX/XXXX), no cargo de ___________.</p><p>Em recurso, o(a) Interessado(a) afirma ter se sujeitado às condições especiais na atividade de __________, de modo que cabe o enquadramento do intervalo de (XX/XX/XXXX).</p><p>&nbsp;</p>',
@@ -1628,8 +1633,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'especial-formulario-sem-exposicao-a-agentes-nocivos-e-nao-enquadra-por-categoria-profissional',
-                    label: 'Especial – formulário sem exposição a agentes nocivos e não enquadra por categoria profissional',
-                    texto: [
+                    titulo: 'Especial – formulário sem exposição a agentes nocivos e não enquadra por categoria profissional',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Trata-se de ________, requerido por __________, nascido(a) em ________, com DER (Data de Entrada do Requerimento) em ______.</p><p>Foi requerido o reconhecimento de tempo especial com a apresentação de formulário PPP (Perfil Profissiográfico Previdenciário), emitido pela empresa _________, para o intervalo de (XX/XX/XXXX), no cargo de ___________, sem a indicação de fatores de risco.</p><p>Em recurso, o(a) Interessado(a) afirma ter se sujeitado às condições especiais, de modo que cabe o enquadramento do intervalo de (XX/XX/XXXX).</p><p>&nbsp;</p>',
@@ -1651,8 +1656,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'especial-metodologia-fundacentro-e-nr-15',
-                    label: 'Especial – Metodologia Fundacentro e NR-15',
-                    texto: [
+                    titulo: 'Especial – Metodologia Fundacentro e NR-15',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>O(A) requerente pleiteia o reconhecimento de tempo especial para o intervalo a partir de 01.01.2004, tendo apresentado o seguinte elemento:</p><p><br>(a) &nbsp; &nbsp; &nbsp; &nbsp;Formulário PPP (Perfil Profissiográfico Previdenciário) para o intervalo de ________, laborado no cargo de ______, no setor ________, da empresa __________, com a indicação da exposição ao agente ruído acima de 85dBA (técnica: _____).</p><p><br>A Perícia Médica não enquadrou o período de __________, sob o fundamento da não apuração do ruído com base na NHO-01 da FUNDACENTRO / NEN.</p><p>Em recurso, o(a) requerente busca a concessão / revisão do benefício com o enquadramento do período de ____________, aduzindo ter laborado em condições especiais, com a exposição ao ruído acima do limite tolerado, atendida a metodologia prevista na legislação para a sua apuração.&nbsp;<br>&nbsp;</p>',
@@ -1674,8 +1679,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'expedicao-de-gps',
-                    label: 'Expedição de GPS',
-                    texto: [
+                    titulo: 'Expedição de GPS',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Em suas razões de recurso, alegou ter direito ao benefício, mediante expedição de guia da previdência social para indenização do período necessário.</p>',
@@ -1697,8 +1702,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'incapacidade-antecipacao-auxilio-doenca-atestado-nos-moldes-da-portaria-9-831-2020-duracao-maxima-tres-meses',
-                    label: 'Incapacidade - antecipação auxílio-doença - atestado nos moldes da Portaria 9.831/2020; duração maxima TRES MESES',
-                    texto: [
+                    titulo: 'Incapacidade - antecipação auxílio-doença - atestado nos moldes da Portaria 9.831/2020; duração maxima TRES MESES',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Para embasar o pedido apresentou atestado, com nome e CRM do médico, bem como CID e período de repouso necessário (p. ).</p>',
@@ -1720,8 +1725,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'incapacidade-indeferimento-retorno-a-atividade-remunerada',
-                    label: 'Incapacidade - INDEFERIMENTO - retorno a atividade remunerada',
-                    texto: [
+                    titulo: 'Incapacidade - INDEFERIMENTO - retorno a atividade remunerada',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -1743,8 +1748,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'incapacidade-cessacao-retorno-a-atividade-remunerada',
-                    label: 'Incapacidade - CESSAÇÃO - retorno a atividade remunerada',
-                    texto: [
+                    titulo: 'Incapacidade - CESSAÇÃO - retorno a atividade remunerada',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Em consulta ao CNIS – Cadastro Nacional de Informações Sociais – observou-se que retornou ao trabalho após a cessação do benefício.</p>',
@@ -1766,8 +1771,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'incapacidade-laborativa-prorrogacao-dar-anterior-decreto-10.410/2020',
-                    label: 'Incapacidade laborativa [PRORROGAÇÃO - DAR - ANTERIOR DECRETO 10.410/2020',
-                    texto: [
+                    titulo: 'Incapacidade laborativa [PRORROGAÇÃO - DAR - ANTERIOR DECRETO 10.410/2020',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por _______, haja vista não concordar com a decisão do INSS que determinou a cessação do benefício de Auxílio-doença previdenciário (NB _______ ), de que esteve em gozo de _______ a _______ . Em suas razões de recurso, alegou, em síntese, ter direito ao benefício (p. ). Os autos foram encaminhados à Perícia Médica Federal, que entendeu pela possibilidade de retificar a data de cessação para _______ (p. &nbsp;). Em consulta ao CNIS – Cadastro nacional de informações sociais, não foi detectada gozo de outro benefício ou retorno ao trabalho, até a nova data médica fixada.</p>',
@@ -1789,8 +1794,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'incapacidade-laborativa-prorrogacao-negar-anterior-decreto-10-410-2020',
-                    label: 'Incapacidade laborativa [PRORROGAÇÃO - NEGAR - ANTERIOR DECRETO 10.410/2020',
-                    texto: [
+                    titulo: 'Incapacidade laborativa [PRORROGAÇÃO - NEGAR - ANTERIOR DECRETO 10.410/2020',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por _______ , haja vista não concordar com a decisão do INSS que cessou o o benefício de Auxílio doença (NB _______ &nbsp;), de que esteve em gozo desde _______ a _______. Em suas razões de recurso, alegou, em síntese, ter direito ao benefício (p. ).Em consulta ao sistema de benefícios, não foi detectada qualquer hipótese de perda do objeto do recurso. Segundo a perícia médica federal, não há elementos técnicos de convicção suficientes para alteração da conclusão médica anterior (evento ___ ).</p>',
@@ -1812,8 +1817,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'incapacidade-laborativa-indeferimento-negar-pos-decreto-2020',
-                    label: 'INCAPACIDADE LABORATIVA [INDEFERIMENTO - NEGAR - PÓS DECRETO 2020',
-                    texto: [
+                    titulo: 'INCAPACIDADE LABORATIVA [INDEFERIMENTO - NEGAR - PÓS DECRETO 2020',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por _ , haja vista não concordar com a decisão do INSS que indeferiu o benefício de auxílio por incapacidade temporária (NB _ ), requerido em _ , por PARECER CONTRÁRIO DA PERÍCIA MÉDICA. Em suas razões de recurso, alegou, em síntese, ter direito ao benefício (p. _). Segundo a perícia médica federal, não há elementos para alteração da decisão anterior (evento _). Em consulta ao sistema de benefício, não foi detectada perda do objeto do recurso.</p>',
@@ -1835,8 +1840,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'incapacidade-laborativa-indeferimento-dar-pos-decreto-2020',
-                    label: 'INCAPACIDADE LABORATIVA [INDEFERIMENTO - DAR - PÓS DECRETO 2020',
-                    texto: [
+                    titulo: 'INCAPACIDADE LABORATIVA [INDEFERIMENTO - DAR - PÓS DECRETO 2020',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por ________ , haja vista não concordar com a decisão do INSS que indeferiu o benefício de auxílio por incapacidade temporária (NB ________), requerido em ________, por PARECER CONTRÁRIO DA PERÍCIA MÉDICA. Em suas razões de recurso, alegou, em síntese, ter direito ao benefício (p. _). Segundo a perícia médica federal, é possível retificar o indeferimento, tendo fixado as seguintes datas médicas: data de início da doença, em ________, data de início da incapacidade em ________, data de cessação, em ________ , por doença que ________ isenta do período regulamentar de carência. Em consulta ao sistema de benefício, não foram detectados outros benefícios por incapacidade nesse período; em consulta ao extrato previdenciário, consta afastamento da atividade, na condição de ________ .</p>',
@@ -1858,8 +1863,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'materia-julgada-administrativa-preclusao-processual',
-                    label: 'Matéria julgada administrativa - preclusão processual',
-                    texto: [
+                    titulo: 'Matéria julgada administrativa - preclusão processual',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Foi detectado julgamento, referente ao mesmo objeto do recurso, por outro órgão julgador do Conselho de Recursos da Previdência Social (evento _ ).</p>',
@@ -1881,8 +1886,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'pensao-por-morte-filho-maior-invalido',
-                    label: 'Pensão por morte - filho maior inválido',
-                    texto: [
+                    titulo: 'Pensão por morte - filho maior inválido',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto por _________ , nascid_ em _________ , haja vista não concordar com a decisão do INSS que indeferiu o benefício de Pensão por morte previdenciária (NB _________), requerido em _________ , na condição de filh_ maior inválid_ de _________ , por não comprovação da qualidade de dependente (p. _ ).</p>',
@@ -1904,8 +1909,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'pensao-por-morte-menos-de-18-contribuicoes-do-instituidor',
-                    label: 'Pensão por morte - menos de 18 contribuições do instituidor',
-                    texto: [
+                    titulo: 'Pensão por morte - menos de 18 contribuições do instituidor',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -1927,8 +1932,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'pensao-por-morte-relacao-com-menos-de-dois-anos',
-                    label: 'Pensão por morte - relação com menos de dois anos',
-                    texto: [
+                    titulo: 'Pensão por morte - relação com menos de dois anos',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -1950,8 +1955,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'pensao-por-morte-uniao-estavel-mais-de-uma-prova-dentro-de-24-meses',
-                    label: 'Pensão por morte - união estável - mais de uma prova dentro de 24 meses',
-                    texto: [
+                    titulo: 'Pensão por morte - união estável - mais de uma prova dentro de 24 meses',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -1973,8 +1978,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'qualidade-de-segurado-reingresso-com-nova-carencia',
-                    label: 'Qualidade de segurado – Reingresso com nova carência',
-                    texto: [
+                    titulo: 'Qualidade de segurado – Reingresso com nova carência',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Recurso interposto contra a decisão do INSS que indeferiu o pedido do benefício de ___, requerido em ____.As competências ____ não foram consideradas para carência pelo INSS pois foram recolhidas em atraso.Em suas razões recursais alega o recorrente que ___.</p>',
@@ -1996,8 +2001,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'reclamatoria-trabalhista',
-                    label: 'Reclamatória Trabalhista',
-                    texto: [
+                    titulo: 'Reclamatória Trabalhista',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>O(A) requerente pleiteia o cômputo do intervalo de (XX/XX/XXXX), laborado no cargo de (_____), perante a empresa ____________. Para a comprovação do vínculo foi apresentado cópias da Reclamação Trabalhista nº___________, tramitada perante a ______ Vara do Trabalho da Comarca de _______.</p><p><br>O INSS não computou o intervalo para fins previdenciários.</p><p>Em suas razões recursais, o(a) requerente sustenta novamente que cabe o cômputo do período de (XX/XX/XXXX), oriundo de Reclamação Trabalhista.</p><p>&nbsp;</p>',
@@ -2019,8 +2024,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'recorrente-nao-apresentou-documentos',
-                    label: 'Recorrente não apresentou documentos',
-                    texto: [
+                    titulo: 'Recorrente não apresentou documentos',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Antes de indeferir, o INSS emitiu carta de exigência para que a interessada apresentasse documentos a fim de modificar o tempo, mas não ela não atendeu (p. ). Após o protocolo do recurso, o Gabinete de Crises solicitou o complemento das razões de recurso e da prova documental, mas os prazo decorreram sem manifestação</p>',
@@ -2042,8 +2047,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'recurso-sem-assinatura-e-sem-atendimento-de-exigencia-pela-parte',
-                    label: 'Recurso sem assinatura e sem atendimento de exigência pela parte',
-                    texto: [
+                    titulo: 'Recurso sem assinatura e sem atendimento de exigência pela parte',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '<p>Em suas razões de recurso, alegou ter direito ao benefício, mas foi verificada necessidade devolver ao diligenciador para notificar a recorrente a assinar a petição de recurso (p. ) mas o prazo decorreu sem manifestação (p. ).</p>',
@@ -2065,8 +2070,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'salario-maternidade-sem-afastamento-atividade',
-                    label: 'Salário maternidade - sem afastamento atividade',
-                    texto: [
+                    titulo: 'Salário maternidade - sem afastamento atividade',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -2088,8 +2093,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'segurado-especial-prova-de-vinculo-com-terras-rurais-com-ja',
-                    label: 'Segurado especial - prova de vínculo com terras rurais; com J.A.',
-                    texto: [
+                    titulo: 'Segurado especial - prova de vínculo com terras rurais; com J.A.',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -2111,8 +2116,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'segurado-especial-atividade-em-outra-categoria-mais-de-120-dias-ano-civil',
-                    label: 'Segurado especial – atividade em outra categoria mais de 120 dias ano civil',
-                    texto: [
+                    titulo: 'Segurado especial – atividade em outra categoria mais de 120 dias ano civil',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -2134,8 +2139,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'segurado-especial-autodeclaracao',
-                    label: 'Segurado especial – autodeclaração',
-                    texto: [
+                    titulo: 'Segurado especial – autodeclaração',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -2157,8 +2162,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 {
                     id: 'trabalhador-rural-contribuinte-individual',
-                    label: 'Trabalhador rural - contribuinte individual',
-                    texto: [
+                    titulo: 'Trabalhador rural - contribuinte individual',
+                    listaTextos: [
                         {
                             categoria: 'relatorio',
                             texto: '',
@@ -2180,8 +2185,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2203,8 +2208,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2226,8 +2231,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2249,8 +2254,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2272,8 +2277,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2295,8 +2300,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2318,8 +2323,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2341,8 +2346,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2364,8 +2369,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2387,8 +2392,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2410,8 +2415,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2433,8 +2438,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2456,8 +2461,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2479,8 +2484,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2502,8 +2507,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2525,8 +2530,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2548,8 +2553,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2571,8 +2576,8 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 // },
                 // {
                 //     id: '',
-                //     label: '',
-                //     texto: [
+                //     titulo: '',
+                //     listaTextos: [
                 //         {
                 //             categoria: 'relatorio',
                 //             texto: '',
@@ -2595,7 +2600,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
             ],
         },
     ],
-    templates: [
+    listaModelos: [
         {
             id: 'relatorio',
             titulo: 'Relatório',

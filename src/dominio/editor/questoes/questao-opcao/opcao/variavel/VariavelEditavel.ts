@@ -10,6 +10,7 @@ import { ITipoVariavel } from './tipo-variavel/TipoVariavel';
 import { ITipoVariavelID } from './tipo-variavel/TipoVariavelID';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
 import { IEscapadorDeVariavelFactory } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
+import { VariavelDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface IVariavelEditavel extends IItemEditavel {
     getId(): IIdFormulario;
@@ -19,6 +20,7 @@ export interface IVariavelEditavel extends IItemEditavel {
     getTipo(): ITipoVariavelID;
     setTipo(tipo: ITipoVariavel): void;
     getEscapador(): IEscapadorDeVariavel;
+    gerarEspecificacao(): VariavelDTO;
 }
 
 export class VariavelEditavel
@@ -104,5 +106,14 @@ export class VariavelEditavel
 
     getEscapador() {
         return this.escapadorFactory.criarDeIdFormulario(this.id);
+    }
+
+    gerarEspecificacao() {
+        const retorno: VariavelDTO = {
+            id: this.id.toString(),
+            titulo: this.titulo.toString(),
+            tipo: this.tipo.toString(),
+        };
+        return retorno;
     }
 }

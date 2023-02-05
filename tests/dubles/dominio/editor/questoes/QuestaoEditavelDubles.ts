@@ -16,8 +16,12 @@ import {
     EscapadorDeQuestaoToStringStub,
 } from '../../comum/escapador/questao/EscapadorDeQuestaoDubles';
 import { IListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
+import { QuestaoOpcaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export class QuestaoEditavelErroStub implements IQuestaoEditavel {
+    gerarEspecificacao(): QuestaoOpcaoDTO {
+        throw new Error('Method not implemented.');
+    }
     erros = {
         id: 'Erro ao atualizar o id',
         titulo: 'Erro ao atualizar o titulo',
@@ -128,9 +132,15 @@ export class QuestaoEditavelDummy implements IQuestaoEditavel {
     getEscapadores(): IEscapadorDeQuestao[] {
         return this.escapadores;
     }
+    gerarEspecificacao(): QuestaoOpcaoDTO {
+        throw new Error('Method not implemented.');
+    }
 }
 
 export class QuestaoEditavelRetornaEscapadorStub implements IQuestaoEditavel {
+    gerarEspecificacao(): QuestaoOpcaoDTO {
+        throw new Error('Method not implemented.');
+    }
     escapadores = [new EscapadorDeQuestaoToStringStub()];
 
     getEscapadores(): IEscapadorDeQuestao[] {

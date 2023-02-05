@@ -12,8 +12,12 @@ import {
     EscapadorDeVariavelDummy,
     EscapadorDeVariavelToStringStub,
 } from '../../comum/escapador/variavel/EscapadorDeVariavelDubles';
+import { VariavelDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export class VariavelEditavelEditaComSucessoMock implements IVariavelEditavel {
+    gerarEspecificacao(): VariavelDTO {
+        throw new Error('Method not implemented.');
+    }
     private id = new IdFormularioDummy();
     private titulo = new TituloDummy();
     private tipo = new TipoVariavelIDDummy();
@@ -62,6 +66,9 @@ export class VariavelEditavelEditaComSucessoMock implements IVariavelEditavel {
 }
 
 export class VariavelEditavelErroStub implements IVariavelEditavel {
+    gerarEspecificacao(): VariavelDTO {
+        throw new Error('Method not implemented.');
+    }
     id = new IdFormularioDummy();
     titulo = new TituloDummy();
     tipo = 'dummy';
@@ -153,6 +160,10 @@ export class VariavelEditavelDummy implements IVariavelEditavel {
     getEscapador(): IEscapadorDeVariavel {
         return this.escapador;
     }
+    gerarEspecificacao(): VariavelDTO {
+        // TODO: retornar dummy
+        throw new Error('Method not implemented.');
+    }
 }
 
 export class ListaDeVariaveisEditavelDummy
@@ -192,6 +203,9 @@ export class ListaDeVariaveisEditavelDummy
 }
 
 class VariavelEditavelRetornaEscapadorStub implements IVariavelEditavel {
+    gerarEspecificacao(): VariavelDTO {
+        throw new Error('Method not implemented.');
+    }
     escapador = new EscapadorDeVariavelToStringStub();
 
     getEscapador(): EscapadorDeVariavelToStringStub {

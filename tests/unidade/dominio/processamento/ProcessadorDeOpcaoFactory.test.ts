@@ -19,9 +19,9 @@ describe('ProcessadorDeOpcaoFactory', () => {
 function makeOpcaoValorDtoFake() {
     const opcaoFake: OpcaoValorDTO = {
         id: 'id-opcao',
-        label: 'Label',
+        titulo: 'Label',
         ramificacao: { irPara: 'próximo' },
-        texto: [{ categoria: 'categoria1', texto: 'texto1' }],
+        listaTextos: [{ categoria: 'categoria1', texto: 'texto1' }],
     };
     return opcaoFake;
 }

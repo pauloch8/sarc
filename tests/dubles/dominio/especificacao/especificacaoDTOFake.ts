@@ -2,8 +2,8 @@ import { EspecificacaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export const especificacaoDTOFake: EspecificacaoDTO = {
     id: 'teste',
-    questoes: [],
-    templates: [
+    listaQuestoes: [],
+    listaModelos: [
         {
             id: 'teste',
             titulo: 'titulo',

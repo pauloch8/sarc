@@ -8,7 +8,7 @@ import {
 
 export class FormularioFactory {
     static criarDaEspecificacao(especificacao: EspecificacaoDTO) {
-        const questoes = especificacao.questoes
+        const questoes = especificacao.listaQuestoes
             .map(questao => {
                 try {
                     return QuestaoFactory.criarDeDto(questao);

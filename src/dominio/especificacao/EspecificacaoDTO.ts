@@ -2,11 +2,11 @@ export interface EspecificacaoDTO {
     id: string;
     titulo: string;
     subtitulo?: string;
-    questoes: QuestaoDTO[];
-    templates: Template[];
+    listaQuestoes: Array<QuestaoOpcaoDTO | QuestaoSelecaoDTO>;
+    listaModelos: ModeloDTO[];
 }
 
-export interface Template {
+export interface ModeloDTO {
     id: string;
     titulo: string;
     texto: string;
@@ -17,30 +17,38 @@ export interface QuestaoDTO {
     tipo: 'opcao' | 'selecao';
     titulo: string;
     subtitulo?: string;
-    opcoes?: OpcaoValorDTO[];
-    selecoes?: SelecaoValorDTO[];
     valorPadrao?: string;
+}
+
+export interface QuestaoOpcaoDTO extends QuestaoDTO {
+    tipo: 'opcao';
+    opcoes?: OpcaoValorDTO[];
+}
+
+export interface QuestaoSelecaoDTO extends QuestaoDTO {
+    tipo: 'selecao';
+    selecoes?: SelecaoValorDTO[];
 }
 
 export interface OpcaoValorDTO {
     id: string;
-    label: string;
-    variaveis?: VariavelDTO[];
-    texto: TextoDTO[];
+    titulo: string;
+    listaVariaveis?: VariavelDTO[];
+    listaTextos: TextoDTO[];
     ramificacao: RamificacaoDTO;
 }
 
 export interface SelecaoValorDTO {
     id: string;
-    label: string;
-    variaveis?: VariavelDTO[];
-    texto: TextoDTO[];
+    titulo: string;
+    listaVariaveis?: VariavelDTO[];
+    listaTextos: TextoDTO[];
     ramificacao: RamificacaoDTO;
 }
 
-interface VariavelDTO {
+export interface VariavelDTO {
     id: string;
-    label: string;
+    titulo: string;
     tipo: string;
 }
 

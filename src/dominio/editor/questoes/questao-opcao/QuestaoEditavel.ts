@@ -11,6 +11,7 @@ import { ISubtitulo } from '../../../comum/Subtitulo';
 import { ITitulo } from '../../../comum/Titulo';
 import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
+import { QuestaoOpcaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface IQuestaoEditavel extends IItemEditavel {
     getId(): IIdFormulario;
@@ -22,6 +23,7 @@ export interface IQuestaoEditavel extends IItemEditavel {
     getListaOpcoes(): IListaEditavel<IOpcaoEditavel> | undefined;
     setListaOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>): void;
     getEscapadores(): IEscapadorDeQuestao[];
+    gerarEspecificacao(): QuestaoOpcaoDTO;
 }
 
 export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
@@ -131,9 +133,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
                     .flat(1),
             ),
         );
-        debugger;
         const escapadores = categorias.map(categoria => {
-            debugger;
             return this.escapadorFactory.criarDeIdQuestaoIdCategoria(
                 this.id,
                 categoria,
@@ -141,6 +141,22 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         });
         const escapadoresUnicos = Array.from(new Set(escapadores));
         return escapadoresUnicos;
+    }
+
+    // TODO: fazer o editor do valor padrão
+
+    gerarEspecificacao() {
+        const opcoes = this.listaOpcoes
+            .getItens()
+            .map(item => item.gerarEspecificacao());
+        const retorno: QuestaoOpcaoDTO = {
+            id: this.id.toString(),
+            tipo: 'opcao',
+            titulo: this.titulo.toString(),
+            subtitulo: this.subtitulo?.toString(),
+            opcoes,
+        };
+        return retorno;
     }
 
     toString() {

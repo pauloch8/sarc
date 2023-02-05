@@ -5,11 +5,11 @@ export function makeOpcaoValorDTOFakeComId(id: string) {
     const textoFake = makeTextoDtoFake();
     const dto: OpcaoValorDTO = {
         id: 'opcao' + id,
-        label: 'Opcao ' + id,
+        titulo: 'Opcao ' + id,
         ramificacao: {
             irPara: 'avancar',
         },
-        texto: [textoFake],
+        listaTextos: [textoFake],
     };
     return dto;
 }

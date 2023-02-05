@@ -16,6 +16,7 @@ import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
 import { TituloDummy } from '../../comum/TituloDubles';
 import { TextoModeloDummy } from '../../comum/TextoModeloDubles';
 import { IVariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { OpcaoValorDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export class OpcaoEditavelErroStub implements IOpcaoEditavel {
     erros = {
@@ -81,9 +82,17 @@ export class OpcaoEditavelErroStub implements IOpcaoEditavel {
             'Method OpcaoEditavelErroStub.getCategorias not implemented.',
         );
     }
+    gerarEspecificacao(): OpcaoValorDTO {
+        throw new Error(
+            'Method OpcaoEditavelErroStub.gerarEspecificacao not implemented.',
+        );
+    }
 }
 
 export class OpcaoEditavelDummy implements IOpcaoEditavel {
+    gerarEspecificacao(): OpcaoValorDTO {
+        throw new Error('Method not implemented.');
+    }
     private id = new IdFormulario('id');
     private titulo = new Titulo('titulo');
     private textos = new ListaEditavel<TextoEditavel>([
@@ -144,6 +153,9 @@ export class OpcaoEditavelDummy implements IOpcaoEditavel {
 }
 
 export class OpcaoEditavelGetCategoriaStub implements IOpcaoEditavel {
+    gerarEspecificacao(): OpcaoValorDTO {
+        throw new Error('Method not implemented.');
+    }
     getIdCategorias(): ITitulo[] {
         return [new TituloDummy()];
     }

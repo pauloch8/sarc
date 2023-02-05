@@ -9,6 +9,7 @@ import { IListaEditavel } from '../../../comum/ListaEditavel';
 import { ITextoEditavel } from './texto/TextoEditavel';
 import { ITitulo } from '../../../../comum/Titulo';
 import { IVariavelEditavel } from './variavel/VariavelEditavel';
+import { OpcaoValorDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface IOpcaoEditavel extends IItemEditavel {
     getTitulo(): ITitulo;
@@ -20,6 +21,7 @@ export interface IOpcaoEditavel extends IItemEditavel {
     getVariaveis(): IListaEditavel<IVariavelEditavel> | undefined;
     setVariaveis(variaveis: IListaEditavel<IVariavelEditavel>): void;
     getIdCategorias(): IIdFormulario[];
+    gerarEspecificacao(): OpcaoValorDTO;
 }
 
 export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
@@ -27,8 +29,8 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
         private id: IIdFormulario,
         private titulo: ITitulo,
         indice: number,
-        private textos: IListaEditavel<ITextoEditavel>,
-        private variaveis?: IListaEditavel<IVariavelEditavel>,
+        private listaTextos: IListaEditavel<ITextoEditavel>,
+        private listaVariaveis?: IListaEditavel<IVariavelEditavel>,
     ) {
         super(indice);
         const validacao = this.validar();
@@ -42,8 +44,8 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
     private validar() {
         const contemId = !!this.id;
         const contemTitulo = !!this.titulo;
-        const contemTextos = !!this.textos;
-        const textoContemItens = !!this.textos.getLength();
+        const contemTextos = !!this.listaTextos;
+        const textoContemItens = !!this.listaTextos.getLength();
         const contemIndice = typeof this.getIndice() === 'number';
 
         const valido =
@@ -96,7 +98,7 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
     }
 
     getTextos() {
-        return this.textos;
+        return this.listaTextos;
     }
 
     setTextos(textos: IListaEditavel<ITextoEditavel>) {
@@ -110,11 +112,11 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
                 'Informada lista de textos da opção vazia',
             );
         }
-        this.textos = textos;
+        this.listaTextos = textos;
     }
 
     getVariaveis() {
-        return this.variaveis;
+        return this.listaVariaveis;
     }
 
     setVariaveis(variaveis: IListaEditavel<IVariavelEditavel>): void {
@@ -123,13 +125,34 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
                 'Não foi informada lista de variáveis da opção',
             );
         }
-        this.variaveis = variaveis;
+        this.listaVariaveis = variaveis;
     }
 
+    // TODO: editar a ramificação
+
     getIdCategorias() {
-        return this.textos
+        return this.listaTextos
             .getItens()
             .map(textoEditavel => textoEditavel.getId());
+    }
+
+    gerarEspecificacao() {
+        const listaVariaveis = this.listaVariaveis
+            ?.getItens()
+            .map(item => item.gerarEspecificacao());
+        const listaTextos = this.listaTextos
+            .getItens()
+            .map(item => item.gerarEspecificacao());
+        const retorno: OpcaoValorDTO = {
+            id: this.id.toString(),
+            titulo: this.titulo.toString(),
+            listaVariaveis,
+            listaTextos,
+            ramificacao: {
+                irPara: 'avançar',
+            },
+        };
+        return retorno;
     }
 
     toString(): string {

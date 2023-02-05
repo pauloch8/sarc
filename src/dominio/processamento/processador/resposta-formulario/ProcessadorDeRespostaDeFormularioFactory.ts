@@ -11,12 +11,14 @@ export class ProcessadorDeRespostaDeFormularioFactory {
 
     criarDeEspecificacao(especificacao: EspecificacaoDTO) {
         const processadoresDeQuestoes =
-            this.questoesFactory.criarDeEspecificacao(especificacao.questoes);
+            this.questoesFactory.criarDeEspecificacao(
+                especificacao.listaQuestoes,
+            );
         const processador = new ProcessadorDeRespostaDeFormulario(
             especificacao.id,
             processadoresDeQuestoes,
             this.escapadorFactory,
-            especificacao.templates,
+            especificacao.listaModelos,
         );
         return processador;
     }

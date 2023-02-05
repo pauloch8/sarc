@@ -11,7 +11,9 @@ export class ProcessadorDeOpcaoFactory implements IProcessadorDeOpcaoFactory {
 
     criarDeEspecificacao(opcaoValorDto: OpcaoValorDTO[]) {
         const retorno = opcaoValorDto.map(dto => {
-            const textos = this.textoFactory.criarDeEspecificacao(dto.texto);
+            const textos = this.textoFactory.criarDeEspecificacao(
+                dto.listaTextos,
+            );
             return new ProcessadorDeOpcao(dto.id, textos);
         });
         return retorno;

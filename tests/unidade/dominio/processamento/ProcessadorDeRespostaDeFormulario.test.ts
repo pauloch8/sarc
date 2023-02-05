@@ -1,4 +1,4 @@
-import { Template } from '@/dominio/especificacao/EspecificacaoDTO';
+import { ModeloDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { criarProcessadorDeRespostaDeFormularioSut } from '@/tests/dubles/dominio/processamento/processador/resposta-formulario/criarProcessadorDeRespostaDeFormularioSut';
 
 import {
@@ -22,7 +22,7 @@ describe('Classe ProcessadorDeRespostaDeFormulario', () => {
             const numerosDasQuestoesParaProcessadores = [1, 2, 3];
             const numerosDasQuestoesParaEscapadores = [1, 2, 3, 4]; // encontra os 4 escapadores do template
             const numerosDasQuestoesParaRespostas = [1, 2, 3];
-            const templates: Template[] = [
+            const templates: ModeloDTO[] = [
                 {
                     id: 'id-template1',
                     titulo: 'Titulo Template',
