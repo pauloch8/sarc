@@ -15,13 +15,13 @@ import {
     InconsistenciasNaValidacaoDoTexto,
 } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
+import IdFormularioInput from '@/apresentacao/telas/editor/comum/IdFormularioInput.vue';
 
 export default defineComponent({
     name: 'TextoEdicao',
     components: {
+        IdFormularioInput,
         ListaDeEscapadores,
-        IdFormularioFactory,
-        TituloInput,
         TextoModeloInput,
         BotoesSalvarCancelar,
     },
@@ -49,14 +49,12 @@ export default defineComponent({
         indice: { type: Number, required: false },
     },
     data() {
-        const id = this.texto?.getId();
-        const titulo = this.texto?.getCategoria();
+        const categoria = this.texto?.getCategoria();
         const textoModelo = this.texto?.getTextoModelo();
         const erro = '';
         const inconsistencias: string[] = [];
         return {
-            id,
-            titulo,
+            categoria,
             textoModelo,
             erro,
             inconsistencias,
@@ -78,11 +76,8 @@ export default defineComponent({
         },
     },
     methods: {
-        gerouId(id: IdFormulario) {
-            this.id = id;
-        },
-        digitouTitulo(titulo: Titulo) {
-            this.titulo = titulo;
+        digitouCategoria(categoria: IdFormulario) {
+            this.categoria = categoria;
         },
         digitouTextoModelo(textoModelo: TextoModelo) {
             this.textoModelo = textoModelo;
@@ -103,8 +98,7 @@ export default defineComponent({
         criar() {
             try {
                 const texto = this.textoEditavelFactory.criar(
-                    this.id as IdFormulario,
-                    this.titulo as Titulo,
+                    this.categoria as IdFormulario,
                     this.textoModelo as TextoModelo,
                     this.indice as number,
                 );
@@ -120,26 +114,13 @@ export default defineComponent({
         },
         editar(texto: TextoEditavel) {
             try {
-                texto.setId(this.id as IdFormulario);
+                texto.setCategoria(this.categoria as IdFormulario);
             } catch (e) {
                 if (e instanceof ErroNaEdicaoDoTexto) {
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
-                        'Ocorreu um erro desconhecido na atualização do id: ' +
-                            e,
-                    );
-                }
-            }
-            //titulo
-            try {
-                texto.setCategoria(this.titulo as Titulo);
-            } catch (e) {
-                if (e instanceof ErroNaEdicaoDoTexto) {
-                    this.inconsistencias.push(e.message);
-                } else {
-                    this.inconsistencias.push(
-                        'Ocorreu um erro desconhecido na atualização do titulo: ' +
+                        'Ocorreu um erro desconhecido na atualização da categoria: ' +
                             e,
                     );
                 }
@@ -157,18 +138,6 @@ export default defineComponent({
                     );
                 }
             }
-            // try {
-            //     texto.setIndice(this.indice);
-            // } catch (e) {
-            //     if (e instanceof ErroNaEdicaoDoTexto) {
-            //         this.inconsistencias.push(e.message);
-            //     } else {
-            //         this.inconsistencias.push(
-            //             'Ocorreu um erro desconhecido na atualização do índice: ' +
-            //                 e,
-            //         );
-            //     }
-            // }
             if (this.inconsistencias.length) {
                 this.erro = 'Ocorreram erros na atualização do Texto';
             } else {
@@ -185,16 +154,11 @@ export default defineComponent({
     <article class="emEdicao">
         <header>Edição de Texto</header>
 
-        <IdFormularioFactory
-            :titulo="(titulo as Titulo)"
-            @gerouId="gerouId"
-        ></IdFormularioFactory>
-
-        <TituloInput
+        <IdFormularioInput
             rotulo="Categoria"
-            :titulo="(titulo as Titulo)"
-            @digitou="digitouTitulo"
-        ></TituloInput>
+            :idFormulario="(categoria as IdFormulario)"
+            @digitou="digitouCategoria"
+        ></IdFormularioInput>
 
         <ListaDeEscapadores
             v-if="escapadores"

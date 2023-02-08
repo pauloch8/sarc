@@ -1,121 +1,30 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, inject } from 'vue';
 import FormularioEditor from './FormularioEdicao.vue';
 import { FormularioEditor as FormularioEditorModel } from '@/dominio/editor/FormularioEditor';
-import { IdFormulario } from '@/dominio/comum/IdFormulario';
-import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
-import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
-import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
-import { Subtitulo } from '@/dominio/comum/Subtitulo';
-import { Titulo } from '@/dominio/comum/Titulo';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
-import { TextoModelo } from '@/dominio/comum/TextoModelo';
-import { RemoveHtmlStringStrip } from '@/infrastrutura/portas/remove-html/RemoveHtmlStringStrip';
-import { ModeloEditavel } from '@/dominio/editor/modelo/ModeloEditavel';
-import { EscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
-import { EscapadorDeVariavelFactory } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
+import { IEdicaoDeFormularioService } from '@/aplicacao/EdicaoDeFormularioService';
 
 export default defineComponent({
     name: 'TelaEditor',
     components: {
         FormularioEditor,
     },
-    data() {
-        const removeHtml = new RemoveHtmlStringStrip();
-        const escapadorDeVariavelFactory = new EscapadorDeVariavelFactory();
-        const editor = new FormularioEditorModel(
-            new IdFormulario('id'),
-            new Titulo('titulo'),
-            new ListaEditavel<QuestaoEditavel>([
-                new QuestaoEditavel(
-                    new IdFormulario('questao1'),
-                    new Titulo('questao1'),
-                    0,
-                    new ListaEditavel<OpcaoEditavel>([
-                        new OpcaoEditavel(
-                            new IdFormulario('opcao1'),
-                            new Titulo('opcao1'),
-                            0,
-                            new ListaEditavel<TextoEditavel>([
-                                new TextoEditavel(
-                                    new IdFormulario('categoria'),
-                                    new Titulo('título'),
-                                    new TextoModelo(
-                                        'texto',
-                                        removeHtml,
-                                        escapadorDeVariavelFactory,
-                                    ),
-                                    0,
-                                ),
-                            ]),
-                        ),
-                        new OpcaoEditavel(
-                            new IdFormulario('opcao2'),
-                            new Titulo('opcao2'),
-                            1,
-                            new ListaEditavel<TextoEditavel>([
-                                new TextoEditavel(
-                                    new IdFormulario('categoria'),
-                                    new Titulo('título'),
-                                    new TextoModelo(
-                                        'texto',
-                                        removeHtml,
-                                        escapadorDeVariavelFactory,
-                                    ),
-                                    0,
-                                ),
-                            ]),
-                        ),
-                        new OpcaoEditavel(
-                            new IdFormulario('opcao3'),
-                            new Titulo('opcao3'),
-                            2,
-                            new ListaEditavel<TextoEditavel>([
-                                new TextoEditavel(
-                                    new IdFormulario('categoria'),
-                                    new Titulo('título'),
-                                    new TextoModelo(
-                                        'texto',
-                                        removeHtml,
-                                        escapadorDeVariavelFactory,
-                                    ),
-                                    0,
-                                ),
-                            ]),
-                        ),
-                    ]),
-                    new EscapadorDeQuestaoFactory(),
-                    new Subtitulo('questao1'),
-                ),
-                new QuestaoEditavel(
-                    new IdFormulario('questao2'),
-                    new Titulo('questao2'),
-                    1,
-                    new ListaEditavel<OpcaoEditavel>([
-                        new OpcaoEditavel(
-                            new IdFormulario('opcao1'),
-                            new Titulo('opcao1'),
-                            0,
-                            new ListaEditavel<TextoEditavel>([
-                                new TextoEditavel(
-                                    new IdFormulario('categoria'),
-                                    new Titulo('título'),
-                                    new TextoModelo(
-                                        'texto',
-                                        removeHtml,
-                                        escapadorDeVariavelFactory,
-                                    ),
-                                    0,
-                                ),
-                            ]),
-                        ),
-                    ]),
-                    new EscapadorDeQuestaoFactory(),
-                    new Subtitulo('questao2'),
-                ),
-            ]),
-            new ListaEditavel<ModeloEditavel>([]),
+    setup() {
+        // injeta especificacaoRepository
+        const edicaoDeFormularioService = inject<IEdicaoDeFormularioService>(
+            'edicaoDeFormularioService',
         );
+        if (!edicaoDeFormularioService) {
+            throw new Error(
+                'Não injetada a dependência edicaoDeFormularioService',
+            );
+        }
+
+        // carrega o editor
+        // TODO: carregar do id passado por query string
+        const editor = edicaoDeFormularioService.carregarEditor('teste');
+
+        // retorna o setup
         return {
             editor,
         };

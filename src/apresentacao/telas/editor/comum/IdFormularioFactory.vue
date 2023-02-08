@@ -6,10 +6,12 @@ import { defineComponent, inject } from 'vue';
 export default defineComponent({
     name: 'IdFormularioFactory',
     setup() {
+        // injeta idFormularioFactory
         const factory = inject<IIdFormularioFactory>('idFormularioFactory');
         if (!factory) {
             throw new Error('Não injetada a dependência idFormularioFactory');
         }
+        // retorna o setup
         return {
             factory,
         };

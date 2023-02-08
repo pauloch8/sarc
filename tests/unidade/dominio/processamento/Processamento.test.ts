@@ -1,5 +1,5 @@
-import { especificacao } from '@/apresentacao/assets/especificacao';
 import { EscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
+import { especificacao } from '@/dominio/especificacao/assets/especificacao';
 import { ProcessadorDeOpcaoFactory } from '@/dominio/processamento/processador/questoes-opcao/opcao/ProcessadorDeOpcaoFactory';
 import { ProcessadorDeQuestaoDeOpcoesFactory } from '@/dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoFactory';
 import { ProcessadorDeSelecaoFactory } from '@/dominio/processamento/processador/questoes-opcao/selecao/ProcessadorDeSelecaoFactory';

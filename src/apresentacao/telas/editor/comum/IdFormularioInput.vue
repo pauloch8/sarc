@@ -22,14 +22,14 @@ export default defineComponent({
             type: IdFormulario,
             required: false,
         },
-        label: {
+        rotulo: {
             type: String,
             required: false,
         },
     },
     data() {
         return {
-            esteLabel: this.label || 'ID de Formulário',
+            esteRotulo: this.rotulo || 'ID de Formulário',
             idFormularioString: this.idFormulario?.toString() || '',
             erroString: '',
         };
@@ -46,7 +46,7 @@ export default defineComponent({
                 if (e instanceof ErroDeCriacaoDeIdFormulario) {
                     this.erroString = e.message;
                 } else {
-                    this.erroString = `Ocorreu um erro desconhecido ao criar o ${this.esteLabel}`;
+                    this.erroString = `Ocorreu um erro desconhecido ao criar o ${this.esteRotulo}`;
                 }
                 id = null;
             }
@@ -59,7 +59,7 @@ export default defineComponent({
 
 <template>
     <label for="id-Formulario">
-        {{ esteLabel }}
+        {{ esteRotulo }}
         <input
             type="text"
             id="id-Formulario"

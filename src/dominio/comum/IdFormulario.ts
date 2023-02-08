@@ -19,9 +19,10 @@ export class IdFormulario implements IIdFormulario {
         return this.idString;
     }
     static validar(idString: string) {
-        const contemSomenteLetrasMinusculasNumerosSublinhado =
-            /^[a-z0-9_-]+$/g.test(idString);
-        const valido = contemSomenteLetrasMinusculasNumerosSublinhado;
+        const contemSomenteLetrasNumerosSublinhado = /^[a-zA-Z0-9_-]+$/g.test(
+            idString,
+        );
+        const valido = contemSomenteLetrasNumerosSublinhado;
         return valido;
     }
 }

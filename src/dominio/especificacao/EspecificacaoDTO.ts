@@ -17,17 +17,17 @@ export interface QuestaoDTO {
     tipo: 'opcao' | 'selecao';
     titulo: string;
     subtitulo?: string;
-    valorPadrao?: string;
 }
 
 export interface QuestaoOpcaoDTO extends QuestaoDTO {
     tipo: 'opcao';
-    opcoes?: OpcaoValorDTO[];
+    opcoes: OpcaoValorDTO[];
+    valorPadrao?: string;
 }
 
 export interface QuestaoSelecaoDTO extends QuestaoDTO {
     tipo: 'selecao';
-    selecoes?: SelecaoValorDTO[];
+    selecoes: SelecaoValorDTO[];
 }
 
 export interface OpcaoValorDTO {

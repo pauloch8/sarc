@@ -18,7 +18,7 @@ import { ProcessadorDeOpcaoFactory } from './dominio/processamento/processador/q
 import { ProcessadorDeQuestaoDeOpcoesFactory } from './dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoFactory';
 import { ProcessadorDeRespostaDeFormularioFactory } from './dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormularioFactory';
 import { TextoFactory } from './dominio/processamento/processador/texto/TextoFactory';
-import { especificacao } from './apresentacao/assets/especificacao';
+import { especificacao } from '@/dominio/especificacao/assets/especificacao';
 import { FormularioFactory } from './dominio/formulario/FormularioFactory';
 import { ProcessadorDeSelecaoFactory } from './dominio/processamento/processador/questoes-opcao/selecao/ProcessadorDeSelecaoFactory';
 import { FormularioEditorFactory } from './dominio/editor/FormularioEditorFactory';
@@ -36,6 +36,8 @@ import { TipoVariavelRepositoryEmMemoria } from './infrastrutura/portas/memoria/
 import { TipoVariavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelFactory';
 import { EscapadorDeVariavelFactory } from './dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
 import { ModeloEditavelFactory } from './dominio/editor/modelo/ModeloEditavelFactory';
+import { EdicaoDeFormularioService } from './aplicacao/EdicaoDeFormularioService';
+import { EspecificacaoRepositoryLocalStorageExemploStub } from '@/dominio/especificacao/EspecificacaoRepositoryLocalStorageExemploStub';
 
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
@@ -45,27 +47,41 @@ const formulario = FormularioFactory.criarDaEspecificacao(especificacao);
 const tituloFactory = new TituloFactory();
 const subtituloFactory = new SubtituloFactory();
 const idFormularioFactory = new IdFormularioFactory();
-const formularioEditorFactory = new FormularioEditorFactory();
 const escapadorDeQuestaoFactory = new EscapadorDeQuestaoFactory();
-const questaoEditavelFactory = new QuestaoEditavelFactory(
-    escapadorDeQuestaoFactory,
-);
-const opcaoEditavelFactory = new OpcaoEditavelFactory();
-const textoEditavelFactory = new TextoEditavelFactory();
-const removeHtml = new RemoveHtmlStringStrip();
 const escapadorDeVariavelFactory = new EscapadorDeVariavelFactory();
+const removeHtml = new RemoveHtmlStringStrip();
 const textoModeloFactory = new TextoModeloFactory(
     removeHtml,
     escapadorDeVariavelFactory,
 );
+const textoEditavelFactory = new TextoEditavelFactory(textoModeloFactory);
 const variavelEditavelFactory = new VariavelEditavelFactory(
     escapadorDeVariavelFactory,
+);
+const opcaoEditavelFactory = new OpcaoEditavelFactory(
+    textoEditavelFactory,
+    variavelEditavelFactory,
+);
+const questaoEditavelFactory = new QuestaoEditavelFactory(
+    escapadorDeQuestaoFactory,
+    opcaoEditavelFactory,
+);
+const formularioEditorFactory = new FormularioEditorFactory(
+    escapadorDeVariavelFactory,
+    removeHtml,
+    questaoEditavelFactory,
 );
 const tipoVariavelFactory = new TipoVariavelFactory();
 const tipoVariavelRepository = new TipoVariavelRepositoryEmMemoria(
     tipoVariavelFactory,
 );
 const modeloEditavelFactory = new ModeloEditavelFactory();
+const especificacaoRepository =
+    new EspecificacaoRepositoryLocalStorageExemploStub();
+const edicaoDeFormularioService = new EdicaoDeFormularioService(
+    especificacaoRepository,
+    formularioEditorFactory,
+);
 
 createApp(App)
     .use(router)
@@ -86,6 +102,7 @@ createApp(App)
     .provide('tipoVariavelRepository', tipoVariavelRepository)
     .provide('modeloEditavelFactory', modeloEditavelFactory)
     .provide('escapadorDeQuestaoFactory', escapadorDeQuestaoFactory)
+    .provide('edicaoDeFormularioService', edicaoDeFormularioService)
     .mount('#app');
 
 function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {

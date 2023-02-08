@@ -1,4 +1,4 @@
-import { IdFormulario, IIdFormulario } from '@/dominio/comum/IdFormulario';
+import { IIdFormulario } from '@/dominio/comum/IdFormulario';
 import { ITitulo } from '@/dominio/comum/Titulo';
 import { ITextoModelo } from '@/dominio/comum/TextoModelo';
 import {
@@ -10,10 +10,8 @@ import {
 import { TextoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface ITextoEditavel extends IItemEditavel {
-    getId(): IIdFormulario;
-    setId(id?: IdFormulario | undefined): void;
-    getCategoria(): ITitulo;
-    setCategoria(titulo?: ITitulo | undefined): void;
+    getCategoria(): IIdFormulario;
+    setCategoria(titulo?: IIdFormulario | undefined): void;
     getTextoModelo(): ITextoModelo;
     setTextoModelo(textoModelo?: ITextoModelo | undefined): void;
     gerarEspecificacao(): TextoDTO;
@@ -21,8 +19,7 @@ export interface ITextoEditavel extends IItemEditavel {
 
 export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
     constructor(
-        private id: IIdFormulario,
-        private categoria: ITitulo,
+        private categoria: IIdFormulario,
         private textoModelo: ITextoModelo,
         indice: number,
     ) {
@@ -36,18 +33,13 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
     }
 
     private validar() {
-        const contemId = !!this.id;
         const contemCategoria = !!this.categoria;
         const contemTextoModelo = !!this.textoModelo;
         const contemIndice = typeof this.getIndice() === 'number';
 
-        const valido =
-            contemId && contemCategoria && contemTextoModelo && contemIndice;
+        const valido = contemCategoria && contemTextoModelo && contemIndice;
 
         const inconsistencias = [];
-        if (!contemId) {
-            inconsistencias.push('Não contém ID');
-        }
         if (!contemCategoria) {
             inconsistencias.push('Não contém Categoria');
         }
@@ -59,17 +51,6 @@ export class TextoEditavel extends ItemEditavel implements ITextoEditavel {
         }
 
         return { valido, inconsistencias };
-    }
-
-    getId() {
-        return this.id;
-    }
-
-    setId(id?: IdFormulario) {
-        if (!id) {
-            throw new ErroNaEdicaoDoTexto('ID vazio informado');
-        }
-        this.id = id;
     }
 
     getCategoria() {

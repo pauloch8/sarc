@@ -25,7 +25,7 @@ describe('ProcessadorDeQuestaoDeOpcoesFactory', () => {
                 sut.criarDeEspecificacao([questaoDtoFake]);
             }).toThrow(ErroQuestaoOpcaoSemOpcoes);
 
-            questaoDtoFake.opcoes = undefined;
+            questaoDtoFake.opcoes = [];
             expect(() => {
                 sut.criarDeEspecificacao([questaoDtoFake]);
             }).toThrow(ErroQuestaoOpcaoSemOpcoes);

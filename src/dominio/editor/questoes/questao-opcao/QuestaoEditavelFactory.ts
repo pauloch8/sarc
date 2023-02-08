@@ -1,12 +1,18 @@
 import { IQuestaoEditavel, QuestaoEditavel } from './QuestaoEditavel';
 import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
-import { IListaEditavel } from '../../comum/ListaEditavel';
-import { ITitulo } from '../../../comum/Titulo';
-import { ISubtitulo } from '../../../comum/Subtitulo';
-import { IIdFormulario } from '../../../comum/IdFormulario';
+import { IListaEditavel, ListaEditavel } from '../../comum/ListaEditavel';
+import { ITitulo, Titulo } from '../../../comum/Titulo';
+import { ISubtitulo, Subtitulo } from '../../../comum/Subtitulo';
+import { IdFormulario, IIdFormulario } from '../../../comum/IdFormulario';
 import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
+import { QuestaoOpcaoDTO } from '../../../especificacao/EspecificacaoDTO';
+import { IOpcaoEditavelFactory } from './opcao/OpcaoEditavelFactory';
 
 export interface IQuestaoEditavelFactory {
+    criarDeEspecificacao(
+        especificacao: QuestaoOpcaoDTO,
+        indice: number,
+    ): IQuestaoEditavel;
     criar(
         id: IIdFormulario,
         titulo: ITitulo,
@@ -17,7 +23,10 @@ export interface IQuestaoEditavelFactory {
 }
 
 export class QuestaoEditavelFactory implements IQuestaoEditavelFactory {
-    constructor(private escapadorFactory: IEscapadorDeQuestaoFactory) {}
+    constructor(
+        private escapadorFactory: IEscapadorDeQuestaoFactory,
+        private opcaoEditavelFactory: IOpcaoEditavelFactory,
+    ) {}
 
     criar(
         id: IIdFormulario,
@@ -34,5 +43,24 @@ export class QuestaoEditavelFactory implements IQuestaoEditavelFactory {
             this.escapadorFactory,
             subtitulo,
         );
+    }
+
+    criarDeEspecificacao(especificacao: QuestaoOpcaoDTO, indice: number) {
+        const id = new IdFormulario(especificacao.id);
+        const titulo = new Titulo(especificacao.titulo);
+        let subtitulo;
+        if (especificacao.subtitulo) {
+            subtitulo = new Subtitulo(especificacao.subtitulo);
+        }
+        const itensOpcoes = (especificacao as QuestaoOpcaoDTO).opcoes?.map(
+            (item, indice) => {
+                return this.opcaoEditavelFactory.criarDeEspecificacao(
+                    item,
+                    indice,
+                );
+            },
+        );
+        const listaOpcoes = new ListaEditavel<IOpcaoEditavel>(itensOpcoes);
+        return this.criar(id, titulo, indice, listaOpcoes, subtitulo);
     }
 }

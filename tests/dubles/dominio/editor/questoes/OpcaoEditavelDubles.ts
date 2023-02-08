@@ -28,12 +28,7 @@ export class OpcaoEditavelErroStub implements IOpcaoEditavel {
     private id = new IdFormulario('id');
     private titulo = new Titulo('titulo');
     private textos = new ListaEditavel<TextoEditavel>([
-        new TextoEditavel(
-            new IdFormularioDummy(),
-            new TituloDummy(),
-            new TextoModeloDummy(),
-            0,
-        ),
+        new TextoEditavel(new IdFormularioDummy(), new TextoModeloDummy(), 0),
     ]);
     getId(): IdFormulario {
         return this.id;
@@ -96,12 +91,7 @@ export class OpcaoEditavelDummy implements IOpcaoEditavel {
     private id = new IdFormulario('id');
     private titulo = new Titulo('titulo');
     private textos = new ListaEditavel<TextoEditavel>([
-        new TextoEditavel(
-            new IdFormularioDummy(),
-            new TituloDummy(),
-            new TextoModeloDummy(),
-            0,
-        ),
+        new TextoEditavel(new IdFormularioDummy(), new TextoModeloDummy(), 0),
     ]);
     getId(): IdFormulario {
         return this.id;

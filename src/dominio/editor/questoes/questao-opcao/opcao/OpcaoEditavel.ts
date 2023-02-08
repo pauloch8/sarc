@@ -45,15 +45,9 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
         const contemId = !!this.id;
         const contemTitulo = !!this.titulo;
         const contemTextos = !!this.listaTextos;
-        const textoContemItens = !!this.listaTextos.getLength();
         const contemIndice = typeof this.getIndice() === 'number';
 
-        const valido =
-            contemId &&
-            contemTitulo &&
-            contemTextos &&
-            textoContemItens &&
-            contemIndice;
+        const valido = contemId && contemTitulo && contemTextos && contemIndice;
 
         const inconsistencias = [];
         if (!contemId) {
@@ -65,9 +59,7 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
         if (!contemTextos) {
             inconsistencias.push('Não contêm Lista de Textos');
         }
-        if (!textoContemItens) {
-            inconsistencias.push('Não contêm textos');
-        }
+
         if (!contemIndice) {
             inconsistencias.push('Não contêm índice');
         }
@@ -133,7 +125,7 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
     getIdCategorias() {
         return this.listaTextos
             .getItens()
-            .map(textoEditavel => textoEditavel.getId());
+            .map(textoEditavel => textoEditavel.getCategoria());
     }
 
     gerarEspecificacao() {
