@@ -46,6 +46,25 @@ export class QuestaoEditavelFactory implements IQuestaoEditavelFactory {
     }
 
     criarDeEspecificacao(especificacao: QuestaoDTO, indice: number) {
+        if (especificacao.tipo === 'opcao') {
+            return this.criarQuestaoDeUmaRespostaEditavelPelaEspecificacao(
+                especificacao,
+                indice,
+            );
+        } else if (especificacao.tipo === 'selecao') {
+            return this.criarQuestaoDeMultiplasRespostaEditavelPelaEspecificacao(
+                especificacao,
+                indice,
+            );
+        } else {
+            throw new ErroTipoDeEsepecificacaoInvalido(especificacao.tipo);
+        }
+    }
+
+    private criarQuestaoDeUmaRespostaEditavelPelaEspecificacao(
+        especificacao: QuestaoDTO,
+        indice: number,
+    ) {
         const id = new IdFormulario(especificacao.id);
         const titulo = new Titulo(especificacao.titulo);
         let subtitulo;
@@ -57,5 +76,31 @@ export class QuestaoEditavelFactory implements IQuestaoEditavelFactory {
         });
         const listaOpcoes = new ListaEditavel<IOpcaoEditavel>(itensOpcoes);
         return this.criar(id, titulo, indice, listaOpcoes, subtitulo);
+    }
+
+    private criarQuestaoDeMultiplasRespostaEditavelPelaEspecificacao(
+        especificacao: QuestaoDTO,
+        indice: number,
+    ) {
+        const id = new IdFormulario(especificacao.id);
+        const titulo = new Titulo(especificacao.titulo);
+        let subtitulo;
+        if (especificacao.subtitulo) {
+            subtitulo = new Subtitulo(especificacao.subtitulo);
+        }
+        const itensOpcoes = especificacao.opcoes?.map((item, indice) => {
+            return this.opcaoEditavelFactory.criarDeEspecificacao(item, indice);
+        });
+        const listaOpcoes = new ListaEditavel<IOpcaoEditavel>(itensOpcoes);
+        return this.criar(id, titulo, indice, listaOpcoes, subtitulo);
+    }
+}
+
+/**
+ * Erro de tipo de especificação inválido para a criação de Questão Editável por Especificação
+ */
+class ErroTipoDeEsepecificacaoInvalido extends Error {
+    constructor(tipo: string) {
+        super(`Tipo de especificação inválido: "${tipo}"`);
     }
 }

@@ -40,19 +40,10 @@ export class FormularioEditorFactory implements IFormularioEditorFactory {
         // criar Lista de Questões
         const itensQuestoes = especificacao.listaQuestoes.map(
             (item, indice) => {
-                const tipo = item.tipo as string;
-                if (tipo === 'opcao') {
-                    return this.questaoEditavelFactory.criarDeEspecificacao(
-                        item as QuestaoDTO,
-                        indice,
-                    );
-                } else if (tipo === 'selecao') {
-                    console.error(
-                        'Criar item de seleção ainda não implementado',
-                    );
-                } else {
-                    throw new ErroTipoDeQuestaoDesconhecido(tipo);
-                }
+                return this.questaoEditavelFactory.criarDeEspecificacao(
+                    item as QuestaoDTO,
+                    indice,
+                );
             },
         );
         // TODO: remover esse filter. Só tem itens vazios pq não foi implementado seleção
@@ -95,11 +86,5 @@ export class FormularioEditorFactory implements IFormularioEditorFactory {
             subtitulo,
         );
         return formulario;
-    }
-}
-
-export class ErroTipoDeQuestaoDesconhecido extends Error {
-    constructor(tipo: string) {
-        super(`Tipo de Questão desconhecido: '${tipo}`);
     }
 }
