@@ -1,10 +1,10 @@
-import { QuestaoOpcaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
+import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { Variavel } from '../Variavel';
 import { Opcao } from './Opcao';
 import { QuestaoDeOpcoes } from './QuestaoDeOpcoes';
 
 export class QuestaoDeOpcoesFactory {
-    static criarDeDto(dto: QuestaoOpcaoDTO): QuestaoDeOpcoes {
+    static criarDeDto(dto: QuestaoDTO): QuestaoDeOpcoes {
         if (!dto.opcoes) {
             throw new Error('Questão do tipo opções sem opção');
         }

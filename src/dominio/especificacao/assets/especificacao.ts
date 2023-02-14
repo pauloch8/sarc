@@ -877,7 +877,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
             id: 'pontos-controversos',
             tipo: 'selecao',
             titulo: 'Pontos Controversos',
-            selecoes: [
+            opcoes: [
                 {
                     id: 'carencia',
                     titulo: 'Carência',

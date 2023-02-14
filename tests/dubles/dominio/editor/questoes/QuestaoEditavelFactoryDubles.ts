@@ -4,7 +4,7 @@ import {
     QuestaoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
 import { IQuestaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavelFactory';
-import { QuestaoOpcaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
+import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { QuestaoEditavelDummy } from './QuestaoEditavelDubles';
 
 export class QuestaoEditavelFactoryDummy implements IQuestaoEditavelFactory {
@@ -12,7 +12,7 @@ export class QuestaoEditavelFactoryDummy implements IQuestaoEditavelFactory {
         return new QuestaoEditavelDummy();
     }
     criarDeEspecificacao(
-        especificacao: QuestaoOpcaoDTO,
+        especificacao: QuestaoDTO,
         indice: number,
     ): IQuestaoEditavel {
         return new QuestaoEditavelDummy();
@@ -27,7 +27,7 @@ export class QuestaoEditavelFactoryErroDesconhecidoStub
         throw new Error(this.mensagemDeErro);
     }
     criarDeEspecificacao(
-        especificacao: QuestaoOpcaoDTO,
+        especificacao: QuestaoDTO,
         indice: number,
     ): IQuestaoEditavel {
         throw new Error(this.mensagemDeErro);
@@ -42,7 +42,7 @@ export class QuestaoEditavelFactoryErroQuestaoInvalidaStub
         throw new ErroQuestaoInvalida(this.inconsistencias);
     }
     criarDeEspecificacao(
-        especificacao: QuestaoOpcaoDTO,
+        especificacao: QuestaoDTO,
         indice: number,
     ): IQuestaoEditavel {
         throw new ErroQuestaoInvalida(this.inconsistencias);
@@ -56,7 +56,7 @@ export class QuestaoEditavelFactorySucessoStub
         return new QuestaoEditavelDummy();
     }
     criarDeEspecificacao(
-        especificacao: QuestaoOpcaoDTO,
+        especificacao: QuestaoDTO,
         indice: number,
     ): IQuestaoEditavel {
         return new QuestaoEditavelDummy();

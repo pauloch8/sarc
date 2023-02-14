@@ -1,6 +1,6 @@
 import {
     EspecificacaoDTO,
-    QuestaoOpcaoDTO,
+    QuestaoDTO,
 } from '../especificacao/EspecificacaoDTO';
 import { FormularioEditor, IFormularioEditor } from './FormularioEditor';
 import { IdFormulario, IIdFormulario } from '../comum/IdFormulario';
@@ -43,7 +43,7 @@ export class FormularioEditorFactory implements IFormularioEditorFactory {
                 const tipo = item.tipo as string;
                 if (tipo === 'opcao') {
                     return this.questaoEditavelFactory.criarDeEspecificacao(
-                        item as QuestaoOpcaoDTO,
+                        item as QuestaoDTO,
                         indice,
                     );
                 } else if (tipo === 'selecao') {

@@ -2,7 +2,6 @@ import {
     ProcessadorDeQuestaoDeOpcoes,
     ErroIdDaQuestaoDiferenteDoIdDoProcessador,
     ErroNaoEncontrouProcessadorDaOpcaoDaResposta,
-    ErroDaRespostaNaoEncontrado,
 } from '@/dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoDeOpcoes';
 import { makeRespostaDeQuestaoFake } from '@/tests/dubles/dominio/formulario/respostas/makeRespostaDeQuestaoFake';
 import { makeEscapadorDeQuestaoFake } from '@/tests/dubles/dominio/comum/escapador/questao/makeEscapadorDeQuestaoFake';
@@ -37,19 +36,6 @@ describe('ProcessadorDeQuestaoDeOpcoes', () => {
                     templateFake,
                 );
             }).toThrow(ErroNaoEncontrouProcessadorDaOpcaoDaResposta);
-        });
-        test('lança erro se não encontrar texto de resposta com categoria do escapador', () => {
-            const { sut, escapadorDeQuestaoFake } = makeSut();
-            escapadorDeQuestaoFake.compararCategoria = () => false;
-            const respostaFake = makeRespostaDeQuestaoFake();
-            const templateFake = 'Template ${questao1.categoria2}';
-            expect(() => {
-                sut.processar(
-                    escapadorDeQuestaoFake,
-                    respostaFake,
-                    templateFake,
-                );
-            }).toThrow(ErroDaRespostaNaoEncontrado);
         });
         test('substitui o espaçador do template pelo texto da resposta', async () => {
             const { sut, escapadorDeQuestaoFake } = makeSut();

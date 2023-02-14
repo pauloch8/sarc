@@ -2,7 +2,7 @@ export interface EspecificacaoDTO {
     id: string;
     titulo: string;
     subtitulo?: string;
-    listaQuestoes: Array<QuestaoOpcaoDTO | QuestaoSelecaoDTO>;
+    listaQuestoes: Array<QuestaoDTO>;
     listaModelos: ModeloDTO[];
 }
 
@@ -17,28 +17,11 @@ export interface QuestaoDTO {
     tipo: 'opcao' | 'selecao';
     titulo: string;
     subtitulo?: string;
-}
-
-export interface QuestaoOpcaoDTO extends QuestaoDTO {
-    tipo: 'opcao';
     opcoes: OpcaoValorDTO[];
     valorPadrao?: string;
 }
 
-export interface QuestaoSelecaoDTO extends QuestaoDTO {
-    tipo: 'selecao';
-    selecoes: SelecaoValorDTO[];
-}
-
 export interface OpcaoValorDTO {
-    id: string;
-    titulo: string;
-    listaVariaveis?: VariavelDTO[];
-    listaTextos: TextoDTO[];
-    ramificacao: RamificacaoDTO;
-}
-
-export interface SelecaoValorDTO {
     id: string;
     titulo: string;
     listaVariaveis?: VariavelDTO[];
