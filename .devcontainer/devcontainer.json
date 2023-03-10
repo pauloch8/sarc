@@ -17,7 +17,30 @@
 	// Configure tool-specific properties.
 	// "customizations": {},
 
-	"extensions": ["Vue.volar", "Vue.vscode-typescript-vue-plugin", "dbaeumer.vscode-eslint", "natqe.reload", "myxvisual.vscode-ts-uml", "gruntfuggly.todo-tree", "simonsiefke.svg-preview", "humao.rest-client", "esbenp.prettier-vscode", "firsttris.vscode-jest-runner", "visualstudioexptteam.vscodeintellicode", "tht13.html-preview-vscode", "eamodio.gitlens", "donjayamanne.githistory", "mhutchie.git-graph", "hediet.vscode-drawio", "ms-azuretools.vscode-docker", "naumovs.color-highlight", "alexshen.classdiagram-ts", "grimmer.vscode-back-forward-button", "bierner.emojisense"]
+	"extensions": [
+		"Vue.volar",
+		"Vue.vscode-typescript-vue-plugin",
+		"dbaeumer.vscode-eslint",
+		"natqe.reload",
+		"myxvisual.vscode-ts-uml",
+		"gruntfuggly.todo-tree",
+		"simonsiefke.svg-preview",
+		"humao.rest-client",
+		"esbenp.prettier-vscode",
+		"firsttris.vscode-jest-runner",
+		"visualstudioexptteam.vscodeintellicode",
+		"tht13.html-preview-vscode",
+		"eamodio.gitlens",
+		"donjayamanne.githistory",
+		"mhutchie.git-graph",
+		"hediet.vscode-drawio",
+		"ms-azuretools.vscode-docker",
+		"naumovs.color-highlight",
+		"alexshen.classdiagram-ts",
+		"grimmer.vscode-back-forward-button",
+		"bierner.emojisense",
+		"yzane.markdown-pdf"
+	]
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
