@@ -6,6 +6,11 @@ export interface IIdFormulario {
 
 @objetoDeValor
 export class IdFormulario implements IIdFormulario {
+    /**
+     * Cria um objeto IdFormulário a partir de uma string no seguinte formato: letras minúsculas, maiúsculas, números, sublinhado ou traço
+     * @param idString uma string no formato esperado
+     * @throws {ErroIdStringInvalida} se recebido um parâmetro inválido
+     */
     constructor(private idString: string) {
         const valido = IdFormulario.validar(idString);
         if (!valido) {
