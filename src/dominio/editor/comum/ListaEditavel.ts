@@ -4,9 +4,9 @@ export interface IListaEditavel<IItemEditavel> {
     getItens(): IItemEditavel[];
     getLength(): number;
     editarItem(itemSolicitado: IItemEditavel): void;
-    subirItem(itemSolicitada: IItemEditavel): void;
-    descerItem(itemSolicitada: IItemEditavel): void;
-    excluirItem(itemSolicitada: IItemEditavel): void;
+    subirItem(itemSolicitado: IItemEditavel): void;
+    descerItem(itemSolicitado: IItemEditavel): void;
+    excluirItem(itemSolicitado: IItemEditavel): void;
     adicionarItem(item: IItemEditavel): void;
     obterItemPorIndice(indice: number): IItemEditavel;
 }
@@ -34,8 +34,8 @@ export class ListaEditavel<Item extends IItemEditavel>
         itemParaEditar.editar();
     }
 
-    subirItem(itemSolicitada: Item) {
-        const itemParaSubir = this.obterItem(itemSolicitada);
+    subirItem(itemSolicitado: Item) {
+        const itemParaSubir = this.obterItem(itemSolicitado);
         const indiceDoItemSolicitado = itemParaSubir.getIndice();
         const ultimoIndice = this.itens.length - 1;
 
@@ -52,8 +52,8 @@ export class ListaEditavel<Item extends IItemEditavel>
         itemSubstituido.setIndice(indiceDoItemSolicitado);
     }
 
-    descerItem(itemSolicitada: Item) {
-        const itemParaDescer = this.obterItem(itemSolicitada);
+    descerItem(itemSolicitado: Item) {
+        const itemParaDescer = this.obterItem(itemSolicitado);
         const indiceDoItemSolicitado = itemParaDescer.getIndice();
 
         if (indiceDoItemSolicitado === 0) {
@@ -69,8 +69,8 @@ export class ListaEditavel<Item extends IItemEditavel>
         itemSubstituido.setIndice(indiceDoItemSolicitado);
     }
 
-    excluirItem(itemSolicitada: Item) {
-        const itemParaExcluir = this.obterItem(itemSolicitada);
+    excluirItem(itemSolicitado: Item) {
+        const itemParaExcluir = this.obterItem(itemSolicitado);
         let indiceDoItem = this.itens.indexOf(itemParaExcluir);
         // remove o item
         this.itens.splice(indiceDoItem, 1);
@@ -95,10 +95,10 @@ export class ListaEditavel<Item extends IItemEditavel>
         return retorno;
     }
 
-    private obterItem(itemSolicitada: Item) {
-        const retorno = this.itens.find(item => item === itemSolicitada);
+    private obterItem(itemSolicitado: Item) {
+        const retorno = this.itens.find(item => item === itemSolicitado);
         if (!retorno) {
-            throw new ErroItemSolicitadoNaoEncontrado(itemSolicitada);
+            throw new ErroItemSolicitadoNaoEncontrado(itemSolicitado);
         }
         return retorno;
     }

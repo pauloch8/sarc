@@ -1,15 +1,9 @@
-import { ItemEditavel } from '@/dominio/editor/comum/ItemEditavel';
 import {
     ErroExisteItemEmEdicao,
     ErroItemSolicitadoNaoEncontrado,
     ListaEditavel,
 } from '@/dominio/editor/comum/ListaEditavel';
-
-class ItemEditavelDummy extends ItemEditavel {
-    toString(): string {
-        return 'item editavel dummy';
-    }
-}
+import { ItemEditavelDummy } from '@/tests/dubles/dominio/editor/comum/ItemEditavelDubles';
 
 describe('ListaEditavel', () => {
     describe('ao editar um item', () => {
@@ -21,6 +15,7 @@ describe('ListaEditavel', () => {
             expect(item0.getEmEdicao()).toBeTruthy();
         });
         test.skip('lança erro se um item já estiver em edição', () => {
+            // skip pq estamos permitindo editar dois ao mesmo tempo
             const item0 = new ItemEditavelDummy(0);
             const item1 = new ItemEditavelDummy(1);
             const sut = new ListaEditavel<ItemEditavelDummy>([item0, item1]);
