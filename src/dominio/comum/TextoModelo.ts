@@ -30,6 +30,9 @@ export class TextoModelo implements ITextoModelo {
         if (!this.texto) {
             throw new ErroTextoModeloVazio();
         }
+        if (this.getTextoPlano().length === 0) {
+            throw new ErroTextoModeloVazio();
+        }
         if (this.texto.length < 3) {
             throw new ErroTextoModeloComMenosDeTresCaracteres();
         }
