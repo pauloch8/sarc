@@ -6,6 +6,10 @@ import {
 
 describe('Titulo', () => {
     describe('valida na instanciação', () => {
+        test('retorna um objeto se o parâmetro estiver correto', () => {
+            const teste = new Titulo('teste');
+            expect(teste.toString()).toBe('teste');
+        });
         describe('lança erro', () => {
             test('se for uma string vazia', async () => {
                 expect(() => {
@@ -29,7 +33,7 @@ describe('Titulo', () => {
         });
     });
 
-    test('remove os espaços', async () => {
+    test('remove os espaços em branco ao redor (trim)', async () => {
         expect(() => {
             new Titulo('         ');
         }).toThrow(ErroTituloEmBranco);
