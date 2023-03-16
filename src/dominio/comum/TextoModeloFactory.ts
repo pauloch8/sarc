@@ -12,6 +12,12 @@ export class TextoModeloFactory implements TextoModeloFactory {
         private escapadorDeVariavelFactory: IEscapadorDeVariavelFactory,
     ) {}
 
+    /**
+     * Cria um objeto TextoModelo
+     * @param texto Texto com três ou mais caracteres
+     * @throws {ErroTextoModeloVazio} se fornecido um texto vazio
+     * @throws {ErroTextoModeloComMenosDeTresCaracteres} se fornecido um texto com menos de três caracteres
+     */
     criar(texto: string) {
         return new TextoModelo(
             texto,

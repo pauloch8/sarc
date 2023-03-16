@@ -3,6 +3,12 @@ export interface ISubtitulo {
 }
 
 export class Subtitulo implements ISubtitulo {
+    /**
+     * Cria um objeto Subtitulo a partir de uma string
+     * @param {string} subtitulo subtítulo com três ou mais caracteres
+     * @throws {ErroSubtituloEmBranco} se parâmetro for uma string vazia
+     * @throws {ErroSubtituloComMenosDeTresCaracteres} se parâmetro for uma string com menos de três caracteres
+     */
     constructor(private subtitulo: string) {
         this.validar(subtitulo);
     }

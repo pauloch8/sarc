@@ -6,6 +6,12 @@ export class RemoveHtmlDummy implements RemoveHtml {
     }
 }
 
+export class RemoveHtmlRetornaStringVaziaStub implements RemoveHtml {
+    remover(): string {
+        return '';
+    }
+}
+
 export class RemoveHtmlRetornaTextoPlanoStub implements RemoveHtml {
     textoPlano = 'textoPlano';
     remover(): string {

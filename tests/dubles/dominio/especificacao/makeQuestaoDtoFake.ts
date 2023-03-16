@@ -1,10 +1,10 @@
-import { QuestaoOpcaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
+import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { makeOpcaoValorDtoFake } from './makeOpcaoValorDtoFake';
 import { makeOpcaoValorDTOFakeComId } from './makeOpcaoValorDTOFakeComId';
 
 export function makeQuestaoDtoFake() {
     const opcaoFake = makeOpcaoValorDtoFake();
-    const questaoDtoFake: QuestaoOpcaoDTO = {
+    const questaoDtoFake: QuestaoDTO = {
         id: 'id',
         tipo: 'opcao',
         titulo: 'titulo',
@@ -16,7 +16,7 @@ export function makeQuestaoDtoFake() {
 export function makeArrayQuestoDtoFake() {
     const opcaoDtoFake1 = makeOpcaoValorDTOFakeComId('1');
     const opcaoDtoFake2 = makeOpcaoValorDTOFakeComId('2');
-    const dtoFake: QuestaoOpcaoDTO = {
+    const dtoFake: QuestaoDTO = {
         id: 'teste',
         tipo: 'opcao',
         titulo: 'Teste',

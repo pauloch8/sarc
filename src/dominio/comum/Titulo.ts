@@ -5,6 +5,13 @@ export interface ITitulo {
 export class Titulo implements ITitulo {
     private titulo: string;
 
+    /**
+     * Cria um objeto do tipo Titulo a partir de uma string. Remove os espaços ao redor (trim) e lança erro se não sobrar uma string com pelo menos três caracteres
+     * @param tituloString titulo com três ou mais caracteres
+     * @throws {ErroTituloEmBranco} se o parâmetro for uma string vazia
+     * @throws {ErroTituloComMenosDeTresCaracteres} se o parâmetro for uma string com menos de três caracteres
+     * @throws {ErroTituloComQuebraDeLinha} se o parâmetro for uma string com quebra de linha
+     */
     constructor(tituloString: string) {
         this.titulo = tituloString.trim();
         this.validar();

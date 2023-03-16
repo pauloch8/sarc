@@ -877,7 +877,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
             id: 'pontos-controversos',
             tipo: 'selecao',
             titulo: 'Pontos Controversos',
-            selecoes: [
+            opcoes: [
                 {
                     id: 'carencia',
                     titulo: 'Carência',
@@ -1011,7 +1011,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                     ramificacao: { irPara: 'avançar' },
                 },
                 {
-                    id: 'perda-da-qualidade-de-segurado-com-reingresso-até-01-07-2016-e-05-11-2016-05-01-2017',
+                    id: 'perda-da-qualidade-de-segurado-com-reingresso-ate-01-07-2016-e-05-11-2016-05-01-2017',
                     titulo: 'Perda da qualidade de segurado - com reingresso - até 01/07/2016 e 05/11/2016 - 05/01/2017',
                     listaTextos: [
                         {
@@ -1241,7 +1241,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                     ramificacao: { irPara: 'avançar' },
                 },
                 {
-                    id: 'beneficio-com-indicios-de-irregularidade-com-devolução-valores-e-sem-parcelamento',
+                    id: 'beneficio-com-indicios-de-irregularidade-com-devolucao-valores-e-sem-parcelamento',
                     titulo: 'Benefício com Indícios de irregularidade – com devolução valores e SEM parcelamento',
                     listaTextos: [
                         {
@@ -1287,7 +1287,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                     ramificacao: { irPara: 'avançar' },
                 },
                 {
-                    id: 'beneficio-de-prestacao-continuada-irregularidade-idoso-com-loas-devolução-atividade-contribuinte-individual-filho-solteiro',
+                    id: 'beneficio-de-prestacao-continuada-irregularidade-idoso-com-loas-devolucao-atividade-contribuinte-individual-filho-solteiro',
                     titulo: 'Benefício de prestação continuada - Irregularidade - idoso com loas - devolução - atividade contribuinte individual filho solteiro',
                     listaTextos: [
                         {
@@ -1333,7 +1333,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                     ramificacao: { irPara: 'avançar' },
                 },
                 {
-                    id: 'benefício-de-prestacao-continuada-renda-nao-atende',
+                    id: 'beneficio-de-prestacao-continuada-renda-nao-atende',
                     titulo: 'Benefício de prestação continuada - Renda NÃO ATENDE',
                     listaTextos: [
                         {
@@ -1356,7 +1356,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                     ramificacao: { irPara: 'avançar' },
                 },
                 {
-                    id: 'carência-–-cômputo-de-benefício-por-incapacidade',
+                    id: 'carencia-computo-de-beneficio-por-incapacidade',
                     titulo: 'Carência – Cômputo de benefício por incapacidade',
                     listaTextos: [
                         {
@@ -1402,7 +1402,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                     ramificacao: { irPara: 'avançar' },
                 },
                 {
-                    id: 'cnis-salario-de-contribuicao-inferior-ao-mínimo',
+                    id: 'cnis-salario-de-contribuicao-inferior-ao-minimo',
                     titulo: 'CNIS - salário de contribuição inferior ao mínimo',
                     listaTextos: [
                         {
@@ -1517,7 +1517,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                     ramificacao: { irPara: 'avançar' },
                 },
                 {
-                    id: 'doméstico-filiacao',
+                    id: 'domestico-filiacao',
                     titulo: 'Doméstico – Filiação',
                     listaTextos: [
                         {
@@ -1770,7 +1770,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                     ramificacao: { irPara: 'avançar' },
                 },
                 {
-                    id: 'incapacidade-laborativa-prorrogacao-dar-anterior-decreto-10.410/2020',
+                    id: 'incapacidade-laborativa-prorrogacao-dar-anterior-decreto-10-410-2020',
                     titulo: 'Incapacidade laborativa [PRORROGAÇÃO - DAR - ANTERIOR DECRETO 10.410/2020',
                     listaTextos: [
                         {

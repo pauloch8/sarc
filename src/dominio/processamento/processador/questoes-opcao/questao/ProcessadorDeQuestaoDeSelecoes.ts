@@ -24,24 +24,25 @@ export class ProcessadorDeQuestaoDeSelecoes implements IProcessadorDeQuestao {
                 this.id,
             );
         }
-        const textos = resposta.resposta.map(resposta => {
-            const processador = this.processadores.find(processador =>
-                processador.compararId(resposta.id),
-            );
-            if (!processador) {
-                throw new ErroNaoEncontrouProcessadorDaSelecaoDaResposta(
-                    resposta.id,
+        const textos = resposta.resposta
+            .map(resposta => {
+                const processador = this.processadores.find(processador =>
+                    processador.compararId(resposta.id),
                 );
-            }
-            const textosDaOpcao = processador.processar(resposta);
-            const texto = textosDaOpcao.find(t =>
-                escapador.compararCategoria(t.categoria),
-            );
-            if (!texto) {
-                throw new ErroDaRespostaNaoEncontrado(escapador, resposta.id);
-            }
-            return texto.texto;
-        });
+                if (!processador) {
+                    throw new ErroNaoEncontrouProcessadorDaSelecaoDaResposta(
+                        resposta.id,
+                    );
+                }
+                const textosDaOpcao = processador.processar(resposta);
+                const texto = textosDaOpcao.find(t =>
+                    escapador.compararCategoria(t.categoria),
+                );
+                if (texto) {
+                    return texto.texto;
+                }
+            })
+            .filter(texto => texto);
         const textoProcessado = template.replaceAll(
             escapador.toString(),
             textos.join('</br>'),
@@ -54,14 +55,6 @@ export class ErroNaoEncontrouProcessadorDaSelecaoDaResposta extends Error {
     constructor(idDaOpcaoDaResposta: string) {
         super(
             `Não encontrou processador da seleção da resposta id ${idDaOpcaoDaResposta}`,
-        );
-    }
-}
-
-export class ErroDaRespostaNaoEncontrado extends Error {
-    constructor(escapador: IEscapadorDeQuestao, questaoId: string) {
-        super(
-            `Texto para o escapador ${escapador} da resposta ${questaoId} não encontrado`,
         );
     }
 }

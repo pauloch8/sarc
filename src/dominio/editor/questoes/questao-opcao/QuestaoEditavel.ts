@@ -11,7 +11,7 @@ import { ISubtitulo } from '../../../comum/Subtitulo';
 import { ITitulo } from '../../../comum/Titulo';
 import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
-import { QuestaoOpcaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
+import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface IQuestaoEditavel extends IItemEditavel {
     getId(): IIdFormulario;
@@ -23,7 +23,7 @@ export interface IQuestaoEditavel extends IItemEditavel {
     getListaOpcoes(): IListaEditavel<IOpcaoEditavel> | undefined;
     setListaOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>): void;
     getEscapadores(): IEscapadorDeQuestao[];
-    gerarEspecificacao(): QuestaoOpcaoDTO;
+    gerarEspecificacao(): QuestaoDTO;
 }
 
 export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
@@ -149,7 +149,7 @@ export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
         const opcoes = this.listaOpcoes
             .getItens()
             .map(item => item.gerarEspecificacao());
-        const retorno: QuestaoOpcaoDTO = {
+        const retorno: QuestaoDTO = {
             id: this.id.toString(),
             tipo: 'opcao',
             titulo: this.titulo.toString(),

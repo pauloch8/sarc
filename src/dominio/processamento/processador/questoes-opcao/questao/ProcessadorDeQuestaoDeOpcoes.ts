@@ -35,13 +35,14 @@ export class ProcessadorDeQuestaoDeOpcoes implements IProcessadorDeQuestao {
         const texto = textosDaOpcao.find(t =>
             escapador.compararCategoria(t.categoria),
         );
-        if (!texto) {
-            throw new ErroDaRespostaNaoEncontrado(escapador, resposta.id);
+        debugger;
+        let textoProcessado = template;
+        if (texto) {
+            textoProcessado = template.replaceAll(
+                escapador.toString(),
+                texto.texto,
+            );
         }
-        const textoProcessado = template.replaceAll(
-            escapador.toString(),
-            texto.texto,
-        );
         return textoProcessado;
     }
 }
@@ -56,14 +57,6 @@ export class ErroNaoEncontrouProcessadorDaOpcaoDaResposta extends Error {
     constructor(idDaOpcaoDaResposta: string) {
         super(
             `Não encontrou processador da opção da resposta id ${idDaOpcaoDaResposta}`,
-        );
-    }
-}
-
-export class ErroDaRespostaNaoEncontrado extends Error {
-    constructor(escapador: IEscapadorDeQuestao, questaoId: string) {
-        super(
-            `Texto para o escapador ${escapador} da resposta ${questaoId} não encontrado`,
         );
     }
 }

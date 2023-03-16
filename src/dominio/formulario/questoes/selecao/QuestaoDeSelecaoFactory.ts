@@ -1,14 +1,14 @@
-import { QuestaoSelecaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
+import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { Variavel } from '../Variavel';
 import { Selecao } from './Selecao';
 import { QuestaoDeSelecao } from './QuestaoDeSelecao';
 
 export class QuestaoDeSelecaoFactory {
-    static criarDeDto(dto: QuestaoSelecaoDTO): QuestaoDeSelecao {
-        if (!dto.selecoes) {
+    static criarDeDto(dto: QuestaoDTO): QuestaoDeSelecao {
+        if (!dto.opcoes) {
             throw new Error('Questão do tipo seleção sem seleções');
         }
-        const opcoes = dto.selecoes.map(valor => {
+        const opcoes = dto.opcoes.map(valor => {
             const variaveis = valor.listaVariaveis?.map(
                 variavel =>
                     new Variavel(variavel.id, variavel.titulo, variavel.tipo),

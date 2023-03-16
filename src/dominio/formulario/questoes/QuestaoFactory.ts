@@ -1,8 +1,4 @@
-import {
-    QuestaoDTO,
-    QuestaoOpcaoDTO,
-    QuestaoSelecaoDTO,
-} from '../../especificacao/EspecificacaoDTO';
+import { QuestaoDTO } from '../../especificacao/EspecificacaoDTO';
 import { QuestaoDeOpcoesFactory } from './opcoes/QuestaoDeOpcoesFactory';
 import { Questao } from './Questao';
 import { QuestaoDeSelecaoFactory } from './selecao/QuestaoDeSelecaoFactory';
@@ -11,9 +7,9 @@ export class QuestaoFactory {
     static criarDeDto(dto: QuestaoDTO): Questao {
         const tipo = dto.tipo;
         if (tipo === 'opcao') {
-            return QuestaoDeOpcoesFactory.criarDeDto(dto as QuestaoOpcaoDTO);
+            return QuestaoDeOpcoesFactory.criarDeDto(dto as QuestaoDTO);
         } else if (tipo === 'selecao') {
-            return QuestaoDeSelecaoFactory.criarDeDto(dto as QuestaoSelecaoDTO);
+            return QuestaoDeSelecaoFactory.criarDeDto(dto as QuestaoDTO);
         } else {
             throw new TipoDeQuestaoNaoReconhecida(tipo);
         }

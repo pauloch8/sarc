@@ -8,29 +8,67 @@ import { EscapadorDeVariavelFactoryDummy } from '@/tests/dubles/dominio/comum/es
 import {
     RemoveHtmlDummy,
     RemoveHtmlRetornaTextoPlanoStub,
+    RemoveHtmlRetornaStringVaziaStub,
 } from '@/tests/dubles/dominio/util/RemoveHtmlDubles';
 
 describe('TextoModelo', () => {
-    describe('lança erro na instanciação', () => {
-        test('se for informado um texto vazio', () => {
+    describe('valida na instanciação', () => {
+        describe('retorna um objeto se o parâmetro estiver correto', () => {
             const removeHtml = new RemoveHtmlDummy();
             const escapadorDeVariavelFactory =
                 new EscapadorDeVariavelFactoryDummy();
-            const instanciacao = expect(() => {
-                new TextoModelo('', removeHtml, escapadorDeVariavelFactory);
-            });
-            instanciacao.toThrow(ErroTextoModeloVazio);
-            instanciacao.toThrow(ErroDeCriacaoDeTextoModelo);
+            const sut = new TextoModelo(
+                '<html>teste</html>',
+                removeHtml,
+                escapadorDeVariavelFactory,
+            );
+            expect(sut).toBeInstanceOf(TextoModelo);
         });
-        test('se for informado um texto com menos de três caracteres', () => {
-            const removeHtml = new RemoveHtmlDummy();
-            const escapadorDeVariavelFactory =
-                new EscapadorDeVariavelFactoryDummy();
-            const instanciacao = expect(() => {
-                new TextoModelo('  ', removeHtml, escapadorDeVariavelFactory);
+        describe('lança erro', () => {
+            describe('se for informado um texto vazio', () => {
+                test('com o parâmetro uma string vazia', () => {
+                    const removeHtml = new RemoveHtmlDummy();
+                    const escapadorDeVariavelFactory =
+                        new EscapadorDeVariavelFactoryDummy();
+                    const instanciacao = expect(() => {
+                        new TextoModelo(
+                            '',
+                            removeHtml,
+                            escapadorDeVariavelFactory,
+                        );
+                    });
+                    instanciacao.toThrow(ErroTextoModeloVazio);
+                    instanciacao.toThrow(ErroDeCriacaoDeTextoModelo);
+                });
+                test('com o parâmetro uma html com texto vazio', () => {
+                    const removeHtml = new RemoveHtmlRetornaStringVaziaStub();
+                    const escapadorDeVariavelFactory =
+                        new EscapadorDeVariavelFactoryDummy();
+                    const instanciacao = expect(() => {
+                        new TextoModelo(
+                            '<html></html>',
+                            removeHtml,
+                            escapadorDeVariavelFactory,
+                        );
+                    });
+                    instanciacao.toThrow(ErroTextoModeloVazio);
+                    instanciacao.toThrow(ErroDeCriacaoDeTextoModelo);
+                });
             });
-            instanciacao.toThrow(ErroTextoModeloComMenosDeTresCaracteres);
-            instanciacao.toThrow(ErroDeCriacaoDeTextoModelo);
+            test('se for informado um texto com menos de três caracteres', () => {
+                const removeHtml = new RemoveHtmlDummy();
+                const escapadorDeVariavelFactory =
+                    new EscapadorDeVariavelFactoryDummy();
+                const instanciacao = expect(() => {
+                    new TextoModelo(
+                        '  ',
+                        removeHtml,
+                        escapadorDeVariavelFactory,
+                    );
+                });
+                instanciacao.toThrow(ErroTextoModeloComMenosDeTresCaracteres);
+                instanciacao.toThrow(ErroDeCriacaoDeTextoModelo);
+            });
         });
     });
     test('permite obter o texto HTML', () => {
