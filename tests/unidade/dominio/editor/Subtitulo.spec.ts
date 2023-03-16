@@ -5,7 +5,11 @@ import {
 } from '@/dominio/comum/Subtitulo';
 
 describe('SubtituloFactory', () => {
-    describe('ao criar um Subtítulo', () => {
+    describe('valida na instanciação', () => {
+        test('retorna um objeto se o parâmetro estiver correto', async () => {
+            const sut = new Subtitulo('Título');
+            expect(sut).toBeInstanceOf(Subtitulo);
+        });
         describe('lança erro', () => {
             test('se for uma string vazia', async () => {
                 expect(() => {
