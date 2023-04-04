@@ -1,13 +1,13 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
-import FormularioEditor from './FormularioEdicao.vue';
-import { FormularioEditor as FormularioEditorModel } from '@/dominio/editor/FormularioEditor';
+import FormularioEdicao from './FormularioEdicao.vue';
+import { FormularioEditor } from '@/dominio/editor/FormularioEditor';
 import { IEdicaoDeFormularioService } from '@/aplicacao/EdicaoDeFormularioService';
 
 export default defineComponent({
     name: 'TelaEditor',
     components: {
-        FormularioEditor,
+        FormularioEdicao,
     },
     setup() {
         // injeta especificacaoRepository
@@ -33,9 +33,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <FormularioEditor
-        :editor="(editor as FormularioEditorModel)"
-    ></FormularioEditor>
+    <FormularioEdicao :editor="(editor as FormularioEditor)"></FormularioEdicao>
 </template>
 
 <style>
