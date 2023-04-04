@@ -15,8 +15,8 @@ import { IOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/o
 import { Titulo } from '@/dominio/comum/Titulo';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
-import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
 
 export default defineComponent({
     name: 'OpcaoEdicao',

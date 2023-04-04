@@ -8,12 +8,12 @@ import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { Titulo } from '@/dominio/comum/Titulo';
 import { TextoModelo } from '@/dominio/comum/TextoModelo';
-import { ITextoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
+import { ITextoEditavelFactory } from '@/dominio/editor/questoes/comum/texto/TextoEditavelFactory';
 import {
     TextoEditavel,
     ErroNaEdicaoDoTexto,
     InconsistenciasNaValidacaoDoTexto,
-} from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+} from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';
 import IdFormularioInput from '@/apresentacao/telas/editor/comum/IdFormularioInput.vue';
 

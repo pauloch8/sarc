@@ -6,9 +6,9 @@ import {
     ErroInconsistenciasNaValidacao,
 } from '../../../comum/ItemEditavel';
 import { IListaEditavel } from '../../../comum/ListaEditavel';
-import { ITextoEditavel } from './texto/TextoEditavel';
+import { ITextoEditavel } from '../../comum/texto/TextoEditavel';
 import { ITitulo } from '../../../../comum/Titulo';
-import { IVariavelEditavel } from './variavel/VariavelEditavel';
+import { IVariavelEditavel } from '../../comum/variavel/VariavelEditavel';
 import { OpcaoValorDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface IOpcaoEditavel extends IItemEditavel {

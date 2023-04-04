@@ -1,5 +1,5 @@
 <script lang="ts">
-import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
 import { defineComponent } from 'vue';
 import VariavelEdicao from './VariavelEdicao.vue';
 

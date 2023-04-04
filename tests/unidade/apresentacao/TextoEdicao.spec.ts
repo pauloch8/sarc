@@ -1,7 +1,7 @@
 import { mount, shallowMount } from '@vue/test-utils';
 import TextoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/opcao/texto/TextoEdicao.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
 import {
     TextoEditavelFactoryDummy,
     TextoEditavelFactoryErroDesconhecidoStub,

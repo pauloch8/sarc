@@ -2,11 +2,11 @@ import { IOpcaoEditavel, OpcaoEditavel } from './OpcaoEditavel';
 import { IListaEditavel, ListaEditavel } from '../../../comum/ListaEditavel';
 import { ITitulo, Titulo } from '../../../../comum/Titulo';
 import { IdFormulario, IIdFormulario } from '../../../../comum/IdFormulario';
-import { ITextoEditavel } from './texto/TextoEditavel';
-import { IVariavelEditavel } from './variavel/VariavelEditavel';
+import { ITextoEditavel } from '../../comum/texto/TextoEditavel';
+import { ITextoEditavelFactory } from '../../comum/texto/TextoEditavelFactory';
+import { IVariavelEditavel } from '../../comum/variavel/VariavelEditavel';
+import { IVariavelEditavelFactory } from '../../comum/variavel/VariavelEditavelFactory';
 import { OpcaoValorDTO } from '@/dominio/especificacao/EspecificacaoDTO';
-import { ITextoEditavelFactory } from './texto/TextoEditavelFactory';
-import { IVariavelEditavelFactory } from './variavel/VariavelEditavelFactory';
 
 export interface IOpcaoEditavelFactory {
     criar(

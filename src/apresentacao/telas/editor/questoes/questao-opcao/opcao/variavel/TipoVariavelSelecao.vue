@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
-import { TipoVariavelRepository } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelRepository';
-import { TipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
+import { TipoVariavelRepository } from '@/dominio/editor/questoes/comum/variavel/tipo-variavel/TipoVariavelRepository';
+import { TipoVariavelID } from '@/dominio/editor/questoes/comum/variavel/tipo-variavel/TipoVariavelID';
 
 export default defineComponent({
     name: 'TipoVariavelSelecao',

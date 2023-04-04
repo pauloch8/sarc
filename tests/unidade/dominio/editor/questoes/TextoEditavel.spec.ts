@@ -2,7 +2,7 @@ import {
     TextoEditavel,
     ErroNaEdicaoDoTexto,
     InconsistenciasNaValidacaoDoTexto,
-} from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+} from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
 import { IIdFormulario } from '@/dominio/comum/IdFormulario';
 import { ITextoModelo } from '@/dominio/comum/TextoModelo';
 import {

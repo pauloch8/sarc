@@ -1,8 +1,8 @@
 import {
     InconsistenciasNaValidacaoDoTexto,
     ITextoEditavel,
-} from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
-import { ITextoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
+} from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
+import { ITextoEditavelFactory } from '@/dominio/editor/questoes/comum/texto/TextoEditavelFactory';
 import { TextoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { TextoEditavelDummy } from './TextoEditavelDubles';
 

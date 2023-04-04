@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BotoesEdicao from '../../../../comum/BotoesEdicao.vue';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
 
 export default defineComponent({
     name: 'TextoVisualizacao',

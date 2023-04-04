@@ -1,7 +1,7 @@
 import { ITitulo } from '@/dominio/comum/Titulo';
-import { ITipoVariavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavel';
-import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
-import { TipoVariavelRepository } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelRepository';
+import { ITipoVariavel } from '@/dominio/editor/questoes/comum/variavel/tipo-variavel/TipoVariavel';
+import { ITipoVariavelID } from '@/dominio/editor/questoes/comum/variavel/tipo-variavel/TipoVariavelID';
+import { TipoVariavelRepository } from '@/dominio/editor/questoes/comum/variavel/tipo-variavel/TipoVariavelRepository';
 import { TituloDummy, TituloFake } from '../../comum/TituloDubles';
 
 export class TipoVariavelIDDummy implements ITipoVariavelID {}

@@ -5,7 +5,7 @@ import { IListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import {
     ErroNaEdicaoDoTexto,
     ITextoEditavel,
-} from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+} from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
 import { TextoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
 import { TextoModeloDummy } from '../../comum/TextoModeloDubles';

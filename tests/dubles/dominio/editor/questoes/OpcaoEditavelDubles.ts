@@ -10,12 +10,12 @@ import {
 import {
     ITextoEditavel,
     TextoEditavel,
-} from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+} from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
 import { ITitulo, Titulo } from '@/dominio/comum/Titulo';
 import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
 import { TituloDummy } from '../../comum/TituloDubles';
 import { TextoModeloDummy } from '../../comum/TextoModeloDubles';
-import { IVariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { IVariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
 import { OpcaoValorDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export class OpcaoEditavelErroStub implements IOpcaoEditavel {

@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import ModeloEdicaoVue from '@/apresentacao/telas/editor/modelos/ModeloEdicao.vue';
 import ListaDeEscapadores from '@/apresentacao/telas/editor/comum/EscapadoresDisponiveis.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
 import {
     TextoEditavelFactoryDummy,
     TextoEditavelFactoryErroDesconhecidoStub,

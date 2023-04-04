@@ -6,7 +6,7 @@ import {
     IItemEditavel,
     ErroNaEdicao,
     ErroInconsistenciasNaValidacao,
-} from '../../../../comum/ItemEditavel';
+} from '../../../comum/ItemEditavel';
 import { TextoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface ITextoEditavel extends IItemEditavel {

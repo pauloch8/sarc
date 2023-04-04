@@ -3,9 +3,9 @@ import {
     ItemEditavel,
     ErroInconsistenciasNaValidacao,
     ErroNaEdicao,
-} from '../../../../comum/ItemEditavel';
-import { IIdFormulario } from '../../../../../comum/IdFormulario';
-import { ITitulo } from '../../../../../comum/Titulo';
+} from '../../../comum/ItemEditavel';
+import { IIdFormulario } from '../../../../comum/IdFormulario';
+import { ITitulo } from '../../../../comum/Titulo';
 import { ITipoVariavel } from './tipo-variavel/TipoVariavel';
 import { ITipoVariavelID } from './tipo-variavel/TipoVariavelID';
 import { IEscapadorDeVariavel } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel';

@@ -1,4 +1,4 @@
-import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
 import { IIdFormulario } from '@/dominio/comum/IdFormulario';
 import { ITitulo } from '@/dominio/comum/Titulo';
 import {
@@ -14,7 +14,7 @@ import {
     ErroNaEdicao,
 } from '@/dominio/editor/comum/ItemEditavel';
 import { TipoVariavelIDDummy } from '@/tests/dubles/dominio/editor/questoes/TipoVariavelDubles';
-import { ITipoVariavelID } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelID';
+import { ITipoVariavelID } from '@/dominio/editor/questoes/comum/variavel/tipo-variavel/TipoVariavelID';
 import {
     EscapadorDeVariavelFactoryRetornaToStringStub,
     EscapadorDeVariavelFactoryDummy,

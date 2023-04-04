@@ -1,5 +1,5 @@
 <script lang="ts">
-import { TextoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavel';
+import { TextoEditavel } from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
 import { defineComponent } from 'vue';
 import TextoEdicao from './TextoEdicao.vue';
 

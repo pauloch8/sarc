@@ -1,6 +1,6 @@
 import VariavelEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/opcao/variavel/VariavelEdicao.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
-import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
 import { mount } from '@vue/test-utils';
 import {
     VariavelEditavelFactoryDummy,

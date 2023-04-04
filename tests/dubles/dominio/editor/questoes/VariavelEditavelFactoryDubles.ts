@@ -1,6 +1,6 @@
 import { ErroInconsistenciasNaValidacao } from '@/dominio/editor/comum/ItemEditavel';
-import { IVariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
-import { IVariavelEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavelFactory';
+import { IVariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
+import { IVariavelEditavelFactory } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavelFactory';
 import { VariavelDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { VariavelEditavelDummy } from './VariavelEditavelDubles';
 

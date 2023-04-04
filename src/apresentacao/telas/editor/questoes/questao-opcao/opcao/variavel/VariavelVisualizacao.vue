@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import BotoesEdicao from '../../../../comum/BotoesEdicao.vue';
-import { VariavelEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/VariavelEditavel';
+import { VariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
 
 export default defineComponent({
     name: 'VariavelVisualizacao',

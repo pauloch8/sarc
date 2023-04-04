@@ -1,6 +1,6 @@
-import { ITipoVariavel } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavel';
-import { ITipoVariavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelFactory';
-import { TipoVariavelRepository } from '@/dominio/editor/questoes/questao-opcao/opcao/variavel/tipo-variavel/TipoVariavelRepository';
+import { ITipoVariavel } from '@/dominio/editor/questoes/comum/variavel/tipo-variavel/TipoVariavel';
+import { ITipoVariavelFactory } from '@/dominio/editor/questoes/comum/variavel/tipo-variavel/TipoVariavelFactory';
+import { TipoVariavelRepository } from '@/dominio/editor/questoes/comum/variavel/tipo-variavel/TipoVariavelRepository';
 
 export class TipoVariavelRepositoryEmMemoria implements TipoVariavelRepository {
     private tipos = [
