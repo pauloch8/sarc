@@ -214,4 +214,7 @@ input[type='radio'][disabled] {
 .opcoes {
     margin-bottom: 30px;
 }
+footer {
+    text-align: right;
+}
 </style>

@@ -53,7 +53,7 @@ export default defineComponent({
     </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 footer {
     text-align: right;
 }

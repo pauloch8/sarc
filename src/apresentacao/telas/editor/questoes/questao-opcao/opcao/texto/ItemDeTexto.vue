@@ -56,9 +56,3 @@ export default defineComponent({
         ></TextoEdicao>
     </div>
 </template>
-
-<style>
-footer {
-    text-align: right;
-}
-</style>

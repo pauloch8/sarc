@@ -49,9 +49,3 @@ export default defineComponent({
         <OpcaoEdicao v-if="opcao.getEmEdicao()" :opcao="opcao"></OpcaoEdicao>
     </div>
 </template>
-
-<style>
-footer {
-    text-align: right;
-}
-</style>

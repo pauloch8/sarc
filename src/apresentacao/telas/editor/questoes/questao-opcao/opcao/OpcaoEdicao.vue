@@ -224,4 +224,8 @@ label input[type='text'] {
     display: inline;
     width: 95%;
 }
+
+footer {
+    text-align: right;
+}
 </style>

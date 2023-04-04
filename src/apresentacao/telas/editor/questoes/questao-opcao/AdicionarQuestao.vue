@@ -55,9 +55,3 @@ export default defineComponent({
         </QuestaoEdicao>
     </div>
 </template>
-
-<style>
-footer {
-    text-align: right;
-}
-</style>
