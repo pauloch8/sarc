@@ -2,7 +2,7 @@ import { IIdFormulario } from '../comum/IdFormulario';
 import { ITitulo } from '../comum/Titulo';
 import { ISubtitulo } from '../comum/Subtitulo';
 import { IListaEditavel } from './comum/ListaEditavel';
-import { IQuestaoEditavel } from './questoes/questao-opcao/QuestaoEditavel';
+import { IQuestaoOpcaoEditavel } from './questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { IModeloEditavel } from './modelo/ModeloEditavel';
 import { EspecificacaoDTO } from '../especificacao/EspecificacaoDTO';
 
@@ -13,7 +13,7 @@ export interface IFormularioEditor {
     getSubtitulo(): ISubtitulo | undefined;
     setSubtitulo(subtitulo?: ISubtitulo | undefined): void;
     setTitulo(titulo: ITitulo): void;
-    getListaQuestoes(): IListaEditavel<IQuestaoEditavel>;
+    getListaQuestoes(): IListaEditavel<IQuestaoOpcaoEditavel>;
     getListaModelos(): IListaEditavel<IModeloEditavel>;
     gerarEspecificacao(): EspecificacaoDTO;
 }
@@ -22,7 +22,7 @@ export class FormularioEditor implements IFormularioEditor {
     constructor(
         private id: IIdFormulario,
         private titulo: ITitulo,
-        private listaQuestoes: IListaEditavel<IQuestaoEditavel>,
+        private listaQuestoes: IListaEditavel<IQuestaoOpcaoEditavel>,
         private listaModelos: IListaEditavel<IModeloEditavel>,
         private subtitulo?: ISubtitulo,
     ) {}

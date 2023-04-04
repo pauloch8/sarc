@@ -1,8 +1,8 @@
 <script lang="ts">
-import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { defineComponent } from 'vue';
 import QuestaoVisualizacao from './QuestaoVisualizacao.vue';
-import QuestaoEdicao from './QuestaoEdicao.vue';
+import QuestaoEdicao from './QuestaoOpcaoEdicao.vue';
 
 export default defineComponent({
     name: 'ItemDeQuestao',
@@ -11,7 +11,7 @@ export default defineComponent({
         QuestaoEdicao,
     },
     props: {
-        questao: { type: QuestaoEditavel, required: true },
+        questao: { type: QuestaoOpcaoEditavel, required: true },
         ehPrimeiro: { type: Boolean, required: true },
         ehUltimo: { type: Boolean, required: true },
     },
@@ -19,19 +19,19 @@ export default defineComponent({
         return { selecionado: false };
     },
     methods: {
-        editar(questao: QuestaoEditavel) {
+        editar(questao: QuestaoOpcaoEditavel) {
             this.$emit('editar', questao);
         },
-        excluir(questao: QuestaoEditavel) {
+        excluir(questao: QuestaoOpcaoEditavel) {
             this.$emit('excluir', questao);
         },
-        descer(questao: QuestaoEditavel) {
+        descer(questao: QuestaoOpcaoEditavel) {
             this.$emit('descer', questao);
         },
-        subir(questao: QuestaoEditavel) {
+        subir(questao: QuestaoOpcaoEditavel) {
             this.$emit('subir', questao);
         },
-        selecionar(questao: QuestaoEditavel) {
+        selecionar(questao: QuestaoOpcaoEditavel) {
             this.$emit('selecionar', questao);
         },
     },
@@ -55,7 +55,7 @@ export default defineComponent({
 
         <QuestaoEdicao
             v-if="questao.getEmEdicao()"
-            :questao="(questao as QuestaoEditavel)"
+            :questao="(questao as QuestaoOpcaoEditavel)"
         ></QuestaoEdicao>
     </div>
 </template>

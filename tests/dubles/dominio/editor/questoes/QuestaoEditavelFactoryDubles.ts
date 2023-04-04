@@ -1,56 +1,58 @@
 import {
     ErroQuestaoInvalida,
-    IQuestaoEditavel,
-    QuestaoEditavel,
-} from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
-import { IQuestaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavelFactory';
+    IQuestaoOpcaoEditavel,
+    QuestaoOpcaoEditavel,
+} from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
+import { IQuestaoOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavelFactory';
 import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { QuestaoEditavelDummy } from './QuestaoEditavelDubles';
 
-export class QuestaoEditavelFactoryDummy implements IQuestaoEditavelFactory {
-    criar(): IQuestaoEditavel {
+export class QuestaoEditavelFactoryDummy
+    implements IQuestaoOpcaoEditavelFactory
+{
+    criar(): IQuestaoOpcaoEditavel {
         return new QuestaoEditavelDummy();
     }
     criarDeEspecificacao(
         especificacao: QuestaoDTO,
         indice: number,
-    ): IQuestaoEditavel {
+    ): IQuestaoOpcaoEditavel {
         return new QuestaoEditavelDummy();
     }
 }
 
 export class QuestaoEditavelFactoryErroDesconhecidoStub
-    implements IQuestaoEditavelFactory
+    implements IQuestaoOpcaoEditavelFactory
 {
     mensagemDeErro = 'Mensagem de erro';
-    criar(): QuestaoEditavel {
+    criar(): QuestaoOpcaoEditavel {
         throw new Error(this.mensagemDeErro);
     }
     criarDeEspecificacao(
         especificacao: QuestaoDTO,
         indice: number,
-    ): IQuestaoEditavel {
+    ): IQuestaoOpcaoEditavel {
         throw new Error(this.mensagemDeErro);
     }
 }
 
 export class QuestaoEditavelFactoryErroQuestaoInvalidaStub
-    implements IQuestaoEditavelFactory
+    implements IQuestaoOpcaoEditavelFactory
 {
     inconsistencias = ['inconsistencia1', 'inconsistencia2', 'inconsistencia3'];
-    criar(): QuestaoEditavel {
+    criar(): QuestaoOpcaoEditavel {
         throw new ErroQuestaoInvalida(this.inconsistencias);
     }
     criarDeEspecificacao(
         especificacao: QuestaoDTO,
         indice: number,
-    ): IQuestaoEditavel {
+    ): IQuestaoOpcaoEditavel {
         throw new ErroQuestaoInvalida(this.inconsistencias);
     }
 }
 
 export class QuestaoEditavelFactorySucessoStub
-    implements IQuestaoEditavelFactory
+    implements IQuestaoOpcaoEditavelFactory
 {
     criar() {
         return new QuestaoEditavelDummy();
@@ -58,7 +60,7 @@ export class QuestaoEditavelFactorySucessoStub
     criarDeEspecificacao(
         especificacao: QuestaoDTO,
         indice: number,
-    ): IQuestaoEditavel {
+    ): IQuestaoOpcaoEditavel {
         return new QuestaoEditavelDummy();
     }
 }

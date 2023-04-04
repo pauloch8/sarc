@@ -1,7 +1,7 @@
 import {
     ErroNaEdicaoDaQuestao,
-    IQuestaoEditavel,
-} from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+    IQuestaoOpcaoEditavel,
+} from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { IdFormularioDummy } from '../../comum/IdFormularioDubles';
 import { TituloDummy } from '../../comum/TituloDubles';
 import { SubtituloDummy } from '../../comum/SubtituloDubles';
@@ -18,7 +18,7 @@ import {
 import { IListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
-export class QuestaoEditavelErroStub implements IQuestaoEditavel {
+export class QuestaoEditavelErroStub implements IQuestaoOpcaoEditavel {
     gerarEspecificacao(): QuestaoDTO {
         throw new Error('Method not implemented.');
     }
@@ -81,7 +81,7 @@ export class QuestaoEditavelErroStub implements IQuestaoEditavel {
     }
 }
 
-export class QuestaoEditavelDummy implements IQuestaoEditavel {
+export class QuestaoEditavelDummy implements IQuestaoOpcaoEditavel {
     private id = new IdFormularioDummy();
     private titulo = new TituloDummy();
     private subtitulo = new SubtituloDummy();
@@ -137,7 +137,9 @@ export class QuestaoEditavelDummy implements IQuestaoEditavel {
     }
 }
 
-export class QuestaoEditavelRetornaEscapadorStub implements IQuestaoEditavel {
+export class QuestaoEditavelRetornaEscapadorStub
+    implements IQuestaoOpcaoEditavel
+{
     gerarEspecificacao(): QuestaoDTO {
         throw new Error('Method not implemented.');
     }
@@ -220,11 +222,11 @@ export class QuestaoEditavelRetornaEscapadorStub implements IQuestaoEditavel {
 }
 
 export class ListaDeQuestoesRetornaItensComEscapadorStub
-    implements IListaEditavel<IQuestaoEditavel>
+    implements IListaEditavel<IQuestaoOpcaoEditavel>
 {
     itens = [new QuestaoEditavelRetornaEscapadorStub()];
 
-    getItens(): IQuestaoEditavel[] {
+    getItens(): IQuestaoOpcaoEditavel[] {
         return this.itens;
     }
     getLength(): number {
@@ -257,7 +259,7 @@ export class ListaDeQuestoesRetornaItensComEscapadorStub
             'Method ListaDeQuestoesRetornaItensComEscapadorStub.adicionarItem not implemented.',
         );
     }
-    obterItemPorIndice(): IQuestaoEditavel {
+    obterItemPorIndice(): IQuestaoOpcaoEditavel {
         throw new Error(
             'Method ListaDeQuestoesRetornaItensComEscapadorStub.obterItemPorIndice not implemented.',
         );
@@ -265,12 +267,12 @@ export class ListaDeQuestoesRetornaItensComEscapadorStub
 }
 
 export class ListaDeQuestoesEditavelDummy
-    implements IListaEditavel<IQuestaoEditavel>
+    implements IListaEditavel<IQuestaoOpcaoEditavel>
 {
     private item = new QuestaoEditavelDummy();
     private itens = [this.item];
 
-    getItens(): IQuestaoEditavel[] {
+    getItens(): IQuestaoOpcaoEditavel[] {
         return this.itens;
     }
     getLength(): number {
@@ -291,7 +293,7 @@ export class ListaDeQuestoesEditavelDummy
     adicionarItem(): void {
         return;
     }
-    obterItemPorIndice(): IQuestaoEditavel {
+    obterItemPorIndice(): IQuestaoOpcaoEditavel {
         return this.item;
     }
 }

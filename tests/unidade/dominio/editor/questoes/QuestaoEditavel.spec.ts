@@ -1,4 +1,4 @@
-import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { EscapadorDeQuestaoToStringStub } from '@/tests/dubles/dominio/comum/escapador/questao/EscapadorDeQuestaoDubles';
 import { EscapadorDeQuestaoFactoryCriaDeTituloCategoriaStub } from '@/tests/dubles/dominio/comum/escapador/questao/EscapadorDeQuestaoFactoryDubles';
 import { IdFormularioDummy } from '@/tests/dubles/dominio/comum/IdFormularioDubles';
@@ -7,7 +7,7 @@ import { ListaDeOpcoesEditavelDummy } from '@/tests/dubles/dominio/editor/questo
 
 describe('QuestaoEditavel', () => {
     test('gera escapadores de questão', () => {
-        const sut = new QuestaoEditavel(
+        const sut = new QuestaoOpcaoEditavel(
             new IdFormularioDummy(),
             new TituloDummy(),
             0,

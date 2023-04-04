@@ -13,7 +13,7 @@ import { Titulo } from '@/dominio/comum/Titulo';
 import { FormularioEditor } from '@/dominio/editor/FormularioEditor';
 import { FormularioEditorFactory } from '@/dominio/editor/FormularioEditorFactory';
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
-import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { ItemEditavel } from '@/dominio/editor/comum/ItemEditavel';
 import { ModeloEditavel } from '@/dominio/editor/modelo/ModeloEditavel';
 
@@ -52,7 +52,7 @@ export default defineComponent({
         const subtitulo = this.editor?.getSubtitulo();
         const listaQuestoes =
             this.editor?.getListaQuestoes() ||
-            new ListaEditavel<QuestaoEditavel>();
+            new ListaEditavel<QuestaoOpcaoEditavel>();
         const listaModelos =
             this.editor?.getListaModelos() ||
             new ListaEditavel<ModeloEditavel>();

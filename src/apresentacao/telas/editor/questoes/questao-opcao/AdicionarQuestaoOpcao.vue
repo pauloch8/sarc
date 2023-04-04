@@ -1,12 +1,12 @@
 <script lang="ts">
-import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { defineComponent } from 'vue';
-import QuestaoEdicao from './QuestaoEdicao.vue';
+import QuestaoOpcaoEdicao from './QuestaoOpcaoEdicao.vue';
 
 export default defineComponent({
-    name: 'AdicionarQuestao',
+    name: 'AdicionarQuestaoOpcao',
     components: {
-        QuestaoEdicao,
+        QuestaoOpcaoEdicao,
     },
     props: {
         indice: {
@@ -23,7 +23,7 @@ export default defineComponent({
         editar() {
             this.emEdicao = true;
         },
-        adicionarItem(item: QuestaoEditavel) {
+        adicionarItem(item: QuestaoOpcaoEditavel) {
             this.emEdicao = false;
             this.$emit('adicionarItem', item);
         },
@@ -47,11 +47,11 @@ export default defineComponent({
         </a>
     </div>
     <div v-if="emEdicao">
-        <QuestaoEdicao
+        <QuestaoOpcaoEdicao
             :indice="indice"
             @criou="adicionarItem"
             @cancelou="cancelou"
         >
-        </QuestaoEdicao>
+        </QuestaoOpcaoEdicao>
     </div>
 </template>

@@ -6,19 +6,19 @@ import SubtituloInput from '../../comum/SubtituloInput.vue';
 import ListaOpcoes from './opcao/ListaOpcoes.vue';
 import BotoesSalvarCancelar from '../../comum/BotoesSalvarCancelar.vue';
 import {
-    QuestaoEditavel,
+    QuestaoOpcaoEditavel,
     ErroQuestaoInvalida,
     ErroNaEdicaoDaQuestao,
-} from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+} from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { Titulo } from '@/dominio/comum/Titulo';
 import { Subtitulo } from '@/dominio/comum/Subtitulo';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
-import { IQuestaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavelFactory';
+import { QuestaoOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavelFactory';
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 
 export default defineComponent({
-    name: 'QuestaoEdicao',
+    name: 'QuestaoOpcaoEdicao',
     components: {
         IdFormularioFactory,
         TituloInput,
@@ -27,7 +27,7 @@ export default defineComponent({
         BotoesSalvarCancelar,
     },
     setup() {
-        const factory = inject<IQuestaoEditavelFactory>(
+        const factory = inject<QuestaoOpcaoEditavelFactory>(
             'questaoEditavelFactory',
         );
         if (!factory) {
@@ -40,7 +40,7 @@ export default defineComponent({
         };
     },
     props: {
-        questao: { type: QuestaoEditavel, required: false },
+        questao: { type: QuestaoOpcaoEditavel, required: false },
         indice: { type: Number, required: false },
     },
     data() {
@@ -103,7 +103,7 @@ export default defineComponent({
                 }
             }
         },
-        editar(questao: QuestaoEditavel) {
+        editar(questao: QuestaoOpcaoEditavel) {
             //id
             try {
                 questao.setId(this.idFormulario as IdFormulario);

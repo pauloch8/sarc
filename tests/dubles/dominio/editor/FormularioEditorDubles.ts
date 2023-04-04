@@ -4,7 +4,7 @@ import { ITitulo } from '@/dominio/comum/Titulo';
 import { IListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { IFormularioEditor } from '@/dominio/editor/FormularioEditor';
 import { IModeloEditavel } from '@/dominio/editor/modelo/ModeloEditavel';
-import { IQuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { IQuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { EspecificacaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { IdFormularioDummy } from '../comum/IdFormularioDubles';
 import { TituloDummy } from '../comum/TituloDubles';
@@ -35,7 +35,7 @@ export class FormularioEditorDummy implements IFormularioEditor {
     setSubtitulo(subtitulo?: ISubtitulo | undefined): void {
         return;
     }
-    getListaQuestoes(): IListaEditavel<IQuestaoEditavel> {
+    getListaQuestoes(): IListaEditavel<IQuestaoOpcaoEditavel> {
         return this.listaQuestoes;
     }
     getListaModelos(): IListaEditavel<IModeloEditavel> {

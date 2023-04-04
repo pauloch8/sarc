@@ -26,7 +26,7 @@ import { EspecificacaoDTO } from './dominio/especificacao/EspecificacaoDTO';
 import { TituloFactory } from './dominio/comum/TituloFactory';
 import { IdFormularioFactory } from './dominio/comum/IdFormularioFactory';
 import { SubtituloFactory } from './dominio/comum/SubtituloFactory';
-import { QuestaoEditavelFactory } from './dominio/editor/questoes/questao-opcao/QuestaoEditavelFactory';
+import { QuestaoOpcaoEditavelFactory } from './dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavelFactory';
 import { OpcaoEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
 import { TextoEditavelFactory } from './dominio/editor/questoes/questao-opcao/opcao/texto/TextoEditavelFactory';
 import { TextoModeloFactory } from './dominio/comum/TextoModeloFactory';
@@ -62,7 +62,7 @@ const opcaoEditavelFactory = new OpcaoEditavelFactory(
     textoEditavelFactory,
     variavelEditavelFactory,
 );
-const questaoEditavelFactory = new QuestaoEditavelFactory(
+const questaoEditavelFactory = new QuestaoOpcaoEditavelFactory(
     escapadorDeQuestaoFactory,
     opcaoEditavelFactory,
 );

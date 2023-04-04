@@ -1,4 +1,7 @@
-import { IQuestaoEditavel, QuestaoEditavel } from './QuestaoEditavel';
+import {
+    IQuestaoOpcaoEditavel,
+    QuestaoOpcaoEditavel,
+} from './QuestaoOpcaoEditavel';
 import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
 import { IListaEditavel, ListaEditavel } from '../../comum/ListaEditavel';
 import { ITitulo, Titulo } from '../../../comum/Titulo';
@@ -8,21 +11,23 @@ import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/Es
 import { QuestaoDTO } from '../../../especificacao/EspecificacaoDTO';
 import { IOpcaoEditavelFactory } from './opcao/OpcaoEditavelFactory';
 
-export interface IQuestaoEditavelFactory {
+export interface IQuestaoOpcaoEditavelFactory {
     criarDeEspecificacao(
         especificacao: QuestaoDTO,
         indice: number,
-    ): IQuestaoEditavel;
+    ): IQuestaoOpcaoEditavel;
     criar(
         id: IIdFormulario,
         titulo: ITitulo,
         indice: number,
         opcoes: IListaEditavel<IOpcaoEditavel>,
         subtitulo: ISubtitulo,
-    ): IQuestaoEditavel;
+    ): IQuestaoOpcaoEditavel;
 }
 
-export class QuestaoEditavelFactory implements IQuestaoEditavelFactory {
+export class QuestaoOpcaoEditavelFactory
+    implements IQuestaoOpcaoEditavelFactory
+{
     constructor(
         private escapadorFactory: IEscapadorDeQuestaoFactory,
         private opcaoEditavelFactory: IOpcaoEditavelFactory,
@@ -35,7 +40,7 @@ export class QuestaoEditavelFactory implements IQuestaoEditavelFactory {
         opcoes: IListaEditavel<IOpcaoEditavel>,
         subtitulo?: ISubtitulo,
     ) {
-        return new QuestaoEditavel(
+        return new QuestaoOpcaoEditavel(
             id,
             titulo,
             indice,

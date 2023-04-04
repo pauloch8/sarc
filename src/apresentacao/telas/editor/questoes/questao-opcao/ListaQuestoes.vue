@@ -1,9 +1,9 @@
 <script lang="ts">
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
-import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { defineComponent } from 'vue';
 import ItemDeQuestao from './ItemDeQuestao.vue';
-import AdicionarQuestao from './AdicionarQuestao.vue';
+import AdicionarQuestao from './AdicionarQuestaoOpcao.vue';
 
 export default defineComponent({
     name: 'ListaQuestoes',
@@ -19,12 +19,12 @@ export default defineComponent({
     },
     data() {
         return {
-            estaLista: this.lista as ListaEditavel<QuestaoEditavel>,
+            estaLista: this.lista as ListaEditavel<QuestaoOpcaoEditavel>,
         };
     },
     computed: {
         itensOrdenados() {
-            const retorno = (this.lista as ListaEditavel<QuestaoEditavel>)
+            const retorno = (this.lista as ListaEditavel<QuestaoOpcaoEditavel>)
                 .getItens()
                 .sort((a, b) => {
                     const indiceA = a.getIndice();
@@ -41,19 +41,19 @@ export default defineComponent({
         },
     },
     methods: {
-        editar(item: QuestaoEditavel) {
+        editar(item: QuestaoOpcaoEditavel) {
             this.estaLista.editarItem(item);
         },
-        adicionarItem(item: QuestaoEditavel) {
+        adicionarItem(item: QuestaoOpcaoEditavel) {
             this.estaLista.adicionarItem(item);
         },
-        excluir(item: QuestaoEditavel) {
+        excluir(item: QuestaoOpcaoEditavel) {
             this.estaLista.excluirItem(item);
         },
-        descer(item: QuestaoEditavel) {
+        descer(item: QuestaoOpcaoEditavel) {
             this.estaLista.descerItem(item);
         },
-        subir(item: QuestaoEditavel) {
+        subir(item: QuestaoOpcaoEditavel) {
             this.estaLista.subirItem(item);
         },
     },
@@ -67,7 +67,7 @@ export default defineComponent({
         <ItemDeQuestao
             v-for="(questao, indice) in itensOrdenados"
             :key="questao.getId().toString()"
-            :questao="(questao as QuestaoEditavel)"
+            :questao="(questao as QuestaoOpcaoEditavel)"
             :ehPrimeiro="indice === 0"
             :ehUltimo="indice === itensOrdenados.length - 1"
             @editar="editar"

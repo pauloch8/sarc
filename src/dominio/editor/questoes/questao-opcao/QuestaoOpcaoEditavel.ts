@@ -13,7 +13,7 @@ import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/Escapador
 import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
 import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
-export interface IQuestaoEditavel extends IItemEditavel {
+export interface IQuestaoOpcaoEditavel extends IItemEditavel {
     getId(): IIdFormulario;
     setId(id: IIdFormulario): void;
     getTitulo(): ITitulo;
@@ -26,7 +26,13 @@ export interface IQuestaoEditavel extends IItemEditavel {
     gerarEspecificacao(): QuestaoDTO;
 }
 
-export class QuestaoEditavel extends ItemEditavel implements IQuestaoEditavel {
+/**
+ * Questão de um editor de formulário
+ */
+export class QuestaoOpcaoEditavel
+    extends ItemEditavel
+    implements IQuestaoOpcaoEditavel
+{
     constructor(
         private id: IIdFormulario,
         private titulo: ITitulo,

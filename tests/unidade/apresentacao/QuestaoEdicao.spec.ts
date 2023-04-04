@@ -1,7 +1,7 @@
-import QuestaoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/QuestaoEdicao.vue';
+import QuestaoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/QuestaoOpcaoEdicao.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
-import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { Subtitulo } from '@/dominio/comum/Subtitulo';
 import { Titulo } from '@/dominio/comum/Titulo';
 import { mount } from '@vue/test-utils';
@@ -149,7 +149,7 @@ describe('QuestaoEdicao', () => {
         test('exibe lista de erros se ocorrer um erro', async () => {
             const factory = new QuestaoEditavelFactoryDummy();
             const questaoStub = new QuestaoEditavelErroStub();
-            const questao = questaoStub as unknown as QuestaoEditavel;
+            const questao = questaoStub as unknown as QuestaoOpcaoEditavel;
             const sut = mount(QuestaoEdicaoVue, {
                 global: {
                     provide: {
@@ -195,7 +195,7 @@ describe('QuestaoEdicao', () => {
         test('emite um evento "atualizou" com um objeto', async () => {
             const factory = new QuestaoEditavelFactoryDummy();
             const questao =
-                new QuestaoEditavelDummy() as unknown as QuestaoEditavel;
+                new QuestaoEditavelDummy() as unknown as QuestaoOpcaoEditavel;
             const sut = mount(QuestaoEdicaoVue, {
                 global: {
                     provide: {
@@ -234,7 +234,7 @@ describe('QuestaoEdicao', () => {
                 throw new Error('array de eventos não contém objeto');
             }
             const argumento = evento[0] as any;
-            const retorno = argumento[0] as QuestaoEditavel;
+            const retorno = argumento[0] as QuestaoOpcaoEditavel;
             expect(retorno).toBeInstanceOf(QuestaoEditavelDummy);
         });
     });

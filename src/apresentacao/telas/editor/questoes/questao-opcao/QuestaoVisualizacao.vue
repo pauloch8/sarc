@@ -1,7 +1,7 @@
 <script lang="ts">
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
-import { QuestaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoEditavel';
+import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { defineComponent } from 'vue';
 import BotoesEdicao from '../../comum/BotoesEdicao.vue';
 
@@ -11,7 +11,7 @@ export default defineComponent({
         BotoesEdicao,
     },
     props: {
-        questao: { type: QuestaoEditavel, required: true },
+        questao: { type: QuestaoOpcaoEditavel, required: true },
         ehPrimeiro: { type: Boolean, required: true },
         ehUltimo: { type: Boolean, required: true },
     },

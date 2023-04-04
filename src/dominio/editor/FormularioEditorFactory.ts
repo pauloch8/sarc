@@ -5,14 +5,14 @@ import {
 import { FormularioEditor, IFormularioEditor } from './FormularioEditor';
 import { IdFormulario, IIdFormulario } from '../comum/IdFormulario';
 import { ListaEditavel } from './comum/ListaEditavel';
-import { QuestaoEditavel } from './questoes/questao-opcao/QuestaoEditavel';
+import { QuestaoOpcaoEditavel } from './questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { ISubtitulo, Subtitulo } from '../comum/Subtitulo';
 import { ITitulo, Titulo } from '../comum/Titulo';
 import { ModeloEditavel } from './modelo/ModeloEditavel';
 import { TextoModelo } from '../comum/TextoModelo';
 import { IEscapadorDeVariavelFactory } from '../comum/escapador/variavel/EscapadorDeVariavelFactory';
 import { RemoveHtml } from '@/dominio/util/RemoveHtml';
-import { IQuestaoEditavelFactory } from './questoes/questao-opcao/QuestaoEditavelFactory';
+import { IQuestaoOpcaoEditavelFactory } from './questoes/questao-opcao/QuestaoOpcaoEditavelFactory';
 
 export interface IFormularioEditorFactory {
     criarDaEspecificacao(especificacao: EspecificacaoDTO): IFormularioEditor;
@@ -26,7 +26,7 @@ export class FormularioEditorFactory implements IFormularioEditorFactory {
     constructor(
         private escapadorDeVariavelFactory: IEscapadorDeVariavelFactory,
         private removeHtml: RemoveHtml,
-        private questaoEditavelFactory: IQuestaoEditavelFactory,
+        private questaoEditavelFactory: IQuestaoOpcaoEditavelFactory,
     ) {}
 
     criarDaEspecificacao(especificacao: EspecificacaoDTO): FormularioEditor {
@@ -49,8 +49,8 @@ export class FormularioEditorFactory implements IFormularioEditorFactory {
         // TODO: remover esse filter. Só tem itens vazios pq não foi implementado seleção
         const itensNaoVazios = itensQuestoes.filter(
             item => item,
-        ) as QuestaoEditavel[];
-        const listaQuestoes = new ListaEditavel<QuestaoEditavel>(
+        ) as QuestaoOpcaoEditavel[];
+        const listaQuestoes = new ListaEditavel<QuestaoOpcaoEditavel>(
             itensNaoVazios,
         );
         // criar Lista de Modelos
@@ -76,7 +76,7 @@ export class FormularioEditorFactory implements IFormularioEditorFactory {
     }
 
     criarNovo(id: IIdFormulario, titulo: ITitulo, subtitulo?: ISubtitulo) {
-        const listaQuestoes = new ListaEditavel<QuestaoEditavel>();
+        const listaQuestoes = new ListaEditavel<QuestaoOpcaoEditavel>();
         const listaModelos = new ListaEditavel<ModeloEditavel>();
         const formulario = new FormularioEditor(
             id,
