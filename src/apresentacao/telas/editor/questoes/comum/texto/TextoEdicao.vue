@@ -1,12 +1,9 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
-import ListaDeEscapadores from '../../../../comum/EscapadoresDisponiveis.vue';
-import IdFormularioFactory from '../../../../comum/IdFormularioFactory.vue';
-import TituloInput from '../../../../comum/TituloInput.vue';
+import ListaDeEscapadores from '../../../comum/EscapadoresDisponiveis.vue';
 import TextoModeloInput from '@/apresentacao/telas/editor/comum/TextoModeloInput.vue';
-import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
+import BotoesSalvarCancelar from '../../../comum/BotoesSalvarCancelar.vue';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
-import { Titulo } from '@/dominio/comum/Titulo';
 import { TextoModelo } from '@/dominio/comum/TextoModelo';
 import { ITextoEditavelFactory } from '@/dominio/editor/questoes/comum/texto/TextoEditavelFactory';
 import {

@@ -1,75 +1,64 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
-import { computed } from '@vue/reactivity';
-import TituloInput from '../../../comum/TituloInput.vue';
-import IdFormularioFactory from '../../../comum/IdFormularioFactory.vue';
-import ListaTextos from './../../comum/texto/ListaTextos.vue';
-import ListaVariavel from '../../comum/variavel/ListaVariaveis.vue';
-import BotoesSalvarCancelar from '../../../comum/BotoesSalvarCancelar.vue';
+import TituloInput from '../../comum/TituloInput.vue';
+import IdFormularioFactory from '../../comum/IdFormularioFactory.vue';
+import SubtituloInput from '../../comum/SubtituloInput.vue';
+import ListaOpcoes from './selecao/ListaSelecoes.vue';
+import BotoesSalvarCancelar from '../../comum/BotoesSalvarCancelar.vue';
 import {
-    OpcaoEditavel,
-    ErroNaEdicaoDaOpcao,
-    ErroInconsistenciasNaValidacaoDaOpcao,
-} from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
-import { IOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
+    QuestaoSelecaoEditavel,
+    ErroQuestaoInvalida,
+    ErroNaEdicaoDaQuestao,
+} from '@/dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavel';
 import { Titulo } from '@/dominio/comum/Titulo';
+import { Subtitulo } from '@/dominio/comum/Subtitulo';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
+import { IQuestaoSelecaoEditavelFactory } from '@/dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavelFactory';
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
-import { TextoEditavel } from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
-import { VariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
+import { SelecaoEditavel } from '@/dominio/editor/questoes/questao-selecao/selecao/SelecaoEditavel';
 
 export default defineComponent({
-    name: 'OpcaoEdicao',
+    name: 'QuestaoSelecaoEdicao',
     components: {
         IdFormularioFactory,
         TituloInput,
-        ListaTextos,
-        ListaVariavel,
+        SubtituloInput,
+        ListaOpcoes,
         BotoesSalvarCancelar,
     },
     setup() {
-        const factory = inject<IOpcaoEditavelFactory>('opcaoEditavelFactory');
+        const factory = inject<IQuestaoSelecaoEditavelFactory>(
+            'questaoEditavelFactory',
+        );
         if (!factory) {
-            throw new Error('Não injetada a dependência opcaoEditavelFactory');
+            throw new Error(
+                'Não injetada a dependência questaoEditavelFactory',
+            );
         }
         return {
             factory,
         };
     },
     props: {
-        opcao: { type: OpcaoEditavel, required: false },
+        questao: { type: QuestaoSelecaoEditavel, required: false },
         indice: { type: Number, required: false },
     },
     data() {
-        const idFormulario = this.opcao?.getId();
-        const titulo = this.opcao?.getTitulo();
-        //const ramificacao = this.opcao?.getRamificacao();
-        //const valorPadrao = this.opcao?.getValorPadrao();
-        const listaTextos =
-            this.opcao?.getTextos() || new ListaEditavel<TextoEditavel>();
-        const listaVariaveis =
-            this.opcao?.getVariaveis() || new ListaEditavel<VariavelEditavel>();
+        const idFormulario = this.questao?.getId();
+        const titulo = this.questao?.getTitulo();
+        const subtitulo = this.questao?.getSubtitulo();
+        const opcoes =
+            this.questao?.getListaOpcoes() ||
+            new ListaEditavel<SelecaoEditavel>();
         const erro = '';
         const inconsistencias: string[] = [];
         return {
             idFormulario,
             titulo,
-            listaTextos,
-            listaVariaveis,
+            subtitulo,
+            opcoes,
             erro,
             inconsistencias,
-        };
-    },
-    provide() {
-        return {
-            escapadoresVariaveis: computed(() => {
-                const escapadores = this.listaVariaveis
-                    .getItens()
-                    .map(item => item.getEscapador());
-                if (escapadores.length) {
-                    return escapadores;
-                }
-            }),
         };
     },
     methods: {
@@ -79,30 +68,34 @@ export default defineComponent({
         digitouTitulo(titulo: Titulo) {
             this.titulo = titulo;
         },
+        digitouSubtitulo(subtitulo: Subtitulo) {
+            this.subtitulo = subtitulo;
+        },
         cancelar() {
-            this.opcao?.encerrarEdicao();
+            this.questao?.encerrarEdicao();
             this.$emit('cancelou');
         },
         salvar() {
             this.erro = '';
             this.inconsistencias = [];
-            if (!this.opcao) {
+            if (!this.questao) {
                 this.criar();
             } else {
-                this.atualizar();
+                this.editar(this.questao);
             }
         },
         criar() {
             try {
-                const opcao = this.factory.criar(
+                const questao = this.factory.criar(
                     this.idFormulario as IdFormulario,
                     this.titulo as Titulo,
                     this.indice as number,
-                    this.listaTextos as ListaEditavel<TextoEditavel>,
+                    this.opcoes as ListaEditavel<SelecaoEditavel>,
+                    this.subtitulo as Subtitulo,
                 );
-                this.$emit('criou', opcao);
+                this.$emit('criou', questao);
             } catch (e) {
-                if (e instanceof ErroInconsistenciasNaValidacaoDaOpcao) {
+                if (e instanceof ErroQuestaoInvalida) {
                     this.erro = e.message;
                     this.inconsistencias = e.inconsistencias;
                 } else {
@@ -110,13 +103,12 @@ export default defineComponent({
                 }
             }
         },
-        atualizar() {
-            const opcao = this.opcao as OpcaoEditavel;
+        editar(questao: QuestaoSelecaoEditavel) {
             //id
             try {
-                opcao.setId(this.idFormulario as IdFormulario);
+                questao.setId(this.idFormulario as IdFormulario);
             } catch (e) {
-                if (e instanceof ErroNaEdicaoDaOpcao) {
+                if (e instanceof ErroNaEdicaoDaQuestao) {
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
@@ -127,9 +119,9 @@ export default defineComponent({
             }
             //titulo
             try {
-                opcao.setTitulo(this.titulo as Titulo);
+                questao.setTitulo(this.titulo as Titulo);
             } catch (e) {
-                if (e instanceof ErroNaEdicaoDaOpcao) {
+                if (e instanceof ErroNaEdicaoDaQuestao) {
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
@@ -138,28 +130,30 @@ export default defineComponent({
                     );
                 }
             }
-            //variaveis
+            //subtitulo
             try {
-                opcao.setVariaveis(this.listaVariaveis);
+                questao.setSubtitulo(this.subtitulo as Subtitulo);
             } catch (e) {
-                if (e instanceof ErroNaEdicaoDaOpcao) {
+                if (e instanceof ErroNaEdicaoDaQuestao) {
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
-                        'Ocorreu um erro desconhecido na atualização das variáveis: ' +
+                        'Ocorreu um erro desconhecido na atualização do subtitulo: ' +
                             e,
                     );
                 }
             }
-            //textos
+            //opcoes
             try {
-                opcao.setTextos(this.listaTextos);
+                questao.setListaOpcoes(
+                    this.opcoes as ListaEditavel<SelecaoEditavel>,
+                );
             } catch (e) {
-                if (e instanceof ErroNaEdicaoDaOpcao) {
+                if (e instanceof ErroNaEdicaoDaQuestao) {
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
-                        'Ocorreu um erro desconhecido na atualização dos Textos: ' +
+                        'Ocorreu um erro desconhecido na atualização das opcoes: ' +
                             e,
                     );
                 }
@@ -167,8 +161,8 @@ export default defineComponent({
             if (this.inconsistencias.length) {
                 this.erro = 'Ocorreram erros na atualização da Questão';
             } else {
-                opcao.encerrarEdicao();
-                this.$emit('atualizou', this.opcao);
+                questao.encerrarEdicao();
+                this.$emit('atualizou', questao);
             }
         },
     },
@@ -178,7 +172,7 @@ export default defineComponent({
 
 <template>
     <article class="emEdicao">
-        <header>Edição de Opção</header>
+        <header>Edição de Questão</header>
 
         <IdFormularioFactory
             :titulo="(titulo as Titulo)"
@@ -190,13 +184,16 @@ export default defineComponent({
             @digitou="digitouTitulo"
         ></TituloInput>
 
-        <ListaVariavel
-            :lista="(listaVariaveis as ListaEditavel<VariavelEditavel>)"
-        ></ListaVariavel>
+        <SubtituloInput
+            :subtitulo="(subtitulo as Subtitulo)"
+            @digitou="digitouSubtitulo"
+        ></SubtituloInput>
 
-        <ListaTextos
-            :lista="(listaTextos as ListaEditavel<TextoEditavel>)"
-        ></ListaTextos>
+        <div class="opcoes">
+            <ListaOpcoes
+                :lista="(opcoes as ListaEditavel<SelecaoEditavel>)"
+            ></ListaOpcoes>
+        </div>
 
         <article class="erro" v-if="erro">
             {{ erro }}
@@ -219,10 +216,25 @@ export default defineComponent({
     </article>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+input,
+textarea {
+    background-color: white;
+}
+
 label input[type='text'] {
     display: inline;
     width: 95%;
+}
+
+input[type='radio'][disabled] {
+    cursor: not-allowed;
+    border-color: #000;
+    background-color: #fff;
+}
+
+.opcoes {
+    margin-bottom: 30px;
 }
 
 footer {

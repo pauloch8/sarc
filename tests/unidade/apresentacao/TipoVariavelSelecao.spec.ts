@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import TipoVariavelSelecaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/opcao/variavel/TipoVariavelSelecao.vue';
+import TipoVariavelSelecaoVue from '@/apresentacao/telas/editor/questoes/comum/variavel/TipoVariavelSelecao.vue';
 import {
     TipoVariavelRepositorySucessoStub,
     TipoVariavelIDFake,

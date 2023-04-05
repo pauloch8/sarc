@@ -1,17 +1,17 @@
 <script lang="ts">
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
-import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
-import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
+import { SelecaoEditavel } from '@/dominio/editor/questoes/questao-selecao/selecao/SelecaoEditavel';
+import { QuestaoSelecaoEditavel } from '@/dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavel';
 import { defineComponent } from 'vue';
 import BotoesEdicao from '../../comum/BotoesEdicao.vue';
 
 export default defineComponent({
-    name: 'QuestaoVisualizacao',
+    name: 'QuestaoSelecaoVisualizacao',
     components: {
         BotoesEdicao,
     },
     props: {
-        questao: { type: QuestaoOpcaoEditavel, required: true },
+        questao: { type: QuestaoSelecaoEditavel, required: true },
         ehPrimeiro: { type: Boolean, required: true },
         ehUltimo: { type: Boolean, required: true },
     },
@@ -51,11 +51,11 @@ export default defineComponent({
         </header>
         <fieldset>
             <label
-                v-for="opcao in (questao.getListaOpcoes() as ListaEditavel<OpcaoEditavel>).getItens()"
-                :key="opcao.getId().toString()"
+                v-for="selecao in (questao.getListaOpcoes() as ListaEditavel<SelecaoEditavel>).getItens()"
+                :key="selecao.getId().toString()"
             >
                 <input type="radio" disabled />
-                {{ opcao.getTitulo() }}
+                {{ selecao.getTitulo() }}
             </label>
         </fieldset>
     </article>

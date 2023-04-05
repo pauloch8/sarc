@@ -38,6 +38,8 @@ import { EscapadorDeVariavelFactory } from './dominio/comum/escapador/variavel/E
 import { ModeloEditavelFactory } from './dominio/editor/modelo/ModeloEditavelFactory';
 import { EdicaoDeFormularioService } from './aplicacao/EdicaoDeFormularioService';
 import { EspecificacaoRepositoryLocalStorageExemploStub } from '@/dominio/especificacao/EspecificacaoRepositoryLocalStorageExemploStub';
+import { QuestaoSelecaoEditavelFactory } from './dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavelFactory';
+import { QuestaoEditavelFactory } from './dominio/editor/questoes/QuestaoEditavelFactory';
 
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
@@ -62,9 +64,17 @@ const opcaoEditavelFactory = new OpcaoEditavelFactory(
     textoEditavelFactory,
     variavelEditavelFactory,
 );
-const questaoEditavelFactory = new QuestaoOpcaoEditavelFactory(
+const questaoOpcaoEditavelFactory = new QuestaoOpcaoEditavelFactory(
     escapadorDeQuestaoFactory,
     opcaoEditavelFactory,
+);
+const questaoSelecaoEditavelFactory = new QuestaoSelecaoEditavelFactory(
+    escapadorDeQuestaoFactory,
+    opcaoEditavelFactory,
+);
+const questaoEditavelFactory = new QuestaoEditavelFactory(
+    questaoOpcaoEditavelFactory,
+    questaoSelecaoEditavelFactory,
 );
 const formularioEditorFactory = new FormularioEditorFactory(
     escapadorDeVariavelFactory,

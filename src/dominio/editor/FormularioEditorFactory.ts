@@ -1,18 +1,19 @@
-import {
-    EspecificacaoDTO,
-    QuestaoDTO,
-} from '../especificacao/EspecificacaoDTO';
+import { EspecificacaoDTO } from '../especificacao/EspecificacaoDTO';
 import { FormularioEditor, IFormularioEditor } from './FormularioEditor';
 import { IdFormulario, IIdFormulario } from '../comum/IdFormulario';
 import { ListaEditavel } from './comum/ListaEditavel';
-import { QuestaoOpcaoEditavel } from './questoes/questao-opcao/QuestaoOpcaoEditavel';
+import {
+    IQuestaoOpcaoEditavel,
+    QuestaoOpcaoEditavel,
+} from './questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { ISubtitulo, Subtitulo } from '../comum/Subtitulo';
 import { ITitulo, Titulo } from '../comum/Titulo';
 import { ModeloEditavel } from './modelo/ModeloEditavel';
 import { TextoModelo } from '../comum/TextoModelo';
 import { IEscapadorDeVariavelFactory } from '../comum/escapador/variavel/EscapadorDeVariavelFactory';
 import { RemoveHtml } from '@/dominio/util/RemoveHtml';
-import { IQuestaoOpcaoEditavelFactory } from './questoes/questao-opcao/QuestaoOpcaoEditavelFactory';
+import { IQuestaoEditavelFactory } from './questoes/QuestaoEditavelFactory';
+import { IQuestaoSelecaoEditavel } from './questoes/questao-selecao/QuestaoSelecaoEditavel';
 
 export interface IFormularioEditorFactory {
     criarDaEspecificacao(especificacao: EspecificacaoDTO): IFormularioEditor;
@@ -26,7 +27,7 @@ export class FormularioEditorFactory implements IFormularioEditorFactory {
     constructor(
         private escapadorDeVariavelFactory: IEscapadorDeVariavelFactory,
         private removeHtml: RemoveHtml,
-        private questaoEditavelFactory: IQuestaoOpcaoEditavelFactory,
+        private questaoEditavelFactory: IQuestaoEditavelFactory,
     ) {}
 
     criarDaEspecificacao(especificacao: EspecificacaoDTO): FormularioEditor {
@@ -37,22 +38,25 @@ export class FormularioEditorFactory implements IFormularioEditorFactory {
         if (especificacao.subtitulo) {
             subtitulo = new Subtitulo(especificacao.subtitulo);
         }
+
         // criar Lista de Questões
         const itensQuestoes = especificacao.listaQuestoes.map(
             (item, indice) => {
                 return this.questaoEditavelFactory.criarDeEspecificacao(
-                    item as QuestaoDTO,
+                    item,
                     indice,
                 );
             },
         );
+
         // TODO: remover esse filter. Só tem itens vazios pq não foi implementado seleção
-        const itensNaoVazios = itensQuestoes.filter(
-            item => item,
-        ) as QuestaoOpcaoEditavel[];
-        const listaQuestoes = new ListaEditavel<QuestaoOpcaoEditavel>(
-            itensNaoVazios,
-        );
+        const itensNaoVazios = itensQuestoes.filter(item => item);
+
+        // cria a lista de questões
+        const listaQuestoes = new ListaEditavel<
+            IQuestaoOpcaoEditavel | IQuestaoSelecaoEditavel
+        >(itensNaoVazios);
+
         // criar Lista de Modelos
         const itensModelos = especificacao.listaModelos.map((item, indice) => {
             const id = new IdFormulario(item.id);

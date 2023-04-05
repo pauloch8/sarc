@@ -1,19 +1,19 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import BotoesEdicao from '../../../../comum/BotoesEdicao.vue';
-import { TextoEditavel } from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
+import BotoesEdicao from '../../../comum/BotoesEdicao.vue';
+import { VariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
 
 export default defineComponent({
-    name: 'TextoVisualizacao',
+    name: 'VariavelVisualizacao',
     components: { BotoesEdicao },
     props: {
-        texto: { type: TextoEditavel, required: true },
+        variavel: { type: VariavelEditavel, required: true },
         ehPrimeiro: { type: Boolean, required: true },
         ehUltimo: { type: Boolean, required: true },
     },
     computed: {
         titulo() {
-            let titulo = this.texto.toString();
+            let titulo = this.variavel.toString();
             if (titulo.length > 28) {
                 titulo = titulo.substring(0, 25) + '...';
             }
@@ -22,16 +22,16 @@ export default defineComponent({
     },
     methods: {
         editar() {
-            this.$emit('editar', this.texto);
+            this.$emit('editar', this.variavel);
         },
         excluir() {
-            this.$emit('excluir', this.texto);
+            this.$emit('excluir', this.variavel);
         },
         descer() {
-            this.$emit('descer', this.texto);
+            this.$emit('descer', this.variavel);
         },
         subir() {
-            this.$emit('subir', this.texto);
+            this.$emit('subir', this.variavel);
         },
     },
     emits: ['excluir', 'descer', 'subir', 'editar'],

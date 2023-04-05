@@ -2,13 +2,16 @@
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { defineComponent } from 'vue';
-import ItemDeQuestao from './ItemDeQuestao.vue';
-import AdicionarQuestao from './AdicionarQuestaoOpcao.vue';
+import AdicionarQuestao from './AdicionarQuestao.vue';
+import ItemDeQuestaoOpcao from './questao-opcao/ItemDeQuestaoOpcao.vue';
+import ItemDeQuestaoSelecao from './questao-selecao/ItemDeQuestaoSelecao.vue';
+import { QuestaoSelecaoEditavel } from '@/dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavel';
 
 export default defineComponent({
     name: 'ListaQuestoes',
     components: {
-        ItemDeQuestao,
+        ItemDeQuestaoOpcao,
+        ItemDeQuestaoSelecao,
         AdicionarQuestao,
     },
     props: {
@@ -24,7 +27,11 @@ export default defineComponent({
     },
     computed: {
         itensOrdenados() {
-            const retorno = (this.lista as ListaEditavel<QuestaoOpcaoEditavel>)
+            const retorno = (
+                this.lista as ListaEditavel<
+                    QuestaoOpcaoEditavel | QuestaoSelecaoEditavel
+                >
+            )
                 .getItens()
                 .sort((a, b) => {
                     const indiceA = a.getIndice();
@@ -64,17 +71,31 @@ export default defineComponent({
     <h2>Questões</h2>
 
     <TransitionGroup name="questoes">
-        <ItemDeQuestao
+        <div
             v-for="(questao, indice) in itensOrdenados"
             :key="questao.getId().toString()"
-            :questao="(questao as QuestaoOpcaoEditavel)"
-            :ehPrimeiro="indice === 0"
-            :ehUltimo="indice === itensOrdenados.length - 1"
-            @editar="editar"
-            @excluir="excluir"
-            @descer="descer"
-            @subir="subir"
-        ></ItemDeQuestao>
+        >
+            <ItemDeQuestaoOpcao
+                v-if="questao.tipo === 'opcao'"
+                :questao="(questao as QuestaoOpcaoEditavel)"
+                :ehPrimeiro="indice === 0"
+                :ehUltimo="indice === itensOrdenados.length - 1"
+                @editar="editar"
+                @excluir="excluir"
+                @descer="descer"
+                @subir="subir"
+            ></ItemDeQuestaoOpcao>
+            <ItemDeQuestaoSelecao
+                v-if="questao.tipo === 'selecao'"
+                :questao="(questao as QuestaoSelecaoEditavel)"
+                :ehPrimeiro="indice === 0"
+                :ehUltimo="indice === itensOrdenados.length - 1"
+                @editar="editar"
+                @excluir="excluir"
+                @descer="descer"
+                @subir="subir"
+            ></ItemDeQuestaoSelecao>
+        </div>
     </TransitionGroup>
 
     <AdicionarQuestao

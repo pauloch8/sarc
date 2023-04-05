@@ -26,7 +26,7 @@ export interface OpcaoValorDTO {
     titulo: string;
     listaVariaveis?: VariavelDTO[];
     listaTextos: TextoDTO[];
-    ramificacao: RamificacaoDTO;
+    ramificacao?: RamificacaoDTO;
 }
 
 export interface VariavelDTO {

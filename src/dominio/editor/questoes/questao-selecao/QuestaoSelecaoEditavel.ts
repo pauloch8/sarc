@@ -1,4 +1,4 @@
-import { IIdFormulario, IdFormulario } from '../../../comum/IdFormulario';
+import { IIdFormulario } from '../../../comum/IdFormulario';
 import {
     IItemEditavel,
     ItemEditavel,
@@ -6,22 +6,22 @@ import {
     ErroInconsistenciasNaValidacao,
 } from '../../comum/ItemEditavel';
 import { IListaEditavel } from '../../comum/ListaEditavel';
-import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
+import { ISelecaoEditavel } from './selecao/SelecaoEditavel';
 import { ISubtitulo } from '../../../comum/Subtitulo';
 import { ITitulo } from '../../../comum/Titulo';
 import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
 import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
-export interface IQuestaoOpcaoEditavel extends IItemEditavel {
+export interface IQuestaoSelecaoEditavel extends IItemEditavel {
     getId(): IIdFormulario;
     setId(id: IIdFormulario): void;
     getTitulo(): ITitulo;
     setTitulo(titulo: ITitulo): void;
     getSubtitulo(): ISubtitulo | undefined;
     setSubtitulo(subtitulo?: ISubtitulo | undefined): void;
-    getListaOpcoes(): IListaEditavel<IOpcaoEditavel> | undefined;
-    setListaOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>): void;
+    getListaOpcoes(): IListaEditavel<ISelecaoEditavel> | undefined;
+    setListaOpcoes(opcoes: IListaEditavel<ISelecaoEditavel>): void;
     getEscapadores(): IEscapadorDeQuestao[];
     gerarEspecificacao(): QuestaoDTO;
 }
@@ -29,20 +29,19 @@ export interface IQuestaoOpcaoEditavel extends IItemEditavel {
 /**
  * Questão de um editor de formulário
  */
-export class QuestaoOpcaoEditavel
+export class QuestaoSelecaoEditavel
     extends ItemEditavel
-    implements IQuestaoOpcaoEditavel
+    implements IQuestaoSelecaoEditavel
 {
-    public readonly tipo = 'opcao';
+    public readonly tipo = 'selecao';
 
     constructor(
         private id: IIdFormulario,
         private titulo: ITitulo,
         indice: number,
-        private listaOpcoes: IListaEditavel<IOpcaoEditavel>,
+        private listaOpcoes: IListaEditavel<ISelecaoEditavel>,
         private escapadorFactory: IEscapadorDeQuestaoFactory,
         private subtitulo?: ISubtitulo,
-        private valorPadrao?: IIdFormulario,
     ) {
         super(indice);
         const validacao = this.validar();
@@ -115,19 +114,11 @@ export class QuestaoOpcaoEditavel
         this.subtitulo = subtitulo;
     }
 
-    getValorPadrao() {
-        return this.valorPadrao;
-    }
-
-    setValorPadrao(valorPadrao?: IdFormulario) {
-        this.valorPadrao = valorPadrao;
-    }
-
     getListaOpcoes() {
         return this.listaOpcoes;
     }
 
-    setListaOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>) {
+    setListaOpcoes(opcoes: IListaEditavel<ISelecaoEditavel>) {
         if (!opcoes) {
             throw new ErroNaEdicaoDaQuestao(
                 'Não foi informada lista de opções de questão',
@@ -159,6 +150,8 @@ export class QuestaoOpcaoEditavel
         const escapadoresUnicos = Array.from(new Set(escapadores));
         return escapadoresUnicos;
     }
+
+    // TODO: fazer o editor do valor padrão
 
     gerarEspecificacao() {
         const opcoes = this.listaOpcoes

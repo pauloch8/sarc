@@ -4,7 +4,6 @@ import { Variavel } from '../Variavel';
 
 export interface ISelecao {
     getId(): string;
-    getRamificacao(): Ramificacao;
     getResposta(): RespostaDeOpcao;
     getVariaveis(): Variavel[] | undefined;
 }
@@ -13,7 +12,6 @@ export class Selecao implements ISelecao {
     constructor(
         private id: string,
         private label: string,
-        private ramificacao: Ramificacao,
         private variaveis?: Variavel[],
     ) {}
 
@@ -23,10 +21,6 @@ export class Selecao implements ISelecao {
 
     getLabel() {
         return this.label;
-    }
-
-    getRamificacao() {
-        return this.ramificacao;
     }
 
     getVariaveis() {

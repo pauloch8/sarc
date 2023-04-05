@@ -5,7 +5,7 @@ import IdFormularioFactory from './comum/IdFormularioFactory.vue';
 import TituloInput from './comum/TituloInput.vue';
 import SubtituloInput from './comum/SubtituloInput.vue';
 import BotoesSalvarCancelar from './comum/BotoesSalvarCancelar.vue';
-import ListaQuestoes from './questoes/questao-opcao/ListaQuestoes.vue';
+import ListaQuestoes from './questoes/ListaQuestoes.vue';
 import ListaModelos from './modelos/ListaModelos.vue';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { Subtitulo } from '@/dominio/comum/Subtitulo';

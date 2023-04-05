@@ -13,12 +13,7 @@ export class QuestaoDeSelecaoFactory {
                 variavel =>
                     new Variavel(variavel.id, variavel.titulo, variavel.tipo),
             );
-            return new Selecao(
-                valor.id,
-                valor.titulo,
-                valor.ramificacao,
-                variaveis,
-            );
+            return new Selecao(valor.id, valor.titulo, variaveis);
         });
         const questao = new QuestaoDeSelecao(
             dto.id,

@@ -1,17 +1,17 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
 import { computed } from '@vue/reactivity';
+import ListaTextos from '../../comum/texto/ListaTextos.vue';
+import ListaVariavel from '../../comum/variavel/ListaVariaveis.vue';
 import TituloInput from '../../../comum/TituloInput.vue';
 import IdFormularioFactory from '../../../comum/IdFormularioFactory.vue';
-import ListaTextos from './../../comum/texto/ListaTextos.vue';
-import ListaVariavel from '../../comum/variavel/ListaVariaveis.vue';
 import BotoesSalvarCancelar from '../../../comum/BotoesSalvarCancelar.vue';
 import {
-    OpcaoEditavel,
-    ErroNaEdicaoDaOpcao,
-    ErroInconsistenciasNaValidacaoDaOpcao,
-} from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
-import { IOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavelFactory';
+    SelecaoEditavel,
+    ErroNaEdicaoDaSelecao,
+    ErroInconsistenciasNaValidacaoDaSelecao,
+} from '@/dominio/editor/questoes/questao-selecao/selecao/SelecaoEditavel';
+import { ISelecaoEditavelFactory } from '@/dominio/editor/questoes/questao-selecao/selecao/SelecaoEditavelFactory';
 import { Titulo } from '@/dominio/comum/Titulo';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
@@ -19,7 +19,7 @@ import { TextoEditavel } from '@/dominio/editor/questoes/comum/texto/TextoEditav
 import { VariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
 
 export default defineComponent({
-    name: 'OpcaoEdicao',
+    name: 'SelecaoEdicao',
     components: {
         IdFormularioFactory,
         TituloInput,
@@ -28,27 +28,32 @@ export default defineComponent({
         BotoesSalvarCancelar,
     },
     setup() {
-        const factory = inject<IOpcaoEditavelFactory>('opcaoEditavelFactory');
+        const factory = inject<ISelecaoEditavelFactory>(
+            'selecaoEditavelFactory',
+        );
         if (!factory) {
-            throw new Error('Não injetada a dependência opcaoEditavelFactory');
+            throw new Error(
+                'Não injetada a dependência selecaoEditavelFactory',
+            );
         }
         return {
             factory,
         };
     },
     props: {
-        opcao: { type: OpcaoEditavel, required: false },
+        selecao: { type: SelecaoEditavel, required: false },
         indice: { type: Number, required: false },
     },
     data() {
-        const idFormulario = this.opcao?.getId();
-        const titulo = this.opcao?.getTitulo();
-        //const ramificacao = this.opcao?.getRamificacao();
-        //const valorPadrao = this.opcao?.getValorPadrao();
+        const idFormulario = this.selecao?.getId();
+        const titulo = this.selecao?.getTitulo();
+        //const ramificacao = this.selecao?.getRamificacao();
+        //const valorPadrao = this.selecao?.getValorPadrao();
         const listaTextos =
-            this.opcao?.getTextos() || new ListaEditavel<TextoEditavel>();
+            this.selecao?.getTextos() || new ListaEditavel<TextoEditavel>();
         const listaVariaveis =
-            this.opcao?.getVariaveis() || new ListaEditavel<VariavelEditavel>();
+            this.selecao?.getVariaveis() ||
+            new ListaEditavel<VariavelEditavel>();
         const erro = '';
         const inconsistencias: string[] = [];
         return {
@@ -80,13 +85,13 @@ export default defineComponent({
             this.titulo = titulo;
         },
         cancelar() {
-            this.opcao?.encerrarEdicao();
+            this.selecao?.encerrarEdicao();
             this.$emit('cancelou');
         },
         salvar() {
             this.erro = '';
             this.inconsistencias = [];
-            if (!this.opcao) {
+            if (!this.selecao) {
                 this.criar();
             } else {
                 this.atualizar();
@@ -94,15 +99,15 @@ export default defineComponent({
         },
         criar() {
             try {
-                const opcao = this.factory.criar(
+                const selecao = this.factory.criar(
                     this.idFormulario as IdFormulario,
                     this.titulo as Titulo,
                     this.indice as number,
                     this.listaTextos as ListaEditavel<TextoEditavel>,
                 );
-                this.$emit('criou', opcao);
+                this.$emit('criou', selecao);
             } catch (e) {
-                if (e instanceof ErroInconsistenciasNaValidacaoDaOpcao) {
+                if (e instanceof ErroInconsistenciasNaValidacaoDaSelecao) {
                     this.erro = e.message;
                     this.inconsistencias = e.inconsistencias;
                 } else {
@@ -111,12 +116,12 @@ export default defineComponent({
             }
         },
         atualizar() {
-            const opcao = this.opcao as OpcaoEditavel;
+            const selecao = this.selecao as SelecaoEditavel;
             //id
             try {
-                opcao.setId(this.idFormulario as IdFormulario);
+                selecao.setId(this.idFormulario as IdFormulario);
             } catch (e) {
-                if (e instanceof ErroNaEdicaoDaOpcao) {
+                if (e instanceof ErroNaEdicaoDaSelecao) {
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
@@ -127,9 +132,9 @@ export default defineComponent({
             }
             //titulo
             try {
-                opcao.setTitulo(this.titulo as Titulo);
+                selecao.setTitulo(this.titulo as Titulo);
             } catch (e) {
-                if (e instanceof ErroNaEdicaoDaOpcao) {
+                if (e instanceof ErroNaEdicaoDaSelecao) {
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
@@ -140,9 +145,9 @@ export default defineComponent({
             }
             //variaveis
             try {
-                opcao.setVariaveis(this.listaVariaveis);
+                selecao.setVariaveis(this.listaVariaveis);
             } catch (e) {
-                if (e instanceof ErroNaEdicaoDaOpcao) {
+                if (e instanceof ErroNaEdicaoDaSelecao) {
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
@@ -153,9 +158,9 @@ export default defineComponent({
             }
             //textos
             try {
-                opcao.setTextos(this.listaTextos);
+                selecao.setTextos(this.listaTextos);
             } catch (e) {
-                if (e instanceof ErroNaEdicaoDaOpcao) {
+                if (e instanceof ErroNaEdicaoDaSelecao) {
                     this.inconsistencias.push(e.message);
                 } else {
                     this.inconsistencias.push(
@@ -167,8 +172,8 @@ export default defineComponent({
             if (this.inconsistencias.length) {
                 this.erro = 'Ocorreram erros na atualização da Questão';
             } else {
-                opcao.encerrarEdicao();
-                this.$emit('atualizou', this.opcao);
+                selecao.encerrarEdicao();
+                this.$emit('atualizou', this.selecao);
             }
         },
     },

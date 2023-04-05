@@ -1,55 +1,52 @@
 import {
-    IQuestaoOpcaoEditavel,
-    QuestaoOpcaoEditavel,
-} from './QuestaoOpcaoEditavel';
-import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
+    IQuestaoSelecaoEditavel,
+    QuestaoSelecaoEditavel,
+} from './QuestaoSelecaoEditavel';
+import { ISelecaoEditavel } from './selecao/SelecaoEditavel';
 import { IListaEditavel, ListaEditavel } from '../../comum/ListaEditavel';
 import { ITitulo, Titulo } from '../../../comum/Titulo';
 import { ISubtitulo, Subtitulo } from '../../../comum/Subtitulo';
 import { IdFormulario, IIdFormulario } from '../../../comum/IdFormulario';
 import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
 import { QuestaoDTO } from '../../../especificacao/EspecificacaoDTO';
-import { IOpcaoEditavelFactory } from './opcao/OpcaoEditavelFactory';
+import { ISelecaoEditavelFactory } from './selecao/SelecaoEditavelFactory';
 
-export interface IQuestaoOpcaoEditavelFactory {
+export interface IQuestaoSelecaoEditavelFactory {
     criarDeEspecificacao(
         especificacao: QuestaoDTO,
         indice: number,
-    ): IQuestaoOpcaoEditavel;
+    ): IQuestaoSelecaoEditavel;
     criar(
         id: IIdFormulario,
         titulo: ITitulo,
         indice: number,
-        opcoes: IListaEditavel<IOpcaoEditavel>,
+        opcoes: IListaEditavel<ISelecaoEditavel>,
         subtitulo: ISubtitulo,
-        valorPadrao: IdFormulario,
-    ): IQuestaoOpcaoEditavel;
+    ): IQuestaoSelecaoEditavel;
 }
 
-export class QuestaoOpcaoEditavelFactory
-    implements IQuestaoOpcaoEditavelFactory
+export class QuestaoSelecaoEditavelFactory
+    implements IQuestaoSelecaoEditavelFactory
 {
     constructor(
         private escapadorFactory: IEscapadorDeQuestaoFactory,
-        private opcaoEditavelFactory: IOpcaoEditavelFactory,
+        private opcaoEditavelFactory: ISelecaoEditavelFactory,
     ) {}
 
     criar(
         id: IIdFormulario,
         titulo: ITitulo,
         indice: number,
-        opcoes: IListaEditavel<IOpcaoEditavel>,
+        opcoes: IListaEditavel<ISelecaoEditavel>,
         subtitulo?: ISubtitulo,
-        valorPadrao?: IdFormulario,
     ) {
-        return new QuestaoOpcaoEditavel(
+        return new QuestaoSelecaoEditavel(
             id,
             titulo,
             indice,
             opcoes,
             this.escapadorFactory,
             subtitulo,
-            valorPadrao,
         );
     }
 
@@ -63,18 +60,7 @@ export class QuestaoOpcaoEditavelFactory
         const itensOpcoes = especificacao.opcoes?.map((item, indice) => {
             return this.opcaoEditavelFactory.criarDeEspecificacao(item, indice);
         });
-        const listaOpcoes = new ListaEditavel<IOpcaoEditavel>(itensOpcoes);
-        let valorPadrao;
-        if (especificacao.valorPadrao) {
-            valorPadrao = new IdFormulario(especificacao.valorPadrao);
-        }
-        return this.criar(
-            id,
-            titulo,
-            indice,
-            listaOpcoes,
-            subtitulo,
-            valorPadrao,
-        );
+        const listaOpcoes = new ListaEditavel<ISelecaoEditavel>(itensOpcoes);
+        return this.criar(id, titulo, indice, listaOpcoes, subtitulo);
     }
 }

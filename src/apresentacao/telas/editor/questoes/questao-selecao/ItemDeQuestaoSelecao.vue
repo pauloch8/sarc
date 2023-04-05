@@ -1,17 +1,17 @@
 <script lang="ts">
-import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
+import { QuestaoSelecaoEditavel } from '@/dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavel';
 import { defineComponent } from 'vue';
-import QuestaoVisualizacao from './QuestaoVisualizacao.vue';
-import QuestaoEdicao from './QuestaoOpcaoEdicao.vue';
+import QuestaoSelecaoVisualizacao from './QuestaoSelecaoVisualizacao.vue';
+import QuestaoSelecaoEdicao from './QuestaoSelecaoEdicao.vue';
 
 export default defineComponent({
-    name: 'ItemDeQuestao',
+    name: 'ItemDeQuestaoSelecao',
     components: {
-        QuestaoVisualizacao,
-        QuestaoEdicao,
+        QuestaoSelecaoVisualizacao,
+        QuestaoSelecaoEdicao,
     },
     props: {
-        questao: { type: QuestaoOpcaoEditavel, required: true },
+        questao: { type: QuestaoSelecaoEditavel, required: true },
         ehPrimeiro: { type: Boolean, required: true },
         ehUltimo: { type: Boolean, required: true },
     },
@@ -19,19 +19,19 @@ export default defineComponent({
         return { selecionado: false };
     },
     methods: {
-        editar(questao: QuestaoOpcaoEditavel) {
+        editar(questao: QuestaoSelecaoEditavel) {
             this.$emit('editar', questao);
         },
-        excluir(questao: QuestaoOpcaoEditavel) {
+        excluir(questao: QuestaoSelecaoEditavel) {
             this.$emit('excluir', questao);
         },
-        descer(questao: QuestaoOpcaoEditavel) {
+        descer(questao: QuestaoSelecaoEditavel) {
             this.$emit('descer', questao);
         },
-        subir(questao: QuestaoOpcaoEditavel) {
+        subir(questao: QuestaoSelecaoEditavel) {
             this.$emit('subir', questao);
         },
-        selecionar(questao: QuestaoOpcaoEditavel) {
+        selecionar(questao: QuestaoSelecaoEditavel) {
             this.$emit('selecionar', questao);
         },
     },
@@ -41,7 +41,7 @@ export default defineComponent({
 
 <template>
     <div>
-        <QuestaoVisualizacao
+        <QuestaoSelecaoVisualizacao
             v-if="!questao.getEmEdicao()"
             :questao="questao"
             :ehPrimeiro="ehPrimeiro"
@@ -51,11 +51,11 @@ export default defineComponent({
             @descer="descer"
             @subir="subir"
             @selecionar="selecionar"
-        ></QuestaoVisualizacao>
+        ></QuestaoSelecaoVisualizacao>
 
-        <QuestaoEdicao
+        <QuestaoSelecaoEdicao
             v-if="questao.getEmEdicao()"
-            :questao="(questao as QuestaoOpcaoEditavel)"
-        ></QuestaoEdicao>
+            :questao="(questao as QuestaoSelecaoEditavel)"
+        ></QuestaoSelecaoEdicao>
     </div>
 </template>

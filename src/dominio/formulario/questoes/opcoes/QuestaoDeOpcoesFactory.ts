@@ -2,6 +2,7 @@ import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { Variavel } from '../Variavel';
 import { Opcao } from './Opcao';
 import { QuestaoDeOpcoes } from './QuestaoDeOpcoes';
+import { Ramificacao } from '../Ramificacao';
 
 export class QuestaoDeOpcoesFactory {
     static criarDeDto(dto: QuestaoDTO): QuestaoDeOpcoes {
@@ -13,12 +14,8 @@ export class QuestaoDeOpcoesFactory {
                 variavel =>
                     new Variavel(variavel.id, variavel.titulo, variavel.tipo),
             );
-            return new Opcao(
-                valor.id,
-                valor.titulo,
-                valor.ramificacao,
-                variaveis,
-            );
+            const ramificacao = valor.ramificacao as Ramificacao; // TODO: Avaliar se melhor criar uma classe ao invés de usar uma interface
+            return new Opcao(valor.id, valor.titulo, ramificacao, variaveis);
         });
         const questao = new QuestaoDeOpcoes(
             dto.id,

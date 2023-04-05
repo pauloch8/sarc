@@ -1,9 +1,9 @@
 <script lang="ts">
 import { defineComponent, inject } from 'vue';
-import IdFormularioFactory from '../../../../comum/IdFormularioFactory.vue';
-import TituloInput from '../../../../comum/TituloInput.vue';
 import TipoVariavelSelecao from './TipoVariavelSelecao.vue';
-import BotoesSalvarCancelar from '../../../../comum/BotoesSalvarCancelar.vue';
+import TituloInput from '../../../comum/TituloInput.vue';
+import IdFormularioFactory from '../../../comum/IdFormularioFactory.vue';
+import BotoesSalvarCancelar from '../../../comum/BotoesSalvarCancelar.vue';
 import { IdFormulario, IIdFormulario } from '@/dominio/comum/IdFormulario';
 import { ITitulo, Titulo } from '@/dominio/comum/Titulo';
 import { IVariavelEditavelFactory } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavelFactory';
