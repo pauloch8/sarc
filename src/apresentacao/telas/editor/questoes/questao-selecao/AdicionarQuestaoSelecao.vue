@@ -43,7 +43,7 @@ export default defineComponent({
             class="outline adicionar"
             @click.prevent="editar"
         >
-            + Adicionar Questão
+            + Adicionar Questão Seleção
         </a>
     </div>
     <div v-if="emEdicao">

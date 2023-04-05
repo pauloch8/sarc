@@ -31,7 +31,7 @@ export default defineComponent({
 
 <template>
     <label>
-        <input type="radio" disabled />
+        <input type="checkbox" disabled />
         {{ selecao.getTitulo() }}
         <BotoesEdicao
             :ehPrimeiro="ehPrimeiro"
@@ -55,7 +55,7 @@ label:hover {
     box-shadow: var(--card-box-shadow);
 }
 
-input[type='radio'][disabled] {
+input[type='checkbox'][disabled] {
     cursor: not-allowed;
     border-color: #000;
     background-color: #fff;

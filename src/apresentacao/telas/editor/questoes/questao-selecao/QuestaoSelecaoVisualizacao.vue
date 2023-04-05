@@ -54,7 +54,7 @@ export default defineComponent({
                 v-for="selecao in (questao.getListaOpcoes() as ListaEditavel<SelecaoEditavel>).getItens()"
                 :key="selecao.getId().toString()"
             >
-                <input type="radio" disabled />
+                <input type="checkbox" disabled />
                 {{ selecao.getTitulo() }}
             </label>
         </fieldset>
@@ -66,7 +66,7 @@ article:not(:hover) {
     box-shadow: none;
 }
 
-input[type='radio'][disabled] {
+input[type='checkbox'][disabled] {
     cursor: not-allowed;
     border-color: #000;
     background-color: #fff;

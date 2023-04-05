@@ -6,13 +6,16 @@ import AdicionarQuestao from './AdicionarQuestao.vue';
 import ItemDeQuestaoOpcao from './questao-opcao/ItemDeQuestaoOpcao.vue';
 import ItemDeQuestaoSelecao from './questao-selecao/ItemDeQuestaoSelecao.vue';
 import { QuestaoSelecaoEditavel } from '@/dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavel';
+import AdicionarQuestaoSelecao from './questao-selecao/AdicionarQuestaoSelecao.vue';
+import AdicionarQuestaoOpcao from './questao-opcao/AdicionarQuestaoOpcao.vue';
 
 export default defineComponent({
     name: 'ListaQuestoes',
     components: {
         ItemDeQuestaoOpcao,
         ItemDeQuestaoSelecao,
-        AdicionarQuestao,
+        AdicionarQuestaoSelecao,
+        AdicionarQuestaoOpcao,
     },
     props: {
         lista: {
@@ -98,10 +101,14 @@ export default defineComponent({
         </div>
     </TransitionGroup>
 
-    <AdicionarQuestao
+    <AdicionarQuestaoOpcao
         :indice="itensOrdenados.length"
         @adicionarItem="adicionarItem"
-    ></AdicionarQuestao>
+    ></AdicionarQuestaoOpcao>
+    <AdicionarQuestaoSelecao
+        :indice="itensOrdenados.length"
+        @adicionarItem="adicionarItem"
+    ></AdicionarQuestaoSelecao>
 </template>
 
 <style scoped>
