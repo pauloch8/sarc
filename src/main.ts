@@ -40,6 +40,7 @@ import { EdicaoDeFormularioService } from './aplicacao/EdicaoDeFormularioService
 import { EspecificacaoRepositoryLocalStorageExemploStub } from '@/dominio/especificacao/EspecificacaoRepositoryLocalStorageExemploStub';
 import { QuestaoSelecaoEditavelFactory } from './dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavelFactory';
 import { QuestaoEditavelFactory } from './dominio/editor/questoes/QuestaoEditavelFactory';
+import { SelecaoEditavelFactory } from './dominio/editor/questoes/questao-selecao/selecao/SelecaoEditavelFactory';
 
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
@@ -61,6 +62,10 @@ const variavelEditavelFactory = new VariavelEditavelFactory(
     escapadorDeVariavelFactory,
 );
 const opcaoEditavelFactory = new OpcaoEditavelFactory(
+    textoEditavelFactory,
+    variavelEditavelFactory,
+);
+const selecaoEditavelFactory = new SelecaoEditavelFactory(
     textoEditavelFactory,
     variavelEditavelFactory,
 );
@@ -102,6 +107,7 @@ createApp(App)
     .provide('formularioEditorFactory', formularioEditorFactory)
     .provide('questaoEditavelFactory', questaoEditavelFactory)
     .provide('opcaoEditavelFactory', opcaoEditavelFactory)
+    .provide('selecaoEditavelFactory', selecaoEditavelFactory)
     .provide('textoEditavelFactory', textoEditavelFactory)
     .provide('textoModeloFactory', textoModeloFactory)
     .provide('escapadorDeVariavelFactory', escapadorDeVariavelFactory)
