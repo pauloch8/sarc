@@ -37,12 +37,15 @@ export abstract class ItemEditavel implements IItemEditavel {
 
 export class ErroInconsistenciasNaValidacao extends Error {
     constructor(public readonly inconsistencias: string[]) {
-        super(`Texto inválido`);
+        super(
+            'Ocorreram erros de inconsistências na validação: ' +
+                inconsistencias.join(', '),
+        );
     }
 }
 
 export class ErroNaEdicao extends Error {
     constructor(mensagem: string) {
-        super(mensagem);
+        super('Ocorreu um erro na edição :' + mensagem);
     }
 }

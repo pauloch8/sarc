@@ -19,9 +19,6 @@ import { IListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export class QuestaoEditavelErroStub implements IQuestaoOpcaoEditavel {
-    gerarEspecificacao(): QuestaoDTO {
-        throw new Error('Method not implemented.');
-    }
     erros = {
         id: 'Erro ao atualizar o id',
         titulo: 'Erro ao atualizar o titulo',
@@ -79,6 +76,15 @@ export class QuestaoEditavelErroStub implements IQuestaoOpcaoEditavel {
             'Method QuestaoEditavelErroStub.getEscapador not implemented.',
         );
     }
+    getValorPadrao() {
+        return undefined;
+    }
+    setValorPadrao() {
+        return;
+    }
+    gerarEspecificacao(): QuestaoDTO {
+        throw new Error('Method not implemented.');
+    }
 }
 
 export class QuestaoEditavelDummy implements IQuestaoOpcaoEditavel {
@@ -135,11 +141,23 @@ export class QuestaoEditavelDummy implements IQuestaoOpcaoEditavel {
     gerarEspecificacao(): QuestaoDTO {
         throw new Error('Method not implemented.');
     }
+    getValorPadrao() {
+        return undefined;
+    }
+    setValorPadrao(): void {
+        return;
+    }
 }
 
 export class QuestaoEditavelRetornaEscapadorStub
     implements IQuestaoOpcaoEditavel
 {
+    getValorPadrao(): IIdFormulario | undefined {
+        throw new Error('Method not implemented.');
+    }
+    setValorPadrao(valorPadrao?: IIdFormulario | undefined): void {
+        throw new Error('Method not implemented.');
+    }
     gerarEspecificacao(): QuestaoDTO {
         throw new Error('Method not implemented.');
     }

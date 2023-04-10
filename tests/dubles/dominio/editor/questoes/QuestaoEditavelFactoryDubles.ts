@@ -57,10 +57,7 @@ export class QuestaoEditavelFactorySucessoStub
     criar() {
         return new QuestaoEditavelDummy();
     }
-    criarDeEspecificacao(
-        especificacao: QuestaoDTO,
-        indice: number,
-    ): IQuestaoOpcaoEditavel {
+    criarDeEspecificacao() {
         return new QuestaoEditavelDummy();
     }
 }

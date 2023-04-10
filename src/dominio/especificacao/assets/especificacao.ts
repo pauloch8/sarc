@@ -899,7 +899,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>CARÊNCIA EXIGIDA DE MM CONTRIBUIÇÕES MENSAIS, REQUISITO [NÃO] CUMPRIDO PELA PARTE RECORRENTE.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'carencia-doencao-nao-isenta',
@@ -939,7 +938,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>NÃO GOZA DE ISENÇÃO DE CARÊNCIA EM RAZÃO DA INCAPACIDADE &nbsp;TER ORIGEM EM ACIDENTE OU DOENÇA ESPECIFICADA NO § 2º DO ART. 30. DO DECRETO Nº 3.048/99.</p><p>GOZA DE ISENÇÃO DE CARÊNCIA EM RAZÃO DA INCAPACIDADE TER ORIGEM EM [ACIDENTE/DOENÇA ESPECIFICADA NA NORMA REGULAMENTADORA], NOS TERMOS DO ART. 30. DO DECRETO Nº 3.048/99.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'auxilio-reclusao-certidao',
@@ -962,7 +960,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: 'A PARTE RECORRENTE [NÃO] APRESENTOU A CERTIDÃO JUDICIAL QUE ATESTA O RECOLHIMENTO EFETIVO À PRISÃO EM REGIME FECHADO, NOS TERMOS DO § 2º DO ART. 116 DO DECRETO Nº 3.048/99.',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado',
@@ -985,7 +982,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>PERDA DA QUALIDADE DE SEGURADO EM YY/YY/YYYY. NÃO CONSTAM MAIS DE 120 CONTRIBUIÇÕES MENSAIS OU COMPROVAÇÃO DE DESEMPREGO POR ÓRGÃO DO MINISTÉRIO DO TRABALHO E PREVIDÊNCIA QUE JUSTIFIQUEM A ESTENÇÃO DESTA QUALIDADE. NA DATA DO EVENTO GERADOR ZZ/ZZ/ZZZZ NÃO GOZAVA MAIS DA MANUTENÇÃO DESTA QUALIDADE, CONFORME REQUER O ART. 13 DO DECRETO Nº 3.048/99.</p><p>QUALIDADE DE SEGURADO ESTENDIDA POR COMPROVAR MAIS DE 120 CONTRIBUIÇÕES MENSAIS [E/OU] COMPROVAÇÃO DE DESEMPREGO POR ORGÃO DO MINISTÉRIO DO TRABALHO E PREVIDÊNCIA. TODAVIA, NA DATA DO EVENTO GERADOR ZZ/ZZ/ZZZZ NÃO GOZAVA MAIS DA MANUTENÇÃO DESTA QUALIDADE. COM ISSO, NA DATA DO EVENTO GERADOR ZZ/ZZ/ZZZZ GOZAVA DA MANUTENÇÃO DESTA QUALIDADE, INTELIGÊNCIA DO ART. 13 DO DECRETO Nº 3.048/99.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-18-06-2019-hoje',
@@ -1008,7 +1004,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>REINGRESSO APÓS A PERDA DA QUALIDADE DE SEGURADO. APÓS A PERDA DA QUALIDADE, A PARTE RECORRENTE REINGRESSOU AO RGPS COMO [TIPO SEGURADO] E VERTEU N CONTRIBUIÇÕES PARA EFEITO DE CARÊNCIA.</p><p>EM RAZÃO DA QUANTIDADE DE CONTRIBUIÇÕES ATENDER AO ART. 27-A DO DECRETO Nº 3.048/99, AS CONTRIBUIÇÕES ANTERIORES A PERDA DA QUALIDADE DE SEGURADO MERECEM SER COMPUTADAS, CUMPRINDO-SE COM O REQUISITO CARÊNCIA IMPOSTO PELO ART. 25 DA LEI Nº 8.213/91.</p><p>QUANTIDADE ESTA INFERIOR À METADE DA CARÊNCIA IMPOSTA PELO ART. 27-A DO DECRETO Nº 3.048/99.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-ate-01-07-2016-e-05-11-2016-05-01-2017',
@@ -1031,7 +1026,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>REINGRESSO APÓS A PERDA DA QUALIDADE DE SEGURADO. APÓS A PERDA DA QUALIDADE, A PARTE RECORRENTE REINGRESSOU AO RGPS COMO [TIPO SEGURADO] E VERTEU N CONTRIBUIÇÕES PARA EFEITO DE CARÊNCIA.</p><p>EM RAZÃO DA QUANTIDADE DE CONTRIBUIÇÕES ATENDER AO ART. 27-A DO DECRETO Nº 3.048/99, AS CONTRIBUIÇÕES ANTERIORES A PERDA DA QUALIDADE DE SEGURADO MERECEM SER COMPUTADAS, CUMPRINDO-SE COM O REQUISITO CARÊNCIA IMPOSTO PELO ART. 25 DA LEI Nº 8.213/91.</p><p>QUANTIDADE ESTA INFERIOR À METADE DA CARÊNCIA IMPOSTA PELO ART. 27-A DO DECRETO Nº 3.048/99.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-08-07-2016-04-11-2016',
@@ -1054,7 +1048,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>REINGRESSO APÓS A PERDA DA QUALIDADE DE SEGURADO. APÓS A PERDA DA QUALIDADE, A PARTE RECORRENTE REINGRESSOU AO RGPS COMO [TIPO SEGURADO] E VERTEU N CONTRIBUIÇÕES PARA EFEITO DE CARÊNCIA.</p><p>EM RAZÃO DA QUANTIDADE DE CONTRIBUIÇÕES ATENDER AO PARÁGRAFO ÚNICO DO ART. 27 DA LEI 8.213/91, ALTERADO PELA MEDIDA PROVISÓRIA 739/2016, A PARTE RECORRENTE CUMPRE COM A CARÊNCIA INTEGRAL IMPOSTA PELO ART. 25 DA LEI Nº 8.213/91.</p><p>NÃO COMPROVA A CARÊNCIA INTEGRAL DO ARTIGO 25 DA LEI PREVIDENCIÁRIA APÓS A NOVA FILIAÇÃO, CONFORME IMPOSIÇÃO DO ART. 27 DA LEI 8.213/91, ALTERADO PELA MEDIDA PROVISÓRIA 739/2016.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-06-01-2017-26-06-2017',
@@ -1077,7 +1070,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>REINGRESSO APÓS A PERDA DA QUALIDADE DE SEGURADO. APÓS A PERDA DA QUALIDADE, A PARTE RECORRENTE REINGRESSOU AO RGPS COMO [TIPO SEGURADO] E VERTEU N CONTRIBUIÇÕES PARA EFEITO DE CARÊNCIA.</p><p>EM RAZÃO DA QUANTIDADE DE CONTRIBUIÇÕES ATENDER AO ART. 27-A DA LEI 8.213/91, ALTERADO PELA MEDIDA PROVISÓRIA 767/2017, A PARTE RECORRENTE CUMPRE COM A CARÊNCIA INTEGRAL IMPOSTA PELO ART. 25 DA LEI Nº 8.213/91.</p><p>NÃO COMPROVA A CARÊNCIA INTEGRAL DO ARTIGO 25 DA LEI PREVIDENCIÁRIA APÓS A NOVA FILIAÇÃO, CONFORME IMPOSIÇÃO DO ART. 27-A DA LEI 8.213/91, ALTERADO PELA MEDIDA PROVISÓRIA 767/2017.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-27-06-2017-17-01-2019',
@@ -1100,7 +1092,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>"REINGRESSO APÓS A PERDA DA QUALIDADE DE SEGURADO. APÓS A PERDA DA QUALIDADE, A PARTE RECORRENTE REINGRESSOU AO RGPS COMO [TIPO SEGURADO] E VERTEU N CONTRIBUIÇÕES PARA EFEITO DE CARÊNCIA.</p><p>EM RAZÃO DA QUANTIDADE DE CONTRIBUIÇÕES ATENDER AO ART. 27-A DA LEI 8.213/91, COM REDAÇÃO DADA PELA LEI Nº 13.457/2017, AS CONTRIBUIÇÕES ANTERIORES A PERDA DA QUALIDADE DE SEGURADO MERECEM SER COMPUTADAS, CUMPRINDO-SE COM O REQUISITO CARÊNCIA IMPOSTO PELO ART. 25 DA LEI Nº 8.213/91.</p><p>QUANTIDADE ESTA INFERIOR À METADE DA CARÊNCIA IMPOSTA PELO ART. 27-A DA LEI 8.213/91, COM REDAÇÃO DADA PELA LEI Nº 13.457/2017."</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'perda-da-qualidade-de-segurado-com-reingresso-18-01-2019-17-06-2019',
@@ -1123,7 +1114,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>REINGRESSO APÓS A PERDA DA QUALIDADE DE SEGURADO. APÓS A PERDA DA QUALIDADE, A PARTE RECORRENTE REINGRESSOU AO RGPS COMO [TIPO SEGURADO] E VERTEU N CONTRIBUIÇÕES PARA EFEITO DE CARÊNCIA.</p><p>EM RAZÃO DA QUANTIDADE DE CONTRIBUIÇÕES ATENDER AO ART. 27-A DA LEI 8.213/91, ALTERADO PELA MEDIDA PROVISÓRIA 871/2019, A PARTE RECORRENTE CUMPRE COM A CARÊNCIA INTEGRAL IMPOSTA PELO ART. 25 DA LEI Nº 8.213/91.</p><p>NÃO COMPROVA A CARÊNCIA INTEGRAL DO ARTIGO 25 DA LEI PREVIDENCIÁRIA APÓS A NOVA FILIAÇÃO, CONFORME IMPOSIÇÃO DO ART. 27-A DA LEI 8.213/91, ALTERADO PELA MEDIDA PROVISÓRIA 871/2019.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'ctps',
@@ -1146,7 +1136,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>CARTEIRA DE TRABALHO É PROVA DE VÍNCULO EMPREGATÍCIO PARA FINS DE TEMPO DE CONTRIBUIÇÃO CONFORME INCISO I DO §1º DO ART. 19-B DO DECRETO 3.048/99. INEXISTINDO DEFEITO FORMAL QUE LHE COMPROMETA A FIDEDIGNIDADE, A CTPS FORMA PROVA, INTELIGÊNCIA DO INCISO II DO ENUNCIADO 2 DO CRPS. NO CASO EM TELA, A CTPS APRESENTADA N]AP POSSUI DEFEITO FORMAL, ESTA OS VÍNCULOS ANOTADOS EM ORDEM CRONOLÓGCA, SEM RASURAS E CONTEMPORÂNEOS.</p><p>CARTEIRA DE TRABALHO É PROVA DE VÍNCULO EMPREGATÍCIO PARA FINS DE TEMPO DE CONTRIBUIÇÃO CONFORME INCISO I DO §1º DO ART. 19-B DO DECRETO 3.048/99. INEXISTINDO DEFEITO FORMAL QUE LHE COMPROMETA A FIDEDIGNIDADE, A CTPS FORMA PROVA, INTELIGÊNCIA DO INCISO II DO ENUNCIADO 2 DO CRPS. NO CASO, HÁ EVIDENTE [RASURA/EXTEMPORANEIDADE/FALTA DE CRONOLOGICIDADE NAS ANOTAÇÕES]</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'auxilio-reclusao-regime-fechado',
@@ -1169,7 +1158,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>O AUXÍLIO-RECLUSÃO SERÁ DEVIDO AOS DEPENDENTES DO SEGURADO RECLUSO EM REGIME FECHADO, POR FORÇA DO. ART. 116. &nbsp;DO DECRETO Nº 3.048/99.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'loas-renda-per-capita-indeferimento',
@@ -1192,7 +1180,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>HÁ COMPROVADA MISERABILIDADE E NÃO EXISTE REMUNERAÇÃO NO CNIS OU NO SUB [HÁ RENDA RECEBIDA PELO RECORRENTE / HÁ RENDA RECEBIDA POR INTEGRANTE DO GRUPO FAMILIAR, O QUAL SUPERA O VALOR DE UM QUARTO DO SALÁRIO-MÍNIMO VIGENTE]. REQUERENTE [NÃO SE] ENQUADRA [-SE] NO ARTIGO 20 DA LEI 8.742/93 [NÃO] FAZENDO JUS À CONCESSÃO DO BENEFÍCIO ASSISTENCIAL.</p><p>CONSTATAÇÃO IN LOCU FEITO POR SERVIDOR DO INSS DE QUE A PARTE RECORRENTE VIVE EM CONDIÇÕES DE VULNERABILIDADE SOCIAL. PARECER TÉCNICO EMITIDO POR SERVIDOR PÚBLICO PROFISSIONAL DO SERVIÇO SOCIAL TEM FÉ PÚBLICA E SERVE COMO PROVA DE POBREZA POR FORÇA DO ARTIGO 369 DO CPC E ARTIGO 71 DO REGIMENTO DO CRPS, CONSOANTE ENTENDIMENTO DO CONSELHO PLENO NA RESOLUÇÃO 28/2018.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'tempo-especial-profissional-da-saude',
@@ -1215,7 +1202,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>PERÍODOS DECLARADOS COMO ESPECIAIS EXPOSTOS A AGENTES BIOLÓGICOS [NÃO] ENCONTRAM ASSENTO NO CÓDIGO 3.0.1 DO DECRETO 3.048/99.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'loas-renda-per-capita-suspensao-pelo-mob',
@@ -1238,7 +1224,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>APURAÇÃO DE IRREGULARIDADE. COMPROVAÇÃO DE [recebimento de benefício/comprovação de remuneração] PELO [próprio recorrente/integrante do membro familiar - nome do membro], CONFORME ART. 47, I DO DECRETO 6.214/07.</p><p>INDEPENDENTEMENTE DA EXISTÊNCIA DE MÁ-FÉ OU ERRO DA ADMINISTRAÇÃO, A DEVOLUÇÃO DE VALORES RECEBIDOS INDEVIDAMENTE É OBRIGATÓRIA, POR NÃO SE ADMITIR PERDÃO DE DÍVIDA EM DESFAVOR DO ERÁRIO, NOS MOLDES DO PARECER CONJUR 616/2010, EM SUA QUESTÃO 15.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'beneficio-com-indicios-de-irregularidade-com-devolucao-valores-e-sem-parcelamento',
@@ -1261,7 +1246,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL. FICOU DEMONSTRADA A SUPERAÇÃO DAS CONDIÇÕES QUE DERAM ORIGEM A CONCESSÃO DO BENEFÍCIO, DEVENDO SER MANTIDA A CESSAÇÃO, NA FORMA DO ART. 21 DA LEI 8.742/93 E ART. 48, III DO DECRETO 6.214/07. A FILHA SOLTEIRA DA BENEFICIÁRIA, E INTEGRANTE DE SEU GRUPO FAMILIAR, POSSUI EMPRESA REGISTRADA EM SEU NOME, O QUE ENFRAQUECE O CRITÉRIO DE VULNERABILIDADE E MISERABILIDADE DO GRUPO, NA FORMA DO ART. 20, §11 DA LEI 8.213/91. HÁ, AINDA, O REGISTRO DE CONTRIBUIÇÃO SOBRE SALÁRIO DE CONTRIBUIÇÃO NO VALOR DE UM SALÁRIO MÍNIMO, NA CONDIÇÃO DE CONTRIBUINTE INDIVIDUAL, O QUE PRESSUPÕE O EXERCÍCIO DE ATIVIDADE REMUNERADA, NA FORMA DO ART. 11, V E SUAS ALÍNEAS. O RECEBIMENTO DE RENDA INTEGRA A RENDA MENSAL BRUTA FAMILIAR, MESMO QUE ADVINDA DO MERCADO INFORMAL OU AUTÔNOMO, NA FORMA DO ART. 4º DO DECRETO 6.214/07. &nbsp;NÃO FICOU COMPROVADA, DE FORMA CONSISTENTE, A MÁ-FÉ DA BENEFICIÁRIA, MAS, QUANTO À DEVOLUÇÃO DE VALORES, ACOMPANHO O ENTENDIMENTO DE QUE NÃO É POSSÍVEL O PERDÃO DA DÍVIDA, AINDA QUE SEM PROVA DE MÁ-FÉ SENDO ESSES OS TERMOS DA QUESTÃO 15 DO PARECER CONJUR/MPS Nº 616/2010. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'beneficio-de-prestacao-continuada-cadunico-atualizado',
@@ -1284,7 +1268,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. SUSPENSAO DO BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL. PENDÊNCIA DE INSCRIÇÃO DO CADASTRO ÚNICO. PROVA DE ATUALIZAÇÃO DO REFERIDO CADASTRO. ASSIM, O BENEFÍCIO DEVE SER REATIVADO, NA FORMA DO ART. 12, §2º, ART.47, §9º DO DECRETO 6.214/07. RECURSO CONHECIDO A QUE SE DÁ PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'beneficio-de-prestacao-continuada-irregularidade-idoso-com-loas-devolucao-atividade-contribuinte-individual-filho-solteiro',
@@ -1307,7 +1290,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL AO IDOSO. FICOU DEMONSTRADA A SUPERAÇÃO DAS CONDIÇÕES QUE DERAM ORIGEM A CONCESSÃO DO BENEFÍCIO, DEVENDO SER MANTIDA A SUSPENSÃO, NA FORMA DO ART. 21 DA LEI 8.742/93 E ART. 48, III DO DECRETO 6.214/07. NÃO FICOU COMPROVADA, DE FORMA CONSISTENTE, A MÁ-FÉ DA BENEFICIÁRIA, MAS, QUANTO À DEVOLUÇÃO DE VALORES, ACOMPANHO O ENTENDIMENTO DE QUE NÃO É POSSÍVEL O PERDÃO DA DÍVIDA, AINDA QUE SEM PROVA DE MÁ-FÉ SENDO ESSES OS TERMOS DA QUESTÃO 15 DO PARECER CONJUR/MPS Nº 616/2010. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'beneficio-de-prestacao-continuada-deficiencia-nao-atende',
@@ -1330,7 +1312,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL À PESSOA COM DEFICIÊNCIA. CONFORME CONSTATADO EM AVALIAÇÃO MÉDICO PERICIAL INICIAL E EM SEDE DE RECURSO, NÃO EXISTE DEFICIÊNCIA. ASSIM, O INDEFERIMENTO ESTÁ EM CONFORMIDADE COM O ART. 20, §2º DA LEI 8.742/93RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'beneficio-de-prestacao-continuada-renda-nao-atende',
@@ -1353,7 +1334,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL. MANTIDO O INDEFERIMENTO. RENDA PER CAPITA SUPERIOR AO LIMITE LEGAL.ARTIGO 20, §1º E 3º DA LEI 8.742/93. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'carencia-computo-de-beneficio-por-incapacidade',
@@ -1376,7 +1356,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. APOSENTADORIA POR IDADE. PRETENDE COMPUTAR OS PERÍODOS EM QUE ESTEVE EM GOZO DE AUXÍLIO-DOENÇA. PERÍODOS NÃO INTERCALADOS COM CONTRIBUIÇÃO. PRETENSAO NÃO ENCONTRA AMPARO NA LEGISLAÇÃO PREVIDENCIÁRIA. ART. 55, II DA LEI 8.213/91 E DO ART.19-C, §1º DO DECRETO 3.048/99 E TEMA 1.125 DO STF. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'cnis-complementacao-recolhimento-plano-simplificado',
@@ -1399,7 +1378,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO. NO CASO DE OPÇÃO PELA EXCLUSÃO DO DIREITO AO BENEFÍCIO DE APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO, A ALÍQUOTA DE CONTRIBUIÇÃO INCIDENTE SOBRE O LIMITE MÍNIMO MENSAL DO SALÁRIO DE CONTRIBUIÇÃO SERÁ DE 11% (ONZE POR CENTO). O SEGURADO QUE PRETENDA CONTAR O TEMPO DE CONTRIBUIÇÃO CORRESPONDENTE PARA FINS DE OBTENÇÃO DA APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO, DEVERÁ COMPLEMENTAR A CONTRIBUIÇÃO MENSAL MEDIANTE RECOLHIMENTO. COMPLEMENTAÇÃO NÃO REALIZADA. A APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO SERÁ DEVIDA AO SEGURADO APÓS TRINTA E CINCO ANOS DE CONTRIBUIÇÃO, SE HOMEM, OU TRINTA ANOS, SE MULHER. ART. 56 DECRETO 3.048/99, ART. 21, § 2ºE 3º DA LEI 8212/91.RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'cnis-salario-de-contribuicao-inferior-ao-minimo',
@@ -1422,7 +1400,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO. A LEGISLAÇÃO É CLARA NO SENTIDO DE QUE O SALÁRIO DE CONTRIBUIÇÃO INFORMADO PARA FINS DE CÁLCULO DA GUIA DEVE RESPEITAR O SALÁRIO-MÍNIMO VIGENTE, NA FORMA DO ART. 214 DO DECRETO 3.048/99. TEMPO INSUFICIENTE. O BENEFÍCIO DE APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO NÃO É DEVIDO SEM PROVA DO EFETIVO EXERCÍCIO DA ATIVIDADE E DA IMPLEMENTAÇÃO DO TEMPO MÍNIMO DE CONTRIBUIÇÃO (DEC. 3.048/99, ART. 56). RECURSO CONHECIDO E NEGADO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'cnis-com-indicios-de-irregularidade-recolhimento-como-facultativo-baixa-renda-pendente-de-analise',
@@ -1445,7 +1422,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO. A CONCESSÃO DA APOSENTADORIA POR TEMPO DE SERVIÇO DEPENDE DE 180 CONTRIBUIÇÕES MENSAIS E 35 (TRINTA E CINCO) ANOS DE IDADE, SE HOMEM, E 30 (TRINTA), SE MULHER. ART. 56 DO DECRETO 3.048/99. NO QUE SE REFERE AOS RECOLHIMENTOS EFETUADOS NA CONDIÇÃO DE FACULTATIVA, DE ACORDO COM O ART. 21 DA LEI Nº 8.212, DE 24 DE JULHO DE 1991, O FACULTATIVO DE BAIXA RENDA DEVE COMPROVAR QUE ATENDE AOS CRITÉRIOS DA LEGISLAÇÃO PARA O RECONHECIMENTO DE REFERIDA CONDIÇÃO, O QUE NÃO O FEZ. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'cnis-com-indicios-de-irregularidade-recolhimento-extemporaneo-lei-e-regimento-intenro-oportunidade-de-producao-de-prova',
@@ -1468,7 +1444,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. OPORTUNIZADA A COMPLEMENTAÇÃO DA DOCUMENTAÇÃO, O PRAZO DECORREU SEM MANIFESTAÇÃO DA PARTE INTERESSADA. EXISTE PREVISÃO REGIMENTAL QUE PERMITE A APRESENTAÇÃO DE ALEGAÇÕES E DOCUMENTOS REFERENTES A MATÉRIA DO PROCESSO ATÉ ANTES DO INÍCIO DA SESSÃO DE JULGAMENTO. A DESPEITO DESSAS DUAS OPORTUNIDADES, NÃO HOUVE QUALQUER ALEGAÇÃO DA RECORRENTE, MOTIVO PELO QUAL O PROCESSO SERÁ JULGADO NO ESTADO EM QUE SE ENCONTRA, NA FORMA DO ART. 35, §2º DO REGIMENTO INTERNO DO CONSELHO DE RECURSOS DO SEGURO SOCIAL. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'contagem-reciproca-tempo-especial',
@@ -1491,7 +1466,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                         //     texto: '',
                         // },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'contribuinte-individual-e-facultativo-primeiro-recolhimento-em-dia-apos-perda-qualidade-segurado-carencia-ci-e-facultativo',
@@ -1514,7 +1488,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. PERDA DA QUALIDADE DE SEGURADO. PARA FAZER JUS AO BENEFÍCIO DO AUXÍLIO DOENÇA, O SEGURADO DEVE ATENDER TODOS OS PRESSUPOSTOS NECESSÁRIOS QUANDO DO REINGRESSO. NÃO É DADO AO ÓRGÃO JULGADOR RECONHECER RECOLHIMENTOS FEITOS FORA DA ÉPOCA PRÓPRIA. DECISÃO FUNDAMENTADA NOS ART. 25 E 27- A DA LEI 8213/91. ART. 19, § 2º DO DECRETO 3.048/99. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'domestico-filiacao',
@@ -1537,7 +1510,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>EMPREGADO DOMÉSTICO. VÍNCULO COMPROVADO EM CTPS ORDEM LÓGICA E CRONOLÓGICA, SEM EMENDAS E NEM RASURAS. BENEFÍCIO DE VALOR MÍNIMO. POSSIBILIDADE DO CÔMPUTO DO INTERVALO DE (XX/XX/XXXX), MESMO AUSENTE O RECOLHIMENTO PREVIDENCIÁRIO E A NÃO VINCULAÇÃO COMO DOMÉSTICO ATÉ A DER. APLICAÇÃO DO ARTIGO 36 DA LEI Nº 8.213/91. OBSERVÂNCIA DO ENUNCIADO Nº 02/2019 DO CRPS.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'empregado-aluno-aprendiz',
@@ -1560,7 +1532,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>EMENTA: ALUNO-APRENDIZ. CERTIDÃO EMITIDA PELA INSTITUIÇÃO DE ENSINO COM A INDICAÇÃO APENAS DA REMUNERAÇÃO INDIRETA CUSTEADA POR ENTE PÚBLICO. NÃO CONFIGURADO VÍNCULO EMPREGATÍCIO. NÃO COMPROVADA ATIVIDADES COM VISTAS A ATENDER A ENCOMENDAS DE TERCEIROS. NÃO ATENDIDO OS TERMOS DO IX, DO ARTIGO 188-G, DO DECRETO Nº 3.048/99 E O ENUNCIADO Nº 02, INCISO V DO CRPS E A RESOLUÇÃO Nº 38/2021 DO CONSELHO PLENO CRPS.</p><p>&nbsp;</p><p>EMENTA: ALUNO-APRENDIZ. CERTIDÃO EMITIDA PELA INSTITUIÇÃO DE ENSINO COM A INDICAÇÃO DE REMUNERAÇÃO INDIRETA CUSTEADA POR ENTE PÚBLICO E DO VÍNCULO EMPREGATÍCIO COM ENCOMENDAS DE TERCEIROS. ATENDIDO OS TERMOS DO IX, DO ARTIGO 188-G, DO DECRETO Nº 3.048/99 E O ENUNCIADO Nº 02, INCISO V DO CRPS E A RESOLUÇÃO Nº 38/2021 DO CONSELHO PLENO CRPS.<br>&nbsp;</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'enquadramento-eletricista',
@@ -1583,7 +1554,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>NÃO FOI ATENDIDO UM REQUISITO FORMAL DE PREENCHIMENTO DO FORMULÁRIO: NÃO FOI INFORMADO DECIBELÍMETRO, DOSÍMETRO OU MEDIÇÃO PONTUAL NO CAMPO "TÉCNICA UTILIZADA" DO PERFIL PROFISSIOGRÁFICO PREVIDENCIÁRIO (PPP), NA FORMA DO ENUNCIADO 13, II DO CRPS, 2019.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'enquadramento-categoria-maritimo-marinheiro',
@@ -1606,7 +1576,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>DEVIDO O ENQUADRAMENTO DESSES PERÍODOS NO CÓDIGO 2.4.2 DO DECRETO 53.831/64.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'especial-categoria-profissional',
@@ -1629,7 +1598,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>TEMPO ESPECIAL. IMPOSSIBILIDADE. ATIVIDADE DESEMPENHADA NÃO PREVISTA NO ROL DOS REGULAMENTOS DA PREVIDÊNCIA SOCIAL – DECRETOS Nº 53.831/64 E 83.080/79. AUSÊNCIA DE FATORES DE RISCO - PERÍODO DE (XX/XX/XXXX) MANTIDO COMO DE NATUREZA COMUM.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'especial-formulario-sem-exposicao-a-agentes-nocivos-e-nao-enquadra-por-categoria-profissional',
@@ -1652,7 +1620,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>EMENTA: TEMPO ESPECIAL. IMPOSSIBILIDADE. RUÍDO APURADO PARA O INTERVALO A PARTIR DE 01.01.2004 COM BASE EM MEDIÇÃO PONTUAL / DECIBELÍMETRO. METODOLOGIA QUE NÃO ATENDE A ORIENTAÇÃO PREVISTA NO INCISO III, DO ENUNCIADO Nº 13 DO CRPS.</p><p>&nbsp;</p><p>&nbsp;</p><p>EMENTA: TEMPO ESPECIAL. POSSIBILIDADE. RUÍDO ACIMA DO LIMITE PERMITIDO E APURADO COM BASE NA DOSIMETRIA DA NR-15/ANEXO 1, A PARTIR DE 01.01.2004. METODOLOGIA QUE ATENDE A ORIENTAÇÃO PREVISTA NO INCISO III, DO ENUNCIADO Nº 13 DO CRPS.<br>&nbsp;</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'especial-metodologia-fundacentro-e-nr-15',
@@ -1675,7 +1642,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                         //     texto: '',
                         // },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'expedicao-de-gps',
@@ -1698,7 +1664,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                         //     texto: '',
                         // },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'incapacidade-antecipacao-auxilio-doenca-atestado-nos-moldes-da-portaria-9-831-2020-duracao-maxima-tres-meses',
@@ -1721,7 +1686,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. BENEFÍCIO DE ANTECIPAÇÃO DE AUXÍLIO-DOENÇA PREVIDENCIÁRIO. ANTECIPAÇÃO CONCEDIDA, NOS MOLDES DO ART. 4º LEI Nº 13.982, DE 2 DE ABRIL DE 2020 E 3º DA PORTARIA CONJUNTA Nº 9.381, DE 6 DE ABRIL DE 2020. RECURSO CONHECIDO A QUE SE DÁ PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'incapacidade-indeferimento-retorno-a-atividade-remunerada',
@@ -1744,7 +1708,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                         //     texto: '',
                         // },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'incapacidade-cessacao-retorno-a-atividade-remunerada',
@@ -1767,7 +1730,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. AUXÍLIO-DOENÇA. COMPROVAÇÃO DE RETORNO AO TRABALHO. A DATA DE CESSAÇÃO SERÁ MANTIDA. DECISÃO FUNDAMENTADA NO ART. 60, §3º DA LEI 8.213/91. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'incapacidade-laborativa-prorrogacao-dar-anterior-decreto-10-410-2020',
@@ -1790,7 +1752,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. AUXÍLIO-DOENÇA &nbsp;POSSÍVEL A PRORROGAÇÃO, NOS TERMOS DO ART. 60 DA LEI 8213/91. RECURSO CONHECIDO A QUE SE DÁ PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'incapacidade-laborativa-prorrogacao-negar-anterior-decreto-10-410-2020',
@@ -1813,7 +1774,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. AUXÍLIO-DOENÇA. CONFORME CONSTATADO EM AVALIAÇÃO MÉDICO PERICIAL INICIAL E EM SEDE DE RECURSO, NÃO MAIS EXISTE INCAPACIDADE PARA O TRABALHO, ESTANDO A CESSAÇÃO EM CONFORMIDADE COM A PARTE FINAL DO ART. 60 DA LEI 8.213/91. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'incapacidade-laborativa-indeferimento-negar-pos-decreto-2020',
@@ -1836,7 +1796,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: 'RECURSO ORDINÁRIO. AUXÍLIO INCAPACIDADE TEMPORÁRIA. ANTIGO AUXÍLIO-DOENÇA. CONFORME CONSTATADO EM AVALIAÇÃO MÉDICO PERICIAL INICIAL E EM SEDE DE RECURSO, NÃO EXISTE INCAPACIDADE PARA O TRABALHO, ESTANDO O INDEFERIMENTO EM CONFORMIDADE COM O ART. 59 DA LEI 8.213/91 e 71 DO DECRETO 3.048/99. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'incapacidade-laborativa-indeferimento-dar-pos-decreto-2020',
@@ -1859,7 +1818,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. AUXÍLIO INCAPACIDADE TEMPORÁRIA. ANTIGO AUXÍLIO-DOENÇA. CONFORME CONSTATADO EM AVALIAÇÃO MÉDICO PERICIAL EM SEDE DE RECURSO, o benefício será concedido, na forma do art. 60 e 71 do Decreto 3.048/99 . RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'materia-julgada-administrativa-preclusao-processual',
@@ -1882,7 +1840,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. PRECLUSÃO. COISA JULGADA E EXAURIDA ADMINISTRATIVAMENTE. O INSTITUTO DA PRECLUSÃO PROCESSUAL E DO EXAURIMENTO NA ESFERA ADMINISTRATIVA NÃOPERMITEM QUE UM MESMO ÓRGÃO DA ADMINISTRAÇÃO PÚBLICA FAÇA APRECIAÇÃO DE MATÉRIA JÁ APRECIADA E MODIFIQUE DECISÃO ANTERIORMENTE PROFERIDA, SALVO EM SITUAÇÃO DE REVISÃO PREVISTA NO REGIMENTO INTERNO DO CRSS. RECURSO NÃO CONHECIDO. DECISÃO FUNDAMENTADA NOS ART. 54, VI DO RICRPS, ALTERADO PELA PORTARIA 116/2017, ART. 507 DO CPC/15 C/C ART. 71 DA PORTARIA 116/2017 DO MDSA.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'pensao-por-morte-filho-maior-invalido',
@@ -1905,7 +1862,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. PENSÃO POR MORTE PREVIDENCIÁRIA. FILHO MAIOR INVÁLIDO. CONFORME LAUDO MÉDICO PERICIAL. NÃO HÁ DIREITO AO BENEFÍCIO. O INDEFERIMENTO SERÁ MANTIDO, NA FORMA DO ART. 77, §2º DA LEI 8.213/91 e 108 do Decreto 3.048/99. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'pensao-por-morte-menos-de-18-contribuicoes-do-instituidor',
@@ -1928,7 +1884,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. PENSÃO POR MORTE. NOS TERMOS DO ART. 77, §2º ALÍNEA B O DIREITO À PERCEPÇÃO DA COTA INDIVIDUAL CESSARÁ PARA CÔNJUGE OU COMPANHEIRO EM 4 (QUATRO) MESES, SE O ÓBITO OCORRER SEM QUE O SEGURADO TENHA VERTIDO 18 (DEZOITO) CONTRIBUIÇÕES MENSAIS. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'pensao-por-morte-relacao-com-menos-de-dois-anos',
@@ -1951,7 +1906,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. PENSÃO POR MORTE PREVIDENCIÁRIA. O BENEFÍCIO FOI MANTIDO PELO PERÍODO DE 4 (QUATRO) MESES, EM RAZÃO DE A UNIÃO TER SIDO FORMALIZADA EM MENOS DE 2 (DOIS) ANOS ANTES DO ÓBITO DO SEGURADO, NOS MOLDES DO ART. 77, §2º, V, ALÍNEA B DA LEI 8.213/91. NÃO FICOU COMPROVADA A MANUTENÇÃO DA UNIÃO DO CASAL POR MAIS DE 4 MESES, DESDE ______ &nbsp;(P. ) ATÉ O ÓBITO DO INSTITUIDOR, EM ______, MOTIVO PELO QUAL A CESSAÇÃO SERÁ MANTIDA. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'pensao-por-morte-uniao-estavel-mais-de-uma-prova-dentro-de-24-meses',
@@ -1974,7 +1928,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. PENSÃO POR MORTE. CONDIÇÃO DE _______ . NÃO HÁ PROVA SUFICIENTE DA REFERIDA _______ . A LEI EXIGE, NO MÍNIMO, DOIS DOCUMENTOS RELACIONADOS _______ , &nbsp;NO PERÍODO DE 24 MESES ANTERIOR AO ÓBITO, O QUE NÃO FOI ATENDIDO, MOTIVO PELO QUAL O INDEFERIMENTO SERÁ MANTIDO, NA FORMA DO ART. 16, §5º DA LEI 8.213/91. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'qualidade-de-segurado-reingresso-com-nova-carencia',
@@ -1997,7 +1950,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. BENEFÍCIO XXX. CARÊNCIA. RECOLHIMENTOS REALIZADOS EM ATRASO APÓS A PERDA QUALIDADE DE SEGURADO. COMPETÊNCIAS NÃO COMPUTADA PARA EFEITO DE CARÊNCIA NOS TERMOS DO §4º ARTIGO 28 DO DECRETO 3048/99. NÃO HÁ DIREITO AO BENEFÍCIO. INDEFERIMENTO MANTIDO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'reclamatoria-trabalhista',
@@ -2020,7 +1972,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>EMENTA: RECLAMAÇÃO TRABALHISTA. IMPOSSIBILIDADE. AUSÊNCIA DE PROVA MATERIAL. NÃO ATENDIDO OS TERMOS DO §3º, DO ARTIGO 55 DA LEI Nº 8.213/91 E ENUNCIADO Nº 03/2019 DO CRPS.<br>A sentença trabalhista é hábil para ser considerada para fins previdenciários se constituída de prova material que evidencie o exercício da atividade remunerada no período discutido.</p><p>&nbsp;</p><p>EMENTA: RECLAMAÇÃO TRABALHISTA. POSSIBILIDADE. AÇÃO JUDICIAL ACOMPANHADA DE ELEMENTO MATERIAL QUE CONFIRMA O EXERCÍCIO DA ATIVIDADE REMUNERADA. ATENDIDO OS TERMOS DO §3º, DO ARTIGO 55 DA LEI Nº 8.213/91 E ENUNCIADO Nº 03/2019 DO CRPS.<br>&nbsp;</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'recorrente-nao-apresentou-documentos',
@@ -2043,7 +1994,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. OPORTUNIZADA A COMPLEMENTAÇÃO DA DOCUMENTAÇÃO, O PRAZO DECORREU SEM MANIFESTAÇÃO DA PARTE. EXISTE PREVISÃO REGIMENTAL QUE PERMITE A APRESENTAÇÃO DE ALEGAÇÕES E DOCUMENTOS REFERENTES A MATÉRIA DO PROCESSO ATÉ ANTES DO INÍCIO DA SESSÃO DE JULGAMENTO. A DESPEITO DESSAS DUAS OPORTUNIDADES, NÃO HOUVE QUALQUER ALEGAÇÃO DA RECORRENTE, MOTIVO PELO QUAL O PROCESSO SERÁ JULGADO NO ESTADO EM QUE SE ENCONTRA, NA FORMA DO ART. 35, §2º DO REGIMENTO INTERNO DO CONSELHO DE RECURSOS DO SEGURO SOCIAL. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO.&nbsp;</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'recurso-sem-assinatura-e-sem-atendimento-de-exigencia-pela-parte',
@@ -2066,7 +2016,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. O RECURSO ESTAVA SEM ASSINATURA. OPORTUNIZADA REGULARIZAÇÃO, NÃO HOUVE INTERESSE DA PARTE EM ATENDER. PORTANTO, APLICA-SE O DISPOSTO NO ART. 76, § 2º, INCISO I, DO CÓDIGO DE PROCESSO CIVIL, C/C O ART. 71 E 35, §2º DO REGIMENTO INTERNO DO CRPS, SEGUNDO O QUAL O RECURSO NÃO SERÁ CONHECIDO QUANDO A PARTE RECORRENTE DEIXAR DE CUMPRIR EXIGÊNCIA OU PROVIDÊNCIA QUE A ELA INCUMBIRIA. RECURSO NÃO CONHECIDO.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'salario-maternidade-sem-afastamento-atividade',
@@ -2089,7 +2038,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>RECURSO ORDINÁRIO. SALÁRIO-MATERNIDADE. NOS TERMOS DO ART. 71-C DA LEI 8.213/91, A PERCEPÇÃO DO SALÁRIO-MATERNIDADE, INCLUSIVE O PREVISTO NO ART. 71-B, ESTÁ CONDICIONADA AO AFASTAMENTO DO TRABALHO. NÃO HOUVE AFASTAMENTO POR 120 DIAS. RECURSO CONHECIDO A QUE SE NEGA PROVIMENTO</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'segurado-especial-prova-de-vinculo-com-terras-rurais-com-ja',
@@ -2112,7 +2060,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>QUANTO AO ALEGADO LABOR RURAL DE _________ , EM QUE PESE A QUALIFICAÇÃO CIVIL DE SEU ______ , NÃO FICOU COMPROVADA A VINCULAÇÃO DO GRUPO FAMILIAR A QUALQUER IMÓVEL RURAL, NA CONDIÇÃO DE ________ , CONFORMME TEOR DO ART. 11, VII, ALÍNEA A DA LEI 8.213/91. &nbsp;MOTIVO PELO QUAL NÃO HA INICIO DE PROVA PARA O PROCESSAMENTO DE JUSTIFICAÇÃO ADMINISTRATIVA, NA FORMA DO ART. 55, §3º DA LEI 8.213/91.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'segurado-especial-atividade-em-outra-categoria-mais-de-120-dias-ano-civil',
@@ -2135,7 +2082,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: 'QUALIDADE DE SEGURADO ESPECIAL DESCARACTERIZADA PELO LABOR URBANO EM PERÍODO SUPERIOR A 120 DIAS NO ANO CIVIL, CONFORMA ART. 11, §9º, INCISO III DA LEI 8.213/91',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'segurado-especial-autodeclaracao',
@@ -2158,7 +2104,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>A comprovação do exercício de atividade rural será feita, complementarmente à autodeclaração de que trata o § 2º e ao cadastro de que trata o § 1º, ambos do art. 38-B desta Lei. art. 106 da lei 8.213/91</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 {
                     id: 'trabalhador-rural-contribuinte-individual',
@@ -2181,7 +2126,6 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                             texto: '<p>PRODUÇÃO AGRÍCOLA ELEVADA. EVIDENCIA DA CHAMADA AGRICULTURA EMPRESARIAL, AFASTANDO A CONDIÇÃO DE SEGURADO ESPECIAL E DESCARACTERIZANDO O REGIME DE ECONOMIA FAMILIAR. A PRODUÇÃO SUPERA EM MUITO O INDISPENSÁVEL À SUBSISTÊNCIA DO GRUPO FAMILIAR, PORTANTO O PROPRIETÁRIO NÃO SE ENQUADRA COMO PEQUENO PRODUTOR RURAL EM REGIME DE ECONOMIA FAMILIAR PARA A PRÓPRIA SUBSISTÊNCIA, NA FORMA DO ART. 11, VII DA LEI 8.213/91, ESTANDO REFERIDA CONDIÇÃO DESCARACTERIZADA, NA FORMA DO §10 DO MESMO ARTIGO, POR SE ENQUADRAR NA CATEGORIA DE CONTRIBUINTE INDIVIDUAL, NA FORMA DO ART. 11, V, ALÍNEA A DA LEI 8.213/91.</p>',
                         },
                     ],
-                    ramificacao: { irPara: 'avançar' },
                 },
                 // {
                 //     id: '',
@@ -2204,7 +2148,7 @@ Deste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico
                 //             texto: '',
                 //         },
                 //     ],
-                //     ramificacao: { irPara: 'avançar' },
+                //
                 // },
                 // {
                 //     id: '',

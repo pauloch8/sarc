@@ -1,4 +1,4 @@
-import { IIdFormulario, IdFormulario } from '../../../comum/IdFormulario';
+import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
 import {
     IItemEditavel,
     ItemEditavel,
@@ -6,12 +6,12 @@ import {
     ErroInconsistenciasNaValidacao,
 } from '../../comum/ItemEditavel';
 import { IListaEditavel } from '../../comum/ListaEditavel';
-import { IOpcaoEditavel } from './opcao/OpcaoEditavel';
-import { ISubtitulo } from '../../../comum/Subtitulo';
 import { ITitulo } from '../../../comum/Titulo';
+import { ISubtitulo } from '../../../comum/Subtitulo';
+import { IIdFormulario } from '../../../comum/IdFormulario';
+import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 import { IEscapadorDeQuestao } from '@/dominio/comum/escapador/questao/EscapadorDeQuestao';
 import { IEscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
-import { QuestaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface IQuestaoOpcaoEditavel extends IItemEditavel {
     getId(): IIdFormulario;
@@ -20,6 +20,8 @@ export interface IQuestaoOpcaoEditavel extends IItemEditavel {
     setTitulo(titulo: ITitulo): void;
     getSubtitulo(): ISubtitulo | undefined;
     setSubtitulo(subtitulo?: ISubtitulo | undefined): void;
+    getValorPadrao(): IIdFormulario | undefined;
+    setValorPadrao(valorPadrao?: IIdFormulario): void;
     getListaOpcoes(): IListaEditavel<IOpcaoEditavel> | undefined;
     setListaOpcoes(opcoes: IListaEditavel<IOpcaoEditavel>): void;
     getEscapadores(): IEscapadorDeQuestao[];
@@ -119,7 +121,7 @@ export class QuestaoOpcaoEditavel
         return this.valorPadrao;
     }
 
-    setValorPadrao(valorPadrao?: IdFormulario) {
+    setValorPadrao(valorPadrao?: IIdFormulario) {
         this.valorPadrao = valorPadrao;
     }
 

@@ -20,12 +20,12 @@ describe('QuestaoEdicao', () => {
     describe('ao criar uma nova Questão', () => {
         describe('cria um novo objeto de Questão', () => {
             test('exibe a lista de inconsistências se for lançado erro de Inconsistência na validação', async () => {
-                const questaoEditavelFactory =
+                const questaoOpcaoEditavelFactory =
                     new QuestaoEditavelFactoryErroQuestaoInvalidaStub();
                 const sut = mount(QuestaoEdicaoVue, {
                     global: {
                         provide: {
-                            questaoEditavelFactory,
+                            questaoOpcaoEditavelFactory,
                         },
                     },
                     components: {
@@ -54,22 +54,22 @@ describe('QuestaoEdicao', () => {
                 await sut.find('.botaoSalvar').trigger('click');
                 expect(sut.find('.erro').exists()).toBeTruthy();
                 expect(sut.find('.erro').text()).toContain(
-                    questaoEditavelFactory.inconsistencias[0],
+                    questaoOpcaoEditavelFactory.inconsistencias[0],
                 );
                 expect(sut.find('.erro').text()).toContain(
-                    questaoEditavelFactory.inconsistencias[1],
+                    questaoOpcaoEditavelFactory.inconsistencias[1],
                 );
                 expect(sut.find('.erro').text()).toContain(
-                    questaoEditavelFactory.inconsistencias[2],
+                    questaoOpcaoEditavelFactory.inconsistencias[2],
                 );
             });
             test('exibe mensagem de erro desconhecido se ocorrer outro tipo de erro na criação', async () => {
-                const factory =
+                const questaoOpcaoEditavelFactory =
                     new QuestaoEditavelFactoryErroDesconhecidoStub();
                 const sut = mount(QuestaoEdicaoVue, {
                     global: {
                         provide: {
-                            questaoEditavelFactory: factory,
+                            questaoOpcaoEditavelFactory,
                         },
                     },
                     components: {
@@ -102,11 +102,12 @@ describe('QuestaoEdicao', () => {
                 );
             });
             test('emite um evento "criou" com um objeto', async () => {
-                const factory = new QuestaoEditavelFactorySucessoStub();
+                const questaoOpcaoEditavelFactory =
+                    new QuestaoEditavelFactorySucessoStub();
                 const sut = mount(QuestaoEdicaoVue, {
                     global: {
                         provide: {
-                            questaoEditavelFactory: factory,
+                            questaoOpcaoEditavelFactory,
                         },
                     },
                     components: {
@@ -147,13 +148,14 @@ describe('QuestaoEdicao', () => {
     });
     describe('ao editar uma Questao existente', () => {
         test('exibe lista de erros se ocorrer um erro', async () => {
-            const factory = new QuestaoEditavelFactoryDummy();
+            const questaoOpcaoEditavelFactory =
+                new QuestaoEditavelFactoryDummy();
             const questaoStub = new QuestaoEditavelErroStub();
             const questao = questaoStub as unknown as QuestaoOpcaoEditavel;
             const sut = mount(QuestaoEdicaoVue, {
                 global: {
                     provide: {
-                        questaoEditavelFactory: factory,
+                        questaoOpcaoEditavelFactory,
                     },
                 },
                 components: {
@@ -193,13 +195,14 @@ describe('QuestaoEdicao', () => {
             );
         });
         test('emite um evento "atualizou" com um objeto', async () => {
-            const factory = new QuestaoEditavelFactoryDummy();
+            const questaoOpcaoEditavelFactory =
+                new QuestaoEditavelFactoryDummy();
             const questao =
                 new QuestaoEditavelDummy() as unknown as QuestaoOpcaoEditavel;
             const sut = mount(QuestaoEdicaoVue, {
                 global: {
                     provide: {
-                        questaoEditavelFactory: factory,
+                        questaoOpcaoEditavelFactory,
                     },
                 },
                 components: {

@@ -165,7 +165,9 @@ export default defineComponent({
                 }
             }
             if (this.inconsistencias.length) {
-                this.erro = 'Ocorreram erros na atualização da Questão';
+                this.erro =
+                    'Ocorreram erros na atualização da Questão: ' +
+                    this.inconsistencias.join(', ');
             } else {
                 opcao.encerrarEdicao();
                 this.$emit('atualizou', this.opcao);
