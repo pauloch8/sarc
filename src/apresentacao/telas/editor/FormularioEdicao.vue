@@ -126,17 +126,14 @@ export default defineComponent({
                 this.subtitulo as Subtitulo,
             );
             const especificacao = formulario.gerarEspecificacao();
-            console.log({ especificacao });
-            this.$emit('criou', formulario);
-            console.log(formulario);
+            this.$emit('criou', especificacao);
         },
         editar(editor: FormularioEditor) {
             editor.setId(this.id as IdFormulario);
             editor.setTitulo(this.titulo as Titulo);
             editor.setSubtitulo(this.subtitulo as Subtitulo);
             const especificacao = editor.gerarEspecificacao();
-            console.log({ especificacao });
-            this.$emit('atualizou', editor);
+            this.$emit('atualizou', especificacao);
         },
         cancelar() {
             // TODO: CANCELAR

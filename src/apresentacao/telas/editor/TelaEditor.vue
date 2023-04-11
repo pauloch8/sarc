@@ -2,7 +2,9 @@
 import { defineComponent, inject } from 'vue';
 import FormularioEdicao from './FormularioEdicao.vue';
 import { FormularioEditor } from '@/dominio/editor/FormularioEditor';
-import { IEdicaoDeFormularioService } from '@/aplicacao/EdicaoDeFormularioService';
+import { IEspecificacaoRepository } from '@/dominio/especificacao/EspecificacaoRepository';
+import { IFormularioEditorFactory } from '@/dominio/editor/FormularioEditorFactory';
+import { EspecificacaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export default defineComponent({
     name: 'TelaEditor',
@@ -11,29 +13,55 @@ export default defineComponent({
     },
     setup() {
         // injeta especificacaoRepository
-        const edicaoDeFormularioService = inject<IEdicaoDeFormularioService>(
-            'edicaoDeFormularioService',
+        const especificacaoRepository = inject<IEspecificacaoRepository>(
+            'especificacaoRepository',
         );
-        if (!edicaoDeFormularioService) {
+        if (!especificacaoRepository) {
             throw new Error(
-                'Não injetada a dependência edicaoDeFormularioService',
+                'Não injetada a dependência especificacaoRepository',
+            );
+        }
+        // injeta formularioEditorFactory
+        const formularioEditorFactory = inject<IFormularioEditorFactory>(
+            'formularioEditorFactory',
+        );
+        if (!formularioEditorFactory) {
+            throw new Error(
+                'Não injetada a dependência formularioEditorFactory',
             );
         }
 
         // carrega o editor
         // TODO: carregar do id passado por query string
-        const editor = edicaoDeFormularioService.carregarEditor('teste');
+        const especificacao =
+            especificacaoRepository.carregar('gerador_de_acordao');
+        const editor =
+            formularioEditorFactory.criarDaEspecificacao(especificacao);
 
-        // retorna o setup
         return {
             editor,
+            especificacaoRepository,
         };
+    },
+    methods: {
+        criar(especificacao: EspecificacaoDTO) {
+            console.log({ especificacao });
+            this.especificacaoRepository.armazenar(especificacao);
+        },
+        alterar(especificacao: EspecificacaoDTO) {
+            console.log({ especificacao });
+            this.especificacaoRepository.armazenar(especificacao);
+        },
     },
 });
 </script>
 
 <template>
-    <FormularioEdicao :editor="(editor as FormularioEditor)"></FormularioEdicao>
+    <FormularioEdicao
+        :editor="(editor as FormularioEditor)"
+        @criou="criar"
+        @atualizou="alterar"
+    ></FormularioEdicao>
 </template>
 
 <style>

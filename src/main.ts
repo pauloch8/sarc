@@ -36,7 +36,6 @@ import { TipoVariavelRepositoryEmMemoria } from './infrastrutura/portas/memoria/
 import { TipoVariavelFactory } from './dominio/editor/questoes/comum/variavel/tipo-variavel/TipoVariavelFactory';
 import { EscapadorDeVariavelFactory } from './dominio/comum/escapador/variavel/EscapadorDeVariavelFactory';
 import { ModeloEditavelFactory } from './dominio/editor/modelo/ModeloEditavelFactory';
-import { EdicaoDeFormularioService } from './aplicacao/EdicaoDeFormularioService';
 import { EspecificacaoRepositoryLocalStorageExemploStub } from '@/dominio/especificacao/EspecificacaoRepositoryLocalStorageExemploStub';
 import { QuestaoSelecaoEditavelFactory } from './dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavelFactory';
 import { QuestaoEditavelFactory } from './dominio/editor/questoes/QuestaoEditavelFactory';
@@ -84,22 +83,18 @@ const questaoEditavelFactory = new QuestaoEditavelFactory(
     questaoOpcaoEditavelFactory,
     questaoSelecaoEditavelFactory,
 );
-const formularioEditorFactory = new FormularioEditorFactory(
-    escapadorDeVariavelFactory,
-    removeHtml,
-    questaoEditavelFactory,
-);
 const tipoVariavelFactory = new TipoVariavelFactory();
 const tipoVariavelRepository = new TipoVariavelRepositoryEmMemoria(
     tipoVariavelFactory,
 );
 const modeloEditavelFactory = new ModeloEditavelFactory();
+const formularioEditorFactory = new FormularioEditorFactory(
+    escapadorDeVariavelFactory,
+    removeHtml,
+    questaoEditavelFactory,
+);
 const especificacaoRepository =
     new EspecificacaoRepositoryLocalStorageExemploStub();
-const edicaoDeFormularioService = new EdicaoDeFormularioService(
-    especificacaoRepository,
-    formularioEditorFactory,
-);
 
 createApp(App)
     .use(router)
@@ -122,7 +117,7 @@ createApp(App)
     .provide('tipoVariavelRepository', tipoVariavelRepository)
     .provide('modeloEditavelFactory', modeloEditavelFactory)
     .provide('escapadorDeQuestaoFactory', escapadorDeQuestaoFactory)
-    .provide('edicaoDeFormularioService', edicaoDeFormularioService)
+    .provide('especificacaoRepository', especificacaoRepository)
     .mount('#app');
 
 function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {
