@@ -163,14 +163,21 @@ export class QuestaoOpcaoEditavel
     }
 
     gerarEspecificacao() {
+        const id = this.id.toString();
+        const tipo = 'opcao';
+        const titulo = this.titulo.toString();
+        const subtitulo = this.subtitulo?.toString();
         const opcoes = this.listaOpcoes
             .getItens()
             .map(item => item.gerarEspecificacao());
+        const valorPadrao = this.valorPadrao?.toString();
+
         const retorno: QuestaoDTO = {
-            id: this.id.toString(),
-            tipo: 'opcao',
-            titulo: this.titulo.toString(),
-            subtitulo: this.subtitulo?.toString(),
+            id,
+            tipo,
+            titulo,
+            subtitulo,
+            valorPadrao,
             opcoes,
         };
         return retorno;

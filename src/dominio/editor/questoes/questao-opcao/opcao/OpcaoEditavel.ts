@@ -22,9 +22,9 @@ export interface IOpcaoEditavel extends IItemEditavel {
     getVariaveis(): IListaEditavel<IVariavelEditavel> | undefined;
     setVariaveis(variaveis: IListaEditavel<IVariavelEditavel>): void;
     getIdCategorias(): IIdFormulario[];
-    gerarEspecificacao(): OpcaoValorDTO;
     getRamificacao(): IRamificacao;
     setRamificacao(ramificacao: IRamificacao): void;
+    gerarEspecificacao(): OpcaoValorDTO;
 }
 
 export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
@@ -140,20 +140,22 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
     }
 
     gerarEspecificacao() {
+        const id = this.id.toString();
+        const titulo = this.titulo.toString();
         const listaVariaveis = this.listaVariaveis
             ?.getItens()
             .map(item => item.gerarEspecificacao());
         const listaTextos = this.listaTextos
             .getItens()
             .map(item => item.gerarEspecificacao());
+        const ramificacao = this.ramificacao.gerarEspecificacao();
+
         const retorno: OpcaoValorDTO = {
-            id: this.id.toString(),
-            titulo: this.titulo.toString(),
+            id,
+            titulo,
             listaVariaveis,
             listaTextos,
-            ramificacao: {
-                irPara: 'avançar',
-            },
+            ramificacao,
         };
         return retorno;
     }
