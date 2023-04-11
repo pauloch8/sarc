@@ -6,8 +6,12 @@ import {
     TipoDeQuestaoNaoReconhecida,
 } from './questoes/QuestaoFactory';
 
-export class FormularioFactory {
-    static criarDaEspecificacao(especificacao: EspecificacaoDTO) {
+export interface IFormularioFactory {
+    criarDaEspecificacao(especificacao: EspecificacaoDTO): Formulario;
+}
+
+export class FormularioFactory implements IFormularioFactory {
+    criarDaEspecificacao(especificacao: EspecificacaoDTO) {
         const questoes = especificacao.listaQuestoes
             .map(questao => {
                 try {

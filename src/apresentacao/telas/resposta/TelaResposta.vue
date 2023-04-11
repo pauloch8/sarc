@@ -1,12 +1,54 @@
 <script lang="ts">
-import { TextoProcessado } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
-import { defineComponent } from 'vue';
+import {
+    ProcessadorDeRespostaDeFormulario,
+    TextoProcessado,
+} from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormulario';
+import { defineComponent, inject } from 'vue';
 import FormularioComponent from './formulario/FormularioComponent.vue';
 import RelatorioComponent from './relatorio/RelatorioComponent.vue';
+import { IFormularioFactory } from '@/dominio/formulario/FormularioFactory';
+import { IEspecificacaoRepository } from '@/dominio/especificacao/EspecificacaoRepository';
 
 export default defineComponent({
     name: 'TelaResposta',
-    inject: ['processadorFormulario', 'formulario'],
+    setup() {
+        // injeta especificacaoRepository
+        const especificacaoRepository = inject<IEspecificacaoRepository>(
+            'especificacaoRepository',
+        );
+        if (!especificacaoRepository) {
+            throw new Error(
+                'Não injetada a dependência especificacaoRepository',
+            );
+        }
+
+        // injeta dependência formularioFactory
+        const formularioFactory =
+            inject<IFormularioFactory>('formularioFactory');
+        if (!formularioFactory) {
+            throw new Error('Não injetada a dependência formularioFactory');
+        }
+
+        // injeta dependência processadorFormulário
+        const processadorFormulario = inject<ProcessadorDeRespostaDeFormulario>(
+            'processadorFormulario',
+        );
+        if (!processadorFormulario) {
+            throw new Error('Não injetada a dependência processadorFormulario');
+        }
+
+        // TODO: carregar do id passado por query string
+        const especificacao =
+            especificacaoRepository.carregar('gerador_de_acordao');
+        const formulario =
+            formularioFactory.criarDaEspecificacao(especificacao);
+
+        // retorna dependências injetadas
+        return {
+            formulario,
+            processadorFormulario,
+        };
+    },
     components: {
         FormularioComponent,
         RelatorioComponent,

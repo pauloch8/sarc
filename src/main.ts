@@ -46,7 +46,7 @@ import { RamificacaoFactory } from './dominio/editor/questoes/questao-opcao/opca
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
 
 const processadorFormulario = criarProcessadorDeFormulario(especificacao);
-const formulario = FormularioFactory.criarDaEspecificacao(especificacao);
+const formularioFactory = new FormularioFactory();
 const tituloFactory = new TituloFactory();
 const subtituloFactory = new SubtituloFactory();
 const idFormularioFactory = new IdFormularioFactory();
@@ -101,7 +101,7 @@ createApp(App)
     .use(CKEditor)
     .component('FontAwesomeIcon', FontAwesomeIcon)
     .provide('processadorFormulario', processadorFormulario)
-    .provide('formulario', formulario)
+    .provide('formularioFactory', formularioFactory)
     .provide('formularioEditorFactory', formularioEditorFactory)
     .provide('questaoEditavelFactory', questaoEditavelFactory)
     .provide('questaoOpcaoEditavelFactory', questaoOpcaoEditavelFactory)
