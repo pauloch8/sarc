@@ -17,6 +17,8 @@ import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { TextoEditavel } from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
 import { VariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
+import RamificacaoSelecao from './RamificacaoSelecao.vue';
+import { Ramificacao } from '@/dominio/editor/questoes/questao-opcao/opcao/Ramificacao';
 
 export default defineComponent({
     name: 'OpcaoEdicao',
@@ -26,6 +28,7 @@ export default defineComponent({
         ListaTextos,
         ListaVariavel,
         BotoesSalvarCancelar,
+        RamificacaoSelecao,
     },
     setup() {
         const factory = inject<IOpcaoEditavelFactory>('opcaoEditavelFactory');
@@ -43,8 +46,7 @@ export default defineComponent({
     data() {
         const idFormulario = this.opcao?.getId();
         const titulo = this.opcao?.getTitulo();
-        //const ramificacao = this.opcao?.getRamificacao();
-        //const valorPadrao = this.opcao?.getValorPadrao();
+        const ramificacao = this.opcao?.getRamificacao() || new Ramificacao();
         const listaTextos =
             this.opcao?.getTextos() || new ListaEditavel<TextoEditavel>();
         const listaVariaveis =
@@ -58,6 +60,7 @@ export default defineComponent({
             listaVariaveis,
             erro,
             inconsistencias,
+            ramificacao,
         };
     },
     provide() {
@@ -191,6 +194,10 @@ export default defineComponent({
             :titulo="(titulo as Titulo)"
             @digitou="digitouTitulo"
         ></TituloInput>
+
+        <RamificacaoSelecao
+            :ramificacao="(ramificacao as Ramificacao)"
+        ></RamificacaoSelecao>
 
         <ListaVariavel
             :lista="(listaVariaveis as ListaEditavel<VariavelEditavel>)"

@@ -1,14 +1,15 @@
-import { IIdFormulario } from '../../../../comum/IdFormulario';
+import { IRamificacao, Ramificacao } from './Ramificacao';
+import { ITextoEditavel } from '../../comum/texto/TextoEditavel';
+import { IVariavelEditavel } from '../../comum/variavel/VariavelEditavel';
+import { IListaEditavel } from '../../../comum/ListaEditavel';
 import {
     IItemEditavel,
     ItemEditavel,
     ErroNaEdicao,
     ErroInconsistenciasNaValidacao,
 } from '../../../comum/ItemEditavel';
-import { IListaEditavel } from '../../../comum/ListaEditavel';
-import { ITextoEditavel } from '../../comum/texto/TextoEditavel';
+import { IIdFormulario } from '../../../../comum/IdFormulario';
 import { ITitulo } from '../../../../comum/Titulo';
-import { IVariavelEditavel } from '../../comum/variavel/VariavelEditavel';
 import { OpcaoValorDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface IOpcaoEditavel extends IItemEditavel {
@@ -22,17 +23,26 @@ export interface IOpcaoEditavel extends IItemEditavel {
     setVariaveis(variaveis: IListaEditavel<IVariavelEditavel>): void;
     getIdCategorias(): IIdFormulario[];
     gerarEspecificacao(): OpcaoValorDTO;
+    getRamificacao(): IRamificacao;
+    setRamificacao(ramificacao: IRamificacao): void;
 }
 
 export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
+    private ramificacao: IRamificacao;
+
     constructor(
         private id: IIdFormulario,
         private titulo: ITitulo,
         indice: number,
         private listaTextos: IListaEditavel<ITextoEditavel>,
         private listaVariaveis?: IListaEditavel<IVariavelEditavel>,
+        ramificacao?: IRamificacao,
     ) {
         super(indice);
+        if (!ramificacao) {
+            ramificacao = new Ramificacao();
+        }
+        this.ramificacao = ramificacao;
         const validacao = this.validar();
         if (!validacao.valido) {
             throw new ErroInconsistenciasNaValidacaoDaOpcao(
@@ -99,11 +109,6 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
                 'Não foi informada lista de textos da opção',
             );
         }
-        if (textos.getLength() === 0) {
-            throw new ErroNaEdicaoDaOpcao(
-                'Informada lista de textos da opção vazia',
-            );
-        }
         this.listaTextos = textos;
     }
 
@@ -120,7 +125,13 @@ export class OpcaoEditavel extends ItemEditavel implements IOpcaoEditavel {
         this.listaVariaveis = variaveis;
     }
 
-    // TODO: editar a ramificação
+    getRamificacao(): IRamificacao {
+        return this.ramificacao;
+    }
+
+    setRamificacao(ramificacao: IRamificacao): void {
+        this.ramificacao = ramificacao;
+    }
 
     getIdCategorias() {
         return this.listaTextos

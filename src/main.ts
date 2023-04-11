@@ -41,6 +41,7 @@ import { EspecificacaoRepositoryLocalStorageExemploStub } from '@/dominio/especi
 import { QuestaoSelecaoEditavelFactory } from './dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavelFactory';
 import { QuestaoEditavelFactory } from './dominio/editor/questoes/QuestaoEditavelFactory';
 import { SelecaoEditavelFactory } from './dominio/editor/questoes/questao-selecao/selecao/SelecaoEditavelFactory';
+import { RamificacaoFactory } from './dominio/editor/questoes/questao-opcao/opcao/RamificacaoFactory';
 
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
@@ -61,9 +62,11 @@ const textoEditavelFactory = new TextoEditavelFactory(textoModeloFactory);
 const variavelEditavelFactory = new VariavelEditavelFactory(
     escapadorDeVariavelFactory,
 );
+const ramificacaoFactory = new RamificacaoFactory();
 const opcaoEditavelFactory = new OpcaoEditavelFactory(
     textoEditavelFactory,
     variavelEditavelFactory,
+    ramificacaoFactory,
 );
 const selecaoEditavelFactory = new SelecaoEditavelFactory(
     textoEditavelFactory,

@@ -9,6 +9,7 @@ import {
     QuestaoOpcaoEditavel,
     ErroQuestaoInvalida,
     ErroNaEdicaoDaQuestao,
+    IQuestaoOpcaoEditavel,
 } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { Titulo } from '@/dominio/comum/Titulo';
 import { Subtitulo } from '@/dominio/comum/Subtitulo';
@@ -17,6 +18,8 @@ import { IQuestaoOpcaoEditavelFactory } from '@/dominio/editor/questoes/questao-
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { OpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/opcao/OpcaoEditavel';
 import ValorPadraoSelecao from './ValorPadraoSelecao.vue';
+import { computed } from '@vue/reactivity';
+import { IQuestaoSelecaoEditavel } from '@/dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavel';
 
 export default defineComponent({
     name: 'QuestaoOpcaoEdicao',
@@ -37,13 +40,21 @@ export default defineComponent({
                 'Não injetada a dependência questaoOpcaoEditavelFactory',
             );
         }
+        const listaQuestoes =
+            inject<Array<IQuestaoOpcaoEditavel | IQuestaoSelecaoEditavel>>(
+                'listaQuestoes',
+            );
+        if (!listaQuestoes) {
+            throw new Error('Não injetada a dependência listaQuestoes');
+        }
         return {
             factory,
+            listaQuestoes,
         };
     },
     props: {
         questao: { type: QuestaoOpcaoEditavel, required: false },
-        indice: { type: Number, required: false },
+        indice: { type: Number, required: true },
     },
     data() {
         const idFormulario = this.questao?.getId();
@@ -63,6 +74,21 @@ export default defineComponent({
             opcoes,
             erro,
             inconsistencias,
+        };
+    },
+    provide() {
+        return {
+            proximasQuestoes: computed(() => {
+                const retorno = this.listaQuestoes.filter(questao => {
+                    const questaoIndice = questao.getIndice();
+                    const indiceDestaQuestao = this.indice;
+                    const ehMaior = questaoIndice > indiceDestaQuestao;
+                    console.log({ questaoIndice, indiceDestaQuestao, ehMaior });
+                    return ehMaior;
+                });
+                console.log({ retorno });
+                return retorno;
+            }),
         };
     },
     methods: {

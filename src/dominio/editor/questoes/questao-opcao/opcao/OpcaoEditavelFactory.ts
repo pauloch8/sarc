@@ -1,11 +1,13 @@
 import { IOpcaoEditavel, OpcaoEditavel } from './OpcaoEditavel';
-import { IListaEditavel, ListaEditavel } from '../../../comum/ListaEditavel';
-import { ITitulo, Titulo } from '../../../../comum/Titulo';
-import { IdFormulario, IIdFormulario } from '../../../../comum/IdFormulario';
+import { IRamificacao } from './Ramificacao';
+import { IRamificacaoFactory } from './RamificacaoFactory';
 import { ITextoEditavel } from '../../comum/texto/TextoEditavel';
 import { ITextoEditavelFactory } from '../../comum/texto/TextoEditavelFactory';
 import { IVariavelEditavel } from '../../comum/variavel/VariavelEditavel';
 import { IVariavelEditavelFactory } from '../../comum/variavel/VariavelEditavelFactory';
+import { IListaEditavel, ListaEditavel } from '../../../comum/ListaEditavel';
+import { ITitulo, Titulo } from '../../../../comum/Titulo';
+import { IdFormulario, IIdFormulario } from '../../../../comum/IdFormulario';
 import { OpcaoValorDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 export interface IOpcaoEditavelFactory {
@@ -15,6 +17,7 @@ export interface IOpcaoEditavelFactory {
         indice: number,
         textos: IListaEditavel<ITextoEditavel>,
         variaveis?: IListaEditavel<IVariavelEditavel>,
+        ramificacao?: IRamificacao,
     ): IOpcaoEditavel;
     criarDeEspecificacao(item: OpcaoValorDTO, indice: number): IOpcaoEditavel;
 }
@@ -23,6 +26,7 @@ export class OpcaoEditavelFactory implements IOpcaoEditavelFactory {
     constructor(
         private textoEditavelFactory: ITextoEditavelFactory,
         private variavelEditavelFactory: IVariavelEditavelFactory,
+        private ramificacaoFactory: IRamificacaoFactory,
     ) {}
 
     criar(
@@ -31,8 +35,16 @@ export class OpcaoEditavelFactory implements IOpcaoEditavelFactory {
         indice: number,
         textos: IListaEditavel<ITextoEditavel>,
         variaveis?: IListaEditavel<IVariavelEditavel>,
+        ramificacao?: IRamificacao,
     ) {
-        return new OpcaoEditavel(id, titulo, indice, textos, variaveis);
+        return new OpcaoEditavel(
+            id,
+            titulo,
+            indice,
+            textos,
+            variaveis,
+            ramificacao,
+        );
     }
 
     criarDeEspecificacao(
@@ -64,7 +76,19 @@ export class OpcaoEditavelFactory implements IOpcaoEditavelFactory {
             );
         }
 
+        // cria ramificacao
+        const ramificacao = this.ramificacaoFactory.criarDeEspecificacao(
+            especificacao.ramificacao,
+        );
+
         // retorna objeto
-        return this.criar(id, titulo, indice, listaTextos, listaVariaveis);
+        return this.criar(
+            id,
+            titulo,
+            indice,
+            listaTextos,
+            listaVariaveis,
+            ramificacao,
+        );
     }
 }

@@ -17,6 +17,8 @@ import { TituloDummy } from '../../comum/TituloDubles';
 import { TextoModeloDummy } from '../../comum/TextoModeloDubles';
 import { IVariavelEditavel } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel';
 import { OpcaoValorDTO } from '@/dominio/especificacao/EspecificacaoDTO';
+import { IRamificacao } from '@/dominio/editor/questoes/questao-opcao/opcao/Ramificacao';
+import { RamificacaoDummy } from './RamificacaoDubles';
 
 export class OpcaoEditavelErroStub implements IOpcaoEditavel {
     erros = {
@@ -30,6 +32,7 @@ export class OpcaoEditavelErroStub implements IOpcaoEditavel {
     private textos = new ListaEditavel<TextoEditavel>([
         new TextoEditavel(new IdFormularioDummy(), new TextoModeloDummy(), 0),
     ]);
+    private ramificacao = new RamificacaoDummy();
     getId(): IdFormulario {
         return this.id;
     }
@@ -77,6 +80,12 @@ export class OpcaoEditavelErroStub implements IOpcaoEditavel {
             'Method OpcaoEditavelErroStub.getCategorias not implemented.',
         );
     }
+    getRamificacao(): IRamificacao {
+        return this.ramificacao;
+    }
+    setRamificacao(ramificacao: IRamificacao): void {
+        return;
+    }
     gerarEspecificacao(): OpcaoValorDTO {
         throw new Error(
             'Method OpcaoEditavelErroStub.gerarEspecificacao not implemented.',
@@ -85,14 +94,12 @@ export class OpcaoEditavelErroStub implements IOpcaoEditavel {
 }
 
 export class OpcaoEditavelDummy implements IOpcaoEditavel {
-    gerarEspecificacao(): OpcaoValorDTO {
-        throw new Error('Method not implemented.');
-    }
     private id = new IdFormulario('id');
     private titulo = new Titulo('titulo');
     private textos = new ListaEditavel<TextoEditavel>([
         new TextoEditavel(new IdFormularioDummy(), new TextoModeloDummy(), 0),
     ]);
+    private ramificacao = new RamificacaoDummy();
     getId(): IdFormulario {
         return this.id;
     }
@@ -140,12 +147,18 @@ export class OpcaoEditavelDummy implements IOpcaoEditavel {
             'Method OpcaoEditavelDummy.getCategorias not implemented.',
         );
     }
-}
-
-export class OpcaoEditavelGetCategoriaStub implements IOpcaoEditavel {
+    getRamificacao(): IRamificacao {
+        return this.ramificacao;
+    }
+    setRamificacao(ramificacao: IRamificacao): void {
+        return;
+    }
     gerarEspecificacao(): OpcaoValorDTO {
         throw new Error('Method not implemented.');
     }
+}
+
+export class OpcaoEditavelGetCategoriaStub implements IOpcaoEditavel {
     getIdCategorias(): ITitulo[] {
         return [new TituloDummy()];
     }
@@ -219,6 +232,15 @@ export class OpcaoEditavelGetCategoriaStub implements IOpcaoEditavel {
         throw new Error(
             'Method OpcaoEditavelGetCategoriaStub.toString not implemented.',
         );
+    }
+    getRamificacao(): IRamificacao {
+        throw new Error('Method not implemented.');
+    }
+    setRamificacao(ramificacao: IRamificacao): void {
+        throw new Error('Method not implemented.');
+    }
+    gerarEspecificacao(): OpcaoValorDTO {
+        throw new Error('Method not implemented.');
     }
 }
 

@@ -1,4 +1,4 @@
-import QuestaoEdicaoVue from '@/apresentacao/telas/editor/questoes/questao-opcao/QuestaoOpcaoEdicao.vue';
+import QuestaoOpcaoEdicao from '@/apresentacao/telas/editor/questoes/questao-opcao/QuestaoOpcaoEdicao.vue';
 import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
 import { IdFormulario } from '@/dominio/comum/IdFormulario';
 import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
@@ -22,21 +22,23 @@ describe('QuestaoEdicao', () => {
             test('exibe a lista de inconsistências se for lançado erro de Inconsistência na validação', async () => {
                 const questaoOpcaoEditavelFactory =
                     new QuestaoEditavelFactoryErroQuestaoInvalidaStub();
-                const sut = mount(QuestaoEdicaoVue, {
+                const sut = mount(QuestaoOpcaoEdicao, {
                     global: {
                         provide: {
                             questaoOpcaoEditavelFactory,
+                            listaQuestoes: [],
                         },
                     },
                     components: {
-                        IdFormularioInput: {},
+                        IdFormularioFactory: {},
                         TituloInput: {},
                         SubtituloInput: {},
                         ListaOpcoes: {},
                         BotoesSalvarCancelar,
+                        ValorPadraoSelecao: {},
                     },
                     props: {
-                        indice: undefined,
+                        indice: 0,
                     },
                     data() {
                         const idFormulario = undefined;
@@ -66,21 +68,23 @@ describe('QuestaoEdicao', () => {
             test('exibe mensagem de erro desconhecido se ocorrer outro tipo de erro na criação', async () => {
                 const questaoOpcaoEditavelFactory =
                     new QuestaoEditavelFactoryErroDesconhecidoStub();
-                const sut = mount(QuestaoEdicaoVue, {
+                const sut = mount(QuestaoOpcaoEdicao, {
                     global: {
                         provide: {
                             questaoOpcaoEditavelFactory,
+                            listaQuestoes: [],
                         },
                     },
                     components: {
-                        IdFormularioInput: {},
+                        IdFormularioFactory: {},
                         TituloInput: {},
                         SubtituloInput: {},
                         ListaOpcoes: {},
                         BotoesSalvarCancelar,
+                        ValorPadraoSelecao: {},
                     },
                     props: {
-                        indice: undefined,
+                        indice: 0,
                     },
                     data() {
                         const idFormulario = undefined;
@@ -104,10 +108,11 @@ describe('QuestaoEdicao', () => {
             test('emite um evento "criou" com um objeto', async () => {
                 const questaoOpcaoEditavelFactory =
                     new QuestaoEditavelFactorySucessoStub();
-                const sut = mount(QuestaoEdicaoVue, {
+                const sut = mount(QuestaoOpcaoEdicao, {
                     global: {
                         provide: {
                             questaoOpcaoEditavelFactory,
+                            listaQuestoes: [],
                         },
                     },
                     components: {
@@ -150,23 +155,22 @@ describe('QuestaoEdicao', () => {
         test('exibe lista de erros se ocorrer um erro', async () => {
             const questaoOpcaoEditavelFactory =
                 new QuestaoEditavelFactoryDummy();
+            const listaQuestoes = [new QuestaoEditavelDummy()];
             const questaoStub = new QuestaoEditavelErroStub();
             const questao = questaoStub as unknown as QuestaoOpcaoEditavel;
-            const sut = mount(QuestaoEdicaoVue, {
+            const sut = mount(QuestaoOpcaoEdicao, {
                 global: {
                     provide: {
                         questaoOpcaoEditavelFactory,
+                        listaQuestoes,
                     },
                 },
                 components: {
-                    IdFormularioInput: {},
-                    TituloInput: {},
-                    SubtituloInput: {},
-                    ListaOpcoes: {},
                     BotoesSalvarCancelar,
                 },
                 props: {
                     questao,
+                    indice: 0,
                 },
                 data() {
                     const idFormulario = undefined;
@@ -197,23 +201,22 @@ describe('QuestaoEdicao', () => {
         test('emite um evento "atualizou" com um objeto', async () => {
             const questaoOpcaoEditavelFactory =
                 new QuestaoEditavelFactoryDummy();
+            const listaQuestoes = [new QuestaoEditavelDummy()];
             const questao =
                 new QuestaoEditavelDummy() as unknown as QuestaoOpcaoEditavel;
-            const sut = mount(QuestaoEdicaoVue, {
+            const sut = mount(QuestaoOpcaoEdicao, {
                 global: {
                     provide: {
                         questaoOpcaoEditavelFactory,
+                        listaQuestoes,
                     },
                 },
                 components: {
-                    IdFormularioInput: {},
-                    TituloInput: {},
-                    SubtituloInput: {},
-                    ListaOpcoes: {},
                     BotoesSalvarCancelar,
                 },
                 props: {
                     questao,
+                    indice: 0,
                 },
                 data() {
                     const idFormulario = new IdFormulario('id-editado');

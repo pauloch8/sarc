@@ -2,7 +2,6 @@
 import { ListaEditavel } from '@/dominio/editor/comum/ListaEditavel';
 import { QuestaoOpcaoEditavel } from '@/dominio/editor/questoes/questao-opcao/QuestaoOpcaoEditavel';
 import { defineComponent } from 'vue';
-import AdicionarQuestao from './AdicionarQuestao.vue';
 import ItemDeQuestaoOpcao from './questao-opcao/ItemDeQuestaoOpcao.vue';
 import ItemDeQuestaoSelecao from './questao-selecao/ItemDeQuestaoSelecao.vue';
 import { QuestaoSelecaoEditavel } from '@/dominio/editor/questoes/questao-selecao/QuestaoSelecaoEditavel';
@@ -83,6 +82,7 @@ export default defineComponent({
                 :questao="(questao as QuestaoOpcaoEditavel)"
                 :ehPrimeiro="indice === 0"
                 :ehUltimo="indice === itensOrdenados.length - 1"
+                :indice="indice"
                 @editar="editar"
                 @excluir="excluir"
                 @descer="descer"

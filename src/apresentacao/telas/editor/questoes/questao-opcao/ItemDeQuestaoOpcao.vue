@@ -12,6 +12,7 @@ export default defineComponent({
     },
     props: {
         questao: { type: QuestaoOpcaoEditavel, required: true },
+        indice: { type: Number, required: true },
         ehPrimeiro: { type: Boolean, required: true },
         ehUltimo: { type: Boolean, required: true },
     },
@@ -56,6 +57,7 @@ export default defineComponent({
         <QuestaoEdicao
             v-if="questao.getEmEdicao()"
             :questao="(questao as QuestaoOpcaoEditavel)"
+            :indice="indice"
         ></QuestaoEdicao>
     </div>
 </template>

@@ -40,6 +40,6 @@ export interface TextoDTO {
     texto: string;
 }
 
-interface RamificacaoDTO {
+export interface RamificacaoDTO {
     irPara: 'avançar' | 'fim do formulário' | string;
 }

@@ -70,6 +70,22 @@ export default defineComponent({
     },
     provide() {
         return {
+            listaQuestoes: computed(() => {
+                const questoesOrdenadas = this.listaQuestoes
+                    .getItens()
+                    .sort((a, b) => {
+                        const indiceA = a.getIndice();
+                        const indiceB = b.getIndice();
+                        if (indiceA < indiceB) {
+                            return -1;
+                        }
+                        if (indiceA > indiceB) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                return questoesOrdenadas;
+            }),
             escapadoresQuestoes: computed(() => {
                 const escapadores = this.listaQuestoes
                     .getItens()
