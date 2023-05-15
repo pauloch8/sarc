@@ -12,7 +12,9 @@ const config: Config.InitialOptions = {
     coverageDirectory: 'coverage',
     preset: '@vue/cli-plugin-unit-jest/presets/typescript-and-babel',
     transform: {
-        '.+\\.ts$': 'ts-jest',
+        '.+\\.ts$':
+            // 'ts-jest'
+            '@swc/jest',
     },
     testMatch: ['**/*.{spec,test}.ts'],
     moduleNameMapper: {

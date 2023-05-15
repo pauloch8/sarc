@@ -1,5 +1,8 @@
 {
     "compilerOptions": {
+        "removeComments": true,
+        "declaration": true,
+        "incremental": true,
         "outDir": "docs",
         "target": "ES2015",
         "module": "esnext",
@@ -7,7 +10,7 @@
         "jsx": "preserve",
         "moduleResolution": "node",
         "skipLibCheck": true,
-        "esModuleInterop": true,
+        // "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
         "useDefineForClassFields": true,
