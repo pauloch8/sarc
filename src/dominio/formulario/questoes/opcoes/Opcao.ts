@@ -30,7 +30,7 @@ export class Opcao implements IOpcao {
     }
 
     getVariaveis() {
-        return this.variaveis;
+        return this.variaveis?.length ? this.variaveis : undefined;
     }
 
     getResposta() {
