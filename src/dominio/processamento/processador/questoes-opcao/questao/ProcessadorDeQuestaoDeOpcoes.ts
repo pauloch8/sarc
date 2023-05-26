@@ -35,7 +35,6 @@ export class ProcessadorDeQuestaoDeOpcoes implements IProcessadorDeQuestao {
         const texto = textosDaOpcao.find(t =>
             escapador.compararCategoria(t.categoria),
         );
-        debugger;
         let textoProcessado = template;
         if (texto) {
             textoProcessado = template.replaceAll(
