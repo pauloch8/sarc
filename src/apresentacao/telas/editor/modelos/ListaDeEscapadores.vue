@@ -14,7 +14,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <article class="escapadoresDisponiveis">
+    <article v-if="escapadoresQuestoes.length" class="escapadoresDisponiveis">
         Escapadores de questões disponíveis:
         <ul>
             <li
@@ -24,6 +24,9 @@ export default defineComponent({
                 {{ escapador.toString() }}
             </li>
         </ul>
+    </article>
+    <article v-else class="escapadoresDisponiveis">
+        Nenhum escapador disponível
     </article>
 </template>
 
