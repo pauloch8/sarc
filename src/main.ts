@@ -18,7 +18,6 @@ import { ProcessadorDeOpcaoFactory } from './dominio/processamento/processador/q
 import { ProcessadorDeQuestaoDeOpcoesFactory } from './dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoFactory';
 import { ProcessadorDeRespostaDeFormularioFactory } from './dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormularioFactory';
 import { TextoFactory } from './dominio/processamento/processador/texto/TextoFactory';
-import { especificacao } from '@/dominio/especificacao/assets/especificacao';
 import { FormularioFactory } from './dominio/formulario/FormularioFactory';
 import { ProcessadorDeSelecaoFactory } from './dominio/processamento/processador/questoes-opcao/selecao/ProcessadorDeSelecaoFactory';
 import { FormularioEditorFactory } from './dominio/editor/FormularioEditorFactory';
@@ -45,7 +44,7 @@ import { RamificacaoFactory } from './dominio/editor/questoes/questao-opcao/opca
 /* Font Awesome */
 library.add(faArrowUp, faArrowDown, faTrash, faEdit);
 
-const processadorFormulario = criarProcessadorDeFormulario(especificacao);
+const processadorFormularioFactory = criarProcessadorDeFormularioFactory();
 const formularioFactory = new FormularioFactory();
 const tituloFactory = new TituloFactory();
 const subtituloFactory = new SubtituloFactory();
@@ -100,7 +99,7 @@ createApp(App)
     .use(router)
     .use(CKEditor)
     .component('FontAwesomeIcon', FontAwesomeIcon)
-    .provide('processadorFormulario', processadorFormulario)
+    .provide('processadorFormularioFactory', processadorFormularioFactory)
     .provide('formularioFactory', formularioFactory)
     .provide('formularioEditorFactory', formularioEditorFactory)
     .provide('questaoEditavelFactory', questaoEditavelFactory)
@@ -120,7 +119,7 @@ createApp(App)
     .provide('especificacaoRepository', especificacaoRepository)
     .mount('#app');
 
-function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {
+function criarProcessadorDeFormularioFactory() {
     const textoFactory = new TextoFactory();
     const processadorDeOpcaoFactory = new ProcessadorDeOpcaoFactory(
         textoFactory,
@@ -139,7 +138,5 @@ function criarProcessadorDeFormulario(especificacao: EspecificacaoDTO) {
             processadorDeQuestaoDeOpcoesFactory,
             escapadorDeQuestaoFactory,
         );
-    const processadorFormulario =
-        processadorFormularioFactory.criarDeEspecificacao(especificacao);
-    return processadorFormulario;
+    return processadorFormularioFactory;
 }

@@ -8,6 +8,7 @@ import FormularioComponent from './formulario/FormularioComponent.vue';
 import RelatorioComponent from './relatorio/RelatorioComponent.vue';
 import { IFormularioFactory } from '@/dominio/formulario/FormularioFactory';
 import { IEspecificacaoRepository } from '@/dominio/especificacao/EspecificacaoRepository';
+import { ProcessadorDeRespostaDeFormularioFactory } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormularioFactory';
 
 export default defineComponent({
     name: 'TelaResposta',
@@ -29,12 +30,15 @@ export default defineComponent({
             throw new Error('Não injetada a dependência formularioFactory');
         }
 
-        // injeta dependência processadorFormulário
-        const processadorFormulario = inject<ProcessadorDeRespostaDeFormulario>(
-            'processadorFormulario',
-        );
-        if (!processadorFormulario) {
-            throw new Error('Não injetada a dependência processadorFormulario');
+        // injeta dependência processadorFormularioFactory
+        const processadorFormularioFactory =
+            inject<ProcessadorDeRespostaDeFormularioFactory>(
+                'processadorFormularioFactory',
+            );
+        if (!processadorFormularioFactory) {
+            throw new Error(
+                'Não injetada a dependência processadorFormularioFactory',
+            );
         }
 
         // TODO: carregar do id passado por query string
@@ -42,6 +46,9 @@ export default defineComponent({
             especificacaoRepository.carregar('gerador_de_acordao');
         const formulario =
             formularioFactory.criarDaEspecificacao(especificacao);
+
+        const processadorFormulario =
+            processadorFormularioFactory.criarDeEspecificacao(especificacao);
 
         // retorna dependências injetadas
         return {
