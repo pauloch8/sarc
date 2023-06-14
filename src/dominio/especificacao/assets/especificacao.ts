@@ -8,17 +8,34 @@ export const especificacao: EspecificacaoDTO = {
             id: 'inicio',
             tipo: 'opcao',
             titulo: 'Início',
-            valorPadrao: 'elaborar_voto',
+            valorPadrao: 'elaborar_votos',
             opcoes: [
                 {
-                    id: 'elaborar_voto',
-                    titulo: 'Elaborar Voto',
+                    id: 'elaborar_votos',
+                    titulo: 'Elaborar Votos',
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: 'tipo_do_processo',
+                        irPara: 'procurador',
                     },
                 },
+                {
+                    id: 'votos_rapidos',
+                    titulo: 'Votos Rápidos',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'votos_rapidos',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'votos_rapidos',
+            tipo: 'opcao',
+            titulo: 'Votos Rápidos',
+            valorPadrao: 'ro_-_nao_conhecer_-_acao_judicial_com_mesmo_objeto',
+            opcoes: [
                 {
                     id: 'ro_-_nao_conhecer_-_acao_judicial_com_mesmo_objeto',
                     titulo: 'RO - Não conhecer - Ação Judicial com mesmo objeto',
@@ -31,28 +48,16 @@ export const especificacao: EspecificacaoDTO = {
                     ],
                     listaTextos: [
                         {
-                            categoria: 'introducao',
-                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão proferida pelo Instituto Nacional do Seguro Social – INSS - em requerimento de prestação previdenciária.</p>',
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão proferida pelo Instituto Nacional do Seguro Social – INSS - em requerimento de prestação previdenciária.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa pleiteando o pagamento da prestação.</p><p>Ingressou com ação judicial ${n_acao_judicial} com mesmo objeto deste recurso administrativo. Após análise, é inequívoca a similaridade da <i>causa petendi</i> entre o processo administrativo e judicial.</p>',
                         },
                         {
-                            categoria: 'elementos',
-                            texto: '<p>Ingressou com ação judicial ${n_acao_judicial} com mesmo objeto deste recurso administrativo. Após análise, é inequívoca a similaridade da <i>causa petendi</i> entre o processo administrativo e judicial.</p>',
-                        },
-                        {
-                            categoria: 'sintese_recurso',
-                            texto: '<p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa pleiteando o pagamento da prestação.</p>',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: '<p>Normatiza a Lei 8.213/91:</p><p>“<i>Art. 126. Compete ao Conselho de Recursos da Previdência Social julgar:&nbsp;</i></p><p><i>I - recursos das decisões do INSS nos processos de interesse dos beneficiários;&nbsp;</i></p><p><i>II - contestações e recursos relativos à atribuição, pelo Ministério da Economia, do Fator Acidentário de Prevenção aos estabelecimentos das empresas;</i></p><p><i>III - recursos das decisões do INSS relacionados à comprovação de atividade rural de segurado especial de que tratam os arts. 38-A e 38-B, ou demais informações relacionadas ao CNIS de que trata o art. 29-A desta Lei.&nbsp;</i></p><p><i>§ 3º A <strong>propositura</strong> de <strong>ação que tenha por objeto idêntico pedido sobre o qual versa o processo administrativo importa renúncia</strong> ao direito de recorrer na esfera administrativa e desistência do recurso interposto.” (destaquei)</i></p><p>No mesmo sentido, dispõe o Decreto 3.048/99:</p><p>“<i>Art. 307. A propositura pelo interessado de ação judicial que tenha por objeto idêntico pedido sobre o qual verse o processo administrativo importará renúncia ao direito de contestar e recorrer na esfera administrativa, com a consequente desistência da contestação ou do recurso interposto.”</i></p><p>Sendo a questão objeto de discussão na esfera judiciária, esta Corte Administrativa perde a sua competência para decidir a matéria. Incorreu o recorrente no disposto pelo Diploma Previdenciário, renunciando tacitamente ao recurso administrativo.</p>',
-                        },
-                        {
-                            categoria: 'conclusao',
-                            texto: '<p>Ante ao Exposto, voto por NÃO CONHECER DO RECURSO.</p>',
+                            categoria: 'voto',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>MÉRITO</strong></p><p>Normatiza a Lei 8.213/91:</p><p>“<i>Art. 126. Compete ao Conselho de Recursos da Previdência Social julgar:&nbsp;</i></p><p><i>I - recursos das decisões do INSS nos processos de interesse dos beneficiários;&nbsp;</i></p><p><i>II - contestações e recursos relativos à atribuição, pelo Ministério da Economia, do Fator Acidentário de Prevenção aos estabelecimentos das empresas;</i></p><p><i>III - recursos das decisões do INSS relacionados à comprovação de atividade rural de segurado especial de que tratam os arts. 38-A e 38-B, ou demais informações relacionadas ao CNIS de que trata o art. 29-A desta Lei.&nbsp;</i></p><p><i>§ 3º A <strong>propositura</strong> de <strong>ação que tenha por objeto idêntico pedido sobre o qual versa o processo administrativo importa renúncia</strong> ao direito de recorrer na esfera administrativa e desistência do recurso interposto.” (destaquei)</i></p><p>No mesmo sentido, dispõe o Decreto 3.048/99:</p><p>“<i>Art. 307. A propositura pelo interessado de ação judicial que tenha por objeto idêntico pedido sobre o qual verse o processo administrativo importará renúncia ao direito de contestar e recorrer na esfera administrativa, com a consequente desistência da contestação ou do recurso interposto.”</i></p><p>Sendo a questão objeto de discussão na esfera judiciária, esta Corte Administrativa perde a sua competência para decidir a matéria. Incorreu o recorrente no disposto pelo Diploma Previdenciário, renunciando tacitamente ao recurso administrativo.</p><p><strong>CONCLUSÃO</strong></p><p>Ante ao exposto, voto por NÃO CONHECER DO RECURSO.</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>RECURSO ORDINÁRIO. POSSUI AÇÃO JUDICIAL COM MESMO OBJETO DESTE RECURSO ADMINISTRATIVO. INCOMPETÊNCIA DESTA CORTE PARA CONHECER O MÉRITO, POR FORÇA DO § 3º DO ART. 126 DA LEI 8.213/91 E ARTIGO 307 DO DECRETO 3.048/99. RECURSO NÃO CONHECIDO.</strong></p>',
+                            texto: '<p><strong>RECURSO ORDINÁRIO. POSSUI AÇÃO JUDICIAL COM MESMO OBJETO DESTE RECURSO ADMINISTRATIVO. RENÚNCIA TÁCITA, POR FORÇA DO § 3º DO ART. 126 DA LEI 8.213/91 E ARTIGO 307 DO DECRETO 3.048/99. RECURSO NÃO CONHECIDO.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -77,11 +82,11 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'relatorio',
-                            texto: '<p>Há registro da ciência da decisão em ${data_da_intimacao}, e a interposição do presente recurso ocorreu em ${data_do_protocolo}.</p>',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão proferida pelo Instituto Nacional do Seguro Social – INSS - em requerimento de prestação previdenciária.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa pleiteando o pagamento da prestação.</p><p>Há registro da ciência da decisão em ${data_da_intimacao}, e a interposição do presente recurso ocorreu em ${data_do_protocolo}.</p>',
                         },
                         {
                             categoria: 'voto',
-                            texto: '<p>O presente recurso é intempestivo em razão da intimação ocorrer em ${data_da_intimacao} e a interposição do recurso em ${data_do_protocolo}, portanto, após o prazo fixado pelo Art. 61 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS). Ainda, inexiste inequívoca liquidez e certeza do direito da parte que justifique a relevação da intempestividade preceituada no §1º do Art. 57 do RICRPS.</p>',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é intempestivo em razão da intimação ocorrer em ${data_da_intimacao} e a interposição do recurso em ${data_do_protocolo}, portanto, após o prazo fixado pelo Art. 61 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).&nbsp;</p><p>Somente é possível propor relevação de intempestividade quando configurado o direito inequívoco da parte recorrente. Isso significa que, o reconhecimento do direito, não depende nem mesmo de baixar os autos em diligência.</p><p>Na busca pela definição sobre liquidez e certeza do direito da parte, encontramos o conceito defendido por HELY LOPES MEIRELES, o qual se enquadra ao nosso preceito administrativo, de que: <i>"É o que se apresenta manifesto na sua existência, delimitado na sua extensão e apto a ser exercitado no momento da impetração. Por outras palavras, o direito invocado, para ser amparável por mandado de segurança, há de vir expresso em norma legal e trazer em si todos os requisitos e condições de sua aplicação ao impetrante: se a sua extensão ainda não estiver delimitada<strong>; se o seu exercício depender de situações e fatos ainda não indeterminados, não rende ensejo à segurança</strong>, embora possa ser defendido por outros meios judiciais"</i>. (obra: Mandado de Segurança – Ação Popular, Ação Civil Pública, Mandado de Injunção, "Habeas Data") – Grifo Nosso.</p><p>Ainda menciona o Supremo Tribunal Federal: <i>“A noção de direito líquido e certo ajusta-se, em seu específico sentido jurídico-processual, ao conceito de situação decorrente de fato incontestável e inequívoco, suscetível de imediata demonstração mediante prova literal pré-constituída. Precedentes” (MS 26.552- AgR-AgR, Rel. Min. Celso de Mello, Plenário, DJe 16.10.2009).</i></p><p>No caso em tela, inexiste inequívoca liquidez e certeza do direito da parte que justifique a relevação da intempestividade preceituada no §1º do Art. 57 do RICRPS.</p><p><strong>CONCLUSÃO</strong></p><p>Ante ao exposto, voto por NÃO CONHECER DO RECURSO.</p>',
                         },
                         {
                             categoria: 'ementa',
@@ -104,24 +109,12 @@ export const especificacao: EspecificacaoDTO = {
                     ],
                     listaTextos: [
                         {
-                            categoria: 'introducao',
-                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão proferida pelo Instituto Nacional do Seguro Social – INSS - em requerimento de prestação previdenciária.</p>',
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão proferida pelo Instituto Nacional do Seguro Social – INSS - em requerimento de prestação previdenciária.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa pleiteando o pagamento da prestação.</p><p>Verificou-se que a prestação foi concedida pelo INSS sob o nº ${nb_concedido}.</p>',
                         },
                         {
-                            categoria: 'sintese',
-                            texto: '<p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa pleiteando o pagamento da prestação.</p>',
-                        },
-                        {
-                            categoria: 'diligencias',
-                            texto: '<p>Verificou-se que a prestação foi concedida pelo INSS sob o nº ${nb_concedido}.</p>',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: '<p>É a ordem na Portaria Ministerial MTP nº 4.061/2022:</p><p>“<i>Art. 66. O INSS e a SPREV(FAP/RPPS), enquanto não ocorrida a decadência, poderão reconhecer o direito do interessado e reformar suas próprias decisões, observado o seguinte procedimento:</i></p><p><i>I - quando o reconhecimento ocorrer antes do encaminhamento do Recurso Ordinário ao CRPS, o INSS e a SPREV (FAP/RPPS) deixarão de enviar o recurso à Unidade Julgadora competente; e</i></p><p><i>II - quando o reconhecimento ocorrer após a chegada do recurso no CRPS, mesmo que em fase de diligência ou após o julgamento, o INSS e a SPREV (FAP/RPPS), deverão encaminhar os autos à respectiva Unidade Julgadora, devidamente instruído com a comprovação da reforma de sua decisão e do reconhecimento do direito do interessado, para julgamento, se este ainda não tiver ocorrido, ou para que seja proferida nova decisão, se for o caso.”</i></p>',
-                        },
-                        {
-                            categoria: 'decisao',
-                            texto: '<p>Tendo o direito sido reconhecido integralmente pela Autarquia Previdenciária, voto por NÃO CONHECER DO RECURSO, a fim de ratificar a decisão da Autarquia Previdenciária.</p>',
+                            categoria: 'voto',
+                            texto: '<p><strong>MÉRITO</strong></p><p>É a ordem na Portaria Ministerial MTP nº 4.061/2022:</p><p>“<i>Art. 66. O INSS e a SPREV(FAP/RPPS), enquanto não ocorrida a decadência, poderão reconhecer o direito do interessado e reformar suas próprias decisões, observado o seguinte procedimento:</i></p><p><i>I - quando o reconhecimento ocorrer antes do encaminhamento do Recurso Ordinário ao CRPS, o INSS e a SPREV (FAP/RPPS) deixarão de enviar o recurso à Unidade Julgadora competente; e</i></p><p><i>II - quando o reconhecimento ocorrer após a chegada do recurso no CRPS, mesmo que em fase de diligência ou após o julgamento, o INSS e a SPREV (FAP/RPPS), deverão encaminhar os autos à respectiva Unidade Julgadora, devidamente instruído com a comprovação da reforma de sua decisão e do reconhecimento do direito do interessado, para julgamento, se este ainda não tiver ocorrido, ou para que seja proferida nova decisão, se for o caso.”</i></p><p><strong>CONCLUSÃO</strong></p><p>Tendo o direito sido reconhecido integralmente pela Autarquia Previdenciária, voto por NÃO CONHECER DO RECURSO, a fim de ratificar a decisão da Autarquia Previdenciária.</p>',
                         },
                         {
                             categoria: 'ementa',
@@ -138,36 +131,16 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'introducao',
-                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão do Auxílio Incapacidade Temporária acima citado que a considerou apto às atividades laborativas.</p>',
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão do Auxílio Incapacidade Temporária acima citado que a considerou apto às atividades laborativas.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.</p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.</p>',
                         },
                         {
-                            categoria: 'sintese',
-                            texto: '<p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.</p>',
-                        },
-                        {
-                            categoria: 'diligencias',
-                            texto: '<p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.</p>',
-                        },
-                        {
-                            categoria: 'introducao_voto',
-                            texto: '<p>Não assiste razão à parte recorrente.</p>',
-                        },
-                        {
-                            categoria: 'admissibilidade',
-                            texto: '<p>O presente recurso é tempestivo em razão de inexistir registro o processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p>',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: '<p>Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 2º do art. 33 da Portaria MTP nº 4.061/2022.</p><p>Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:</p><p>“<i>Art. 71. O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar <strong>incapacitado para o seu trabalho</strong> ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.</i><strong>” </strong>(grifo nosso)</p><p>No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.</p><p>Também, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.</p><p>Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.</p><p>Por ordem do inciso I do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p>',
-                        },
-                        {
-                            categoria: 'conclusao',
-                            texto: '<p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                            categoria: 'voto',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão de inexistir registro o processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p><strong>MÉRITO</strong></p><p>Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 2º do art. 33 da Portaria MTP nº 4.061/2022.</p><p>Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:</p><p>“<i>Art. 71. O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar <strong>incapacitado para o seu trabalho</strong> ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.</i><strong>” </strong>(grifo nosso)</p><p>No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.</p><p>Também, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.</p><p>Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.</p><p>Por ordem do inciso I do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>AUXÍLIO INCAPACIDADE TEMPORÁRIA PREVIDENCIÁRIO. RECURSO ORDINÁRIO. MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL. ARTIGO 71 DO DECRETO 3.048/99. RECURSO CONHECIDO E NÃO PROVIDO.</strong></p>',
+                            texto: '<p><strong>AUXÍLIO POR INCAPACIDADE TEMPORÁRIA PREVIDENCIÁRIO. RECURSO ORDINÁRIO. MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL. ARTIGO 71 DO DECRETO 3.048/99. RECURSO CONHECIDO E NÃO PROVIDO.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -186,32 +159,12 @@ export const especificacao: EspecificacaoDTO = {
                     ],
                     listaTextos: [
                         {
-                            categoria: 'introducao',
-                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente em face da decisão do Auxílio Incapacidade Temporária acima citado que a considerou apto às atividades laborativas.</p>',
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente em face da decisão do Auxílio Incapacidade Temporária acima citado que a considerou apto às atividades laborativas.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.</p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela existência da incapacidade laborativa fixando a nova data da cessação em ${nova_dcb}.</p>',
                         },
                         {
-                            categoria: 'sintese',
-                            texto: '<p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.</p>',
-                        },
-                        {
-                            categoria: 'diligencias',
-                            texto: '<p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela existência da incapacidade laborativa fixando a nova data da cessação em ${nova_dcb}.</p>',
-                        },
-                        {
-                            categoria: 'introducao_voto',
-                            texto: '<p>Assiste razão à parte recorrente.</p>',
-                        },
-                        {
-                            categoria: 'admissibilidade',
-                            texto: '<p>O presente recurso é tempestivo em razão de inexistir registro o processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p>',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: '<p>Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 2º do art. 33 da Portaria MTP nº 4.061/2022.</p><p>Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:</p><p>“<i>Art. 71. O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar <strong>incapacitado para o seu trabalho</strong> ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.</i><strong>” </strong>(grifo nosso)</p><p>No caso dos autos, a pretensão do recorrente encontra alicerce no parecer da perícia médica oficial.</p><p>Há o cumprimento do requisito da incapacidade, devendo a prestação ser prorrogada na data fixada pela PMF.</p><p>Dessa forma, faz jus à percepção da prestação do auxílio incapacidade laborativa previsto no art. 71 do Decreto 3.048/99, sendo procedente o pedido.</p><p>Por ordem do inciso I do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p><p>Por força da Portaria ME/SEPRT/SEPR nº 1 de 14/01/2020, a implantação dos acórdãos referentes a recursos envolvendo benefícios por incapacidade será feita pelo Instituto Nacional do Seguro Social.</p>',
-                        },
-                        {
-                            categoria: 'conclusao',
-                            texto: '<p>Ante o exposto, voto por CONHECER DO RECURSO E DAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                            categoria: 'voto',
+                            texto: '<p>Assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão de inexistir registro o processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p><strong>MÉRITO</strong></p><p>Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 2º do art. 33 da Portaria MTP nº 4.061/2022.</p><p>Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:</p><p>“<i>Art. 71. O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar <strong>incapacitado para o seu trabalho</strong> ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.</i><strong>” </strong>(grifo nosso)</p><p>No caso dos autos, a pretensão do recorrente encontra alicerce no parecer da perícia médica oficial.</p><p>Há o cumprimento do requisito da incapacidade, devendo a prestação ser prorrogada na data fixada pela PMF.</p><p>Dessa forma, faz jus à percepção da prestação do auxílio incapacidade laborativa previsto no art. 71 do Decreto 3.048/99, sendo procedente o pedido.</p><p>Por ordem do inciso I do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p><p>Por força da Portaria ME/SEPRT/SEPR nº 1 de 14/01/2020, a implantação dos acórdãos referentes a recursos envolvendo benefícios por incapacidade será feita pelo Instituto Nacional do Seguro Social.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E DAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
                         },
                         {
                             categoria: 'ementa',
@@ -228,32 +181,12 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'introducao',
-                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face do indeferimento do Benefício de Prestação Continuada da Assistência Social à Pessoa Deficiente.</p>',
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face do indeferimento do Benefício de Prestação Continuada da Assistência Social à Pessoa Deficiente.</p><p>A parte recorrente submeteu-se o requerente à avaliação social e médica, às quais decidiram pela não comprovação da deficiência contida nos §§ 2º e 10 do art. 20 da Lei 8.742/93.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa pleiteando a concessão do benefício.</p><p>A perícia médica efetuou a reanálise da avaliação elaborada pelo INSS e decidiu manter a pontuação apurada pelas avaliações social e médica do INSS.</p>',
                         },
                         {
-                            categoria: 'elementos',
-                            texto: '<p>A parte recorrente submeteu-se o requerente à avaliação social e médica, às quais decidiram pela não comprovação da deficiência contida nos §§ 2º e 10 do art. 20 da Lei 8.742/93.</p>',
-                        },
-                        {
-                            categoria: 'sintese',
-                            texto: '<p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa pleiteando a concessão do benefício.</p>',
-                        },
-                        {
-                            categoria: 'diligencias',
-                            texto: '<p>A perícia médica efetuou a reanálise da avaliação elaborada pelo INSS e decidiu manter a pontuação apurada pelas avaliações social e médica do INSS.</p>',
-                        },
-                        {
-                            categoria: 'introducao_voto',
-                            texto: '<p>Não assiste razão à parte recorrente.</p>',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: '<p>A Constituição Federal instituiu o benefício assistencial ao deficiente e ao idoso nos seguintes termos:&nbsp;</p><p>“<i>Art. 203. A assistência social será prestada a quem dela necessitar, independentemente da contribuição à seguridade social, e tem por objetivos: (...)&nbsp;</i></p><p><i>V - a garantia de um salário mínimo de benefício mensal à pessoa portadora de deficiência e ao idoso que comprovem não possuir meios de prover à própria manutenção ou de tê-la provida por sua família, conforme dispuser a lei.</i>”</p><p>A Lei nº 8.742, de 7 de dezembro de 1993 normatizou a matéria, fazendo constar do <i>caput</i> e parágrafos 1º a 3º do seu art. 20:&nbsp;</p><p>“<i>Art. 20. O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família. (Redação dada pela Lei nº 12.435, de 2011)</i></p><p><i>(...)</i></p><p><i>§ 2º Para efeito de concessão do benefício de prestação continuada, considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas. (Redação dada pela Lei nº 13.146, de 2015)&nbsp;</i></p><p><i>(…)</i></p><p><i>§ 10. Considera-se impedimento de longo prazo, para os fins do § 2o deste artigo, aquele que produza efeitos pelo prazo mínimo de 2 (dois) anos. (Inclído pela Lei nº 12.470, de 2011)”</i></p><p>O benefício assistencial previsto no artigo 203, V, da Constituição Federal atende situações de hipossuficiência envolvendo pessoa idosa e pessoa portadora de deficiência, incapazes de prover ao próprio sustento ou de tê-lo provido pela própria família. Pressupõe o preenchimento dos seguintes requisitos: a) <strong>condição de deficiente</strong> (incapacidade para o trabalho e para a vida independente) ou idoso (neste caso, considerando-se, desde 1º de janeiro de 2004, a idade de 65 anos); e b) <strong>situação de risco social</strong> (estado de miserabilidade, hipossuficiência econômica ou situação de desamparo) do recorrente e de sua família. Entende-se como incapaz de prover a sua manutenção, aquele cuja renda mensal "<i>per capita</i>" é igual ou inferior a ¼ (um quarto) do salário mínimo, como dispõe o § 3º, do art. 20, Lei nº 8.742/93.&nbsp;</p><p>No caso em tela, o INSS deferiu o requisito de situação de risco social, uma vez que a renda per capta do grupo familiar é menor que ¼ do salário mínimo vigente no requerimento do benefício.</p><p>Todavia, a análise social e médica verificou que o grau de deficiência constatado não cumpre o requisito de deficiência insculpido nos §§ 2º e 10 do art. 20 da Lei 8.742/93.</p><p>Ainda, as avaliações social e médica foram reanalisadas pela perícia médica desta Corte Administrativa, que por sua fez manteve a decisão autárquica.</p><p>Deste modo, não restam comprovados os requisitos relativos à deficiência.</p>',
-                        },
-                        {
-                            categoria: 'conclusao',
-                            texto: '<p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                            categoria: 'voto',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>MÉRITO</strong></p><p>A Constituição Federal instituiu o benefício assistencial ao deficiente e ao idoso nos seguintes termos:&nbsp;</p><p>“<i>Art. 203. A assistência social será prestada a quem dela necessitar, independentemente da contribuição à seguridade social, e tem por objetivos: (...)&nbsp;</i></p><p><i>V - a garantia de um salário mínimo de benefício mensal à pessoa portadora de deficiência e ao idoso que comprovem não possuir meios de prover à própria manutenção ou de tê-la provida por sua família, conforme dispuser a lei.</i>”</p><p>A Lei nº 8.742, de 7 de dezembro de 1993 normatizou a matéria, fazendo constar do <i>caput</i> e parágrafos 1º a 3º do seu art. 20:&nbsp;</p><p>“<i>Art. 20. O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família. (Redação dada pela Lei nº 12.435, de 2011)</i></p><p><i>(...)</i></p><p><i>§ 2º Para efeito de concessão do benefício de prestação continuada, considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas. (Redação dada pela Lei nº 13.146, de 2015)&nbsp;</i></p><p><i>(…)</i></p><p><i>§ 10. Considera-se impedimento de longo prazo, para os fins do § 2o deste artigo, aquele que produza efeitos pelo prazo mínimo de 2 (dois) anos. (Inclído pela Lei nº 12.470, de 2011)”</i></p><p>O benefício assistencial previsto no artigo 203, V, da Constituição Federal atende situações de hipossuficiência envolvendo pessoa idosa e pessoa portadora de deficiência, incapazes de prover ao próprio sustento ou de tê-lo provido pela própria família. Pressupõe o preenchimento dos seguintes requisitos: a) <strong>condição de deficiente</strong> (incapacidade para o trabalho e para a vida independente) ou idoso (neste caso, considerando-se, desde 1º de janeiro de 2004, a idade de 65 anos); e b) <strong>situação de risco social</strong> (estado de miserabilidade, hipossuficiência econômica ou situação de desamparo) do recorrente e de sua família. Entende-se como incapaz de prover a sua manutenção, aquele cuja renda mensal "<i>per capita</i>" é igual ou inferior a ¼ (um quarto) do salário mínimo, como dispõe o § 3º, do art. 20, Lei nº 8.742/93.&nbsp;</p><p>No caso em tela, o INSS deferiu o requisito de situação de risco social, uma vez que a renda per capta do grupo familiar é menor que ¼ do salário mínimo vigente no requerimento do benefício.</p><p>Todavia, a análise social e médica verificou que o grau de deficiência constatado não cumpre o requisito de deficiência insculpido nos §§ 2º e 10 do art. 20 da Lei 8.742/93.</p><p>Ainda, as avaliações social e médica foram reanalisadas pela perícia médica desta Corte Administrativa, que por sua fez manteve a decisão autárquica.</p><p>Deste modo, não restam comprovados os requisitos relativos à deficiência.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
                         },
                         {
                             categoria: 'ementa',
@@ -262,6 +195,153 @@ export const especificacao: EspecificacaoDTO = {
                     ],
                     ramificacao: {
                         irPara: 'fim do formulário',
+                    },
+                },
+                {
+                    id: 'resp_-_nao_conhecer_-_interessado_-_preclusao_pelo_ro_ser_intempestivo',
+                    titulo: 'Resp - Não conhecer - Interessado - preclusão pelo RO ser intempestivo',
+                    listaVariaveis: [
+                        {
+                            id: 'junta_de_recursos_contestada',
+                            titulo: 'Junta de Recursos contestada:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de recurso especial interposto pela parte interessada em face da decisão da ${junta_de_recursos_contestada}ª Junta de Recursos que não conheceu o recurso ordinário em razão da intempestividade.</p><p>Por seus próprios fundamentos, a Corte Administrativa recorrida não constatou liquidez e certeza do direito da parte e, com isso, não relevou a intempestividade</p><p>Recorre, agora, a parte interessada requerendo a reforma da decisão da Egrégia Junta de Recursos</p>',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>Recurso especial interposto de forma tempestiva. Apesar disso, não há possibilidade de ser conhecido.</p><p>A instância anterior não conheceu do Recurso Ordinário em razão da intempestividade, sem constatação de direito líquido e certo.</p><p>Não se vislumbra a possibilidade de afastar a intempestividade recursal uma vez que não se constata direito inequívoco.</p><p>Deste modo, há possibilidade de a Câmara apreciar o pedido, pois o não conhecimento do recurso ordinário impede a admissão do recurso especial em face da preclusão processual, consoante o inciso VI, do artigo 57 da Portaria MTP nº 4.061/2022.&nbsp;</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por NÃO CONHECER DO RECURSO ESPECIAL, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>RECURSO ESPECIAL DA PARTE INTERESSADA. PRECLUSÃO EM RAZÃO DA INTEMPESTIVIDADE DO RECURSO ORDINÁRIO, NOS TERMOS DO INCISO IV DO ART. 57 DA PORTARIA MPT Nº 4.061/2022.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'resp_-_nao_conhecer_-_inss_-_intempestividade',
+                    titulo: 'Resp - Não conhecer - INSS - Intempestividade',
+                    listaVariaveis: [
+                        {
+                            id: 'junta_de_recursos_contestada',
+                            titulo: 'Junta de Recursos Contestada:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_do_recebimento_do_processo',
+                            titulo: 'Data do Recebimento do Processo:',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'data_do_protocolo_do_recurso_especial',
+                            titulo: 'Data do protocolo do Recurso Especial:',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de recurso especial interposto pelo Instituto Nacional do Seguro Social (INSS) em face da decisão da ${junta_de_recursos_contestada}ª Junta de Recursos.</p><p>A Autarquia Previdenciária recebeu o processo em ${data_do_recebimento_do_processo}, e a interposição do presente Recurso Especial ocorreu em ${data_do_protocolo_do_recurso_especial}.</p>',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: '<p>Não assiste razão ao INSS.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é intempestivo em razão da Autarquia Previdenciária receber o processo em ${data_do_recebimento_do_processo}, data do início do seu prazo, e somente interpor o presente Recurso Especial em ${data_do_protocolo_do_recurso_especial}, portanto, após o prazo fixado pelo Art. 61 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).&nbsp;</p><p>Somente é possível propor relevação de intempestividade quando configurado o direito inequívoco da parte recorrente. Isso significa que, o reconhecimento do direito, não depende nem mesmo de baixar os autos em diligência.</p><p>Na busca pela definição sobre liquidez e certeza do direito da parte, encontramos o conceito defendido por HELY LOPES MEIRELES, o qual se enquadra ao nosso preceito administrativo, de que: <i>"É o que se apresenta manifesto na sua existência, delimitado na sua extensão e apto a ser exercitado no momento da impetração. Por outras palavras, o direito invocado, para ser amparável por mandado de segurança, há de vir expresso em norma legal e trazer em si todos os requisitos e condições de sua aplicação ao impetrante: se a sua extensão ainda não estiver delimitada<strong>; se o seu exercício depender de situações e fatos ainda não indeterminados, não rende ensejo à segurança</strong>, embora possa ser defendido por outros meios judiciais"</i>. (obra: Mandado de Segurança – Ação Popular, Ação Civil Pública, Mandado de Injunção, "Habeas Data") – Grifo Nosso.</p><p>Ainda menciona o Supremo Tribunal Federal: <i>“A noção de direito líquido e certo ajusta-se, em seu específico sentido jurídico-processual, ao conceito de situação decorrente de fato incontestável e inequívoco, suscetível de imediata demonstração mediante prova literal pré-constituída. Precedentes” (MS 26.552- AgR-AgR, Rel. Min. Celso de Mello, Plenário, DJe 16.10.2009).</i></p><p>No caso em tela, inexiste inequívoca liquidez e certeza do direito da parte que justifique a relevação da intempestividade preceituada no §1º do Art. 57 do RICRPS.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por NÃO CONHECER DO RECURSO DO INSS, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>RECURSO ESPECIAL DO INSS. INTEMPESTIVIDADE, CONFORME ART. 61 DO RICRPS. RECURSO NÃO CONHECIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'resp_-_nao_conhecer_-_interessado_-_intempestividade',
+                    titulo: 'Resp - Não conhecer - Interessado - Intempestividade',
+                    listaVariaveis: [
+                        {
+                            id: 'junta_de_recursos_contestada',
+                            titulo: 'Junta de Recursos contestada:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_da_intimacao',
+                            titulo: 'Data da intimação:',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'data_do_protocolo',
+                            titulo: 'Data do protocolo:',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de recurso especial interposto pelo Instituto Nacional do Seguro Social (INSS) em face da decisão da ${junta_de_recursos_contestada}ª Junta de Recursos.</p><p>Há registro da ciência da decisão em ${data_da_intimacao}, e a interposição do presente recurso ocorreu em ${data_do_protocolo}.</p>',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: '<p>Não assiste razão ao INSS.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é intempestivo em razão da parte recorrente ter ciência da decisão da ${junta_de_recursos_contestada}ª em ${data_da_intimacao}, data do início do seu prazo, e somente interpor o presente Recurso Especial em ${data_do_protocolo}, portanto, após o prazo fixado pelo Art. 61 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).&nbsp;</p><p>Somente é possível propor relevação de intempestividade quando configurado o direito inequívoco da parte recorrente. Isso significa que, o reconhecimento do direito, não depende nem mesmo de baixar os autos em diligência.</p><p>Na busca pela definição sobre liquidez e certeza do direito da parte, encontramos o conceito defendido por HELY LOPES MEIRELES, o qual se enquadra ao nosso preceito administrativo, de que: <i>"É o que se apresenta manifesto na sua existência, delimitado na sua extensão e apto a ser exercitado no momento da impetração. Por outras palavras, o direito invocado, para ser amparável por mandado de segurança, há de vir expresso em norma legal e trazer em si todos os requisitos e condições de sua aplicação ao impetrante: se a sua extensão ainda não estiver delimitada<strong>; se o seu exercício depender de situações e fatos ainda não indeterminados, não rende ensejo à segurança</strong>, embora possa ser defendido por outros meios judiciais"</i>. (obra: Mandado de Segurança – Ação Popular, Ação Civil Pública, Mandado de Injunção, "Habeas Data") – Grifo Nosso.</p><p>Ainda menciona o Supremo Tribunal Federal: <i>“A noção de direito líquido e certo ajusta-se, em seu específico sentido jurídico-processual, ao conceito de situação decorrente de fato incontestável e inequívoco, suscetível de imediata demonstração mediante prova literal pré-constituída. Precedentes” (MS 26.552- AgR-AgR, Rel. Min. Celso de Mello, Plenário, DJe 16.10.2009).</i></p><p>No caso em tela, inexiste inequívoca liquidez e certeza do direito da parte que justifique a relevação da intempestividade preceituada no §1º do Art. 57 do RICRPS.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por NÃO CONHECER DO RECURSO DA PARTE INTERESSADA, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>RECURSO ESPECIAL DO INSS. INTEMPESTIVIDADE, CONFORME ART. 61 DO RICRPS. RECURSO NÃO CONHECIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'procurador',
+            tipo: 'opcao',
+            titulo: 'Procurador',
+            subtitulo: 'Existe procurador constituído?',
+            valorPadrao: 'nao',
+            opcoes: [
+                {
+                    id: 'nao',
+                    titulo: 'Não',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'tipo_do_processo',
+                    },
+                },
+                {
+                    id: 'sim',
+                    titulo: 'Sim',
+                    listaVariaveis: [
+                        {
+                            id: 'nome',
+                            titulo: 'Nome do procurador',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'oab',
+                            titulo: 'OAB',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'relatorio',
+                            texto: 'A parte recorrente está devidamente representada por ${nome} (OAB nº ${oab}).',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'tipo_do_processo',
                     },
                 },
             ],
@@ -278,8 +358,8 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'nome',
-                            texto: '<p>Recurso Ordinário</p>',
+                            categoria: 'introducao',
+                            texto: '<p>Trata-se de Recurso Ordinário</p>',
                         },
                         {
                             categoria: 'complemento1',
@@ -299,25 +379,51 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>RECURSO ORDINÁRIO.</p>',
+                            texto: '<p><strong>RECURSO ORDINÁRIO.</strong></p>',
+                        },
+                        {
+                            categoria: 'sintese',
+                            texto: '<p>Irresignada com a decisão da Autarquia Previdenciária, recorre a parte interessada a esta Corte Administrativa pleiteando a reforma da decisão.</p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'especie',
+                        irPara: 'especie_ro',
                     },
                 },
                 {
                     id: 'recurso_especial_do_interessado',
                     titulo: 'Recurso Especial do interessado',
-                    listaVariaveis: [],
+                    listaVariaveis: [
+                        {
+                            id: 'junta_de_recursos_contestada',
+                            titulo: 'Junta de Recursos contestada:',
+                            tipo: 'texto',
+                        },
+                    ],
                     listaTextos: [
                         {
-                            categoria: 'padrao',
-                            texto: '<p>Recurso Especial interposto pela parte interessada</p>',
+                            categoria: 'introducao',
+                            texto: '<p>Trata-se de Recurso Especial</p>',
+                        },
+                        {
+                            categoria: 'complemento1',
+                            texto: '<p>&nbsp;interposto&nbsp;</p>',
+                        },
+                        {
+                            categoria: 'recorrente',
+                            texto: '<p>pela parte interessada</p>',
+                        },
+                        {
+                            categoria: 'complemento2',
+                            texto: '<p>&nbsp;em face da decisão</p>',
+                        },
+                        {
+                            categoria: 'recorrido',
+                            texto: '<p>da §{junta_de_recursos_contestada}ª Junta de Recursos</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>RECURSO ESPECIAL DA PARTE INTERESSADA.</p>',
+                            texto: '<p><strong>RECURSO ESPECIAL DA PARTE INTERESSADA.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -327,19 +433,41 @@ export const especificacao: EspecificacaoDTO = {
                 {
                     id: 'recurso_especial_do_inss',
                     titulo: 'Recurso Especial do INSS',
-                    listaVariaveis: [],
+                    listaVariaveis: [
+                        {
+                            id: 'junta_de_recursos_contestada',
+                            titulo: 'Junta de Recursos contestada:',
+                            tipo: 'texto',
+                        },
+                    ],
                     listaTextos: [
                         {
-                            categoria: 'padrao',
-                            texto: '<p>Recurso Especial interposto pelo Instituto Nacional do Seguro Social (INSS)</p>',
+                            categoria: 'introducao',
+                            texto: '<p>Trata-se de Recurso Especial</p>',
+                        },
+                        {
+                            categoria: 'complemento1',
+                            texto: '<p>&nbsp;interposto</p>',
+                        },
+                        {
+                            categoria: 'recorrente',
+                            texto: '<p>pelo Instituto Nacional do Seguro Social (INSS)</p>',
+                        },
+                        {
+                            categoria: 'complemento2',
+                            texto: '<p>&nbsp;em face da decisão</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>RECURSO ESPECIAL DO INSS.</p>',
+                            texto: '<p><strong>RECURSO ESPECIAL DO INSS.</strong></p>',
+                        },
+                        {
+                            categoria: 'recorrido',
+                            texto: '<p>da §{junta_de_recursos_contestada}ª Junta de Recursos</p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'especie',
+                        irPara: 'especie-re',
                     },
                 },
                 {
@@ -348,12 +476,28 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'padrao',
-                            texto: '<p>Embargos de Declaração solicitado pela parte interessada</p>',
+                            categoria: 'introducao',
+                            texto: '<p>Trata-se de Embargos de Declaração</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>EMBARGOS DE DECLARAÇÃO DA PARTE INTERESSADA.</p>',
+                            texto: '<p><strong>EMBARGOS DE DECLARAÇÃO DA PARTE INTERESSADA.</strong></p>',
+                        },
+                        {
+                            categoria: 'complemento1',
+                            texto: '<p>&nbsp;solicitado</p>',
+                        },
+                        {
+                            categoria: 'recorrente',
+                            texto: '<p>&nbsp;pela parte interessada</p>',
+                        },
+                        {
+                            categoria: 'complemento2',
+                            texto: '<p>&nbsp;em face da decisão</p>',
+                        },
+                        {
+                            categoria: 'recorrido',
+                            texto: '<p>desta Corte Administrativa</p>',
                         },
                     ],
                     ramificacao: {
@@ -366,12 +510,28 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'padrao',
-                            texto: '<p>Embargos de Declaração solicitado pelo Instituto Nacional do Seguro Social (INSS)</p>',
+                            categoria: 'introducao',
+                            texto: '<p>Trata-se de Embargos de Declaração</p>',
+                        },
+                        {
+                            categoria: 'complemento1',
+                            texto: '<p>&nbsp;solicitado</p>',
+                        },
+                        {
+                            categoria: 'recorrente',
+                            texto: '<p>&nbsp;pelo Instituto Nacional do Seguro Social (INSS)</p>',
+                        },
+                        {
+                            categoria: 'complemento2',
+                            texto: '<p>&nbsp;em face da decisão</p>',
+                        },
+                        {
+                            categoria: 'recorrido',
+                            texto: '<p>&nbsp;desta Corte Administrativa</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>EMBARGOS DE DECLARAÇÃO DO INSS.</p>',
+                            texto: '<p><strong>EMBARGOS DE DECLARAÇÃO DO INSS.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -384,12 +544,28 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'padrao',
-                            texto: '<p>Revisão de Acórdão solicitado pela parte interessada</p>',
+                            categoria: 'introducao',
+                            texto: '<p>Trata-se de Revisão de Acórdão</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>REVISÃO DE ACÓRDÃO PELA PARTE INTERESSADA.</p>',
+                            texto: '<p><strong>REVISÃO DE ACÓRDÃO PELA PARTE INTERESSADA.</strong></p>',
+                        },
+                        {
+                            categoria: 'complemento1',
+                            texto: '<p>&nbsp;solicitado</p>',
+                        },
+                        {
+                            categoria: 'recorrente',
+                            texto: '<p>&nbsp;pela parte interessada</p>',
+                        },
+                        {
+                            categoria: 'complemento2',
+                            texto: '<p>&nbsp;em face da decisão</p>',
+                        },
+                        {
+                            categoria: 'recorrido',
+                            texto: '<p>&nbsp;desta Corte Administrativa</p>',
                         },
                     ],
                     ramificacao: {
@@ -402,12 +578,28 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'padrao',
-                            texto: '<p>Revisão de Acórdão solicitado pelo Instituto Nacional do Seguro Social (INSS)</p>',
+                            categoria: 'introducao',
+                            texto: '<p>Trata-se de Revisão de Acórdão</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>REVISÃO DE ACÓRDÃO PELO INSS.</p>',
+                            texto: '<p><strong>REVISÃO DE ACÓRDÃO PELO INSS.</strong></p>',
+                        },
+                        {
+                            categoria: 'complemento1',
+                            texto: '<p>&nbsp;solicitado</p>',
+                        },
+                        {
+                            categoria: 'recorrente',
+                            texto: '<p>&nbsp;pelo Instituto Nacional do Seguro Social (INSS)</p>',
+                        },
+                        {
+                            categoria: 'complemento2',
+                            texto: '<p>em face da decisão</p>',
+                        },
+                        {
+                            categoria: 'recorrido',
+                            texto: '<p>desta Corte Administrativa</p>',
                         },
                     ],
                     ramificacao: {
@@ -420,12 +612,28 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'padrao',
-                            texto: '<p>Pedido de Uniformização de Jurisprudência solicitado pela parte interessada</p>',
+                            categoria: 'introducao',
+                            texto: '<p>Pedido de Uniformização de Jurisprudência</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>PEDIDO DE UNIFORMIZAÇÃO DE JURISPRUDÊNCIA PELA PARTE INTERESSADA.</p>',
+                            texto: '<p><strong>PEDIDO DE UNIFORMIZAÇÃO DE JURISPRUDÊNCIA PELA PARTE INTERESSADA.</strong></p>',
+                        },
+                        {
+                            categoria: 'complemento1',
+                            texto: '<p>&nbsp;solicitado</p>',
+                        },
+                        {
+                            categoria: 'recorrente',
+                            texto: '<p>&nbsp;pela parte interessada</p>',
+                        },
+                        {
+                            categoria: 'complemento2',
+                            texto: '<p>&nbsp;em face</p>',
+                        },
+                        {
+                            categoria: 'recorrido',
+                            texto: '<p>&nbsp;da decisão desta Corte Administrativa</p>',
                         },
                     ],
                     ramificacao: {
@@ -438,12 +646,28 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'padrao',
-                            texto: '<p>Pedido de Uniformização de Jurisprudência solicitado pelo Instituto Nacional do Seguro Social (INSS)</p>',
+                            categoria: 'introducao',
+                            texto: '<p>Trata-se de Pedido de Uniformização de Jurisprudência</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>PEDIDO DE UNIFORMIZAÇÃO DE JURISPRUDÊNCIA PELO INSS.</p>',
+                            texto: '<p><strong>PEDIDO DE UNIFORMIZAÇÃO DE JURISPRUDÊNCIA PELO INSS.</strong></p>',
+                        },
+                        {
+                            categoria: 'complemento1',
+                            texto: '<p>&nbsp;solicitado</p>',
+                        },
+                        {
+                            categoria: 'recorrente',
+                            texto: '<p>&nbsp;pelo Instituto Nacional do Seguro Social (INSS)</p>',
+                        },
+                        {
+                            categoria: 'complemento2',
+                            texto: '<p>&nbsp;em face</p>',
+                        },
+                        {
+                            categoria: 'recorrido',
+                            texto: '<p>&nbsp;da decisão desta Corte Adminisrativa</p>',
                         },
                     ],
                     ramificacao: {
@@ -453,15 +677,37 @@ export const especificacao: EspecificacaoDTO = {
                 {
                     id: 'reclamacao_ao_conselho_pleno_pelo_interessado',
                     titulo: 'Reclamação ao Conselho Pleno pelo Interessado',
-                    listaVariaveis: [],
+                    listaVariaveis: [
+                        {
+                            id: 'caj_contestada',
+                            titulo: 'CAJ contestada',
+                            tipo: 'texto',
+                        },
+                    ],
                     listaTextos: [
                         {
-                            categoria: 'padrao',
+                            categoria: 'introducao',
                             texto: '<p>Reclamação ao Conselho Pleno solicitado pela parte interessada</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>RECLAMAÇÃO AO CONSELHO PLENO PELA PARTE INTERESSADA.</p>',
+                            texto: '<p><strong>RECLAMAÇÃO AO CONSELHO PLENO PELA PARTE INTERESSADA.</strong></p>',
+                        },
+                        {
+                            categoria: 'complemento1',
+                            texto: '<p>&nbsp;solicitada&nbsp;</p>',
+                        },
+                        {
+                            categoria: 'recorrente',
+                            texto: '<p>&nbsp;pela parte interessada</p>',
+                        },
+                        {
+                            categoria: 'complemento2',
+                            texto: '<p>&nbsp;em face</p>',
+                        },
+                        {
+                            categoria: 'recorrido',
+                            texto: '<p>&nbsp;da decisão da ${caj_contestada}</p>',
                         },
                     ],
                     ramificacao: {
@@ -471,15 +717,37 @@ export const especificacao: EspecificacaoDTO = {
                 {
                     id: 'reclamacao_ao_conselho_pleno_pelo_inss',
                     titulo: 'Reclamação ao Conselho Pleno pelo INSS',
-                    listaVariaveis: [],
+                    listaVariaveis: [
+                        {
+                            id: 'caj_contestada',
+                            titulo: 'CAJ contestada',
+                            tipo: 'texto',
+                        },
+                    ],
                     listaTextos: [
                         {
-                            categoria: 'padrao',
-                            texto: '<p>Reclamação ao Conselho Pleno solicitado pelo Instituto Nacional do Seguro Social (INSS)</p>',
+                            categoria: 'introducao',
+                            texto: '<p>Trata-se de Reclamação ao Conselho Pleno</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>RECLAMAÇÃO AO CONSELHO PLENO PELO INSS.</p>',
+                            texto: '<p><strong>RECLAMAÇÃO AO CONSELHO PLENO PELO INSS.</strong></p>',
+                        },
+                        {
+                            categoria: 'complemento1',
+                            texto: '<p>&nbsp;solicitado</p>',
+                        },
+                        {
+                            categoria: 'recorrente',
+                            texto: '<p>&nbsp;pelo Instituto Nacional do Seguro Social (INSS)</p>',
+                        },
+                        {
+                            categoria: 'complemento2',
+                            texto: '<p>em face</p>',
+                        },
+                        {
+                            categoria: 'recorrido',
+                            texto: '<p>&nbsp;da decisão da ${caj_contestada}</p>',
                         },
                     ],
                     ramificacao: {
@@ -489,9 +757,9 @@ export const especificacao: EspecificacaoDTO = {
             ],
         },
         {
-            id: 'especie',
+            id: 'especie_ro',
             tipo: 'opcao',
-            titulo: 'Espécie',
+            titulo: 'Espécie (RO)',
             opcoes: [
                 {
                     id: '21_-_pensao_por_morte',
@@ -504,11 +772,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>PENSÃO POR MORTE PREVIDENCIÁRIA.</p>',
+                            texto: '<p><strong>PENSÃO POR MORTE PREVIDENCIÁRIA.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'decisao_do_inss_21',
                     },
                 },
                 {
@@ -521,12 +789,12 @@ export const especificacao: EspecificacaoDTO = {
                             texto: '<p>Auxílio-Reclusão</p>',
                         },
                         {
-                            categoria: 'voto',
+                            categoria: 'merito',
                             texto: 'O Auxílio-Reclusão é benefício devido aos dependentes do segurado de baixa renda que tenha sido submetido a reclusão em regime fechado.',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>AUXÍLIO-RECLUSÃO.</p>',
+                            texto: '<p><strong>AUXÍLIO-RECLUSÃO.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -544,11 +812,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>AUXÍLIO POR INCAPACIDADE TEMPORÁRIA PREVIDENCIÁRIO.</p>',
+                            texto: '<p><strong>AUXÍLIO POR INCAPACIDADE TEMPORÁRIA PREVIDENCIÁRIO.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'decisao_recorrida',
+                        irPara: 'decisao_do_inss_31',
                     },
                 },
                 {
@@ -562,7 +830,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>APOSENTADORIA POR INCAPACIDADE PERMANENTE PREVIDENCIÁRIA.</p>',
+                            texto: '<p><strong>APOSENTADORIA POR INCAPACIDADE PERMANENTE PREVIDENCIÁRIA.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -580,7 +848,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>AUXÍLIO-ACIDENTE PREVIDENCIÁRIO.</p>',
+                            texto: '<p><strong>AUXÍLIO-ACIDENTE PREVIDENCIÁRIO.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -598,7 +866,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>APOSENTADORIA POR IDADE.</p>',
+                            texto: '<p><strong>APOSENTADORIA POR IDADE.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -616,7 +884,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO.</p>',
+                            texto: '<p><strong>APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -634,7 +902,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>APOSENTADORIA ESPECIAL.</p>',
+                            texto: '<p><strong>APOSENTADORIA ESPECIAL.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -652,7 +920,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO DO PROFESSOR.</p>',
+                            texto: '<p><strong>APOSENTADORIA POR TEMPO DE CONTRIBUIÇÃO DO PROFESSOR.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -670,7 +938,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>SALÁRIO-MATERNIDADE.</p>',
+                            texto: '<p><strong>SALÁRIO-MATERNIDADE.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -688,7 +956,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL À PESSOA COM DEFICIÊNCIA.</p>',
+                            texto: '<p><strong>BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL À PESSOA COM DEFICIÊNCIA.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -706,7 +974,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL À PESSOA IDOSA COM MAIS DE 65 ANOS DE IDADE.</p>',
+                            texto: '<p><strong>BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL À PESSOA IDOSA COM MAIS DE 65 ANOS DE IDADE.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -724,7 +992,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>AUXILIO POR INCAPACIDADE TEMPORÁRIA ACIDENTÁRIO.</p>',
+                            texto: '<p><strong>AUXILIO POR INCAPACIDADE TEMPORÁRIA ACIDENTÁRIO.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -742,7 +1010,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>APOSENTADORIA POR INCAPACIDADE PERMANENTE ACIDENTÁRIA.</p>',
+                            texto: '<p><strong>APOSENTADORIA POR INCAPACIDADE PERMANENTE ACIDENTÁRIA.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -760,7 +1028,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>PENSAO POR MORTE ACIDENTÁRIA.</p>',
+                            texto: '<p><strong>PENSAO POR MORTE ACIDENTÁRIA.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -770,15 +1038,160 @@ export const especificacao: EspecificacaoDTO = {
             ],
         },
         {
-            id: 'decisao_recorrida',
+            id: 'decisao_do_inss_21',
             tipo: 'opcao',
-            titulo: 'Decisão Recorrida',
+            titulo: 'Decisão do INSS (21)',
+            valorPadrao: 'falta_de_qualidade_de_dependente_-_companheiro',
+            opcoes: [
+                {
+                    id: 'falta_de_qualidade_de_dependente_-_companheiro',
+                    titulo: 'Falta de qualidade de dependente - companheiro',
+                    listaVariaveis: [
+                        {
+                            id: 'nome_do_dependente',
+                            titulo: 'Nome do dependente:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'motivo',
+                            texto: '<p>&nbsp;falta de qualidade de companheiro (a)</p>',
+                        },
+                        {
+                            categoria: 'motivo_resp',
+                            texto: '<p>&nbsp;</p><p>O INSS havia negado a concessão da prestação por entender que não havia ficado comprovado companheirismo entre a parte interessada e o <i>de cujus.</i></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'falta_de_qualidade_de_dependente_-_menor_sob_guarda',
+                    titulo: 'Falta de qualidade de dependente - menor sob guarda',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'motivo',
+                            texto: '<p>&nbsp;do menor sob guarda não ser equiparado a filho</p>',
+                        },
+                        {
+                            categoria: 'motivo_resp',
+                            texto: '<p>&nbsp;</p><p>O INSS havia negado a concessão da prestação por entender que o menor sob guarda não é depedente do <i>de cujus</i></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'falta_de_qualidade_de_dependente_-_pais_nao_comprovam_dependencia_economica',
+                    titulo: 'Falta de qualidade de dependente - pais não comprovam dependência econômica',
+                    listaTextos: [
+                        {
+                            categoria: 'motivo',
+                            texto: '<p>&nbsp;por falta de qualidade de dependente dos pais por inexistir comprovação de dependência econômica da parte recorrente com o <i>de cujus</i></p>',
+                        },
+                        {
+                            categoria: 'motivo_resp',
+                            texto: '<p>&nbsp;</p><p>O INSS havia negado a concessão da prestação por entender que não havia ficado comprovado a dependência econômica entre a parte interessada e o <i>de cujus</i></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'falta_de_qualidade_de_dependente_-_filho_nao_comprova_a_invalidezdeficiencia',
+                    titulo: 'Falta de qualidade de dependente - filho não comprova a invalidez/deficiência',
+                    listaTextos: [
+                        {
+                            categoria: 'motivo',
+                            texto: '<p>&nbsp;em razão do filho (a) não comprovar a condição de inválido ou deficiente.</p>',
+                        },
+                        {
+                            categoria: 'motivo_resp',
+                            texto: '<p>&nbsp;</p><p>O INSS havia negado a concessão da prestação por entender que não havia ficado comprovada a invalidez ou a deficência da parte interessada.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'perda_da_qualidade_de_segurado',
+                    titulo: 'Perda da Qualidade de Segurado',
+                    listaVariaveis: [
+                        {
+                            id: 'ultima_filiacao',
+                            titulo: 'Última filiação',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'competencia_da_ultima_contribuicao',
+                            titulo: 'Competência da última contribuição:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'motivo',
+                            texto: '<p>&nbsp;indeferido por perda da qualidade de segurado</p>',
+                        },
+                        {
+                            categoria: 'motivo_resp',
+                            texto: '<p>&nbsp;</p><p>O INSS havia negado a concessão da prestação por entender que o <i>de cujus </i>havia perdido a qualidade de segurado.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'falta_de_qualidade_de_segurado_especial',
+                    titulo: 'Falta de qualidade de segurado especial',
+                    listaTextos: [
+                        {
+                            categoria: 'motivo',
+                            texto: '<p>&nbsp;indeferido ante a não comprovação da condição de segurado especial na data do óbito.</p>',
+                        },
+                        {
+                            categoria: 'motivo_resp',
+                            texto: '<p>&nbsp;</p><p>O INSS havia negado a concessão da prestação por entender que o <i>de cujus</i> não havia comprovado a condição de segurado especial na data do óbito.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'decisao_do_inss_31',
+            tipo: 'opcao',
+            titulo: 'Decisão do INSS (31)',
+            valorPadrao: 'parecer_contrario_da_pericia_medica',
             opcoes: [
                 {
                     id: 'parecer_contrario_da_pericia_medica',
                     titulo: 'Parecer contrário da perícia médica',
                     listaVariaveis: [],
-                    listaTextos: [],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu o Auxílio Por Incapacidade Temporária pela não comprovação da incapacidade laborativa pela Perícia Médica Federal (PMF).</p>',
+                        },
+                        {
+                            categoria: 'motivo_resp',
+                            texto: '<p>&nbsp;</p><p>O INSS havia negado a concessão da prestação por entender pela inexistência da incapacidade laborativa, nos termos do parecer da Perícia Médica Federal (PMF).</p>',
+                        },
+                    ],
                     ramificacao: {
                         irPara: 'parecer_pericia_medica_federal',
                     },
@@ -786,83 +1199,164 @@ export const especificacao: EspecificacaoDTO = {
                 {
                     id: 'cessacao_por_limite_medico',
                     titulo: 'Cessação por limite médico',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'parecer_pericia_medica_federal',
-                    },
-                },
-                {
-                    id: 'acaoJudicial',
-                    titulo: 'Ação judicial com mesmo objeto',
                     listaVariaveis: [
                         {
-                            id: 'numAcaoJudicial',
-                            titulo: 'Nº da ação judicial',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'elementos',
-                            texto: 'Ingressou com ação judicial ${numAcaoJudicial} com mesmo objeto deste recurso administrativo.\nApós análise, é inequívoca a similaridade da causa petendi entre o processo administrativo e judicial.',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: 'Normatiza a Lei 8.213/91:\n<p>“Art. 126.  Compete ao Conselho de Recursos da Previdência Social julgar: \nI - recursos das decisões do INSS nos processos de interesse dos beneficiários; \nII - contestações e recursos relativos à atribuição, pelo Ministério da Economia, do Fator Acidentário de Prevenção aos estabelecimentos das empresas;<br />\nIII - recursos das decisões do INSS relacionados à comprovação de atividade rural de segurado especial de que tratam os arts. 38-A e 38-B, ou demais informações relacionadas ao CNIS de que trata o art. 29-A desta Lei.   (Incluído pela Lei nº 13.846, de 2019)</p>\n\n<p>§ 3º A propositura de ação que tenha por objeto idêntico pedido sobre o qual versa o processo administrativo importa renúncia ao direito de recorrer na esfera administrativa e desistência do recurso interposto.” (destaquei)</p>\n\n<p>No mesmo sentido, dispõe o Decreto 3.048/99:<br />\n“Art. 307.  A propositura pelo interessado de ação judicial que tenha por objeto idêntico pedido sobre o qual verse o processo administrativo importará renúncia ao direito de contestar e recorrer na esfera administrativa, com a consequente desistência da contestação ou do recurso interposto.  (Redação dada pelo Decreto nº 10.410, de 2020).</p>',
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: 'Sendo a questão objeto de discussão na esfera judiciária, esta Corte Administrativa perde a sua competência para decidir a matéria. Incorreu o recorrente no disposto pelo Diploma Previdenciário, renunciando tacitamente ao recurso administrativo.',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: 'POSSUI AÇÃO JUDICIAL COM MESMO OBJETO DESTE RECURSO ADMINISTRATIVO. INCOMPETÊNCIA DESTA CORTE PARA CONHECER O MÉRITO, POR FORÇA DO § 3º DO ART. 126 DA LEI 8.213/91 E ARTIGO 307 DO DECRETO 3.048/99.',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'procurador',
-                    },
-                },
-                {
-                    id: 'incapacidade_-_pmf_favoravel',
-                    titulo: 'Incapacidade - PMF favorável',
-                    listaVariaveis: [
-                        {
-                            id: 'dataNovaCessacao',
-                            titulo: 'Nova cessação',
+                            id: 'dcb',
+                            titulo: 'DCB',
                             tipo: 'data',
                         },
                     ],
                     listaTextos: [
                         {
-                            categoria: 'recurso',
-                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual cessou o Auxílio Por Incapacidade Temporária pela não comprovação da continuidade da incapacidade laborativa, nos termos da Perícia Médica Federal (PMF</p>',
                         },
                         {
-                            categoria: 'diligencias',
-                            texto: 'Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela existência da incapacidade laborativa fixando a nova data da cessação ${dataNovaCessacao}.',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: 'Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 7º do art. 53 da Portaria MDSA 116/2017.<br/>\nSobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:<br/>\n“Art. 71.  O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.” (grifo nosso)',
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: 'No caso dos autos, a pretensão do recorrente encontra alicerce no parecer da perícia médica oficial.\nHá o cumprimento do requisito da incapacidade, devendo a prestação ser prorrogada na data fixada pela PMF.<br/>\nDessa forma, faz jus à percepção da prestação do auxílio incapacidade laborativa previsto no art. 71 do Decreto 3.048/99, sendo procedente o pedido.<br/>\nPor ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: 'MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. EXISTÊNCIA DE INCAPACIDADE LABORATIVA. PRESTAÇÃO PRORROGADA CONFORME PARECER MÉDICO FEDERAL. ARTIGO 71 DO DECRETO 3.048/99.',
+                            categoria: 'motivo_resp',
+                            texto: '<p>&nbsp;</p><p>O INSS havia cessado o benefício por incapacidade em §{dcb} ante a não comprovação da continuidade da incapacidade laborativa, nos termos do parecer da Perícia Médica Federal (PMF).</p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'procurador',
+                        irPara: 'parecer_pericia_medica_federal',
                     },
                 },
                 {
-                    id: 'incapacidade_-_pmf_contrario',
-                    titulo: 'Incapacidade - PMF contrário',
+                    id: 'nao_comparecimento_a_pericia_medica',
+                    titulo: 'Não comparecimento à perícia médica',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu o Auxílio Por Incapacidade Temporária por não comparecimento à perícia médica.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'parecer_pericia_medica_federal',
+                    },
+                },
+                {
+                    id: 'incapacidade_inferior_a_15_dias',
+                    titulo: 'Incapacidade inferior a 15 dias',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'motivo',
+                            texto: '<p>&nbsp; o qual indeferiu o Auxílio Por Incapacidade Temporária em razão da incapacidade laborativa ser inferior a 15 dias.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'parecer_pericia_medica_federal',
+                    },
+                },
+                {
+                    id: 'perda_da_qualidade_de_segurado',
+                    titulo: 'Perda da qualidade de segurado',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp;o qual indeferiu o Auxílio Por Incapacidade Temporária por perda da qualidade de segurado.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'falta_de_carencia',
+                    titulo: 'Falta de carência',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp;o qual indeferiu o Auxílio Por Incapacidade Temporária por falta de carência.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'falta_de_carencia_-_apos_perda_da_qualidade_nao_completou_nova_carencia',
+                    titulo: 'Falta de carência - após perda da qualidade não completou nova carência',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu o Auxílio Por Incapacidade Temporária por falta de carência, pois, após a perda da qualidade de segurado, não houve recolhimentos mensais suficientes para reaver as contribuições anteriores a perda.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'falta_de_carencia_-_segurado_especial',
+                    titulo: 'Falta de carência - segurado especial',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu o Auxílio Por Incapacidade Temporária em razão da parte recorrente não ter comprovado o efetivo exercício da atividade rurícola pelos meses correspondentes à carência da prestação.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'dib_maior_que_a_dcb',
+                    titulo: 'DIB maior que a DCB',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu o Auxílio Por Incapacidade Temporária em razão do requerimento do benefício ser posterior ao trigésimo dia do início da incapacidade e, ainda, posterior ao término desta.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'dii_anterior_ao_ingressoreingresso_ao_rgps',
+                    titulo: 'DII anterior ao ingresso/reingresso ao RGPS',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu o Auxílio Por Incapacidade Temporária em razão do início da incapacidade ser posterior ao ingresso ou reingresso ao Regime Geral de Previdência Social (RGPS).</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'did_anterior_ao_reingresso_ao_rgps',
+                    titulo: 'DID anterior ao reingresso ao RGPS',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu o Auxílio Por Incapacidade Temporária em razão da doença ser anterior a nova filiação ao Regime Geral de Previdência Social (RGPS).</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'parecer_pericia_medica_federal',
+            tipo: 'opcao',
+            titulo: 'Parecer Perícia Médica Federal',
+            valorPadrao: 'manter_a_decisao_negativa_anterior',
+            opcoes: [
+                {
+                    id: 'manter_a_decisao_negativa_anterior',
+                    titulo: 'Manter a decisão negativa anterior',
                     listaVariaveis: [],
                     listaTextos: [
                         {
@@ -883,48 +1377,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: 'MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.',
+                            texto: '<p><strong>MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'procurador',
-                    },
-                },
-            ],
-        },
-        {
-            id: 'parecer_pericia_medica_federal',
-            tipo: 'opcao',
-            titulo: 'Parecer Perícia Médica Federal',
-            valorPadrao: 'manter_a_decisao_negativa_anterior',
-            opcoes: [
-                {
-                    id: 'manter_a_decisao_negativa_anterior',
-                    titulo: 'Manter a decisão negativa anterior',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'procurador',
-                    },
-                },
-                {
-                    id: 'prorrogar_a_incapacidade',
-                    titulo: 'Prorrogar a incapacidade',
-                    listaVariaveis: [
-                        {
-                            id: 'nova_dcb',
-                            titulo: 'Nova DCB',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'diligencias',
-                            texto: '<p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela existência da incapacidade laborativa fixando a nova data da cessação ${nova_dcb}.</p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'procurador',
+                        irPara: 'admissibilidade',
                     },
                 },
                 {
@@ -952,125 +1409,18 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'diligencias',
                             texto: '<p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela existência da doença desde ${did} (DID) e da incapacidade laborativa com início em ${dii} (DII) até ${dcb} (DCB).</p>',
                         },
-                    ],
-                    ramificacao: {
-                        irPara: 'procurador',
-                    },
-                },
-            ],
-        },
-        {
-            id: 'motivo-ro-b87',
-            tipo: 'opcao',
-            titulo: 'Motivo do indeferimento',
-            opcoes: [
-                {
-                    id: 'acaoJudicial',
-                    titulo: 'Ação judicial com mesmo objeto',
-                    listaVariaveis: [
-                        {
-                            id: 'numAcaoJudicial',
-                            titulo: 'Nº da ação judicial',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'elementos',
-                            texto: 'Ingressou com ação judicial ${numAcaoJudicial} com mesmo objeto deste recurso administrativo.\nApós análise, é inequívoca a similaridade da causa petendi entre o processo administrativo e judicial.',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: 'Normatiza a Lei 8.213/91:\n<p>“Art. 126.  Compete ao Conselho de Recursos da Previdência Social julgar: \nI - recursos das decisões do INSS nos processos de interesse dos beneficiários; \nII - contestações e recursos relativos à atribuição, pelo Ministério da Economia, do Fator Acidentário de Prevenção aos estabelecimentos das empresas;<br />\nIII - recursos das decisões do INSS relacionados à comprovação de atividade rural de segurado especial de que tratam os arts. 38-A e 38-B, ou demais informações relacionadas ao CNIS de que trata o art. 29-A desta Lei.   (Incluído pela Lei nº 13.846, de 2019)</p>\n\n<p>§ 3º A propositura de ação que tenha por objeto idêntico pedido sobre o qual versa o processo administrativo importa renúncia ao direito de recorrer na esfera administrativa e desistência do recurso interposto.” (destaquei)</p>\n\n<p>No mesmo sentido, dispõe o Decreto 3.048/99:<br />\n“Art. 307.  A propositura pelo interessado de ação judicial que tenha por objeto idêntico pedido sobre o qual verse o processo administrativo importará renúncia ao direito de contestar e recorrer na esfera administrativa, com a consequente desistência da contestação ou do recurso interposto.  (Redação dada pelo Decreto nº 10.410, de 2020).</p>',
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: 'Sendo a questão objeto de discussão na esfera judiciária, esta Corte Administrativa perde a sua competência para decidir a matéria. Incorreu o recorrente no disposto pelo Diploma Previdenciário, renunciando tacitamente ao recurso administrativo.',
-                        },
                         {
                             categoria: 'ementa',
-                            texto: 'POSSUI AÇÃO JUDICIAL COM MESMO OBJETO DESTE RECURSO ADMINISTRATIVO. INCOMPETÊNCIA DESTA CORTE PARA CONHECER O MÉRITO, POR FORÇA DO § 3º DO ART. 126 DA LEI 8.213/91 E ARTIGO 307 DO DECRETO 3.048/99.',
+                            texto: '<p><strong>MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. EXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'procurador',
+                        irPara: 'admissibilidade',
                     },
                 },
                 {
-                    id: 'naoComprovacaoDaDeficiencia',
-                    titulo: 'Não comprovação da deficiência',
-                    listaTextos: [
-                        {
-                            categoria: 'elementos',
-                            texto: 'A parte recorrente submeteu-se o requerente à avaliação social e médica, às quais decidiram pela não comprovação da deficiência contida nos §§ 2º e 10 do art. 20 da Lei 8.742/93.',
-                        },
-                        {
-                            categoria: 'recurso',
-                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessado a esta Corte Administrativa pleiteando a concessão do benefício.',
-                        },
-                        {
-                            categoria: 'diligencias',
-                            texto: 'A perícia médica federal efetuou a reanálise da avaliação elaborada pelo INSS e decidiu manter a pontuação apurada pelas avaliações social e médica do INSS.',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: '\n<p>A Constituição Federal instituiu o benefício assistencial ao deficiente e ao idoso nos seguintes termos: <br/>\n“Art. 203. A assistência social será prestada a quem dela necessitar, independentemente da contribuição à seguridade social, e tem por objetivos: (...) <br/>\nV - a garantia de um salário mínimo de benefício mensal à pessoa portadora de deficiência e ao idoso que comprovem não possuir meios de prover à própria manutenção ou de tê-la provida por sua família, conforme dispuser a lei.</p>”\n\n<p>A Lei nº 8.742, de 7 de dezembro de 1993 normatizou a matéria, fazendo constar do caput e parágrafos 1º a 3º do seu art. 20:  <br/>\n“Art. 20.  O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família. (Redação dada pela Lei nº 12.435, de 2011)<br/>\n(...)<br/>\n§ 2º  Para efeito de concessão do benefício de prestação continuada, considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas.  (Redação dada pela Lei nº 13.146, de 2015) <br/>\n(...)<br/>\n§ 10.  Considera-se impedimento de longo prazo, para os fins do § 2o deste artigo, aquele que produza efeitos pelo prazo mínimo de 2 (dois) anos.      (Inclído pela Lei nº 12.470, de 2011)”</p>\n\n<p>O benefício assistencial previsto no artigo 203, V, da Constituição Federal atende situações de hipossuficiência envolvendo pessoa idosa e pessoa portadora de deficiência, incapazes de prover ao próprio sustento ou de tê-lo provido pela própria família. Pressupõe o preenchimento dos seguintes requisitos: a) condição de deficiente (incapacidade para o trabalho e para a vida independente) ou idoso (neste caso, considerando-se, desde 1º de janeiro de 2004, a idade de 65 anos); e b) situação de risco social (estado de miserabilidade, hipossuficiência econômica ou situação de desamparo) do recorrente e de sua família. Entende-se como incapaz de prover a sua manutenção, aquele cuja renda mensal "per capita" é inferior a ¼ (um quarto) do salário mínimo, como dispõe o § 3º, do art. 20, Lei nº 8.742/93.</p>',
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: '\nNo caso em tela, o INSS deferiu o requisito de situação de risco social, uma vez que a renda per capta do grupo familiar é menor que ¼ do salário mínimo vigente no requerimento do benefício.<br/>\nTodavia, a análise social e médica verificou que o grau de deficiência constatado não cumpre o requisito de deficiência insculpido nos §§ 2º e 10 do art. 20 da Lei 8.742/93.<br/>\nAinda, as avaliações social e médica foram reanalisadas pela perícia médica desta Corte Administrativa, que por sua fez manteve a decisão autárquica.<br/>\nDeste modo, não restam comprovados os requisitos relativos à deficiência.',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: 'BENEFÍCIO INDEFERIDO POR NÃO COMPROVAR A DEFICIÊNCIA, NÃO PREENCHENDO OS REQUISITOS DOS § §2º E 10 ARTIGO 20 DA LEI 8.742/93.',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'procurador',
-                    },
-                },
-            ],
-        },
-        {
-            id: 'motivo-ro-b91',
-            tipo: 'opcao',
-            titulo: 'Motivo do indeferimento',
-            opcoes: [
-                {
-                    id: 'acaoJudicial',
-                    titulo: 'Ação judicial com mesmo objeto',
-                    listaVariaveis: [
-                        {
-                            id: 'numAcaoJudicial',
-                            titulo: 'Nº da ação judicial',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'elementos',
-                            texto: 'Ingressou com ação judicial ${numAcaoJudicial} com mesmo objeto deste recurso administrativo.\nApós análise, é inequívoca a similaridade da causa petendi entre o processo administrativo e judicial.',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: 'Normatiza a Lei 8.213/91:\n<p>“Art. 126.  Compete ao Conselho de Recursos da Previdência Social julgar: \nI - recursos das decisões do INSS nos processos de interesse dos beneficiários; \nII - contestações e recursos relativos à atribuição, pelo Ministério da Economia, do Fator Acidentário de Prevenção aos estabelecimentos das empresas;<br />\nIII - recursos das decisões do INSS relacionados à comprovação de atividade rural de segurado especial de que tratam os arts. 38-A e 38-B, ou demais informações relacionadas ao CNIS de que trata o art. 29-A desta Lei.   (Incluído pela Lei nº 13.846, de 2019)</p>\n\n<p>§ 3º A propositura de ação que tenha por objeto idêntico pedido sobre o qual versa o processo administrativo importa renúncia ao direito de recorrer na esfera administrativa e desistência do recurso interposto.” (destaquei)</p>\n\n<p>No mesmo sentido, dispõe o Decreto 3.048/99:<br />\n“Art. 307.  A propositura pelo interessado de ação judicial que tenha por objeto idêntico pedido sobre o qual verse o processo administrativo importará renúncia ao direito de contestar e recorrer na esfera administrativa, com a consequente desistência da contestação ou do recurso interposto.  (Redação dada pelo Decreto nº 10.410, de 2020).</p>',
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: 'Sendo a questão objeto de discussão na esfera judiciária, esta Corte Administrativa perde a sua competência para decidir a matéria. Incorreu o recorrente no disposto pelo Diploma Previdenciário, renunciando tacitamente ao recurso administrativo.',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: 'POSSUI AÇÃO JUDICIAL COM MESMO OBJETO DESTE RECURSO ADMINISTRATIVO. INCOMPETÊNCIA DESTA CORTE PARA CONHECER O MÉRITO, POR FORÇA DO § 3º DO ART. 126 DA LEI 8.213/91 E ARTIGO 307 DO DECRETO 3.048/99.',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'procurador',
-                    },
-                },
-                {
-                    id: 'incapacidadePmfFavoravel',
-                    titulo: 'Incapacidade - PMF favorável',
+                    id: 'prorrogar_a_incapacidade',
+                    titulo: 'Prorrogar a incapacidade',
                     listaVariaveis: [
                         {
                             id: 'dataNovaCessacao',
@@ -1097,149 +1447,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: 'MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. EXISTÊNCIA DE INCAPACIDADE LABORATIVA. PRESTAÇÃO PRORROGADA CONFORME PARECER MÉDICO FEDERAL. ARTIGO 71 DO DECRETO 3.048/99.',
+                            texto: '<p><strong>MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. EXISTÊNCIA DE INCAPACIDADE LABORATIVA. PRESTAÇÃO PRORROGADA CONFORME PARECER MÉDICO FEDERAL. ARTIGO 71 DO DECRETO 3.048/99.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'procurador',
-                    },
-                },
-                {
-                    id: 'incapacidadePmfContrario',
-                    titulo: 'Incapacidade - PMF contrário',
-                    listaTextos: [
-                        {
-                            categoria: 'recurso',
-                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando pleiteando o pagamento da prestação previdenciária.',
-                        },
-                        {
-                            categoria: 'diligencias',
-                            texto: 'Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: '\nVoto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 7º do art. 53 da Portaria MDSA 116/2017.<br/>\nSobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:<br/>\n“Art. 71.  O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.” (grifo nosso)',
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: '\nNo caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.<br/>\nTambém, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.<br/>\nDessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.\nPor ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: 'MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'procurador',
-                    },
-                },
-                {
-                    id: 'ntepPmfFavoravel',
-                    titulo: 'NTEP - PMF favorável',
-                    listaTextos: [
-                        {
-                            categoria: 'elementos',
-                            texto: 'A perícia médica federal reconheceu o nexo técnico.',
-                        },
-                        {
-                            categoria: 'recurso',
-                            texto: 'Irresignada com a decisão administrativa da Autarquia, recorre a empresa interessada a esta Corte Administrativa requerendo que a prestação <especie> seja reconhecida como não decorrente de acidente de trabalho.',
-                        },
-                        {
-                            categoria: 'diligencias',
-                            texto: 'Houve reanálise pela perícia médica federal, que por sua vez ratificou a existência do nexo técnico.',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: '\n<p>Regulamenta o Decreto 3.048/99:<br/>\n“Art. 337.  O acidente do trabalho será caracterizado tecnicamente pela Perícia Médica Federal, por meio da identificação do nexo causal entre o trabalho e o agravo.<br/>\n§ 1º O setor de benefícios do Instituto Nacional do Seguro Social reconhecerá o direito do segurado à habilitação do benefício acidentário.<br/>\n§ 2º Será considerado agravamento do acidente aquele sofrido pelo acidentado quanto estiver sob a responsabilidade da reabilitação profissional.<br/>\n§ 3o  Considera-se estabelecido o nexo entre o trabalho e o agravo quando se verificar nexo técnico epidemiológico entre a atividade da empresa e a entidade mórbida motivadora da incapacidade, elencada na Classificação Internacional de Doenças - CID em conformidade com o disposto na Lista C do Anexo II deste Regulamento. (Redação dada pelo Decreto nº 6.957, de 2009)<br/>\n§ 4o  Para os fins deste artigo, considera-se agravo a lesão, doença, transtorno de saúde, distúrbio, disfunção ou síndrome de evolução aguda, subaguda ou crônica, de natureza clínica ou subclínica, inclusive morte, independentemente do tempo de latência. (Incluído pelo Decreto nº 6.042, de 2007).<br/>\n § 5º  Reconhecidos pela Perícia Médica Federal a incapacidade para o trabalho e o nexo causal entre o trabalho e o agravo, na forma prevista no § 3º, serão devidas as prestações acidentárias a que o beneficiário tiver direito.    (Redação dada pelo Decreto nº 10.410, de 2020)<br/>\n§ 6º  A Perícia Médica Federal deixará de aplicar o disposto no § 3º quando demonstrada a inexistência de nexo causal entre o trabalho e o agravo, sem prejuízo do disposto nos § 7º e § 12.   (Redação dada pelo Decreto nº 10.410, de 2020)<br/>\n§ 7o  A empresa poderá requerer ao INSS a não aplicação do nexo técnico epidemiológico ao caso concreto mediante a demonstração de inexistência de correspondente nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)<br/>\n§ 8o  O requerimento de que trata o § 7o poderá ser apresentado no prazo de quinze dias da data para a entrega, na forma do inciso IV do art. 225, da GFIP que registre a movimentação do trabalhador, sob pena de não conhecimento da alegação em instância administrativa. (Incluído pelo Decreto nº 6.042, de 2007).<br/>\n§ 9º  Caracterizada a impossibilidade de atendimento ao disposto no § 8º, motivada pelo não conhecimento tempestivo do diagnóstico do agravo, o requerimento de que trata o § 7º poderá ser apresentado no prazo de quinze dias, contado da data em que a empresa tomar ciência da decisão a que se refere o § 5º.    (Redação dada pelo Decreto nº 10.410, de 2020)<br/>\n§ 10.  Juntamente com o requerimento de que tratam os §§ 8o e 9o, a empresa formulará as alegações que entender necessárias e apresentará as provas que possuir demonstrando a inexistência de nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)<br/>\n§ 11.  A documentação probatória poderá trazer, entre outros meios de prova, evidências  técnicas circunstanciadas e tempestivas à exposição do segurado, podendo ser produzidas no âmbito de programas de gestão de risco, a cargo da empresa, que possuam responsável técnico legalmente habilitado. (Incluído pelo Decreto nº 6.042, de 2007).<br/>\n§ 12.  O INSS informará ao segurado sobre a contestação da empresa para que este, querendo, possa impugná-la, obedecendo, quanto à produção de provas, ao disposto no § 10, sempre que a instrução do pedido evidenciar a possibilidade de reconhecimento de inexistência do nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)<br/>\n§ 13.  Da decisão do requerimento de que trata o § 7o cabe recurso, com efeito suspensivo, por parte da empresa ou, conforme o caso, do segurado ao Conselho de Recursos da Previdência Social, nos termos dos arts. 305 a 310. (Incluído pelo Decreto nº 6.042, de 2007).”</p>\n\n<p>O Diploma Previdenciário regulamenta que a Perícia Médica Federal – PMF -  tem competência para determinar se uma incapacidade decorre ou não do trabalho. Para isso, precisa relacionar o agravo (incapacidade laboral) com a Classificação Internacionais de Doenças dispostas no Anexo II, Lista “C”.<br/>\nTal procedimento foi realizado pela PMF e, por haver o enquadramento legal, foi concedida a espécie acidentária.<br/>\nNão há a necessidade de vistoria técnica em razão do Decreto 3.048/99 ser taxativo quanto as doenças que têm origem no trabalho.</p>',
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: 'Na fase recursal, o órgão da PMF retificou o entendimento anterior, demonstrando que não há nexo entre a incapacidade e o trabalho exercido.\nDeste modo, deve a espécie ser considerada previdenciária, e não acidentária.',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: 'A RELAÇÃO ENTRE A PATOLOGIA INCAPACITANTE E O LABOR É CARACTERIZADO PELA PERÍCIA MÉDICA, CONFORME ARTIGO 337 DO DECRETO 3.048/99. SENDO A PERÍCIA DESFAVORÁVEL QUANTO AO NEXO, NÃO HÁ COMPROVAÇÃO. DEVE A ESPÉCIE SER REVISTA DE ACIDENTÁRIA PARA PREVIDENCIÁRIA.',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'procurador',
-                    },
-                },
-                {
-                    id: 'ntepPmfContrario',
-                    titulo: 'NTEP - PMF contrário',
-                    listaTextos: [
-                        {
-                            categoria: 'elementos',
-                            texto: 'A perícia médica federal reconheceu o nexo técnico.',
-                        },
-                        {
-                            categoria: 'recurso',
-                            texto: 'Irresignada com a decisão administrativa da Autarquia, recorre a empresa interessada a esta Corte Administrativa requerendo que a prestação <especie> seja reconhecida como não decorrente de acidente de trabalho.',
-                        },
-                        {
-                            categoria: 'diligencias',
-                            texto: 'Houve reanálise pela perícia médica federal, que por sua vez retificou a existência do nexo técnico, e fundamenta pela transformação da espécie em previdenciário (B31).',
-                        },
-                        {
-                            categoria: 'merito',
-                            texto: '\n<p>Regulamenta o Decreto 3.048/99:<br/>\n“Art. 337.  O acidente do trabalho será caracterizado tecnicamente pela Perícia Médica Federal, por meio da identificação do nexo causal entre o trabalho e o agravo.<br/>\n§ 1º O setor de benefícios do Instituto Nacional do Seguro Social reconhecerá o direito do segurado à habilitação do benefício acidentário.<br/>\n§ 2º Será considerado agravamento do acidente aquele sofrido pelo acidentado quanto estiver sob a responsabilidade da reabilitação profissional.<br/>\n§ 3o  Considera-se estabelecido o nexo entre o trabalho e o agravo quando se verificar nexo técnico epidemiológico entre a atividade da empresa e a entidade mórbida motivadora da incapacidade, elencada na Classificação Internacional de Doenças - CID em conformidade com o disposto na Lista C do Anexo II deste Regulamento. (Redação dada pelo Decreto nº 6.957, de 2009)<br/>\n§ 4o  Para os fins deste artigo, considera-se agravo a lesão, doença, transtorno de saúde, distúrbio, disfunção ou síndrome de evolução aguda, subaguda ou crônica, de natureza clínica ou subclínica, inclusive morte, independentemente do tempo de latência. (Incluído pelo Decreto nº 6.042, de 2007).<br/>\n § 5º  Reconhecidos pela Perícia Médica Federal a incapacidade para o trabalho e o nexo causal entre o trabalho e o agravo, na forma prevista no § 3º, serão devidas as prestações acidentárias a que o beneficiário tiver direito.    (Redação dada pelo Decreto nº 10.410, de 2020)<br/>\n§ 6º  A Perícia Médica Federal deixará de aplicar o disposto no § 3º quando demonstrada a inexistência de nexo causal entre o trabalho e o agravo, sem prejuízo do disposto nos § 7º e § 12.   (Redação dada pelo Decreto nº 10.410, de 2020)<br/>\n§ 7o  A empresa poderá requerer ao INSS a não aplicação do nexo técnico epidemiológico ao caso concreto mediante a demonstração de inexistência de correspondente nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)<br/>\n§ 8o  O requerimento de que trata o § 7o poderá ser apresentado no prazo de quinze dias da data para a entrega, na forma do inciso IV do art. 225, da GFIP que registre a movimentação do trabalhador, sob pena de não conhecimento da alegação em instância administrativa. (Incluído pelo Decreto nº 6.042, de 2007).<br/>\n§ 9º  Caracterizada a impossibilidade de atendimento ao disposto no § 8º, motivada pelo não conhecimento tempestivo do diagnóstico do agravo, o requerimento de que trata o § 7º poderá ser apresentado no prazo de quinze dias, contado da data em que a empresa tomar ciência da decisão a que se refere o § 5º.    (Redação dada pelo Decreto nº 10.410, de 2020)<br/>\n§ 10.  Juntamente com o requerimento de que tratam os §§ 8o e 9o, a empresa formulará as alegações que entender necessárias e apresentará as provas que possuir demonstrando a inexistência de nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)<br/>\n§ 11.  A documentação probatória poderá trazer, entre outros meios de prova, evidências  técnicas circunstanciadas e tempestivas à exposição do segurado, podendo ser produzidas no âmbito de programas de gestão de risco, a cargo da empresa, que possuam responsável técnico legalmente habilitado. (Incluído pelo Decreto nº 6.042, de 2007).<br/>\n§ 12.  O INSS informará ao segurado sobre a contestação da empresa para que este, querendo, possa impugná-la, obedecendo, quanto à produção de provas, ao disposto no § 10, sempre que a instrução do pedido evidenciar a possibilidade de reconhecimento de inexistência do nexo entre o trabalho e o agravo. (Redação dada pelo Decreto nº 6.939, de 2009)<br/>\n§ 13.  Da decisão do requerimento de que trata o § 7o cabe recurso, com efeito suspensivo, por parte da empresa ou, conforme o caso, do segurado ao Conselho de Recursos da Previdência Social, nos termos dos arts. 305 a 310. (Incluído pelo Decreto nº 6.042, de 2007).”</p>\n\n<p>O Diploma Previdenciário regulamenta que a Perícia Médica Federal – PMF -  tem competência para determinar se uma incapacidade decorre ou não do trabalho. Para isso, precisa relacionar o agravo (incapacidade laboral) com a Classificação Internacionais de Doenças dispostas no Anexo II, Lista “C”.<br/>\nTal procedimento foi realizado pela PMF e, por haver o enquadramento legal, foi concedida a espécie acidentária.<br/>\nNão há a necessidade de vistoria técnica em razão do Decreto 3.048/99 ser taxativo quanto as doenças que têm origem no trabalho.</p>',
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: 'Na fase recursal, o órgão da PMF manteve o entendimento anterior ante a existência de nexo entre a incapacidade e o trabalho exercido.<br/>\nDeste modo, mantemos o ato denegatório do INSS e a existência do nexo técnico, devendo a espécie continuar sendo acidentária.',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: 'A RELAÇÃO ENTRE A PATOLOGIA INCAPACITANTE E O LABOR É CARACTERIZADO PELA PERÍCIA MÉDICA FEDERAL, CONFORME ARTIGO 337 DO DECRETO 3.048/99. SENDO A PERÍCIA FAVORÁVEL QUANTO AO NEXO, ESTÁ COMPROVADO.',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'procurador',
-                    },
-                },
-            ],
-        },
-        {
-            id: 'procurador',
-            tipo: 'opcao',
-            titulo: 'Procurador',
-            subtitulo: 'Existe procurador constituído?',
-            valorPadrao: 'nao',
-            opcoes: [
-                {
-                    id: 'nao',
-                    titulo: 'Não',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'sim',
-                    titulo: 'Sim',
-                    listaVariaveis: [
-                        {
-                            id: 'nome',
-                            titulo: 'Nome do procurador',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'oab',
-                            titulo: 'OAB',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'relatorio',
-                            texto: 'A parte recorrente está devidamente representada por ${nome} (OAB nº ${oab}).',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'admissibilidade',
                     },
                 },
             ],
@@ -1261,15 +1473,15 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'voto',
-                            texto: '<p>O presente recurso é tempestivo em razão de inexistir registro o processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p>',
+                            texto: '<p>&nbsp;</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão de inexistir registro o processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>TEMPESTIVIDADE EM RAZÃO DA AUSÊNCIA DO REGISTRO DE CIÊNCIA, CONFORME ART. 64 DO RICRPS.</p>',
+                            texto: '<p><strong>INTEMPESTIVIDADE RECURSAL EM RAZÃO DA AUSÊNCIA DO REGISTRO DE CIÊNCIA, CONFORME ART. 64 DO RICRPS.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'decisao_ro',
                     },
                 },
                 {
@@ -1294,15 +1506,15 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'voto',
-                            texto: '<p>O presente recurso é tempestivo em razão da interposição do recurso ocorrer no prazo fixado pelo Art. 61 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p>',
+                            texto: '<p>&nbsp;</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão da interposição do recurso ocorrer no prazo fixado pelo Art. 61 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>TEMPESTIVIDADE COMPROVADA, CONFORME ART. 61 DO RICRPS.</p>',
+                            texto: '<p><strong>INTEMPESTIVIDADE RECURSAL COMPROVADA, CONFORME ART. 61 DO RICRPS.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'decisao_ro',
                     },
                 },
                 {
@@ -1327,15 +1539,15 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'voto',
-                            texto: '<p>O presente recurso é intempestivo em razão da intimação ocorrer em ${data_da_intimacao} e a interposição do recurso em ${data_do_protocolo}, portanto, após o prazo fixado pelo Art. 61 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS). Ainda, inexiste inequívoca liquidez e certeza do direito da parte que justifique a relevação da intempestividade preceituada no §1º do Art. 57 do RICRPS.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é intempestivo em razão da intimação ocorrer em ${data_da_intimacao} e a interposição do recurso em ${data_do_protocolo}, portanto, após o prazo fixado pelo Art. 61 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS). Ainda, inexiste inequívoca liquidez e certeza do direito da parte que justifique a relevação da intempestividade preceituada no §1º do Art. 57 do RICRPS.</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>INTEMPESTIVIDADE, CONFORME ART. 61 DO RICRPS.</p>',
+                            texto: '<p><strong>INTEMPESTIVIDADE RECURSAL, CONFORME ART. 61 DO RICRPS.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'decisao_ro',
                     },
                 },
                 {
@@ -1360,22 +1572,162 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'voto',
-                            texto: '<p>O presente recurso é intempestivo em razão da intimação ocorrer em ${data_da_intimacao} e a interposição do recurso em ${data_do_protocolo}, portanto, após o prazo fixado pelo Art. 61 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS). Todavia, como se verifica no corpo do voto, restou demonstrada de forma inequívoca a liquidez e a certeza do direito da parte, razão pela qual proponho à composição julgadora a relevação da intempestividade.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é intempestivo em razão da intimação ocorrer em ${data_da_intimacao} e a interposição do recurso em ${data_do_protocolo}, portanto, após o prazo fixado pelo Art. 61 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS). Todavia, como se verifica no corpo do voto, restou demonstrada de forma inequívoca a liquidez e a certeza do direito da parte, razão pela qual se propõe à composição julgadora a relevação da intempestividade.</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p>INTEMPESTIVIDADE RELEVADA, CONFORME § 1º DO ART. 57 DO RICRPS.</p>',
+                            texto: '<p><strong>INTEMPESTIVIDADE RECURSAL RELEVADA, CONFORME § 1º DO ART. 57 DO RICRPS.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'decisao_ro',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'decisao_ro',
+            tipo: 'opcao',
+            titulo: 'Decisão (RO)',
+            valorPadrao: 'dar_provimento',
+            opcoes: [
+                {
+                    id: 'dar_provimento',
+                    titulo: 'Dar provimento',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'voto_introducao',
+                            texto: '<p>Assiste razão à parte recorrente.</p>',
+                        },
+                        {
+                            categoria: 'conclusao',
+                            texto: '<p>&nbsp;</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E DAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>RECURSO ORDINÁRIO CONHECIDO E PROVIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'pontos_controversos',
+                    },
+                },
+                {
+                    id: 'dar_parcial_provimento',
+                    titulo: 'Dar parcial provimento',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'voto_introducao',
+                            texto: '<p>Assiste parcial razão à parte recorrente.</p>',
+                        },
+                        {
+                            categoria: 'conclusao',
+                            texto: '<p>&nbsp;</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E DAR-LHE PARCIAL PROVIMENTO, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>RECURSO ORDINÁRIO CONHECIDO E PARCIALMENTE PROVIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'pontos_controversos',
+                    },
+                },
+                {
+                    id: 'negar_provimento',
+                    titulo: 'Negar Provimento',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'voto_introducao',
+                            texto: '<p>Não assiste razão à parte recorrente.</p>',
+                        },
+                        {
+                            categoria: 'conclusao',
+                            texto: '<p>&nbsp;</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>RECURSO ORDINÁRIO CONHECIDO E NEGADO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'pontos_controversos',
+                    },
+                },
+                {
+                    id: 'nao_conhecer_-_acao_judicial',
+                    titulo: 'Não conhecer - Ação Judicial',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'voto_introducao',
+                            texto: '<p>Não assiste razão à parte recorrente.</p>',
+                        },
+                        {
+                            categoria: 'conclusao',
+                            texto: '<p>&nbsp;</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por NÃO CONHECER DO RECURSO, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>RECURSO ORDINÁRIO NÃO CONHECIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'pontos_controversos',
+                    },
+                },
+                {
+                    id: 'nao_conhecer_-_intempestividade',
+                    titulo: 'Não conhecer - Intempestividade',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'voto_introducao',
+                            texto: '<p>Não assiste razão à parte recorrente.</p>',
+                        },
+                        {
+                            categoria: 'conclusao',
+                            texto: '<p>&nbsp;</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por NÃO CONHECER DO RECURSO, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>RECURSO ORDINÁRIO NÃO CONHECIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'pontos_controversos',
+                    },
+                },
+                {
+                    id: 'nao_conhecer_-_reconhecimento_pelo_inss',
+                    titulo: 'Não conhecer - Reconhecimento pelo INSS',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'voto_introducao',
+                            texto: '<p>Não assiste razão à parte recorrente.</p>',
+                        },
+                        {
+                            categoria: 'conclusao',
+                            texto: '<p>&nbsp;</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por NÃO CONHECER DO RECURSO, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>RECURSO ORDINÁRIO NÃO CONHECIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'pontos_controversos',
                     },
                 },
             ],
         },
         {
             id: 'pontos_controversos',
-            tipo: 'selecao',
+            tipo: 'opcao',
             titulo: 'Pontos Controversos',
             opcoes: [
                 {
@@ -2573,134 +2925,22 @@ export const especificacao: EspecificacaoDTO = {
                 },
             ],
         },
-        {
-            id: 'decisao',
-            tipo: 'opcao',
-            titulo: 'Decisão',
-            valorPadrao: 'dar_provimento',
-            opcoes: [
-                {
-                    id: 'dar_provimento',
-                    titulo: 'Dar provimento',
-                    listaTextos: [
-                        {
-                            categoria: 'voto',
-                            texto: '<p>Ante o exposto, voto por CONHECER DO RECURSO E DAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: '<p>RECURSO ORDINÁRIO CONHECIDO E PROVIDO.</p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'dar_parcial_provimento',
-                    titulo: 'Dar parcial provimento',
-                    listaTextos: [
-                        {
-                            categoria: 'voto',
-                            texto: '<p>Ante o exposto, voto por CONHECER DO RECURSO E DAR-LHE PARCIAL PROVIMENTO, nos termos da fundamentação.</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: '<p>RECURSO ORDINÁRIO CONHECIDO E PARCIALMENTE PROVIDO.</p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'negar_provimento',
-                    titulo: 'Negar Provimento',
-                    listaTextos: [
-                        {
-                            categoria: 'voto',
-                            texto: '<p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: '<p>RECURSO ORDINÁRIO CONHECIDO E NEGADO.</p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'nao_conhecer_-_acao_judicial',
-                    titulo: 'Não conhecer - Ação Judicial',
-                    listaVariaveis: [],
-                    listaTextos: [
-                        {
-                            categoria: 'voto',
-                            texto: '<p>Ante o exposto, voto por NÃO CONHECER DO RECURSO, nos termos da fundamentação.</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: '<p>RECURSO NÃO CONHECIDO.</p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'nao_conhecer_-_intempestividade',
-                    titulo: 'Não conhecer - Intempestividade',
-                    listaVariaveis: [],
-                    listaTextos: [
-                        {
-                            categoria: 'voto',
-                            texto: '<p>Ante o exposto, voto por NÃO CONHECER DO RECURSO, nos termos da fundamentação.</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: '<p>RECURSO ORDINÁRIO NÃO CONHECIDO</p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'nao_conhecer_-_reconhecimento_pelo_inss',
-                    titulo: 'Não conhecer - Reconhecimento pelo INSS',
-                    listaTextos: [
-                        {
-                            categoria: 'voto',
-                            texto: '<p>Ante o exposto, voto por NÃO CONHECER DO RECURSO, nos termos da fundamentação.</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: '<p>RECURSO ORDINÁRIO NÃO CONHECIDO.</p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-            ],
-        },
     ],
     listaModelos: [
         {
             id: 'gerador_de_acordao',
             titulo: 'Gerador de Acórdão',
-            texto: '<p>Trata-se de ${tipo_do_processo.nome} $(tipo_do_processo.complemento1) $(tipo_do_processo.recorrente) ${tipo_do_processo.complemento2} &nbsp;${tipo_de_processo.recorrente} &nbsp;[objeto] ${especie.descricao} [decisão recorrida - que a considerou apto às atividades laborativas].</p><p>${procurador.relatorio}</p><p>${admissibilidade.relatorio}</p><p>2- Elementos pertinentes à espécie</p><p>&nbsp;</p><p>3- Pontos Controversos</p><p>${pontos-controversos.relatorio}</p><p>4- Sintese do recurso</p><p>&nbsp;</p><p>5-Diligencias</p><p>${parecer_pericia_medica_federal.diligencias}</p><p>6- Fechamento</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
+            texto: '<p>${votos_rapidos.relatorio}${tipo_do_processo.introducao}${tipo_do_processo.complemento1}${tipo_do_processo.recorrente}${tipo_do_processo.complemento2}${tipo_do_processo.recorrido}${decisao_do_inss_31.complemento3}${procurador.relatorio}${tipo_do_processo.sintese}</p><p>${admissibilidade.relatorio}</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
         },
         {
             id: 'gerador_de_acordao',
             titulo: 'Gerador de Acórdão',
-            texto: '<p>VOTO</p><p>7- Introdução, Contextualizacao</p><p>&nbsp;</p><p>&nbsp;</p><p>ADMISSIBILIDADE</p><p>8- Admissibilidade</p><p>MÉRITO</p><p>9- Mérito - Requisitos para a prestação</p><p>&nbsp;</p><p>10- Pontos controversos</p><p>&nbsp;</p><p>11- Caso Concreto</p><p>&nbsp;</p><p>DECISÃO</p><p>12-Conclusão</p>',
+            texto: '<p>${votos_rapidos.voto}${decisao_ro.voto_introducao}${admissibilidade.voto}${especie_ro.merito}${decisao_ro.conclusao}</p><p>&nbsp;</p>',
         },
         {
             id: 'gerador_de_acordao',
             titulo: 'Gerador de Acórdão',
-            texto: '<p>${tipo_do_processo.ementa} ${admissibilidade.ementa} ${especie.ementa}</p>',
+            texto: '<p>${votos_rapidos.ementa}${tipo_do_processo.ementa}${admissibilidade.ementa}${especie_ro.ementa}${parecer_pericia_medica_federal.ementa}${decisao_ro.ementa}</p>',
         },
     ],
 };
