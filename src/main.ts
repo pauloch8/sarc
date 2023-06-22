@@ -15,7 +15,7 @@ import router from './apresentacao/router/router';
 /* camada de domínio */
 import { EscapadorDeQuestaoFactory } from './dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
 import { ProcessadorDeOpcaoFactory } from './dominio/processamento/processador/questoes-opcao/opcao/ProcessadorDeOpcaoFactory';
-import { ProcessadorDeQuestaoDeOpcoesFactory } from './dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoFactory';
+import { ProcessadorDeQuestaoDeOpcoesFactory } from './dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoDeOpcoesFactory';
 import { ProcessadorDeRespostaDeFormularioFactory } from './dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormularioFactory';
 import { TextoFactory } from './dominio/processamento/processador/texto/TextoFactory';
 import { FormularioFactory } from './dominio/formulario/FormularioFactory';

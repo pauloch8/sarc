@@ -1,5 +1,5 @@
-import { ITitulo } from '@/dominio/comum/Titulo';
 import { ITipoVariavelID } from './TipoVariavelID';
+import { ITitulo } from '@/dominio/comum/Titulo';
 
 export interface ITipoVariavel {
     getId(): ITipoVariavelID;

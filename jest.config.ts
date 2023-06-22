@@ -6,9 +6,13 @@
 import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
-    roots: ['<rootDir>/tests'],
+    // roots: ['<rootDir>/tests'],
+    displayName: 'testes-de-unidade',
+    testMatch: ['<rootDir>/src/**/*.(spec|test).ts'],
+    testEnvironment: 'jsdom',
+    clearMocks: true,
     collectCoverage: false,
-    collectCoverageFrom: ['<rootDir>/src/**/*.ts', '!<rootDir>/src/main/**'],
+    collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
     coverageDirectory: 'coverage',
     preset: '@vue/cli-plugin-unit-jest/presets/typescript-and-babel',
     transform: {
@@ -16,7 +20,6 @@ const config: Config.InitialOptions = {
             // 'ts-jest'
             '@swc/jest',
     },
-    testMatch: ['**/*.{spec,test}.ts'],
     moduleNameMapper: {
         '@/tests/(.*)': '<rootDir>/tests/$1',
         '@/(.*)': '<rootDir>/src/$1',

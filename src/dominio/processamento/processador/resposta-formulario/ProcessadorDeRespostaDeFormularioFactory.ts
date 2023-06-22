@@ -1,6 +1,6 @@
 import { EspecificacaoDTO } from '../../../especificacao/EspecificacaoDTO';
 import { IEscapadorDeQuestaoFactory } from '../../../comum/escapador/questao/EscapadorDeQuestaoFactory';
-import { IProcessadorDeQuestaoFactory } from '../questoes-opcao/questao/ProcessadorDeQuestaoFactory';
+import { IProcessadorDeQuestaoFactory } from '../questoes-opcao/questao/ProcessadorDeQuestaoDeOpcoesFactory';
 import { ProcessadorDeRespostaDeFormulario } from './ProcessadorDeRespostaDeFormulario';
 
 export class ProcessadorDeRespostaDeFormularioFactory {

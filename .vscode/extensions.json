@@ -1,3 +1,3 @@
 {
-  "recommendations": ["Vue.volar", "Vue.vscode-typescript-vue-plugin"]
+  "recommendations": ["Vue.volar", "Vue.vscode-typescript-vue-plugin", "orta.vscode-jest", "firsttris.vscode-jest-runner", "grimmer.vscode-back-forward-button", "naumovs.color-highlight", "hediet.vscode-drawio", "dbaeumer.vscode-eslint", "mhutchie.git-graph", "cweijan.cweijan-personal-material-icon-theme", "pkief.material-icon-theme", "esbenp.prettier-vscode", "natqe.reload", "humao.rest-client", "gruntfuggly.todo-tree"]
 }
