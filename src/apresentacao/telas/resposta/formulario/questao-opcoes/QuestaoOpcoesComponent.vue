@@ -28,9 +28,6 @@ export default defineComponent({
             this.minhaQuestao.setValorSelecionado(opcao);
             this.$emit('opcaoSelecionada', opcao);
         },
-        consoleLog(valor: any) {
-            console.log(valor);
-        },
     },
 });
 </script>

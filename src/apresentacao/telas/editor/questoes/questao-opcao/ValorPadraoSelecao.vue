@@ -46,7 +46,6 @@ export default defineComponent({
         esteSelecionado(novaSelecao: string) {
             this.erro = '';
             if (!novaSelecao) {
-                console.log('!novaSelecao');
                 return this.$emit('selecionou', null);
             } else {
                 const opcaoSelecionada = this.estaLista

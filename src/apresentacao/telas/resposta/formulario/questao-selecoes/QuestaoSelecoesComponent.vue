@@ -42,9 +42,6 @@ export default defineComponent({
             this.selecoes.splice(indice, 1);
             this.questao.setValoresSelecionado(this.selecoes);
         },
-        consoleLog(valor: any) {
-            console.log(valor);
-        },
     },
 });
 </script>

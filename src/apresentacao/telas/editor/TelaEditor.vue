@@ -45,11 +45,9 @@ export default defineComponent({
     },
     methods: {
         criar(especificacao: EspecificacaoDTO) {
-            console.log({ especificacao });
             this.especificacaoRepository.armazenar(especificacao);
         },
         alterar(especificacao: EspecificacaoDTO) {
-            console.log({ especificacao });
             this.especificacaoRepository.armazenar(especificacao);
         },
     },

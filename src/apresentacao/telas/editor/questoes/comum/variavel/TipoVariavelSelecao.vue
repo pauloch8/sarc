@@ -33,17 +33,13 @@ export default defineComponent({
     },
     watch: {
         selecionado(novaSelecao: string) {
-            console.log({ novaSelecao });
             if (!novaSelecao) {
-                console.log('!novaSelecao');
                 return this.$emit('selecionou', null);
             } else {
                 const tipoVariavel = this.tiposVariaveis.find(tipo => {
                     return tipo.getId().toString() === novaSelecao;
                 });
-                console.log({ tipoVariavel });
                 if (!tipoVariavel) {
-                    console.log('!tipoVariavel');
                     this.erro = 'Erro ao selecionar o tipo de variável';
                     return this.$emit('selecionou', null);
                 } else {

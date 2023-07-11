@@ -83,10 +83,8 @@ export default defineComponent({
                     const questaoIndice = questao.getIndice();
                     const indiceDestaQuestao = this.indice;
                     const ehMaior = questaoIndice > indiceDestaQuestao;
-                    console.log({ questaoIndice, indiceDestaQuestao, ehMaior });
                     return ehMaior;
                 });
-                console.log({ retorno });
                 return retorno;
             }),
         };
