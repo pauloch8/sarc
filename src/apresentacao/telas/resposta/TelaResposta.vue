@@ -9,52 +9,62 @@ import RelatorioComponent from './relatorio/RelatorioComponent.vue';
 import { IFormularioFactory } from '@/dominio/formulario/FormularioFactory';
 import { IEspecificacaoRepository } from '@/dominio/especificacao/EspecificacaoRepository';
 import { ProcessadorDeRespostaDeFormularioFactory } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormularioFactory';
+import { Formulario } from '@/dominio/formulario/Formulario';
 
 export default defineComponent({
     name: 'TelaResposta',
     setup() {
-        // injeta especificacaoRepository
-        const especificacaoRepository = inject<IEspecificacaoRepository>(
-            'especificacaoRepository',
-        );
-        if (!especificacaoRepository) {
-            throw new Error(
-                'Não injetada a dependência especificacaoRepository',
+        try {
+            // injeta especificacaoRepository
+            const especificacaoRepository = inject<IEspecificacaoRepository>(
+                'especificacaoRepository',
             );
+            if (!especificacaoRepository) {
+                throw new Error(
+                    'Não injetada a dependência especificacaoRepository',
+                );
+            }
+
+            // injeta dependência formularioFactory
+            const formularioFactory =
+                inject<IFormularioFactory>('formularioFactory');
+            if (!formularioFactory) {
+                throw new Error('Não injetada a dependência formularioFactory');
+            }
+
+            // injeta dependência processadorFormularioFactory
+            const processadorFormularioFactory =
+                inject<ProcessadorDeRespostaDeFormularioFactory>(
+                    'processadorFormularioFactory',
+                );
+            if (!processadorFormularioFactory) {
+                throw new Error(
+                    'Não injetada a dependência processadorFormularioFactory',
+                );
+            }
+
+            // TODO: carregar do id passado por query string
+            const especificacao =
+                especificacaoRepository.carregar('gerador_de_acordao');
+            const formulario =
+                formularioFactory.criarDaEspecificacao(especificacao);
+
+            const processadorFormulario =
+                processadorFormularioFactory.criarDeEspecificacao(
+                    especificacao,
+                );
+
+            // retorna dependências injetadas
+            return {
+                formulario,
+                processadorFormulario,
+            };
+        } catch (e) {
+            debugger;
+            return {
+                erroAoCarregar: (e as Error).message,
+            };
         }
-
-        // injeta dependência formularioFactory
-        const formularioFactory =
-            inject<IFormularioFactory>('formularioFactory');
-        if (!formularioFactory) {
-            throw new Error('Não injetada a dependência formularioFactory');
-        }
-
-        // injeta dependência processadorFormularioFactory
-        const processadorFormularioFactory =
-            inject<ProcessadorDeRespostaDeFormularioFactory>(
-                'processadorFormularioFactory',
-            );
-        if (!processadorFormularioFactory) {
-            throw new Error(
-                'Não injetada a dependência processadorFormularioFactory',
-            );
-        }
-
-        // TODO: carregar do id passado por query string
-        const especificacao =
-            especificacaoRepository.carregar('gerador_de_acordao');
-        const formulario =
-            formularioFactory.criarDaEspecificacao(especificacao);
-
-        const processadorFormulario =
-            processadorFormularioFactory.criarDeEspecificacao(especificacao);
-
-        // retorna dependências injetadas
-        return {
-            formulario,
-            processadorFormulario,
-        };
     },
     components: {
         FormularioComponent,
@@ -80,12 +90,17 @@ export default defineComponent({
 </script>
 
 <template>
-    <main>
+    <main v-if="erroAoCarregar">
+        <article class="erro">
+            Erro ao carregar a tela de respostas: {{ erroAoCarregar }}
+        </article>
+    </main>
+    <main v-else>
         <Transition>
             <FormularioComponent
                 v-if="modoFormulario"
-                :formulario="formulario"
-                :processadorFormulario="processadorFormulario"
+                :formulario="(formulario as Formulario)"
+                :processadorFormulario="(processadorFormulario as ProcessadorDeRespostaDeFormulario)"
                 @gerou-relatorio="gerouRelatorio"
             ></FormularioComponent>
         </Transition>
