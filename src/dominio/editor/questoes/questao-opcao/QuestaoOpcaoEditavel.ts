@@ -164,7 +164,7 @@ export class QuestaoOpcaoEditavel
 
     gerarEspecificacao() {
         const id = this.id.toString();
-        const tipo = 'opcao';
+        const tipo = this.tipo;
         const titulo = this.titulo.toString();
         const subtitulo = this.subtitulo?.toString();
         const opcoes = this.listaOpcoes

@@ -159,7 +159,7 @@ export class QuestaoSelecaoEditavel
             .map(item => item.gerarEspecificacao());
         const retorno: QuestaoDTO = {
             id: this.id.toString(),
-            tipo: 'opcao',
+            tipo: this.tipo,
             titulo: this.titulo.toString(),
             subtitulo: this.subtitulo?.toString(),
             opcoes,
