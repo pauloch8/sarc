@@ -56,6 +56,7 @@ export default defineComponent({
 
             // retorna dependências injetadas
             return {
+                erroAoCarregar: null,
                 formulario,
                 processadorFormulario,
             };
@@ -63,6 +64,8 @@ export default defineComponent({
             debugger;
             return {
                 erroAoCarregar: (e as Error).message,
+                formulario: null,
+                processadorFormulario: null,
             };
         }
     },
