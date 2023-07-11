@@ -28,11 +28,11 @@ export default defineComponent({
     },
     setup() {
         const factory = inject<IQuestaoSelecaoEditavelFactory>(
-            'questaoEditavelFactory',
+            'questaoSelecaoEditavelFactory',
         );
         if (!factory) {
             throw new Error(
-                'Não injetada a dependência questaoEditavelFactory',
+                'Não injetada a dependência questaoSelecaoEditavelFactory',
             );
         }
         return {
