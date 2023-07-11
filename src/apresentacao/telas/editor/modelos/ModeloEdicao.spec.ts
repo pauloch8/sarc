@@ -1,27 +1,3 @@
-import { mount } from '@vue/test-utils';
-import ModeloEdicaoVue from '@/apresentacao/telas/editor/modelos/ModeloEdicao.vue';
-import ListaDeEscapadores from '@/apresentacao/telas/editor/comum/EscapadoresDisponiveis.vue';
-import BotoesSalvarCancelar from '@/apresentacao/telas/editor/comum/BotoesSalvarCancelar.vue';
-import { TextoEditavel } from '@/dominio/editor/questoes/comum/texto/TextoEditavel';
-import {
-    TextoEditavelFactoryDummy,
-    TextoEditavelFactoryErroDesconhecidoStub,
-    TextoEditavelFactoryErroInconsistenciasNaValidacaoStub,
-    TextoEditavelFactorySucessoStub,
-} from '@/tests/dubles/dominio/editor/questoes/TextoEditavelFactory.dubles';
-import {
-    TextoEditavelDummy,
-    TextoEditavelEditaComSucessoMock,
-    TextoEditavelErroStub,
-} from '@/tests/dubles/dominio/editor/questoes/TextoEditavelDubles';
-import { IdFormularioDummy } from '@/dominio/comum/IdFormulario.dubles';
-import { TituloDummy } from '@/dominio/comum/Titulo.dubles';
-import { TextoModeloDummy } from '@/dominio/comum/TextoModelo.dubles';
-import { SubtituloDummy } from '@/tests/dubles/dominio/comum/Subtitulo.dubles';
-import { ListaDeVariaveisEditavelDummy } from '@/dominio/editor/questoes/comum/variavel/VariavelEditavel.dubles';
-import { EscapadorDeVariavelFactoryDummy } from '@/tests/dubles/dominio/comum/escapador/variavel/EscapadorDeVariavelFactory.dubles';
-import { EscapadorDeVariavelFake } from '@/dominio/comum/escapador/variavel/EscapadorDeVariavel.dubles';
-
 describe('ModeloEdicao', () => {
     test('testaetse', () => {
         expect(9).toBe(9);
