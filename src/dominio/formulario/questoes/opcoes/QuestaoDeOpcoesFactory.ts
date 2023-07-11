@@ -29,9 +29,12 @@ export class QuestaoDeOpcoesFactory {
                 opcao => opcao.getId() === dto.valorPadrao,
             );
             if (!opcaoSelecionada) {
-                throw new Error('Opção do valor da pergunta não encontrada');
+                console.warn(
+                    `Opção do valor padrão "${dto.valorPadrao}" da pergunta "${dto.titulo}" não encontrada`,
+                );
+            } else {
+                questao.setValorSelecionado(opcaoSelecionada);
             }
-            questao.setValorSelecionado(opcaoSelecionada);
         }
         return questao;
     }
