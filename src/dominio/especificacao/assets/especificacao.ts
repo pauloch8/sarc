@@ -385,6 +385,14 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'sintese',
                             texto: '<p>&nbsp;</p><p>Irresignada com a decisão da Autarquia Previdenciária, recorre a parte interessada a esta Corte Administrativa e pleiteia a reforma da decisão.</p>',
                         },
+                        {
+                            categoria: 'contrarrazoes',
+                            texto: '<p>&nbsp;</p><p>&nbsp;O INSS apresentou contrarrazões remissivas e subiram os autos a esta Corte.</p>',
+                        },
+                        {
+                            categoria: 'fechamento',
+                            texto: '<p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
+                        },
                     ],
                     ramificacao: {
                         irPara: 'especie_ro',
@@ -6385,11 +6393,6 @@ export const especificacao: EspecificacaoDTO = {
                     titulo: 'Perda da qualidade de segurado',
                     listaVariaveis: [
                         {
-                            id: 'data_ultima_contribuicao',
-                            titulo: 'Data última contribuição',
-                            tipo: 'data',
-                        },
-                        {
                             id: 'dii',
                             titulo: 'DII',
                             tipo: 'data',
@@ -6407,11 +6410,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'elementos',
-                            texto: '<p>&nbsp;</p><p>A parte recorrente submetida a perícia médica, que por sua vez concluiu pela existência da incapacidade laborativa desde ${dii} e sua comprovação até ${dcb}.&nbsp;</p><p>Consta no Cadastro Nacional de Informações Previdenciárias (CNIS) a última contribuição em ${data_ultima_contribuicao}.&nbsp;</p>',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente submetida a perícia médica, que por sua vez concluiu pela existência da incapacidade laborativa desde ${dii} e sua comprovação até ${dcb}.&nbsp;</p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: '31_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_antes_da_dii_ocorreu_como',
                     },
                 },
                 {
@@ -6675,16 +6678,44 @@ export const especificacao: EspecificacaoDTO = {
                             texto: '<p>&nbsp;</p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.</p>',
                         },
                         {
-                            categoria: 'merito',
-                            texto: '\nVoto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 7º do art. 53 da Portaria MDSA 116/2017.<br/>\nSobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:<br/>\n“Art. 71.  O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.” (grifo nosso)',
-                        },
-                        {
-                            categoria: 'casoConcreto',
-                            texto: '\nNo caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.<br/>\nTambém, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.<br/>\nDessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.\nPor ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.',
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.</p><p>Também, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.</p><p>Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.</p><p>Por ordem do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.</strong></p>',
+                            texto: '<p><strong>&nbsp;MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS, CONFORME § 1º DO ART. 33 DA PORTARIA MTP Nº 4.061/2022. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'prorrogar_a_incapacidade',
+                    titulo: 'Prorrogar a incapacidade',
+                    listaVariaveis: [
+                        {
+                            id: 'dataNovaCessacao',
+                            titulo: 'Nova cessação',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'recurso',
+                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando e pleiteia o pagamento da prestação previdenciária.',
+                        },
+                        {
+                            categoria: 'diligencias',
+                            texto: '<p>&nbsp;</p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela existência da incapacidade laborativa fixando a nova data da cessação ${dataNovaCessacao}.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No caso dos autos, a pretensão do recorrente encontra alicerce no parecer da perícia médica oficial. Há o cumprimento do requisito da incapacidade, devendo a prestação ser prorrogada na data fixada pela PMF.</p><p>Dessa forma, faz jus à percepção da prestação do auxílio incapacidade laborativa previsto no Art. 71 do Decreto 3.048/99, sendo procedente o pedido.</p><p>Por ordem do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS, CONFORME § 1º DO ART. 33 DA PORTARIA MTP Nº 4.061/2022. EXISTÊNCIA DE INCAPACIDADE LABORATIVA. PRESTAÇÃO PRORROGADA CONFORME PARECER MÉDICO FEDERAL. ARTIGO 71 DO DECRETO 3.048/99.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -6722,39 +6753,334 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: '31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii',
+                    },
+                },
+            ],
+        },
+        {
+            id: '31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii',
+            tipo: 'opcao',
+            titulo: '(31) Sobre a qualidade de segurado, no evento gerador DII:',
+            opcoes: [
+                {
+                    id: 'manteve_a_qualidade_de_segurado_empregado',
+                    titulo: 'manteve a qualidade de segurado empregado',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos_qualidade',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada empregada no início da incapacidade.</p>',
+                        },
+                        {
+                            categoria: 'merito_qualidade',
+                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado empregado no início da incapacidade.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
                     },
                 },
                 {
-                    id: 'prorrogar_a_incapacidade',
-                    titulo: 'Prorrogar a incapacidade',
+                    id: 'manteve_a_qualidade_de_segurado_empregado_domestivo',
+                    titulo: 'manteve a qualidade de segurado empregado doméstivo',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos_qualidade',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada empregada doméstica avulsa no início da incapacidade.</p>',
+                        },
+                        {
+                            categoria: 'merito_qualidade',
+                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era empregado doméstico no óbito.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                    },
+                },
+                {
+                    id: 'manteve_a_qualidade_de_segurado_contribuinte_individual',
+                    titulo: 'manteve a qualidade de segurado contribuinte individual',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos_qualidade',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada contribuinte individual no início da incapacidade.</p>',
+                        },
+                        {
+                            categoria: 'merito_qualidade',
+                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado contribuinte individual no óbito.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                    },
+                },
+                {
+                    id: 'manteve_a_qualidade_de_segurado_facultativo',
+                    titulo: 'manteve a qualidade de segurado facultativo',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos_qualidade',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada facultativa no início da incapacidade.</p>',
+                        },
+                        {
+                            categoria: 'merito_qualidade',
+                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado facultativo no óbito.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                    },
+                },
+                {
+                    id: 'manteve_a_qualidade_de_segurado_especial',
+                    titulo: 'manteve a qualidade de segurado especial',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos_qualidade',
+                            texto: '<p>&nbsp;</p><p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada especial no início da incapacidade.</p>',
+                        },
+                        {
+                            categoria: 'merito_qualidade',
+                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado especial no óbito.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                    },
+                },
+                {
+                    id: 'manteve_a_qualidade_de_segurado_trabalhador_avulso',
+                    titulo: 'manteve a qualidade de segurado trabalhador avulso',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos_qualidade',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada trabalhadora avulsa no início da incapacidade.</p>',
+                        },
+                        {
+                            categoria: 'merito_qualidade',
+                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado trabalhador avulso no início da incapacidade.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                    },
+                },
+                {
+                    id: 'nao_possuia_a_qualidade_de_segurado',
+                    titulo: 'NÃO possuia a qualidade de segurado',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
+            id: '31_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_antes_da_dii_ocorreu_como',
+            tipo: 'opcao',
+            titulo: '(31) Sobre a manutenção e perda da qualidade de segurado, a última contribuição antes da DII ocorreu como:',
+            opcoes: [
+                {
+                    id: 'segurado_empregado',
+                    titulo: 'segurado empregado',
                     listaVariaveis: [
                         {
-                            id: 'dataNovaCessacao',
-                            titulo: 'Nova cessação',
-                            tipo: 'data',
+                            id: 'ultima_competencia',
+                            titulo: 'Última competência:',
+                            tipo: 'texto',
                         },
                     ],
                     listaTextos: [
                         {
-                            categoria: 'recurso',
-                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando e pleiteia o pagamento da prestação previdenciária.',
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como empregado em ${ultima_competencia}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'segurado_empregado_domestico',
+                    titulo: 'segurado empregado doméstico',
+                    listaVariaveis: [
+                        {
+                            id: 'ultima_competencia',
+                            titulo: 'Última competência',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última filiação ao Regime Geral de Previdência Social (RGPS) foi como empregado doméstico em ${ultima_competencia}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'segurado_contribuinte_individual',
+                    titulo: 'segurado contribuinte individual',
+                    listaVariaveis: [
+                        {
+                            id: 'ultima_competencia',
+                            titulo: 'Última competência:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como segurado contribuinte individual em ${ultima_competencia}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'segurado_especial',
+                    titulo: 'segurado especial',
+                    listaVariaveis: [
+                        {
+                            id: 'ultima_competencia',
+                            titulo: 'Última competência',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última filiação do ao Regime Geral de Previdência Social (RGPS) foi como segurado especial em ${ultima_competencia}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'segurado_trabalhador_avulso',
+                    titulo: 'segurado trabalhador avulso',
+                    listaVariaveis: [
+                        {
+                            id: 'ultima_competencia',
+                            titulo: 'Última competência:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição do ao Regime Geral de Previdência Social (RGPS) foi como trabalhador avulso em ${ultima_competencia}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'segurado_facultativo',
+                    titulo: 'segurado facultativo',
+                    listaVariaveis: [
+                        {
+                            id: 'ultima_competencia',
+                            titulo: 'Última competência',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição do ao Regime Geral de Previdência Social (RGPS) foi como segurado facultativo em ${ultima_competencia}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'beneficio_por_incapacidade',
+                    titulo: 'benefício por incapacidade',
+                    listaVariaveis: [
+                        {
+                            id: 'nb',
+                            titulo: 'NB:',
+                            tipo: 'texto',
                         },
                         {
-                            categoria: 'diligencias',
-                            texto: '<p>&nbsp;</p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela existência da incapacidade laborativa fixando a nova data da cessação ${dataNovaCessacao}.</p>',
+                            id: 'ultima_competencia',
+                            titulo: 'Última competência:',
+                            tipo: 'texto',
                         },
+                    ],
+                    listaTextos: [
                         {
-                            categoria: 'merito',
-                            texto: 'Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 7º do art. 53 da Portaria MDSA 116/2017.<br/>\nSobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:<br/>\n“Art. 71.  O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar incapacitado para o seu trabalho ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.” (grifo nosso)',
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição a ser considerada está no recebimento do benefício por incapacidade nº ${nb} em ${ultima_competencia}.</p>',
                         },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+            ],
+        },
+        {
+            id: '31_sobre_a_carencia_no_evento_gerador_dii',
+            tipo: 'opcao',
+            titulo: '(31) Sobre a carência, no evento gerador DII:',
+            opcoes: [
+                {
+                    id: 'possui_contribuicoes_suficientes',
+                    titulo: 'Possui contribuições suficientes',
+                    listaVariaveis: [
                         {
-                            categoria: 'casoConcreto',
-                            texto: 'No caso dos autos, a pretensão do recorrente encontra alicerce no parecer da perícia médica oficial.\nHá o cumprimento do requisito da incapacidade, devendo a prestação ser prorrogada na data fixada pela PMF.<br/>\nDessa forma, faz jus à percepção da prestação do auxílio incapacidade laborativa previsto no art. 71 do Decreto 3.048/99, sendo procedente o pedido.<br/>\nPor ordem do inciso I do § 2º do art. 30 da Portaria MDSA 116/2017, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.',
+                            id: 'quantidade_de_contribuicoes',
+                            titulo: 'Quantidade de contribuições:',
+                            tipo: 'texto',
                         },
+                    ],
+                    listaTextos: [
                         {
-                            categoria: 'ementa',
-                            texto: '<p><strong>MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. EXISTÊNCIA DE INCAPACIDADE LABORATIVA. PRESTAÇÃO PRORROGADA CONFORME PARECER MÉDICO FEDERAL. ARTIGO 71 DO DECRETO 3.048/99.</strong></p>',
+                            categoria: 'elementos_carencia',
+                            texto: '<p>&nbsp;</p><p>Apurou-se o total de ${quantidade_de_contribuicoes} contribuições para efeito de carência antes do início da incapacidade.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'a_pmf_isentou_de_carencia',
+                    titulo: 'A PMF isentou de carência.',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos_carencia',
+                            texto: '<p>&nbsp;</p><p>Conforme parecer técnico da PMF, há isenção de carência.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'admissibilidade',
+                    },
+                },
+                {
+                    id: 'nao_possui_carencia',
+                    titulo: 'Não possui carência.',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos_carencia',
+                            texto: '<p>&nbsp;</p><p>Apurou-se o total de ${quantidade_de_contribuicoes} contribuições para efeito de carência antes do início da incapacidade.</p>',
                         },
                     ],
                     ramificacao: {
@@ -8534,18 +8860,18 @@ export const especificacao: EspecificacaoDTO = {
     ],
     listaModelos: [
         {
-            id: 'gerador_de_acordao',
-            titulo: 'Gerador de Acórdão',
-            texto: '<p>${votos_rapidos.relatorio}${tipo_do_processo.introducao}${tipo_do_processo.complemento1}${tipo_do_processo.recorrente}${tipo_do_processo.complemento2}${tipo_do_processo.recorrido}${decisao_do_inss_31.complemento3}${decisao_do_inss_21.complemento3}${procurador.relatorio}${decisao_do_inss_21.elementos}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.elementos_qualidade}${21_qualidade_de_segurado_-_prestacao_recebida.elementos_qualidade}${21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como.elementos}${21_sobre_as_provas_de_uniao_estavel__dependencia_economica.elementos}${21_documento_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_2_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_3_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_4_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_5_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_6_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_7_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_8_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_9_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_10_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_o_filho_a_dependente_era_na_data_do_obito.elementos}${decisao_do_inss_31.elementos}${tipo_do_processo.sintese}${admissibilidade.relatorio}</p><p>O INSS apresentou contrarrazões remissivas e subiram os autos a esta Corte.${parecer_pericia_medica_federal.recurso}${parecer_pericia_medica_federal.diligencias}${21_parecer_pericia_medica_federal.diligencias}${21_acrescimos_legais_ao_periodo_de_graca.21qualidadediligencia}</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
+            id: 'relatorio',
+            titulo: 'Relatório',
+            texto: '<p>${votos_rapidos.relatorio}${tipo_do_processo.introducao}${tipo_do_processo.complemento1}${tipo_do_processo.recorrente}${tipo_do_processo.complemento2}${tipo_do_processo.recorrido}${decisao_do_inss_31.complemento3}${decisao_do_inss_21.complemento3}${procurador.relatorio}${decisao_do_inss_21.elementos}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.elementos_qualidade}${21_qualidade_de_segurado_-_prestacao_recebida.elementos_qualidade}${21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como.elementos}${21_sobre_as_provas_de_uniao_estavel__dependencia_economica.elementos}${21_documento_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_2_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_3_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_4_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_5_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_6_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_7_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_8_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_9_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_10_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_o_filho_a_dependente_era_na_data_do_obito.elementos}${decisao_do_inss_31.elementos}${tipo_do_processo.sintese}${admissibilidade.relatorio}${tipo_do_processo.contrarrazoes}${parecer_pericia_medica_federal.diligencias}${31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii.elementos_qualidade}${31_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_antes_da_dii_ocorreu_como.elementos}${31_sobre_a_carencia_no_evento_gerador_dii.elementos_carencia}${21_parecer_pericia_medica_federal.diligencias}${21_acrescimos_legais_ao_periodo_de_graca.21qualidadediligencia}</p><p>${tipo_do_processo.fechamento}</p>',
         },
         {
-            id: 'gerador_de_acordao',
-            titulo: 'Gerador de Acórdão',
-            texto: '<p>${votos_rapidos.voto}${decisao_ro.voto_introducao}${admissibilidade.voto}${especie_ro.merito}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.merito_qualidade}${decisao_do_inss_21.merito}${21_qualidade_de_segurado_-_prestacao_recebida.merito_qualidade}${parecer_pericia_medica_federal.merito}${21_parecer_pericia_medica_federal.merito}</p><p><strong>CASO CONCRETO</strong></p><p>…${21_acrescimos_legais_ao_periodo_de_graca.21qualidadecasosconcretosacrescimo}${parecer_pericia_medica_federal.casoConcreto}${21_parecer_pericia_medica_federal.casoconcreto}${decisao_ro.conclusao}</p><p>&nbsp;</p>',
+            id: 'voto',
+            titulo: 'Voto',
+            texto: '<p>${votos_rapidos.voto}${decisao_ro.voto_introducao}${admissibilidade.voto}${especie_ro.merito}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.merito_qualidade}${decisao_do_inss_21.merito}${21_qualidade_de_segurado_-_prestacao_recebida.merito_qualidade}${31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii.merito_qualidade}${parecer_pericia_medica_federal.merito}${21_parecer_pericia_medica_federal.merito}${21_acrescimos_legais_ao_periodo_de_graca.21qualidadecasosconcretosacrescimo}${parecer_pericia_medica_federal.casoconcreto}${21_parecer_pericia_medica_federal.casoconcreto}${decisao_ro.conclusao}</p><p>&nbsp;</p>',
         },
         {
-            id: 'gerador_de_acordao',
-            titulo: 'Gerador de Acórdão',
+            id: 'ementa',
+            titulo: 'Ementa',
             texto: '<p>${votos_rapidos.ementa}${tipo_do_processo.ementa}${admissibilidade.ementa}${especie_ro.ementa}${decisao_do_inss_21.ementa}${parecer_pericia_medica_federal.ementa}${21_parecer_pericia_medica_federal.ementa}${decisao_ro.ementa}</p>',
         },
     ],
