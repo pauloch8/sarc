@@ -4,9 +4,13 @@
  */
 
 import type { Config } from '@jest/types';
+import { resolve } from 'path';
+
+const root = resolve(__dirname);
 
 const config: Config.InitialOptions = {
     // roots: ['<rootDir>/tests'],
+    rootDir: root,
     displayName: 'testes-de-unidade',
     testMatch: ['<rootDir>/src/**/*.(spec|test).ts'],
     testEnvironment: 'jsdom',
