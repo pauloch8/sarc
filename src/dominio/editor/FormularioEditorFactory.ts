@@ -60,6 +60,7 @@ export class FormularioEditorFactory implements IFormularioEditorFactory {
         // criar Lista de Modelos
         const itensModelos = especificacao.listaModelos.map((item, indice) => {
             const id = new IdFormulario(item.id);
+            const titulo = new Titulo(item.titulo);
             const textoModelo = new TextoModelo(
                 item.texto,
                 this.removeHtml,
