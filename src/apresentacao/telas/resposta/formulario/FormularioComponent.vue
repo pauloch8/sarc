@@ -44,10 +44,12 @@ export default defineComponent({
 
 <template>
     <div>
-        <h1>{{ esteFormulario.getTitulo() }}</h1>
-        <h2 v-if="esteFormulario.getSubtitulo()">
-            {{ esteFormulario.getSubtitulo() }}
-        </h2>
+        <header class="headerFormulario">
+            <h1>{{ esteFormulario.getTitulo() }}</h1>
+            <h2 v-if="esteFormulario.getSubtitulo()">
+                {{ esteFormulario.getSubtitulo() }}
+            </h2>
+        </header>
 
         <TransitionGroup tag="QuestaoOpcoes">
             <div
@@ -74,6 +76,9 @@ export default defineComponent({
 </template>
 
 <style scoped>
+.headerFormulario {
+    margin-top: 30px;
+}
 .v-enter-active {
     transition: all 0.3s ease-out 0.3s;
 }
