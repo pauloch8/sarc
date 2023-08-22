@@ -34,7 +34,7 @@ export default defineComponent({
         // carrega o editor
         // TODO: carregar do id passado por query string
         const especificacao =
-            especificacaoRepository.carregar('gerador_de_acordao');
+            especificacaoRepository.carregar('programa_de_votos');
         const editor =
             formularioEditorFactory.criarDaEspecificacao(especificacao);
 
