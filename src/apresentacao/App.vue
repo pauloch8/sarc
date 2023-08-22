@@ -8,22 +8,6 @@ export default defineComponent({
 </script>
 
 <template>
-    <header class="container">
-        <nav>
-            <ul>
-                <li>
-                    <strong>SARC</strong>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <router-link to="/">Resposta</router-link>
-                    <router-link to="/editor">Editor</router-link>
-                    <router-link to="/ckeditor">CkEditor</router-link>
-                </li>
-            </ul>
-        </nav>
-    </header>
     <main class="container">
         <router-view />
     </main>
