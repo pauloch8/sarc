@@ -5,12 +5,12 @@ import TelaRespostaVue from '../telas/resposta/TelaResposta.vue';
 
 const routes: Array<RouteRecordRaw> = [
     {
-        path: '/',
+        path: '/sarc',
         name: 'resposta',
         component: TelaRespostaVue,
     },
     {
-        path: '/editor',
+        path: '/sarc/editor',
         name: 'editor',
         component: EditorViewVue,
     },
