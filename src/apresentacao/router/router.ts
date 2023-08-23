@@ -5,19 +5,18 @@ import TelaRespostaVue from '../telas/resposta/TelaResposta.vue';
 
 const routes: Array<RouteRecordRaw> = [
     {
+        path: '/',
+        redirect: { name: 'Home' },
+    },
+    {
         path: '/sarc',
-        name: 'resposta',
+        name: 'Home',
         component: TelaRespostaVue,
     },
     {
         path: '/sarc/editor',
         name: 'editor',
         component: EditorViewVue,
-    },
-    {
-        path: '/ckeditor',
-        name: 'ckeditor',
-        component: TelaCkEditorVue,
     },
 ];
 
