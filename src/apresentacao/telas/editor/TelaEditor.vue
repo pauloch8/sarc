@@ -63,9 +63,9 @@ export default defineComponent({
 </template>
 
 <style>
-div {
+/* div {
     user-select: none;
-}
+} */
 
 .emEdicao {
     border-top-color: #0f3d5d;
