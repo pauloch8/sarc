@@ -49,7 +49,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'relatorio',
-                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão proferida pelo Instituto Nacional do Seguro Social – INSS - em requerimento de prestação previdenciária.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa e pleiteia o pagamento da prestação.</p><p>Ingressou com ação judicial ${n_acao_judicial} com mesmo objeto deste recurso administrativo. Após análise, é inequívoca a similaridade da <i>causa petendi</i> entre o processo administrativo e judicial.</p>',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão proferida pelo Instituto Nacional do Seguro Social – INSS - em requerimento de prestação previdenciária.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa e pleiteia o pagamento da prestação.</p><p>Ingressou com ação judicial ${n_acao_judicial} com mesmo objeto deste recurso administrativo. Após análise, é inequívoca a similaridade da <i>causa petendi</i> entre o processo administrativo e judicial.</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
                         },
                         {
                             categoria: 'voto',
@@ -110,11 +110,11 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'relatorio',
-                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão proferida pelo Instituto Nacional do Seguro Social – INSS - em requerimento de prestação previdenciária.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa e pleiteia o pagamento da prestação.</p><p>Verificou-se que a prestação foi concedida pelo INSS sob o nº ${nb_concedido}.</p>',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão proferida pelo Instituto Nacional do Seguro Social – INSS - em requerimento de prestação previdenciária.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa e pleiteia o pagamento da prestação.</p><p>Verificou-se que a prestação foi concedida pelo INSS sob o nº ${nb_concedido}.</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
                         },
                         {
                             categoria: 'voto',
-                            texto: '<p><strong>MÉRITO</strong></p><p>É a ordem na Portaria Ministerial MTP nº 4.061/2022:</p><p>“<i>Art. 66. O INSS e a SPREV(FAP/RPPS), enquanto não ocorrida a decadência, poderão reconhecer o direito do interessado e reformar suas próprias decisões, observado o seguinte procedimento:</i></p><p><i>I - quando o reconhecimento ocorrer antes do encaminhamento do Recurso Ordinário ao CRPS, o INSS e a SPREV (FAP/RPPS) deixarão de enviar o recurso à Unidade Julgadora competente; e</i></p><p><i>II - quando o reconhecimento ocorrer após a chegada do recurso no CRPS, mesmo que em fase de diligência ou após o julgamento, o INSS e a SPREV (FAP/RPPS), deverão encaminhar os autos à respectiva Unidade Julgadora, devidamente instruído com a comprovação da reforma de sua decisão e do reconhecimento do direito do interessado, para julgamento, se este ainda não tiver ocorrido, ou para que seja proferida nova decisão, se for o caso.”</i></p><p><strong>CONCLUSÃO</strong></p><p>Tendo o direito sido reconhecido integralmente pela Autarquia Previdenciária, voto por NÃO CONHECER DO RECURSO, a fim de ratificar a decisão da Autarquia Previdenciária.</p>',
+                            texto: '<p><strong>MÉRITO</strong></p><p>É a ordem na Portaria Ministerial MTP nº 4.061/2022:</p><p>“<i>Art. 66. O INSS e a SPREV(FAP/RPPS), enquanto não ocorrida a decadência, poderão reconhecer o direito do interessado e reformar suas próprias decisões, observado o seguinte procedimento:</i></p><p><i>I - quando o reconhecimento ocorrer antes do encaminhamento do Recurso Ordinário ao CRPS, o INSS e a SPREV (FAP/RPPS) deixarão de enviar o recurso à Unidade Julgadora competente; e</i></p><p><i>II - quando o reconhecimento ocorrer após a chegada do recurso no CRPS, mesmo que em fase de diligência ou após o julgamento, o INSS e a SPREV (FAP/RPPS), deverão encaminhar os autos à respectiva Unidade Julgadora, devidamente instruído com a comprovação da reforma de sua decisão e do reconhecimento do direito do interessado, para julgamento, se este ainda não tiver ocorrido, ou para que seja proferida nova decisão, se for o caso.”</i></p><p><strong>CONCLUSÃO</strong></p><p>Tendo o direito sido reconhecido integralmente pela Autarquia Previdenciária, voto por EXTINGUIR O PROCESSO COM RESOLUÇÃO DO MÉRITO, a fim de ratificar a decisão da Autarquia Previdenciária.</p>',
                         },
                         {
                             categoria: 'ementa',
@@ -126,21 +126,21 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'ro_-_esp_31_-_negar_provimento_-_pmf_contrario',
-                    titulo: 'RO - Esp 31 - Negar Provimento - PMF contrário',
+                    id: 'ro_-_esp_21_filho_maior_invalido_-_negar_provimento_-_materia_medica_-_nao_ha_novos_elementos',
+                    titulo: 'RO - Esp 21 (filho maior inválido) - Negar Provimento - Matéria médica - Não há novos elementos',
                     listaVariaveis: [],
                     listaTextos: [
                         {
                             categoria: 'relatorio',
-                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão do Auxílio Incapacidade Temporária acima citado que a considerou apto às atividades laborativas.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando e pleiteia o pagamento da prestação previdenciária.</p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.</p>',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão da Pensão por Morte Previdenciária acima citada que não considerou devida a continuidade da prestação ao filho após os 21 anos de idade ou emancipação.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando e pleiteia o pagamento da prestação previdenciária. Não apresentou novos documentos que justifiquem uma eventual invalidez ou deficiência mental intelectual ou grave.</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
                         },
                         {
                             categoria: 'voto',
-                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão de inexistir registro no processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p><strong>MÉRITO</strong></p><p>Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 2º do art. 33 da Portaria MTP nº 4.061/2022.</p><p>Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:</p><p>“<i>Art. 71. O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar <strong>incapacitado para o seu trabalho</strong> ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.</i><strong>” </strong>(grifo nosso)</p><p>No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.</p><p>Também, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.</p><p>Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio-doença, previsto no art. 59 da Lei 8.213/91, sendo improcedente o pedido.</p><p>Por ordem do inciso I do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão de inexistir registro no processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p><strong>MÉRITO</strong></p><p>A Pensão por Morte é benefício que independe do cumprimento de carência (artigo 26, inciso I, da Lei nº 8.213/91).</p><p>Entretanto, existem outros dois requisitos a serem preenchidos: a) que o pretendente à pensão seja dependente do segurado; e b) que o instituidor possua a qualidade de segurado no óbito.</p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, não há qualquer controvérsia, dispensando maiores considerações, pois foi reconhecida pelo INSS.</p><p>A lide reside na comprovação da qualidade de dependente. Vejamos a prolação do Decreto nº 3.048/99 sobre o tema:</p><p>“<i>Art. 16. São beneficiários do Regime Geral de Previdência Social, na condição de dependentes do segurado:I - o cônjuge, a companheira, o companheiro e o filho não emancipado, de qualquer condição, menor de vinte e um anos de idade <strong>ou inválido ou que tenha deficiência intelectual, mental ou grave</strong>;”&nbsp;</i></p><p><br>No caso em tela, a invalidez do filho maior de 21 anos não foi comprovada ante a não apresentação de documentos , razão pela qual não comprova a qualidade de dependente, não fazendo jus à prestação pleiteada no Art. 105 do Decreto nº 3.048/99.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>AUXÍLIO POR INCAPACIDADE TEMPORÁRIA PREVIDENCIÁRIO. RECURSO ORDINÁRIO. MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL. ARTIGO 71 DO DECRETO 3.048/99. RECURSO CONHECIDO E NÃO PROVIDO.</strong></p>',
+                            texto: '<p><strong>PENSÃO POR MORTE. RECURSO ORDINÁRIO. FILHO (A) MAIOR DE VINTE E UM ANOS PRECISA COMPROVAR A INVALIDEZ OU DEFICIÊNCIA MENTAL, INTELECTUAL OU GRAVE , CONFORME INCISO I DO ART. 16 DO DECRETO Nº 3.048/99. NÃO FORAM APRESENTADOS DOCUMENTOS CAPAZES DE MODIFICAR A DECISÃO RECORRIDA. RECURSO CONHECIDO E NÃO PROVIDO.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -176,21 +176,109 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'ro_-_esp_87_-_negar_provimento_-_pmf_nao_reconhece_a_deficiencia',
-                    titulo: 'RO - Esp 87 - Negar Provimento - PMF não reconhece a deficiência',
+                    id: 'ro_-_esp_31_-_negar_provimento_-_pmf_contraria',
+                    titulo: 'RO - Esp 31 - Negar Provimento - PMF contrária',
                     listaVariaveis: [],
                     listaTextos: [
                         {
                             categoria: 'relatorio',
-                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face do indeferimento do Benefício de Prestação Continuada da Assistência Social à Pessoa com Deficiência.</p><p>A parte recorrente submeteu-se o requerente à avaliação social e médica, às quais decidiram pela não comprovação da deficiência contida nos §§ 2º e 10 do art. 20 da Lei 8.742/93.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa e pleiteia a concessão do benefício.</p><p>A perícia médica efetuou a reanálise da avaliação elaborada pelo INSS e decidiu manter a pontuação apurada pelas avaliações social e médica do INSS.</p>',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão do Auxílio Incapacidade Temporária acima citado que a considerou apto às atividades laborativas.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando e pleiteia o pagamento da prestação previdenciária.</p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
                         },
                         {
                             categoria: 'voto',
-                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>MÉRITO</strong></p><p>A Constituição Federal instituiu o benefício assistencial ao deficiente e ao idoso nos seguintes termos:&nbsp;</p><p>“<i>Art. 203. A assistência social será prestada a quem dela necessitar, independentemente da contribuição à seguridade social, e tem por objetivos: (...)&nbsp;</i></p><p><i>V - a garantia de um salário mínimo de benefício mensal à pessoa portadora de deficiência e ao idoso que comprovem não possuir meios de prover à própria manutenção ou de tê-la provida por sua família, conforme dispuser a lei.</i>”</p><p>A Lei nº 8.742/1993 normatizou a matéria e fez constar:</p><p>“<i>Art. 20. O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família. (Redação dada pela Lei nº 12.435, de 2011)</i></p><p><i>(...)</i></p><p><i>§ 2º Para efeito de concessão do benefício de prestação continuada, considera-se pessoa com deficiência aquela que tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial, o qual, em interação com uma ou mais barreiras, pode obstruir sua participação plena e efetiva na sociedade em igualdade de condições com as demais pessoas. (Redação dada pela Lei nº 13.146, de 2015)&nbsp;</i></p><p><i>(…)</i></p><p><i>§ 10. Considera-se impedimento de longo prazo, para os fins do § 2o deste artigo, aquele que produza efeitos pelo prazo mínimo de 2 (dois) anos. (Inclído pela Lei nº 12.470, de 2011)”</i></p><p>O benefício assistencial previsto no artigo 203, V, da Constituição Federal atende situações de hipossuficiência envolvendo pessoa idosa e pessoa portadora de deficiência, incapazes de prover ao próprio sustento ou de tê-lo provido pela própria família. Pressupõe o preenchimento dos seguintes requisitos: a) <strong>condição de deficiente</strong> (incapacidade para o trabalho e para a vida independente) ou idoso (neste caso, considerando-se, desde 1º de janeiro de 2004, a idade de 65 anos); e b) <strong>situação de risco social</strong> (estado de miserabilidade, hipossuficiência econômica ou situação de desamparo) do recorrente e de sua família. Entende-se como incapaz de prover a sua manutenção, aquele cuja renda mensal "<i>per capita</i>" é igual ou inferior a ¼ (um quarto) do salário mínimo, como dispõe o § 3º, do art. 20, Lei nº 8.742/93.&nbsp;</p><p>No caso em tela, o INSS deferiu o requisito de situação de risco social, uma vez que a renda per capta do grupo familiar é menor que ¼ do salário mínimo vigente no requerimento do benefício.</p><p>Todavia, a análise social e médica verificou que o grau de deficiência constatado não cumpre o requisito de deficiência insculpido nos §§ 2º e 10 do art. 20 da Lei 8.742/93.</p><p>Ainda, as avaliações social e médica foram reanalisadas pela perícia médica desta Corte Administrativa, que por sua fez manteve a decisão autárquica.</p><p>Deste modo, não restam comprovados os requisitos relativos à deficiência.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão de inexistir registro no processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p><strong>MÉRITO</strong></p><p>Voto proferido após ser ouvida a Perícia Médica Federal, nos termos do § 2º do art. 33 da Portaria MTP nº 4.061/2022.</p><p>Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:</p><p>“<i>Art. 71. O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar <strong>incapacitado para o seu trabalho</strong> ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.</i><strong>” </strong>(grifo nosso)</p><p>No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.</p><p>Também, em parecer técnico devidamente fundamento, a Perícia Médica Federal verificou a inexistência da incapacidade laborativa.</p><p>Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio por incapacidade temporária, previsto no Art. 59 da Lei 8.213/91, sendo improcedente o pedido.</p><p>Por ordem do inciso I do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>AUXÍLIO POR INCAPACIDADE TEMPORÁRIA PREVIDENCIÁRIO. RECURSO ORDINÁRIO. MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL. ARTIGO 71 DO DECRETO 3.048/99. RECURSO CONHECIDO E NÃO PROVIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'fim do formulário',
+                    },
+                },
+                {
+                    id: 'ro_-_esp_31_-_negar_provimento_-_materia_medica_-_nao_ha_novos_elementos',
+                    titulo: 'RO - Esp 31 - Negar Provimento - Matéria médica - Não há novos elementos',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão do Auxílio Incapacidade Temporária acima citado que a considerou apto às atividades laborativas.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando e pleiteia o pagamento da prestação previdenciária. Não apresentou novos documentos.</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão de inexistir registro no processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p><strong>MÉRITO</strong></p><p>Sobre a lide em questão, dispõe o artigo 71 do Decreto n. 3.048/99:</p><p>“<i>Art. 71. O auxílio por incapacidade temporária será devido ao segurado que, uma vez cumprido, quando for o caso, o período de carência exigido, ficar <strong>incapacitado para o seu trabalho</strong> ou para a sua atividade habitual por mais de quinze dias consecutivos, conforme definido em avaliação médico-pericial.</i><strong>” </strong>(grifo nosso)</p><p>No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.</p><p>Também, no recurso administrativo interposto não foi apresentado qualquer elemento que pudesse modificar a decisão do INSS.</p><p>Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de auxílio por incapacidade temporária, previsto no Art. 59 da Lei 8.213/91, sendo improcedente o pedido.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>AUXÍLIO POR INCAPACIDADE TEMPORÁRIA. RECURSO ORDINÁRIO. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL. NÃO FORAM APRESENTADOS DOCUMENTOS CAPAZES DE MODIFICAR A DECISÃO RECORRIDA. ARTIGO 71 DO DECRETO 3.048/99. RECURSO CONHECIDO E NÃO PROVIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'fim do formulário',
+                    },
+                },
+                {
+                    id: 'ro_-_esp_32_-_negar_provimento_-_materia_medica_-_nao_ha_novos_elementos',
+                    titulo: 'RO - Esp 32 - Negar Provimento - Matéria médica - Não há novos elementos',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face da decisão da Aposentadoria por Incapacidade Permanente acima citada que a considerou apto às atividades laborativas.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando e pleiteia o pagamento da prestação previdenciária. Não apresentou novos documentos.</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão de inexistir registro no processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p><strong>MÉRITO</strong></p><p>Sobre a lide em questão, dispõe o artigo 43 do Decreto n. 3.048/99:</p><p>“<i>Art. 43. &nbsp;A aposentadoria por incapacidade permanente, uma vez cumprido o período de carência exigido, quando for o caso, será devida ao segurado que, em gozo ou não de auxílio por incapacidade temporária, <strong>for considerado incapaz para o trabalho e insuscetível de reabilitação para o exercício de atividade que lhe garanta a subsistência</strong>, que lhe será paga enquanto permanecer nessa condição..</i><strong>” </strong>(grifo nosso)</p><p>No caso dos autos, a pretensão da recorrente encontra obstáculo no preenchimento do requisito da incapacidade, pois, as perícias médicas realizadas concluíram pela inexistência de incapacidade laborativa, não havendo óbice para que a parte recorrente desenvolva suas atividades habituais.</p><p>Também, no recurso administrativo interposto não foi apresentado qualquer elemento que pudesse modificar a decisão do INSS.</p><p>Dessa forma, ausente o requisito específico da incapacidade laboral, não faz jus à percepção do benefício de aposentadoria, previsto no Art. 43 do Decreto nº 3.048/1999, sendo improcedente o pedido.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>APOSENTADORIA POR INCAPACIDADE PERMANENTE. RECURSO ORDINÁRIO. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL. NÃO FORAM APRESENTADOS DOCUMENTOS CAPAZES DE MODIFICAR A DECISÃO RECORRIDA. ARTIGO 43 DO DECRETO 3.048/99. RECURSO CONHECIDO E NÃO PROVIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'fim do formulário',
+                    },
+                },
+                {
+                    id: 'ro_-_esp_87_-_negar_provimento_-_deficiencia_-_pmf_contraria',
+                    titulo: 'RO - Esp 87 - Negar Provimento - Deficiência - PMF contrária',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face do indeferimento do Benefício de Prestação Continuada da Assistência Social à Pessoa Deficiente.</p><p>A parte recorrente submeteu-se o requerente à avaliação social e médica, às quais decidiram pela não comprovação da deficiência contida nos §§ 2º e 10 do art. 20 da Lei 8.742/93.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa pleiteando a concessão do benefício.</p><p>Sobem, por fim, os autos a esta Corte.</p><p>A perícia médica efetuou a reanálise da avaliação elaborada pelo INSS e decidiu manter a pontuação apurada pelas avaliações social e médica.</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão de inexistir registro no processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p><strong>MÉRITO</strong></p><p>O benefício assistencial previsto no artigo 203, V, da Constituição Federal atende situações de hipossuficiência envolvendo pessoa idosa e pessoa portadora de deficiência, incapazes de prover ao próprio sustento ou de tê-lo provido pela própria família. Pressupõe o preenchimento dos seguintes requisitos: a) <strong>condição de deficiente</strong> (incapacidade para o trabalho e para a vida independente) ou idoso (neste caso, considerando-se, desde 1º de janeiro de 2004, a idade de 65 anos); e b) <strong>situação de risco social</strong> (estado de miserabilidade, hipossuficiência econômica ou situação de desamparo) do recorrente e de sua família. Entende-se como incapaz de prover a sua manutenção, aquele cuja renda mensal "<i>per capita</i>" é inferior a ¼ (um quarto) do salário mínimo, como dispõe o § 3º, do art. 20, Lei nº 8.742/93.&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No caso em tela, o INSS deferiu o requisito de situação de risco social, uma vez que a renda per capta do grupo familiar é menor que ¼ do salário mínimo vigente no requerimento do benefício.</p><p>Todavia, a análise social e médica verificou que o grau de deficiência constatado não cumpre o requisito de deficiência insculpido nos §§ 2º e 10 do art. 20 da Lei 8.742/93.</p><p>Ainda, as avaliações social e médica foram reanalisadas pela perícia médica desta Corte Administrativa, que por sua fez manteve a decisão autárquica.</p><p>Deste modo, não restam comprovados os requisitos relativos à deficiência.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
                         },
                         {
                             categoria: 'ementa',
                             texto: '<p><strong>BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL À PESSOA COM DEFICIÊNCIA. RECURSO ORDINÁRIO. BENEFÍCIO INDEFERIDO POR NÃO COMPROVAR A DEFICIÊNCIA, NÃO PREENCHENDO OS REQUISITOS DOS § §2º E 10 ARTIGO 20 DA LEI 8.742/93. RECURSO CONHECIDO E NÃO PROVIDO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'fim do formulário',
+                    },
+                },
+                {
+                    id: 'ro_-_esp_87_-_negar_provimento_-_deficencia_-_nao_ha_novos_elementos',
+                    titulo: 'RO - Esp 87 - Negar Provimento - Deficência - Não há novos elementos',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'relatorio',
+                            texto: '<p>Trata-se de Recurso Ordinário interposto pela parte recorrente acima citada em face do indeferimento do Benefício de Prestação Continuada da Assistência Social à Pessoa Deficiente.</p><p>A parte recorrente submeteu-se o requerente à avaliação social e médica, às quais decidiram pela não comprovação da deficiência contida nos §§ 2º e 10 do art. 20 da Lei 8.742/93.</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa pleiteando a concessão do benefício.</p><p>Não foi juntado qualquer documento que possa modificar a decisão quanto ao reconhecimento da condição de deficiente.</p><p>Sobem, por fim, os autos a esta Corte.</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>',
+                        },
+                        {
+                            categoria: 'voto',
+                            texto: '<p>Não assiste razão à parte recorrente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é tempestivo em razão de inexistir registro no processo da ciência da parte recorrente, nos termos Art. 64 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p><strong>MÉRITO</strong></p><p>O benefício assistencial previsto no artigo 203, V, da Constituição Federal atende situações de hipossuficiência envolvendo pessoa idosa e pessoa portadora de deficiência, incapazes de prover ao próprio sustento ou de tê-lo provido pela própria família. Pressupõe o preenchimento dos seguintes requisitos: a) <strong>condição de deficiente</strong> (incapacidade para o trabalho e para a vida independente) ou idoso (neste caso, considerando-se, desde 1º de janeiro de 2004, a idade de 65 anos); e b) <strong>situação de risco social</strong> (estado de miserabilidade, hipossuficiência econômica ou situação de desamparo) do recorrente e de sua família. Entende-se como incapaz de prover a sua manutenção, aquele cuja renda mensal "<i>per capita</i>" é inferior a ¼ (um quarto) do salário mínimo, como dispõe o § 3º, do art. 20, Lei nº 8.742/93.&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No caso em tela, o INSS deferiu o requisito de situação de risco social, uma vez que a renda per capta do grupo familiar é menor que ¼ do salário mínimo vigente no requerimento do benefício.</p><p>Todavia, a análise social e médica verificou que o grau de deficiência constatado não cumpre o requisito de deficiência insculpido nos §§ 2º e 10 do art. 20 da Lei 8.742/93.</p><p>Também, no recurso administrativo interposto não foi apresentado qualquer elemento que pudesse modificar a decisão do INSS.</p><p>Deste modo, não restam comprovados os requisitos relativos à deficiência.</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONHECER DO RECURSO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>BENEFÍCIO DE PRESTAÇÃO CONTINUADA DA ASSISTÊNCIA SOCIAL À PESSOA COM DEFICIÊNCIA. RECURSO ORDINÁRIO. BENEFÍCIO INDEFERIDO POR NÃO COMPROVAR A DEFICIÊNCIA, NÃO PREENCHENDO OS REQUISITOS DOS § §2º E 10 ARTIGO 20 DA LEI 8.742/93. NÃO FORAM APRESENTADOS DOCUMENTOS CAPAZES DE MODIFICAR A DECISÃO RECORRIDA. RECURSO CONHECIDO E NÃO PROVIDO.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -320,12 +408,12 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'sim',
-                    titulo: 'Sim',
+                    id: 'sim_advogado_a',
+                    titulo: 'Sim, advogado (a)',
                     listaVariaveis: [
                         {
-                            id: 'nome',
-                            titulo: 'Nome do procurador',
+                            id: 'nome_do_advogado',
+                            titulo: 'Nome do advogado:',
                             tipo: 'texto',
                         },
                         {
@@ -337,11 +425,36 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'relatorio',
-                            texto: '<p>&nbsp;</p><p>A parte recorrente está devidamente representada por ${nome} (OAB nº ${oab}).</p>',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente está devidamente representada pelo (a) advogado (a) ${nome_do_advogado} (OAB nº ${oab}).</p>',
                         },
                     ],
                     ramificacao: {
                         irPara: 'tipo_do_processo',
+                    },
+                },
+                {
+                    id: 'sim_procurador',
+                    titulo: 'Sim, procurador',
+                    listaVariaveis: [
+                        {
+                            id: 'nome_do_procurador',
+                            titulo: 'Nome do procurador:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'cpf',
+                            titulo: 'CPF:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'relatorio',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente está devidamente representada por ${nome_do_procurador} (CPF nº ${cpf}).</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
                     },
                 },
             ],
@@ -1311,8 +1424,70 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'perda_da_qualidade_de_segurado',
-                    titulo: 'Perda da Qualidade de Segurado',
+                    id: 'ex-conjuge_nao_comprova_ajuda_financeira',
+                    titulo: 'Ex-cônjuge não comprova ajuda financeira',
+                    listaVariaveis: [
+                        {
+                            id: 'der',
+                            titulo: 'DER',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'nome_do_segurado_instituidor',
+                            titulo: 'Nome do segurado instituidor:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_do_obito',
+                            titulo: 'Data do óbito',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'data_do_casamento',
+                            titulo: 'Data do casamento:',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'folha_da_certidao_de_casamento',
+                            titulo: 'Folha da Certidão de Casamento:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_da_assinatura_da_declaracao_de_separacao_de_fato',
+                            titulo: 'Data da assinatura da declaração de separação de fato:',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'folha_da_declaracao_de_separacao_de_fato',
+                            titulo: 'Folha da Declaração de Separação de Fato:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu a Pensão por Morte em razão do ex-cônjuge não comprovar receber ajuda econômica ou financeira após a separação de fato ou judicial.</p>',
+                        },
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>O benefício em questão foi requerido em ${der} (DER).</p><p>O (a) segurado (a) instituidor (a), ${nome_do_segurado_instituidor}, veio a falecer em ${data_do_obito}.</p><p>Foi apresentada a Certidão de Casamento datada em ${data_do_casamento}, fl. ${folha_da_certidao_de_casamento}.</p><p>O INSS providenciou e juntou ao processo uma “declaração de separação de fato”, fl. ${folha_da_declaracao_de_separacao_de_fato} em que a parte interessada declarou, em ${data_da_assinatura_da_declaracao_de_separacao_de_fato}, estar separada de fato da pessoa falecida.</p>',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p>O principal ponto controverso reside na comprovação da qualidade do (a) dependente cônjuge após perder esta qualidade. Vejamos a prolação do Decreto nº 3.048/99 sobre o tema:</p><p>“<i>Art. 17. A perda da qualidade de dependente ocorre:</i><br><i>I - &nbsp;para o cônjuge, <strong>pelo divórcio ou pela separação judicial ou de fato</strong>, enquanto <strong>não lhe for assegurada a prestação de alimentos</strong>, pela anulação do casamento, pelo óbito ou por sentença judicial transitada em julgado;"</i></p><p>Observando o Decreto Regulamentador, é possível depreender que a separação de fato ou judicial caracterizam a perda da qualidade de dependente, bem como seu restabelecimento quando sobrevier alimentos.</p><p>Sobre o tema, é a jurisprudência consolidade do CRPS:</p><p><i>“ENUNCIADO 4</i><br><i>A comprovação de união estável e de dependência econômica, mediante ação judicial transitada em julgado, somente produzirá efeitos para fins previdenciários quando baseada em início de prova material contemporânea aos fatos, constantes nos autos do processo judicial ou administrativo.</i><br><i>I - A dependência econômica pode ser parcial, devendo, no entanto, representar um auxílio substancial, permanente e necessário, cuja falta acarretaria desequilíbrio dos meios de subsistência do dependente.</i><br><i>II - <strong>O recebimento de ajuda econômica ou financeira, sob qualquer forma, ainda que superveniente, poderá caracterizar a dependência econômica parcial, observados os demais elementos de prova no caso concreto</strong>.</i>”</p><p>Portanto, se superveniente a perda da qualidade de dependente sobrevier ajuda econômica ou financeira sob qualquer forma, deve ser restabelecido o vínculo de dependência.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;CÔNJUGE PERDE A QUALIDADE DE DEPENDENTE COM A SEPARAÇÃO DE FATO OU JUDICIAL, CONFORME INCISO I DO ART. 17 DO DECRETO Nº 3.048/99. QUALIDADE DE DEPENDENTE PODE SER RESTABELECIDA COM SUPERVENIENTE ALIMENTOS DEVIDOS PELO EX-CÔNJUGE, CONFORME ENUNCIADO 4, INCISO II, COM A AJUDA ECONÔMICA E FINANCEIRA SOB QUALQUER FORMA.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_foi_apresentado_documento_posterior_a_separacao_de_fato__judicial_que_comprova_o_restabelecimento_a_qualidade_de_dependente_conjuge_ou_companheiro_a',
+                    },
+                },
+                {
+                    id: 'falta_de_qualidade_de_segurado',
+                    titulo: 'Falta de qualidade de segurado',
                     listaVariaveis: [
                         {
                             id: 'der',
@@ -1378,6 +1553,304 @@ export const especificacao: EspecificacaoDTO = {
                         irPara: 'estado_civil',
                     },
                 },
+                {
+                    id: 'perda_da_qualidade_de_segurado',
+                    titulo: 'Perda da Qualidade de Segurado',
+                    listaVariaveis: [
+                        {
+                            id: 'der',
+                            titulo: 'DER',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'nome_do_segurado_instituidor',
+                            titulo: 'Nome do segurado instituidor:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_do_obito',
+                            titulo: 'Data do óbito',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu a Pensão por Morte em razão do (a) segurado (a) instituidor (a) não possuir a qualidade de segurado (a) na data do óbito.</p>',
+                        },
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>O benefício em questão foi requerido em ${der} (DER).</p><p>O (a) segurado (a) instituidor (a), ${nome_do_segurado_instituidor}, veio a falecer em ${data_do_obito}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como',
+                    },
+                },
+                {
+                    id: 'nao_apresentacao_de_documentos_falta_de_qualidade_de_dependente_-_companheirismo',
+                    titulo: 'Não apresentação de documentos (Falta de qualidade de dependente - companheirismo)',
+                    listaVariaveis: [
+                        {
+                            id: 'der',
+                            titulo: 'DER',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'nome_do_segurado_instituidor',
+                            titulo: 'Nome do segurado instituidor:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_do_obito',
+                            titulo: 'Data do óbito',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu a Pensão por Morte em razão da não apresentação de documentos que resultou em não comprovar a qualidade de dependente.</p>',
+                        },
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>O benefício em questão foi requerido em ${der} (DER).</p><p>O (a) segurado (a) instituidor (a), ${nome_do_segurado_instituidor}, veio a falecer em ${data_do_obito}.</p>',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p>O principal ponto controverso reside na comprovação da qualidade do (a) dependente companheiro (a) pela união estável. Vejamos a prolação do Decreto nº 3.048/99 sobre o tema:</p><p>“<i>Art. 22. &nbsp;A inscrição do dependente do segurado será promovida quando do requerimento do benefício a que tiver direito, mediante a apresentação dos seguintes documentos:&nbsp;</i><br><i>(…)</i><br><i>§ 3º &nbsp;Para comprovação do vínculo e da dependência econômica, conforme o caso, deverão ser apresentados, <strong>no mínimo, dois documentos</strong>, observado o disposto nos § 6º-A e § 8º do art. 16, e poderão ser aceitos, dentre outros:&nbsp;</i><br><i>I - certidão de nascimento de filho havido em comum;</i><br><i>II - certidão de casamento religioso;</i><br><i>III - declaração do imposto de renda do segurado, em que conste o interessado como seu dependente;</i><br><i>IV - disposições testamentárias;</i><br><i>VI - declaração especial feita perante tabelião;</i><br><i>VII - prova de mesmo domicílio;</i><br><i>VIII - prova de encargos domésticos evidentes e existência de sociedade ou comunhão nos atos da vida civil;</i><br><i>IX - procuração ou fiança reciprocamente outorgada;</i><br><i>X - conta bancária conjunta;</i><br><i>XI - registro em associação de qualquer natureza, onde conste o interessado como dependente do segurado;</i><br><i>XII - anotação constante de ficha ou livro de registro de empregados;</i><br><i>XIII - apólice de seguro da qual conste o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária;</i><br><i>XIV - ficha de tratamento em instituição de assistência médica, da qual conste o segurado como responsável;</i><br><i>XV - escritura de compra e venda de imóvel pelo segurado em nome de dependente;</i><br><i>XVI - declaração de não emancipação do dependente menor de vinte e um anos; ou</i><br><i>XVII - quaisquer outros que possam levar à convicção do fato a comprovar.</i><br><i>(…)</i><br><i>§ 14. &nbsp;Caso o dependente só possua um dos documentos a que se refere o § 3º produzido em período não superior a vinte e quatro meses anteriores à data do óbito ou do recolhimento à prisão, a comprovação de vínculo ou de dependência econômica para esse período poderá ser suprida por justificação administrativa, processada na forma prevista nos art. 142 ao art. 151."</i></p><p>Ainda normatiza o Decreto Previdenciário:</p><p><i>”Art. 16.</i><br><i>§ 6º-A &nbsp;As provas de união estável e de dependência econômica exigem início de prova material contemporânea dos fatos, <strong>produzido em período não superior aos vinte e quatro meses anteriores à data do óbito</strong> ou do recolhimento à prisão do segurado, não admitida a prova exclusivamente testemunhal, exceto na ocorrência de motivo de força maior ou caso fortuito, observado o disposto no § 2º do art. 143. ”&nbsp;</i></p><p>Observando o Decreto Regulamentador, é possível depreender que é necessária apenas a apresentação de ao menos dois documentos comprovadores da união estável e que tenham sido constituídos nos vinte e quatro meses anteriores ao óbito.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;PARA COMPROVAR A UNIÃO ESTÁVEL, É NECESSÁRIA A APRESENTAÇÃO DE, NO MÍNIMO, DOIS DOCUMENTOS, CONFORME § 3º DO ART. 22 DO DECRETO Nº 3.048/99. &nbsp;AINDA, SEGUNDO § 6º-A DO DECRETO, TAIS DOCUMENTOS PRECISAM SER PRODUZIDOS NOS VINTE E QUATRO MESES ANTERIORES AO ÓBITO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_as_provas_de_uniao_estavel__dependencia_economica',
+                    },
+                },
+                {
+                    id: 'nao_apresentacao_de_documentos_conjuge',
+                    titulo: 'Não apresentação de documentos (Cônjuge)',
+                    listaVariaveis: [
+                        {
+                            id: 'der',
+                            titulo: 'DER',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'nome_do_segurado_instituidor',
+                            titulo: 'Nome do segurado instituidor:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_do_obito',
+                            titulo: 'Data do óbito',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu a Pensão por Morte em razão da não apresentação de documentos que resultou em não comprovar a qualidade de dependente.</p>',
+                        },
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>O benefício em questão foi requerido em ${der} (DER).</p><p>O (a) segurado (a) instituidor (a), ${nome_do_segurado_instituidor}, veio a falecer em ${data_do_obito}.</p>',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p>O principal ponto controverso reside na comprovação da qualidade do (a) dependente cônjuge. Vejamos a prolação do Decreto nº 3.048/99 sobre o tema:</p><p>“<i>Art. 22. &nbsp;A inscrição do dependente do segurado será promovida quando do requerimento do benefício a que tiver direito, mediante a apresentação dos seguintes documentos:&nbsp;</i><br><i>I - para os dependentes preferenciais:</i><br><i>a) cônjuge e filhos - <strong>certidões de casamento</strong> e de nascimento;"</i></p><p>Observando o Decreto Regulamentador, é possível depreender que basta a apresentação de certidão de casamento para se comprovar a condição de cônjuge.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;PARA COMPROVAR A CONDIÇÃO DE CÔNJUGE BASTA APENAS A APRESENTAÇÃO DA CERTIDÃO DE CASAMENTO, CONFORME ALÍNEA “A)” DO INCISO I DO ART. 22 DO DECRETO Nº 3.048/99.&nbsp;</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_qual_a_situacao_em_que_nao_foi_comprovada_a_condicao_de_conjuge',
+                    },
+                },
+                {
+                    id: 'nao_apresentacao_de_documentos_perda_da_qualidade_de_segurado',
+                    titulo: 'Não apresentação de documentos (Perda da Qualidade de Segurado)',
+                    listaVariaveis: [
+                        {
+                            id: 'der',
+                            titulo: 'DER',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'nome_do_segurado_instituidor',
+                            titulo: 'Nome do segurado instituidor:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_do_obito',
+                            titulo: 'Data do óbito',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp; o qual indeferiu a Pensão por Morte em razão da não apresentação de documentos que resultou em não reconhecer a qualidade do (a) segurado (a) instituidor (a) na data do óbito.</p>',
+                        },
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>O benefício em questão foi requerido em ${der} (DER).</p><p>O (a) segurado (a) instituidor (a), ${nome_do_segurado_instituidor}, veio a falecer em ${data_do_obito}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como',
+                    },
+                },
+            ],
+        },
+        {
+            id: '21_qual_a_situacao_em_que_nao_foi_comprovada_a_condicao_de_conjuge',
+            tipo: 'opcao',
+            titulo: '(21) Qual a situação em que não foi comprovada a condição de cônjuge?',
+            opcoes: [
+                {
+                    id: 'nao_foi_apresentada_a_certidao_de_casamento_no_requerimento_inicial_nem_no_recurso',
+                    titulo: 'Não foi apresentada a Certidão de Casamento no requerimento inicial nem no recurso',
+                    listaTextos: [
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Não foi apresentada a Certidão de Casamento, embora o INSS tenha feito a exigência.</p>',
+                        },
+                        {
+                            categoria: 'razoes',
+                            texto: '<p>&nbsp;</p><p>Não foi juntada a Certidão de Casamento nem no recurso administrativo</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente não apresentou, nem no requerimento ao INSS nem no recurso administrativo, a Certidão de Casamento, razão pela qual não é possível comprovar a qualidade de dependente.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'nao_foi_apresentada_a_certidao_de_casamento_no_requerimento_inicial_mas_apenas_no_recurso',
+                    titulo: 'Não foi apresentada a Certidão de Casamento no requerimento inicial, mas apenas no recurso',
+                    listaVariaveis: [
+                        {
+                            id: 'data_do_casamento',
+                            titulo: 'Data do Casamento:',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'razoes',
+                            texto: '<p>&nbsp;</p><p>Foi apresentada no recurso a Certidão de Casamento datada em ${data_do_casamento}.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente apresentou a Certidão de Casamento, o que confirma seu vínculo de dependência desde ${data_do_casamento}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'foi_apresentada_a_declaracao_de_separacao_de_fato',
+                    titulo: 'Foi apresentada a declaração de separação de fato',
+                    listaVariaveis: [
+                        {
+                            id: 'data_do_casamento',
+                            titulo: 'Data do Casamento:',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'folha_da_certidao_de_casamento',
+                            titulo: 'Folha da Certidão de Casamento:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_da_assinatura_da_declaracao_de_separacao_de_fato',
+                            titulo: 'Data da assinatura da declaração de separação de fato',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'folha_da_declaracao_de_separacao_de_fato',
+                            titulo: 'Folha da Declaração de Separação de Fato:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Foi apresentada a Certidão de Casamento datada em ${data_do_casamento}, fl. ${folha_da_certidao_de_casamento}.</p><p>O INSS providenciou e juntou ao processo uma “declaração de separação de fato”, fl. ${folha_da_declaracao_de_separacao_de_fato} em que a parte interessada declarou, em ${data_da_assinatura_da_declaracao_de_separacao_de_fato}, estar separada de fato da pessoa falecida.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_foi_apresentado_documento_posterior_a_separacao_de_fato__judicial_que_comprova_o_restabelecimento_a_qualidade_de_dependente_conjuge_ou_companheiro_a',
+                    },
+                },
+                {
+                    id: 'inss_presumiu_a_separacao_de_fato_ante_a_nao_apresentacao_da_declaracao_de_separacao_de_fato__pela_parte_interessada',
+                    titulo: 'INSS presumiu a separação de fato ante a não apresentação da "declaração de separação de fato " pela parte interessada',
+                    listaVariaveis: [
+                        {
+                            id: 'data_do_casamento',
+                            titulo: 'Data do Casamento:',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'folha',
+                            titulo: 'Folha',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Foi apresentada a Certidão de Casamento datada em ${data_do_casamento}, fl. ${folha}.</p><p>No entanto, o INSS solicitou uma declaração para confirmar se a requerente estaria ou não separada de fato, o que não foi apresentado pela segurada.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p><br>&nbsp;</p><p>A parte recorrente é comprovadamente cônjuge.&nbsp;</p><p>O INSS se excede ao exigir a declaração de não separação de fato, pois presume a falta de boa-fé do requerente. Isso, por si só, viola o inciso II do Art. 4º da Lei nº 9.784/99.</p><p>A diligência é tão absurda que a não apresentação da declaração não poderia ensejar na interpretação de que não seria cônjuge, como se vê na Lei nº 9.784/99:</p><p><i>“Art. 27. O desatendimento da intimação não importa o reconhecimento da verdade dos fatos, nem a renúncia a direito pelo administrado.</i>”</p><p>Ora, se a requerente apresenta uma certidão de casamento sem averbação de divórcio, é porque se declara casada até o momento da apresentação deste. Do contrário, estaria diante do crime de estelionato previdenciário previsto no Art. 171 do Código Penal.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'foi_apresentada_ertidao_de_casamento_mas_tem_averbacao_de_divocio_ou_separacao_judicial',
+                    titulo: 'Foi apresentada ertidão de Casamento, mas tem averbação de divócio ou separação judicial',
+                    listaVariaveis: [
+                        {
+                            id: 'data_do_casamento',
+                            titulo: 'Data do Casamento:',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'data_da_separacao_judicial_ou_divorcio',
+                            titulo: 'Data da separação judicial ou divórcio:',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'folha_da_certidao_de_casamento',
+                            titulo: 'Folha da Certidão de Casamento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>Foi apresentada a Certidão de Casamento datada em ${data_do_casamento}, fl. ${folha_da_certidao_de_casamento}, em que consta separação judicial / divórcio em ${data_da_separacao_judicial_ou_divorcio}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
             ],
         },
         {
@@ -1396,6 +1869,14 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'elementos',
                             texto: '<p>&nbsp;</p><p>Não houve apresentação de documentos aptos a comprovar a união estável ou a dependência econômica, e o INSS não soliciou, de forma adequada e esclarecedora, a apresentação de tais provas.</p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente não juntou o mínimo de dois documentos para comprovar a união estável, como requer o § 3º do Art. 22 do Decreto nº 3.048/99, razão pela qual não fica comprovada a união estável, nem a condição de dependente.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;NÃO FORAM APRESENTADOS O MÍNIMO DE DOIS DOCUMENTOS, MOTIVO PELO QUAL NÃO SE COMPROVA A QUALIDADE DE DEPENDENTE.</strong></p>',
+                        },
                     ],
                     ramificacao: {
                         irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
@@ -1409,6 +1890,14 @@ export const especificacao: EspecificacaoDTO = {
                         {
                             categoria: 'elementos',
                             texto: '<p>&nbsp;</p><p>Não houve apresentação de documentos aptos a comprovar a união estável ou a dependência econômica, embora o INSS tenha emitido Carta de Exigência e solicitado a apresentação de tais provas.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente não juntou o mínimo de dois documentos para comprovar a união estável, como requer o § 3º do Art. 22 do Decreto nº 3.048/99, razão pela qual não fica comprovada a união estável, nem a condição de dependente.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;NÃO FORAM APRESENTADOS O MÍNIMO DE DOIS DOCUMENTOS, MOTIVO PELO QUAL NÃO SE COMPROVA A QUALIDADE DE DEPENDENTE.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -1427,10 +1916,594 @@ export const especificacao: EspecificacaoDTO = {
             ],
         },
         {
+            id: '21_foi_apresentado_documento_posterior_a_separacao_de_fato__judicial_que_comprova_o_restabelecimento_a_qualidade_de_dependente_conjuge_ou_companheiro_a',
+            tipo: 'opcao',
+            titulo: '(21) Foi apresentado documento posterior a separação de fato / judicial que comprova o restabelecimento a qualidade de dependente cônjuge ou companheiro (a)?',
+            opcoes: [
+                {
+                    id: 'nao_foi_apresentado_qualquer_documento',
+                    titulo: 'Não foi apresentado qualquer documento',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente não apresentou qualquer documento com data posterior a separação de fato que indique o retorno à vida conjugal.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Como mencionado no Relatório, a parte recorrente não apresentou qualquer documento com data posterior a separação de fato que indique o retorno à vida conjugal, como os elencados no § 3º do Art. 22 do Decreto nº 3.048/99, razão pela qual não fica restabelecida a qualidade de dependente após a perda ocorrida na separação de fato ou judicial, conforme inciso II do Enunciado 4 do CRPS.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;A PARTE RECORRENTE NÃO APRESENTOU QUALQUER DOCUMENTO QUE COMPROVE O RESTABELECIMENTO DA VIDA CONJUGAL, CONFORME REQUER O INCISO II DO ENUNCIADO 4 DO CRPS.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'foi_apresentado_documento_suficiente',
+                    titulo: 'Foi apresentado documento suficiente',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Como mencionado no Relatório, a parte recorrente apresentou documento com data posterior a separação de fato que comprova o retorno à vida conjugal, como os elencados no § 3º do Art. 22 do Decreto nº 3.048/99, razão pela qual <strong>fica restabelecida a qualidade de dependente</strong> após a perda ocorrida na separação de fato ou judicial, conforme inciso II do Enunciado 4 do CRPS.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;A PARTE RECORRENTE APRESENTOU DOCUMENTO QUE COMPROVA O RESTABELECIMENTO DA VIDA CONJUGAL, CONFORME REQUER O INCISO II DO ENUNCIADO 4 DO CRPS, RAZÃO PELA QUAL DEVE SER RECONHECIDA COMO DEPENDENTE</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
+            id: '21_documento_de_restabelecimento_de_qualidade_de_dependente_conjuge__companheiro_a_apresentado',
+            tipo: 'opcao',
+            titulo: '(21) Documento de restabelecimento de qualidade de dependente cônjuge / companheiro (a) apresentado:',
+            opcoes: [
+                {
+                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
+                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'apolice_de_seguro',
+                    titulo: 'Apólice de seguro',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'certidao_de_nascimento_de_filho_havido_em_comum',
+                    titulo: 'Certidão de nascimento de filho havido em comum',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Certidão de nascimento de filho havido em comum para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'declaracao_do_imposto_de_renda_do_segurado',
+                    titulo: 'Declaração do imposto de renda do segurado',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Declaração do imposto de renda do segurado instituidor em que consta a parte recorrente como seu dependente para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'disposicoes_testamentarias',
+                    titulo: 'Disposições testamentárias',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Disposições testamentárias do ano de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'procuracao_ou_fianca_reciprocamente_outorgada',
+                    titulo: 'Procuração ou fiança reciprocamente outorgada',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Procuração reciprocamente outorgada para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'registro_em_associacao_de_qualquer_natureza',
+                    titulo: 'Registro em associação de qualquer natureza',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+                {
+                    id: 'outro',
+                    titulo: 'Outro',
+                    listaVariaveis: [
+                        {
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar o restabelecimento da qualidade de dependente de cônjuge ou companheiro (a), após a separação de fato ou judicial, foi apresentado (a) o (a) ${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
             id: '21_documento_de_uniao_estavel__dependencia_economica_apresentado',
             tipo: 'opcao',
             titulo: '(21) Documento de união estável / dependência econômica apresentado:',
             opcoes: [
+                {
+                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
+                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+                    },
+                },
+                {
+                    id: 'apolice_de_seguro',
+                    titulo: 'Apólice de seguro',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+                    },
+                },
+                {
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+                    },
+                },
                 {
                     id: 'certidao_de_nascimento_de_filho_havido_em_comum',
                     titulo: 'Certidão de nascimento de filho havido em comum',
@@ -1457,8 +2530,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'certidao_de_casamento_religioso',
-                    titulo: 'Certidão de casamento religioso',
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -1474,11 +2547,36 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Certidão de casamento religioso datado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
                         irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -1507,6 +2605,81 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+                    },
+                },
+                {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
                     id: 'disposicoes_testamentarias',
                     titulo: 'Disposições testamentárias',
                     listaVariaveis: [
@@ -1532,8 +2705,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'declaracao_especial_feita_perante_tabeliao',
-                    titulo: 'Declaração especial feita perante tabelião',
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -1549,7 +2722,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -1557,8 +2730,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'prova_de_mesmo_domicilio',
-                    titulo: 'Prova de mesmo domicílio',
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -1574,32 +2747,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
-                    },
-                },
-                {
-                    id: 'prova_de_encargos_domesticos',
-                    titulo: 'Prova de encargos domésticos',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -1632,8 +2780,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'conta_bancaria_conjunta',
-                    titulo: 'Conta bancária conjunta',
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -1649,7 +2797,32 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Conta bancária conjunta no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -1674,11 +2847,58 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
                         irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+                    },
+                },
+                {
+                    id: 'outro',
+                    titulo: 'Outro',
+                    listaVariaveis: [
+                        {
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
+            id: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+            tipo: 'opcao',
+            titulo: '(21) Documento 2 de união estável / dependência econômica apresentado:',
+            valorPadrao: 'nao_ha_mais_documentos',
+            opcoes: [
+                {
+                    id: 'nao_ha_mais_documentos',
+                    titulo: 'Não há mais documentos',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: '21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_',
                     },
                 },
                 {
@@ -1699,11 +2919,11 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
-                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -1724,16 +2944,16 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
-                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
+                        irPara: 'avançar',
                     },
                 },
                 {
-                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
-                    titulo: 'Ficha de tratamento em instituição de assistência médica',
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -1749,78 +2969,11 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
-                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
-                    },
-                },
-                {
-                    id: 'escritura_de_compra_e_venda_de_imovel',
-                    titulo: 'Escritura de compra e venda de imóvel',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
-                    },
-                },
-                {
-                    id: 'declaracao_de_nao_emancipacao_do_dependente',
-                    titulo: 'Declaração de não emancipação do dependente',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<p>&nbsp;</p><p>Para comprovar a união estável/dependência econômica, foram juntados os seguintes documentos:</p><ul><li>Declaração de não emancipação do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
-                    },
-                },
-            ],
-        },
-        {
-            id: '21_documento_2_de_uniao_estavel__dependencia_economica_apresentado',
-            tipo: 'opcao',
-            titulo: '(21) Documento 2 de união estável / dependência econômica apresentado:',
-            valorPadrao: 'nao_ha_mais_documentos',
-            opcoes: [
-                {
-                    id: 'nao_ha_mais_documentos',
-                    titulo: 'Não há mais documentos',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -1849,8 +3002,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'certidao_de_casamento_religioso',
-                    titulo: 'Certidão de casamento religioso',
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -1866,7 +3019,57 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Certidão de casamento religioso datado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -1899,6 +3102,56 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
                     id: 'disposicoes_testamentarias',
                     titulo: 'Disposições testamentárias',
                     listaVariaveis: [
@@ -1924,8 +3177,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'declaracao_especial_feita_perante_tabeliao',
-                    titulo: 'Declaração especial feita perante tabelião',
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -1941,7 +3194,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -1949,8 +3202,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'prova_de_mesmo_domicilio',
-                    titulo: 'Prova de mesmo domicílio',
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -1966,32 +3219,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'prova_de_encargos_domesticos',
-                    titulo: 'Prova de encargos domésticos',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2024,8 +3252,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'conta_bancaria_conjunta',
-                    titulo: 'Conta bancária conjunta',
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -2041,7 +3269,32 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Conta bancária conjunta no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2066,7 +3319,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2074,124 +3327,29 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
-                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    id: 'outro',
+                    titulo: 'Outro',
                     listaVariaveis: [
                         {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento:',
                             tipo: 'texto',
                         },
                         {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'data',
+                        },
+                        {
                             id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
+                            titulo: 'Ano do documento:',
                             tipo: 'texto',
                         },
                     ],
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'apolice_de_seguro',
-                    titulo: 'Apólice de seguro',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
-                    titulo: 'Ficha de tratamento em instituição de assistência médica',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'escritura_de_compra_e_venda_de_imovel',
-                    titulo: 'Escritura de compra e venda de imóvel',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'declaracao_de_nao_emancipacao_do_dependente',
-                    titulo: 'Declaração de não emancipação do dependente',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2212,7 +3370,82 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                        irPara: '21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_',
+                    },
+                },
+                {
+                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
+                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'apolice_de_seguro',
+                    titulo: 'Apólice de seguro',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -2241,8 +3474,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'certidao_de_casamento_religioso',
-                    titulo: 'Certidão de casamento religioso',
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -2258,7 +3491,57 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Certidão de casamento religioso datado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2291,6 +3574,56 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
                     id: 'disposicoes_testamentarias',
                     titulo: 'Disposições testamentárias',
                     listaVariaveis: [
@@ -2316,8 +3649,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'declaracao_especial_feita_perante_tabeliao',
-                    titulo: 'Declaração especial feita perante tabelião',
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -2333,7 +3666,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2341,8 +3674,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'prova_de_mesmo_domicilio',
-                    titulo: 'Prova de mesmo domicílio',
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -2358,32 +3691,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'prova_de_encargos_domesticos',
-                    titulo: 'Prova de encargos domésticos',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2416,8 +3724,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'conta_bancaria_conjunta',
-                    titulo: 'Conta bancária conjunta',
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -2433,7 +3741,32 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Conta bancária conjunta no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2458,7 +3791,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2466,124 +3799,29 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
-                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    id: 'outro',
+                    titulo: 'Outro',
                     listaVariaveis: [
                         {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento:',
                             tipo: 'texto',
                         },
                         {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'data',
+                        },
+                        {
                             id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
+                            titulo: 'Ano do documento:',
                             tipo: 'texto',
                         },
                     ],
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'apolice_de_seguro',
-                    titulo: 'Apólice de seguro',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
-                    titulo: 'Ficha de tratamento em instituição de assistência médica',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'escritura_de_compra_e_venda_de_imovel',
-                    titulo: 'Escritura de compra e venda de imóvel',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'declaracao_de_nao_emancipacao_do_dependente',
-                    titulo: 'Declaração de não emancipação do dependente',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2604,7 +3842,82 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                        irPara: '21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_',
+                    },
+                },
+                {
+                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
+                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'apolice_de_seguro',
+                    titulo: 'Apólice de seguro',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -2633,8 +3946,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'certidao_de_casamento_religioso',
-                    titulo: 'Certidão de casamento religioso',
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -2650,7 +3963,57 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Certidão de casamento religioso datado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2683,6 +4046,56 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
                     id: 'disposicoes_testamentarias',
                     titulo: 'Disposições testamentárias',
                     listaVariaveis: [
@@ -2708,8 +4121,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'declaracao_especial_feita_perante_tabeliao',
-                    titulo: 'Declaração especial feita perante tabelião',
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -2725,7 +4138,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2733,8 +4146,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'prova_de_mesmo_domicilio',
-                    titulo: 'Prova de mesmo domicílio',
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -2750,32 +4163,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'prova_de_encargos_domesticos',
-                    titulo: 'Prova de encargos domésticos',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2808,8 +4196,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'conta_bancaria_conjunta',
-                    titulo: 'Conta bancária conjunta',
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -2825,7 +4213,32 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Conta bancária conjunta no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2850,7 +4263,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2858,124 +4271,29 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
-                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    id: 'outro',
+                    titulo: 'Outro',
                     listaVariaveis: [
                         {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento:',
                             tipo: 'texto',
                         },
                         {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'data',
+                        },
+                        {
                             id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
+                            titulo: 'Ano do documento:',
                             tipo: 'texto',
                         },
                     ],
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'apolice_de_seguro',
-                    titulo: 'Apólice de seguro',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
-                    titulo: 'Ficha de tratamento em instituição de assistência médica',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'escritura_de_compra_e_venda_de_imovel',
-                    titulo: 'Escritura de compra e venda de imóvel',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'declaracao_de_nao_emancipacao_do_dependente',
-                    titulo: 'Declaração de não emancipação do dependente',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -2996,7 +4314,82 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                        irPara: '21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_',
+                    },
+                },
+                {
+                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
+                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'apolice_de_seguro',
+                    titulo: 'Apólice de seguro',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -3025,8 +4418,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'certidao_de_casamento_religioso',
-                    titulo: 'Certidão de casamento religioso',
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3042,7 +4435,57 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Certidão de casamento religioso datado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3075,6 +4518,56 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
                     id: 'disposicoes_testamentarias',
                     titulo: 'Disposições testamentárias',
                     listaVariaveis: [
@@ -3100,8 +4593,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'declaracao_especial_feita_perante_tabeliao',
-                    titulo: 'Declaração especial feita perante tabelião',
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3117,7 +4610,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3125,8 +4618,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'prova_de_mesmo_domicilio',
-                    titulo: 'Prova de mesmo domicílio',
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3142,32 +4635,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'prova_de_encargos_domesticos',
-                    titulo: 'Prova de encargos domésticos',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3200,8 +4668,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'conta_bancaria_conjunta',
-                    titulo: 'Conta bancária conjunta',
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3217,7 +4685,32 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Conta bancária conjunta no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3242,7 +4735,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3250,124 +4743,29 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
-                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    id: 'outro',
+                    titulo: 'Outro',
                     listaVariaveis: [
                         {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento:',
                             tipo: 'texto',
                         },
                         {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'data',
+                        },
+                        {
                             id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
+                            titulo: 'Ano do documento:',
                             tipo: 'texto',
                         },
                     ],
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'apolice_de_seguro',
-                    titulo: 'Apólice de seguro',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
-                    titulo: 'Ficha de tratamento em instituição de assistência médica',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'escritura_de_compra_e_venda_de_imovel',
-                    titulo: 'Escritura de compra e venda de imóvel',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'declaracao_de_nao_emancipacao_do_dependente',
-                    titulo: 'Declaração de não emancipação do dependente',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3388,7 +4786,82 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                        irPara: '21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_',
+                    },
+                },
+                {
+                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
+                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'apolice_de_seguro',
+                    titulo: 'Apólice de seguro',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -3417,8 +4890,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'certidao_de_casamento_religioso',
-                    titulo: 'Certidão de casamento religioso',
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3434,7 +4907,57 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Certidão de casamento religioso datado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3467,6 +4990,56 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
                     id: 'disposicoes_testamentarias',
                     titulo: 'Disposições testamentárias',
                     listaVariaveis: [
@@ -3492,8 +5065,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'declaracao_especial_feita_perante_tabeliao',
-                    titulo: 'Declaração especial feita perante tabelião',
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3509,7 +5082,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3517,8 +5090,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'prova_de_mesmo_domicilio',
-                    titulo: 'Prova de mesmo domicílio',
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3534,32 +5107,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'prova_de_encargos_domesticos',
-                    titulo: 'Prova de encargos domésticos',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3592,8 +5140,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'conta_bancaria_conjunta',
-                    titulo: 'Conta bancária conjunta',
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3609,7 +5157,32 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Conta bancária conjunta no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3634,7 +5207,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3642,124 +5215,29 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
-                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    id: 'outro',
+                    titulo: 'Outro',
                     listaVariaveis: [
                         {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento:',
                             tipo: 'texto',
                         },
                         {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'data',
+                        },
+                        {
                             id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
+                            titulo: 'Ano do documento:',
                             tipo: 'texto',
                         },
                     ],
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'apolice_de_seguro',
-                    titulo: 'Apólice de seguro',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
-                    titulo: 'Ficha de tratamento em instituição de assistência médica',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'escritura_de_compra_e_venda_de_imovel',
-                    titulo: 'Escritura de compra e venda de imóvel',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'declaracao_de_nao_emancipacao_do_dependente',
-                    titulo: 'Declaração de não emancipação do dependente',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3780,7 +5258,82 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                        irPara: '21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_',
+                    },
+                },
+                {
+                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
+                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'apolice_de_seguro',
+                    titulo: 'Apólice de seguro',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -3809,8 +5362,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'certidao_de_casamento_religioso',
-                    titulo: 'Certidão de casamento religioso',
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3826,7 +5379,57 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Certidão de casamento religioso datado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3859,6 +5462,56 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
                     id: 'disposicoes_testamentarias',
                     titulo: 'Disposições testamentárias',
                     listaVariaveis: [
@@ -3884,8 +5537,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'declaracao_especial_feita_perante_tabeliao',
-                    titulo: 'Declaração especial feita perante tabelião',
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3901,7 +5554,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3909,8 +5562,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'prova_de_mesmo_domicilio',
-                    titulo: 'Prova de mesmo domicílio',
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -3926,32 +5579,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'prova_de_encargos_domesticos',
-                    titulo: 'Prova de encargos domésticos',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -3984,8 +5612,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'conta_bancaria_conjunta',
-                    titulo: 'Conta bancária conjunta',
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -4001,7 +5629,32 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Conta bancária conjunta no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4026,7 +5679,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4034,124 +5687,29 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
-                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    id: 'outro',
+                    titulo: 'Outro',
                     listaVariaveis: [
                         {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento:',
                             tipo: 'texto',
                         },
                         {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'data',
+                        },
+                        {
                             id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
+                            titulo: 'Ano do documento:',
                             tipo: 'texto',
                         },
                     ],
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'apolice_de_seguro',
-                    titulo: 'Apólice de seguro',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
-                    titulo: 'Ficha de tratamento em instituição de assistência médica',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'escritura_de_compra_e_venda_de_imovel',
-                    titulo: 'Escritura de compra e venda de imóvel',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'declaracao_de_nao_emancipacao_do_dependente',
-                    titulo: 'Declaração de não emancipação do dependente',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4172,7 +5730,82 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                        irPara: '21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_',
+                    },
+                },
+                {
+                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
+                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'apolice_de_seguro',
+                    titulo: 'Apólice de seguro',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -4201,8 +5834,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'certidao_de_casamento_religioso',
-                    titulo: 'Certidão de casamento religioso',
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -4218,7 +5851,57 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Certidão de casamento religioso datado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4251,6 +5934,56 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
                     id: 'disposicoes_testamentarias',
                     titulo: 'Disposições testamentárias',
                     listaVariaveis: [
@@ -4276,8 +6009,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'declaracao_especial_feita_perante_tabeliao',
-                    titulo: 'Declaração especial feita perante tabelião',
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -4293,7 +6026,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4301,8 +6034,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'prova_de_mesmo_domicilio',
-                    titulo: 'Prova de mesmo domicílio',
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -4318,32 +6051,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'prova_de_encargos_domesticos',
-                    titulo: 'Prova de encargos domésticos',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4376,8 +6084,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'conta_bancaria_conjunta',
-                    titulo: 'Conta bancária conjunta',
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -4393,7 +6101,32 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Conta bancária conjunta no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4418,7 +6151,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4426,124 +6159,29 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
-                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    id: 'outro',
+                    titulo: 'Outro',
                     listaVariaveis: [
                         {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento:',
                             tipo: 'texto',
                         },
                         {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'data',
+                        },
+                        {
                             id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
+                            titulo: 'Ano do documento:',
                             tipo: 'texto',
                         },
                     ],
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'apolice_de_seguro',
-                    titulo: 'Apólice de seguro',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
-                    titulo: 'Ficha de tratamento em instituição de assistência médica',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'escritura_de_compra_e_venda_de_imovel',
-                    titulo: 'Escritura de compra e venda de imóvel',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'declaracao_de_nao_emancipacao_do_dependente',
-                    titulo: 'Declaração de não emancipação do dependente',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4564,7 +6202,82 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                        irPara: '21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_',
+                    },
+                },
+                {
+                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
+                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'apolice_de_seguro',
+                    titulo: 'Apólice de seguro',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -4593,8 +6306,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'certidao_de_casamento_religioso',
-                    titulo: 'Certidão de casamento religioso',
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -4610,7 +6323,57 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Certidão de casamento religioso datado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4643,6 +6406,56 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
                     id: 'disposicoes_testamentarias',
                     titulo: 'Disposições testamentárias',
                     listaVariaveis: [
@@ -4668,8 +6481,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'declaracao_especial_feita_perante_tabeliao',
-                    titulo: 'Declaração especial feita perante tabelião',
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -4685,7 +6498,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4693,8 +6506,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'prova_de_mesmo_domicilio',
-                    titulo: 'Prova de mesmo domicílio',
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -4710,32 +6523,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'prova_de_encargos_domesticos',
-                    titulo: 'Prova de encargos domésticos',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4768,8 +6556,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'conta_bancaria_conjunta',
-                    titulo: 'Conta bancária conjunta',
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -4785,7 +6573,32 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Conta bancária conjunta no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4810,7 +6623,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4818,124 +6631,29 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
-                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    id: 'outro',
+                    titulo: 'Outro',
                     listaVariaveis: [
                         {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento:',
                             tipo: 'texto',
                         },
                         {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'data',
+                        },
+                        {
                             id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
+                            titulo: 'Ano do documento:',
                             tipo: 'texto',
                         },
                     ],
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'apolice_de_seguro',
-                    titulo: 'Apólice de seguro',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
-                    titulo: 'Ficha de tratamento em instituição de assistência médica',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'escritura_de_compra_e_venda_de_imovel',
-                    titulo: 'Escritura de compra e venda de imóvel',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'declaracao_de_nao_emancipacao_do_dependente',
-                    titulo: 'Declaração de não emancipação do dependente',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -4956,7 +6674,82 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
+                        irPara: '21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_',
+                    },
+                },
+                {
+                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
+                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'apolice_de_seguro',
+                    titulo: 'Apólice de seguro',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'certidao_de_casamento_religioso',
+                    titulo: 'Certidão de casamento religioso',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Certidão de casamento religioso datado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
                     },
                 },
                 {
@@ -4985,8 +6778,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'certidao_de_casamento_religioso',
-                    titulo: 'Certidão de casamento religioso',
+                    id: 'conta_bancaria_conjunta',
+                    titulo: 'Conta bancária conjunta',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -5002,7 +6795,57 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Certidão de casamento religioso datado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Conta bancária conjunta no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'decisaosentenca_da_justica_comum_estadual',
+                    titulo: 'Decisão/Sentença da justiça comum estadual',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Decisão da justiça comum estadual, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_de_nao_emancipacao_do_dependente',
+                    titulo: 'Declaração de não emancipação do dependente',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -5035,6 +6878,56 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
+                    id: 'declaracao_especial_feita_perante_tabeliao',
+                    titulo: 'Declaração especial feita perante tabelião',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'declaracao_particular_de_uniao_estavel_com_firma_reconhecida',
+                    titulo: 'Declaração particular de união estável com firma reconhecida',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Declaração particular de união estável com firma reconhecida no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
                     id: 'disposicoes_testamentarias',
                     titulo: 'Disposições testamentárias',
                     listaVariaveis: [
@@ -5060,8 +6953,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'declaracao_especial_feita_perante_tabeliao',
-                    titulo: 'Declaração especial feita perante tabelião',
+                    id: 'escritura_de_compra_e_venda_de_imovel',
+                    titulo: 'Escritura de compra e venda de imóvel',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -5077,7 +6970,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração especial feita perante tabelião (escritura pública de união estável) no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -5085,8 +6978,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'prova_de_mesmo_domicilio',
-                    titulo: 'Prova de mesmo domicílio',
+                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
+                    titulo: 'Ficha de tratamento em instituição de assistência médica',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -5102,32 +6995,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'prova_de_encargos_domesticos',
-                    titulo: 'Prova de encargos domésticos',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -5160,8 +7028,8 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'conta_bancaria_conjunta',
-                    titulo: 'Conta bancária conjunta',
+                    id: 'prova_de_encargos_domesticos',
+                    titulo: 'Prova de encargos domésticos',
                     listaVariaveis: [
                         {
                             id: 'folha_do_processo',
@@ -5177,7 +7045,32 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Conta bancária conjunta no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Prova de mencargos domésticos para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'prova_de_mesmo_domicilio',
+                    titulo: 'Prova de mesmo domicílio',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'ano_do_documento',
+                            titulo: 'Ano do documento',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'dependenteprova',
+                            texto: '<ul><li>Prova de mesmo domicílio para o ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -5202,7 +7095,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>Registro em associação onde consta a parte recorrente como dependente do segurado no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
@@ -5210,128 +7103,90 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'anotacao_constante_de_ficha_ou_livro_de_registro_de_empregados',
-                    titulo: 'Anotação constante de ficha ou livro de registro de empregados',
+                    id: 'outro',
+                    titulo: 'Outro',
                     listaVariaveis: [
                         {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
+                            id: 'descreva_sucintamente_o_documento',
+                            titulo: 'Descreva sucintamente o documento:',
                             tipo: 'texto',
                         },
                         {
+                            id: 'folha_do_processo',
+                            titulo: 'Folha do processo:',
+                            tipo: 'data',
+                        },
+                        {
                             id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
+                            titulo: 'Ano do documento:',
                             tipo: 'texto',
                         },
                     ],
                     listaTextos: [
                         {
                             categoria: 'dependenteprova',
-                            texto: '<ul><li>Anotação em de ficha de registro de empregados onde consta a parte recorrente como dependente do segurado no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            texto: '<ul><li>${descreva_sucintamente_o_documento} no período de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
                         },
                     ],
                     ramificacao: {
                         irPara: 'avançar',
                     },
                 },
+            ],
+        },
+        {
+            id: '21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_',
+            tipo: 'opcao',
+            titulo: '(21) É possível reconhecer a qualidade de dependente do (a) companheiro (a) ?',
+            opcoes: [
                 {
-                    id: 'apolice_de_seguro',
-                    titulo: 'Apólice de seguro',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
+                    id: 'sim_pois_ha_o_minimo_de_dois_documentos_sendo_ao_menos_um_deles_nos_ultimos_24_meses_anteriores_ao_obito',
+                    titulo: 'Sim, pois há o mínimo de dois documentos sendo ao menos um deles nos últimos 24 meses anteriores ao óbito.',
+                    listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Apólice de seguro onde consta o segurado como instituidor do seguro e a pessoa interessada como sua beneficiária no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Em virtude da parte recorrente juntar o mínimo de dois documentos que comprovam a união estável, como requer o § 3º do Art. 22 do Decreto nº 3.048/99, sendo ao menos um deles nos 24 meses próximos ao óbito, § 6º-A do Art. 16, fica comprovada a a união estável e a condição de dependente.</p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
                     },
                 },
                 {
-                    id: 'ficha_de_tratamento_em_instituicao_de_assistencia_medica',
-                    titulo: 'Ficha de tratamento em instituição de assistência médica',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
+                    id: 'nao_pois_embora_haja_o_minimo_de_dois_documentos_sao_anteriores_aos_24_meses_predecessores_ao_obito',
+                    titulo: 'Não, pois, embora haja o mínimo de dois documentos, são anteriores aos 24 meses predecessores ao óbito.',
+                    listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Ficha de tratamento em instituição de assistência médica onde consta o segurado como responsável, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Em que pese a parte recorrente juntar o mínimo de dois documentos que visam comprovar a união estável, como requer o § 3º do Art. 22 do Decreto nº 3.048/99, nenhum deles compõe o período dos 24 meses próximos ao óbito, segundo preceitua § 6º-A do Art. 16, razão pela qual não fica comprovada a união estável, nem a condição de dependente.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;APRESENTADOS O MÍNIMO DE DOIS DOCUMENTOS, PORÉM, NENHUM DELES COMPÕE O PERÍODO DE 24 MESES ANTERIORES AO ÓBITO, MOTIVO PELO QUAL NÃO SE COMPROVA A QUALIDADE DE DEPENDENTE.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
                     },
                 },
                 {
-                    id: 'escritura_de_compra_e_venda_de_imovel',
-                    titulo: 'Escritura de compra e venda de imóvel',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
+                    id: 'nao_pois_nao_possui_dois_documentos',
+                    titulo: 'Não, pois não possui dois documentos.',
+                    listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Escritura de compra e venda de imóvel pelo segurado em nome do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente não juntou o mínimo de dois documentos para comprovar a união estável, como requer o § 3º do Art. 22 do Decreto nº 3.048/99, razão pela qual não fica comprovada a união estável, nem a condição de dependente.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;NÃO FORAM APRESENTADOS O MÍNIMO DE DOIS DOCUMENTOS, MOTIVO PELO QUAL NÃO SE COMPROVA A QUALIDADE DE DEPENDENTE.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'declaracao_de_nao_emancipacao_do_dependente',
-                    titulo: 'Declaração de não emancipação do dependente',
-                    listaVariaveis: [
-                        {
-                            id: 'folha_do_processo',
-                            titulo: 'Folha do processo:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'ano_do_documento',
-                            titulo: 'Ano do documento',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'dependenteprova',
-                            texto: '<ul><li>Declaração de não emancipação do dependente, datada no ano de ${ano_do_documento}, fl. ${folha_do_processo}.</li></ul>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
+                        irPara: '21_sobre_a_qualidade_de_segurado_na_data_do_obito',
                     },
                 },
             ],
@@ -5515,12 +7370,12 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: '21_acrescimos_legais_ao_periodo_de_graca',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
-                    id: 'manteve_a_qualidade_de_segurado_empregado_domestivo',
-                    titulo: 'manteve a qualidade de segurado empregado doméstivo',
+                    id: 'manteve_a_qualidade_de_segurado_empregado_domestico',
+                    titulo: 'manteve a qualidade de segurado empregado doméstico',
                     listaVariaveis: [],
                     listaTextos: [
                         {
@@ -5537,7 +7392,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -5559,7 +7414,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -5581,7 +7436,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -5603,7 +7458,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -5623,8 +7478,8 @@ export const especificacao: EspecificacaoDTO = {
             titulo: '(21) Qualidade de segurado - Prestação recebida:',
             opcoes: [
                 {
-                    id: 'aposentadoria_por_tempo_de_contribuicao',
-                    titulo: 'Aposentadoria por Tempo de Contribuição',
+                    id: 'aposentadoria_especial',
+                    titulo: 'Aposentadoria Especial',
                     listaVariaveis: [
                         {
                             id: 'nb',
@@ -5640,52 +7495,19 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'elementos_qualidade',
-                            texto: '<p>&nbsp;</p><p>O <i>de cujus</i> recebia a prestação de Aposentadoria por Tempo de Contribuição nº ${nb} desde ${dib} até a data do óbito.</p>',
+                            texto: '<p>&nbsp;</p><p>O <i>de cujus</i> recebia a prestação de Aposentadoria Especial nº ${nb} desde ${dib} até a data do óbito.</p>',
                         },
                         {
                             categoria: 'casoconcreto',
-                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Está comprovado nos autos o óbito do segurado instituidor.&nbsp;</p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, não há qualquer controvérsia, dispensando maiores considerações, vez que era aposentado sob nº ${nb} no óbito.</p><p>A lide reside sobre a qualidade de dependente da parte recorrente.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Está comprovado nos autos o óbito do segurado instituidor.&nbsp;</p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, não há qualquer controvérsia, dispensando maiores considerações, vez que era beneficiário de aposentadoria especial sob nº ${nb} no óbito.</p><p>A lide reside sobre a qualidade de dependente da parte recorrente.</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;QUALIDADE DO SEGURADO INSTITUIDOR RECONHECIDA VISTO SER APOSENTADO POR TEMPO DE CONTRIBUIÇÃO NA DATA DO ÓBITO.</strong></p>',
+                            texto: '<p><strong>&nbsp;QUALIDADE DO SEGURADO INSTITUIDOR RECONHECIDA VISTO SER BENEFICIÁRIO DE APOSENTADORIA ESPECIAL NA DATA DO ÓBITO.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
-                    },
-                },
-                {
-                    id: 'auxilio_por_incapacidade_temporaria',
-                    titulo: 'Auxílio Por Incapacidade Temporária',
-                    listaVariaveis: [
-                        {
-                            id: 'nb',
-                            titulo: 'NB:',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'dib',
-                            titulo: 'DIB:',
-                            tipo: 'data',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'elementos_qualidade',
-                            texto: '<p>&nbsp;</p><p>O <i>de cujus</i> recebia a prestação de Auxílio por Incapacidade Temporária nº ${nb} desde ${dib} até a data do óbito.</p>',
-                        },
-                        {
-                            categoria: 'casoconcreto',
-                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Está comprovado nos autos o óbito do segurado instituidor.&nbsp;</p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, não há qualquer controvérsia, dispensando maiores considerações, vez que recebia benefício por incapacidade nº ${nb} no óbito.</p><p>A lide reside sobre a qualidade de dependente da parte recorrente.</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;QUALIDADE DO SEGURADO INSTITUIDOR RECONHECIDA VISTO SER BENEFICIÁRIO DE AUXÍLIO POR INCAPACIDADE TEMPORÁRIA NA DATA DO ÓBITO.</strong></p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: '21_acrescimos_legais_ao_periodo_de_graca',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -5718,7 +7540,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -5751,12 +7573,12 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
-                    id: 'aposentadoria_especial',
-                    titulo: 'Aposentadoria Especial',
+                    id: 'aposentadoria_por_tempo_de_contribuicao',
+                    titulo: 'Aposentadoria por Tempo de Contribuição',
                     listaVariaveis: [
                         {
                             id: 'nb',
@@ -5772,19 +7594,52 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'elementos_qualidade',
-                            texto: '<p>&nbsp;</p><p>O <i>de cujus</i> recebia a prestação de Aposentadoria Especial nº ${nb} desde ${dib} até a data do óbito.</p>',
+                            texto: '<p>&nbsp;</p><p>O <i>de cujus</i> recebia a prestação de Aposentadoria por Tempo de Contribuição nº ${nb} desde ${dib} até a data do óbito.</p>',
                         },
                         {
                             categoria: 'casoconcreto',
-                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Está comprovado nos autos o óbito do segurado instituidor.&nbsp;</p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, não há qualquer controvérsia, dispensando maiores considerações, vez que era beneficiário de aposentadoria especial sob nº ${nb} no óbito.</p><p>A lide reside sobre a qualidade de dependente da parte recorrente.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Está comprovado nos autos o óbito do segurado instituidor.&nbsp;</p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, não há qualquer controvérsia, dispensando maiores considerações, vez que era aposentado sob nº ${nb} no óbito.</p><p>A lide reside sobre a qualidade de dependente da parte recorrente.</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;QUALIDADE DO SEGURADO INSTITUIDOR RECONHECIDA VISTO SER BENEFICIÁRIO DE APOSENTADORIA ESPECIAL NA DATA DO ÓBITO.</strong></p>',
+                            texto: '<p><strong>&nbsp;QUALIDADE DO SEGURADO INSTITUIDOR RECONHECIDA VISTO SER APOSENTADO POR TEMPO DE CONTRIBUIÇÃO NA DATA DO ÓBITO.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
+                    },
+                },
+                {
+                    id: 'auxilio_por_incapacidade_temporaria',
+                    titulo: 'Auxílio por Incapacidade Temporária',
+                    listaVariaveis: [
+                        {
+                            id: 'nb',
+                            titulo: 'NB:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'dib',
+                            titulo: 'DIB:',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'elementos_qualidade',
+                            texto: '<p>&nbsp;</p><p>O <i>de cujus</i> recebia a prestação de Auxílio por Incapacidade Temporária nº ${nb} desde ${dib} até a data do óbito.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Está comprovado nos autos o óbito do segurado instituidor.&nbsp;</p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, não há qualquer controvérsia, dispensando maiores considerações, vez que recebia benefício por incapacidade nº ${nb} no óbito.</p><p>A lide reside sobre a qualidade de dependente da parte recorrente.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;QUALIDADE DO SEGURADO INSTITUIDOR RECONHECIDA VISTO SER BENEFICIÁRIO DE AUXÍLIO POR INCAPACIDADE TEMPORÁRIA NA DATA DO ÓBITO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
@@ -5803,6 +7658,11 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência:',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
@@ -5811,11 +7671,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'casoconcreto',
-                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) que sua a última contribuição ao RGPS foi como empregado em ${ultima_competencia}.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como empregado em ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p>',
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;NA ÉPOCA DO ÓBITO, O (A) SEGURADO (A) INSTITUIDOR (A) NÃO TINHA A QUALIDADE DE SEGURADO, POSTO QUE SUA ÚLTIMA FILIAÇÃO AO RGPS FOI COMO SEGURADO EMPREGADO EM ${ultima_competencia}.</strong></p>',
+                            texto: '<p><strong>&nbsp;O (A) SEGURADO (A) INSTITUIDOR (A) TEVE SUA ÚLTIMA FILIAÇÃO AO RGPS COMO SEGURADO EMPREGADO EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO OCORREU EM ${data_da_perda_da_qualidade}.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -5831,6 +7691,11 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
@@ -5839,11 +7704,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;NA ÉPOCA DO ÓBITO, O (A) SEGURADO (A) INSTITUIDOR (A) NÃO TINHA A QUALIDADE DE SEGURADO, POSTO QUE SUA ÚLTIMA FILIAÇÃO AO RGPS FOI COMO SEGURADO EMPREGADO DOMÉSTICO EM ${ultima_competencia}.</strong></p>',
+                            texto: '<p><strong>&nbsp;O (A) SEGURADO (A) INSTITUIDOR (A) TEVE SUA ÚLTIMA FILIAÇÃO AO RGPS COMO SEGURADO EMPREGADO doméstico EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO OCORREU EM ${data_da_perda_da_qualidade}.</strong></p>',
                         },
                         {
                             categoria: 'casoconcreto',
-                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) que sua a última contribuição ao RGPS foi como empregado doméstico em ${ultima_competencia}.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no verifica-se no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como empregado (a) doméstico (a) em ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p>',
                         },
                     ],
                     ramificacao: {
@@ -5859,6 +7724,11 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência:',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
@@ -5867,11 +7737,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;NA ÉPOCA DO ÓBITO, O (A) SEGURADO (A) INSTITUIDOR (A) NÃO TINHA A QUALIDADE DE SEGURADO, POSTO QUE SUA ÚLTIMA FILIAÇÃO AO RGPS FOI COMO SEGURADO CONTRIBUINTE INDIVIDUAL EM ${ultima_competencia}.</strong></p>',
+                            texto: '<p><strong>&nbsp;O (A) SEGURADO (A) INSTITUIDOR (A) TEVE SUA ÚLTIMA FILIAÇÃO AO RGPS COMO SEGURADO CONTRIBUINTE INDIVIDUAL EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO OCORREU EM ${data_da_perda_da_qualidade}.</strong></p>',
                         },
                         {
                             categoria: 'casoconcreto',
-                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) que sua a última contribuição ao RGPS foi como segurado contribuinte individual em ${ultima_competencia}.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) que sua a última contribuição ao RGPS foi como segurado contribuinte individual em ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p>',
                         },
                     ],
                     ramificacao: {
@@ -5887,6 +7757,11 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
@@ -5895,11 +7770,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;NA ÉPOCA DO ÓBITO, O (A) SEGURADO (A) INSTITUIDOR (A) NÃO TINHA A QUALIDADE DE SEGURADO, POSTO QUE SUA ÚLTIMA FILIAÇÃO AO RGPS FOI COMO SEGURADO ESPECIAL EM ${ultima_competencia}.</strong></p>',
+                            texto: '<p><strong>&nbsp;O (A) SEGURADO (A) INSTITUIDOR (A) TEVE SUA ÚLTIMA FILIAÇÃO AO RGPS COMO SEGURADO ESPECIAL EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO OCORREU EM ${data_da_perda_da_qualidade}.</strong></p>',
                         },
                         {
                             categoria: 'casoconcreto',
-                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) que sua a última contribuição ao RGPS foi como segurado especial em ${ultima_competencia}.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) que sua a última contribuição ao RGPS foi como segurado especial em ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p>',
                         },
                     ],
                     ramificacao: {
@@ -5915,6 +7790,11 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência:',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
@@ -5923,11 +7803,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;NA ÉPOCA DO ÓBITO, O (A) SEGURADO (A) INSTITUIDOR (A) NÃO TINHA A QUALIDADE DE SEGURADO, POSTO QUE SUA ÚLTIMA FILIAÇÃO AO RGPS FOI COMO SEGURADO TRABALHADOR AVULSO EM ${ultima_competencia}.</strong></p>',
+                            texto: '<p><strong>&nbsp;O (A) SEGURADO (A) INSTITUIDOR (A) TEVE SUA ÚLTIMA FILIAÇÃO AO RGPS COMO SEGURADO TRABALHADOR AVULSO EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO OCORREU EM ${data_da_perda_da_qualidade}.</strong></p>',
                         },
                         {
                             categoria: 'casoconcreto',
-                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) que sua a última contribuição ao RGPS foi como segurado trabalhador avulso em ${ultima_competencia}.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) que sua a última contribuição ao RGPS foi como segurado trabalhador avulso em ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p>',
                         },
                     ],
                     ramificacao: {
@@ -5943,6 +7823,11 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
@@ -5951,7 +7836,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;NA ÉPOCA DO ÓBITO, O (A) SEGURADO (A) INSTITUIDOR (A) NÃO TINHA A QUALIDADE DE SEGURADO, POSTO QUE SUA ÚLTIMA FILIAÇÃO AO RGPS FOI COMO SEGURADO FACULTATIVO EM ${ultima_competencia}.</strong></p>',
+                            texto: '<p><strong>&nbsp;O (A) SEGURADO (A) INSTITUIDOR (A) TEVE SUA ÚLTIMA FILIAÇÃO AO RGPS COMO SEGURADO FACULTATIVO EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO OCORREU EM ${data_da_perda_da_qualidade}.</strong></p>',
                         },
                         {
                             categoria: 'merito',
@@ -5959,11 +7844,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'casoconcreto',
-                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) que sua a última contribuição ao RGPS foi como segurado facultativo em ${ultima_competencia}.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) que sua a última contribuição ao RGPS foi como segurado facultativo em ${ultima_competencia}. Logo, em observância ao inciso VI do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -5980,6 +7865,11 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência:',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
@@ -5988,11 +7878,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'ementa',
-                            texto: '<p><strong>&nbsp;NA ÉPOCA DO ÓBITO, O (A) SEGURADO (A) INSTITUIDOR (A) NÃO TINHA A QUALIDADE DE SEGURADO, POSTO QUE SUA ÚLTIMA VINCULAÇÃO AO RGPS FOI COMO BENEFICIÁRIO DE BENEFÍCIO POR INCAPACIDADE &nbsp;Nº ${nb} ATÉ ${ultima_competencia}.</strong></p>',
+                            texto: '<p><strong>&nbsp;O (A) SEGURADO (A) INSTITUIDOR (A) TEVE SUA ÚLTIMA VINCULAÇÃO AO RGPS COMO BENEFICIÁRIO DE BENEFÍCIO POR INCAPACIDADE &nbsp;Nº ${nb} ATÉ ${ultima_competencia} &nbsp;E PERDA DA QUALIDADE DE SEGURADO EM ${data_da_perda_da_qualidade}.</strong></p>',
                         },
                         {
                             categoria: 'casoconcreto',
-                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) a última vinculação com o RGPS como beneficiário do benefício por incapacidade nº ${nb} até ${ultima_competencia}.</p>',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado do <i>de cujus</i>, verifica-se no Cadastro Nacional de Informações Sociais (CNIS) a última vinculação com o RGPS como beneficiário do benefício por incapacidade nº ${nb} até ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p>',
                         },
                     ],
                     ramificacao: {
@@ -6031,7 +7921,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'com_sua_analise_e_possivel_considerar_a_existencia_da_qualidade_de_segurado_na_data_do_obito',
                     },
                 },
                 {
@@ -6057,7 +7947,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'com_sua_analise_e_possivel_considerar_a_existencia_da_qualidade_de_segurado_na_data_do_obito',
                     },
                 },
                 {
@@ -6089,7 +7979,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'com_sua_analise_e_possivel_considerar_a_existencia_da_qualidade_de_segurado_na_data_do_obito',
                     },
                 },
                 {
@@ -6121,7 +8011,50 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'com_sua_analise_e_possivel_considerar_a_existencia_da_qualidade_de_segurado_na_data_do_obito',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'com_sua_analise_e_possivel_considerar_a_existencia_da_qualidade_de_segurado_na_data_do_obito',
+            tipo: 'opcao',
+            titulo: 'Com sua análise, é possível considerar a existência da qualidade de segurado na data do óbito?',
+            opcoes: [
+                {
+                    id: 'sim_tinha_a_qualidade_de_segurado_na_data_do_obito',
+                    titulo: 'Sim, tinha a qualidade de segurado na data do óbito',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Com isso, na data do óbito, o (a) segurado (a) gozava de direitos perante a previdência social pois detinha a qualidade de segurado.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;PORTANTO, NA ÉPOCA DO ÓBITO, O (A) SEGURADO (A) INSTITUIDOR (A) GOZAVA DA QUALIDADE DE SEGURADO, NOS TERMOS DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
+                    },
+                },
+                {
+                    id: 'nao_tinha_a_qualidade_de_segurado_na_data_do_obito',
+                    titulo: 'Não tinha a qualidade de segurado na data do óbito',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Com isso, na data do óbito, o (a) segurado (a) não gozava mais de direitos perante a previdência social.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;PORTANTO, NA ÉPOCA DO ÓBITO, O (A) SEGURADO (A) INSTITUIDOR (A) NÃO TINHA A QUALIDADE DE SEGURADO, NOS TERMOS DOS INCISOS II OU VI DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
@@ -6163,7 +8096,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -6235,7 +8168,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -6449,7 +8382,6 @@ export const especificacao: EspecificacaoDTO = {
             id: 'decisao_do_inss_31',
             tipo: 'opcao',
             titulo: 'Decisão do INSS (31)',
-            valorPadrao: 'parecer_contrario_da_pericia_medica',
             opcoes: [
                 {
                     id: 'parecer_contrario_da_pericia_medica',
@@ -6466,7 +8398,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'parecer_pericia_medica_federal',
+                        irPara: '31_parecer_pericia_medica_federal',
                     },
                 },
                 {
@@ -6490,7 +8422,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'parecer_pericia_medica_federal',
+                        irPara: '31_parecer_pericia_medica_federal',
                     },
                 },
                 {
@@ -6508,7 +8440,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'parecer_pericia_medica_federal',
+                        irPara: '31_parecer_pericia_medica_federal',
                     },
                 },
                 {
@@ -6533,11 +8465,11 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'elementos',
-                            texto: '<p>&nbsp;</p><p>A parte recorrente submetida a perícia médica, que por sua vez concluiu pela existência da incapacidade laborativa desde ${dii} e sua comprovação até ${dcb}. A doença não isenta de carência.</p>',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente submetida a perícia médica, que por sua vez concluiu pela existência da incapacidade laborativa desde ${dii} e sua comprovação até ${dcb}.</p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'parecer_pericia_medica_federal',
+                        irPara: '31_parecer_pericia_medica_federal',
                     },
                 },
                 {
@@ -6566,7 +8498,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: '31_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_antes_da_dii_ocorreu_como',
+                        irPara: '31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii',
                     },
                 },
                 {
@@ -6584,16 +8516,6 @@ export const especificacao: EspecificacaoDTO = {
                             tipo: 'data',
                         },
                         {
-                            id: 'data_inicio_contribuicoes',
-                            titulo: 'Data Início Contribuições',
-                            tipo: 'data',
-                        },
-                        {
-                            id: 'data_ultima_contribuicao',
-                            titulo: 'Data Última Contribuição',
-                            tipo: 'data',
-                        },
-                        {
                             id: 'quantidade_de_contribuicoes_reconhecidas_pelo_inss',
                             titulo: 'Quantidade de Contribuições reconhecidas pelo INSS',
                             tipo: 'texto',
@@ -6606,11 +8528,19 @@ export const especificacao: EspecificacaoDTO = {
                         },
                         {
                             categoria: 'elementos',
-                            texto: '<p>&nbsp;</p><p>A parte recorrente submetida a perícia médica, que por sua vez concluiu pela existência da incapacidade laborativa desde ${dii} e sua comprovação até ${dcb}. A doença não isenta de carência.</p><p>Consta no Cadastro Nacional de Informações Previdenciárias (CNIS) contribuições de ${data_inicio_contribuicoes} até ${data_ultima_contribuicao}.&nbsp;</p><p>O Instituto Nacional do Seguro Social (INSS) entendeu a existência de ${quantidade_de_contribuicoes_reconhecidas_pelo_inss} contribuições mensais, razão pela qual indeferiu a prestação.</p>',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente submetida a perícia médica, que por sua vez concluiu pela existência da incapacidade laborativa desde ${dii} e sua comprovação até ${dcb}. A doença não isenta de carência.</p><p>O Instituto Nacional do Seguro Social (INSS) entendeu a existência de ${quantidade_de_contribuicoes_reconhecidas_pelo_inss} contribuições mensais, razão pela qual indeferiu a prestação.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>O INSS apurou o total de ${quantidade_de_contribuicoes_reconhecidas_pelo_inss} contribuições para efeito de carência, sendo necessários 12 contribuições mensais antes do início da incapacidade, nos termos do inciso I do Art. 29 do Decreto nº 3.048/99.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;É NECESSÁRIO O MÍNIMO DE 12 CONTRIBUIÇÕES MENSAIS ANTES DO INÍCIO DA INCAPACIDADE, CONFORME REQUER O INCISO I DO ART. 29 DO DECRETO PREVIDENCIÁRIO.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: '31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii',
                     },
                 },
                 {
@@ -6647,9 +8577,17 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'elementos',
                             texto: '<p>&nbsp;</p><p>A parte recorrente submetida a perícia médica, que por sua vez concluiu pela existência da incapacidade laborativa desde ${dii}. A doença não isenta de carência.</p><p>Consta no Cadastro Nacional de Informações Previdenciárias (CNIS) contribuições de ${data_inicio_contribuicoes} até ${data_ultima_contribuicao_antes_da_perda}. Depois, a primeira contribuição válida ocorreu em ${data_da_ultima_filiacao}.</p>',
                         },
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p><strong>NOVA CARÊNCIA APÓS A PERDA DA QUALIDADE DE SEGURADO</strong></p><p>Assim regulamenta o Decreto nº 3.048/1999:</p><p><i>“Art. 27-A. &nbsp;Na hipótese de perda da qualidade de segurado, para fins da concessão dos benefícios de auxílio por incapacidade temporária, de aposentadoria por incapacidade permanente, de salário-maternidade e de auxílio-reclusão, as contribuições anteriores à perda somente serão computadas para fins de carência depois que o segurado contar, a partir da nova filiação ao RGPS, com metade do número de contribuições exigidas para o cumprimento do período de carência definido no art. 29.”</i></p><p>Deste modo, as contribuições anteriores a perda da qualidade de segurado somente serão computadas depois do segurado implementar, após a nova fiiação, com ao menos 6 contribuições mensais antes do início da incapacidade laborativa.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>&nbsp;</p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: '31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii',
                     },
                 },
                 {
@@ -6679,6 +8617,35 @@ export const especificacao: EspecificacaoDTO = {
                     ],
                     ramificacao: {
                         irPara: 'estado_civil',
+                    },
+                },
+                {
+                    id: 'falta_de_comprovacao_como_segurado',
+                    titulo: 'Falta de comprovação como segurado',
+                    listaVariaveis: [
+                        {
+                            id: 'dii',
+                            titulo: 'DII:',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'dcb',
+                            titulo: 'DCB:',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp;o qual indeferiu o Auxílio Por Incapacidade Temporária por falta de comprovação como segurado.</p>',
+                        },
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>A parte recorrente submetida a perícia médica, que por sua vez concluiu pela existência da incapacidade laborativa desde ${dii} e sua comprovação até ${dcb}.&nbsp;</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii',
                     },
                 },
                 {
@@ -6712,7 +8679,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -6756,7 +8723,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -6805,15 +8772,15 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
         },
         {
-            id: 'parecer_pericia_medica_federal',
+            id: '31_parecer_pericia_medica_federal',
             tipo: 'opcao',
-            titulo: 'Parecer Perícia Médica Federal',
+            titulo: '(31) Parecer Perícia Médica Federal',
             valorPadrao: 'manter_a_decisao_negativa_anterior',
             opcoes: [
                 {
@@ -6821,10 +8788,6 @@ export const especificacao: EspecificacaoDTO = {
                     titulo: 'Manter a decisão negativa anterior',
                     listaVariaveis: [],
                     listaTextos: [
-                        {
-                            categoria: 'recurso',
-                            texto: '<p>&nbsp;</p><p>Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando e pleiteia o pagamento da prestação previdenciária.</p>',
-                        },
                         {
                             categoria: 'diligencias',
                             texto: '<p>&nbsp;</p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela inexistência da incapacidade laborativa.</p>',
@@ -6837,9 +8800,13 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'ementa',
                             texto: '<p><strong>&nbsp;MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS, CONFORME § 1º DO ART. 33 DA PORTARIA MTP Nº 4.061/2022. INEXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.</strong></p>',
                         },
+                        {
+                            categoria: 'alcada',
+                            texto: '<p>&nbsp;</p><p>Por ordem do inciso II do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -6854,10 +8821,6 @@ export const especificacao: EspecificacaoDTO = {
                     ],
                     listaTextos: [
                         {
-                            categoria: 'recurso',
-                            texto: 'Irresignada com a decisão da Autarquia, recorre a parte interessada a esta Corte Administrativa apresentando e pleiteia o pagamento da prestação previdenciária.',
-                        },
-                        {
                             categoria: 'diligencias',
                             texto: '<p>&nbsp;</p><p>Em diligência preliminar, foi ouvida a Perícia Médica Federal - PMF. Esta, por sua vez, entendeu pela existência da incapacidade laborativa fixando a nova data da cessação ${dataNovaCessacao}.</p>',
                         },
@@ -6869,9 +8832,13 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'ementa',
                             texto: '<p><strong>MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS, CONFORME § 1º DO ART. 33 DA PORTARIA MTP Nº 4.061/2022. EXISTÊNCIA DE INCAPACIDADE LABORATIVA. PRESTAÇÃO PRORROGADA CONFORME PARECER MÉDICO FEDERAL. ARTIGO 71 DO DECRETO 3.048/99.</strong></p>',
                         },
+                        {
+                            categoria: 'alcada',
+                            texto: '<p>&nbsp;</p><p>Por ordem do inciso III do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -6903,6 +8870,14 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'ementa',
                             texto: '<p><strong>MATÉRIA DE ALÇADA DA JUNTA DE RECURSOS. EXISTÊNCIA DE INCAPACIDADE LABORATIVA CONFIRMADA PELA PERÍCIA MÉDICA FEDERAL DESTA CORTE ADMINISTRATIVA. ARTIGO 71 DO DECRETO 3.048/99.</strong></p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>A incapacidade laborativa foi reconhecida pela perícia médica federal com início em ${dii} (DII) até ${dcb} (DCB), sendo que a doença se iniciou em ${did} (DID).</p>',
+                        },
+                        {
+                            categoria: 'alcada',
+                            texto: '<p>&nbsp;</p><p>Por ordem do inciso V do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p>',
+                        },
                     ],
                     ramificacao: {
                         irPara: '31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii',
@@ -6925,12 +8900,16 @@ export const especificacao: EspecificacaoDTO = {
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada empregada no início da incapacidade.</p>',
                         },
                         {
-                            categoria: 'merito_qualidade',
-                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado empregado no início da incapacidade.</p>',
+                            categoria: 'casoconcreto_qualidade',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado empregado no início da incapacidade.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;SEGURADO (A) EMPREGADO (A) EM GOZO DA QUALIDADE.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                        irPara: '31_acrescimos_legais_que_prorrogam_a_qualidade_de_segurado',
                     },
                 },
                 {
@@ -6943,12 +8922,16 @@ export const especificacao: EspecificacaoDTO = {
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada empregada doméstica avulsa no início da incapacidade.</p>',
                         },
                         {
-                            categoria: 'merito_qualidade',
-                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era empregado doméstico no óbito.</p>',
+                            categoria: 'casoconcreto_qualidade',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era empregado doméstico no óbito.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;SEGURADO (A) EMPREGADO (A) DOMÉSTICO EM GOZO DA QUALIDADE.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                        irPara: '31_acrescimos_legais_que_prorrogam_a_qualidade_de_segurado',
                     },
                 },
                 {
@@ -6961,12 +8944,16 @@ export const especificacao: EspecificacaoDTO = {
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada contribuinte individual no início da incapacidade.</p>',
                         },
                         {
-                            categoria: 'merito_qualidade',
-                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado contribuinte individual no óbito.</p>',
+                            categoria: 'casoconcreto_qualidade',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado contribuinte individual no óbito.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;SEGURADO (A) CONTRIBUINTE INDIVIDUAL EM GOZO DA QUALIDADE.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                        irPara: '31_acrescimos_legais_que_prorrogam_a_qualidade_de_segurado',
                     },
                 },
                 {
@@ -6979,8 +8966,12 @@ export const especificacao: EspecificacaoDTO = {
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada facultativa no início da incapacidade.</p>',
                         },
                         {
-                            categoria: 'merito_qualidade',
-                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado facultativo no óbito.</p>',
+                            categoria: 'casoconcreto_qualidade',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado facultativo no óbito.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;SEGURADO (A) FACULTATIVO (A) EM GOZO DA QUALIDADE.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -6997,12 +8988,16 @@ export const especificacao: EspecificacaoDTO = {
                             texto: '<p>&nbsp;</p><p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada especial no início da incapacidade.</p>',
                         },
                         {
-                            categoria: 'merito_qualidade',
-                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado especial no óbito.</p>',
+                            categoria: 'casoconcreto_qualidade',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado especial no óbito.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;SEGURADO (A) ESPECIAL EM GOZO DA QUALIDADE.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                        irPara: '31_acrescimos_legais_que_prorrogam_a_qualidade_de_segurado',
                     },
                 },
                 {
@@ -7015,8 +9010,57 @@ export const especificacao: EspecificacaoDTO = {
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada trabalhadora avulsa no início da incapacidade.</p>',
                         },
                         {
-                            categoria: 'merito_qualidade',
-                            texto: '<p>&nbsp;</p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado trabalhador avulso no início da incapacidade.</p>',
+                            categoria: 'casoconcreto_qualidade',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era segurado trabalhador avulso no início da incapacidade.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;SEGURADO (A) TRABALHADOR (A) AVULSO (A) EM GOZO DA QUALIDADE.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_acrescimos_legais_que_prorrogam_a_qualidade_de_segurado',
+                    },
+                },
+                {
+                    id: 'nao_possuia_a_qualidade_de_segurado',
+                    titulo: 'NÃO possuia a qualidade de segurado',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p>Há controvérsia quanto a qualidade de segurado da parte recorrente no momento do evento gerador incapacidade laborativa. Vejamos a prolação do Decreto nº 3.048/99 sobre o tema:</p><p>“<i>Art. 13. Mantém a qualidade de segurado, independentemente de contribuições:</i><br><i>I - sem limite de prazo, o segurado que estiver em gozo de benefício, exceto na hipótese de auxílio-acidente;</i><br><i>II - <strong>até doze meses após a cessação de benefício por incapacidade ou das contribuições</strong>, observado o disposto nos § 7º e § 8º e no art. 19-E;</i><br>(…)<br><i>§ 1º &nbsp;O prazo do inciso II será <strong>prorrogado para até vinte e quatro meses</strong>, se o segurado já tiver <strong>pago mais de cento e vinte contribuições mensais sem interrupção</strong> que acarrete a perda da qualidade de segurado.</i><br><i>§ 2º &nbsp;O prazo do inciso II ou do § 1º <strong>será acrescido de doze meses para o segurado desempregado</strong>, desde que comprovada essa situação por registro no órgão próprio do Ministério do Trabalho e Emprego.</i><br><i>§ 3º &nbsp;Durante os prazos deste artigo, o segurado conserva todos os seus direitos perante a previdência social.(…)</i><br><i>Art. 14. &nbsp;O reconhecimento da perda da qualidade de segurado no termo final dos prazos fixados no art. 13 ocorrerá no dia seguinte ao do vencimento da contribuição do contribuinte individual relativa ao mês imediatamente posterior ao término daqueles prazos.</i><br><i>(…)</i><br><i>Art. 180. &nbsp;Ressalvado o disposto nos §§ 5º e 6º do art. 13, a<strong> perda da qualidade de segurado importa em caducidade dos direitos inerentes a essa qualidade</strong>.</i>”</p><p>Observando o texto regulamentador, verifica-se a necessidade do evento gerador incapacidade laborativa ocorrer enquanto o segurado tiver os direitos inerentes a essa qualidade, noutras palavras, no mesmo tempo em que estiver trabalhando e contribuindo ou, se cessada as contribuições, por um período variável entre doze e trinta e seis meses a contar da última contribuição, conforme a quantidade de contribuições e condição de desemprego.</p><p>Após a perda da qualidade de segurado, normatizada no Art. 14 do citado Decreto, o segurado não contribuinte perde os direitos de segurado, ou melhor, a qualidade de segurado do RGPS, e perde a cobertura da previdência social.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_antes_da_dii_ocorreu_como',
+                    },
+                },
+            ],
+        },
+        {
+            id: '31_acrescimos_legais_que_prorrogam_a_qualidade_de_segurado',
+            tipo: 'opcao',
+            titulo: '(31) Acréscimos legais que prorrogam a qualidade de segurado:',
+            valorPadrao:
+                'nao_ha_mais_de_120_contribuicoes_nem_prova_de_desemprego',
+            opcoes: [
+                {
+                    id: 'nao_ha_mais_de_120_contribuicoes_nem_prova_de_desemprego',
+                    titulo: 'Não há mais de 120 contribuições nem prova de desemprego',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: '31qualidadediligencia',
+                            texto: '<p>&nbsp;</p><p>Não há registro no Cadastro Nacional de Informações Previdenciárias (CNIS) de mais de 120 (cento e vinte) contribuições mensais sem perda da qualidade de segurado. Também, após consulta ao portal transparencia.sd.mte.gov.br, não consta registro da condição de desemprego por órgão próprio do Ministério do Trabalho e Emprego.</p><p>&nbsp;</p>',
+                        },
+                        {
+                            categoria: '31qualidadecasosconcretosacrescimo',
+                            texto: '<p>&nbsp;</p><p>Não há registro no Cadastro Nacional de Informações Previdenciárias (CNIS) de mais de 120 (cento e vinte) contribuições mensais sem perda da qualidade de segurado, os quais poderiam estender a qualidade de segurado por mais 12 meses, segundo o § 1º do Art. 13 do Decreto nº 3.048/99. Também, não há registro da condição de desemprego por órgão próprio do Ministério do Trabalho e Emprego, o qual também ampliaria o período de graça, conforme § 2º do Art. 13 do Decreto nº 3.048/99.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;SEGURADO (A) NÃO POSSUI MAIS DE 120 CONTRIBUIÇÕES MENSAIS SEM A PERDA DA QUALIDADE DE SEGURADO E TAMBÉM NÃO POSSUI REGISTRO NA CONDIÇÃO DE DESEMPREGADO POR ÓRGÃO PRÓPRIO DO MINISTÉRIO DO TRABALHO, PORTANTO NÃO HÁ AMPLIAÇÃO À MANUTENÇÃO DA QUALIDADE DE SEGURADO, NOS TERMOS DO §§ 1º E 2º DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -7024,12 +9068,81 @@ export const especificacao: EspecificacaoDTO = {
                     },
                 },
                 {
-                    id: 'nao_possuia_a_qualidade_de_segurado',
-                    titulo: 'NÃO possuia a qualidade de segurado',
+                    id: 'ha_mais_de_120_contribuicao_apenas',
+                    titulo: 'Há mais de 120 contribuição, apenas.',
                     listaVariaveis: [],
-                    listaTextos: [],
+                    listaTextos: [
+                        {
+                            categoria: '31qualidadediligencia',
+                            texto: '<p>&nbsp;</p><p>Há registro no Cadastro Nacional de Informações Previdenciárias (CNIS) de mais de 120 (cento e vinte) contribuições mensais sem perda da qualidade de segurado. Todavia, após consulta ao portal transparencia.sd.mte.gov.br, não consta registro da condição de desemprego por órgão próprio do Ministério do Trabalho e Emprego.</p>',
+                        },
+                        {
+                            categoria: '31qualidadecasosconcretosacrescimo',
+                            texto: '<p>&nbsp;</p><p>É devida a ampliação da qualidade de segurado por mais 12 meses em virtude de existir registro no CNIS de mais de 120 (cento e vinte) contribuições mensais sem perda da qualidade de segurado, segundo o § 1º do Art. 13 do Decreto nº 3.048/99. Entretanto, não há registro da condição de desemprego por órgão próprio do Ministério do Trabalho e Emprego, o qual também ampliaria o período de graça, conforme § 2º do Art. 13 do Decreto nº 3.048/99.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;SEGURADO (A) POSSUI MAIS DE 120 CONTRIBUIÇÕES MENSAIS SEM A PERDA DA QUALIDADE DE SEGURADO, O QUE LHE GARANTE A AMPLIAÇÃO DE 12 MESES NA MANUTENÇÃO DA QUALIDADE DE SEGURADO, &nbsp;NOS TERMOS DO § 1º DO ART. 13 DO DECRETO Nº 3.048/99. TODAVIA, NÃO POSSUI REGISTRO NA CONDIÇÃO DE DESEMPREGADO POR ÓRGÃO PRÓPRIO DO MINISTÉRIO DO TRABALHO.</strong></p>',
+                        },
+                    ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                    },
+                },
+                {
+                    id: 'ha_comprovacao_de_desemprego_apenas',
+                    titulo: 'Há comprovação de desemprego, apenas',
+                    listaVariaveis: [
+                        {
+                            id: 'folha',
+                            titulo: 'folha:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: '31qualidadediligencia',
+                            texto: '<p>&nbsp;</p><p>Não há registro no Cadastro Nacional de Informações Previdenciárias (CNIS) de mais de 120 (cento e vinte) contribuições mensais sem perda da qualidade de segurado.</p><p>Por outro lado, após consulta ao portal transparencia.sd.mte.gov.br, verificou-se o registro da condição de desemprego por órgão próprio do Ministério do Trabalho e Emprego, fl. ${folha}.</p>',
+                        },
+                        {
+                            categoria: '31qualidadecasosconcretosacrescimo',
+                            texto: '<p>&nbsp;</p><p>Não há registro no Cadastro Nacional de Informações Previdenciárias (CNIS) de mais de 120 (cento e vinte) contribuições mensais sem perda da qualidade de segurado, os quais poderiam estender a qualidade de segurado por mais 12 meses, segundo o § 1º do Art. 13 do Decreto nº 3.048/99.</p><p>Entretanto, é devida a ampliação da qualidade de segurado por mais 12 meses, em obediência ao § 2º do Art. 13 do Decreto nº 3.048/99, em virtude de existir o registro da condição de desemprego por órgão próprio do Ministério do Trabalho e Emprego, segundo consulta formulada ao portal transparencia.sd.mte.gov.br.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;SEGURADO (A) NÃO POSSUI MAIS DE 120 CONTRIBUIÇÕES MENSAIS SEM A PERDA DA QUALIDADE DE SEGURADO, MAS POSSUI REGISTRO NA CONDIÇÃO DE DESEMPREGADO POR ÓRGÃO PRÓPRIO DO MINISTÉRIO DO TRABALHO, O QUE LHE GARANTE A AMPLIAÇÃO DE 12 MESES NA MANUTENÇÃO DA QUALIDADE DE SEGURADO, NOS TERMOS DO §§ 1º e 2º DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
+                    },
+                },
+                {
+                    id: 'ha_mais_de_120_contribuicoes_e_prova_de_desemprego',
+                    titulo: 'Há mais de 120 contribuições e prova de desemprego',
+                    listaVariaveis: [
+                        {
+                            id: 'folha',
+                            titulo: 'Folha:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: '31qualidadediligencia',
+                            texto: '<p>&nbsp;</p><p>Há registro no Cadastro Nacional de Informações Previdenciárias (CNIS) de mais de 120 (cento e vinte) contribuições mensais sem perda da qualidade de segurado. Ainda, após consulta ao portal transparencia.sd.mte.gov.br, verificou-se o registro da condição de desemprego por órgão próprio do Ministério do Trabalho e Emprego, fl. ${folha}.</p>',
+                        },
+                        {
+                            categoria: '31qualidadecasosconcretosacrescimo',
+                            texto: '<p>&nbsp;</p><p>É devida a ampliação da qualidade de segurado por mais 24 meses em virtude de existir o registro no CNIS de mais de 120 (cento e vinte) contribuições mensais sem perda da qualidade de segurado e também o registro da condição de desemprego por órgão próprio do Ministério do Trabalho e Emprego, nos termos dos §§ 1º e 2º do Art. 13 do Decreto nº 3.048/99.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;SEGURADO (A) POSSUI MAIS DE 120 CONTRIBUIÇÕES MENSAIS SEM A PERDA DA QUALIDADE DE SEGURADO E TAMBÉM POSSUI REGISTRO NA CONDIÇÃO DE DESEMPREGADO POR ÓRGÃO PRÓPRIO DO MINISTÉRIO DO TRABALHO, O QUE LHE GARANTE A AMPLIAÇÃO DE 24 MESES NA MANUTENÇÃO DA QUALIDADE DE SEGURADO, NOS TERMOS DO §§ 1º e 2º DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
                     },
                 },
             ],
@@ -7048,15 +9161,28 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência:',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como empregado em ${ultima_competencia}.</p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere a qualidade de segurado, consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como empregado em ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p><p>Com isso, quando surgiu o evento incapacidade laborativa (DII), o (a) segurado (a) não gozava mais de direitos perante a previdência social.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p>&nbsp;<strong> ÚLTIMA CONTRIBUIÇÃO COMO SEGURADO (A) EMPREGADO (A) EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO EM ${data_da_perda_da_qualidade}, NOS TERMOS DO INCISO II DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: '31_acrescimos_legais_ao_periodo_de_graca',
                     },
                 },
                 {
@@ -7068,15 +9194,28 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade::',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última filiação ao Regime Geral de Previdência Social (RGPS) foi como empregado doméstico em ${ultima_competencia}.</p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere a qualidade de segurado, consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como empregado doméstico em ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p><p>Com isso, quando surgiu o evento incapacidade laborativa (DII), o (a) segurado (a) não gozava mais de direitos perante a previdência social.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p>&nbsp;<strong> ÚLTIMA CONTRIBUIÇÃO COMO SEGURADO (A) EMPREGADO (A) DOMÉSTICO (A) EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO EM ${data_da_perda_da_qualidade}, NOS TERMOS DO INCISO II DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: '31_acrescimos_legais_ao_periodo_de_graca',
                     },
                 },
                 {
@@ -7088,15 +9227,28 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência:',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como segurado contribuinte individual em ${ultima_competencia}.</p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere a qualidade de segurado, consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como contribuinte individual em ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p><p>Com isso, quando surgiu o evento incapacidade laborativa (DII), o (a) segurado (a) não gozava mais de direitos perante a previdência social.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p>&nbsp;<strong> ÚLTIMA CONTRIBUIÇÃO COMO SEGURADO (A) CONTRIBUINTE INDIVIDUAL EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO EM ${data_da_perda_da_qualidade}, NOS TERMOS DO INCISO II DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: '31_acrescimos_legais_ao_periodo_de_graca',
                     },
                 },
                 {
@@ -7108,15 +9260,28 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última filiação do ao Regime Geral de Previdência Social (RGPS) foi como segurado especial em ${ultima_competencia}.</p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere a qualidade de segurado, consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como segurado especial em ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p><p>Com isso, quando surgiu o evento incapacidade laborativa (DII), o (a) segurado (a) não gozava mais de direitos perante a previdência social.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p>&nbsp;<strong> ÚLTIMA CONTRIBUIÇÃO COMO SEGURADO (A) ESPECIAL EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO EM ${data_da_perda_da_qualidade}, NOS TERMOS DO INCISO II DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: '31_sobre_a_carencia_no_evento_gerador_dii',
                     },
                 },
                 {
@@ -7128,15 +9293,28 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência:',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição do ao Regime Geral de Previdência Social (RGPS) foi como trabalhador avulso em ${ultima_competencia}.</p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere a qualidade de segurado, consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como trabalhador avulso em ${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p><p>Com isso, quando surgiu o evento incapacidade laborativa (DII), o (a) segurado (a) não gozava mais de direitos perante a previdência social.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p>&nbsp;<strong> ÚLTIMA CONTRIBUIÇÃO COMO SEGURADO (A) TRABALHADOR (A) AVULSO (A) EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO EM ${data_da_perda_da_qualidade}, NOS TERMOS DO INCISO II DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: '31_acrescimos_legais_ao_periodo_de_graca',
                     },
                 },
                 {
@@ -7148,15 +9326,28 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição do ao Regime Geral de Previdência Social (RGPS) foi como segurado facultativo em ${ultima_competencia}.</p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere a qualidade de segurado, consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição ao Regime Geral de Previdência Social (RGPS) foi como facultativo em ${ultima_competencia}. Logo, em observância ao inciso VI do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p><p>Com isso, quando surgiu o evento incapacidade laborativa (DII), o (a) segurado (a) não gozava mais de direitos perante a previdência social.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p>&nbsp;<strong> ÚLTIMA CONTRIBUIÇÃO COMO SEGURADO (A) FACULTATIVO (A) EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO EM ${data_da_perda_da_qualidade}, NOS TERMOS DO INCISO VI DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -7173,15 +9364,28 @@ export const especificacao: EspecificacaoDTO = {
                             titulo: 'Última competência:',
                             tipo: 'texto',
                         },
+                        {
+                            id: 'data_da_perda_da_qualidade',
+                            titulo: 'Data da perda da qualidade:',
+                            tipo: 'data',
+                        },
                     ],
                     listaTextos: [
                         {
                             categoria: 'elementos',
                             texto: '<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a última contribuição a ser considerada está no recebimento do benefício por incapacidade nº ${nb} em ${ultima_competencia}.</p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere a qualidade de segurado, consta no Cadastro Nacional de Informações Sociais (CNIS), a última vinculação ao Regime Geral de Previdência Social (RGPS) foi como beneficiário do benefício por incapacidade nº ${nb} até &nbsp;${ultima_competencia}. Logo, em observância ao inciso II do Art. 13 do Decreto nº 3.048/1999, a perda da qualidade de segurado ocorreu em ${data_da_perda_da_qualidade}.</p><p>Com isso, quando surgiu o evento incapacidade laborativa (DII), o (a) segurado (a) não gozava mais de direitos perante a previdência social.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p>&nbsp;<strong> ÚLTIMA VINCULAÇÃO COMO BENEFICIÁRIO DE BENEFÍCIO POR INCAPACIDADE &nbsp;EM ${ultima_competencia} E PERDA DA QUALIDADE DE SEGURADO EM ${data_da_perda_da_qualidade}, NOS TERMOS DO INCISO II DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: '31_acrescimos_legais_ao_periodo_de_graca',
                     },
                 },
             ],
@@ -7210,13 +9414,9 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'ementa',
                             texto: '<p><strong>&nbsp;SEGURADO (A) NÃO POSSUI MAIS DE 120 CONTRIBUIÇÕES MENSAIS SEM A PERDA DA QUALIDADE DE SEGURADO E TAMBÉM NÃO POSSUI REGISTRO NA CONDIÇÃO DE DESEMPREGADO POR ÓRGÃO PRÓPRIO DO MINISTÉRIO DO TRABALHO, PORTANTO NÃO HÁ AMPLIAÇÃO À MANUTENÇÃO DA QUALIDADE DE SEGURADO, NOS TERMOS DO §§ 1º E 2º DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
                         },
-                        {
-                            categoria: 'merito',
-                            texto: '<p>&nbsp;</p><p>Há controvérsia quanto a qualidade de segurado da parte recorrente no momento do evento gerador incapacidade laborativa. Vejamos a prolação do Decreto nº 3.048/99 sobre o tema:</p><p>“<i>Art. 13. Mantém a qualidade de segurado, independentemente de contribuições:</i><br><i>I - sem limite de prazo, o segurado que estiver em gozo de benefício, exceto na hipótese de auxílio-acidente;</i><br><i>II - <strong>até doze meses após a cessação de benefício por incapacidade ou das contribuições</strong>, observado o disposto nos § 7º e § 8º e no art. 19-E;</i><br>(…)<br><i>§ 1º &nbsp;O prazo do inciso II será <strong>prorrogado para até vinte e quatro meses</strong>, se o segurado já tiver <strong>pago mais de cento e vinte contribuições mensais sem interrupção</strong> que acarrete a perda da qualidade de segurado.</i><br><i>§ 2º &nbsp;O prazo do inciso II ou do § 1º <strong>será acrescido de doze meses para o segurado desempregado</strong>, desde que comprovada essa situação por registro no órgão próprio do Ministério do Trabalho e Emprego.</i><br><i>§ 3º &nbsp;Durante os prazos deste artigo, o segurado conserva todos os seus direitos perante a previdência social.(…)</i><br><i>Art. 14. &nbsp;O reconhecimento da perda da qualidade de segurado no termo final dos prazos fixados no art. 13 ocorrerá no dia seguinte ao do vencimento da contribuição do contribuinte individual relativa ao mês imediatamente posterior ao término daqueles prazos.</i><br><i>(…)</i><br><i>Art. 180. &nbsp;Ressalvado o disposto nos §§ 5º e 6º do art. 13, a<strong> perda da qualidade de segurado importa em caducidade dos direitos inerentes a essa qualidade</strong>.</i>”</p><p>Observando o texto regulamentador, verifica-se a necessidade do evento gerador incapacidade laborativa ocorrer enquanto o segurado tiver os direitos inerentes a essa qualidade, noutras palavras, no mesmo tempo em que estiver trabalhando e contribuindo ou, se cessada as contribuições, por um período variável entre doze e trinta e seis meses a contar da última contribuição, conforme a quantidade de contribuições e condição de desemprego.</p><p>Após a perda da qualidade de segurado, normatizada no Art. 14 do citado Decreto, o segurado não contribuinte perde os direitos de segurado, ou melhor, a qualidade de segurado do RGPS, e perde a cobertura da previdência social.</p>',
-                        },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -7236,13 +9436,9 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'ementa',
                             texto: '<p><strong>&nbsp;SEGURADO (A) POSSUI MAIS DE 120 CONTRIBUIÇÕES MENSAIS SEM A PERDA DA QUALIDADE DE SEGURADO, O QUE LHE GARANTE A AMPLIAÇÃO DE 12 MESES NA MANUTENÇÃO DA QUALIDADE DE SEGURADO, &nbsp;NOS TERMOS DO § 1º DO ART. 13 DO DECRETO Nº 3.048/99. TODAVIA, NÃO POSSUI REGISTRO NA CONDIÇÃO DE DESEMPREGADO POR ÓRGÃO PRÓPRIO DO MINISTÉRIO DO TRABALHO.</strong></p>',
                         },
-                        {
-                            categoria: 'merito',
-                            texto: '<p>&nbsp;</p><p>Há controvérsia quanto a qualidade de segurado da parte recorrente no momento do evento gerador incapacidade laborativa. Vejamos a prolação do Decreto nº 3.048/99 sobre o tema:</p><p>“<i>Art. 13. Mantém a qualidade de segurado, independentemente de contribuições:</i><br><i>I - sem limite de prazo, o segurado que estiver em gozo de benefício, exceto na hipótese de auxílio-acidente;</i><br><i>II - <strong>até doze meses após a cessação de benefício por incapacidade ou das contribuições</strong>, observado o disposto nos § 7º e § 8º e no art. 19-E;</i><br>(…)<br><i>§ 1º &nbsp;O prazo do inciso II será <strong>prorrogado para até vinte e quatro meses</strong>, se o segurado já tiver <strong>pago mais de cento e vinte contribuições mensais sem interrupção</strong> que acarrete a perda da qualidade de segurado.</i><br><i>§ 2º &nbsp;O prazo do inciso II ou do § 1º <strong>será acrescido de doze meses para o segurado desempregado</strong>, desde que comprovada essa situação por registro no órgão próprio do Ministério do Trabalho e Emprego.</i><br><i>§ 3º &nbsp;Durante os prazos deste artigo, o segurado conserva todos os seus direitos perante a previdência social.(…)</i><br><i>Art. 14. &nbsp;O reconhecimento da perda da qualidade de segurado no termo final dos prazos fixados no art. 13 ocorrerá no dia seguinte ao do vencimento da contribuição do contribuinte individual relativa ao mês imediatamente posterior ao término daqueles prazos.</i><br><i>(…)</i><br><i>Art. 180. &nbsp;Ressalvado o disposto nos §§ 5º e 6º do art. 13, a<strong> perda da qualidade de segurado importa em caducidade dos direitos inerentes a essa qualidade</strong>.</i>”</p><p>Observando o texto regulamentador, verifica-se a necessidade do evento gerador incapacidade laborativa ocorrer enquanto o segurado tiver os direitos inerentes a essa qualidade, noutras palavras, no mesmo tempo em que estiver trabalhando e contribuindo ou, se cessada as contribuições, por um período variável entre doze e trinta e seis meses a contar da última contribuição, conforme a quantidade de contribuições e condição de desemprego.</p><p>Após a perda da qualidade de segurado, normatizada no Art. 14 do citado Decreto, o segurado não contribuinte perde os direitos de segurado, ou melhor, a qualidade de segurado do RGPS, e perde a cobertura da previdência social.</p>',
-                        },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -7258,7 +9454,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: '31qualidadediligencia',
-                            texto: '<p>Não há registro no Cadastro Nacional de Informações Previdenciárias (CNIS) de mais de 120 (cento e vinte) contribuições mensais sem perda da qualidade de segurado.</p><p>Por outro lado, após consulta ao portal transparencia.sd.mte.gov.br, verificou-se o registro da condição de desemprego por órgão próprio do Ministério do Trabalho e Emprego, fl. ${folha}.</p>',
+                            texto: '<p>&nbsp;</p><p>Não há registro no Cadastro Nacional de Informações Previdenciárias (CNIS) de mais de 120 (cento e vinte) contribuições mensais sem perda da qualidade de segurado.</p><p>Por outro lado, após consulta ao portal transparencia.sd.mte.gov.br, verificou-se o registro da condição de desemprego por órgão próprio do Ministério do Trabalho e Emprego, fl. ${folha}.</p>',
                         },
                         {
                             categoria: '31qualidadecasosconcretosacrescimo',
@@ -7268,13 +9464,9 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'ementa',
                             texto: '<p><strong>&nbsp;SEGURADO (A) NÃO POSSUI MAIS DE 120 CONTRIBUIÇÕES MENSAIS SEM A PERDA DA QUALIDADE DE SEGURADO, MAS POSSUI REGISTRO NA CONDIÇÃO DE DESEMPREGADO POR ÓRGÃO PRÓPRIO DO MINISTÉRIO DO TRABALHO, O QUE LHE GARANTE A AMPLIAÇÃO DE 12 MESES NA MANUTENÇÃO DA QUALIDADE DE SEGURADO, NOS TERMOS DO §§ 1º e 2º DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
                         },
-                        {
-                            categoria: 'merito',
-                            texto: '<p>&nbsp;</p><p>Há controvérsia quanto a qualidade de segurado da parte recorrente no momento do evento gerador incapacidade laborativa. Vejamos a prolação do Decreto nº 3.048/99 sobre o tema:</p><p>“<i>Art. 13. Mantém a qualidade de segurado, independentemente de contribuições:</i><br><i>I - sem limite de prazo, o segurado que estiver em gozo de benefício, exceto na hipótese de auxílio-acidente;</i><br><i>II - <strong>até doze meses após a cessação de benefício por incapacidade ou das contribuições</strong>, observado o disposto nos § 7º e § 8º e no art. 19-E;</i><br>(…)<br><i>§ 1º &nbsp;O prazo do inciso II será <strong>prorrogado para até vinte e quatro meses</strong>, se o segurado já tiver <strong>pago mais de cento e vinte contribuições mensais sem interrupção</strong> que acarrete a perda da qualidade de segurado.</i><br><i>§ 2º &nbsp;O prazo do inciso II ou do § 1º <strong>será acrescido de doze meses para o segurado desempregado</strong>, desde que comprovada essa situação por registro no órgão próprio do Ministério do Trabalho e Emprego.</i><br><i>§ 3º &nbsp;Durante os prazos deste artigo, o segurado conserva todos os seus direitos perante a previdência social.(…)</i><br><i>Art. 14. &nbsp;O reconhecimento da perda da qualidade de segurado no termo final dos prazos fixados no art. 13 ocorrerá no dia seguinte ao do vencimento da contribuição do contribuinte individual relativa ao mês imediatamente posterior ao término daqueles prazos.</i><br><i>(…)</i><br><i>Art. 180. &nbsp;Ressalvado o disposto nos §§ 5º e 6º do art. 13, a<strong> perda da qualidade de segurado importa em caducidade dos direitos inerentes a essa qualidade</strong>.</i>”</p><p>Observando o texto regulamentador, verifica-se a necessidade do evento gerador incapacidade laborativa ocorrer enquanto o segurado tiver os direitos inerentes a essa qualidade, noutras palavras, no mesmo tempo em que estiver trabalhando e contribuindo ou, se cessada as contribuições, por um período variável entre doze e trinta e seis meses a contar da última contribuição, conforme a quantidade de contribuições e condição de desemprego.</p><p>Após a perda da qualidade de segurado, normatizada no Art. 14 do citado Decreto, o segurado não contribuinte perde os direitos de segurado, ou melhor, a qualidade de segurado do RGPS, e perde a cobertura da previdência social.</p>',
-                        },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -7300,13 +9492,9 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'ementa',
                             texto: '<p><strong>&nbsp;SEGURADO (A) POSSUI MAIS DE 120 CONTRIBUIÇÕES MENSAIS SEM A PERDA DA QUALIDADE DE SEGURADO E TAMBÉM POSSUI REGISTRO NA CONDIÇÃO DE DESEMPREGADO POR ÓRGÃO PRÓPRIO DO MINISTÉRIO DO TRABALHO, O QUE LHE GARANTE A AMPLIAÇÃO DE 24 MESES NA MANUTENÇÃO DA QUALIDADE DE SEGURADO, NOS TERMOS DO §§ 1º e 2º DO ART. 13 DO DECRETO Nº 3.048/99.</strong></p>',
                         },
-                        {
-                            categoria: 'merito',
-                            texto: '<p>&nbsp;</p><p>Há controvérsia quanto a qualidade de segurado da parte recorrente no momento do evento gerador incapacidade laborativa. Vejamos a prolação do Decreto nº 3.048/99 sobre o tema:</p><p>“<i>Art. 13. Mantém a qualidade de segurado, independentemente de contribuições:</i><br><i>I - sem limite de prazo, o segurado que estiver em gozo de benefício, exceto na hipótese de auxílio-acidente;</i><br><i>II - <strong>até doze meses após a cessação de benefício por incapacidade ou das contribuições</strong>, observado o disposto nos § 7º e § 8º e no art. 19-E;</i><br>(…)<br><i>§ 1º &nbsp;O prazo do inciso II será <strong>prorrogado para até vinte e quatro meses</strong>, se o segurado já tiver <strong>pago mais de cento e vinte contribuições mensais sem interrupção</strong> que acarrete a perda da qualidade de segurado.</i><br><i>§ 2º &nbsp;O prazo do inciso II ou do § 1º <strong>será acrescido de doze meses para o segurado desempregado</strong>, desde que comprovada essa situação por registro no órgão próprio do Ministério do Trabalho e Emprego.</i><br><i>§ 3º &nbsp;Durante os prazos deste artigo, o segurado conserva todos os seus direitos perante a previdência social.(…)</i><br><i>Art. 14. &nbsp;O reconhecimento da perda da qualidade de segurado no termo final dos prazos fixados no art. 13 ocorrerá no dia seguinte ao do vencimento da contribuição do contribuinte individual relativa ao mês imediatamente posterior ao término daqueles prazos.</i><br><i>(…)</i><br><i>Art. 180. &nbsp;Ressalvado o disposto nos §§ 5º e 6º do art. 13, a<strong> perda da qualidade de segurado importa em caducidade dos direitos inerentes a essa qualidade</strong>.</i>”</p><p>Observando o texto regulamentador, verifica-se a necessidade do evento gerador incapacidade laborativa ocorrer enquanto o segurado tiver os direitos inerentes a essa qualidade, noutras palavras, no mesmo tempo em que estiver trabalhando e contribuindo ou, se cessada as contribuições, por um período variável entre doze e trinta e seis meses a contar da última contribuição, conforme a quantidade de contribuições e condição de desemprego.</p><p>Após a perda da qualidade de segurado, normatizada no Art. 14 do citado Decreto, o segurado não contribuinte perde os direitos de segurado, ou melhor, a qualidade de segurado do RGPS, e perde a cobertura da previdência social.</p>',
-                        },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
@@ -7331,9 +9519,17 @@ export const especificacao: EspecificacaoDTO = {
                             categoria: 'elementos_carencia',
                             texto: '<p>&nbsp;</p><p>Apurou-se o total de ${quantidade_de_contribuicoes} contribuições para efeito de carência antes do início da incapacidade.</p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Ainda, verifica-se que a parte recorrente possui o total de ${quantidade_de_contribuicoes} contribuições para efeito de carência, razão pela qual cumpre o requisito mínimo de 12 contribuições mensais antes do início da incapacidade.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;RECORRENTE POSSUI ${quantidade_de_contribuicoes} CONTRIBUIÇÕES PARA EFEITO DE CARÊNCIA, RAZÃO PELA QUAL CUMPRE O REQUISITO MÍNIMO DE 12 CONTRIBUIÇÕES MENSAIS ANTES DO INÍCIO DA INCAPACIDADE.</strong></p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -7343,25 +9539,47 @@ export const especificacao: EspecificacaoDTO = {
                     listaTextos: [
                         {
                             categoria: 'elementos_carencia',
-                            texto: '<p>&nbsp;</p><p>Conforme parecer técnico da PMF, há isenção de carência.</p>',
+                            texto: '<p>&nbsp;</p><p>O parecer técnico da PMF constatou a isenção de carência.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Ainda, a perícia médica federal verificou o cabimento da isenção da carência.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;ISENÇÃO DE CARÊNCIA PELA PERÍCIA MÉDICA FEDERAL.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
                     id: 'nao_possui_carencia',
                     titulo: 'Não possui carência.',
-                    listaVariaveis: [],
+                    listaVariaveis: [
+                        {
+                            id: 'quantidade_de_contribuicoes',
+                            titulo: 'Quantidade de contribuições:',
+                            tipo: 'texto',
+                        },
+                    ],
                     listaTextos: [
                         {
                             categoria: 'elementos_carencia',
                             texto: '<p>&nbsp;</p><p>Apurou-se o total de ${quantidade_de_contribuicoes} contribuições para efeito de carência antes do início da incapacidade.</p>',
                         },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Todavia, verifica-se que a parte recorrente possui o total de ${quantidade_de_contribuicoes} contribuições para efeito de carência, razão pela qual não cumpre o requisito mínimo de 12 contribuições mensais antes do início da incapacidade, nos termos do inciso I do Art. 29 do Decreto nº 3.048/99.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;FALTA DE CARÊNCIA. RECORRENTE POSSUI ${quantidade_de_contribuicoes} CONTRIBUIÇÕES PARA EFEITO DE CARÊNCIA, RAZÃO PELA QUAL NÃO CUMPRE O REQUISITO MÍNIMO DE 12 CONTRIBUIÇÕES MENSAIS ANTES DO INÍCIO DA INCAPACIDADE, CONFORME REQUER O INCISO I DO ART. 29 DO DECRETO PREVIDENCIÁRIO.</strong></p>',
+                        },
                     ],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
@@ -7378,7 +9596,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -7403,7 +9621,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
@@ -7562,22 +9780,66 @@ export const especificacao: EspecificacaoDTO = {
             id: 'decisao_do_inss_87',
             tipo: 'opcao',
             titulo: 'Decisão do INSS (87)',
-            valorPadrao: 'renda_per_capita_superior_ao_minimo',
             opcoes: [
                 {
                     id: 'renda_per_capita_superior_ao_minimo',
                     titulo: 'Renda per capita superior ao mínimo',
-                    listaTextos: [],
+                    listaVariaveis: [
+                        {
+                            id: 'segundo_o_inss_qual_a_quantidade_de_componentes_no_grupo_familiar',
+                            titulo: 'Segundo o INSS, qual a quantidade de componentes no grupo familiar:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'segundo_o_inss_qual_a_renda_total_do_grupo_familiar_r',
+                            titulo: 'Segundo o INSS, qual a Renda Total do Grupo Familiar (R$):',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'segundo_o_inss_qual_a_renda_per_capita_do_grupo_familiar_r',
+                            titulo: 'Segundo o INSS, qual a Renda Per Capita do Grupo Familiar (R$):',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'folha_onde_esta_a_conclusao_do_inss_sobre_a_renda_e_componentes_do_grupo_familiar',
+                            titulo: 'Folha onde está a conclusão do INSS sobre a renda e componentes do grupo familiar:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp;o qual indeferiu o Benefício de Prestação Continuada da Assistência Social à Pessoa com Deficiência em razão da renda per capita do grupo familiar ser superior a um quarto do salário-mínimo vigente na data do requerimento.</p>',
+                        },
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>O INSS considerou a existência de ${segundo_o_inss_qual_a_quantidade_de_componentes_no_grupo_familiar} componente (s) no grupo familiar com uma renda total de R$ ${segundo_o_inss_qual_a_renda_total_do_grupo_familiar_r}. Dividindo-se a renda total com a quantidade de pessoas, o INSS apurou que a renda per capita é de R$ ${segundo_o_inss_qual_a_renda_per_capita_do_grupo_familiar_r}, conforme fl. ${folha_onde_esta_a_conclusao_do_inss_sobre_a_renda_e_componentes_do_grupo_familiar}.</p>',
+                        },
+                        {
+                            categoria: 'casoconcretoloas87',
+                            texto: '<p>&nbsp;</p><p>Ressalta-se que, nos casos de provimento deste recurso ordinário, deve o INSS, segundo o Art.89 da Instrução Normativa CRPS nº 1/2022, prosseguir com a análise da deficiência do requerente e proferir nova decisão.</p>',
+                        },
+                    ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'loas_qual_sua_conclusao_sobre_o_requisito_renda',
                     },
                 },
                 {
                     id: 'cadunico_inexistente_ou_desatualizado',
                     titulo: 'CadÚnico inexistente ou desatualizado',
-                    listaTextos: [],
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p><strong>NECESSIDADE DE CADASTRO DA FAMÍLIA AOS PROGRAMAS SOCIAIS DO GOVERNO FEDERAL</strong></p><p>A Lei nº 8.742/1993, em seu Art. 6º-F, instituiu o Cadastro Único para Programas Sociais do Governo Federal (CadÚnico) como um registro público eletrônico com a finalidade de coletar, processar, sistematizar e disseminar informações para a identificação e a caracterização socioeconômica das famílias de baixa renda.</p><p>Assim, é requisito indispensável o cadastro da família no CadÚnico para o acesso aos benefícios da LOAS.</p><p>Todavia, ao referida inscrição não precisa ser realizada antes do requerimento do benefício, mas em qualquer momento processual, como se depreende da Portaria Interministerial MDS/INSS nº 3/2018:</p><p>“<i>Art. 4º A inscrição do requerente e de sua família no CadÚnico constitui requisito a ser observado nas etapas da operacionalização do BPC.</i><br><i>Parágrafo único. <strong>A ausência de inscrição ou atualização do CadÚnico não impede a formalização do requerimento do benefício</strong>. "</i></p><p>Vencida esta etapa com a inscrição da família, o Decreto nº 6.214/2007 determina a atualização periódica dos dados pelo responsável familiar, como se vê:</p><p>“<i>Art. 12. São requisitos para a concessão, a manutenção e a revisão do benefício as inscrições no Cadastro de Pessoas Físicas - CPF e no Cadastro Único para Programas Sociais do Governo Federal - CadÚnico.&nbsp;</i><br><i>§ 1º O beneficiário que não realizar a inscrição ou atualização no CadÚnico terá seu benefício suspenso após encerrado o prazo estabelecido na legislação.</i><br><i>§ 2º <strong>O benefício será concedido ou mantido apenas quando o CadÚnico estiver atualizado e válido</strong>, de acordo com o disposto no Decreto nº 6.135, de 26 de junho de 2007. ”</i></p><p>O Art. 12 do Decreto nº 11.016/2022, que substitui o Decreto nº 6.135/2007, define &nbsp;periodicidade para a atualização do CadÚnico <strong>a cada dois anos</strong>.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;É REQUISITO INDISPENSÁVEL O CADASTRO DA FAMÍLIA AO CADÚNICO, CONFORME PRECONIZA O ART. 6º-F DA LOAS, AINDA QUE A INSCRIÇÃO SEJA POSTERIOR AO REQUERIMENTO, NOS TERMOS DO ART. 4º DA PORTARIA INTERMINISTERIAL MDS/INSS Nº3/2018. NECESSÁRIA A ATUALIZAÇÃO E REVALIDAÇÃO DO CADÚNICO A CADA DOIS ANOS PELO RESPONSÁVEL FAMILIAR, CONSOANTE ART. 12 DO DECRETO Nº 11.016/2022.</strong></p>',
+                        },
+                    ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'loas_qual_e_o_resultado_da_consulta_ao_cadunico',
                     },
                 },
                 {
@@ -7594,22 +9856,311 @@ export const especificacao: EspecificacaoDTO = {
             id: 'decisao_do_inss_88',
             tipo: 'opcao',
             titulo: 'Decisão do INSS (88)',
-            valorPadrao: 'renda_per_capita_superior_ao_minimo',
             opcoes: [
                 {
                     id: 'renda_per_capita_superior_ao_minimo',
                     titulo: 'Renda per capita superior ao mínimo',
-                    listaTextos: [],
+                    listaVariaveis: [
+                        {
+                            id: 'der',
+                            titulo: 'DER:',
+                            tipo: 'data',
+                        },
+                        {
+                            id: 'idade_na_der',
+                            titulo: 'Idade na DER:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'segundo_o_inss_qual_a_quantidade_de_componentes_no_grupo_familiar',
+                            titulo: 'Segundo o INSS, qual a quantidade de componentes no grupo familiar:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'segundo_o_inss_qual_a_renda_total_do_grupo_familiar_r',
+                            titulo: 'Segundo o INSS, qual a Renda Total do Grupo Familiar (R$):',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'segundo_o_inss_qual_a_renda_per_capita_do_grupo_familiar_r',
+                            titulo: 'Segundo o INSS, qual a Renda Per Capita do Grupo Familiar (R$):',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'folha_onde_esta_a_conclusao_do_inss_sobre_a_renda_e_componentes_do_grupo_familiar',
+                            titulo: 'Folha onde está a conclusão do INSS sobre a renda e componentes do grupo familiar:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp;o qual indeferiu o Benefício de Prestação Continuada da Assistência Social à Pessoa Idosa com mais de 65 anos de idade em razão da renda per capita do grupo familiar ser superior a um quarto do salário-mínimo vigente na data do requerimento.</p>',
+                        },
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>O benefício foi requerido em ${der}, momento em que a parte requerente tinha ${idade_na_der} anos de idade.</p><p>O INSS considerou a existência de ${segundo_o_inss_qual_a_quantidade_de_componentes_no_grupo_familiar} componente (s) no grupo familiar com uma renda total de R$ ${segundo_o_inss_qual_a_renda_total_do_grupo_familiar_r}. Dividindo-se a renda total com a quantidade de pessoas, o INSS apurou que a renda per capita é de R$ ${segundo_o_inss_qual_a_renda_per_capita_do_grupo_familiar_r}, conforme fl. ${folha_onde_esta_a_conclusao_do_inss_sobre_a_renda_e_componentes_do_grupo_familiar}.</p>',
+                        },
+                    ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'loas_qual_sua_conclusao_sobre_o_requisito_renda',
                     },
                 },
                 {
                     id: 'cadunico_inexistente_ou_desatualizado',
                     titulo: 'CadÚnico inexistente ou desatualizado',
-                    listaTextos: [],
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p><strong>NECESSIDADE DE CADASTRO DA FAMÍLIA AOS PROGRAMAS SOCIAIS DO GOVERNO FEDERAL</strong></p><p>A Lei nº 8.742/1993, em seu Art. 6º-F, instituiu o Cadastro Único para Programas Sociais do Governo Federal (CadÚnico) como um registro público eletrônico com a finalidade de coletar, processar, sistematizar e disseminar informações para a identificação e a caracterização socioeconômica das famílias de baixa renda.</p><p>Assim, é requisito indispensável o cadastro da família no CadÚnico para o acesso aos benefícios da LOAS.</p><p>Todavia, ao referida inscrição não precisa ser realizada antes do requerimento do benefício, mas em qualquer momento processual, como se depreende da Portaria Interministerial MDS/INSS nº 3/2018:</p><p>“<i>Art. 4º A inscrição do requerente e de sua família no CadÚnico constitui requisito a ser observado nas etapas da operacionalização do BPC.</i><br><i>Parágrafo único. <strong>A ausência de inscrição ou atualização do CadÚnico não impede a formalização do requerimento do benefício</strong>. "</i></p><p>Vencida esta etapa com a inscrição da família, o Decreto nº 6.214/2007 determina a atualização periódica dos dados pelo responsável familiar, como se vê:</p><p>“<i>Art. 12. São requisitos para a concessão, a manutenção e a revisão do benefício as inscrições no Cadastro de Pessoas Físicas - CPF e no Cadastro Único para Programas Sociais do Governo Federal - CadÚnico.&nbsp;</i><br><i>§ 1º O beneficiário que não realizar a inscrição ou atualização no CadÚnico terá seu benefício suspenso após encerrado o prazo estabelecido na legislação.</i><br><i>§ 2º <strong>O benefício será concedido ou mantido apenas quando o CadÚnico estiver atualizado e válido</strong>, de acordo com o disposto no Decreto nº 6.135, de 26 de junho de 2007. ”</i></p><p>O Art. 12 do Decreto nº 11.016/2022, que substitui o Decreto nº 6.135/2007, define &nbsp;periodicidade para a atualização do CadÚnico <strong>a cada dois anos</strong>.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;É REQUISITO INDISPENSÁVEL O CADASTRO DA FAMÍLIA AO CADÚNICO, CONFORME PRECONIZA O ART. 6º-F DA LOAS, AINDA QUE A INSCRIÇÃO SEJA POSTERIOR AO REQUERIMENTO, NOS TERMOS DO ART. 4º DA PORTARIA INTERMINISTERIAL MDS/INSS Nº3/2018. NECESSÁRIA A ATUALIZAÇÃO E REVALIDAÇÃO DO CADÚNICO A CADA DOIS ANOS PELO RESPONSÁVEL FAMILIAR, CONSOANTE ART. 12 DO DECRETO Nº 11.016/2022.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'loas_qual_e_o_resultado_da_consulta_ao_cadunico',
+                    },
+                },
+                {
+                    id: 'superacao_da_renda_revisao_do_mob',
+                    titulo: 'Superação da renda (revisão do MOB)',
+                    listaVariaveis: [
+                        {
+                            id: 'folha_em_que_esta_a_decisao_do_inss',
+                            titulo: 'Folha em que está a decisão do INSS:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'complemento3',
+                            texto: '<p>&nbsp;o qual cessou o Benefício de Prestação Continuada da Assistência Social à Pessoa Idosa com mais de 65 anos de idade em razão da renda per capita do grupo familiar tornar-se superior a um quarto do salário-mínimo.</p>',
+                        },
+                        {
+                            categoria: 'elementos',
+                            texto: '<p>&nbsp;</p><p>O INSS realizou a revisão periódica do benefício e identificou modificação na renda do grupo familiar, nos termos da fl. ${folha_em_que_esta_a_decisao_do_inss}, razão pela oportunizou à parte recorrente apresentar defesa e, então, suspendeu o pagamento.</p>',
+                        },
+                    ],
                     ramificacao: {
                         irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'loas_qual_sua_conclusao_sobre_o_requisito_renda',
+            tipo: 'opcao',
+            titulo: '(LOAS) Qual sua conclusão sobre o requisito renda?',
+            opcoes: [
+                {
+                    id: 'converter_em_diligencia_para_pesquisa_externa_sp_por_assistente_social_do_inss_para_confirmar_a_vulnerabilidade_social_criterio_subjeitivo_-_resolucao_pleno_282018',
+                    titulo: 'Converter em diligência para pesquisa externa (SP) por Assistente Social do INSS para confirmar a vulnerabilidade social (critério subjeitivo - Resolução Pleno 28/2018)',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'merito',
+                            texto: '<p>A controvérsia reside no requisito de renda per capita, ou melhor, na condição de vulnerabilidade social da parte recorrente.</p><p>Em que pese o INSS utilizar-se de um critério matemático para verificar a condição de vulnerabilidade social, em que soma-se a renda do grupo familiar e divide-se pelo total de membros, tal procedimento já foi superado.</p><p>O Supremo Tribunal Federal declarou que este entendimento é inconstitucional como se observa no Tema 27 cuja tese é: "<i>É inconstitucional o § 3º do artigo 20 da Lei 8.742/1993, que estabelece a renda familiar mensal per capita inferior a um quarto do salário mínimo como <strong>requisito obrigatório para concessão do benefício assistencial</strong> de prestação continuada previsto no artigo 203, V, da Constituição. (Obs: Redação da tese aprovada nos termos do item 2 da Ata da 12ª Sessão Administrativa do STF, realizada em 09/12/2015)</i>.</p><p>Como a tese da Corte Suprema ocorreu no Recurso Extraordinário nº 567985/MT, de repercussão geral conhecida e que transitou em julgado em 11/12/2013, torna-se perfeitamente aplicável pelo CRPS nos termos do inciso II do § 1º do Art. 54 da Portaria MTP nº 4.061/2022.</p><p>Nessa linha, o Conselho Pleno do CRPS firmou entendimento da possibilidade do parecer técnico do Assistente Social do INSS formar prova de vulnerabilidade social, como se vê:</p><p><i>"Da atenta leitura do divulgado dessume-se que a Procuradoria do INSS, a quem compete representar a entidade previdenciária em juízo, defendeu - e com sucesso - a tese de que o critério objetivo de aferição de miserabilidade previsto no art. 20, § 32, da Lei nº 8.742, de 07.12.1993 não é absoluto, devendo ser aplicando com temperança, especialmente nos casos em que laudo socioeconômico atestar a vulnerabilidade social e miserabilidade do interessado.</i><br>[...]<br><i>Ora, se a PFE/INSS sustenta em juízo - e com êxito - que laudo socioeconômico é requisito necessário para afastar o critério objetivo de miserabilidade previsto na lei de regência e esse laudo faz-se presente nos autos atestando a miserabilidade do interessado, não pode a autarquia previdenciária, por lealdade processual, defender em sede administrativa a imperatividade do comando do art. 20, § 32, da Lei nº 8.742, de 07.12.1993, enquanto que na esfera do Poder Judiciário adota outro procedimento e sustenta que a aludida normatização não á absoluta e pode ser afastada mediante a juntada de parecer socioeconômico informando o estado de miserabilidade da parte interessada e da respectiva família."</i><br><i><strong>(RECLAMAÇÃO AO CONSELHO PLENO, Nº 44232.283381/2014-16, Voto Divergente Vencedor Rel. PAULO SÉRGIO DE C. COSTA RIBEIRO, CONSELHO PLENO DO CONSELHO DE RECURSOS DO SEGURO SOCIAL, Resolução 28/2018, 29 mai. 2018)</strong></i></p><p>Em suma, é possível constatar a vulnerabilidade social além do cálculo matemático utilizado pelo INSS como, por exemplo, a constatação <i>in locu</i>.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>É necessária instrução processual para se chegar a realidade da parte recorrente e constatar se ela se encontra em vulerabilidade social ou não.</p><p>Para tanto, há uma efetiva ferramenta institucional que é o parecer social emitido por assistente social do INSS, nos termos da Resolução 203 PRES/INSS de 2012. Esta normativa menciona que o parecer social será emitido por iniciativa, dentre outros, das Juntas/Câmaras/Conselhos de Recursos da Previdência Social e que ‘<i>o parecer social expressa a opinião do assistente social com base na observação e estudo social da realidade. De acordo com Fávero (2004, p. 42), o estudo social 1tem por finalidade conhecer com profundidade, e de forma crítica uma determinada situação ou expressão da questão social, objeto da intervenção profissional, especialmente nos seus aspectos sócio-econômicos e culturais’</i></p><p>Com isso, entendo por converter o julgamento em diligência para que o INSS realize pesquisa em campo (<i>in locu</i>) por Assistente Social para fins de elaboração do referido parecer social, com opinião expressa sobre eventual vulnerabilidade social da parte recorrente.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;STF DECLARA INCONSTITUCIONAL O CRITÉRIO DE RENDA PER CAPITA COMO OBRIGATÓRIO PARA CONCESSÃO DE BENEFÍCIOS DA LOAS, NOS TERMOS DA TESE 27 FIXADA NO RECURSO EXTRAORDINÁRIO Nº 567985/MT. POR SER DE REPERCUSSÃO GERAL CONHECIDA E COM TRÂNSITO EM JULGADO (11/12/2013), É APLICÁVEL PELO CRPS POR ORDEM DO INCISO II DO ART. 1º DO ART. 54 DA PORTARIA 4.061/22. PARECER SOCIAL ELABORADO POR ASSISTENTE SOCIAL DO INSS FORMA PROVA DE MISERABILIDADE, CONFORME RESOLUÇÃO 28/2018 DO CONSELHO PLENO DO CRPS, E OBSERVADA A RESOLUÇÃO 203/2012 DO INSS.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_admissibilidade',
+                    },
+                },
+                {
+                    id: 'beneficio_deve_ser_concedido_b88_ou_prosseguir_com_analise_da_deficiencia_b87_-_a_renda_per_capita_calculada_e_igual_ou_inferior_a_um_quarto_do_salario-minimo_criterio_objetivo',
+                    titulo: 'Benefício deve ser concedido (B88) ou prosseguir com análise da deficiência (B87) - A renda per capita calculada é igual ou inferior a um quarto do salário-mínimo (Critério objetivo)',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p><strong>HIPOSSUFICIÊNCIA ECONÔMICA DA PARTE RECORRENTE</strong></p><p>A Lei nº 8.742/1993 normatiza a matéria nos seguintes termos:</p><p>"<i>Art. 20.&nbsp; O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família</i><br><i>(...)</i><br><i>§ 3º &nbsp;Observados os demais critérios de elegibilidade definidos nesta Lei, terão direito ao benefício financeiro de que trata o caput deste artigo a pessoa com deficiência ou a pessoa idosa <strong>com renda familiar mensal per capita igual ou inferior a 1/4 (um quarto) do salário-mínimo.</strong></i><br><i>(...)</i><br><i>§ 11. &nbsp;Para concessão do benefício de que trata o caput deste artigo, poderão ser utilizados outros elementos probatórios da condição de miserabilidade do grupo familiar e da situação de vulnerabilidade, conforme regulamento.</i>"</p><p>A comprovação da condição de hipossuficiência econômica, ou seja, não possuir meios de prover a própria manutenção, está disposta de forma objetiva no § 3º do Art. 20.</p><p>A interpretação a ser utilizada a esta espécie de benefício deve ser conduzida pela busca da conciliação entre o postulado constitucional do mínimo existencial, inciso III do Art. 1º da Constituição da República que tutela <strong>a dignidade da pessoa humana</strong>, e o propósito maior da LOAS, expresso no seu art. 4º, III, que é o “<i><strong>respeito à dignidade do cidadão, à sua autonomia e ao seu direito a benefícios e serviços de qualidade, bem como à convivência familiar e comunitária, vedando-se qualquer comprovação vexatória de necessidade</strong></i>”.</p><p>Estabelecidas tais premissas, o requisito miserabilidade disposto no § 3º do Art. 20 da LOAS deve ser entendido como um limite objetivo, presumindo que todas as pessoas cuja renda per capita seja menor que um quarto do salário mínimo estejam nessa condição. Passa-se a ser um critério objetivo uma vez que todas as pessoas cuja renda per capita seja menor que um quarto do salário mínimo estão em condições de hipossuficiência, automaticamente.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Seguindo a renda familiar efetivamente apurada nos sistemas do Cadastro Nacional de Informações Sociais (CNIS) e o Sistema Único de Benefícios (SUB/SISBEN), comprova-se que a renda per capita do grupo familiar é igual ou inferior a um quarto do salário mínimo vigente na data de entrada no requerimento (DER).</p><p>Deste modo, é certo que a negativa deste benefício viola princípios constitucionais sensíveis e, principalmente, o objetivo da Lei Orgânica da Assistência Social, pois está comprovado no processo que o requerente não possui meios de prover a própria manutenção, muito menos tê-la provida por sua família, conforme determina os parágrafos 1º e 3º do artigo 20 da LOAS, razão pela qual fica comprovada a hipossuficiência econômica (critério renda).</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p>&nbsp;<strong>RENDA FAMILIAR MENSAL PER CAPITA IGUAL OU INFERIOR A 1/4 (UM QUARTO) DO SALÁRIO-MÍNIMO, CRITÉRIO OBJETIVO FIXADO NO § 3º DO ART. 20 DA LEI Nº 8.742/1993.&nbsp;</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
+                    },
+                },
+                {
+                    id: 'beneficio_deve_ser_concedido_b88_ou_prosseguir_com_analise_da_deficiencia_b87_-_comprovada_a_vulnerabilidade_por_assistente_social_resolucao_conselho_pleno_282018_criterio_subjetivo',
+                    titulo: 'Benefício deve ser concedido (B88) ou prosseguir com análise da deficiência (B87) - Comprovada a vulnerabilidade por Assistente Social (Resolução Conselho Pleno 28/2018) (Critério subjetivo)',
+                    listaVariaveis: [
+                        {
+                            id: 'evento_em_que_esta_o_parecer_do_assistente_social_do_inss',
+                            titulo: 'Evento em que está o parecer do assistente social do INSS:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'diligencias',
+                            texto: '<p>&nbsp;</p><p>Houve diligência para que o INSS realizasse pesquisa<i> in locu</i>, por profissional Assistente Social, servidor do INSS, para constatar as condições reais de miserabilidade. A diligência foi cumprida pelo INSS e resultou no Parecer Social junto ao ev. ${evento_em_que_esta_o_parecer_do_assistente_social_do_inss}, o qual confirma que a parte recorrente vive em condição de vulnerabilidade social.</p>',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p><strong>HIPOSSUFICIÊNCIA ECONÔMICA DA PARTE RECORRENTE</strong></p><p>A Lei nº 8.742/1993 normatiza a matéria nos seguintes termos:</p><p>"<i>Art. 20.&nbsp; O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família</i><br><i>(...)</i><br><i>§ 3º &nbsp;Observados os demais critérios de elegibilidade definidos nesta Lei, terão direito ao benefício financeiro de que trata o caput deste artigo a pessoa com deficiência ou a pessoa idosa <strong>com renda familiar mensal per capita igual ou inferior a 1/4 (um quarto) do salário-mínimo.</strong></i><br><i>(...)</i><br><i>§ 11. &nbsp;Para concessão do benefício de que trata o caput deste artigo, poderão ser utilizados outros elementos probatórios da condição de miserabilidade do grupo familiar e da situação de vulnerabilidade, conforme regulamento.</i>"</p><p>A comprovação da condição de hipossuficiência econômica, ou seja, não possuir meios de prover a própria manutenção, está disposta de forma objetiva no § 3º do Art. 20.</p><p>A interpretação a ser utilizada a esta espécie de benefício deve ser conduzida pela busca da conciliação entre o postulado constitucional do mínimo existencial, inciso III do Art. 1º da Constituição da República que tutela <strong>a dignidade da pessoa humana</strong>, e o propósito maior da LOAS, expresso no seu art. 4º, III, que é o “<i><strong>respeito à dignidade do cidadão, à sua autonomia e ao seu direito a benefícios e serviços de qualidade, bem como à convivência familiar e comunitária, vedando-se qualquer comprovação vexatória de necessidade</strong></i>”.</p><p>Estabelecidas tais premissas, o requisito miserabilidade disposto no § 3º do Art. 20 da LOAS deve ser entendido como um limite objetivo, presumindo que todas as pessoas cuja renda per capita seja menor que um quarto do salário mínimo estejam nessa condição. Passa-se a ser um critério objetivo uma vez que todas as pessoas cuja renda per capita seja menor que um quarto do salário mínimo estão em condições de hipossuficiência, automaticamente.</p><p>Em que pese o INSS utilizar-se de um critério matemático para verificar a condição de vulnerabilidade social, em que soma-se a renda do grupo familiar e divide-se pelo total de membros, tal procedimento já foi superado.</p><p>O Supremo Tribunal Federal declarou que este entendimento é inconstitucional como se observa no Tema 27 cuja tese é: "<i>É inconstitucional o § 3º do artigo 20 da Lei 8.742/1993, que estabelece a renda familiar mensal per capita inferior a um quarto do salário mínimo como <strong>requisito obrigatório para concessão do benefício assistencial</strong> de prestação continuada previsto no artigo 203, V, da Constituição. (Obs: Redação da tese aprovada nos termos do item 2 da Ata da 12ª Sessão Administrativa do STF, realizada em 09/12/2015)</i>.</p><p>Como a tese da Corte Suprema ocorreu no Recurso Extraordinário nº 567985/MT, de repercussão geral conhecida e que transitou em julgado em 11/12/2013, torna-se perfeitamente aplicável pelo CRPS nos termos do inciso II do § 1º do Art. 54 da Portaria MTP nº 4.061/2022.</p><p>Nessa linha, o Conselho Pleno do CRPS firmou entendimento da possibilidade do parecer técnico do Assistente Social do INSS formar prova de vulnerabilidade social, como se vê:</p><p><i>"Da atenta leitura do divulgado dessume-se que a Procuradoria do INSS, a quem compete representar a entidade previdenciária em juízo, defendeu - e com sucesso - a tese de que o critério objetivo de aferição de miserabilidade previsto no art. 20, § 32, da Lei nº 8.742, de 07.12.1993 não é absoluto, devendo ser aplicando com temperança, especialmente nos casos em que laudo socioeconômico atestar a vulnerabilidade social e miserabilidade do interessado.</i><br>[...]<br><i>Ora, se a PFE/INSS sustenta em juízo - e com êxito - que laudo socioeconômico é requisito necessário para afastar o critério objetivo de miserabilidade previsto na lei de regência e esse laudo faz-se presente nos autos atestando a miserabilidade do interessado, não pode a autarquia previdenciária, por lealdade processual, defender em sede administrativa a imperatividade do comando do art. 20, § 32, da Lei nº 8.742, de 07.12.1993, enquanto que na esfera do Poder Judiciário adota outro procedimento e sustenta que a aludida normatização não á absoluta e pode ser afastada mediante a juntada de parecer socioeconômico informando o estado de miserabilidade da parte interessada e da respectiva família."</i><br><i><strong>(RECLAMAÇÃO AO CONSELHO PLENO, Nº 44232.283381/2014-16, Voto Divergente Vencedor Rel. PAULO SÉRGIO DE C. COSTA RIBEIRO, CONSELHO PLENO DO CONSELHO DE RECURSOS DO SEGURO SOCIAL, Resolução 28/2018, 29 mai. 2018)</strong></i></p><p>Não poderia ser diferente, afinal, a própria Lei nº 8.742/1993, no § 11 de seu Art. 20, abre a oportunidade de ser utilizados outros elementos probatórios da condição de miserabilidade do grupo familiar e da situação de vulnerabilidade.</p><p>Em suma, é possível constatar a vulnerabilidade social além do cálculo matemático utilizado pelo INSS como, por exemplo, a constatação <i>in locu</i> feito por Assistente Social.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Em que pese o critério matemático utilizado pelo INSS para verificar a condição de vulnerabilidade social, entendo que deve ser aplicado o Tema 27 do STF por autorização do inciso II do § 1º do Art. 54 da Portaria MTP nº 4.061/2022.</p><p>Com isso, em observância à Resoluçao nº 28/2018 do Conselho Pleno do CRPS, recebo o Parecer Social do INSS do evento ${evento_em_que_esta_o_parecer_do_assistente_social_do_inss} como prova de que a parte recorrente encontra-se em vulnerabilidade social, conforme § 11 do Art. 20 da Lei nº 8.742/1993.</p><p>Deste modo, é certo que a negativa deste benefício viola princípios constitucionais sensíveis e, principalmente, o objetivo da Lei Orgânica da Assistência Social, pois está comprovado no processo que o requerente não possui meios de prover a própria manutenção, muito menos tê-la provida por sua família, conforme determina os parágrafos 1º e 3º do artigo 20 da LOAS, razão pela qual fica comprovada a hipossuficiência econômica.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;STF DECLARA INCONSTITUCIONAL O CRITÉRIO DE RENDA PER CAPITA COMO OBRIGATÓRIO PARA CONCESSÃO DE BENEFÍCIOS DA LOAS, NOS TERMOS DA TESE 27 FIXADA NO RECURSO EXTRAORDINÁRIO Nº 567985/MT. POR SER DE REPERCUSSÃO GERAL CONHECIDA E COM TRÂNSITO EM JULGADO (11/12/2013), É APLICÁVEL PELO CRPS POR ORDEM DO INCISO II DO ART. 1º DO ART. 54 DA PORTARIA 4.061/22. PARECER SOCIAL ELABORADO POR ASSISTENTE SOCIAL DO INSS FORMA PROVA DE MISERABILIDADE, CONFORME RESOLUÇÃO 28/2018 DO CONSELHO PLENO DO CRPS, E OBSERVADA A RESOLUÇÃO 203/2012 DO INSS.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
+                    },
+                },
+                {
+                    id: 'beneficio_nao_deve_ser_concedido_-_renda_per_capita_superior_criterio_objetivo',
+                    titulo: 'Benefício não deve ser concedido - Renda per capita superior (Critério objetivo)',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p><strong>HIPOSSUFICIÊNCIA ECONÔMICA DA PARTE RECORRENTE</strong></p><p>A Lei nº 8.742/1993 normatiza a matéria nos seguintes termos:</p><p>"<i>Art. 20.&nbsp; O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família</i><br><i>(...)</i><br><i>§ 3º &nbsp;Observados os demais critérios de elegibilidade definidos nesta Lei, terão direito ao benefício financeiro de que trata o caput deste artigo a pessoa com deficiência ou a pessoa idosa <strong>com renda familiar mensal per capita igual ou inferior a 1/4 (um quarto) do salário-mínimo.</strong></i><br><i>(...)</i><br><i>§ 11. &nbsp;Para concessão do benefício de que trata o caput deste artigo, poderão ser utilizados outros elementos probatórios da condição de miserabilidade do grupo familiar e da situação de vulnerabilidade, conforme regulamento.</i>"</p><p>A comprovação da condição de hipossuficiência econômica, ou seja, não possuir meios de prover a própria manutenção, está disposta de forma objetiva no § 3º do Art. 20.</p><p>A interpretação a ser utilizada a esta espécie de benefício deve ser conduzida pela busca da conciliação entre o postulado constitucional do mínimo existencial, inciso III do Art. 1º da Constituição da República que tutela <strong>a dignidade da pessoa humana</strong>, e o propósito maior da LOAS, expresso no seu art. 4º, III, que é o “<i><strong>respeito à dignidade do cidadão, à sua autonomia e ao seu direito a benefícios e serviços de qualidade, bem como à convivência familiar e comunitária, vedando-se qualquer comprovação vexatória de necessidade</strong></i>”.</p><p>Estabelecidas tais premissas, o requisito miserabilidade disposto no § 3º do Art. 20 da LOAS deve ser entendido como um limite objetivo, presumindo que todas as pessoas cuja renda per capita seja menor que um quarto do salário mínimo estejam nessa condição. Passa-se a ser um critério objetivo uma vez que todas as pessoas cuja renda per capita seja menor que um quarto do salário mínimo estão em condições de hipossuficiência, automaticamente.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Seguindo a renda familiar efetivamente apurada nos sistemas do Cadastro Nacional de Informações Sociais (CNIS) e o Sistema Único de Benefícios (SUB/SISBEN), comprova-se que a renda per capita do grupo familiar é <strong>superior</strong> a um quarto do salário mínimo vigente na data de entrada no requerimento (DER).</p><p>Deste modo, entendo que está comprovado no processo que a parte recorrente possui meios de prover a própria manutenção, ou tê-la provida por sua família, conforme determina os parágrafos 1º e 3º do artigo 20 da LOAS, razão pela qual <strong>não fica comprovada a hipossuficiência econômica</strong> (critério renda).</p>',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;<strong>RENDA FAMILIAR MENSAL PER CAPITA SUPERIOR A 1/4 (UM QUARTO) DO SALÁRIO-MÍNIMO, CRITÉRIO OBJETIVO FIXADO NO § 3º DO ART. 20 DA LEI Nº 8.742/1993.&nbsp;</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
+                    },
+                },
+                {
+                    id: 'beneficio_nao_deve_ser_concedido_-_nao_comprovada_a_vulnerabilidade_por_assistente_social_resolucao_conselho_pleno_282018_criterio_subjetivo',
+                    titulo: 'Benefício não deve ser concedido - não comprovada a vulnerabilidade por Assistente Social (Resolução Conselho Pleno 28/2018) (Critério subjetivo)',
+                    listaVariaveis: [
+                        {
+                            id: 'evento_em_que_esta_o_parecer_do_assistente_social_do_inss',
+                            titulo: 'Evento em que está o parecer do assistente social do INSS:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'diligencias',
+                            texto: '<p>&nbsp;</p><p>Houve diligência para que o INSS realizasse pesquisa<i> in locu</i>, por profissional Assistente Social, servidor do INSS, para constatar as condições reais de miserabilidade. A diligência foi cumprida pelo INSS e resultou no Parecer Social junto ao ev. ${evento_em_que_esta_o_parecer_do_assistente_social_do_inss}, o qual confirma que a parte recorrente não se encontra em condição de vulnerabilidade social.</p>',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p><strong>HIPOSSUFICIÊNCIA ECONÔMICA DA PARTE RECORRENTE</strong></p><p>A Lei nº 8.742/1993 normatiza a matéria nos seguintes termos:</p><p>"<i>Art. 20.&nbsp; O benefício de prestação continuada é a garantia de um salário-mínimo mensal à pessoa com deficiência e ao idoso com 65 (sessenta e cinco) anos ou mais que comprovem não possuir meios de prover a própria manutenção nem de tê-la provida por sua família</i><br><i>(...)</i><br><i>§ 3º &nbsp;Observados os demais critérios de elegibilidade definidos nesta Lei, terão direito ao benefício financeiro de que trata o caput deste artigo a pessoa com deficiência ou a pessoa idosa <strong>com renda familiar mensal per capita igual ou inferior a 1/4 (um quarto) do salário-mínimo.</strong></i><br><i>(...)</i><br><i>§ 11. &nbsp;Para concessão do benefício de que trata o caput deste artigo, poderão ser utilizados outros elementos probatórios da condição de miserabilidade do grupo familiar e da situação de vulnerabilidade, conforme regulamento.</i>"</p><p>A comprovação da condição de hipossuficiência econômica, ou seja, não possuir meios de prover a própria manutenção, está disposta de forma objetiva no § 3º do Art. 20.</p><p>A interpretação a ser utilizada a esta espécie de benefício deve ser conduzida pela busca da conciliação entre o postulado constitucional do mínimo existencial, inciso III do Art. 1º da Constituição da República que tutela <strong>a dignidade da pessoa humana</strong>, e o propósito maior da LOAS, expresso no seu art. 4º, III, que é o “<i><strong>respeito à dignidade do cidadão, à sua autonomia e ao seu direito a benefícios e serviços de qualidade, bem como à convivência familiar e comunitária, vedando-se qualquer comprovação vexatória de necessidade</strong></i>”.</p><p>Estabelecidas tais premissas, o requisito miserabilidade disposto no § 3º do Art. 20 da LOAS deve ser entendido como um limite objetivo, presumindo que todas as pessoas cuja renda per capita seja menor que um quarto do salário mínimo estejam nessa condição. Passa-se a ser um critério objetivo uma vez que todas as pessoas cuja renda per capita seja menor que um quarto do salário mínimo estão em condições de hipossuficiência, automaticamente.</p><p>Em que pese o INSS utilizar-se de um critério matemático para verificar a condição de vulnerabilidade social, em que soma-se a renda do grupo familiar e divide-se pelo total de membros, tal procedimento já foi superado.</p><p>O Supremo Tribunal Federal declarou que este entendimento é inconstitucional como se observa no Tema 27 cuja tese é: "<i>É inconstitucional o § 3º do artigo 20 da Lei 8.742/1993, que estabelece a renda familiar mensal per capita inferior a um quarto do salário mínimo como <strong>requisito obrigatório para concessão do benefício assistencial</strong> de prestação continuada previsto no artigo 203, V, da Constituição. (Obs: Redação da tese aprovada nos termos do item 2 da Ata da 12ª Sessão Administrativa do STF, realizada em 09/12/2015)</i>.</p><p>Como a tese da Corte Suprema ocorreu no Recurso Extraordinário nº 567985/MT, de repercussão geral conhecida e que transitou em julgado em 11/12/2013, torna-se perfeitamente aplicável pelo CRPS nos termos do inciso II do § 1º do Art. 54 da Portaria MTP nº 4.061/2022.</p><p>Nessa linha, o Conselho Pleno do CRPS firmou entendimento da possibilidade do parecer técnico do Assistente Social do INSS formar prova de vulnerabilidade social, como se vê:</p><p><i>"Da atenta leitura do divulgado dessume-se que a Procuradoria do INSS, a quem compete representar a entidade previdenciária em juízo, defendeu - e com sucesso - a tese de que o critério objetivo de aferição de miserabilidade previsto no art. 20, § 32, da Lei nº 8.742, de 07.12.1993 não é absoluto, devendo ser aplicando com temperança, especialmente nos casos em que laudo socioeconômico atestar a vulnerabilidade social e miserabilidade do interessado.</i><br>[...]<br><i>Ora, se a PFE/INSS sustenta em juízo - e com êxito - que laudo socioeconômico é requisito necessário para afastar o critério objetivo de miserabilidade previsto na lei de regência e esse laudo faz-se presente nos autos atestando a miserabilidade do interessado, não pode a autarquia previdenciária, por lealdade processual, defender em sede administrativa a imperatividade do comando do art. 20, § 32, da Lei nº 8.742, de 07.12.1993, enquanto que na esfera do Poder Judiciário adota outro procedimento e sustenta que a aludida normatização não á absoluta e pode ser afastada mediante a juntada de parecer socioeconômico informando o estado de miserabilidade da parte interessada e da respectiva família."</i><br><i><strong>(RECLAMAÇÃO AO CONSELHO PLENO, Nº 44232.283381/2014-16, Voto Divergente Vencedor Rel. PAULO SÉRGIO DE C. COSTA RIBEIRO, CONSELHO PLENO DO CONSELHO DE RECURSOS DO SEGURO SOCIAL, Resolução 28/2018, 29 mai. 2018)</strong></i></p><p>Não poderia ser diferente, afinal, a própria Lei nº 8.742/1993, no § 11 de seu Art. 20, abre a oportunidade de ser utilizados outros elementos probatórios da condição de miserabilidade do grupo familiar e da situação de vulnerabilidade.</p><p>Em suma, é possível constatar a vulnerabilidade social além do cálculo matemático utilizado pelo INSS como, por exemplo, a constatação <i>in locu</i> feito por Assistente Social.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Em que pese o critério matemático utilizado pelo INSS para verificar a condição de vulnerabilidade social, entendo que deve ser aplicado o Tema 27 do STF por autorização do inciso II do § 1º do Art. 54 da Portaria MTP nº 4.061/2022.</p><p>Com isso, em observância à Resoluçao nº 28/2018 do Conselho Pleno do CRPS, houve diligência para a elaboração do Parecer Social do INSS, evento ${evento_em_que_esta_o_parecer_do_assistente_social_do_inss}, que por sua vez constatou que <strong>a parte recorrente não se encontra em vulnerabilidade social</strong>.</p><p>Deste modo, não fica comprovado no processo que a parte recorrente não possui meios de prover a própria manutenção, nem de tê-la provida por sua família, conforme determina os parágrafos 1º e 3º do artigo 20 da LOAS, razão pela qual <strong>não fica comprovada a hipossuficiência econômica</strong>.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;STF DECLARA INCONSTITUCIONAL O CRITÉRIO DE RENDA PER CAPITA COMO OBRIGATÓRIO PARA CONCESSÃO DE BENEFÍCIOS DA LOAS, NOS TERMOS DA TESE 27 FIXADA NO RECURSO EXTRAORDINÁRIO Nº 567985/MT. POR SER DE REPERCUSSÃO GERAL CONHECIDA E COM TRÂNSITO EM JULGADO (11/12/2013), É APLICÁVEL PELO CRPS POR ORDEM DO INCISO II DO ART. 1º DO ART. 54 DA PORTARIA 4.061/22. PARECER SOCIAL ELABORADO POR ASSISTENTE SOCIAL CONFIRMA QUE A PARTE RECORRENTE NÃO SE ENCONTRA EM VULNERABILIDADE SOCIAL.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'loas_qual_e_o_resultado_da_consulta_ao_cadunico',
+            tipo: 'opcao',
+            titulo: '(LOAS) Qual é o resultado da consulta ao CadÚnico?',
+            opcoes: [
+                {
+                    id: 'familia_esta_inscrita_no_cadunico_e_o_cadastro_esta_atualizado',
+                    titulo: 'Família está inscrita no CadÚnico e o cadastro está atualizado',
+                    listaVariaveis: [
+                        {
+                            id: 'qual_o_evento_em_que_esta_a_consulta_ao_cadunico',
+                            titulo: 'Qual o evento em que está a consulta ao CadÚnico?',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'diligencia',
+                            texto: '<p>&nbsp;</p><p>Feita a consulta ao CadÚnico, verifica-se que o mesmo se encontra atualizado no CPF da parte recorrente, ev. ${qual_o_evento_em_que_esta_a_consulta_ao_cadunico}.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Ao observar as normas que regulamentam a matéria, verifica-se que &nbsp;parte recorrente não precisa estar inscrita no CadÚnico na data de entrada do requerimento (DER), mas sim ter seu cadastro efetuado e atualizado.</p><p>No caso em tela, verifica-se que consta corretamente o cadastro no CadÚnico, atualizado, conforme documento junto no no ev. ${qual_o_evento_em_que_esta_a_consulta_ao_cadunico}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
+                    },
+                },
+                {
+                    id: 'familia_esta_inscrita_no_cadunico_mas_o_cadastro_nao_esta_atualizado',
+                    titulo: 'Família está inscrita no CadÚnico, mas o cadastro não está atualizado',
+                    listaVariaveis: [
+                        {
+                            id: 'qual_o_evento_em_que_esta_a_consulta_ao_cadunico',
+                            titulo: 'Qual o evento em que está a consulta ao CadÚnico?',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'data_da_ultima_atualizacao_no_cadunico',
+                            titulo: 'Data da última atualização no CadÚnico:',
+                            tipo: 'data',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'diligencia',
+                            texto: '<p>&nbsp;</p><p>Feita a consulta ao CadÚnico, ev. ${qual_o_evento_em_que_esta_a_consulta_ao_cadunico}, verifica-se-se que a família está inscrita e que a última atualização ocorreu em ${data_da_ultima_atualizacao_no_cadunico}.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Ao observar as normas que regulamentam a matéria, verifica-se que &nbsp;parte recorrente não precisa estar inscrita no CadÚnico na data de entrada do requerimento (DER), mas sim ter seu cadastro efetuado e atualizado.</p><p>No caso em tela, verifica-se que consta corretamente o cadastro no CadÚnico, embora sua última atualização tenha ocorrido em ${data_da_ultima_atualizacao_no_cadunico}, conforme documento junto no no ev. ${qual_o_evento_em_que_esta_a_consulta_ao_cadunico}.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
+                    },
+                },
+                {
+                    id: 'familia_nao_esta_inscrita_no_cadunico',
+                    titulo: 'Família não está inscrita no CadÚnico',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'diligencia',
+                            texto: '<p>&nbsp;</p><p>Feita a consulta ao CadÚnico, não se verifica a inscrição da requerente.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Ao observar as normas que regulamentam a matéria, verifica-se que &nbsp;parte recorrente não precisa estar inscrita no CadÚnico na data de entrada do requerimento (DER), mas sim ter seu cadastro efetuado e atualizado.</p><p>No caso em tela, após consulta ao CadÚnico, não se constatou a inscrição da parte recorrente, o que inviabiliza a concessão da prestação.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
                     },
                 },
             ],
@@ -7635,35 +10186,75 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'parecer_pericia_medica_federal',
+                        irPara: '91_-_ntep_parecer_pericia_medica_federal',
                     },
                 },
+            ],
+        },
+        {
+            id: '91_-_ntep_parecer_pericia_medica_federal',
+            tipo: 'opcao',
+            titulo: '(91 - NTEP) Parecer Perícia Médica Federal',
+            valorPadrao: 'manteve_o_ntep',
+            opcoes: [
                 {
-                    id: 'cessacao_por_limite_medico',
-                    titulo: 'Cessação por limite médico',
-                    listaVariaveis: [
-                        {
-                            id: 'dcb',
-                            titulo: 'DCB',
-                            tipo: 'data',
-                        },
-                    ],
+                    id: 'manteve_o_ntep',
+                    titulo: 'Manteve o NTEP',
+                    listaVariaveis: [],
                     listaTextos: [
                         {
-                            categoria: 'complemento3',
-                            texto: '<p>&nbsp; o qual cessou o Auxílio Por Incapacidade Temporária pela não comprovação da continuidade da incapacidade laborativa, nos termos da Perícia Médica Federal (PMF</p>',
+                            categoria: 'diligencia',
+                            texto: '<p>&nbsp;</p><p>Em diligência, houve reanálise pela perícia médica federal, que por sua vez ratificou a existência do nexo técnico.</p>',
                         },
                         {
-                            categoria: 'motivo_resp',
-                            texto: '<p>&nbsp;</p><p>O INSS havia cessado o benefício por incapacidade em §{dcb} ante a não comprovação da continuidade da incapacidade laborativa, nos termos do parecer da Perícia Médica Federal (PMF).</p>',
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p><strong>RECONHECIMENTO DA ESPÉCIE COMO ACIDENTÁRIA</strong></p><p>Regulamenta o Decreto nº 3.048/1999 sobre o tema:</p><p><i>“Art. 337. &nbsp;O acidente do trabalho será caracterizado tecnicamente pela Perícia Médica Federal, por meio da identificação do nexo entre o trabalho e o agravo.&nbsp;</i><br><i>(…)</i><br><i>§ 3º &nbsp;Considera-se estabelecido o nexo entre o trabalho e o agravo quando se verificar nexo técnico epidemiológico entre a atividade da empresa e a entidade mórbida motivadora da incapacidade, elencada na Classificação Internacional de Doenças - CID em conformidade com o disposto na Lista C do Anexo II deste Regulamento.&nbsp;</i><br><i>(…)</i><br><i>§ 5º &nbsp;Reconhecidos pela Perícia Médica Federal a incapacidade para o trabalho e o nexo entre o trabalho e o agravo, na forma prevista no § 3º, serão devidas as prestações acidentárias a que o beneficiário tiver direito.”</i></p><p>O Diploma Previdenciário regulamenta que a Perícia Médica Federal – PMF - tem competência para determinar se uma incapacidade decorre ou não do trabalho. Para isso, precisa relacionar o agravo (incapacidade laboral) com a Classificação Internacionais de Doenças dispostas no Anexo II, Lista “C”.</p>',
                         },
                         {
-                            categoria: 'elementos',
-                            texto: '<p>&nbsp;</p><p>A parte recorrente submetida a perícia médica, que por sua vez concluiu pela existência da incapacidade laborativa até ${dcb}.</p>',
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Houve análise pela Perícia Médica Federal e, por haver o enquadramento legal, foi concedida a espécie na modalidade acidentária.</p><p>Não há a necessidade de vistoria técnica em razão do Decreto 3.048/99 ser taxativo quanto as doenças que têm origem no trabalho.</p><p>Deste modo, mantem-se o ato denegatório do INSS e a existência do nexo técnico, devendo a espécie continuar sendo acidentária.</p>',
+                        },
+                        {
+                            categoria: 'alcada',
+                            texto: '<p>&nbsp;</p><p>Por ordem do inciso IV do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;A RELAÇÃO ENTRE A PATOLOGIA INCAPACITANTE E O LABOR É CARACTERIZADO PELA PERÍCIA MÉDICA FEDERAL, CONFORME ARTIGO 337 DO DECRETO 3.048/99. SENDO A PERÍCIA FAVORÁVEL QUANTO AO NEXO, ESTÁ COMPROVADO.</strong></p>',
                         },
                     ],
                     ramificacao: {
-                        irPara: 'parecer_pericia_medica_federal',
+                        irPara: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
+                    },
+                },
+                {
+                    id: 'afastou_o_ntep',
+                    titulo: 'Afastou o NTEP',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'diligencia',
+                            texto: '<p>&nbsp;</p><p>Em diligência, houve reanálise pela perícia médica federal, que por sua vez afastou o nexo técnico e entendeu que a espécie não é acidentária.</p>',
+                        },
+                        {
+                            categoria: 'merito',
+                            texto: '<p>&nbsp;</p><p><strong>RECONHECIMENTO DA ESPÉCIE COMO ACIDENTÁRIA</strong></p><p>Regulamenta o Decreto nº 3.048/1999 sobre o tema:</p><p><i>“Art. 337. &nbsp;O acidente do trabalho será caracterizado tecnicamente pela Perícia Médica Federal, por meio da identificação do nexo entre o trabalho e o agravo.&nbsp;</i><br><i>(…)</i><br><i>§ 3º &nbsp;Considera-se estabelecido o nexo entre o trabalho e o agravo quando se verificar nexo técnico epidemiológico entre a atividade da empresa e a entidade mórbida motivadora da incapacidade, elencada na Classificação Internacional de Doenças - CID em conformidade com o disposto na Lista C do Anexo II deste Regulamento.&nbsp;</i><br><i>(…)</i><br><i>§ 5º &nbsp;Reconhecidos pela Perícia Médica Federal a incapacidade para o trabalho e o nexo entre o trabalho e o agravo, na forma prevista no § 3º, serão devidas as prestações acidentárias a que o beneficiário tiver direito.”</i></p><p>O Diploma Previdenciário regulamenta que a Perícia Médica Federal – PMF - tem competência para determinar se uma incapacidade decorre ou não do trabalho. Para isso, precisa relacionar o agravo (incapacidade laboral) com a Classificação Internacionais de Doenças dispostas no Anexo II, Lista “C”.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>Houve análise pela Perícia Médica Federal (PMF) e, por haver o enquadramento legal, foi concedida a espécie na modalidade acidentária.</p><p>Todavia, em fase recursal, o órgão da PMF <strong>retificou</strong> o entendimento anterior, demonstrando que não há nexo entre a incapacidade e o trabalho exercido.</p><p>Deste modo, deve a espécie ser considerada previdenciária, e não acidentária.</p>',
+                        },
+                        {
+                            categoria: 'alcada',
+                            texto: '<p>&nbsp;</p><p>Por ordem do inciso IV do § 1º do Art. 33 da Portaria MTP nº 4.061/2022, a matéria posta em discussão é de matéria de alçada da Junta de Recursos, inexistindo competência das Câmaras de Julgamento para apreciação da matéria.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;A RELAÇÃO ENTRE A PATOLOGIA INCAPACITANTE E O LABOR É CARACTERIZADO PELA PERÍCIA MÉDICA FEDERAL, CONFORME ARTIGO 337 DO DECRETO 3.048/99. ESTA, POR SUA VEZ, ENTENDE QUE NÃO HÁ NEXO TÉCNICO E DEVE A ESPÉCIE SER REVISTA DE ACIDENTÁRIA PARA PREVIDENCIÁRIA.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
                     },
                 },
             ],
@@ -7850,7 +10441,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -7876,7 +10467,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
@@ -22554,7 +25145,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -22580,7 +25171,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -22612,7 +25203,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -22638,7 +25229,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -22664,7 +25255,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -22690,7 +25281,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
@@ -22919,7 +25510,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -22954,7 +25545,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -22980,7 +25571,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23006,7 +25597,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23032,7 +25623,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23058,7 +25649,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23084,7 +25675,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23110,7 +25701,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23136,7 +25727,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23162,7 +25753,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23188,7 +25779,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23214,7 +25805,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23240,7 +25831,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
@@ -23283,7 +25874,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23329,7 +25920,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23365,7 +25956,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23401,7 +25992,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23437,7 +26028,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23463,7 +26054,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23489,7 +26080,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23521,7 +26112,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
@@ -23555,7 +26146,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23590,7 +26181,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23616,7 +26207,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23642,7 +26233,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23668,7 +26259,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23694,7 +26285,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23720,7 +26311,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23746,7 +26337,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23772,7 +26363,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23798,7 +26389,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23824,7 +26415,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23850,7 +26441,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23876,7 +26467,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
@@ -23919,7 +26510,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -23965,7 +26556,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -24001,7 +26592,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -24037,7 +26628,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -24073,7 +26664,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -24099,7 +26690,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -24125,7 +26716,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
                 {
@@ -24157,15 +26748,15 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+                        irPara: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
                     },
                 },
             ],
         },
         {
-            id: 'ro_ha_outros_pontos_controversos_que_merecem_destaque',
+            id: 'ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss',
             tipo: 'opcao',
-            titulo: '(RO) Há outros Pontos Controversos que merecem destaque?',
+            titulo: '(RO) Algum vínculo de Carteira de Trabalho foi rejeitado pelo INSS?',
             valorPadrao: 'nao',
             opcoes: [
                 {
@@ -24174,38 +26765,12 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_ha_formularios_de_atividade_especial_a_serem_analisados',
                     },
                 },
                 {
-                    id: 'sim_ha_outras_questoes_de_direito_que_merecem_ser_apontadas',
-                    titulo: 'Sim, há outras questões de direito que merecem ser apontadas',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'pontos_controversos',
-                    },
-                },
-                {
-                    id: 'sim_ha_documentos_apresentados_que_merecem_ser_melhor_fundamentados',
-                    titulo: 'Sim, há documentos apresentados que merecem ser melhor fundamentados',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'ro_qual_documento_merece_ser_melhor_explicado',
-                    },
-                },
-            ],
-        },
-        {
-            id: 'ro_qual_documento_merece_ser_melhor_explicado',
-            tipo: 'opcao',
-            titulo: '(RO) Qual documento merece ser melhor explicado?',
-            valorPadrao: 'ctps_com_vinculos_que_foram_rejeitados_pelo_inss',
-            opcoes: [
-                {
-                    id: 'ctps_com_vinculos_que_foram_rejeitados_pelo_inss',
-                    titulo: 'CTPS com vínculos que foram rejeitados pelo INSS',
+                    id: 'sim_ha_ctps_com_vinculos_que_foram_rejeitados_pelo_inss',
+                    titulo: 'Sim, há CTPS com vínculos que foram rejeitados pelo INSS',
                     listaVariaveis: [
                         {
                             id: 'numero_da_ctps',
@@ -24456,7 +27021,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque_2',
+                        irPara: 'ro_ha_formularios_de_atividade_especial_a_serem_analisados',
                     },
                 },
                 {
@@ -24645,7 +27210,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque_2',
+                        irPara: 'ro_ha_formularios_de_atividade_especial_a_serem_analisados',
                     },
                 },
                 {
@@ -24834,7 +27399,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque_2',
+                        irPara: 'ro_ha_formularios_de_atividade_especial_a_serem_analisados',
                     },
                 },
                 {
@@ -25023,7 +27588,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: 'ro_ha_outros_pontos_controversos_que_merecem_destaque_2',
+                        irPara: 'ro_ha_formularios_de_atividade_especial_a_serem_analisados',
                     },
                 },
                 {
@@ -25066,7 +27631,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'ro_ha_formularios_de_atividade_especial_a_serem_analisados',
                     },
                 },
                 {
@@ -25109,7 +27674,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'ro_ha_formularios_de_atividade_especial_a_serem_analisados',
                     },
                 },
                 {
@@ -25152,7 +27717,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'avançar',
+                        irPara: 'ro_ha_formularios_de_atividade_especial_a_serem_analisados',
                     },
                 },
                 {
@@ -25195,15 +27760,271 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
+                        irPara: 'ro_ha_formularios_de_atividade_especial_a_serem_analisados',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'ro_ha_formularios_de_atividade_especial_a_serem_analisados',
+            tipo: 'opcao',
+            titulo: '(RO) Há formulários de atividade especial a serem analisados?',
+            valorPadrao: 'nao',
+            opcoes: [
+                {
+                    id: 'nao',
+                    titulo: 'Não.',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
+                    },
+                },
+                {
+                    id: 'sim',
+                    titulo: 'Sim',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
                         irPara: 'avançar',
                     },
                 },
             ],
         },
         {
-            id: 'ro_ha_outros_pontos_controversos_que_merecem_destaque_2',
+            id: 'ro_formulario_1_de_tempo_especial',
             tipo: 'opcao',
-            titulo: '(RO) Há outros Pontos Controversos que merecem destaque? (2)',
+            titulo: '(RO) Formulário 1 de Tempo Especial',
+            opcoes: [
+                {
+                    id: 'ppp_-_perfil_profissiografico_previdenciario',
+                    titulo: 'PPP - Perfil Profissiográfico Previdenciário',
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'ro_em_algum_momento_do_processo_houve_exigencia_ao_interessado_para_a_apresentacao_de_documentos',
+            tipo: 'opcao',
+            titulo: '(RO) Em algum momento do processo houve exigência ao interessado para a apresentação de documentos?',
+            subtitulo:
+                'Apenas responda se não foi respondida anteriormente em algum questionamento',
+            valorPadrao: 'nao_foi_necessaria_exigencia',
+            opcoes: [
+                {
+                    id: 'nao_foi_necessaria_exigencia',
+                    titulo: 'Não foi necessária exigência',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+                {
+                    id: 'o_inss_fez_exigencia_adequada_mas_o_interessado_nao_a_cumpriu',
+                    titulo: 'O INSS fez exigência adequada, mas o interessado não a cumpriu',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+                {
+                    id: 'o_inss_fez_exigencia_adequada_e_o_interessado_cumpriu',
+                    titulo: 'O INSS fez exigência adequada e o interessado cumpriu',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+                {
+                    id: 'o_inss_fez_exigencia_inadequada_nao_cumprida_pelo_interessado',
+                    titulo: 'O INSS fez exigência inadequada, não cumprida pelo interessado',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_por_qual_razao_a_exigencia_do_inss_foi_inadequada',
+                    },
+                },
+                {
+                    id: 'a_jr_fez_exigencia_e_o_interessado_apresentou_documentos',
+                    titulo: 'A JR fez exigência, e o interessado apresentou documentos',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+                {
+                    id: 'a_jr_fez_exigencia_mas_o_interessado_nao_apresentou_documentos_indispensaveis',
+                    titulo: 'A JR fez exigência, mas o interessado não apresentou documentos indispensáveis',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+                {
+                    id: 'nao_houve_exigencia_-_mandado_de_seguranca_ricrps_art_23__unico',
+                    titulo: 'Não houve exigência - mandado de segurança (RICRPS, Art. 23, § único)',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+                {
+                    id: 'nao_houve_exigencia_-_interessado_faleceu_ricrps_art_57__4',
+                    titulo: 'Não houve exigência - interessado faleceu (RICRPS, Art. 57, § 4º)',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'ro_por_qual_razao_a_exigencia_do_inss_foi_inadequada',
+            tipo: 'opcao',
+            titulo: '(RO) Por qual razão a exigência do INSS foi inadequada?',
+            valorPadrao: 'onerosa_ao_interessado_lei_978499_art_29__2',
+            opcoes: [
+                {
+                    id: 'onerosa_ao_interessado_lei_978499_art_29__2',
+                    titulo: 'Onerosa ao interessado (Lei 9.784/99, Art. 29, § 2º)',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+                {
+                    id: 'responsabilidade_do_inss_em_conseguir_a_prova_dec_304899_art_124-b_e_art_125-a',
+                    titulo: 'Responsabilidade do INSS em conseguir a prova (Dec. 3.048/99, Art. 124-B e Art. 125-A)',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+                {
+                    id: 'generica_pt_inssdirben_99322_art_74__1_iii',
+                    titulo: 'Genérica (PT INSS/DIRBEN 993/22, Art. 74, § 1º, III)',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+                {
+                    id: 'documento_dispensavel',
+                    titulo: 'Documento dispensável',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+                {
+                    id: 'redacao_da_carta_nao_trouxe_clareza_a_quem_le',
+                    titulo: 'Redação da carta não trouxe clareza a quem lê',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'ro_sobre_diligencias_ao_inss',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'ro_sobre_diligencias_ao_inss',
+            tipo: 'opcao',
+            titulo: '(RO) Sobre diligências ao INSS:',
+            subtitulo:
+                'Apenas responda se não foi respondida anteriormente em algum questionamento',
+            valorPadrao:
+                'nao_houve_diligencia_preliminar_nem_conversao_do_julgamento_em_diligencia',
+            opcoes: [
+                {
+                    id: 'nao_houve_diligencia_preliminar_nem_conversao_do_julgamento_em_diligencia',
+                    titulo: 'Não houve diligência preliminar, nem conversão do julgamento em diligência',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'houve_diligencia_preliminar_que_foi_cumprida_pelo_inss',
+                    titulo: 'Houve diligência preliminar que foi cumprida pelo INSS',
+                    listaVariaveis: [
+                        {
+                            id: 'evento_da_diligencia',
+                            titulo: 'Evento da diligência:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'diligencias',
+                            texto: '<p>&nbsp;</p><p>Houve diligência preliminar, ev. ${evento_da_diligencia}, a qual foi cumprida pelo INSS.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'houve_conversao_do_julgamento_em_diligencia_que_foi_cumprida_pelo_inss',
+                    titulo: 'Houve conversão do julgamento em diligência, que foi cumprida pelo INSS',
+                    listaVariaveis: [
+                        {
+                            id: 'evento_da_diligencia',
+                            titulo: 'Evento da diligência:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'diligencias',
+                            texto: '<p>&nbsp;</p><p>Houve conversão do julgamento em diligência, ev. ${evento_da_diligencia}, a qual foi cumprida pelo INSS.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'houve_diligencia_que_nao_foi_cumprida_pelo_inss',
+                    titulo: 'Houve diligência que NÃO foi cumprida pelo INSS',
+                    listaVariaveis: [
+                        {
+                            id: 'evento_da_diligencia',
+                            titulo: 'Evento da diligência:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'diligencias',
+                            texto: '<p>&nbsp;</p><p>Houve diligência desta Junta de Recursos, ev. ${evento_da_diligencia}, a qual não foi atendida pelo INSS.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'ro_ha_outros_pontos_controversos_fundamentos_juridicos_que_merecem_destaque',
+            tipo: 'opcao',
+            titulo: '(RO) Há outros Pontos Controversos (fundamentos jurídicos) que merecem destaque?',
             valorPadrao: 'nao',
             opcoes: [
                 {
@@ -25212,7 +28033,7 @@ export const especificacao: EspecificacaoDTO = {
                     listaVariaveis: [],
                     listaTextos: [],
                     ramificacao: {
-                        irPara: 'admissibilidade',
+                        irPara: 'ro_voce_vota_por_reconhecer_o_direito_ao_beneficio_recorrido',
                     },
                 },
                 {
@@ -25224,14 +28045,6 @@ export const especificacao: EspecificacaoDTO = {
                         irPara: 'pontos_controversos',
                     },
                 },
-                {
-                    id: 'sim_ha_documentos_apresentados_que_merecem_ser_melhor_fundamentados',
-                    titulo: 'Sim, há documentos apresentados que merecem ser melhor fundamentados',
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
             ],
         },
         {
@@ -25239,120 +28052,6 @@ export const especificacao: EspecificacaoDTO = {
             tipo: 'selecao',
             titulo: 'Pontos Controversos',
             opcoes: [
-                {
-                    id: 'carencia',
-                    titulo: 'Carência',
-                    listaVariaveis: [],
-                    listaTextos: [
-                        {
-                            categoria: 'voto-pontos-controversos',
-                            texto: '<p>CARÊNCIA NAS PRESTAÇÕES</p><p>Assim normatiza o Decreto nº 3.048/99 sobre carência<br>"Art. 29. A concessão das prestações pecuniárias do Regime Geral de Previdência Social, ressalvado o disposto no art. 30, depende dos seguintes períodos de carência:<br>I - doze contribuições mensais, nos casos de auxílio por incapacidade temporária e aposentadoria por incapacidade permanente; e&nbsp;<br>II - cento e oitenta contribuições mensais, nos casos de aposentadoria programada, por idade do trabalhador rural e especial;<br>III - dez contribuições mensais, no caso de salário-maternidade, para as seguradas contribuinte individual, especial e facultativa, respeitado o disposto no § 2º do art. 93 e no inciso II do art. 101.<br>IV - vinte e quatro contribuições mensais, no caso de auxílio-reclusão."</p><p>Para que seja possível a concessão da referida prestação, dado o caráter contributivo da Previdência Social, é imprescindível que o segurado tenha vertido, em vida, a quantidade mínima de MM contribuições mensais.</p>',
-                        },
-                        {
-                            categoria: 'voto-caso-concreto',
-                            texto: '<p>No caso em tela, verifica-se que a parte recorrente possui o total de NN contribuições mensais, razão pela qual [não] cumpre com o requisito carência.</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: '<p>CARÊNCIA EXIGIDA DE MM CONTRIBUIÇÕES MENSAIS, REQUISITO [NÃO] CUMPRIDO PELA PARTE RECORRENTE.</p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'carencia-doencao-nao-isenta',
-                    titulo: 'Carência – Doença não isenta carência',
-                    listaVariaveis: [
-                        {
-                            id: 'tipo-segurado',
-                            titulo: 'Tipo de Segurado',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'inicio-qualidade-segurado',
-                            titulo: 'Data início da qualidade de Segurado',
-                            tipo: 'texto',
-                        },
-                        {
-                            id: 'fim-qualidade-segurado',
-                            titulo: 'Data fim da qualidade de Segurado',
-                            tipo: 'texto',
-                        },
-                    ],
-                    listaTextos: [
-                        {
-                            categoria: 'relatorio',
-                            texto: '<p>Consta no Cadastro Nacional do Seguro Social – CNIS – o início das contribuições na qualidade de segurado ${tipo-segurado} a partir de ${inicio-qualidade-segurado} até o ${fim-qualidade-segurado} [ou evento gerador], num total de NN contribuições apuradas pelo INSS.</p>',
-                        },
-                        {
-                            categoria: 'voto-pontos-controversos',
-                            texto: '<p>ISENÇÃO DE CARÊNCIA NO BENEFÍCIO POR INCAPACIDADE</p><p>Há situações em que o Decreto Previdenciário determina a isenção de carência para o Auxílio Incapacidade Temporária, nos seguintes termos:<br>“Art. 30. Independe de carência a concessão das seguintes prestações:<br>(...)<br>III - auxílio por incapacidade temporária e aposentadoria por incapacidade permanente nos casos de acidente de qualquer natureza ou causa e de doença profissional ou do trabalho e nos casos de segurado que, após filiar-se ao RGPS, seja acometido de alguma das doenças ou afecções especificadas em lista elaborada pelos Ministérios da Saúde e da Economia, atualizada a cada três anos, de acordo com os critérios de estigma, deformação, mutilação, deficiência ou outro fator que lhe confira especificidade e gravidade que mereçam tratamento particularizado;”<br>(...)<br>§ 2º &nbsp;Até que seja elaborada a lista de doenças ou afecções a que se refere o inciso III do caput, independerá de carência a concessão de auxílio por incapacidade temporária e de aposentadoria por incapacidade permanente ao segurado que, após filiar-se ao RGPS, seja acometido por alguma das seguintes doenças:<br>I - tuberculose ativa;<br>II - hanseníase;<br>III - alienação mental;<br>IV - esclerose múltipla;<br>V - hepatopatia grave;<br>VI - neoplasia maligna;<br>VII - cegueira;<br>VIII - paralisia irreversível e incapacitante;<br>IX - cardiopatia grave;<br>X - doença de Parkinson;<br>XI - espondiloartrose anquilosante;<br>XII - nefropatia grave;<br>XIII - estado avançado da doença de Paget (osteíte deformante);<br>XIV - síndrome da imunodeficiência adquirida (aids); ou<br>XV - contaminação por radiação, com base em conclusão da medicina especializada.</p>',
-                        },
-                        {
-                            categoria: 'voto-caso-concreto',
-                            texto: '<p>A doença que acomete a parte recorrente não decorre de acidente para que isente de carência. Também, não está elencada no rol de patologias graves que assegurem a isenção, entabuladas no § 2º do Art. 30 do Decreto nº 3.048/99.</p><p>A doença que acomete a parte recorrente decorre de [ACIDENTE/DOENÇA] que isenta de carência[, pois está elencada no rol de patologias graves que assegurem a isenção, entabuladas no § 2º do Art. 30 do Decreto nº 3.048/99].</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: '<p>NÃO GOZA DE ISENÇÃO DE CARÊNCIA EM RAZÃO DA INCAPACIDADE &nbsp;TER ORIGEM EM ACIDENTE OU DOENÇA ESPECIFICADA NO § 2º DO ART. 30. DO DECRETO Nº 3.048/99.</p><p>GOZA DE ISENÇÃO DE CARÊNCIA EM RAZÃO DA INCAPACIDADE TER ORIGEM EM [ACIDENTE/DOENÇA ESPECIFICADA NA NORMA REGULAMENTADORA], NOS TERMOS DO ART. 30. DO DECRETO Nº 3.048/99.</p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'auxilio-reclusao-certidao',
-                    titulo: 'Auxílio-Reclusão - certidão carcerária',
-                    listaTextos: [
-                        {
-                            categoria: 'relatorio',
-                            texto: '<p>Houve apresentação pela parte recorrente da comprovação da reclusão em regime fechado a partir de XX/XX/XXXX.</p><p>Foi emitida exigência para apresentar Certidão Judicial, referente ao regime de reclusão e a data da prisão, mas esta não foi devidamente atendida pela parte recorrente.</p>',
-                        },
-                        {
-                            categoria: 'voto-pontos-controversos',
-                            texto: '<p>Sobre a comprovação do recolhimento ao cárcere, normatiza o Decreto nº 3.048/99:<br>"Art. 116. &nbsp;O auxílio-reclusão, cumprida a carência prevista no inciso IV do caput do art. 29, será devido, nas condições da pensão por morte, aos dependentes do segurado de baixa renda recolhido à prisão em regime fechado que não receber remuneração da empresa nem estiver em gozo de auxílio por incapacidade temporária, de pensão por morte, de salário-maternidade, de aposentadoria ou de abono de permanência em serviço. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br>(...)<br>§ 2º &nbsp;O requerimento do auxílio-reclusão será instruído com certidão judicial que ateste o recolhimento efetivo à prisão e será obrigatória a apresentação de prova de permanência na condição de presidiário para a manutenção do benefício."</p>',
-                        },
-                        {
-                            categoria: 'voto-caso-concreto',
-                            texto: '<p>A parte recorrente apresentou a certidão judicial comprovando a reclusão em regime fechado e, em razão de comprovar a qualidade de dependente, a qualidade de segurado e a carência, faz jus à prestação requerida, nos termos do Art. 116 do Decreto nº 3.048/99.</p><p>A parte recorrente não apresentou a a certidão judicial comprovando a reclusão em regime fechado, motivo pela qual não cumpre com o requisito imposto no Art. 116 do Decreto nº 3.048/99.</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: 'A PARTE RECORRENTE [NÃO] APRESENTOU A CERTIDÃO JUDICIAL QUE ATESTA O RECOLHIMENTO EFETIVO À PRISÃO EM REGIME FECHADO, NOS TERMOS DO § 2º DO ART. 116 DO DECRETO Nº 3.048/99.',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'perda-da-qualidade-de-segurado',
-                    titulo: 'Perda da qualidade de segurado',
-                    listaTextos: [
-                        {
-                            categoria: 'relatorio',
-                            texto: '<p>Consta no Cadastro Nacional do Seguro Social – CNIS – a última contribuição em XX/XX/XXXX na condição de [segurado empregado/avulso/doméstico/especial/contribuinte individual/ facultativo/ beneficiário de auxílio incapacidade temporária/ segregado compulsório/ segurado recluso/ licenciado das Forças Armadas].</p><p>Não há comprovação nos autos de mais de 120 contribuições mensais, anteriores a perda desta qualidade, ou a comprovação de desemprego por órgão do Ministério do Trabalho e Previdência.</p><p>Há a comprovação de mais de 120 contribuições mensais sem a perda da qualidade de segurado, antes de XX/XX/XXXX.<br>Nos termos do evento X, há a comprovação da condição de desemprego por meio do [recebimento de seguro desemprego/inscrição cadastral no Sistema Nacional de Emprego - SINE].</p>',
-                        },
-                        {
-                            categoria: 'voto-pontos-controversos',
-                            texto: '<p>Sobre a manutenção da qualidade de segurado no evento gerador, normatiza o Decreto nº 3.048/99:<br>"Art. 13. Mantém a qualidade de segurado, independentemente de contribuições:<br>&nbsp; &nbsp; &nbsp; &nbsp;I - sem limite de prazo, o segurado que estiver em gozo de benefício, exceto na hipótese de auxílio-acidente;<br>&nbsp; &nbsp; &nbsp; II - até doze meses após a cessação de benefício por incapacidade ou das contribuições, observado o disposto nos § 7º e § 8º e no art. 19-E;<br>&nbsp; &nbsp; &nbsp; &nbsp;III - até doze meses após cessar a segregação, o segurado acometido de doença de segregação compulsória;<br>&nbsp; &nbsp; &nbsp; &nbsp;IV - até doze meses após o livramento, o segurado detido ou recluso;<br>&nbsp; &nbsp; &nbsp; &nbsp;V - até três meses após o licenciamento, o segurado incorporado às Forças Armadas para prestar serviço militar; e<br>&nbsp; &nbsp; &nbsp; &nbsp;VI - até seis meses após a cessação das contribuições, o segurado facultativo.<br>§ 1º &nbsp;O prazo do inciso II será prorrogado para até vinte e quatro meses, se o segurado já tiver pago mais de cento e vinte contribuições mensais sem interrupção que acarrete a perda da qualidade de segurado.<br>&nbsp; &nbsp; &nbsp; &nbsp;§ 2º &nbsp;O prazo do inciso II ou do § 1º será acrescido de doze meses para o segurado desempregado, desde que comprovada essa situação por registro no órgão próprio do Ministério do Trabalho e Emprego."</p>',
-                        },
-                        {
-                            categoria: 'voto-caso-concreto',
-                            texto: '<p>A parte recorrente apresentou a certidão judicial comprovando a reclusão em regime fechado e, em razão de comprovar a qualidade de dependente, a qualidade de segurado e a carência, faz jus à prestação requerida, nos termos do Art. 116 do Decreto nº 3.048/99.</p><p>A parte recorrente não apresentou a a certidão judicial comprovando a reclusão em regime fechado, motivo pela qual não cumpre com o requisito imposto no Art. 116 do Decreto nº 3.048/99.</p>',
-                        },
-                        {
-                            categoria: 'ementa',
-                            texto: '<p>PERDA DA QUALIDADE DE SEGURADO EM YY/YY/YYYY. NÃO CONSTAM MAIS DE 120 CONTRIBUIÇÕES MENSAIS OU COMPROVAÇÃO DE DESEMPREGO POR ÓRGÃO DO MINISTÉRIO DO TRABALHO E PREVIDÊNCIA QUE JUSTIFIQUEM A ESTENÇÃO DESTA QUALIDADE. NA DATA DO EVENTO GERADOR ZZ/ZZ/ZZZZ NÃO GOZAVA MAIS DA MANUTENÇÃO DESTA QUALIDADE, CONFORME REQUER O ART. 13 DO DECRETO Nº 3.048/99.</p><p>QUALIDADE DE SEGURADO ESTENDIDA POR COMPROVAR MAIS DE 120 CONTRIBUIÇÕES MENSAIS [E/OU] COMPROVAÇÃO DE DESEMPREGO POR ORGÃO DO MINISTÉRIO DO TRABALHO E PREVIDÊNCIA. TODAVIA, NA DATA DO EVENTO GERADOR ZZ/ZZ/ZZZZ NÃO GOZAVA MAIS DA MANUTENÇÃO DESTA QUALIDADE. COM ISSO, NA DATA DO EVENTO GERADOR ZZ/ZZ/ZZZZ GOZAVA DA MANUTENÇÃO DESTA QUALIDADE, INTELIGÊNCIA DO ART. 13 DO DECRETO Nº 3.048/99.</p>',
-                        },
-                    ],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
                 {
                     id: 'perdeu_a_qualidade_de_segurado_e_nova_filiacao_apos_18062019',
                     titulo: 'Perdeu a qualidade de segurado e nova filiação após 18/06/2019',
@@ -26471,12 +29170,179 @@ export const especificacao: EspecificacaoDTO = {
                         irPara: 'avançar',
                     },
                 },
+                {
+                    id: 'uniao_estavel_-_enunciado_4_-_decisao_judicial_-_foi_juntado_inicio_de_prova_material',
+                    titulo: 'União Estável - Enunciado 4 - Decisão judicial - foi juntado início de prova material',
+                    listaTextos: [
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Consta a existência de &nbsp;início de prova material que subsidia a decisão judicial que reconheceu a união estável no processo judicial que tramitou na justiça comum estadual, razão pela qual é possível reconhecer a qualidade de dependente conforme Enunciado 4 do CRPS.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;DECISÃO JUDICIAL QUE RECONHECE UNIÃO ESTÁVEL SOMENTE SERVE COMO PROVA SE ESTIVER ACOMPANHADA DE INÍCIO DE PROVA MATERIAL, COMO REQUER O ENUNCIADO 4 DO CRPS.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'uniao_estavel_-_enunciado_4_-_decisao_judicial_-_nao_foi_juntado_inicio_de_prova_material',
+                    titulo: 'União Estável - Enunciado 4 - Decisão judicial - NÃO foi juntado início de prova material',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'pontoscontroversos',
+                            texto: '<p>&nbsp;</p><p>Sobre a decisão judicial das varas de família, é a jurisprudência do CRPS insculpida no Enunciado 4:</p><p>“<i>ENUNCIADO 4</i><br><i>A comprovação de união estável e de dependência econômica, mediante ação judicial transitada em julgado, somente produzirá efeitos para fins previdenciários quando baseada em início de prova material contemporânea aos fatos, constantes nos autos do processo judicial ou administrativo</i>.”</p><p>Observando o entendimento do Conselho Pleno, verifica-se que é necessário que sejam juntados no processo judicial ou no administrativo os documentos que sirvam como início de prova material.</p>',
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Não consta nos autos qualquer início de prova material que poderia subsidiar a decisão da justiça comum estadual que reconheceu a união estável em seus autos, razão pela qual não é possível reconhecer a qualidade de dependente conforme Enunciado 4 do CRPS.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;DECISÃO JUDICIAL QUE RECONHECE UNIÃO ESTÁVEL SOMENTE SERVE COMO PROVA SE ESTIVER ACOMPANHADA DE INÍCIO DE PROVA MATERIAL, COMO REQUER O ENUNCIADO 4 DO CRPS.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'contribuinte_individual_-_prestador_de_servico_a_empresa_-__nao_comprova_a_retencao_pelo_tomador_-_enunciado_5',
+                    titulo: 'Contribuinte Individual - prestador de serviço à empresa -  não comprova a retenção pelo tomador - Enunciado 5',
+                    listaVariaveis: [
+                        {
+                            id: 'competencia_inicial_pleiteada',
+                            titulo: 'Competência inicial pleiteada:',
+                            tipo: 'texto',
+                        },
+                        {
+                            id: 'competencia_final_pleiteada',
+                            titulo: 'Competência final pleiteada:',
+                            tipo: 'texto',
+                        },
+                    ],
+                    listaTextos: [
+                        {
+                            categoria: 'merito',
+                            texto: "<p>&nbsp;</p><p><br>&nbsp;</p><p><strong>TEMPO DE CONTRIBUIÇÃO DO SEGURADO CONTRIBUINTE INDIVIDUAL</strong></p><p>No tocante ao Tempo de Contribuição, dispõe o Decreto 3.048/99 sobre o tema:</p><p>“<i>Art. 19-C. Considera-se tempo de contribuição o tempo correspondente aos períodos para os quais tenha havido contribuição obrigatória ou facultativa ao RGPS, dentre outros, o período:</i><br><i>IX - em que o segurado contribuinte individual e o segurado facultativo tenham contribuído na forma prevista no art. 199-A, observado o disposto em seu § 2º.”</i></p><p>Observando o preceito normativo, é aceitável como tempo de contribuição o período de labor exercido por segurado em atividade abrangida pela previdência social, como a do contribuinte individual.</p><p>Vejamos o que mais dispõe o Regulamento da Previdência Social:</p><p>“<i>Art. 216. A arrecadação e o recolhimento das contribuições e de outras importâncias devidas à seguridade social, observado o que a respeito dispuserem o Instituto Nacional do Seguro Social e a Secretaria da Receita Federal, obedecem às seguintes normas gerais:</i><br><i>I -<strong> a empresa é obrigada a:</strong></i><br><i>a) <strong>arrecadar a contribuição do segurado empregado, do trabalhador avulso e do contribuinte individual a seu serviço, descontando-a da respectiva remuneração;</strong></i><br><i>b) recolher o produto arrecadado na forma da alínea “a” e as contribuições a seu cargo incidentes sobre as remunerações pagas, devidas ou creditadas, a qualquer título, inclusive adiantamentos decorrentes de reajuste salarial, acordo ou convenção coletiva, aos segurados empregado, contribuinte individual e trabalhador avulso a seu serviço, e sobre o valor bruto da nota fiscal ou fatura de serviço, relativo a serviços que lhe tenham sido prestados por cooperados, por intermédio de cooperativas de trabalho, até o dia vinte do mês seguinte àquele a que se referirem as remunerações, bem como as importâncias retidas na forma do art. 219, <strong>até o dia vinte do mês seguinte</strong></i><strong> </strong><i>àquele da emissão da nota fiscal ou fatura, antecipando-se o vencimento para o dia útil imediatamente anterior quando não houver expediente bancário no dia vinte;&nbsp;</i><br><i>XII - a empresa que remunera contribuinte individual é obrigada a fornecer a este comprovante do pagamento do serviço prestado consignando, além dos valores da remuneração e do desconto feito, o número da inscrição do segurado no Instituto Nacional do Seguro Social;</i><br><i>(...)</i><br><i>Art. 225. A empresa é também obrigada a:</i><br><i>IV - informar mensalmente ao Instituto Nacional do Seguro Social, por intermédio da Guia de Recolhimento do Fundo de Garantia do Tempo de Serviço e Informações à Previdência Social, na forma por ele estabelecida, dados cadastrais, todos os fatos geradores de contribuição previdenciária e outras informações de interesse daquele Instituto;</i><br><i>§ 1º As informações prestadas na Guia de Recolhimento do Fundo de Garantia do Tempo de Serviço e Informações à Previdência Social servirão como base de cálculo das contribuições arrecadadas pelo Instituto Nacional do Seguro Social, comporão a base de dados para fins de cálculo e concessão dos benefícios previdenciários, bem como constituir-se-ão em termo de confissão de dívida, na hipótese do não-recolhimento.</i><br><i>§ 3º A Guia de Recolhimento do Fundo de Garantia do Tempo de Serviço e Informações à Previdência Social é exigida relativamente a fatos geradores ocorridos a partir de janeiro de 1999.</i><br><i>§ 4º <strong>O preenchimento, as informações prestadas e a entrega da Guia de Recolhimento do Fundo de Garantia do Tempo de Serviço e Informações à Previdência Social são de inteira responsabilidade da empresa.</strong></i><br>(…)<br><i>Art. 348. O direito da seguridade social de apurar e constituir seus créditos extingue-se no prazo de cinco anos, contado:</i><br><i>§ 1º Para comprovar o exercício de atividade remunerada, com vistas à concessão de benefícios, será exigido do contribuinte individual, a qualquer tempo, o recolhimento das correspondentes contribuições, observado o disposto nos §§ 7º a 14 do art. 216.</i><strong>” </strong>(destaquei)</p><p>Observando o regulamento, podemos depreender que, para o contribuinte individual, é necessário o efetivo recolhimento das contribuições previdenciárias para agregar o labor ao tempo de contribuição, consoante § 1º do artigo 348 do Diploma Previdenciário.</p><p>Também é possível observar, com base no § 1º do artigo 348, que os recolhimentos do contribuinte podem ser feitos em atraso, sendo exigíveis para a concessão de benefícios. <strong>O atraso do recolhimento, portanto, não é óbice para reconhecer o tempo de contribuição, desde que reconhecida a filiação</strong>.</p><p>O texto da letra “a” inciso I do artigo 216 do Decreto 3.048/99, determinava como responsabilidade da empresa o recolhimento das contribuições dos seus empregados e trabalhadores avulsos. Com a publicação do Decreto 4.729/2003, passou a ser também da responsabilidade da empresa o recolhimento das contribuições do contribuinte individual. O Decreto 4.729/2003 acabou por equiparar a desnecessidade da exigência dos recolhimentos do segurado empregado e avulso ao contribuinte individual prestador de serviço à empresa.</p><p>Como a relação de custeio tem natureza tributária, vejamos o que normatiza o Código Tributário Nacional, Lei 5.172/66:</p><p>“<i>Art. 121. Sujeito passivo da obrigação principal é a pessoa obrigada ao pagamento de tributo ou penalidade pecuniária.&nbsp;</i><br><i>Parágrafo único. O sujeito passivo da obrigação principal diz-se:&nbsp;</i><br><i>I - contribuinte, quando tenha relação pessoal e direta com a situação que constitua o respectivo fato gerador;&nbsp;</i><br><i>II - responsável, quando, sem revestir a condição de contribuinte, sua obrigação decorra de disposição expressa de lei. </i>”<br>&nbsp;</p><p>Destarte o responsável pelo recolhimento não é o contribuinte, uma vez que ele, ainda que tenha relação direta com o fato gerador (prestação do serviço), não lhe compete efetuar o pagamento do tributo por força da alínea 'a” do inciso I do artigo 116. Portanto a responsável, sujeito passivo da obrigação tributária, é a empresa.</p><p>Ora, se a competência para o recolhimento não é da recorrente, como explicitado acima, e, sendo ele segurado obrigatório por força do inciso V do artigo 12 da Lei 8212/91, é devido sim acatar os recolhimentos extemporâneos existentes no CNIS, do mesmo modo que se empregado fosse.</p><p>Além do mais, percebe-se que há o recolhimento em dia, corretamente, nos períodos posteriores às competências extemporâneos, e não seria razoável interpretar que não houve a prestação de serviço nesse período.</p><p>No mesmo sentido, é a jurisprudência consolidada desta Corte Administrativa:</p><p>“<i>ENUNCIADO Nº 5</i><br><i>O recolhimento em atraso de contribuições previdenciárias devidas pelo contribuinte individual exige a comprovação do efetivo exercício de atividade remunerada, na forma do art. 55, §3º da Lei nº 8.213/91.</i><br><i>I - A concessão de prestações ao contribuinte individual em débito ou aos seus dependentes é condicionada ao recolhimento prévio, pelo segurado, das contribuições necessárias à reaquisição da qualidade de segurado, salvo em relação ao prestador de serviço à empresa, a partir da competência abril de 2003.</i><br><i>II - Perde a qualidade de segurado o contribuinte individual que, embora em exercício de atividade remunerada, deixa de recolher suas respectivas contribuições por tempo superior ao período de graça (art. 15, §4º da Lei nº 8.213/91), salvo quando não for o responsável pelo seu recolhimento.</i><br><i>III - As contribuições recolhidas em atraso pelo contribuinte individual após o período de graça não serão computadas como carência, nem para fins de manutenção da qualidade de segurado, mas apenas como tempo de contribuição.</i><br><i>IV - Havendo perda da qualidade de segurado, somente serão consideradas para fins de carência as contribuições efetivadas sem atraso, após nova filiação do contribuinte individual ao Regime Geral de Previdência Social.</i><br><i>V - As contribuições do contribuinte individual empresário não se presumem descontadas e recolhidas, nos termos do art. 4º da Lei nº 10.666/03, quando exercida atividade na empresa da qual seja titular, diretor não empregado, membro de conselho de administração, sócio ou administrador não empregado.</i><br><i>VI - A carência do segurado empresário até 24/07/1991, véspera da publicação da Lei nº 8.213/91, será computada a partir da data de sua filiação, podendo ser reconhecidas como carência as contribuições referentes até esta data, mesmo recolhidas em atraso, desde que comprovado o efetivo exercício de atividade nessa categoria.”</i></p>",
+                        },
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Entendo que o período de ${competencia_inicial_pleiteada} à ${competencia_final_pleiteada}, como contribuinte individual, não deve ser considerado como carência nem tempo de contribuição em razão de não haver a prova da retenção da contribuição social pela empresa tomadora do serviço, como requer o § 4º do Art. 26 do Decreto nº 3.048/99.</p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
             ],
         },
         {
-            id: 'admissibilidade',
+            id: 'ro_voce_vota_por_reconhecer_o_direito_ao_beneficio_recorrido',
             tipo: 'opcao',
-            titulo: 'Admissibilidade',
+            titulo: '(RO) Você vota por reconhecer o direito ao benefício recorrido?',
+            opcoes: [
+                {
+                    id: 'sim',
+                    titulo: 'Sim',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Desta forma, em virtude da parte recorrente cumprir com os requisitos legais apontados, deve ser concedida a prestação pleiteada.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;CUMPRE OS REQUISITOS E FAZ JUS À CONCESSÃO DA PRESTAÇÃO PLEITEADA.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_novos_elementos_-_sobre_a_alteracao_do_inicio_do_pagamento_para_o_protocolo_do_recurso_voce_entende_que',
+                    },
+                },
+                {
+                    id: 'nao',
+                    titulo: 'Não',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Desta forma, a parte recorrente não implementa os requisitos dos dispositivos apontados e não faz jus à prestação pleiteada.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;NÃO CUMPRE OS REQUISITOS PARA A CONCESSÃO DA PRESTAÇÃO PLEITEADA.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'ro_admissibilidade',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'ro_novos_elementos_-_sobre_a_alteracao_do_inicio_do_pagamento_para_o_protocolo_do_recurso_voce_entende_que',
+            tipo: 'opcao',
+            titulo: '(RO) NOVOS ELEMENTOS - Sobre a alteração do início do pagamento para o protocolo do recurso, você entende que:',
+            subtitulo:
+                'Dec. 3048/99, Art. 347: "§ 4º Nas hipóteses de requerimento de revisão de benefício em manutenção ou de recurso de decisão do INSS com apresentação de novos elementos extemporaneamente ao ato concessório, os efeitos financeiros serão fixados na data do pedido de revisão ou do recurso."',
+            valorPadrao:
+                'nao_foram_apresentados_no_recurso_inicio_do_pagamento_inalterado',
+            opcoes: [
+                {
+                    id: 'nao_foram_apresentados_no_recurso_inicio_do_pagamento_inalterado',
+                    titulo: 'Não foram apresentados no recurso (início do pagamento inalterado)',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'casoconcreto',
+                            texto: '<p>&nbsp;</p><p>Em virtude dos documentos que subsidiaram este decisão já estarem no requerimento inicial, não deve ser aplicado o § 4º do Art. 347 do Decreto nº 3.048/99.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;NÃO FORAM UTILIZADOS NOVOS ELEMENTOS NO RECURSO, NÃO SE APLICANDO O § 4º DO ART. 347 DO DECRETO Nº 3.048/99.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'foram_apresentados_no_recurso_o_inss_tinha_ciencia_do_fato_mas_nao_fez_a_exigencia_inicio_do_pagamento_inalterado',
+                    titulo: 'Foram apresentados no recurso, o INSS tinha ciência do fato mas não fez a exigência (início do pagamento inalterado)',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'foram_apresentados_no_recurso_o_inss_tinha_ciencia_do_fato_mas_fez_a_exigencia_inadequada_inicio_do_pagamento_inalterado',
+                    titulo: 'Foram apresentados no recurso, o INSS tinha ciência do fato mas fez a exigência inadequada (início do pagamento inalterado)',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+                {
+                    id: 'foram_apresentados_no_recurso_e_o_inicio_do_pagamento_deve_ser_alterado',
+                    titulo: 'Foram apresentados no recurso, e o início do pagamento deve ser alterado',
+                    listaVariaveis: [],
+                    listaTextos: [],
+                    ramificacao: {
+                        irPara: 'avançar',
+                    },
+                },
+            ],
+        },
+        {
+            id: 'ro_admissibilidade',
+            tipo: 'opcao',
+            titulo: '(RO) Admissibilidade',
             valorPadrao: 'recurso_tempestivo_sem_registro_da_ciencia',
             opcoes: [
                 {
@@ -26498,7 +29364,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'decisao_ro',
+                        irPara: 'ro_decisao',
                     },
                 },
                 {
@@ -26531,7 +29397,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'decisao_ro',
+                        irPara: 'ro_decisao',
                     },
                 },
                 {
@@ -26564,7 +29430,7 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'decisao_ro',
+                        irPara: 'ro_decisao',
                     },
                 },
                 {
@@ -26597,16 +29463,15 @@ export const especificacao: EspecificacaoDTO = {
                         },
                     ],
                     ramificacao: {
-                        irPara: 'decisao_ro',
+                        irPara: 'ro_decisao',
                     },
                 },
             ],
         },
         {
-            id: 'decisao_ro',
+            id: 'ro_decisao',
             tipo: 'opcao',
-            titulo: 'Decisão (RO)',
-            valorPadrao: 'dar_provimento',
+            titulo: '(RO) Decisão',
             opcoes: [
                 {
                     id: 'dar_provimento',
@@ -26668,6 +29533,28 @@ export const especificacao: EspecificacaoDTO = {
                         {
                             categoria: 'ementa',
                             texto: '<p><strong>&nbsp;RECURSO ORDINÁRIO CONHECIDO E NEGADO.</strong></p>',
+                        },
+                    ],
+                    ramificacao: {
+                        irPara: 'fim do formulário',
+                    },
+                },
+                {
+                    id: 'converter_o_julgamento_em_diligencia',
+                    titulo: 'Converter o julgamento em diligência',
+                    listaVariaveis: [],
+                    listaTextos: [
+                        {
+                            categoria: 'voto_introducao',
+                            texto: '<p>É necessária diligência para verificar o direito à parte recorrente.</p>',
+                        },
+                        {
+                            categoria: 'conclusao',
+                            texto: '<p>&nbsp;</p><p><strong>CONCLUSÃO</strong></p><p>Ante o exposto, voto por CONVERTER O JULGAMENTO EM DILIGÊNCIA, nos termos da fundamentação.</p>',
+                        },
+                        {
+                            categoria: 'ementa',
+                            texto: '<p><strong>&nbsp;CONVERSÃO DO JULGAMENTO EM DILIGÊNCIA.</strong></p>',
                         },
                     ],
                     ramificacao: {
@@ -26742,141 +29629,22 @@ export const especificacao: EspecificacaoDTO = {
                 },
             ],
         },
-        {
-            id: 'houve_exigencia_para_a_apresentacao_da_documentos',
-            tipo: 'opcao',
-            titulo: 'Houve exigência para a apresentação da documentos?',
-            valorPadrao: 'nao_foi_necessaria_exigencia_ou_diligencia',
-            opcoes: [
-                {
-                    id: 'nao_foi_necessaria_exigencia_ou_diligencia',
-                    titulo: 'Não foi necessária exigência ou diligência',
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'o_inss_fez_exigencia_adequada_mas_o_interessado_nao_a_cumpriu',
-                    titulo: 'O INSS fez exigência adequada, mas o interessado não a cumpriu',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'o_inss_fez_exigencia_adequada_e_o_interessado_cumpriu',
-                    titulo: 'O INSS fez exigência adequada e o interessado cumpriu',
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'o_inss_fez_exigencia_inadequada_nao_cumprida_pelo_interessado',
-                    titulo: 'O INSS fez exigência inadequada, não cumprida pelo interessado',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'por_qual_razao_a_exigencia_do_inss_foi_inadequada',
-                    },
-                },
-                {
-                    id: 'a_jr_fez_exigencia_mas_o_interessado_nao_apresentou_documentos_indispensaveis',
-                    titulo: 'A JR fez exigência, mas o interessado não apresentou documentos indispensáveis',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'nao_houve_exigencia_-_mandado_de_seguranca_ricrps_art_23__unico',
-                    titulo: 'Não houve exigência - mandado de segurança (RICRPS, Art. 23, § único)',
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'nao_houve_exigencia_-_interessado_faleceu_ricrps_art_57__4',
-                    titulo: 'Não houve exigência - interessado faleceu (RICRPS, Art. 57, § 4º)',
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-            ],
-        },
-        {
-            id: 'por_qual_razao_a_exigencia_do_inss_foi_inadequada',
-            tipo: 'opcao',
-            titulo: 'Por qual razão a exigência do INSS foi inadequada?',
-            valorPadrao: 'oneroso_ao_interessado_lei_978499_art_29__2',
-            opcoes: [
-                {
-                    id: 'onerosa_ao_interessado_lei_978499_art_29__2',
-                    titulo: 'Onerosa ao interessado (Lei 9.784/99, Art. 29, § 2º)',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'responsabilidade_do_inss_em_conseguir_a_prova_dec_304899_art_124-b_e_art_125-a',
-                    titulo: 'Responsabilidade do INSS em conseguir a prova (Dec. 3.048/99, Art. 124-B e Art. 125-A)',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'generica_pt_inssdirben_99322_art_74__1_iii',
-                    titulo: 'Genérica (PT INSS/DIRBEN 993/22, Art. 74, § 1º, III)',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'documento_dispensavel',
-                    titulo: 'Documento dispensável',
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-                {
-                    id: 'redacao_nao_trouxe_clareza',
-                    titulo: 'Redação não trouxe clareza',
-                    listaVariaveis: [],
-                    listaTextos: [],
-                    ramificacao: {
-                        irPara: 'avançar',
-                    },
-                },
-            ],
-        },
     ],
     listaModelos: [
         {
             id: 'relatorio',
             titulo: 'Relatório',
-            texto: '<p>${votos_rapidos.relatorio}${tipo_do_processo.introducao}${tipo_do_processo.complemento1}${tipo_do_processo.recorrente}${tipo_do_processo.complemento2}${tipo_do_processo.recorrido}${decisao_do_inss_31.complemento3}${decisao_do_inss_21.complemento3}${procurador.relatorio}${decisao_do_inss_21.elementos}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.elementos_qualidade}${21_qualidade_de_segurado_-_prestacao_recebida.elementos_qualidade}${21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como.elementos}${21_sobre_as_provas_de_uniao_estavel__dependencia_economica.elementos}${21_documento_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_2_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_3_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_4_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_5_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_6_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_7_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_8_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_9_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_10_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${decisao_do_inss_31.elementos}${estado_civil.elementos_rural_0}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.elementos}${dados_da_autodeclaracao_tipo_de_segurado_especial.elementos_rural_1}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.elementos_rural_2}${dados_da_autodeclaracao_condicao_em_relacao_ao_imovel.elementos_rural_3}${dados_da_autodeclaracao_situacao.elementos_rural_4}${dados_da_autodeclaracao_condicao_no_grupo_familiar.elementos_rural_5}${dados_da_autodeclaracao_houve_cessao_da_terra__embarcacao.elementos_rural_6}${dados_da_autodeclaracao_destinacao_da_producao_ruricola__pesqueira.elementos_rural_7}${dados_da_autodeclaracao_outras_informacoes.elementos_rural_8}${sobre_os_instrumentos_ratificadores_aponte_o_1_instrumento_ratificador_apresentado.elementos}${o_1_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_2_instrumento_ratificador_apresentado.elementos}${o_2_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_3_instrumento_ratificador_apresentado.elementos}${o_3_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_4_instrumento_ratificador_apresentado.elementos}${o_4_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_5_instrumento_ratificador_apresentado.elementos}${o_5_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_6_instrumento_ratificador_apresentado.elementos}${o_6_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_7_instrumento_ratificador_apresentado.elementos}${o_7_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_8_instrumento_ratificador_apresentado.elementos}${o_8_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_9_instrumento_ratificador_apresentado.elementos}${o_9_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_10_instrumento_ratificador_apresentado.elementos}${o_10_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${motivo_principal_pelo_qual_o_inss_nao_ratificou_a_autodeclaracao.elementos_rural_9}${elemento_descaracterizador_apontado_pelo_inss.elementos_rural_9}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_integralmente_a_autodeclaracao_e_reconhecer_a_filiacao_do_segurado_especial.elementos}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.elementos}${qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.elementos}${-_qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.elementos}${ro_qual_documento_merece_ser_melhor_explicado.relatorio}${1_vinculo_da_ctps_rejeitado_pelo_inss.relatorio}${2_vinculo_da_ctps_rejeitado_pelo_inss.relatorio}${3_vinculo_da_ctps_rejeitado_pelo_inss.relatorio}${4_vinculo_da_ctps_rejeitado_pelo_inss.relatorio}${5_vinculo_da_ctps_rejeitado_pelo_inss.relatorio}${pontos_controversos.relatorio}${tipo_do_processo.sintese}${admissibilidade.relatorio}${tipo_do_processo.contrarrazoes}${parecer_pericia_medica_federal.diligencias}${31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii.elementos_qualidade}${31_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_antes_da_dii_ocorreu_como.elementos}${31_sobre_a_carencia_no_evento_gerador_dii.elementos_carencia}${21_parecer_pericia_medica_federal.diligencias}${21_o_filho_a_dependente_era_na_data_do_inicio_da_invalidezdeficiencia.diligencia}${21_acrescimos_legais_ao_periodo_de_graca.21qualidadediligencia}${tipo_do_processo.fechamento}</p>',
+            texto: '<p>${votos_rapidos.relatorio}${tipo_do_processo.introducao}${tipo_do_processo.complemento1}${tipo_do_processo.recorrente}${tipo_do_processo.complemento2}${tipo_do_processo.recorrido}${decisao_do_inss_31.complemento3}${decisao_do_inss_21.complemento3}${decisao_do_inss_87.complemento3}${decisao_do_inss_88.complemento3}${decisao_do_inss_91.complemento3}${procurador.relatorio}${decisao_do_inss_21.elementos}${21_qual_a_situacao_em_que_nao_foi_comprovada_a_condicao_de_conjuge.elementos}${21_sobre_as_provas_de_uniao_estavel__dependencia_economica.elementos}${21_foi_apresentado_documento_posterior_a_separacao_de_fato__judicial_que_comprova_o_restabelecimento_a_qualidade_de_dependente_conjuge_ou_companheiro_a.dependenteprova}${21_documento_de_restabelecimento_de_qualidade_de_dependente_conjuge__companheiro_a_apresentado.dependenteprova}${21_documento_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_2_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_3_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_4_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_5_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_6_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_7_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_8_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_9_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_documento_10_de_uniao_estavel__dependencia_economica_apresentado.dependenteprova}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.elementos_qualidade}${21_qualidade_de_segurado_-_prestacao_recebida.elementos_qualidade}${21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como.elementos}${decisao_do_inss_31.elementos}${decisao_do_inss_87.elementos}${decisao_do_inss_88.elementos}${decisao_do_inss_91.elementos}${estado_civil.elementos_rural_0}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.elementos}${dados_da_autodeclaracao_tipo_de_segurado_especial.elementos_rural_1}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.elementos_rural_2}${dados_da_autodeclaracao_condicao_em_relacao_ao_imovel.elementos_rural_3}${dados_da_autodeclaracao_situacao.elementos_rural_4}${dados_da_autodeclaracao_condicao_no_grupo_familiar.elementos_rural_5}${dados_da_autodeclaracao_houve_cessao_da_terra__embarcacao.elementos_rural_6}${dados_da_autodeclaracao_destinacao_da_producao_ruricola__pesqueira.elementos_rural_7}${dados_da_autodeclaracao_outras_informacoes.elementos_rural_8}${sobre_os_instrumentos_ratificadores_aponte_o_1_instrumento_ratificador_apresentado.elementos}${o_1_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_2_instrumento_ratificador_apresentado.elementos}${o_2_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_3_instrumento_ratificador_apresentado.elementos}${o_3_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_4_instrumento_ratificador_apresentado.elementos}${o_4_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_5_instrumento_ratificador_apresentado.elementos}${o_5_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_6_instrumento_ratificador_apresentado.elementos}${o_6_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_7_instrumento_ratificador_apresentado.elementos}${o_7_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_8_instrumento_ratificador_apresentado.elementos}${o_8_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_9_instrumento_ratificador_apresentado.elementos}${o_9_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${sobre_os_instrumentos_ratificadores_aponte_o_10_instrumento_ratificador_apresentado.elementos}${o_10_instrumento_ratificador_apontado_acima_esta_no_nome_de_quem.elementos}${motivo_principal_pelo_qual_o_inss_nao_ratificou_a_autodeclaracao.elementos_rural_9}${elemento_descaracterizador_apontado_pelo_inss.elementos_rural_9}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_integralmente_a_autodeclaracao_e_reconhecer_a_filiacao_do_segurado_especial.elementos}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.elementos}${qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.elementos}${-_qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.elementos}${ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss.relatorio}${1_vinculo_da_ctps_rejeitado_pelo_inss.relatorio}${2_vinculo_da_ctps_rejeitado_pelo_inss.relatorio}${3_vinculo_da_ctps_rejeitado_pelo_inss.relatorio}${4_vinculo_da_ctps_rejeitado_pelo_inss.relatorio}${5_vinculo_da_ctps_rejeitado_pelo_inss.relatorio}${pontos_controversos.relatorio}${tipo_do_processo.sintese}${21_qual_a_situacao_em_que_nao_foi_comprovada_a_condicao_de_conjuge.razoes}${ro_admissibilidade.relatorio}${tipo_do_processo.contrarrazoes}${31_parecer_pericia_medica_federal.diligencias}${31_sobre_a_carencia_no_evento_gerador_dii.elementos_carencia}${31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii.elementos_qualidade}${31_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_antes_da_dii_ocorreu_como.elementos}${21_parecer_pericia_medica_federal.diligencias}${21_o_filho_a_dependente_era_na_data_do_inicio_da_invalidezdeficiencia.diligencia}${21_acrescimos_legais_ao_periodo_de_graca.21qualidadediligencia}${31_acrescimos_legais_ao_periodo_de_graca.31qualidadediligencia}${31_acrescimos_legais_que_prorrogam_a_qualidade_de_segurado.31qualidadediligencia}${loas_qual_sua_conclusao_sobre_o_requisito_renda.diligencias}${loas_qual_e_o_resultado_da_consulta_ao_cadunico.diligencia}${91_-_ntep_parecer_pericia_medica_federal.diligencia}${ro_sobre_diligencias_ao_inss.diligencias}${tipo_do_processo.fechamento}</p>',
         },
         {
             id: 'voto',
             titulo: 'Voto',
-            texto: '<p>${votos_rapidos.voto}${decisao_ro.voto_introducao}${admissibilidade.voto}${especie_ro.merito}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.merito_qualidade}${decisao_do_inss_21.merito}${21_qualidade_de_segurado_-_prestacao_recebida.merito_qualidade}${21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como.merito}${21_acrescimos_legais_ao_periodo_de_graca.merito}${31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii.merito_qualidade}${parecer_pericia_medica_federal.merito}${21_parecer_pericia_medica_federal.merito}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.merito}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_integralmente_a_autodeclaracao_e_reconhecer_a_filiacao_do_segurado_especial.merito}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.merito}${qual_seu_fundamento_para_nao_ratificar_parte_da_autodeclaracao.merito}${qual_seu_fundamento_para_nao_ratificar_integralmente_a_autodeclaracao.merito}${qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.merito}${-_qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.merito}${1_vinculo_da_ctps_rejeitado_pelo_inss.pontocontroverso}${pontos_controversos.voto-pontos-controversos}${decisao_do_inss_21.casoconcreto}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.casoconcreto}${21_qualidade_de_segurado_-_prestacao_recebida.casoconcreto}${21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como.casoconcreto}${21_acrescimos_legais_ao_periodo_de_graca.21qualidadecasosconcretosacrescimo}${parecer_pericia_medica_federal.casoconcreto}${21_parecer_pericia_medica_federal.casoconcreto}${21_o_filho_a_dependente_era_na_data_do_inicio_da_invalidezdeficiencia.casoconcreto}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.casoconcreto}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_integralmente_a_autodeclaracao_e_reconhecer_a_filiacao_do_segurado_especial.casoconcreto_rural_1}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.casoconcreto_rural_1}${qual_seu_fundamento_para_nao_ratificar_integralmente_a_autodeclaracao.casoconcreto_rural_1}${-_qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.casoconcreto_rural_1}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.periodoautodeclaracao}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_integralmente_a_autodeclaracao_e_reconhecer_a_filiacao_do_segurado_especial.casoconcreto_rural_2}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.casoconcreto_rural_2}${qual_seu_fundamento_para_nao_ratificar_integralmente_a_autodeclaracao.casoconcreto_rural_2}${-_qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.casoconcreto_rural_2}${e_possivel_ratificar_a_autodeclaracao_no_seu_voto.periodoconsiderado}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.casoconcreto_rural_3}${qual_seu_fundamento_para_nao_ratificar_parte_da_autodeclaracao.casoconcreto_rural_4}${qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.casoconcreto_rural_4}${e_possivel_ratificar_a_autodeclaracao_no_seu_voto.periododesconsiderado}${qual_seu_fundamento_para_nao_ratificar_parte_da_autodeclaracao.casoconcreto_rural_5}${qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.casoconcreto_rural_5}${ro_qual_documento_merece_ser_melhor_explicado.casoconcreto}${1_vinculo_da_ctps_rejeitado_pelo_inss.casoconcreto}${2_vinculo_da_ctps_rejeitado_pelo_inss.casoconcreto}${3_vinculo_da_ctps_rejeitado_pelo_inss.casoconcreto}${4_vinculo_da_ctps_rejeitado_pelo_inss.casoconcreto}${5_vinculo_da_ctps_rejeitado_pelo_inss.casoconcreto}${21_parecer_pericia_medica_federal.alcada}${pontos_controversos.voto-caso-concreto}${decisao_ro.conclusao}</p>',
+            texto: '<p>${votos_rapidos.voto}${ro_decisao.voto_introducao}${ro_admissibilidade.voto}${especie_ro.merito}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.merito_qualidade}${decisao_do_inss_21.merito}${21_parecer_pericia_medica_federal.merito}${21_qualidade_de_segurado_-_prestacao_recebida.merito_qualidade}${21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como.merito}${21_acrescimos_legais_ao_periodo_de_graca.merito}${31_parecer_pericia_medica_federal.merito}${31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii.merito}${decisao_do_inss_31.merito}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.merito}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_integralmente_a_autodeclaracao_e_reconhecer_a_filiacao_do_segurado_especial.merito}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.merito}${qual_seu_fundamento_para_nao_ratificar_parte_da_autodeclaracao.merito}${qual_seu_fundamento_para_nao_ratificar_integralmente_a_autodeclaracao.merito}${qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.merito}${-_qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.merito}${loas_qual_sua_conclusao_sobre_o_requisito_renda.merito}${91_-_ntep_parecer_pericia_medica_federal.merito}${1_vinculo_da_ctps_rejeitado_pelo_inss.pontocontroverso}${pontos_controversos.pontoscontroversos}${decisao_do_inss_21.casoconcreto}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.casoconcreto}${21_qualidade_de_segurado_-_prestacao_recebida.casoconcreto}${21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_.casoconcreto}${21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como.casoconcreto}${21_acrescimos_legais_ao_periodo_de_graca.21qualidadecasosconcretosacrescimo}${com_sua_analise_e_possivel_considerar_a_existencia_da_qualidade_de_segurado_na_data_do_obito.casoconcreto}${21_sobre_as_provas_de_uniao_estavel__dependencia_economica.casoconcreto}${21_qual_a_situacao_em_que_nao_foi_comprovada_a_condicao_de_conjuge.casoconcreto}${21_foi_apresentado_documento_posterior_a_separacao_de_fato__judicial_que_comprova_o_restabelecimento_a_qualidade_de_dependente_conjuge_ou_companheiro_a.casoconcreto}${21_parecer_pericia_medica_federal.casoconcreto}${21_o_filho_a_dependente_era_na_data_do_inicio_da_invalidezdeficiencia.casoconcreto}${31_parecer_pericia_medica_federal.casoconcreto}${31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii.casoconcreto_qualidade}${31_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_antes_da_dii_ocorreu_como.casoconcreto}${31_acrescimos_legais_que_prorrogam_a_qualidade_de_segurado.31qualidadecasosconcretosacrescimo}${31_acrescimos_legais_ao_periodo_de_graca.31qualidadecasosconcretosacrescimo}${com_sua_analise_e_possivel_considerar_a_existencia_da_qualidade_de_segurado_na_data_do_evento_gerador_incapacidade_dii.casoconcreto}${31_sobre_a_carencia_no_evento_gerador_dii.casoconcreto}${loas_qual_sua_conclusao_sobre_o_requisito_renda.casoconcreto}${loas_qual_e_o_resultado_da_consulta_ao_cadunico.casoconcreto}${91_-_ntep_parecer_pericia_medica_federal.casoconcreto}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.casoconcreto}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_integralmente_a_autodeclaracao_e_reconhecer_a_filiacao_do_segurado_especial.casoconcreto_rural_1}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.casoconcreto_rural_1}${qual_seu_fundamento_para_nao_ratificar_integralmente_a_autodeclaracao.casoconcreto_rural_1}${-_qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.casoconcreto_rural_1}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.periodoautodeclaracao}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_integralmente_a_autodeclaracao_e_reconhecer_a_filiacao_do_segurado_especial.casoconcreto_rural_2}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.casoconcreto_rural_2}${qual_seu_fundamento_para_nao_ratificar_integralmente_a_autodeclaracao.casoconcreto_rural_2}${-_qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.casoconcreto_rural_2}${e_possivel_ratificar_a_autodeclaracao_no_seu_voto.periodoconsiderado}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.casoconcreto_rural_3}${qual_seu_fundamento_para_nao_ratificar_parte_da_autodeclaracao.casoconcreto_rural_4}${qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.casoconcreto_rural_4}${e_possivel_ratificar_a_autodeclaracao_no_seu_voto.periododesconsiderado}${qual_seu_fundamento_para_nao_ratificar_parte_da_autodeclaracao.casoconcreto_rural_5}${qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.casoconcreto_rural_5}${ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss.casoconcreto}${1_vinculo_da_ctps_rejeitado_pelo_inss.casoconcreto}${2_vinculo_da_ctps_rejeitado_pelo_inss.casoconcreto}${3_vinculo_da_ctps_rejeitado_pelo_inss.casoconcreto}${4_vinculo_da_ctps_rejeitado_pelo_inss.casoconcreto}${5_vinculo_da_ctps_rejeitado_pelo_inss.casoconcreto}${ro_novos_elementos_-_sobre_a_alteracao_do_inicio_do_pagamento_para_o_protocolo_do_recurso_voce_entende_que.casoconcreto}${21_parecer_pericia_medica_federal.alcada}${31_parecer_pericia_medica_federal.alcada}${91_-_ntep_parecer_pericia_medica_federal.alcada}${pontos_controversos.casoconcreto}${ro_voce_vota_por_reconhecer_o_direito_ao_beneficio_recorrido.casoconcreto}${ro_decisao.conclusao}</p>',
         },
         {
             id: 'ementa',
             titulo: 'Ementa',
-            texto: '<p>${votos_rapidos.ementa}${tipo_do_processo.ementa}${admissibilidade.ementa}${especie_ro.ementa}${decisao_do_inss_21.ementa}${parecer_pericia_medica_federal.ementa}${21_parecer_pericia_medica_federal.ementa}${21_o_filho_a_dependente_era_na_data_do_inicio_da_invalidezdeficiencia.ementa}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.ementa}${21_qualidade_de_segurado_-_prestacao_recebida.ementa}${21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como.ementa}${21_acrescimos_legais_ao_periodo_de_graca.ementa}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.ementa}${dados_da_autodeclaracao_tipo_de_segurado_especial.ementa}${dados_da_autodeclaracao_condicao_em_relacao_ao_imovel.ementa}${dados_da_autodeclaracao_situacao.ementa}${dados_da_autodeclaracao_condicao_no_grupo_familiar.ementa}${dados_da_autodeclaracao_houve_cessao_da_terra__embarcacao.ementa}${dados_da_autodeclaracao_destinacao_da_producao_ruricola__pesqueira.ementa}${dados_da_autodeclaracao_outras_informacoes.ementa}${sobre_os_instrumentos_ratificadores_aponte_o_1_instrumento_ratificador_apresentado.ementa}${motivo_principal_pelo_qual_o_inss_nao_ratificou_a_autodeclaracao.ementa}${elemento_descaracterizador_apontado_pelo_inss.ementa}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_integralmente_a_autodeclaracao_e_reconhecer_a_filiacao_do_segurado_especial.ementa}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.ementa}${qual_seu_fundamento_para_nao_ratificar_parte_da_autodeclaracao.ementa}${qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.ementa}${qual_seu_fundamento_para_nao_ratificar_integralmente_a_autodeclaracao.ementa}${-_qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.ementa}${ro_qual_documento_merece_ser_melhor_explicado.ementa}${1_vinculo_da_ctps_rejeitado_pelo_inss.ementa}${2_vinculo_da_ctps_rejeitado_pelo_inss.ementa}${3_vinculo_da_ctps_rejeitado_pelo_inss.ementa}${4_vinculo_da_ctps_rejeitado_pelo_inss.ementa}${5_vinculo_da_ctps_rejeitado_pelo_inss.ementa}${pontos_controversos.ementa}${decisao_ro.ementa}</p>',
+            texto: '<p>${votos_rapidos.ementa}${tipo_do_processo.ementa}${ro_admissibilidade.ementa}${especie_ro.ementa}${decisao_do_inss_21.ementa}${21_parecer_pericia_medica_federal.ementa}${21_o_filho_a_dependente_era_na_data_do_inicio_da_invalidezdeficiencia.ementa}${21_e_possivel_reconhecer_a_qualidade_de_dependente_do_a_companheiro_a_.ementa}${21_foi_apresentado_documento_posterior_a_separacao_de_fato__judicial_que_comprova_o_restabelecimento_a_qualidade_de_dependente_conjuge_ou_companheiro_a.ementa}${21_sobre_a_qualidade_de_segurado_na_data_do_obito.ementa}${21_qualidade_de_segurado_-_prestacao_recebida.ementa}${21_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_ocorreu_como.ementa}${21_acrescimos_legais_ao_periodo_de_graca.ementa}${21_sobre_as_provas_de_uniao_estavel__dependencia_economica.ementa}${com_sua_analise_e_possivel_considerar_a_existencia_da_qualidade_de_segurado_na_data_do_obito.ementa}${31_parecer_pericia_medica_federal.ementa}${31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii.ementa}${31_sobre_a_manutencao_e_perda_da_qualidade_de_segurado_a_ultima_contribuicao_antes_da_dii_ocorreu_como.ementa}${31_acrescimos_legais_que_prorrogam_a_qualidade_de_segurado.ementa}${31_acrescimos_legais_ao_periodo_de_graca.ementa}${com_sua_analise_e_possivel_considerar_a_existencia_da_qualidade_de_segurado_na_data_do_evento_gerador_incapacidade_dii.ementa}${31_sobre_a_carencia_no_evento_gerador_dii.ementa}${loas_qual_sua_conclusao_sobre_o_requisito_renda.ementa}${91_-_ntep_parecer_pericia_medica_federal.ementa}${houve_a_apresentacao_da_autodeclaracao_ou_certidao_da_funai_no_processo.ementa}${dados_da_autodeclaracao_tipo_de_segurado_especial.ementa}${dados_da_autodeclaracao_condicao_em_relacao_ao_imovel.ementa}${dados_da_autodeclaracao_situacao.ementa}${dados_da_autodeclaracao_condicao_no_grupo_familiar.ementa}${dados_da_autodeclaracao_houve_cessao_da_terra__embarcacao.ementa}${dados_da_autodeclaracao_destinacao_da_producao_ruricola__pesqueira.ementa}${dados_da_autodeclaracao_outras_informacoes.ementa}${sobre_os_instrumentos_ratificadores_aponte_o_1_instrumento_ratificador_apresentado.ementa}${motivo_principal_pelo_qual_o_inss_nao_ratificou_a_autodeclaracao.ementa}${elemento_descaracterizador_apontado_pelo_inss.ementa}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_integralmente_a_autodeclaracao_e_reconhecer_a_filiacao_do_segurado_especial.ementa}${qual_e_o_motivo_principal_pelo_qual_voce_vota_por_ratificar_uma_parte_do_periodo_autodeclarado_e_reconhecer_parcialmente_a_filiacao_de_segurado_especial.ementa}${qual_seu_fundamento_para_nao_ratificar_parte_da_autodeclaracao.ementa}${qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.ementa}${qual_seu_fundamento_para_nao_ratificar_integralmente_a_autodeclaracao.ementa}${-_qual_renda_foi_considerada_o_interessado_comprovadamente_recebe.ementa}${ro_algum_vinculo_de_carteira_de_trabalho_foi_rejeitado_pelo_inss.ementa}${1_vinculo_da_ctps_rejeitado_pelo_inss.ementa}${2_vinculo_da_ctps_rejeitado_pelo_inss.ementa}${3_vinculo_da_ctps_rejeitado_pelo_inss.ementa}${4_vinculo_da_ctps_rejeitado_pelo_inss.ementa}${5_vinculo_da_ctps_rejeitado_pelo_inss.ementa}${ro_voce_vota_por_reconhecer_o_direito_ao_beneficio_recorrido.ementa}${ro_novos_elementos_-_sobre_a_alteracao_do_inicio_do_pagamento_para_o_protocolo_do_recurso_voce_entende_que.ementa}${pontos_controversos.ementa}${ro_decisao.ementa}</p>',
         },
     ],
 };
