@@ -66,6 +66,7 @@ export default defineComponent({
             name="id-Formulario"
             v-model="idFormularioString"
             @focusout="digitou"
+            autocomplete="off"
             required
         />
         <article class="erro" v-if="erroString">{{ erroString }}</article>

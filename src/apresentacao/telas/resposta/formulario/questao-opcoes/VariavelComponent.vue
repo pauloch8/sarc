@@ -33,6 +33,7 @@ export default defineComponent({
             :name="variavel.getId()"
             :value="valor"
             @input="updateValor"
+            autocomplete="off"
         />
     </label>
 </template>
