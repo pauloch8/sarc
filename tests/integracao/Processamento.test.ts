@@ -1,10 +1,11 @@
 import { EscapadorDeQuestaoFactory } from '@/dominio/comum/escapador/questao/EscapadorDeQuestaoFactory';
-import { especificacao } from '@/dominio/especificacao/assets/especificacao';
 import { ProcessadorDeOpcaoFactory } from '@/dominio/processamento/processador/questoes-opcao/opcao/ProcessadorDeOpcaoFactory';
 import { ProcessadorDeQuestaoDeOpcoesFactory } from '@/dominio/processamento/processador/questoes-opcao/questao/ProcessadorDeQuestaoDeOpcoesFactory';
 import { ProcessadorDeSelecaoFactory } from '@/dominio/processamento/processador/questoes-opcao/selecao/ProcessadorDeSelecaoFactory';
 import { ProcessadorDeRespostaDeFormularioFactory } from '@/dominio/processamento/processador/resposta-formulario/ProcessadorDeRespostaDeFormularioFactory';
 import { TextoFactory } from '@/dominio/processamento/processador/texto/TextoFactory';
+import especificacao from '@/dominio/especificacao/assets/especificacao.json';
+import { EspecificacaoDTO } from '@/dominio/especificacao/EspecificacaoDTO';
 
 function criarProcessadorDeFormulario() {
     const textoFactory = new TextoFactory();
@@ -26,7 +27,9 @@ function criarProcessadorDeFormulario() {
             escapadorDeQuestaoFactory,
         );
     const processadorFormulario =
-        processadorFormularioFactory.criarDeEspecificacao(especificacao);
+        processadorFormularioFactory.criarDeEspecificacao(
+            especificacao as EspecificacaoDTO,
+        );
     return processadorFormulario;
 }
 
