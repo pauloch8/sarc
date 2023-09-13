@@ -386,6 +386,54 @@
                     "ramificacao": {
                         "irPara": "fim do formulário"
                     }
+                },
+                {
+                    "id": "ed_do_inss_em_ro_-_intempestivo",
+                    "titulo": "ED do INSS em RO - intempestivo",
+                    "listaVariaveis": [
+                        {
+                            "id": "data_do_encaminhamento_ao_inss",
+                            "titulo": "Data do encaminhamento ao INSS:",
+                            "tipo": "data"
+                        },
+                        {
+                            "id": "evento_do_encaminhamento",
+                            "titulo": "Evento do encaminhamento:",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "data_do_protocolo_dos_ed",
+                            "titulo": "Data do protocolo dos ED:",
+                            "tipo": "data"
+                        },
+                        {
+                            "id": "evento_do_protocolo",
+                            "titulo": "Evento do protocolo:",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "n_do_acordao_contestado",
+                            "titulo": "Nº do Acórdão contestado:",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "relatorio",
+                            "texto": "<p>Trata-se de Embargos de Declaração interposto pelo Instituto Nacional do Seguro Social – INSS em face do o Acórdão nº ${n_do_acordao_contestado} desta Corte Administrativa em Recurso Ordinário.</p><p>A ciência da decisão pelo INSS ocorreu em ${data_do_encaminhamento_ao_inss}, ev. ${evento_do_encaminhamento}, e o protocolo do incidente deu-se em ${data_do_protocolo_dos_ed}, ev. ${evento_do_protocolo}.</p><p>É o sucinto Relatório. Apresento o feito em mesa.</p>"
+                        },
+                        {
+                            "categoria": "voto",
+                            "texto": "<p>Não assiste razão ao embargante.</p><p><strong>ADMISSIBILIDADE</strong></p><p>O presente recurso é intempestivo em razão da intimação ocorrer em ${data_do_encaminhamento_ao_inss} e a interposição do recurso em ${data_do_protocolo_dos_ed}, portanto, após o prazo fixado pelo § 1º do Art. 75 da Portaria MTP nº 4.062/2022, que aprova o Regimento Interno do CRPS (RICRPS).&nbsp;</p><p>Ainda, nos Embargos de Declaração não é permitida a relevação da intempestividade, como consta no § 3º do Art. 57 do RICRPS.</p><p><strong>CONCLUSÃO</strong></p><p>Ante ao exposto, voto por NÃO CONHECER DOS EMBARGOS DE DECLARAÇÃO.</p>"
+                        },
+                        {
+                            "categoria": "ementa",
+                            "texto": "<p><strong>EMBARGOS DE DECLARAÇÃO DO INSS EM RECURSO ORDINÁRIO. INTEMPESTIVIDADE, CONFORME § 1º DO ART. 75 DO RICRPS. INCAPABÍVEL A RELEVAÇÃO DA INTEMPESTIVIDADE POR ORDEM DO § 3º DO ART. 57 DO RICRPS EMBARGOS DE DECLARAÇÃO NÃO CONHECIDO.</strong></p>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "fim do formulário"
+                    }
                 }
             ]
         },
@@ -7892,6 +7940,35 @@
                     }
                 },
                 {
+                    "id": "falta_de_acerto_de_dados_cnis",
+                    "titulo": "Falta de acerto de dados CNIS",
+                    "listaVariaveis": [
+                        {
+                            "id": "dii",
+                            "titulo": "DII:",
+                            "tipo": "data"
+                        },
+                        {
+                            "id": "dcb",
+                            "titulo": "DCB:",
+                            "tipo": "data"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "complemento3",
+                            "texto": "<p>&nbsp;o qual indeferiu o Auxílio Por Incapacidade Temporária por falta de acerto de dados do Cadastro Nacional do Seguro Social - CNIS.</p>"
+                        },
+                        {
+                            "categoria": "elementos",
+                            "texto": "<p>&nbsp;</p><p>A parte recorrente submetida a perícia médica, que por sua vez concluiu pela existência da incapacidade laborativa desde ${dii} e sua comprovação até ${dcb}.&nbsp;</p>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "31_sobre_a_qualidade_de_segurado_no_evento_gerador_dii"
+                    }
+                },
+                {
                     "id": "falta_de_carencia",
                     "titulo": "Falta de carência",
                     "listaVariaveis": [
@@ -8309,11 +8386,11 @@
                     "listaTextos": [
                         {
                             "categoria": "elementos_qualidade",
-                            "texto": "<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada empregada doméstica avulsa no início da incapacidade.</p>"
+                            "texto": "<p>&nbsp;</p><p>Conforme consta no Cadastro Nacional de Informações Sociais (CNIS), a parte recorrente está filiada como segurada empregada doméstica no início da incapacidade.</p>"
                         },
                         {
                             "categoria": "casoconcreto_qualidade",
-                            "texto": "<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era empregado doméstico no óbito.</p>"
+                            "texto": "<p>&nbsp;</p><p><strong>CASO CONCRETO</strong></p><p>No que se refere à qualidade de segurado, não há qualquer controvérsia, dispensando maiores considerações, vez que era empregado (a) doméstico (a) no óbito.</p>"
                         },
                         {
                             "categoria": "ementa",
@@ -8432,8 +8509,17 @@
             "id": "31_acrescimos_legais_que_prorrogam_a_qualidade_de_segurado",
             "tipo": "opcao",
             "titulo": "(31) Acréscimos legais que prorrogam a qualidade de segurado:",
-            "valorPadrao": "nao_ha_mais_de_120_contribuicoes_nem_prova_de_desemprego",
+            "valorPadrao": "consulta_nao_e_necessaria_neste_caso",
             "opcoes": [
+                {
+                    "id": "consulta_nao_e_necessaria_neste_caso",
+                    "titulo": "Consulta não é necessária neste caso",
+                    "listaVariaveis": [],
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "31_sobre_a_carencia_no_evento_gerador_dii"
+                    }
+                },
                 {
                     "id": "nao_ha_mais_de_120_contribuicoes_nem_prova_de_desemprego",
                     "titulo": "Não há mais de 120 contribuições nem prova de desemprego",
@@ -9251,6 +9337,10 @@
                     "listaVariaveis": [],
                     "listaTextos": [
                         {
+                            "categoria": "complemento3",
+                            "texto": "<p>&nbsp;que negou o pagamento do Benefício de Prestação Continuada à Pessoa com Deficiência em razão da inscriçaõ no CadÚnico ser inexistente ou estar desatualizada.</p>"
+                        },
+                        {
                             "categoria": "merito",
                             "texto": "<p>&nbsp;</p><p><strong>NECESSIDADE DE CADASTRO DA FAMÍLIA AOS PROGRAMAS SOCIAIS DO GOVERNO FEDERAL</strong></p><p>A Lei nº 8.742/1993, em seu Art. 6º-F, instituiu o Cadastro Único para Programas Sociais do Governo Federal (CadÚnico) como um registro público eletrônico com a finalidade de coletar, processar, sistematizar e disseminar informações para a identificação e a caracterização socioeconômica das famílias de baixa renda.</p><p>Assim, é requisito indispensável o cadastro da família no CadÚnico para o acesso aos benefícios da LOAS.</p><p>Todavia, ao referida inscrição não precisa ser realizada antes do requerimento do benefício, mas em qualquer momento processual, como se depreende da Portaria Interministerial MDS/INSS nº 3/2018:</p><p>“<i>Art. 4º A inscrição do requerente e de sua família no CadÚnico constitui requisito a ser observado nas etapas da operacionalização do BPC.</i><br><i>Parágrafo único. <strong>A ausência de inscrição ou atualização do CadÚnico não impede a formalização do requerimento do benefício</strong>. \"</i></p><p>Vencida esta etapa com a inscrição da família, o Decreto nº 6.214/2007 determina a atualização periódica dos dados pelo responsável familiar, como se vê:</p><p>“<i>Art. 12. São requisitos para a concessão, a manutenção e a revisão do benefício as inscrições no Cadastro de Pessoas Físicas - CPF e no Cadastro Único para Programas Sociais do Governo Federal - CadÚnico.&nbsp;</i><br><i>§ 1º O beneficiário que não realizar a inscrição ou atualização no CadÚnico terá seu benefício suspenso após encerrado o prazo estabelecido na legislação.</i><br><i>§ 2º <strong>O benefício será concedido ou mantido apenas quando o CadÚnico estiver atualizado e válido</strong>, de acordo com o disposto no Decreto nº 6.135, de 26 de junho de 2007. ”</i></p><p>O Art. 12 do Decreto nº 11.016/2022, que substitui o Decreto nº 6.135/2007, define &nbsp;periodicidade para a atualização do CadÚnico <strong>a cada dois anos</strong>.</p>"
                         },
@@ -9339,6 +9429,10 @@
                         {
                             "categoria": "ementa",
                             "texto": "<p><strong>&nbsp;É REQUISITO INDISPENSÁVEL O CADASTRO DA FAMÍLIA AO CADÚNICO, CONFORME PRECONIZA O ART. 6º-F DA LOAS, AINDA QUE A INSCRIÇÃO SEJA POSTERIOR AO REQUERIMENTO, NOS TERMOS DO ART. 4º DA PORTARIA INTERMINISTERIAL MDS/INSS Nº3/2018. NECESSÁRIA A ATUALIZAÇÃO E REVALIDAÇÃO DO CADÚNICO A CADA DOIS ANOS PELO RESPONSÁVEL FAMILIAR, CONSOANTE ART. 12 DO DECRETO Nº 11.016/2022.</strong></p>"
+                        },
+                        {
+                            "categoria": "complemento3",
+                            "texto": "<p>&nbsp;que negou o pagamento do Benefício de Prestação Continuada da Assistência Social à Pessoa Idosa com mais de 65 anos de idade em razão da inscriçaõ no CadÚnico ser inexistente ou estar desatualizada.</p>"
                         }
                     ],
                     "ramificacao": {
