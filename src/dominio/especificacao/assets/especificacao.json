@@ -768,7 +768,44 @@
                         },
                         {
                             "categoria": "ementa",
-                            "texto": "<p><strong>&nbsp;REVISÃO DE ACÓRDÃO SOMENTE SERÁ ADMITIDA SE HOUVER VIOLAÇÃO LITERAL A DISPOSITIVO DE LEI OU DECRETO OU A OUTRAS SITUAÇÕES ELENCADAS NO ART. 76 DA PORTARIA MTP Nº 4.061/2022. NÃO EXISTE QUALQUER DAS SITUAÇÕES QUE JUSTIFICAM A REVISÃO DE ACÓRDÃO, RAZÃO PELA QUAL O PEDIDO NÃO MERECE SER ADMITIDO. INSS COMUNICA AO CRPS A EXISTÊNCIA DE AÇÃO JUDICIAL APÓS A DECISÃO DEFINITIVA DO CRPS. PEDIR A REVISÃO COM BASER EM AÇÃO JUDICIAL INTERPOSTA APÓS A DECISÃO DEFINITIVA DO CRPS FERE A MORALIDADE ADMINISTRATIVA. CONFORME § 5º DO ART. 70ª DO REGIMENTO DO CRPS, CABE AO INSS SOLICITAR ORIENTAÇÃO À SUA PROCURADORIA.</strong></p>"
+                            "texto": "<p><strong>&nbsp;REVISÃO DE ACÓRDÃO SOMENTE SERÁ ADMITIDA SE HOUVER VIOLAÇÃO LITERAL A DISPOSITIVO DE LEI OU DECRETO OU A OUTRAS SITUAÇÕES ELENCADAS NO ART. 76 DA PORTARIA MTP Nº 4.061/2022. NÃO EXISTE QUALQUER DAS SITUAÇÕES QUE JUSTIFICAM A REVISÃO DE ACÓRDÃO, RAZÃO PELA QUAL O PEDIDO NÃO MERECE SER ADMITIDO. INSS COMUNICA AO CRPS A EXISTÊNCIA DE AÇÃO JUDICIAL APÓS A DECISÃO DEFINITIVA DO CRPS. PEDIR A REVISÃO COM BASER EM AÇÃO JUDICIAL INTERPOSTA APÓS A DECISÃO DEFINITIVA DO CRPS FERE A MORALIDADE ADMINISTRATIVA. CONFORME § 5º DO ART. 70ª DO REGIMENTO DO CRPS, CABE AO INSS SOLICITAR ORIENTAÇÃO À SUA PROCURADORIA. REVISÃO DE ACÓRDÃO NÃO ADMITIDA.</strong></p>"
+                        },
+                        {
+                            "categoria": "complemento3",
+                            "texto": "<p>.</p>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "fim do formulário"
+                    }
+                },
+                {
+                    "id": "nao_admitido_-_fatosargumentos_novos",
+                    "titulo": "Não admitido - fatos/argumentos novos",
+                    "listaVariaveis": [
+                        {
+                            "id": "breve_sintese_das_alegacoes_da_parte",
+                            "titulo": "Breve síntese das alegações da parte:",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "numero_do_acordao_impugnado",
+                            "titulo": "Número do Acórdão impugnado:",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "razoes",
+                            "texto": "<p>&nbsp;</p><p>A parte insurge-se em face da decisão da Egrégia Corte Administrativa no Acórdão nº ${numero_do_acordao_impugnado} e, em síntese, sustenta que ${breve_sintese_das_alegacoes_da_parte}.</p><p>Tal argumento é novo no processo, apresentado em sede de Revisão de Acórdão, e que não foi arguido até a inclusão em pauta do recurso ordinário.</p>"
+                        },
+                        {
+                            "categoria": "voto",
+                            "texto": "<p>Não assiste razão à parte insurgente.</p><p><strong>ADMISSIBILIDADE</strong></p><p>A Revisão de Acórdão é um instituto previsto no Art. 76 da Portaria MTP nº 4.061/2022, in verbis:</p><p><i>“Art. 76. Os órgãos julgadores deverão rever suas próprias decisões, de ofício, ou a pedido, enquanto não ocorrer a decadência de que trata o art. 103-A da Lei nº 8.213, de 24 de julho de 1991, quando:</i><br><i>I - violarem literal disposição de lei ou decreto;</i><br><i>II - divergirem dos pareceres da Consultoria Jurídica do MTP, dos extintos MPS e MPAS vigentes e aprovados pelo Ministro de Estado, bem como dos pareceres do AGU, aprovados pelo Presidente da República, na forma do art. 40 da Lei Complementar nº 73/93;</i><br><i>III - divergirem de Enunciado editado pelo Conselho Pleno; e</i><br><i>IV - for constatado vício insanável.</i><br><i>(...)</i><br><i>§ 8º Não é cabível na Revisão de Acórdão a juntada de novos documentos, elementos ou qualquer outro pedido probatório, não apresentado até a inclusão do processo que originou o acórdão objeto da Revisão em pauta de julgamento, observado o poder de autotutela da Administração Pública, conforme art. 53 da Lei nº 9.784/99. \"</i></p><p>Em que pese as alegações da parte insurgente, não se vislumbra qualquer violação literal a lei ou decreto ou qualquer das disposições elencadas no Art. 76 do Regimento, razão pela qual o pedido de Revisão do Acórdão não deve ser admitido, nos termos do § 3º do Art. 76 do Regimento do CRPS.</p><p>O momento oportuno para a parte insurgente apresentar tais fundamentos é até a inclusão em pauta do recurso ordinário, pois os novos elementos, documentos ou pedidos probatórios não podem ser arguidos em sede de Revisão de Acórdão por impedimento regimental, como se vê no § 8º do Art. 76 da Portaria MTP nº 4.061/2022.</p><p>Ressalta-se que novos elementos, documentos ou pedidos probatórios não podem ser arguidos em sede de Revisão de Acórdão por impedimento regimental, como se vê no § 8º do Art. 76 da Portaria MTP nº 4.061/2022.</p><p>Ante o exposto, o pedido de revisão não pode ser admitido.</p>"
+                        },
+                        {
+                            "categoria": "ementa",
+                            "texto": "<p><strong>&nbsp;REVISÃO DE ACÓRDÃO SOMENTE SERÁ ADMITIDA SE HOUVER VIOLAÇÃO LITERAL A DISPOSITIVO DE LEI OU DECRETO OU A OUTRAS SITUAÇÕES ELENCADAS NO ART. 76 DA PORTARIA MTP Nº 4.061/2022. NÃO EXISTE QUALQUER DAS SITUAÇÕES QUE JUSTIFICAM A REVISÃO DE ACÓRDÃO, RAZÃO PELA QUAL O PEDIDO NÃO MERECE SER ADMITIDO. NÃO É ADMITIDA A ARQGUIÇÃO DE NOVAS PROVAS E ELEMENTOS OU ATO PROBATÓRIO EM SEDE DE REVISÃO DE ACÓRDÃO, POR FORÇA DO § 8º DO ART. 76 DO RICRPS. REVISÃO DE ACÓRDÃO NÃO ADMITIDA.</strong></p>"
                         },
                         {
                             "categoria": "complemento3",
@@ -859,7 +896,7 @@
                         },
                         {
                             "categoria": "admissibilidade",
-                            "texto": "<p>Assiste razão à parte embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>O presente incidente de Embargos de Declaração é tempestivo em razão da ciência ocorrer em ${data_da_ciencia} e sua interposição em ${data_do_protocolo}, portanto, dentro do prazo fixado pelo § 1º do Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p>Ainda, esta Relatoria entende pela existência de omissão no julgado, nos termos do inciso IV do Art. 75 do RICRPS.</p><p>Isto posto, sendo o incidente interposto no prazo regimental e com a existência de omissão, merece ser conhecido.</p>"
+                            "texto": "<p>Assiste razão à parte embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>O presente incidente de Embargos de Declaração é tempestivo em razão da ciência ocorrer em ${data_da_ciencia} e sua interposição em ${data_do_protocolo}, portanto, dentro do prazo fixado pelo § 1º do Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p>Isto posto, o incidente foi interposto no prazo regimental e merece ser conhecido.</p>"
                         },
                         {
                             "categoria": "ementa",
@@ -906,7 +943,7 @@
                         },
                         {
                             "categoria": "admissibilidade",
-                            "texto": "<p>Assiste razão à parte embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>O presente incidente de Embargos de Declaração é tempestivo em razão da ciência ocorrer em ${data_da_ciencia} e sua interposição em ${data_do_protocolo}, portanto, dentro do prazo fixado pelo § 1º do Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p>Ainda, esta Relatoria entende pela existência de contradição no julgado, nos termos do inciso III do Art. 75 do RICRPS.</p><p>Isto posto, sendo o incidente interposto no prazo regimental e com a existência de contradição, merece ser conhecido.</p>"
+                            "texto": "<p>Assiste razão à parte embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>O presente incidente de Embargos de Declaração é tempestivo em razão da ciência ocorrer em ${data_da_ciencia} e sua interposição em ${data_do_protocolo}, portanto, dentro do prazo fixado pelo § 1º do Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p>Isto posto, o incidente foi interposto no prazo regimental e merece ser conhecido.</p>"
                         },
                         {
                             "categoria": "ementa",
@@ -953,7 +990,7 @@
                         },
                         {
                             "categoria": "admissibilidade",
-                            "texto": "<p>Assiste razão à parte embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>O presente incidente de Embargos de Declaração é tempestivo em razão da ciência ocorrer em ${data_da_ciencia} e sua interposição em ${data_do_protocolo}, portanto, dentro do prazo fixado pelo § 1º do Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p>Ainda, esta Relatoria entende pela existência de obscuridade no julgado, nos termos do inciso I do Art. 75 do RICRPS.</p><p>Isto posto, sendo o incidente interposto no prazo regimental e com a existência de obscuridade, merece ser conhecido.</p>"
+                            "texto": "<p>Assiste razão à parte embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>O presente incidente de Embargos de Declaração é tempestivo em razão da ciência ocorrer em ${data_da_ciencia} e sua interposição em ${data_do_protocolo}, portanto, dentro do prazo fixado pelo § 1º do Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p>Isto posto, o incidente foi interposto no prazo regimental e merece ser conhecido.</p>"
                         },
                         {
                             "categoria": "ementa",
@@ -1000,7 +1037,7 @@
                         },
                         {
                             "categoria": "admissibilidade",
-                            "texto": "<p>Assiste razão à parte embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>O presente incidente de Embargos de Declaração é tempestivo em razão da ciência ocorrer em ${data_da_ciencia} e sua interposição em ${data_do_protocolo}, portanto, dentro do prazo fixado pelo § 1º do Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p>Ainda, esta Relatoria entende pela existência de ambiguidade no julgado, nos termos do inciso II do Art. 75 do RICRPS.</p><p>Isto posto, sendo o incidente interposto no prazo regimental e com a existência de ambiguidade, merece ser conhecido.</p>"
+                            "texto": "<p>Assiste razão à parte embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>O presente incidente de Embargos de Declaração é tempestivo em razão da ciência ocorrer em ${data_da_ciencia} e sua interposição em ${data_do_protocolo}, portanto, dentro do prazo fixado pelo § 1º do Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS).</p><p>Isto posto, o incidente foi interposto no prazo regimental e merece ser conhecido.</p>"
                         },
                         {
                             "categoria": "ementa",
@@ -1009,43 +1046,6 @@
                     ],
                     "ramificacao": {
                         "irPara": "ed_a_decisao_tera_efeito"
-                    }
-                },
-                {
-                    "id": "nao_conhecido_-_nao_ha_omissao_contradicao_obscuridade_ou_ambiguidade",
-                    "titulo": "Não conhecido - não há omissão, contradição, obscuridade ou ambiguidade",
-                    "listaVariaveis": [
-                        {
-                            "id": "breve_sintese_das_alegacoes_da_parte",
-                            "titulo": "Breve síntese das alegações da parte:",
-                            "tipo": "texto"
-                        },
-                        {
-                            "id": "numero_do_acordao_impugnado",
-                            "titulo": "Número do Acórdão impugnado:",
-                            "tipo": "texto"
-                        }
-                    ],
-                    "listaTextos": [
-                        {
-                            "categoria": "complemento3",
-                            "texto": "<p>.</p>"
-                        },
-                        {
-                            "categoria": "razoes",
-                            "texto": "<p>&nbsp;</p><p>A insurgência ocorre em face da decisão desta Egrégia Corte Administrativa no Acórdão nº ${numero_do_acordao_impugnado} e, em síntese, sustenta que ${breve_sintese_das_alegacoes_da_parte}.</p>"
-                        },
-                        {
-                            "categoria": "admissibilidade",
-                            "texto": "<p>Não assiste razão ao embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>Os Embargos de Declaração são previstos no Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS), <i>in verbis:</i></p><p><i>“Art. 75. Caberão embargos de declaração quando constatadas omissão, obscuridade, ambiguidade, contradição ou erro material nas decisões dos Órgãos Colegiados, considerando-se:</i><br><i>I - obscuridade: a falta de clareza do ato que gera dúvidas, não permitindo a compreensão do que ficou decidido;</i><br><i>II - ambiguidade: o duplo sentido, que pode ter diferentes significados;</i><br><i>III - contradição: a falta de coerência, através da incompatibilidade entre a decisão e seus fundamentos;</i><br><i>IV - omissão: a falta de pronunciamento sobre pontos que deveria haver manifestação do Órgão Julgador; e</i><br><i>V - erro material: os erros de grafia, numéricos, de cálculos ou outros equívocos semelhantes, que não afetem o mérito do pedido, o fundamento ou a conclusão do voto, assim como não digam respeito às interpretações jurídicas dos fatos relacionados nos autos, o acolhimento de opiniões técnicas e profissionais especializadas ou o exercício de valoração de provas.</i><br><i>§ 1º Os embargos de declaração serão opostos uma única vez, mediante petição fundamentada e dirigida ao relator do acórdão embargado, no prazo de dez dias a partir da ciência do acórdão, exceto na hipótese do inciso V do caput, que poderão ser opostos a qualquer tempo.\"</i></p><p>Em que pese as alegações do embargante, não se vislumbra qualquer obscuridade, ambiguidade, contradição ou omissão, nos termos do Art. 75 do RICRPS, razão pela qual não deve ser admitido.</p><p><strong>CONCLUSÃO</strong></p><p>Ante ao exposto, voto por NÃO CONHECER DOS EMBARGOS DE DECLARAÇÃO, nos termos da fundamentação.</p>"
-                        },
-                        {
-                            "categoria": "ementa",
-                            "texto": "<p><strong>&nbsp;INCIDENTE SOMENTE PODE SER ADMITIDO SE HOUVER OBSCURIDADE, AMBIGUIDADE, CONTRADIÇÃO OU OMISSÃO, NOS TERMOS DO ART. 75 DO RICRPS. NÃO EXISTE QUAISQUER DAS SITUAÇÕES QUE JUSTIFICAM OS EMBARGOS DE DECLARAÇÃO, RAZÃO PELA QUAL O PEDIDO NÃO MERECE SER ADMITIDO. EMBARGOS DE DECLARAÇÃO NÃO CONHECIDO.</strong></p>"
-                        }
-                    ],
-                    "ramificacao": {
-                        "irPara": "fim do formulário"
                     }
                 },
                 {
@@ -1105,8 +1105,45 @@
                     }
                 },
                 {
-                    "id": "nao_conhecido_-_fatosargumentos_novos",
-                    "titulo": "Não conhecido - fatos/argumentos novos",
+                    "id": "conhecido_e_negado_-_nao_ha_omissao_contradicao_obscuridade_ou_ambiguidade",
+                    "titulo": "Conhecido e negado - não há omissão, contradição, obscuridade ou ambiguidade",
+                    "listaVariaveis": [
+                        {
+                            "id": "breve_sintese_das_alegacoes_da_parte",
+                            "titulo": "Breve síntese das alegações da parte:",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "numero_do_acordao_impugnado",
+                            "titulo": "Número do Acórdão impugnado:",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "complemento3",
+                            "texto": "<p>.</p>"
+                        },
+                        {
+                            "categoria": "razoes",
+                            "texto": "<p>&nbsp;</p><p>A insurgência ocorre em face da decisão desta Egrégia Corte Administrativa no Acórdão nº ${numero_do_acordao_impugnado} e, em síntese, sustenta que ${breve_sintese_das_alegacoes_da_parte}.</p>"
+                        },
+                        {
+                            "categoria": "admissibilidade",
+                            "texto": "<p>Não assiste razão ao embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>Os Embargos de Declaração são previstos no Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS), <i>in verbis:</i></p><p><i>“Art. 75. Caberão embargos de declaração quando constatadas omissão, obscuridade, ambiguidade, contradição ou erro material nas decisões dos Órgãos Colegiados, considerando-se:</i><br><i>I - obscuridade: a falta de clareza do ato que gera dúvidas, não permitindo a compreensão do que ficou decidido;</i><br><i>II - ambiguidade: o duplo sentido, que pode ter diferentes significados;</i><br><i>III - contradição: a falta de coerência, através da incompatibilidade entre a decisão e seus fundamentos;</i><br><i>IV - omissão: a falta de pronunciamento sobre pontos que deveria haver manifestação do Órgão Julgador; e</i><br><i>V - erro material: os erros de grafia, numéricos, de cálculos ou outros equívocos semelhantes, que não afetem o mérito do pedido, o fundamento ou a conclusão do voto, assim como não digam respeito às interpretações jurídicas dos fatos relacionados nos autos, o acolhimento de opiniões técnicas e profissionais especializadas ou o exercício de valoração de provas.</i><br><i>§ 1º Os embargos de declaração serão opostos uma única vez, mediante petição fundamentada e dirigida ao relator do acórdão embargado, no prazo de dez dias a partir da ciência do acórdão, exceto na hipótese do inciso V do caput, que poderão ser opostos a qualquer tempo.\"</i></p><p>Isto posto, o incidente foi interposto no prazo regimental e merece ser conhecido.</p><p><strong>CASO CONCRETO</strong></p><p>Em que pese as alegações do embargante, não se vislumbra qualquer obscuridade, ambiguidade, contradição ou omissão, nos termos do Art. 75 do RICRPS, razão pela qual não deve ser admitido.</p><p><strong>CONCLUSÃO</strong></p><p>Ante ao exposto, voto por CONHECER DOS EMBARGOS DE DECLARAÇÃO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>"
+                        },
+                        {
+                            "categoria": "ementa",
+                            "texto": "<p><strong>&nbsp;INCIDENTE CABÍVEL SOMENTE SE HOUVER OBSCURIDADE, AMBIGUIDADE, CONTRADIÇÃO OU OMISSÃO, NOS TERMOS DO ART. 75 DO RICRPS. NÃO EXISTE QUAISQUER DAS SITUAÇÕES QUE JUSTIFICAM OS EMBARGOS DE DECLARAÇÃO, RAZÃO PELA QUAL O PEDIDO NÃO MERECE SER PROVIDO. EMBARGOS DE DECLARAÇÃO CONHECIDO E NEGADO.</strong></p>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "fim do formulário"
+                    }
+                },
+                {
+                    "id": "conhecido_e_negado_-_fatosargumentos_novos",
+                    "titulo": "Conhecido e negado - fatos/argumentos novos",
                     "listaVariaveis": [
                         {
                             "id": "breve_sintese_das_alegacoes_da_parte",
@@ -1130,11 +1167,11 @@
                         },
                         {
                             "categoria": "admissibilidade",
-                            "texto": "<p>Não assiste razão ao embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>Os Embargos de Declaração são previstos no Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS), <i>in verbis:</i></p><p><i>“Art. 75. Caberão embargos de declaração quando constatadas omissão, obscuridade, ambiguidade, contradição ou erro material nas decisões dos Órgãos Colegiados, considerando-se:</i><br><i>I - obscuridade: a falta de clareza do ato que gera dúvidas, não permitindo a compreensão do que ficou decidido;</i><br><i>II - ambiguidade: o duplo sentido, que pode ter diferentes significados;</i><br><i>III - contradição: a falta de coerência, através da incompatibilidade entre a decisão e seus fundamentos;</i><br><i>IV - omissão: a falta de pronunciamento sobre pontos que deveria haver manifestação do Órgão Julgador; e</i><br><i>V - erro material: os erros de grafia, numéricos, de cálculos ou outros equívocos semelhantes, que não afetem o mérito do pedido, o fundamento ou a conclusão do voto, assim como não digam respeito às interpretações jurídicas dos fatos relacionados nos autos, o acolhimento de opiniões técnicas e profissionais especializadas ou o exercício de valoração de provas.</i><br><i>(…)</i><br><i>§ 9º <strong>Não é cabível nos embargos de declaração a juntada de novos documentos, elementos ou qualquer outro pedido probatório</strong>, não apresentado até a inclusão do processo que originou o acórdão embargado em pauta de julgamento.\"</i></p><p>Em que pese as alegações do embargante, não é admissível a apresentação de novos elementos não juntados até a inclusão em pauta, ou qualquer outro pedido probatório, razão pela qual os embargos de declaração não merecem acolhimento.</p><p><strong>CONCLUSÃO</strong></p><p>Ante ao exposto, voto por NÃO CONHECER DOS EMBARGOS DE DECLARAÇÃO, nos termos da fundamentação.</p>"
+                            "texto": "<p>Não assiste razão ao embargante.</p><p><strong>ADMISSIBILIDADE DOS EMBARGOS DE DECLARAÇÃO</strong></p><p>Os Embargos de Declaração são previstos no Art. 75 da Portaria MTP nº 4.061/2022, que aprova o Regimento Interno do CRPS (RICRPS), <i>in verbis:</i></p><p><i>“Art. 75. Caberão embargos de declaração quando constatadas omissão, obscuridade, ambiguidade, contradição ou erro material nas decisões dos Órgãos Colegiados, considerando-se:</i><br><i>I - obscuridade: a falta de clareza do ato que gera dúvidas, não permitindo a compreensão do que ficou decidido;</i><br><i>II - ambiguidade: o duplo sentido, que pode ter diferentes significados;</i><br><i>III - contradição: a falta de coerência, através da incompatibilidade entre a decisão e seus fundamentos;</i><br><i>IV - omissão: a falta de pronunciamento sobre pontos que deveria haver manifestação do Órgão Julgador; e</i><br><i>V - erro material: os erros de grafia, numéricos, de cálculos ou outros equívocos semelhantes, que não afetem o mérito do pedido, o fundamento ou a conclusão do voto, assim como não digam respeito às interpretações jurídicas dos fatos relacionados nos autos, o acolhimento de opiniões técnicas e profissionais especializadas ou o exercício de valoração de provas.</i><br><i>(…)</i><br><i>§ 9º <strong>Não é cabível nos embargos de declaração a juntada de novos documentos, elementos ou qualquer outro pedido probatório</strong>, não apresentado até a inclusão do processo que originou o acórdão embargado em pauta de julgamento.\"</i>Isto posto, o incidente foi interposto no prazo regimental e merece ser conhecido.</p><p><strong>CASO CONCRETO</strong></p><p>Em que pese as alegações do embargante, não é admissível a apresentação de novos elementos não juntados até a inclusão em pauta, ou qualquer outro pedido probatório, razão pela qual os embargos de declaração não merecem acolhimento.</p><p><strong>CONCLUSÃO</strong></p><p>Ante ao exposto, voto por CONHECER DOS EMBARGOS DE DECLARAÇÃO E NEGAR-LHE PROVIMENTO, nos termos da fundamentação.</p>"
                         },
                         {
                             "categoria": "ementa",
-                            "texto": "<p><strong>&nbsp;INCIDENTE SOMENTE PODE SER ADMITIDO SE HOUVER OBSCURIDADE, AMBIGUIDADE, CONTRADIÇÃO OU OMISSÃO, NOS TERMOS DO ART. 75 DO RICRPS. AINDA, O § 9º DO MESMO ARTIGO PROIBE A APRESENTAÇÃO DE NOVOS ELEMENTOS, DOCUMENTOS OU QUALQUER PEDIDO PROBATÓRIO NÃO REALIZADO ATÉ A INCLUSÃO EM PAUTA DO PROCESSO DE RECURSO ORDINÁRIO, RAZÃO PELA QUAL O PEDIDO NÃO MERECE SER ADMITIDO. EMBARGOS DE DECLARAÇÃO NÃO CONHECIDO.</strong></p>"
+                            "texto": "<p><strong>&nbsp;INCIDENTE CABÍVEL SOMENTE SE HOUVER OBSCURIDADE, AMBIGUIDADE, CONTRADIÇÃO OU OMISSÃO, NOS TERMOS DO ART. 75 DO RICRPS. AINDA, O § 9º DO MESMO ARTIGO PROIBE A APRESENTAÇÃO DE NOVOS ELEMENTOS, DOCUMENTOS OU QUALQUER PEDIDO PROBATÓRIO NÃO REALIZADO ATÉ A INCLUSÃO EM PAUTA DO PROCESSO DE RECURSO ORDINÁRIO, RAZÃO PELA QUAL O PEDIDO NÃO MERECE SER PROVIDO. EMBARGOS DE DECLARAÇÃO CONHECIDO E NEGADO.</strong></p>"
                         }
                     ],
                     "ramificacao": {
@@ -53498,7 +53535,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "ro_ha_8_formulario_de_atividade_especial_passivel_de_ser_enquadrado"
+                        "irPara": "ro_perfil_profissiografico_previdenciario_-_decisao_pmf"
                     }
                 },
                 {
@@ -54051,7 +54088,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "ro_ha_8_formulario_de_atividade_especial_passivel_de_ser_enquadrado"
+                        "irPara": "ro_perfil_profissiografico_previdenciario_-_decisao_pmf"
                     }
                 },
                 {
@@ -54604,7 +54641,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "ro_ha_8_formulario_de_atividade_especial_passivel_de_ser_enquadrado"
+                        "irPara": "ro_perfil_profissiografico_previdenciario_-_decisao_pmf"
                     }
                 },
                 {
@@ -55157,7 +55194,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "ro_ha_8_formulario_de_atividade_especial_passivel_de_ser_enquadrado"
+                        "irPara": "ro_perfil_profissiografico_previdenciario_-_decisao_pmf"
                     }
                 },
                 {
@@ -55710,7 +55747,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "ro_ha_8_formulario_de_atividade_especial_passivel_de_ser_enquadrado"
+                        "irPara": "ro_perfil_profissiografico_previdenciario_-_decisao_pmf"
                     }
                 },
                 {
@@ -56263,7 +56300,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "ro_ha_8_formulario_de_atividade_especial_passivel_de_ser_enquadrado"
+                        "irPara": "ro_perfil_profissiografico_previdenciario_-_decisao_pmf"
                     }
                 },
                 {
