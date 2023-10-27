@@ -44,8 +44,9 @@ export default defineComponent({
             }
 
             // TODO: carregar do id passado por query string
-            const especificacao =
-                especificacaoRepository.carregar('programa_de_votos');
+            const especificacao = especificacaoRepository.carregar(
+                'sistema_de_despachos',
+            );
             const formulario =
                 formularioFactory.criarDaEspecificacao(especificacao);
 
