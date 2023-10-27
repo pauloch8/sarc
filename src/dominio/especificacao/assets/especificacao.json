@@ -4,9 +4,10 @@
     "subtitulo": "teste",
     "listaQuestoes": [
         {
-            "id": "dados_do_formulario",
+            "id": "cabecalho_do_despacho",
             "tipo": "opcao",
-            "titulo": "Dados do formulário",
+            "titulo": "Cabecalho do despacho",
+            "valorPadrao": "informe_os_dados",
             "opcoes": [
                 {
                     "id": "informe_os_dados",
@@ -21,7 +22,34 @@
                             "id": "interessado",
                             "titulo": "Interessado",
                             "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "numbeneficio",
+                            "texto": "<p>${n_do_beneficio}</p>"
                         },
+                        {
+                            "categoria": "interessado",
+                            "texto": "<p>${interessado}</p>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "requerimento_e_despacho",
+            "tipo": "opcao",
+            "titulo": "Requerimento e Despacho",
+            "valorPadrao": "informe_os_dados",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
                         {
                             "id": "der",
                             "titulo": "DER",
@@ -34,14 +62,6 @@
                         }
                     ],
                     "listaTextos": [
-                        {
-                            "categoria": "nb",
-                            "texto": "<p>${n_do_beneficio}</p>"
-                        },
-                        {
-                            "categoria": "interessado",
-                            "texto": "<p>${interessado}</p>"
-                        },
                         {
                             "categoria": "der",
                             "texto": "<p>${der}</p>"
@@ -56,13 +76,88 @@
                     }
                 }
             ]
+        },
+        {
+            "id": "convocacao",
+            "tipo": "opcao",
+            "titulo": "Convocação",
+            "valorPadrao": "informe_os_dados",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "qual_a_data_de_envio_do_aviso_de_convocacao",
+                            "titulo": "Qual a data de envio do Aviso de Convocação?",
+                            "tipo": "data"
+                        },
+                        {
+                            "id": "qual_a_data_de_recebimento_do_aviso_de_convocacao",
+                            "titulo": "Qual a data de recebimento do Aviso de Convocação?",
+                            "tipo": "data"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dataenvio",
+                            "texto": "<p>${qual_a_data_de_envio_do_aviso_de_convocacao}</p>"
+                        },
+                        {
+                            "categoria": "datarecebimento",
+                            "texto": "<p>${qual_a_data_de_recebimento_do_aviso_de_convocacao}</p>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "carteira_de_trabalho",
+            "tipo": "opcao",
+            "titulo": "Carteira de trabalho",
+            "valorPadrao": "informe_os_dados",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "numero",
+                            "titulo": "Número",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "serie",
+                            "titulo": "Série",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "data_de_emissao",
+                            "titulo": "Data de emissão",
+                            "tipo": "data"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "carteira_de_trabalho",
+                            "texto": "<p>Carteira de Trabalho e Previdência Social - CTPS nº ${numero}, série ${serie}, emitida aos ${data_de_emissao}, demonstrando os seguintes vínculos:</p><ol><li>Empresa xxx, período xx/xx/xxxx a xx/xx/xxxx, fls. xx.&nbsp;</li><li>Empresa xxx, período xx/xx/xxxx a xx/xx/xxxx, fls. xx.</li><li>Empresa xxx, período xx/xx/xxxx a xx/xx/xxxx, fls. xx.</li><li>Empresa xxx, período xx/xx/xxxx a xx/xx/xxxx, fls. xx.</li><li>Empresa xxx, período xx/xx/xxxx a xx/xx/xxxx, fls. xx.</li><li>Empresa xxx, período xx/xx/xxxx a xx/xx/xxxx, fls. xx.</li></ol>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                }
+            ]
         }
     ],
     "listaModelos": [
         {
             "id": "relatorio_individual_com_as_conclusoes_da_analise_inicial_da_concessao_do_beneficio",
             "titulo": "Relatório Individual com as conclusões da análise inicial da concessão do benefício",
-            "texto": "<p><strong>Relatório Individual com as conclusões da análise inicial da concessão do benefício</strong></p><p>Gerência Executiva São Paulo, aos 09/10/2023.</p><p>&nbsp;</p><p><strong>Referência: </strong>NB 42/${dados_do_formulario.nb}</p><p><strong>Interessado(a):</strong> ${dados_do_formulario.interessado}</p><p>&nbsp;</p><p><strong>Assunto: Reconstituição de Processo Administrativo Previdenciário – PAP e Apuração de Indício de Irregularidade, aprovado pela Resolução nº 276/INSS/Pres. de 1º de março de 2013.</strong></p><p>&nbsp;</p><p>1. O benefício Aposentadoria por Tempo de Contribuição de nº citado acima, foi requerido aos ${dados_do_formulario.der} na Agência da Previdência Social – APS São Paulo Água Branca, antigo código 21.002.010, alterado para 21.001.190, e, concedido na mesma data ou aos ${dados_do_formulario.ddb}.</p>"
+            "texto": "<p><strong>Relatório Individual com as conclusões da análise inicial da concessão do benefício</strong></p><p>Gerência Executiva São Paulo, aos 09/10/2023.</p><p>&nbsp;</p><p><strong>Referência: </strong>NB 42/${cabecalho_do_despacho.numbeneficio}</p><p><strong>Interessado(a):</strong> ${cabecalho_do_despacho.interessado}</p><p>&nbsp;</p><p><strong>Assunto: Reconstituição de Processo Administrativo Previdenciário – PAP e Apuração de Indício de Irregularidade, aprovado pela Resolução nº 276/INSS/Pres. de 1º de março de 2013.</strong></p><p>&nbsp;</p><p>1. O benefício Aposentadoria por Tempo de Contribuição de nº citado acima, foi requerido aos ${requerimento_e_despacho.der} na Agência da Previdência Social – APS São Paulo Água Branca, antigo código 21.002.010, alterado para 21.001.190, e, concedido na mesma data ou aos ${requerimento_e_despacho.ddb}.</p><p>2. A Previdência Social, com base no art. 11 da Lei nº 10.666, de 8 de maio de 2003, realizou avaliação das condições que deram origem ao reconhecimento e manutenção do direito ao referido benefício,<strong> </strong>bem como iniciou procedimento de reconstituição do processo, tido como extraviado/não localizado, em conformidade com a Portaria nº 157, de 02/04/2013, do Ministro de Estado da Previdência Social, tendo em vista a não localização de agendamento prévio nem a confecção e arquivamento físico deste processo administrativo em época própria. Situação devidamente notificada ao(à) segurado(a).</p><p>3. O(A) interessado(a) foi convocado(a) através de Aviso de Convocação, emitido aos ${convocacao.dataenvio} e recebido aos ${convocacao.datarecebimento}, para apresentar documentos para reconstituição e reanálise do feito, conforme anexos precedentes.</p><p>4. Atendendo à convocação, apresentou os seguintes documentos:</p><p>5.${carteira_de_trabalho.carteira_de_trabalho}</p>"
         }
     ]
 }
