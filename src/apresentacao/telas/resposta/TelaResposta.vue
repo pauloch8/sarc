@@ -143,4 +143,10 @@ export default defineComponent({
     transform: translateX(-200px);
     opacity: 0;
 }
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+}
 </style>

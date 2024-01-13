@@ -30,3 +30,17 @@ export default defineComponent({
         ></ckeditor>
     </article>
 </template>
+
+<style>
+@media print {
+    div.ck.ck-content.ck-editor__editable {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 720px;
+        transform: translate(-120px, -230px);
+        border: none;
+    }
+}
+</style>
