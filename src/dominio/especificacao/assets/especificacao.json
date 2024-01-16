@@ -241,7 +241,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -287,7 +287,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -333,7 +333,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -379,7 +379,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -425,7 +425,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -471,7 +471,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -517,7 +517,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -563,7 +563,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -609,7 +609,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -655,7 +655,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -701,7 +701,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -747,7 +747,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -793,7 +793,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -839,7 +839,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "perfil_profissiografico_previdenciario_1"
+                        "irPara": "apresentou_ppp"
                     }
                 }
             ]
@@ -978,7 +978,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1034,7 +1034,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1090,7 +1090,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1146,7 +1146,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1202,7 +1202,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1258,7 +1258,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1314,7 +1314,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1370,7 +1370,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1426,7 +1426,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1482,7 +1482,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1538,7 +1538,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1594,7 +1594,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1650,7 +1650,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -1706,7 +1706,7 @@
                     "listaVariaveis": [],
                     "listaTextos": [],
                     "ramificacao": {
-                        "irPara": "carne_de_contribuicao_1"
+                        "irPara": "apresentou_carnes"
                     }
                 }
             ]
@@ -3336,6 +3336,591 @@
             ]
         },
         {
+            "id": "periodo_especial_ratificado_3",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 3",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_4",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 4",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_5",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 5",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_6",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 6",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_7",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 7",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_8",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 8",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_9",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 9",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_10",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 10",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_11",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 11",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_12",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 12",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_13",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 13",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_14",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 14",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_ratificado_15",
+            "tipo": "opcao",
+            "titulo": "Periodo especial ratificado 15",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo} no Anexo ${anexo}, Código ${codigo}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_ratificados",
+                    "titulo": "Não há mais enquadramentos ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_nao_ratificado"
+                    }
+                }
+            ]
+        },
+        {
             "id": "houve_enquadramento_nao_ratificado",
             "tipo": "opcao",
             "titulo": "Houve enquadramento não ratificado?",
@@ -3402,6 +3987,526 @@
             "id": "periodo_especial_nao_ratificado_2",
             "tipo": "opcao",
             "titulo": "Periodo especial não ratificado 2",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_3",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 3",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_4",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 4",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_5",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 5",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_6",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 6",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_7",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 7",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_8",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 8",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_9",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 9",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_10",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 10",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_11",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 11",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_12",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 12",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_13",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 13",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_14",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 14",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "motivo_do_nao_enquadramento",
+                            "titulo": "Motivo do não enquadramento",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>Período ${periodo}, Motivo: ${motivo_do_nao_enquadramento}</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_enquadramentos_nao_ratificados",
+                    "titulo": "Não há mais enquadramentos não ratificados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "simulacao_de_tempo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_especial_nao_ratificado_15",
+            "tipo": "opcao",
+            "titulo": "Periodo especial não ratificado 15",
             "opcoes": [
                 {
                     "id": "informe_os_dados",
@@ -3649,6 +4754,606 @@
             ]
         },
         {
+            "id": "periodo_alterado_4",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 4",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_5",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 5",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_6",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 6",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_7",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 7",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_8",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 8",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_9",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 9",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_10",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 10",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_11",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 11",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_12",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 12",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_13",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 13",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_14",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 14",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_alterado_15",
+            "tipo": "opcao",
+            "titulo": "Periodo alterado 15",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_irregular",
+                            "titulo": "Período Irregular",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo_correto",
+                            "titulo": "Período Correto",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, de ${periodo_correto} para ${periodo_irregular}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_inclusao_de_periodo_de_contribuicao"
+                    }
+                }
+            ]
+        },
+        {
             "id": "houve_inclusao_de_periodo_de_contribuicao",
             "tipo": "opcao",
             "titulo": "Houve inclusão de período de contribuição?",
@@ -3765,6 +5470,546 @@
             "id": "periodo_incluido_3",
             "tipo": "opcao",
             "titulo": "Periodo incluído 3",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_4",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 4",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_5",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 5",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_6",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 6",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_7",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 7",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_8",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 8",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_9",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 9",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_10",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 10",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_11",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 11",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_12",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 12",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_13",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 13",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_14",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 14",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "tempo_majorado",
+                            "titulo": "Tempo Majorado (Anos, Meses, Dias)",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, majorando em ${tempo_majorado} o tempo de contribuição</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_alterados",
+                    "titulo": "Não há mais períodos alterados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_enquadramento_de_atividade_especial"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_incluido_15",
+            "tipo": "opcao",
+            "titulo": "Periodo incluído 15",
             "opcoes": [
                 {
                     "id": "informe_os_dados",
@@ -3933,6 +6178,606 @@
             "id": "periodo_enquadrado_3",
             "tipo": "opcao",
             "titulo": "Periodo enquadrado 3",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_4",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 4",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_5",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 5",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_6",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 6",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_7",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 7",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_8",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 8",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_9",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 9",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_10",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 10",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_11",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 11",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_12",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 12",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_13",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 13",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_14",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 14",
+            "opcoes": [
+                {
+                    "id": "informe_os_dados",
+                    "titulo": "Informe os dados",
+                    "listaVariaveis": [
+                        {
+                            "id": "nome",
+                            "titulo": "Nome",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "periodo",
+                            "titulo": "Período",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "codigo",
+                            "titulo": "Código",
+                            "tipo": "texto"
+                        },
+                        {
+                            "id": "anexo",
+                            "titulo": "Anexo",
+                            "tipo": "texto"
+                        }
+                    ],
+                    "listaTextos": [
+                        {
+                            "categoria": "dados",
+                            "texto": "<ul><li>${nome}, Período: ${periodo}, Código: ${codigo}, Anexo: ${anexo};</li></ul>"
+                        }
+                    ],
+                    "ramificacao": {
+                        "irPara": "avançar"
+                    }
+                },
+                {
+                    "id": "nao_ha_mais_periodos_enquadrados",
+                    "titulo": "Não há mais períodos enquadrados",
+                    "listaTextos": [],
+                    "ramificacao": {
+                        "irPara": "houve_retroacao_da_dip"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "periodo_enquadrado_15",
+            "tipo": "opcao",
+            "titulo": "Periodo enquadrado 15",
             "opcoes": [
                 {
                     "id": "informe_os_dados",
